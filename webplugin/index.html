@@ -1,0 +1,356 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+  <title>CoreTracker </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!-- Import scripts in this specific order -->
+  <script src="/CoReTracker/webplugin/jquery.min.js"></script>
+  <script src="/CoReTracker/webplugin/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="/CoReTracker/webplugin/jquery-ui.css" />
+
+
+  <script src="/CoReTracker/webplugin/ete.js"></script>
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+  <script>
+   /* YOU MUST SET THIS VARIABLE */
+   var ete_webplugin_URL = "/CoReTracker/wsgi/wsgi.py"
+ </script> 
+
+ <link rel="stylesheet" type="text/css" href="/CoReTracker/webplugin/ete.css" >
+ <style>
+
+  body {
+    margin-top: 30px;
+    font: 10px sans-serif;
+  }
+
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+  }
+
+  .link {
+    fill: none;
+    stroke-width: 1.5px;
+    stroke : #DDD;
+  }
+
+  .dot {
+    stroke: #000;
+  }
+
+  #treenewick{
+   visibility: hidden;
+ }
+
+</style>
+
+</head>
+
+
+<body>
+  <!-- This layer must be called "popup" -->
+  <div id="popup"></div> 
+
+  <div style='text-align: left;'>
+    <h3><b>CoReTracker</b></h3>
+    <div style="clear:both;" >
+      <!-- This is the most important part. We start tree visualization by calling draw_tree function. 
+           draw_tree(treeid, newick, container)
+         -->
+         <select id="alignment" name="alignment">
+          <option value="filtered">Filtered</option>
+          <option value="global">Global</option>
+          <option value="ungapped">Gap removed</option>
+          <option value="ID_filtered">Filtered and identity removed</option>
+        </select>
+        <input type='submit' value='Show Tree'  onClick='$("#ete_tree").show();coretracker(random_tid(),"#img1", $("#alignment").val());'>
+        <input type='button' value='Clear' onClick='$("#ete_tree").hide();'>
+      </div>
+
+
+    </div>
+    <br>
+    <!-- Tree containers -->
+    <div class="ete_image">
+      <br>
+      <div id="ete_tree">
+        <textarea id="treenewick" style='width: 800px; height: 90px; vertical-align:middle;'>  </textarea>
+        <br><br>
+        <div id="img1"></div>    </div>
+
+        <br><br>
+        <div id="graph" > 
+
+          <div class="ui-widget">
+            <label for="gene">Specie: </label>
+            <input id="gene">
+          </div>
+          <br>
+          <div id="identity">
+          </div><br>
+
+          <div class="ui-widget">
+            <label for="aa">Amino Acid: </label>
+            <input id="aa">
+          </div>
+          <br>
+          <div id="aafreq">
+          </div><br>
+        </div>
+
+      </div>
+      <script>
+
+        var similarity = "/CoReTracker/tmp/similarity.json";
+        var aafrequency = "/CoReTracker/tmp/aafrequency.json";
+
+        var margin = {top: 20, right: 20, bottom: 30, left: 40},
+        width = 600 - margin.left - margin.right,
+        height = 400 - margin.top - margin.bottom;
+        var color = d3.scale.category10();
+
+        var update_dot = function(data, svg, line, x, y){
+
+            data.forEach(function(d) {
+              d.filtered = +d.filtered;
+              d.global = +d.global;
+            });
+
+            svg.selectAll(".dot").remove()
+            svg.selectAll(".dot")
+            .data(data)
+            .enter().append("circle")
+            .attr("class", "dot")
+            .attr("r", 3.5)
+            .attr("cx", function(d) { return x(d.global); })
+            .attr("cy", function(d) { return y(d.filtered); })
+            .style("fill", function(d) { return color(d.gene); })
+            .append("title")
+            .text(function(d) {return d.gene;});
+
+            svg.append('svg:path')
+            .attr("d",line)
+            .attr("class", "link")
+            .attr("fill", "none"); 
+        };
+
+
+    var idsvg = d3.select("#identity").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+        
+    // sequence identity
+    d3.json(similarity, function(error, json) {
+
+      var x = d3.scale.linear()
+          .range([0, width]);
+
+      var y = d3.scale.linear()
+          .range([height, 0]);
+
+      var xAxis = d3.svg.axis()
+        .scale(x)
+        .orient("bottom");
+
+       var yAxis = d3.svg.axis()
+        .scale(y)
+        .orient("left");
+
+      var linefunc = d3.svg.line()
+        .x( function(d) { return x(d.x); })
+        .y( function(d) { return y(d.y); })
+        .interpolate('linear');
+
+      if (error) return console.warn(error);
+      
+      keys = d3.keys(json)
+      data = json[keys[0]]
+
+      var lineData = [{
+          x: 0,
+          y: 0
+        }, {
+          x: 1,
+          y: 1
+        }]
+
+      x.domain([0, 1.1]).nice();
+      y.domain([0, 1.1]).nice();
+
+      idsvg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis)
+        .append("text")
+        .attr("class", "label")
+        .attr("x", width)
+        .attr("y", -6)
+        .style("text-anchor", "end")
+        .text("Global identity (%)");
+
+      idsvg.append("g")
+        .attr("class", "y axis")
+        .call(yAxis)
+        .append("text")
+        .attr("class", "label")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 6)
+        .attr("dy", ".71em")
+        .style("text-anchor", "end")
+        .text("Filtered identity (%)")
+
+      update_dot(json[keys[0]], idsvg, linefunc(lineData), x, y);
+      
+      $("#gene").autocomplete({
+        source: keys,
+        autoFocus: true,
+        select: function (a, b) {
+            $(this).val(b.item.value);
+            update_dot(json[b.item.value], idsvg, linefunc(lineData), x, y);
+        }
+
+      }).val(keys[0]).data('autocomplete');
+
+  });
+
+    var aasvg = d3.select("#aafreq").append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    d3.json(aafrequency, function(error, injson) {
+
+      var x = d3.scale.linear()
+          .range([0, width]);
+
+      var y = d3.scale.linear()
+          .range([height, 0]);
+
+      var xAxis = d3.svg.axis()
+        .scale(x)
+        .orient("bottom");
+
+      var yAxis = d3.svg.axis()
+        .scale(y)
+        .orient("left");
+
+      var linefunc = d3.svg.line()
+        .x( function(d) { return x(d.x); })
+        .y( function(d) { return y(d.y); })
+        .interpolate('linear');
+
+      if (error) return console.warn(error);
+      json = injson['AA'];
+      expected = injson['EXP'];
+      max_val = +injson['MAX'];
+      keys = d3.keys(json);
+      data = json[keys[0]];
+
+      var lineData = [{
+        x: 0,
+        y: 0
+       }, {
+        x: max_val,
+        y: max_val
+      }]
+
+      var expectedData = [{
+        x: 1,
+        y: 0
+       }, {
+        x: 1,
+        y: max_val
+      }]
+
+      x.domain([0, max_val]).nice();
+      y.domain([0, max_val]).nice();
+
+      aasvg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis)
+        .append("text")
+        .attr("class", "label")
+        .attr("x", width)
+        .attr("y", -6)
+        .style("text-anchor", "end")
+        .text("Global");
+
+      aasvg.append("g")
+        .attr("class", "y axis")
+        .call(yAxis)
+        .append("text")
+        .attr("class", "label")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 6)
+        .attr("dy", ".71em")
+        .style("text-anchor", "end")
+        .text("Filtered");
+
+
+      aasvg.append('svg:path')
+            .attr("d",linefunc(expectedData))
+            .attr("class", "link")
+            .style("stroke-dasharray", ("3, 3"))
+            .style("stroke", "#333")
+            .attr("fill", "none")
+            .append("title")
+            .text("Expected frequence");
+
+            aasvg.append("text")
+            .attr("x", (width / 2))             
+            .attr("y", 0)
+            .attr("text-anchor", "middle")  
+            .style("font-size", "13px") 
+            .style("text-decoration", "underline")  
+            .text("Amino acid usage (Observed-Freq / Expected-Freq from alignment)");
+      
+/*
+      var legend = aasvg.selectAll(".legend")
+           .data(expected[keys[0]])
+           .enter().append("g")
+           .attr("class", "legend")
+           .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+      legend.append("rect")
+            .attr("x", width - 18)
+            .attr("width", 18)
+            .attr("height", 18)
+            .style("fill", color);
+
+
+      legend.append("text")
+            .attr("x", width - 24)
+            .attr("y", 9)
+            .attr("dy", ".35em")
+            .style("text-anchor", "end")
+            .text(function(d) { return "Expected value ("+keys[0]+"): " + d; });
+            */
+
+        update_dot(json[keys[0]], aasvg, linefunc(lineData), x, y);
+
+        $("#aa").autocomplete({
+            source: keys,
+            autoFocus: true,
+            select: function (a, b) {
+            $(this).val(b.item.value);
+           /* legend.data(expected[b.item.value]).enter();
+           legend.text(function(d) { return "Expected value ("+b.item.value+"): " + d; });*/
+           update_dot(json[b.item.value], aasvg, linefunc(lineData),x,y);
+         }
+       }).val(keys[0]).data('autocomplete');
+
+    });
+
+    </script>
+
+
+    </body>
+    </html>
