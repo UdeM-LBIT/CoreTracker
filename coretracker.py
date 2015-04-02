@@ -320,13 +320,13 @@ if __name__ == '__main__':
 
 				node.add_feature('ic', node_align_info.ic_vector)
 		
-			#print "Sequences under node"
-			#print spec_under_node
+			print "Sequences under node"
+			print spec_under_node
 			#print "ARM matrix"
 			#print node_align_arm
-			#print "SUB matrix"
+			print "SUB matrix"
 			node_sub_matrix = SubsMat.make_log_odds_matrix(node_align_arm, exp_freq_table=exp_freq_table)
-			#print node_sub_matrix
+			print node_sub_matrix
 
 			node.add_feature('submatrix', node_sub_matrix)
 
