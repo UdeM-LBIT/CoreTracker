@@ -209,7 +209,7 @@ if __name__ == '__main__':
 	subparsers.required = False 
 	subparsers.dest = 'command'
 
-	parser_align = subparsers.add_parser('align', help='Perform alignment with mafft' )
+	parser_align = subparsers.add_parser('align', help='Perform alignment with mafft: The following additional argument will be mandatory. (See mafft doc) "--auto", "--retree", "--maxiterate", "--nofft", "--memsave", "--parttree"' )
 	parser_align.add_argument('--auto', dest='auto', action='store_true', help="If unsure which option to use, try this option")
 	parser_align.add_argument('--retree', dest='retree', type=int, help="Guide tree is built number times in the progressive stage")
 	parser_align.add_argument('--maxiterate', dest='maxiterate', type=int, help="number cycles of iterative refinement are performed")
