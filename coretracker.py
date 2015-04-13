@@ -4,7 +4,7 @@ from __future__ import division
 import argparse
 import collections
 import itertools
-import json
+import json, os, glob
 import numpy as np
 import pandas as pd
 import subprocess
@@ -23,6 +23,18 @@ from TreeLib import TreeClass
 from cStringIO import StringIO
 from ete2 import PhyloTree
 from ete2 import TreeStyle
+from settings import *
+
+
+__author__ = "Emmanuel Noutahi"
+__version__ = "0.1"
+__email__ = "fmr.noutahi@umontreal.ca"
+__license__ = "The MIT License (MIT)"
+
+
+
+if not os.path.exists(TMP):
+	os.makedirs(TMP)
 
 # hardcorded settings variables
 alpha = Alphabet.Gapped(IUPAC.protein)
@@ -40,10 +52,7 @@ nuc_letters = "ACTG"
 
 MAFFT_AUTO_COMMAND = ['linsi', 'ginsi', 'einsi', 'fftnsi', 'fftns', 'nwnsi', 'nwns']
 MAFFT_DETAILLED_COMMAND = ['auto', 'retree', 'maxiterate', 'nofft', 'memsave', 'parttree']
-TMP = "tmp/"
-MAFFT_OUTPUT = TMP+"alignment.fasta"
 # This is the multiple alignment used to estimate the accepted replacement matrix 
-ARM_SEQUENCE =""
 
 class Output(object):
 	"""A simple Class to output results
@@ -146,16 +155,15 @@ def get_identity(seq1, seq2, ignore_gap=True, percent=True):
 	return identity*(99.0*percent + 1.0)/len(seq1)
 
 
-def convert_tree_to_mafft(tree, output):
+def convert_tree_to_mafft(tree, seq_order, output):
 	"""Convert a tree in a newick format to the mafft matrix format"""
-
 	seqnames = [-1,-1]
 	branchlens = [-1,-1]
 	for node in tree.traverse("postorder"):
 		if node.dist <= DIST_THRES:
 			node.dist = 0.0
 		
-		if node.is_internal() or node.is_root():
+		if not node.is_leaf():
 			left_branch = node.get_child_at(0)
 			right_branch = node.get_child_at(1)
 			left_branch_leaf = left_branch.get_leaf_name()
@@ -176,6 +184,36 @@ def convert_tree_to_mafft(tree, output):
 			output.write("%5d %5d %10.5f %10.5f\n"%(seqnames[0], seqnames[1], branchlens[0], branchlens[1]))
 
 
+def get_aa_filtered_alignment(alignment, aa, threshold):
+	"""Get the filtered alignment for an amino acid"""
+	aa = aa.upper()
+	assert aa in aa_letters, "Amino acid %s not found"%aa
+	aligninfo = AlignInfo.SummaryInfo(alignment)
+	consensus = aligninfo.gap_consensus(threshold=threshold, ambiguous='X')
+	cons_array = [i for i, c in enumerate(consensus) if c.upper() == aa]
+	return filter_align_position(alignment, cons_array)
+
+
+def realign(msa, tree, enable_mafft):
+	"""Realign a msa according to a tree"""
+	tmpseq = TMP+"tmp0msa.fasta"
+	inseq = TMP+"tmp0nodeseq.fasta"
+	seq_ord = []
+	for seqrec in msa :
+		seqrec._set_seq(seqrec.seq.ungap())
+		seq_ord.append(seqrec.description)
+	AlignIO.write(msa, open(tmpseq, 'w'), 'fasta')
+	out = Output(file=TMP+"tmp0treeout.mafft")
+	convert_tree_to_mafft(TreeClass(tree.write(features=['name', 'support', 'dist'], format_root_node=True)),seq_ord, out)
+	out.close()
+	execute_mafft(enable_mafft+" --treein %s %s > %s"%(out.file, tmpseq, inseq))
+	msa = AlignIO.read(inseq, 'fasta', alphabet=alpha)
+	filelist = glob.glob(TMP+"tmp0*")
+	for f in filelist :
+		os.remove(f)
+	return msa
+
+
 @timeit
 def execute_mafft(cmdline):
 	"""Execute the mafft command line"""
@@ -192,6 +230,8 @@ if __name__ == '__main__':
 	parser.add_argument('--version', action='version', version='%(prog)s 1.0')
 	parser.add_argument('--excludegap', type=float, dest='excludegap', help="Remove position with gap from the alignment, using excludegap as threshold. The absolute values are taken")
 	parser.add_argument('--idfilter', type=float, default=0.8, dest='idfilter', help="Conserve only position with at least idfilter residue identity")
+	parser.add_argument('--verbose', '-v', action='store_true', dest="verbose", help="Verbosity level")
+
 
 	mafft_group = parser.add_mutually_exclusive_group()
 	mafft_group.add_argument('--linsi', dest='linsi', action='store_true',help="L-INS-i (probably most accurate; recommended for <200 sequences; iterative refinement method incorporating local pairwise alignment information)")
@@ -271,13 +311,12 @@ if __name__ == '__main__':
 	specietree.prune(seq_order)
 
 	#Convert tree to mafft format
-	convert_tree_to_mafft(specietree, output)
+	convert_tree_to_mafft(specietree, seq_order, output)
 	output.close()
 
 	# execute mafft  
 	if(enable_mafft):
-		enable_mafft += " --treein %s %s > %s"%(output.file, args.seq, MAFFT_OUTPUT)
-		execute_mafft(enable_mafft)
+		execute_mafft(enable_mafft + " --treein %s %s > %s"%(output.file, args.seq, MAFFT_OUTPUT))
 
 	# Reload mafft alignment and filter alignment (remove gap positions and positions not conserved)
 	alignment = AlignIO.read(MAFFT_OUTPUT, 'fasta', alphabet=alpha)
@@ -296,12 +335,17 @@ if __name__ == '__main__':
 		AlignIO.write(identity_removed_alignment, open(MAFFT_OUTPUT+"_matchremoved", 'w'), 'fasta')
 
 
-	# Get the substitution matrice at each node
+	## Get the substitution matrice at each node
 	sptree = PhyloTree(specietree.write(), alignment=filtered_alignment.format("fasta"), alg_format="fasta")
 	
 	# Compute expected frequency from the entire alignment and update at each node
-	# We could use another alignment to compute those frequency
-	summary_info = AlignInfo.SummaryInfo(alignment)
+	armseq = alignment
+	
+	# We could use another alignment to compute those frequency if it's set
+	if(ARM_SEQUENCE):
+		armseq = AlignIO.read(ARM_SEQUENCE, 'fasta', alphabet=alpha)
+
+	summary_info = AlignInfo.SummaryInfo(armseq)
 	acc_rep_mat = SubsMat.SeqMat(summary_info.replacement_dictionary())
 	obs_freq_mat = SubsMat._build_obs_freq_mat(acc_rep_mat)
 	exp_freq_table = SubsMat._exp_freq_table_from_obs_freq(obs_freq_mat)
@@ -309,7 +353,11 @@ if __name__ == '__main__':
 	for node in sptree.traverse():
 		if not node.is_leaf():
 			spec_under_node = node.get_leaf_names()
-			node_alignment = MultipleSeqAlignment([record for record in alignment if record.id in spec_under_node], alphabet=alpha)
+			node_alignment = MultipleSeqAlignment([record[:] for record in alignment if record.id in spec_under_node], alphabet=alpha)
+			
+			if(REALIGN_AT_EACH_NODE and not node.is_root()):
+				node_alignment = realign(node_alignment, node, enable_mafft)
+
 			node_align_info =  AlignInfo.SummaryInfo(node_alignment)
 			replace_info = node_align_info.replacement_dictionary()
 			node_align_arm = SubsMat.SeqMat(replace_info)
@@ -320,15 +368,17 @@ if __name__ == '__main__':
 
 				node.add_feature('ic', node_align_info.ic_vector)
 		
-			print "Sequences under node"
-			print spec_under_node
-			#print "ARM matrix"
-			#print node_align_arm
-			print "SUB matrix"
 			node_sub_matrix = SubsMat.make_log_odds_matrix(node_align_arm, exp_freq_table=exp_freq_table)
-			print node_sub_matrix
 
 			node.add_feature('submatrix', node_sub_matrix)
+
+			if(args.verbose):
+				print "Sequences under node"
+				print spec_under_node
+				print "ARM matrix"
+				print node_align_arm
+				print "SUB matrix"
+				print node_sub_matrix
 
 	# Compute sequence identity in global and filtered alignment
 	seq_names = [rec.id for rec in alignment]
@@ -373,12 +423,3 @@ if __name__ == '__main__':
 	with open(TMP+"aafrequency.json", "w") as outfile:
 		json.dump({"AA" : aa_json, "EXP": expected_freq, "MAX" : count_max}, outfile, indent=4)
 	
-	#print "GLOBAL IDENTITY"
-	#print global_paired_id
-
-	#print "FILTERED IDENTITY"
-	#print filter_paired_id
-	
-	#newick = args.tree.read().strip()
-	#print >> sys.stderr, "INPUT TREE: "+newick, 
-	# Mafft tree formating
