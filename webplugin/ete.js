@@ -1,4 +1,4 @@
-var ete_webplugin_URL = "http://coretracker.localhost/CoReTracker/wsgi/wsgi.py";
+var ete_webplugin_URL = "http://coretracker.localhost/CoreTracker/wsgi/wsgi.py";
 var loading_img = '<img border=0 src="loader.gif">'; 
 
 function draw_tree(treeid, newick, recipient, extra_params){

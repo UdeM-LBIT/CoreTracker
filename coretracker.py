@@ -3,16 +3,18 @@ from __future__ import division
 
 import argparse
 import collections
+import glob
 import itertools
 import json
-import os
-import glob
 import numpy as np
+import os
 import pandas as pd
+import random
 import subprocess
 import sys
-import random
 import time
+
+from multiprocessing import Pool
 
 from collections import Counter
 
@@ -56,7 +58,7 @@ nuc_letters = "ACTG"
 MAFFT_AUTO_COMMAND = [
     'linsi', 'ginsi', 'einsi', 'fftnsi', 'fftns', 'nwnsi', 'nwns']
 MAFFT_DETAILLED_COMMAND = [
-    'auto', 'retree', 'maxiterate', 'nofft', 'memsave', 'parttree']
+    'auto', 'retree', 'maxiterate', 'nofft', 'memsave', 'parttree', 'leavegappyregion']
 # This is the multiple alignment used to estimate the accepted replacement
 # matrix
 
@@ -283,7 +285,7 @@ if __name__ == '__main__':
     subparsers.dest = 'command'
 
     parser_align = subparsers.add_parser(
-        'align', help='Perform alignment with mafft: The following additional argument will be mandatory. (See mafft doc) "--auto", "--retree", "--maxiterate", "--nofft", "--memsave", "--parttree"')
+        'align', help='Perform alignment with mafft: The following additional argument will be mandatory. (See mafft doc) "--auto", "--retree", "--maxiterate", "--nofft", "--memsave", "--parttree", "--leavegappyregion"')
     parser_align.add_argument(
         '--auto', dest='auto', action='store_true', help="If unsure which option to use, try this option")
     parser_align.add_argument('--retree', dest='retree', type=int,
@@ -296,6 +298,9 @@ if __name__ == '__main__':
         '--memsave', dest='memsave', action='store_true', help="Use the Myers-Miller (1988) algorithm.")
     parser_align.add_argument('--parttree', dest='parttree', action='store_true',
                               help="Use a fast tree-building method (PartTree, Katoh and Toh 2007) with the 6mer distance.")
+
+    parser_align.add_argument('--leavegappyregion', dest='leavegappyregion', action='store_true',
+                              help="Leave gappy region. The default gap scoring scheme has been changed in version 7.110 (2013 Oct). It tends to insert more gaps into gap-rich regions than previous versions. To disable this change, add the --leavegappyregion option")
 
     args = parser.parse_args()
 
@@ -402,8 +407,18 @@ if __name__ == '__main__':
 
     summary_info = AlignInfo.SummaryInfo(armseq)
     acc_rep_mat = SubsMat.SeqMat(summary_info.replacement_dictionary())
+    # format of the acc_rep_mat:
+    # {('A','C'): 10, ('C','H'): 12, ...}
     obs_freq_mat = SubsMat._build_obs_freq_mat(acc_rep_mat)
+    # format of the obs_freq_matrix
+    # same as the acc_rep_mat, but, we have frequency instead of count
     exp_freq_table = SubsMat._exp_freq_table_from_obs_freq(obs_freq_mat)
+    # Not a dict of tuples anymore and it's obtained from the obs_freq_mat
+    # {'A': 0.23, ...}
+    # it's just the sum of replacement frequency for each aa.
+    # if the two aa are differents, add half of the frequency
+    # else add the frequency value
+    # this unfortunaly assume that A-->C and C-->A have the same probability
 
     for node in sptree.traverse():
         if not node.is_leaf():
@@ -421,7 +436,7 @@ if __name__ == '__main__':
             # add alignment content at root
             if(node.is_root()):
                 total_ic_content = node_align_info.information_content(
-                    chars_to_ignore=['X'])
+                    chars_to_ignore=['X'], e_freq_table=(exp_freq_table if USE_EXPECTED_FREQ_FOR_IC else None))
 
                 node.add_feature('ic', node_align_info.ic_vector)
 
@@ -453,8 +468,10 @@ if __name__ == '__main__':
         id_matrix, index=seq_names, columns=seq_names)
     filter_paired_id = global_paired_id.copy()
 
+    if(EXCLUDE_AA):
+        aa_letters = "".join([aa for aa in aa_letters if aa not in EXCLUDE_AA])
     for i in xrange(number_seq):
-        # Get using frequence of each aa per sequence
+        # Get aa count for each sequence
         count1 = Counter(alignment[i])
         count2 = Counter(filtered_alignment[i])
         for aa in aa_letters:
@@ -462,7 +479,7 @@ if __name__ == '__main__':
             global_val = count1[aa] / (ag_length * exp_freq_table[aa])
             filtered_val = count2[aa] / (af_length * exp_freq_table[aa])
             aa_json[aa_letters_1to3[aa]].append(
-                {'global': global_val, 'filtered': filtered_val, "gene": seq_names[i]})
+                {'global': global_val, 'filtered': filtered_val, "species": seq_names[i]})
             count_max = max(filtered_val, global_val, count_max)
 
         for j in xrange(i + 1):
@@ -471,19 +488,49 @@ if __name__ == '__main__':
             else:
                 global_paired_id.iloc[i, j] = get_identity(
                     alignment[i], alignment[j])
-                filter_paired_id.iloc[i, j] = get_sidentity(
+                filter_paired_id.iloc[i, j] = get_identity(
                     filtered_alignment[i], filtered_alignment[j])
             sim_json[seq_names[i]].append({"global": global_paired_id.iloc[
-                                          i, j], "filtered": filter_paired_id.iloc[i, j], "gene": seq_names[j]})
+                                          i, j], "filtered": filter_paired_id.iloc[i, j], "species": seq_names[j]})
             # do not add identity to itself twice
             if(i != j):
                 sim_json[seq_names[j]].append({"global": global_paired_id.iloc[
-                                              i, j], "filtered": filter_paired_id.iloc[i, j], "gene": seq_names[i]})
+                                              i, j], "filtered": filter_paired_id.iloc[i, j], "species": seq_names[i]})
 
     sptree.write(outfile=TMP + "phylotree.nw")
+
+    # for performance issues, better make another loop to
+    # get the data to plot the conservation of aa in each column
+    # of the alignment
+
+    def get_aa_maj(mapinput):
+        aa_shift_json = collections.defaultdict(list)
+        aa_letters, i, j = mapinput
+        gpaired = global_paired_id.iloc[i, j]
+        #print i, j, aa_letters
+        for aa in aa_letters:
+           # get majority position alignment for this aa
+            aa_maj_align = get_aa_filtered_alignment(
+                alignment, aa, AA_MAJORITY_THRESH)
+            filtered_val = get_identity(aa_maj_align[i], aa_maj_align[j])
+            aa_shift_json[aa_letters_1to3[aa]].append({'global':gpaired/100 , 'filtered': filtered_val/100, "species": "%s_%s" % (seq_names[i], seq_names[j])})
+        return aa_shift_json
+
+
+    p = Pool(PROCESS_ENABLED)
+    entry =  itertools.combinations(xrange(number_seq), r=2)
+    result = p.map(get_aa_maj, [(aa_letters, max(i), min(i)) for i in entry])
+
+    aa_shift_json = Counter()
+    for r in result:
+        aa_shift_json += Counter(r)
+    #print aa_shift_json
+
     # dumping in json to reload with the web interface using d3.js
-    with open(TMP + "similarity.json", "w") as outfile:
-        json.dump(sim_json, outfile, indent=4)
-    with open(TMP + "aafrequency.json", "w") as outfile:
+    with open(TMP + "similarity.json", "w") as outfile1:
+        json.dump(sim_json, outfile1, indent=4)
+    with open(TMP + "aafrequency.json", "w") as outfile2:
         json.dump(
-            {"AA": aa_json, "EXP": expected_freq, "MAX": count_max}, outfile, indent=4)
+            {"AA": aa_json, "EXP": expected_freq, "MAX": count_max}, outfile2, indent=4)
+    with open(TMP + "aause.json", "w") as outfile3:
+        json.dump(aa_shift_json, outfile3, indent=4)

@@ -2,18 +2,18 @@ import re, os, time, sys, json
 
 from hashlib import md5
 from string import strip
+#from pyvirtualdisplay import Display
+
+WEB_APP_BASE_PATH = "/home/manu/html/CoreTracker/"
+
+sys.path.insert(0,'/anaconda/lib/python2.7/site-packages')
+
+sys.path.insert(0, WEB_APP_BASE_PATH)
 
 from Bio.Alphabet import IUPAC
 from Bio import AlignIO
 from Bio import Alphabet
 from Bio.Align import AlignInfo
-#from pyvirtualdisplay import Display
-
-WEB_APP_BASE_PATH = "/home/manu/html/CoReTracker/"
-
-os.environ['PYTHON_EGG_CACHE'] = '/tmp/.python-eggs/'
-
-sys.path.insert(0, WEB_APP_BASE_PATH)
 
 from ete2 import WebTreeApplication # Required to use the webplugin
 
@@ -396,7 +396,7 @@ def tree_renderer(tree, treeid, application):
     html_features = """
       <div id="tree_features_box">
       <div class="tree_box_header">Available tree features
-      <img src="/CoReTracker/webplugin/close.png" onclick='$(this).closest("#tree_features_box").hide();'>
+      <img src="/CoreTracker/webplugin/close.png" onclick='$(this).closest("#tree_features_box").hide();'>
       </div>
       <form action='javascript: set_tree_features("", "", "");'>
 
@@ -430,24 +430,24 @@ def tree_renderer(tree, treeid, application):
 
     features_button = """
      <li><a href="#" onclick='show_box(event, $(this).closest("#tree_panel").children("#tree_features_box"));'>
-     <img width=16 height=16 src="/CoReTracker/webplugin/icon_tools.png" alt="Select Tree features">
+     <img width=16 height=16 src="/CoreTracker/webplugin/icon_tools.png" alt="Select Tree features">
      </a></li>"""
 
     download_button = """
-     <li><a href="/CoReTracker/tmp/%s.png" target="_blank">
-     <img width=16 height=16 src="/CoReTracker/webplugin/icon_attachment.png" alt="Download tree image">
+     <li><a href="/CoreTracker/tmp/%s.png" target="_blank">
+     <img width=16 height=16 src="/CoreTracker/webplugin/icon_attachment.png" alt="Download tree image">
      </a></li>""" %(treeid)
 
     search_button = """
       <li><a href="#" onclick='javascript:
           var box = $(this).closest("#tree_panel").children("#search_in_tree_box");
           show_box(event, box); '>
-      <img width=16 height=16 src="/CoReTracker/webplugin/icon_search.png" alt="Search in tree">
+      <img width=16 height=16 src="/CoreTracker/webplugin/icon_search.png" alt="Search in tree">
       </a></li>"""
 
     clean_search_button = """
       <li><a href="#" onclick='run_action("%s", "", %s, "clean::clean");'>
-      <img width=16 height=16 src="/CoReTracker/webplugin/icon_cancel_search.png" alt="Clear search results">
+      <img width=16 height=16 src="/CoreTracker/webplugin/icon_cancel_search.png" alt="Clear search results">
       </a></li>""" %\
         (treeid, 0)
 
@@ -463,7 +463,7 @@ def tree_renderer(tree, treeid, application):
     search_form = """
      <div id="search_in_tree_box">
      <div class="tree_box_header"> Search in Tree
-     <img src="/CoReTracker/webplugin/close.png" onclick='$(this).closest("#search_in_tree_box").hide();'>
+     <img src="/CoreTracker/webplugin/close.png" onclick='$(this).closest("#search_in_tree_box").hide();'>
      </div>
      <form onsubmit='javascript:
                      search_in_tree("%s", "%s",
@@ -507,7 +507,7 @@ application = WebTreeApplication()
 # directory. Note that the referred directory must be writable by the
 # webserver.
 #application.CONFIG["temp_dir"] = "/home/services/web/etetoolkit.org/webplugin/tmp/"
-application.CONFIG["temp_dir"] = "/home/manu/html/CoReTracker/tmp"
+application.CONFIG["temp_dir"] = "/home/manu/html/CoreTracker/tmp"
 application.CONFIG["temp_url"] = "./../tmp" # Relative to web site Document Root
 
 # Set the DISPLAY port that ETE should use to draw pictures. You will

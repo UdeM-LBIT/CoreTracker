@@ -1,0 +1,37 @@
+ body {
+    margin-top: 30px;
+    font: 10px sans-serif;
+}
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+.link {
+    fill: none;
+    stroke-width: 1px;
+    stroke : #DDD;
+}
+.dot {
+    stroke: #222;
+    stroke-width: 1px;
+
+}
+#treenewick{
+    visibility: hidden;
+}
+#line1{
+    display: table;
+    width: 100%;
+    text-align: center;
+
+}
+#line1 div{
+    display:table-cell;
+    margin-left: 40px;
+}
+
+#line2{
+    text-align: center;
+}
