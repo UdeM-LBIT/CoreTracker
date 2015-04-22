@@ -4,24 +4,22 @@
     <title>CoreTracker </title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!-- Import scripts in this specific order -->
-    <script src="/CoreTracker/webplugin/jquery.min.js"></script>
-    <script src="/CoreTracker/webplugin/jquery-ui.min.js"></script>
-   <script src="/CoreTracker/webplugin/chroma.min.js"></script>
-
-
-    <link rel="stylesheet" href="/CoreTracker/webplugin/jquery-ui.css" />
-    <script src="/CoreTracker/webplugin/ete.js"></script>
+    <script src="/CoreTracker/webplugin/js/jquery.min.js"></script>
+    <script src="/CoreTracker/webplugin/js/jquery-ui.min.js"></script>
+  
+    <link rel="stylesheet" href="/CoreTracker/webplugin/css/jquery-ui.css" />
+    <script src="/CoreTracker/webplugin/js/ete.js"></script>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script src="http://d3js.org/queue.v1.min.js"></script>
+    <script src="http://d3js.org/queue.v1.min.js"></script>
 
-    <script src="/CoreTracker/webplugin/d3svg.js"></script>
+    <script src="/CoreTracker/webplugin/js/d3svg.js"></script>
 
     <script>
       /* YOU MUST SET THIS VARIABLE */
       var ete_webplugin_URL = "/CoreTracker/wsgi/wsgi.py"
     </script>
-    <link rel="stylesheet" type="text/css" href="/CoreTracker/webplugin/ete.css" >
-    <link rel="stylesheet" type="text/css" href="/CoreTracker/webplugin/coretracker.css" >
+    <link rel="stylesheet" type="text/css" href="/CoreTracker/webplugin/css/ete.css" >
+    <link rel="stylesheet" type="text/css" href="/CoreTracker/webplugin/css/coretracker.css" >
   </head>
   <body>
     <!-- This layer must be called "popup" -->
@@ -29,9 +27,7 @@
     <div style='text-align: left;'>
       <h3><b>CoreTracker</b></h3>
       <div style="clear:both;" >
-        <!-- This is the most important part. We start tree visualization by calling draw_tree function.
-        draw_tree(treeid, newick, container)
-        -->
+
         <select id="alignment" name="alignment">
           <option value="filtered">Filtered</option>
           <option value="global">Global</option>

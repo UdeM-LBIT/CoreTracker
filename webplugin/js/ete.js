@@ -1,5 +1,5 @@
 var ete_webplugin_URL = "http://coretracker.localhost/CoreTracker/wsgi/wsgi.py";
-var loading_img = '<img border=0 src="loader.gif">'; 
+var loading_img = '<img border=0 src="images/loader.gif">'; 
 
 function draw_tree(treeid, newick, recipient, extra_params){
   var params = {"tree": newick, "treeid": treeid};
@@ -33,7 +33,7 @@ function show_context_menu(treeid, nodeid, actions, textface){
     var textface = "";
     }
 
-  $("#popup").html(loading_img);
+  //$("#popup").html(loading_img);
   $('#popup').load(ete_webplugin_URL+'/get_menu', {"treeid": treeid, "show_actions": actions, "nid": nodeid, "textface": textface}
                   );}
 

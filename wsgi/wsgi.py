@@ -10,6 +10,7 @@ sys.path.insert(0,'/anaconda/lib/python2.7/site-packages')
 
 sys.path.insert(0, WEB_APP_BASE_PATH)
 
+import settings
 from Bio.Alphabet import IUPAC
 from Bio import AlignIO
 from Bio import Alphabet
@@ -23,9 +24,16 @@ from ete2 import faces
 
 TREE = "phylotree.nw"
 TMP = WEB_APP_BASE_PATH+"/tmp/"
+global IC_CONTENT
 IC_CONTENT = []
 
 ALIGNMENT = {"filtered": "alignment.fasta_filtered", "global" : "alignment.fasta", "ungapped": "alignment.fasta_ungapped", "ID_filtered" : "alignment.fasta_matchremoved"}
+
+#tree style 
+ts = TreeStyle()
+ts.branch_vertical_margin = 5
+ts.show_scale = False
+#ts.scale = 20
 
 # In order to extend the default WebTreeApplication, we define our own
 # WSGI function that handles URL queries
@@ -54,14 +62,16 @@ def coretracker(environ, start_response, queries):
             selected_align = AlignIO.read(TMP+ALIGNMENT[param_seqid], 'fasta', alphabet=Alphabet.Gapped(IUPAC.protein))
             summary_info = AlignInfo.SummaryInfo(selected_align)        
             total_ic_content = summary_info.information_content()
-
+            global IC_CONTENT
             IC_CONTENT = summary_info.ic_vector.values()
+            threshold = float(max(IC_CONTENT)* settings.IC_INFO_THRESHOLD/100.0)
+
+            global ts
             ts = TreeStyle()
             ts.branch_vertical_margin = 5
-            ic_plot = faces.SequencePlotFace(IC_CONTENT, fsize=10, col_width=14, header="Information Content", kind='bar', ylabel="ic")
-            ts.aligned_header.add_face(ic_plot, 1)
             ts.show_scale = False
-            #ts.scale = 20
+            ic_plot = faces.SequencePlotFace(IC_CONTENT, hlines=[threshold], hlines_col=['red'], ylim=(int(min(IC_CONTENT)-0.5), int(max(IC_CONTENT)+0.5)), fsize=10, col_width=14, header="Information Content", kind='bar', ylabel="ic")
+            ts.aligned_header.add_face(ic_plot, 1)            
             application.set_tree_style(ts)
 
             newick = sptree.write(features=[])
@@ -101,6 +111,7 @@ def phyloloader(tree):
 
 LEAVE_FACES = [] # Global var that stores the faces that are rendered
                  # by the layout function
+
 def main_layout(node):
     ''' Main layout function. It controls what is shown in tree
     images. '''
@@ -108,14 +119,35 @@ def main_layout(node):
     # Add faces to leaf nodes. This allows me to add the faces from
     # the global variable LEAVE_FACES, which is set by the application
     # controler according to the arguments passed through the URL.
-    if node.is_leaf():
+    global IC_CONTENT
 
+    if not (IC_CONTENT):
+        print len(IC_CONTENT)
+
+        selected_align = AlignIO.read(TMP+ALIGNMENT[param_seqid], 'fasta', alphabet=Alphabet.Gapped(IUPAC.protein))
+        summary_info = AlignInfo.SummaryInfo(selected_align)        
+        total_ic_content = summary_info.information_content()
+        IC_CONTENT = summary_info.ic_vector.values()
+
+    global ts
+    ic_plot = faces.SequencePlotFace(IC_CONTENT, fsize=10, col_width=14, header="Information Content", kind='bar', ylabel="ic")
+    ts.aligned_header.add_face(ic_plot, 1)
+ 
+    
+    if node.is_leaf():
         for f, fkey, pos in LEAVE_FACES:
-            if hasattr(node, fkey):
+            if hasattr(node, fkey) and fkey != 'name' :
+                # we check if the face is already added before 
+                print fkey
+                if(fkey=='name'):
+                    added = getattr(node, '_temp_faces', None)
+                    print getattr(added, 'branch-right')
                 faces.add_face_to_node(f, node, column=pos, position="branch-right")
     else:
         # Add special faces on collapsed nodes
         if hasattr(node, "hide") and int(node.hide) == 1:
+            print "trouble"
+
             node.img_style["draw_descendants"]= False
             collapsed_face = faces.TextFace(\
                 " %s collapsed leaves." %len(node), \
@@ -124,40 +156,25 @@ def main_layout(node):
         else:
             node.img_style["draw_descendants"] = True
 
-
+    
     # Set node aspect. This controls which node features are used to
     # control the style of the tree. You can add or modify this
     # features, as well as their behaviour
     if node.is_leaf():
         node.img_style["shape"] = "square"
         node.img_style["size"] = 4
+    elif node.is_root():
+        node.img_style["shape"] = "circle"
+        node.img_style["size"] = 8
     else:
         node.img_style["size"] = 8
         node.img_style["shape"] = "sphere"
 
-    # Evoltype: [D]uplications, [S]peciations or [L]osess.
-    if hasattr(node,"evoltype"):
-        if node.evoltype == 'D':
-            node.img_style["fgcolor"] = "#1d176e"
-            node.img_style["hz_line_color"] = "#1d176e"
-            node.img_style["vt_line_color"] = "#1d176e"
-        elif node.evoltype == 'S':
-            node.img_style["fgcolor"] = "#FF0000"
-            node.img_style["line_color"] = "#FF0000"
-        elif node.evoltype == 'L':
-            node.img_style["fgcolor"] = "#777777"
-            node.img_style["vt_line_color"] = "#777777"
-            node.img_style["hz_line_color"] = "#777777"
-            node.img_style["line_type"] = 1
-    # If no evolutionary information, set a default style
-    else:
-        node.img_style["fgcolor"] = "#000000"
-        node.img_style["vt_line_color"] = "#000000"
-        node.img_style["hz_line_color"] = "#000000"
-
+    
     # Parse node features features and conver them into styles. This
     # must be done like this, since current ete version does not allow
     # modifying style outside the layout function.
+    """
     if hasattr(node, "bsize"):
         node.img_style["size"]= int(node.bsize)
 
@@ -169,7 +186,7 @@ def main_layout(node):
 
     if hasattr(node, "fgcolor"):
         node.img_style["fgcolor"]= node.fgcolor
-
+    """
 
 # ==============================================================================
 # Checker function definitions:
@@ -349,12 +366,12 @@ def tree_renderer(tree, treeid, application):
 
     # Extracts from URL query the features that must be drawn in the tree 
     asked_features = application.queries.get("show_features", ["name"])[0].split(",")
-    print >>sys.stderr, asked_features
+
     def update_features_avail(feature_key, name, col, fsize, fcolor, prefix, suffix):
         text_features_avail.setdefault(feature_key, [name, 0, col, fsize, fcolor, prefix, suffix])
         text_features_avail[feature_key][1] += 1
 
-    tree.add_feature("fgcolor", "#833DB4")
+    tree.add_feature("fgcolor", "#000000")
     tree.add_feature("shape", "sphere")
     tree.add_feature("bsize", "8")
     tree.dist = 0
@@ -382,7 +399,10 @@ def tree_renderer(tree, treeid, application):
         else:
             # If the feature has no associated format, let's add something standard
             prefix = " %s: " %fkey
-            f = faces.AttrFace(fkey, ftype="Arial", fsize=10, fgcolor="#666666", text_prefix=prefix, text_suffix="")
+            suffix = ","
+            if fkey == asked_features[-1]:
+                suffix=""
+            f = faces.AttrFace(fkey, ftype="Arial", fsize=10, fgcolor="#666666", text_prefix=prefix, text_suffix=suffix)
             LEAVE_FACES.append([f, fkey, unknown_faces_pos])
             unknown_faces_pos += 1
 
@@ -393,14 +413,13 @@ def tree_renderer(tree, treeid, application):
                 text_features_avail.setdefault(f, 0)
                 text_features_avail[f] = text_features_avail[f] + 1 
 
-    html_features = """
+    html_features = '''
       <div id="tree_features_box">
       <div class="tree_box_header">Available tree features
-      <img src="/CoreTracker/webplugin/close.png" onclick='$(this).closest("#tree_features_box").hide();'>
+      <img src=""/CoreTracker/webplugin/images/close.png" onclick='$(this).closest("#tree_features_box").hide();'>
       </div>
-      <form action='javascript: set_tree_features("", "", "");'>
-
-      """
+      <form id="form_tree_features" action='javascript: set_tree_features("", "", "");'>
+      '''
 
     for fkey, counter in text_features_avail.iteritems():
         if fkey in asked_features:
@@ -410,11 +429,9 @@ def tree_renderer(tree, treeid, application):
 
         fname = formated_features.get(fkey, [fkey])[0]
 
-        #html_features = "<tr>"
         html_features += '<INPUT NAME="tree_feature_selector" TYPE=CHECKBOX %s VALUE="%s">%s (%s/%s leaves)</input><br> ' %\
             (tag, fkey, fname, counter, len(leaves))
- #       html_features += '<td><INPUT size=7 type="text"></td> <td><input size=7 type="text"></td> <td><input size=7 type="text"></td>  <td><input size=1 type="text"></td><br>'
-        #html_features += "</tr>"
+
 
     html_features += """<input type="submit" value="Refresh" 
                         onclick='javascript:
@@ -430,24 +447,24 @@ def tree_renderer(tree, treeid, application):
 
     features_button = """
      <li><a href="#" onclick='show_box(event, $(this).closest("#tree_panel").children("#tree_features_box"));'>
-     <img width=16 height=16 src="/CoreTracker/webplugin/icon_tools.png" alt="Select Tree features">
+     <img width=16 height=16 src="/CoreTracker/webplugin/images/icon_tools.png" alt="Select Tree features">
      </a></li>"""
 
     download_button = """
      <li><a href="/CoreTracker/tmp/%s.png" target="_blank">
-     <img width=16 height=16 src="/CoreTracker/webplugin/icon_attachment.png" alt="Download tree image">
+     <img width=16 height=16 src="/CoreTracker/webplugin/images/icon_attachment.png" alt="Download tree image">
      </a></li>""" %(treeid)
 
     search_button = """
       <li><a href="#" onclick='javascript:
           var box = $(this).closest("#tree_panel").children("#search_in_tree_box");
           show_box(event, box); '>
-      <img width=16 height=16 src="/CoreTracker/webplugin/icon_search.png" alt="Search in tree">
+      <img width=16 height=16 src="/CoreTracker/webplugin/images/icon_search.png" alt="Search in tree">
       </a></li>"""
 
     clean_search_button = """
       <li><a href="#" onclick='run_action("%s", "", %s, "clean::clean");'>
-      <img width=16 height=16 src="/CoreTracker/webplugin/icon_cancel_search.png" alt="Clear search results">
+      <img width=16 height=16 src="/CoreTracker/webplugin/images/icon_cancel_search.png" alt="Clear search results">
       </a></li>""" %\
         (treeid, 0)
 
@@ -456,14 +473,35 @@ def tree_renderer(tree, treeid, application):
         '</div>'
 
     search_select = '<select id="ete_search_target">'
+
+    # Name first
+    if 'name' in text_features_avail:
+        search_select += '<option value="name">name</option>'
+        del text_features_avail['name']
+
     for fkey in text_features_avail:
         search_select += '<option value="%s">%s</option>' %(fkey,fkey)
     search_select += '</select>'
 
+
+    main_search = '''
+    <form onsubmit='javascript:
+                     search_in_tree("%s", "%s",
+                                    $(this).closest("form").children("#ete_search_term").val(),
+                                    $(this).closest("form").children("#ete_search_target").val());'
+          action="javascript:void(0);">
+          <input id="ete_search_term" type="text" value="Search"
+          style="font-style:italic;color:grey;"
+          onfocus="if(this.value == 'Search') { this.value = ''; this.style.color='black'; this.style.fontStyle='normal'}"'>%s</input>
+     </form>
+     '''%\
+            (treeid, 0, search_select)
+
+
     search_form = """
      <div id="search_in_tree_box">
      <div class="tree_box_header"> Search in Tree
-     <img src="/CoreTracker/webplugin/close.png" onclick='$(this).closest("#search_in_tree_box").hide();'>
+     <img src="/CoreTracker/webplugin/images/close.png" onclick='$(this).closest("#search_in_tree_box").hide();'>
      </div>
      <form onsubmit='javascript:
                      search_in_tree("%s", "%s",
@@ -482,7 +520,10 @@ def tree_renderer(tree, treeid, application):
                                    # to the search functionality. This
                                    # means that this action is the
                                    # first to be registered in WebApplication.
-
+    
+    buttons = '<div id="ete_tree_buttons">' +\
+            main_search + features_button + clean_search_button + download_button +\
+            '</div>'
 
     tree_panel_html = '<div id="tree_panel">' + search_form + html_features + buttons + '</div>'
 
@@ -530,15 +571,12 @@ application.set_external_app_handler(coretracker)
 application.set_tree_loader(phyloloader)
 
 # And our layout as the default one to render trees
-ts = TreeStyle()
-ts.branch_vertical_margin = 5
 
-ts.show_scale = False
+#ts.layout_fn.append(main_layout)
+#application.set_tree_style(ts)
 
-#ts.scale = 20
-application.set_tree_style(ts)
 #application.set_default_layout_fn(main_layout)
-application.set_tree_size(None, None)
+# application.set_tree_size(None, None)
 # I want to make up how tree image in shown using a custrom tree
 # renderer that adds much more HTML code
 application.set_external_tree_renderer(tree_renderer)
@@ -594,7 +632,7 @@ application.register_action("branch_info", "node", None, None, branch_info)
 application.register_action("<b>Collapse</b>", "node", collapse, can_collapse, None)
 application.register_action("Expand", "node", expand, can_expand, None)
 application.register_action("Highlight background", "node", set_bg, None, None)
-#application.register_action("Set as root", "node", set_as_root, None, None)
+application.register_action("Set as root", "node", set_as_root, None, None)
 application.register_action("Swap children", "node", swap_branches, is_not_leaf, None)
 
 # Actions attached to node's content (shown as text faces)
