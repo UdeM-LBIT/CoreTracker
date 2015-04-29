@@ -24,14 +24,42 @@
 #line1{
     display: table;
     width: 100%;
-    text-align: center;
+    text-align: left;
 
 }
 #line1 div{
     display:table-cell;
-    margin-left: 40px;
+    margin-left: 20px;
+    margin-right: 25px;
 }
 
 #line2{
-    text-align: center;
+    margin-left:30px;
+}
+
+#line span {
+    display: table-cell;
+}
+
+.splist{
+    float: left;
+    margin-right: 0px;
+    margin-top: 10px;
+    padding-right: 15px;
+    overflow-y: auto;
+    max-height: 350px;
+}
+
+.splist ul {
+  list-style-type: none;
+  width: 100%;
+  text-align: left;   
+}
+
+.splist ul li{
+    padding-top: 2px;
+}
+
+.red {
+    color: #E32B2F;
 }

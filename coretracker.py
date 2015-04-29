@@ -18,8 +18,10 @@ from multiprocessing import Pool
 
 from collections import Counter
 
+from Bio.Phylo.TreeConstruction import DistanceCalculator
 from Bio import AlignIO
 from Bio import Alphabet
+from Bio.Seq import Seq
 from Bio import SeqIO
 from Bio import SubsMat
 from Bio.Align import AlignInfo
@@ -30,6 +32,7 @@ from cStringIO import StringIO
 from ete2 import PhyloTree
 from ete2 import TreeStyle
 from settings import *
+from pprint import pprint
 
 
 __author__ = "Emmanuel Noutahi"
@@ -90,6 +93,91 @@ class Output(object):
         sys.stderr.write("%s: %s\n" % (type, message))
 
 
+class NaiveFitch(object):
+    """A NaiveFitch algorithm for finding the most parcimonious solution"""
+    def __init__(self, tree, reassigned):
+        self.id = {}
+        self.tree = tree
+        for leaf in tree:
+            if leaf.name in reassigned:
+                leaf.add_features(reassigned={1})
+                leaf.add_features(rea='1')
+            else:
+                leaf.add_features(reassigned={0})
+                leaf.add_features(rea='0')
+        self._bottomup()
+        self._topdown()
+            
+    
+    def _bottomup(self):
+        """Fitch algorithm part 1 : bottom up"""
+        for node in self.tree.traverse('postorder'):
+            if not node.is_leaf() :
+                intersect = []
+                union = set()
+                for c in node.get_children():
+                    union = union | c.reassigned
+                    intersect.append(c.reassigned)
+                intersect = set.intersection(*intersect)
+                
+                if(intersect):
+                    node.add_features(reassigned=intersect)
+                    if len(intersect) == 1:
+                        # if only one one element in the intersection
+                        # the children should have that elemenent
+                        for c in node.get_children():
+                            c.reassigned = intersect
+                else:
+                    node.add_features(reassigned=union)
+
+                node.add_features(rea="/".join([str(r) for r in node.reassigned]))
+
+
+    def _topdown(self):
+        """Fitch algorithm part 2 : top down"""
+        pass
+
+
+    def render_tree(self, output):
+        GRAPHICAL_ACCESS = True
+        try:
+            from ete2 import TreeStyle, NodeStyle, faces, AttrFace
+        except ImportError, e:
+            GRAPHICAL_ACCESS = False
+            print "Warning : PyQt not installed"
+        
+        if(GRAPHICAL_ACCESS):
+            ts = TreeStyle()
+            ts.show_leaf_name = True
+
+            rea_style = NodeStyle()
+            rea_style["shape"] = "circle"
+            rea_style["size"] = 8
+            rea_style["fgcolor"] = "seagreen"
+
+            other_style = NodeStyle()
+            other_style["shape"] = "circle"
+            other_style["size"] = 8
+            other_style["fgcolor"] = "seagreen"
+            other_style["bgcolor"] = "yellow"
+
+            def layout(node):
+                N = AttrFace("rea", fsize=12)
+                faces.add_face_to_node(N, node, 0, position="branch-top")
+
+            ts.layout_fn = layout
+
+            # Apply node style
+            for n in self.tree.traverse():
+                if len(n.reassigned) == 1 and '1' in n.rea:
+                    n.set_style(rea_style)
+                elif len(n.reassigned) > 1:
+                    n.set_style(other_style)
+
+            # Save tree as figure
+            self.tree.render(output, dpi=400, tree_style=ts)
+
+
 def get_argsname(command_dict, command_list, prefix=""):
     """ Get the mafft command from the argparse dict : command_dict
     and a command_list
@@ -124,10 +212,13 @@ def executeCMD(cmd, prog):
 
 def filter_align_position(alignment, index_array):
     """Remove columns specified by index_array from the alignment"""
-    edited_alignment = alignment[:, slice(index_array[0], index_array[0] + 1)]
-
-    for i in index_array[1:]:
-        edited_alignment += alignment[:, slice(i, i + 1)]
+    edited_alignment =  alignment[:,:]
+    # alignment[:, slice(index_array[0], index_array[0] + 1)]
+    for seqrec in edited_alignment :
+        seq = Seq('', alpha)
+        for i in index_array:
+            seq += seqrec[i]
+        seqrec.seq = seq
 
     return edited_alignment
 
@@ -201,14 +292,19 @@ def convert_tree_to_mafft(tree, seq_order, output):
                          (seqnames[0], seqnames[1], branchlens[0], branchlens[1]))
 
 
-def get_aa_filtered_alignment(alignment, aa, threshold):
+def get_consensus(alignment, threshold):
+    """return consensus, using a defined threshold"""
+    aligninfo = AlignInfo.SummaryInfo(alignment)
+    consensus = aligninfo.gap_consensus(threshold=threshold, ambiguous='X')
+    return consensus
+
+
+def get_aa_filtered_alignment(consensus, aa):
     """Get the filtered alignment for an amino acid"""
     aa = aa.upper()
     assert aa in aa_letters, "Amino acid %s not found" % aa
-    aligninfo = AlignInfo.SummaryInfo(alignment)
-    consensus = aligninfo.gap_consensus(threshold=threshold, ambiguous='X')
     cons_array = [i for i, c in enumerate(consensus) if c.upper() == aa]
-    return filter_align_position(alignment, cons_array)
+    return cons_array
 
 
 def realign(msa, tree, enable_mafft):
@@ -366,7 +462,7 @@ if __name__ == '__main__':
     output.close()
 
     # execute mafft
-    if(enable_mafft):
+    if(enable_mafft and not SKIPMAFFT):
         execute_mafft(enable_mafft + " --treein %s %s > %s" %
                       (output.file, args.seq, MAFFT_OUTPUT))
 
@@ -380,21 +476,10 @@ if __name__ == '__main__':
         AlignIO.write(
             alignment, open(MAFFT_OUTPUT + "_ungapped", 'w'), 'fasta')
 
-    filtered_alignment = alignment
 
-    # Already enabled by default in the arguments list
-    if(args.idfilter):
-        filtered_alignment = filter_alignment(
-            alignment, threshold=(abs(args.idfilter) <= 1 or 0.01) * abs(args.idfilter))
-        AlignIO.write(
-            filtered_alignment, open(MAFFT_OUTPUT + "_filtered", 'w'), 'fasta')
-        identity_removed_alignment = filter_alignment(filtered_alignment, remove_identity=True, threshold=(
-            abs(args.idfilter) <= 1 or 0.01) * abs(args.idfilter))
-        AlignIO.write(identity_removed_alignment, open(
-            MAFFT_OUTPUT + "_matchremoved", 'w'), 'fasta')
 
     # Get the substitution matrice at each node
-    sptree = PhyloTree(specietree.write(), alignment=filtered_alignment.format(
+    sptree = PhyloTree(specietree.write(), alignment=alignment.format(
         "fasta"), alg_format="fasta")
 
     # Compute expected frequency from the entire alignment and update at each
@@ -433,13 +518,6 @@ if __name__ == '__main__':
             replace_info = node_align_info.replacement_dictionary()
             node_align_arm = SubsMat.SeqMat(replace_info)
 
-            # add alignment content at root
-            if(node.is_root()):
-                total_ic_content = node_align_info.information_content(
-                    chars_to_ignore=['X'], e_freq_table=(exp_freq_table if USE_EXPECTED_FREQ_FOR_IC else None))
-
-                node.add_feature('ic', node_align_info.ic_vector)
-
             node_sub_matrix = SubsMat.make_log_odds_matrix(
                 node_align_arm, exp_freq_table=exp_freq_table)
 
@@ -453,6 +531,31 @@ if __name__ == '__main__':
                 print "SUB matrix"
                 print node_sub_matrix
 
+    
+    # Filter using the ic content
+    if IC_INFO_THRESHOLD:
+        align_info = AlignInfo.SummaryInfo(alignment)
+        ic_content = align_info.information_content(e_freq_table=(exp_freq_table if USE_EXPECTED_FREQ_FOR_IC else None))
+        max_val = max(align_info.ic_vector.values())*IC_INFO_THRESHOLD
+        ic_pos = (np.asarray(align_info.ic_vector.values())>max_val).nonzero()
+        filtered_alignment = filter_align_position(alignment, ic_pos[0])
+
+    # Filter using the match percent per columns
+    # Already enabled by default in the arguments list to filter 
+    if(args.idfilter):
+        filtered_alignment = filter_alignment(
+            filtered_alignment, threshold=(abs(args.idfilter) <= 1 or 0.01) * abs(args.idfilter))
+        AlignIO.write(
+            filtered_alignment, open(MAFFT_OUTPUT + "_filtered", 'w'), 'fasta')
+        
+        # no keeping a variable for this
+        filtered_alignment = filter_alignment(filtered_alignment, remove_identity=True, threshold=(
+            abs(args.idfilter) <= 1 or 0.01) * abs(args.idfilter))
+        AlignIO.write(filtered_alignment, open(
+            MAFFT_OUTPUT + "_matchremoved", 'w'), 'fasta')
+
+    #################################################################################################
+
     # Compute sequence identity in global and filtered alignment
     seq_names = [rec.id for rec in alignment]
     number_seq = len(seq_names)
@@ -463,13 +566,15 @@ if __name__ == '__main__':
     af_length = len(filtered_alignment[0])
     ag_length = len(alignment[0])
     count_max = 0
-    id_matrix = np.zeros(shape=(number_seq, number_seq))
-    global_paired_id = pd.DataFrame(
-        id_matrix, index=seq_names, columns=seq_names)
-    filter_paired_id = global_paired_id.copy()
+    matCalc = DistanceCalculator('identity')
+    global_paired_distance = matCalc.get_distance(alignment)
+    filtered_paired_distance = matCalc.get_distance(filtered_alignment)
+    suspect_species = collections.defaultdict(Counter)
 
     if(EXCLUDE_AA):
         aa_letters = "".join([aa for aa in aa_letters if aa not in EXCLUDE_AA])
+
+    genome_aa_freq = collections.defaultdict(dict)
     for i in xrange(number_seq):
         # Get aa count for each sequence
         count1 = Counter(alignment[i])
@@ -481,51 +586,65 @@ if __name__ == '__main__':
             aa_json[aa_letters_1to3[aa]].append(
                 {'global': global_val, 'filtered': filtered_val, "species": seq_names[i]})
             count_max = max(filtered_val, global_val, count_max)
+            genome_aa_freq[seq_names[i]][aa_letters_1to3[aa]] = global_val
 
         for j in xrange(i + 1):
-            if(j == i):
-                global_paired_id.iloc[i, j] = filter_paired_id.iloc[i, j] = 1.0
-            else:
-                global_paired_id.iloc[i, j] = get_identity(
-                    alignment[i], alignment[j])
-                filter_paired_id.iloc[i, j] = get_identity(
-                    filtered_alignment[i], filtered_alignment[j])
-            sim_json[seq_names[i]].append({"global": global_paired_id.iloc[
-                                          i, j], "filtered": filter_paired_id.iloc[i, j], "species": seq_names[j]})
-            # do not add identity to itself twice
-            if(i != j):
-                sim_json[seq_names[j]].append({"global": global_paired_id.iloc[
-                                              i, j], "filtered": filter_paired_id.iloc[i, j], "species": seq_names[i]})
 
+            sim_json[seq_names[i]].append({"global": (1-global_paired_distance[seq_names[i], seq_names[j]])
+                                          , "filtered":(1-filtered_paired_distance[seq_names[i], seq_names[j]]), "species": seq_names[j]})
+            if i != j:
+                sim_json[seq_names[j]].append({"global": (1-global_paired_distance[seq_names[i], seq_names[j]])
+                                          , "filtered": (1-filtered_paired_distance[seq_names[i], seq_names[j]]), "species": seq_names[i]})
+                
+            # do not add identity to itself twice
+         
     sptree.write(outfile=TMP + "phylotree.nw")
 
     # for performance issues, better make another loop to
     # get the data to plot the conservation of aa in each column
     # of the alignment
 
+    consensus = get_consensus(filtered_alignment, AA_MAJORITY_THRESH)
+    global_consensus = get_consensus(alignment, AA_MAJORITY_THRESH)
+
+    if(args.verbose):
+        print "Filtered alignment consensus : ", consensus
+
+    aa2alignment = {}
+    aa2identy_dict = {}
+    for aa in aa_letters:
+        cons_array = get_aa_filtered_alignment(consensus, aa)
+        #print aa, "\n", cons_array, 
+        if(cons_array):
+            aa_filtered_alignment = filter_align_position(filtered_alignment, cons_array)
+            aa2alignment[aa_letters_1to3[aa]] = aa_filtered_alignment
+            aa2identy_dict[aa] =  matCalc.get_distance(aa_filtered_alignment)
+
+
     def get_aa_maj(mapinput):
         aa_shift_json = collections.defaultdict(list)
-        aa_letters, i, j = mapinput
-        gpaired = global_paired_id.iloc[i, j]
-        #print i, j, aa_letters
+        i, j = mapinput
+        global global_paired_distance
+        global aa_letters
+        global seq_names
+        global aa2identy_dict
+        gpaired = 1-global_paired_distance[seq_names[i], seq_names[j]]
+
         for aa in aa_letters:
-           # get majority position alignment for this aa
-            aa_maj_align = get_aa_filtered_alignment(
-                alignment, aa, AA_MAJORITY_THRESH)
-            filtered_val = get_identity(aa_maj_align[i], aa_maj_align[j])
-            aa_shift_json[aa_letters_1to3[aa]].append({'global':gpaired/100 , 'filtered': filtered_val/100, "species": "%s_%s" % (seq_names[i], seq_names[j])})
+            if(aa in aa2identy_dict.keys()):
+                fpaired = 1 - aa2identy_dict[aa][seq_names[i], seq_names[j]]
+                aa_shift_json[aa_letters_1to3[aa]].append({'global':gpaired , 'filtered': fpaired, "species": "%s_%s" % (seq_names[i], seq_names[j])})
         return aa_shift_json
 
 
     p = Pool(PROCESS_ENABLED)
-    entry =  itertools.combinations(xrange(number_seq), r=2)
-    result = p.map(get_aa_maj, [(aa_letters, max(i), min(i)) for i in entry])
+    result = p.map(get_aa_maj, [(max(ind), min(ind)) for ind in itertools.combinations(xrange(number_seq), r=2)])
 
     aa_shift_json = Counter()
     for r in result:
         aa_shift_json += Counter(r)
-    #print aa_shift_json
 
+ 
     # dumping in json to reload with the web interface using d3.js
     with open(TMP + "similarity.json", "w") as outfile1:
         json.dump(sim_json, outfile1, indent=4)
@@ -534,3 +653,47 @@ if __name__ == '__main__':
             {"AA": aa_json, "EXP": expected_freq, "MAX": count_max}, outfile2, indent=4)
     with open(TMP + "aause.json", "w") as outfile3:
         json.dump(aa_shift_json, outfile3, indent=4)
+
+
+    # transposing counter to dict and finding potential species 
+    # that had a codon reassignment
+    most_common = collections.defaultdict(list)
+    for key, value in aa_shift_json.iteritems():
+        for v in value:
+            specs = v['species'].split('_')
+            if(v['global']> v['filtered']):
+                suspect_species[key][specs[0]] = (suspect_species[key][specs[0]] or 0) + 1
+                suspect_species[key][specs[1]] = (suspect_species[key][specs[1]] or 0) + 1
+
+        common_list =  suspect_species[key].most_common()
+        i = 0
+        while i < len(common_list) and common_list[i][1] > COUNTER_THRESHOLD*len(seq_names):
+            global_freq_use = genome_aa_freq[common_list[i][0]][key]
+            # we are going to use a radius of 0.5 around our expected values
+            if(1-global_freq_use <= 0.5):
+                most_common[key].append(common_list[i]+(global_freq_use,))
+            i += 1
+
+    # Let's say that at this step we have the most suspected species for each aa.
+    # for each aa let's find the targeted aa and let's check in the global alignment
+    for key, values in most_common.iteritems():
+        susspeclist = [val[0] for val in values]
+        aa_alignment = aa2alignment[key]
+
+        for s in aa_alignment:
+            if s.id in susspeclist:
+                suspected_aa = []
+                for i in range(len(s)):
+                    if(s[i]!='-' and aa_letters_1to3[s[i]] != key):
+                        suspected_aa.append(s[i])
+                        print "LOLOLOL"
+                pos = susspeclist.index(s.id)
+                most_common[key][pos] += (suspected_aa,)
+
+    pprint(most_common)
+
+
+
+
+
+

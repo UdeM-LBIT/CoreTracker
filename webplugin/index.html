@@ -29,10 +29,10 @@
       <div style="clear:both;" >
 
         <select id="alignment" name="alignment">
+          <option value="ID_filtered">Filtered and identity removed</option>
           <option value="filtered">Filtered</option>
           <option value="global">Global</option>
           <option value="ungapped">Gap removed</option>
-          <option value="ID_filtered">Filtered and identity removed</option>
         </select>
         <input type='submit' value='Show Tree'  onClick='$("#ete_tree").show();coretracker(random_tid(),"#img1", $("#alignment").val());'>
         <input type='button' value='Clear' onClick='$("#ete_tree").hide();'>
@@ -54,9 +54,9 @@
           </div>
           <br>
           <div id ="line1">
-            <div id="aafreq"></div>
-            <div id="aause"></div>
-          </div>
+            <div id="aafreq"> <span class="splist"><ul id="aafreqlist"></ul></span></div>
+            <div id="aause"> <span class="splist"><ul id="aauselist"></ul></span></div>
+          </div><hr>
           <br>
           <div class="ui-widget">
             <label for="gene">Specie: </label>

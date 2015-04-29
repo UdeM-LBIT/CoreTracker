@@ -1,13 +1,41 @@
 
+var categorie_color = d3.scale.category10();   
 
-function update_dot(data, svg, line, x, y, color, radius) {
 
-    radius = radius || 4;
+function makeTable(container, data) {
+    var keys = Object.keys(data);
+    keys = keys.sort();
+    container.html("");
+    for (key of keys) {
+        container.append('<li>' + key +(data[key]>0 ? " : <strong class=red>"+data[key]+"</strong>":"") + '</li>');
+    }
+}
 
+function update_dot(data, svg, line, x, y, color, container, radius) {
+
+    radius = radius || 3;
+    splist = {}
+    doubleSpec = false;
     data.forEach(function(d) {
         d.filtered = +d.filtered;
         d.global = +d.global;
+        if(container && d.global>d.filtered){
+            var speclist = d.species.split('_');
+            if(speclist.length >1){
+                splist[speclist[0]] = 1 +(splist[speclist[0]] || 0);
+                splist[speclist[1]] = 1 +(splist[speclist[1]] || 0);
+            }
+            else{
+                splist[d.species]=0;    
+            }
+            
+        }
     });
+
+    if(Object.keys(splist).length >0){ 
+        makeTable(container, splist);
+
+   }
 
     svg.selectAll(".dot").remove()
     
@@ -24,7 +52,19 @@ function update_dot(data, svg, line, x, y, color, radius) {
     })
     .style("fill", function(d) {
         species = d.species.split('_');
-        if (species.length >1) {            
+
+//        if (species.length >1 ){
+            var delta = d.filtered > d.global ? -1 : 1;
+            if(d.global>1) return categorie_color(d.filtered>1 ? delta*2 : delta*3);
+            if(d.filtered>1) return categorie_color(d.global>1 ? delta*2 : delta*3);
+            return categorie_color(delta);
+
+
+        //}
+        // Use this to display a circle with two separate color
+        /*if (species.length >1) {
+
+
             var grad = svg.append("defs")
                 .append("linearGradient").attr("id", "grad"+d.species)
                 .attr("x1", "0%").attr("x2", "0%").attr("y1", "100%").attr("y2", "0%");
@@ -32,9 +72,9 @@ function update_dot(data, svg, line, x, y, color, radius) {
             grad.append("stop").attr("offset", "50%").style("stop-color", color[species[0]]);
             grad.append("stop").attr("offset", "50%").style("stop-color", color[species[1]]);
             return "url(#grad"+d.species+")";
-    }
+        }*/
 
-        return color[d.species];
+        //return color[d.species];
     })
 
     .append("title")
@@ -196,12 +236,6 @@ function firstline(aafrequency, aause) {
         }
 
         //setting colors
-        //var bezInterpolator = chroma.interpolate.bezier(['lightyellow', 'pink',  'orange', 'red', 'blue']);
-
-        // var chromacolor = chroma.scale(bezInterpolator).correctLightness(true).domain([0, species_list.length]);
-        // dynamic bit...
-        //var color = d3.scale.category10();
-        //var color = chromacolor //d3.scale.ordinal().domain(species_list).range(chromacolor);
         color = get_color(species_list)
         
         var lineData1 = [{
@@ -221,12 +255,20 @@ function firstline(aafrequency, aause) {
             y: 1.1
         }];
 
-        var expectedData = [{
+        var expectedData1 = [{
             x: 1,
             y: 0
         }, {
             x: 1,
             y: max_val
+        }];
+
+        var expectedData2 = [{
+            x: 0,
+            y: 1
+        }, {
+            x: max_val,
+            y: 1
         }];
 
         x1.domain([0, max_val]).nice();
@@ -240,7 +282,7 @@ function firstline(aafrequency, aause) {
         aa_set_svg(p_aasvg, xAxis2, yAxis2, width, height, "Amino acid usage for each pair");
 
         aasvg.append('svg:path')
-        .attr("d", linefunc1(expectedData))
+        .attr("d", linefunc1(expectedData1))
         .attr("class", "link")
         .style("stroke-dasharray", ("2, 2"))
         .style("stroke", "#333")
@@ -248,8 +290,18 @@ function firstline(aafrequency, aause) {
         .append("title")
         .text("Expected frequence");
 
-        update_dot(injson[default_key], aasvg, linefunc1(lineData1), x1, y1, color);
-        update_dot(usejson[default_key], p_aasvg, linefunc2(lineData2), x2, y2, color);
+
+        aasvg.append('svg:path')
+        .attr("d", linefunc1(expectedData2))
+        .attr("class", "link")
+        .style("stroke-dasharray", ("2, 2"))
+        .style("stroke", "#333")
+        .attr("fill", "none")
+        .append("title")
+        .text("Expected frequence");
+
+        update_dot(injson[default_key], aasvg, linefunc1(lineData1), x1, y1, color, $('#aafreqlist'));
+        update_dot(usejson[default_key], p_aasvg, linefunc2(lineData2), x2, y2, color, $('#aauselist'));
 
 
         $("#aa").autocomplete({
@@ -257,8 +309,8 @@ function firstline(aafrequency, aause) {
             autoFocus: true,
             select: function(a, b) {
                 $(this).val(b.item.value);
-                update_dot(injson[b.item.value], aasvg, linefunc1(lineData1), x1, y1, color);
-                update_dot(usejson[b.item.value], p_aasvg, linefunc2(lineData2), x2, y2, color);
+                update_dot(injson[b.item.value], aasvg, linefunc1(lineData1), x1, y1, color, $('#aafreqlist'));
+                update_dot(usejson[b.item.value], p_aasvg, linefunc2(lineData2), x2, y2, color, $('#aauselist'));
             }
         }).val(default_key).data('autocomplete');
 
@@ -275,8 +327,8 @@ function secondline(similarity){
         bottom: 50,
         left: 40
     },
-    width = 600 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    width = 520 - margin.left - margin.right,
+    height = 410 - margin.top - margin.bottom;
 
       var idsvg = d3.select("#identity").append("svg")
         .attr("width", width + margin.left + margin.right)
@@ -312,11 +364,11 @@ function secondline(similarity){
           x: 0,
           y: 0
         }, {
-          x: 100,
-          y: 100
+          x: 1.0,
+          y: 1.0
         }]
-        x.domain([0, 110]).nice();
-        y.domain([0, 110]).nice();
+        x.domain([0, 1.10]).nice();
+        y.domain([0, 1.10]).nice();
 
         species_list = []
         for (key in data){

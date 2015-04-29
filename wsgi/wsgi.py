@@ -64,7 +64,8 @@ def coretracker(environ, start_response, queries):
             total_ic_content = summary_info.information_content()
             global IC_CONTENT
             IC_CONTENT = summary_info.ic_vector.values()
-            threshold = float(max(IC_CONTENT)* settings.IC_INFO_THRESHOLD/100.0)
+            threshold = float(max(IC_CONTENT)* settings.IC_INFO_THRESHOLD)
+            #print threshold, max(IC_CONTENT)
 
             global ts
             ts = TreeStyle()
