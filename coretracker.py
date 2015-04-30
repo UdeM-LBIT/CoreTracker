@@ -56,6 +56,9 @@ aa_letters_1to3 = {
     'S': 'Ser', 'T': 'Thr', 'V': 'Val', 'W': 'Trp',
     'Y': 'Tyr',
 }
+
+aa_letters_3to1 = dict((x[1], x[0]) for x in
+                            aa_letters_1to3.items())
 nuc_letters = "ACTG"
 
 MAFFT_AUTO_COMMAND = [
@@ -95,23 +98,59 @@ class Output(object):
 
 class NaiveFitch(object):
     """A NaiveFitch algorithm for finding the most parcimonious solution"""
-    def __init__(self, tree, reassigned):
+    def __init__(self, tree, reassigned, ori_aa="", dest_aa=""):
         self.id = {}
         self.tree = tree
+        self.corr = {'0':ori_aa, '1':dest_aa}
         for leaf in tree:
             if leaf.name in reassigned:
                 leaf.add_features(reassigned={1})
-                leaf.add_features(rea='1')
+                leaf.add_features(rea=self.corr['1'])
+                leaf.add_features(state=dest_aa)
             else:
                 leaf.add_features(reassigned={0})
-                leaf.add_features(rea='0')
-        self._bottomup()
-        self._topdown()
-            
+                leaf.add_features(rea=self.corr['0'])
+                leaf.add_features(state=ori_aa)
+        
+        self.ori_aa = ori_aa
+        self.dest_aa = dest_aa
+        self.newick = tree.write(features=['name', 'dist', 'support', 'state'])
+        self._bottomup(self.tree)
+        self._topdown(self.tree)
+     
+
+    def write_tree(self, outfile):
+        """Export newick to file, if we are going to use R later to find
+        ancestral character
+        """
+        with open(outfile, 'w') as OUT:
+            OUT.wrte(self.newick)
     
-    def _bottomup(self):
+    def is_valid(self):
+        tmptree = self.tree.copy()
+        for l in tmptree.traverse():
+            if not l.is_leaf():
+                l.del_feature('reassigned')
+                l.del_feature('rea')
+            elif 'lost' in l.features and l.lost:
+                leaf.add_features(reassigned={0})
+                leaf.add_features(rea=self.corr['0'])
+                leaf.add_features(state=self.ori_aa)
+            elif 'lost' is l.features and not l.lost:
+                leaf.add_features(reassigned={1})
+                leaf.add_features(rea=self.corr['1'])
+                leaf.add_features(state=self.dest_aa)              
+
+        self._bottomup(tmptree)
+
+        for node in tmptree.traverse():
+            if node.rea == self.dest_aa:
+                return True
+        return False
+
+    def _bottomup(self, tree):
         """Fitch algorithm part 1 : bottom up"""
-        for node in self.tree.traverse('postorder'):
+        for node in tree.traverse('postorder'):
             if not node.is_leaf() :
                 intersect = []
                 union = set()
@@ -122,50 +161,77 @@ class NaiveFitch(object):
                 
                 if(intersect):
                     node.add_features(reassigned=intersect)
-                    if len(intersect) == 1:
+                    
+                    #if len(intersect) == 1:
                         # if only one one element in the intersection
                         # the children should have that elemenent
-                        for c in node.get_children():
-                            c.reassigned = intersect
+                    #    for c in node.get_children():
+                    #        c.reassigned = intersect
                 else:
                     node.add_features(reassigned=union)
 
-                node.add_features(rea="/".join([str(r) for r in node.reassigned]))
+                node.add_features(rea="/".join([self.corr[str(r)] for r in node.reassigned]))
 
-
-    def _topdown(self):
+    def _topdown(self, tree):
         """Fitch algorithm part 2 : top down"""
         pass
 
+    def get_species_list(self):
+        """Get the species list for which we are almost certain
+        that there is a reassignment
+        """
+        slist = set()
+        for node in self.tree.traverse():
+            if 'reassigned' in node.features and (1 in node.reassigned):
+                slist.update(node.get_leaf_names())
+        return slist
 
-    def render_tree(self, output):
+    def render_tree(self, output=""):
         GRAPHICAL_ACCESS = True
         try:
-            from ete2 import TreeStyle, NodeStyle, faces, AttrFace
+            from ete2 import TreeStyle, NodeStyle, faces, AttrFace, TextFace
         except ImportError, e:
             GRAPHICAL_ACCESS = False
             print "Warning : PyQt not installed"
         
+        if not output:
+            output = TMP+self.ori_aa+"_to_"+self.dest_aa+".pdf"
+
         if(GRAPHICAL_ACCESS):
             ts = TreeStyle()
             ts.show_leaf_name = True
 
             rea_style = NodeStyle()
-            rea_style["shape"] = "circle"
-            rea_style["size"] = 8
-            rea_style["fgcolor"] = "seagreen"
+            rea_style["shape"] = "square"
+            rea_style["size"] = 6
+            rea_style["fgcolor"] = "lightsalmon"
+            rea_style["hz_line_type"] = 0
+
 
             other_style = NodeStyle()
             other_style["shape"] = "circle"
-            other_style["size"] = 8
+            other_style["size"] = 6
             other_style["fgcolor"] = "seagreen"
-            other_style["bgcolor"] = "yellow"
+            other_style["node_bgcolor"] = "lightsalmon"
+            other_style["hz_line_type"] = 0
 
+            prob_lost = NodeStyle()
+            prob_lost["hz_line_type"] = 1
+            prob_lost["hz_line_color"] = "#bbbbbb"
+            
             def layout(node):
                 N = AttrFace("rea", fsize=12)
                 faces.add_face_to_node(N, node, 0, position="branch-top")
+                if('count' in node.features):
+                    faces.add_face_to_node(AttrFace("count", fsize=12), node, 1, position="branch-top")
+
+                if 'lost' in node.features and node.lost:
+                    faces.add_face_to_node(AttrFace("name", fgcolor="#dddddd"), node, column=0)
+                elif 'lost' in node.features and node.lost:
+                    faces.add_face_to_node(AttrFace("name", fgcolor="red"), node, column=0)
 
             ts.layout_fn = layout
+            self.tree.add_face(TextFace(self.ori_aa+" --> "+self.dest_aa), column=0, position="branch-top")
 
             # Apply node style
             for n in self.tree.traverse():
@@ -173,6 +239,9 @@ class NaiveFitch(object):
                     n.set_style(rea_style)
                 elif len(n.reassigned) > 1:
                     n.set_style(other_style)
+
+                if 'lost' in n.features and n.lost:
+                    n.set_style(prob_lost)
 
             # Save tree as figure
             self.tree.render(output, dpi=400, tree_style=ts)
@@ -605,7 +674,11 @@ if __name__ == '__main__':
     # of the alignment
 
     consensus = get_consensus(filtered_alignment, AA_MAJORITY_THRESH)
+    # A little pretraitment to speed access to a record later
     global_consensus = get_consensus(alignment, AA_MAJORITY_THRESH)
+    record2seq = {}
+    for record in alignment:
+        record2seq[record.id] = record
 
     if(args.verbose):
         print "Filtered alignment consensus : ", consensus
@@ -676,6 +749,7 @@ if __name__ == '__main__':
 
     # Let's say that at this step we have the most suspected species for each aa.
     # for each aa let's find the targeted aa
+    aa2aa_rea = collections.defaultdict(dict)
     for key, values in most_common.iteritems():
         susspeclist = [val[0] for val in values]
         aa_alignment = aa2alignment[key]
@@ -686,25 +760,47 @@ if __name__ == '__main__':
                 for i in range(len(s)):
                     if(s[i]!='-' and aa_letters_1to3[s[i]] != key):
                         suspected_aa.append(aa_letters_1to3[s[i]])
+                        try :
+                            aa2aa_rea[key][aa_letters_1to3[s[i]]].add(s.id)
+                        except KeyError:
+                            aa2aa_rea[key] = collections.defaultdict(set)
+                            aa2aa_rea[key][aa_letters_1to3[s[i]]].add(s.id)
+
                 pos = susspeclist.index(s.id)
                 most_common[key][pos] += (suspected_aa,)
 
+        if(args.verbose):
+            print "\n", key, "\n"
+            for v in most_common[key] :
+                print v
 
+
+    fitch_tree = []
+    COUNT_THRE = 2
+    for key1, dict2 in aa2aa_rea.iteritems():
+        for key2, val in dict2.iteritems():
+            t = sptree.copy("newick")
+            n = NaiveFitch(t, val, key2, key1)
+            slist = []
+            for s in n.get_species_list():
+                rec = record2seq[s]
+                leaf = (n.tree&s)
+                leaf.add_features(count=0)
+                leaf.add_features(lost=False)
+                for position in range(len(rec)):
+                    if global_consensus[position] == aa_letters_3to1[key1] \
+                        and rec[position] == aa_letters_3to1[key2]:
+                        leaf.count+=1
+                if leaf.count < COUNT_THRE:
+                    leaf.lost = True
+
+            if(n.is_valid()):
+                n.render_tree()
+                fitch_tree.append(n)
+
+    print len(fitch_tree)
     # Use a dayhoff matrix to determine common substitution and filter
     # and filter result based on that
     # with that, we can remove false positive
 
     # Now let's filter again, base only on  
-
-    #for key, value in 
-    if(args.verbose):
-        for key, val in most_common.iteritems():
-            print "\n", key, "\n"
-            for v in val :
-                print v
-
-
-
-
-
-
