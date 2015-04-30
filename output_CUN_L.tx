@@ -1,0 +1,6 @@
+No module named MySQLdb
+
+mafft --auto --treein tmp/tree.mafft input/concat_all_CUN_L.ali_ > tmp/alignment.fasta
+mafft : 
+----------------- 
+'execute_mafft' (('mafft --auto --treein tmp/tree.mafft input/concat_all_CUN_L.ali_ > tmp/alignment.fasta',), {}) 34.97 sec
