@@ -670,12 +670,12 @@ if __name__ == '__main__':
         while i < len(common_list) and common_list[i][1] > COUNTER_THRESHOLD*len(seq_names):
             global_freq_use = genome_aa_freq[common_list[i][0]][key]
             # we are going to use a radius of 0.5 around our expected values
-            if(1-global_freq_use <= 0.5):
+            if(abs(1-global_freq_use) <= 0.7):
                 most_common[key].append(common_list[i]+(global_freq_use,))
             i += 1
 
     # Let's say that at this step we have the most suspected species for each aa.
-    # for each aa let's find the targeted aa and let's check in the global alignment
+    # for each aa let's find the targeted aa
     for key, values in most_common.iteritems():
         susspeclist = [val[0] for val in values]
         aa_alignment = aa2alignment[key]
@@ -685,12 +685,23 @@ if __name__ == '__main__':
                 suspected_aa = []
                 for i in range(len(s)):
                     if(s[i]!='-' and aa_letters_1to3[s[i]] != key):
-                        suspected_aa.append(s[i])
-                        print "LOLOLOL"
+                        suspected_aa.append(aa_letters_1to3[s[i]])
                 pos = susspeclist.index(s.id)
                 most_common[key][pos] += (suspected_aa,)
 
-    pprint(most_common)
+
+    # Use a dayhoff matrix to determine common substitution and filter
+    # and filter result based on that
+    # with that, we can remove false positive
+
+    # Now let's filter again, base only on  
+
+    #for key, value in 
+    if(args.verbose):
+        for key, val in most_common.iteritems():
+            print "\n", key, "\n"
+            for v in val :
+                print v
 
 
 
