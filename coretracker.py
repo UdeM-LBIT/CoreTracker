@@ -8,7 +8,6 @@ import itertools
 import json
 import numpy as np
 import os
-import pandas as pd
 import random
 import subprocess
 import sys
@@ -30,9 +29,7 @@ from Bio.Alphabet import IUPAC
 from TreeLib import TreeClass
 from cStringIO import StringIO
 from ete2 import PhyloTree
-from ete2 import TreeStyle
 from settings import *
-from pprint import pprint
 
 
 __author__ = "Emmanuel Noutahi"
@@ -133,13 +130,13 @@ class NaiveFitch(object):
                 l.del_feature('reassigned')
                 l.del_feature('rea')
             elif 'lost' in l.features and l.lost:
-                leaf.add_features(reassigned={0})
-                leaf.add_features(rea=self.corr['0'])
-                leaf.add_features(state=self.ori_aa)
+                l.add_features(reassigned={0})
+                l.add_features(rea=self.corr['0'])
+                l.add_features(state=self.ori_aa)
             elif 'lost' is l.features and not l.lost:
-                leaf.add_features(reassigned={1})
-                leaf.add_features(rea=self.corr['1'])
-                leaf.add_features(state=self.dest_aa)              
+                l.add_features(reassigned={1})
+                l.add_features(rea=self.corr['1'])
+                l.add_features(state=self.dest_aa)              
 
         self._bottomup(tmptree)
 
@@ -187,59 +184,60 @@ class NaiveFitch(object):
         return slist
 
     def render_tree(self, output=""):
+
         GRAPHICAL_ACCESS = True
+
         try:
             from ete2 import TreeStyle, NodeStyle, faces, AttrFace, TextFace
         except ImportError, e:
             GRAPHICAL_ACCESS = False
-            print "Warning : PyQt not installed"
-        
+
         if not output:
             output = TMP+self.ori_aa+"_to_"+self.dest_aa+".pdf"
 
         if(GRAPHICAL_ACCESS):
             ts = TreeStyle()
-            ts.show_leaf_name = True
+            ts.show_leaf_name = False
 
             rea_style = NodeStyle()
             rea_style["shape"] = "square"
-            rea_style["size"] = 6
-            rea_style["fgcolor"] = "lightsalmon"
+            rea_style["size"] = 8
+            rea_style["fgcolor"] = "crimson"
             rea_style["hz_line_type"] = 0
 
-
             other_style = NodeStyle()
-            other_style["shape"] = "circle"
-            other_style["size"] = 6
+            other_style["shape"] = "square"
+            other_style["size"] = 8
             other_style["fgcolor"] = "seagreen"
-            other_style["node_bgcolor"] = "lightsalmon"
+            other_style["node_bgcolor"] = "crimson"
             other_style["hz_line_type"] = 0
 
             prob_lost = NodeStyle()
             prob_lost["hz_line_type"] = 1
-            prob_lost["hz_line_color"] = "#bbbbbb"
+            prob_lost["hz_line_color"] = "#cccccc"
             
             def layout(node):
-                N = AttrFace("rea", fsize=12)
-                faces.add_face_to_node(N, node, 0, position="branch-top")
+                N = AttrFace("rea", fsize=10)
+                faces.add_face_to_node(N, node, 0, position="branch-right")
                 if('count' in node.features):
-                    faces.add_face_to_node(AttrFace("count", fsize=12), node, 1, position="branch-top")
+                    faces.add_face_to_node(AttrFace("count", fsize=8), node, column=1, position="branch-bottom")
 
                 if 'lost' in node.features and node.lost:
-                    faces.add_face_to_node(AttrFace("name", fgcolor="#dddddd"), node, column=0)
-                elif 'lost' in node.features and node.lost:
-                    faces.add_face_to_node(AttrFace("name", fgcolor="red"), node, column=0)
+                    faces.add_face_to_node(AttrFace("name", fgcolor="#cccccc"), node, 0, position="aligned")
+                elif 'lost' in node.features and not node.lost:
+                    faces.add_face_to_node(AttrFace("name", fgcolor="red"), node, 0, position="aligned")
+                else:
+                    faces.add_face_to_node(AttrFace("name"), node, 0, position="aligned")
 
             ts.layout_fn = layout
-            self.tree.add_face(TextFace(self.ori_aa+" --> "+self.dest_aa), column=0, position="branch-top")
+            ts.legend.add_face(TextFace(self.ori_aa+" --> "+self.dest_aa, fsize=14), column=0)
 
             # Apply node style
             for n in self.tree.traverse():
-                if len(n.reassigned) == 1 and '1' in n.rea:
+                if n.reassigned == {1}:
                     n.set_style(rea_style)
                 elif len(n.reassigned) > 1:
                     n.set_style(other_style)
-
                 if 'lost' in n.features and n.lost:
                     n.set_style(prob_lost)
 
@@ -423,6 +421,9 @@ if __name__ == '__main__':
     parser.add_argument(
         '--verbose', '-v', action='store_true', dest="verbose", help="Verbosity level")
 
+    parser.add_argument(
+        '--debug', action='store_true', dest="debug", help="Print debug infos")
+
     mafft_group = parser.add_mutually_exclusive_group()
     mafft_group.add_argument('--linsi', dest='linsi', action='store_true',
                              help="L-INS-i (probably most accurate; recommended for <200 sequences; iterative refinement method incorporating local pairwise alignment information)")
@@ -525,6 +526,7 @@ if __name__ == '__main__':
 
     # prune tree to sequence list
     specietree.prune(seq_order)
+    debug_infos = []
 
     # Convert tree to mafft format
     convert_tree_to_mafft(specietree, seq_order, output)
@@ -538,6 +540,7 @@ if __name__ == '__main__':
     # Reload mafft alignment and filter alignment (remove gap positions and
     # positions not conserved)
     alignment = AlignIO.read(MAFFT_OUTPUT, 'fasta', alphabet=alpha)
+    debug_infos.append("Initial alignment length : %d"%alignment.get_alignment_length())
 
     if(args.excludegap):
         alignment = clean_alignment(
@@ -545,6 +548,7 @@ if __name__ == '__main__':
         AlignIO.write(
             alignment, open(MAFFT_OUTPUT + "_ungapped", 'w'), 'fasta')
 
+        debug_infos.append("Alignment length after removing gaps : %d"%alignment.get_alignment_length())
 
 
     # Get the substitution matrice at each node
@@ -574,31 +578,32 @@ if __name__ == '__main__':
     # else add the frequency value
     # this unfortunaly assume that A-->C and C-->A have the same probability
 
-    for node in sptree.traverse():
-        if not node.is_leaf():
-            spec_under_node = node.get_leaf_names()
-            node_alignment = MultipleSeqAlignment(
-                [record[:] for record in alignment if record.id in spec_under_node], alphabet=alpha)
+    if (not SKIPSUBMATRIX):
+        for node in sptree.traverse():
+            if not node.is_leaf():
+                spec_under_node = node.get_leaf_names()
+                node_alignment = MultipleSeqAlignment(
+                    [record[:] for record in alignment if record.id in spec_under_node], alphabet=alpha)
 
-            if(REALIGN_AT_EACH_NODE and not node.is_root()):
-                node_alignment = realign(node_alignment, node, enable_mafft)
+                if(REALIGN_AT_EACH_NODE and not node.is_root()):
+                    node_alignment = realign(node_alignment, node, enable_mafft)
 
-            node_align_info = AlignInfo.SummaryInfo(node_alignment)
-            replace_info = node_align_info.replacement_dictionary()
-            node_align_arm = SubsMat.SeqMat(replace_info)
+                node_align_info = AlignInfo.SummaryInfo(node_alignment)
+                replace_info = node_align_info.replacement_dictionary()
+                node_align_arm = SubsMat.SeqMat(replace_info)
 
-            node_sub_matrix = SubsMat.make_log_odds_matrix(
-                node_align_arm, exp_freq_table=exp_freq_table)
+                node_sub_matrix = SubsMat.make_log_odds_matrix(
+                    node_align_arm, exp_freq_table=exp_freq_table)
 
-            node.add_feature('submatrix', node_sub_matrix)
+                node.add_feature('submatrix', node_sub_matrix)
 
-            if(args.verbose):
-                print "Sequences under node"
-                print spec_under_node
-                print "ARM matrix"
-                print node_align_arm
-                print "SUB matrix"
-                print node_sub_matrix
+                if(args.verbose):
+                    print "Sequences under node"
+                    print spec_under_node
+                    print "ARM matrix"
+                    print node_align_arm
+                    print "SUB matrix"
+                    print node_sub_matrix
 
     
     # Filter using the ic content
@@ -608,6 +613,10 @@ if __name__ == '__main__':
         max_val = max(align_info.ic_vector.values())*IC_INFO_THRESHOLD
         ic_pos = (np.asarray(align_info.ic_vector.values())>max_val).nonzero()
         filtered_alignment = filter_align_position(alignment, ic_pos[0])
+        AlignIO.write(filtered_alignment, open(MAFFT_OUTPUT + "_filtered_IC", 'w'), 'fasta')
+        
+        debug_infos.append("Alignment length after removing low IC columns : %d"%filtered_alignment.get_alignment_length())
+
 
     # Filter using the match percent per columns
     # Already enabled by default in the arguments list to filter 
@@ -616,12 +625,17 @@ if __name__ == '__main__':
             filtered_alignment, threshold=(abs(args.idfilter) <= 1 or 0.01) * abs(args.idfilter))
         AlignIO.write(
             filtered_alignment, open(MAFFT_OUTPUT + "_filtered", 'w'), 'fasta')
+
+        debug_infos.append("Alignment length after removing columns less conserved than threshold (%f) : %d"%(args.idfilter, filtered_alignment.get_alignment_length()))
         
         # no keeping a variable for this
         filtered_alignment = filter_alignment(filtered_alignment, remove_identity=True, threshold=(
             abs(args.idfilter) <= 1 or 0.01) * abs(args.idfilter))
         AlignIO.write(filtered_alignment, open(
             MAFFT_OUTPUT + "_matchremoved", 'w'), 'fasta')
+
+        debug_infos.append("Alignment length after removing columns less conserved than threshold (%f) and 100%% identical : %d"%(args.idfilter, filtered_alignment.get_alignment_length()))
+
 
     #################################################################################################
 
@@ -674,13 +688,14 @@ if __name__ == '__main__':
     # of the alignment
 
     consensus = get_consensus(filtered_alignment, AA_MAJORITY_THRESH)
-    # A little pretraitment to speed access to a record later
+    
+    # A little pretraitment to speed access to each record later
     global_consensus = get_consensus(alignment, AA_MAJORITY_THRESH)
     record2seq = {}
     for record in alignment:
         record2seq[record.id] = record
 
-    if(args.verbose):
+    if(args.debug):
         print "Filtered alignment consensus : ", consensus
 
     aa2alignment = {}
@@ -769,11 +784,6 @@ if __name__ == '__main__':
                 pos = susspeclist.index(s.id)
                 most_common[key][pos] += (suspected_aa,)
 
-        if(args.verbose):
-            print "\n", key, "\n"
-            for v in most_common[key] :
-                print v
-
 
     fitch_tree = []
     COUNT_THRE = 2
@@ -781,8 +791,8 @@ if __name__ == '__main__':
         for key2, val in dict2.iteritems():
             t = sptree.copy("newick")
             n = NaiveFitch(t, val, key2, key1)
-            slist = []
-            for s in n.get_species_list():
+            slist = n.get_species_list()
+            for s in slist:
                 rec = record2seq[s]
                 leaf = (n.tree&s)
                 leaf.add_features(count=0)
@@ -794,13 +804,19 @@ if __name__ == '__main__':
                 if leaf.count < COUNT_THRE:
                     leaf.lost = True
 
+            if(args.debug):
+                print "\n\n", key1, " to ", key2 , "; "
+                print "\tsuspected species : ", slist
+
             if(n.is_valid()):
                 n.render_tree()
                 fitch_tree.append(n)
 
-    print len(fitch_tree)
+    if(args.debug):
+        for line in debug_infos:
+            print line
+        print "After validating the ancestral state and checking in the global alignment, %d cases were found interesting"%len(fitch_tree)
+
     # Use a dayhoff matrix to determine common substitution and filter
     # and filter result based on that
     # with that, we can remove false positive
-
-    # Now let's filter again, base only on  

@@ -40,5 +40,11 @@ IC_INFO_THRESHOLD = 0.5
 # skip mafft alignment, use this to gain time for debug purpose
 SKIPMAFFT = True
 
-# Counter threshold, this is a bad idea
+# skip substitution matrix computing
+SKIPSUBMATRIX = True
+
+# Counter threshold, using a random threshold is a bad idea
+# Find the probability of global>filtered happening randomly and use that
+# to compare 
 COUNTER_THRESHOLD = 0.1
+
