@@ -19,7 +19,7 @@ MAFFT_OUTPUT = TMP+"alignment.fasta"
 ARM_SEQUENCE = None
 
 # Threshold require to determine if an aa is majoritary in a column
-AA_MAJORITY_THRESH = 0.5
+AA_MAJORITY_THRESH = 0.8
 
 # Set this to decide whether or not, coretracker should perform a new alignement at each
 # node of the tree (when we calculate the substitution matrix)
@@ -35,10 +35,10 @@ EXCLUDE_AA = 'WY'
 
 # value to use for ic information threshold (in percent (%), the true threshold will then be determined
 # by : max(IC_INFO_VECTOR)*(IC_INFO_THRESHOLD/ 100.0))
-IC_INFO_THRESHOLD = 0.5
+IC_INFO_THRESHOLD = 0.6
 
 # skip mafft alignment, use this to gain time for debug purpose
-SKIPMAFFT = True
+SKIPMAFFT = False
 
 # skip substitution matrix computing
 SKIPSUBMATRIX = True

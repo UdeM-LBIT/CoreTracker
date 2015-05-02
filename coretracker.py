@@ -201,14 +201,14 @@ class NaiveFitch(object):
 
             rea_style = NodeStyle()
             rea_style["shape"] = "square"
-            rea_style["size"] = 8
+            rea_style["size"] = 7
             rea_style["fgcolor"] = "crimson"
             rea_style["hz_line_type"] = 0
 
             other_style = NodeStyle()
-            other_style["shape"] = "square"
-            other_style["size"] = 8
-            other_style["fgcolor"] = "seagreen"
+            other_style["shape"] = "circle"
+            other_style["size"] = 7
+            other_style["fgcolor"] ="seagreen"
             other_style["node_bgcolor"] = "crimson"
             other_style["hz_line_type"] = 0
 
@@ -230,7 +230,8 @@ class NaiveFitch(object):
                     faces.add_face_to_node(AttrFace("name"), node, 0, position="aligned")
 
             ts.layout_fn = layout
-            ts.legend.add_face(TextFace(self.ori_aa+" --> "+self.dest_aa, fsize=14), column=0)
+            ts.legend.add_face(TextFace(self.ori_aa+" --> "+self.dest_aa, fsize=14), column=1)
+            ts.legend_position = 4
 
             # Apply node style
             for n in self.tree.traverse():
@@ -395,6 +396,12 @@ def realign(msa, tree, enable_mafft):
         os.remove(f)
     return msa
 
+def is_aligned(seqfile, format):
+    try:
+        a = AlignIO.read(open(seqfile), format)
+    except ValueError:
+        return False
+    return True
 
 @timeit
 def execute_mafft(cmdline):
@@ -414,7 +421,7 @@ if __name__ == '__main__':
     parser.add_argument('-r', '--resample', type=int,
                         help="For debug and memory purpose. Choose only x sequence")
     parser.add_argument('--version', action='version', version='%(prog)s 1.0')
-    parser.add_argument('--excludegap', type=float, dest='excludegap',
+    parser.add_argument('--excludegap', type=float,  default=0.6, dest='excludegap',
                         help="Remove position with gap from the alignment, using excludegap as threshold. The absolute values are taken")
     parser.add_argument('--idfilter', type=float, default=0.8, dest='idfilter',
                         help="Conserve only position with at least idfilter residue identity")
@@ -486,7 +493,7 @@ if __name__ == '__main__':
         args.output = args.output or TMP + "tree.mafft"
 
     # Output stream setting
-    output = Output(args.output)
+    mtoutput = Output(args.output)
 
     # Manage fasta sequence input
     seq_order = []  # sequence id in the multi-alignment fasta file
@@ -529,13 +536,18 @@ if __name__ == '__main__':
     debug_infos = []
 
     # Convert tree to mafft format
-    convert_tree_to_mafft(specietree, seq_order, output)
-    output.close()
+    convert_tree_to_mafft(specietree, seq_order, mtoutput)
+    mtoutput.close()
 
     # execute mafft
-    if(enable_mafft and not SKIPMAFFT):
+    is_already_aligned = is_aligned(args.seq, "fasta")
+    if(enable_mafft and not (SKIPMAFFT and is_already_aligned)):
         execute_mafft(enable_mafft + " --treein %s %s > %s" %
-                      (output.file, args.seq, MAFFT_OUTPUT))
+                      (mtoutput.file, args.seq, MAFFT_OUTPUT))
+
+    # check if is already aligned
+    elif is_already_aligned:
+        MAFFT_OUTPUT = args.seq
 
     # Reload mafft alignment and filter alignment (remove gap positions and
     # positions not conserved)
