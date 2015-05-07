@@ -183,7 +183,7 @@ class NaiveFitch(object):
                 slist.update(node.get_leaf_names())
         return slist
 
-    def render_tree(self, output=""):
+    def render_tree(self, output="", suffix=""):
 
         GRAPHICAL_ACCESS = True
 
@@ -193,7 +193,7 @@ class NaiveFitch(object):
             GRAPHICAL_ACCESS = False
 
         if not output:
-            output = TMP+self.ori_aa+"_to_"+self.dest_aa+".pdf"
+            output = TMP+self.ori_aa+"_to_"+self.dest_aa+suffix+".pdf"
 
         if(GRAPHICAL_ACCESS):
             ts = TreeStyle()
@@ -220,12 +220,18 @@ class NaiveFitch(object):
                 N = AttrFace("rea", fsize=10)
                 faces.add_face_to_node(N, node, 0, position="branch-right")
                 if('count' in node.features):
-                    faces.add_face_to_node(AttrFace("count", fsize=8), node, column=1, position="branch-bottom")
+                    faces.add_face_to_node(AttrFace("count", fsize=6), node, column=1, position="branch-bottom")
+                if('filter_count' in node.features):
+                    faces.add_face_to_node(AttrFace("filter_count", fsize=5, fgcolor="indigo"), node, column=1, position="branch-top")
 
                 if 'lost' in node.features and node.lost:
                     faces.add_face_to_node(AttrFace("name", fgcolor="#cccccc"), node, 0, position="aligned")
                 elif 'lost' in node.features and not node.lost:
-                    faces.add_face_to_node(AttrFace("name", fgcolor="red"), node, 0, position="aligned")
+                    if(node.is_leaf() and node.reassigned == {0}):
+                        faces.add_face_to_node(AttrFace("name", fgcolor="seagreen"), node, 0, position="aligned")
+                    else : 
+                        faces.add_face_to_node(AttrFace("name", fgcolor="red"), node, 0, position="aligned")
+
                 else:
                     faces.add_face_to_node(AttrFace("name"), node, 0, position="aligned")
 
@@ -430,6 +436,9 @@ if __name__ == '__main__':
 
     parser.add_argument(
         '--debug', action='store_true', dest="debug", help="Print debug infos")
+
+    parser.add_argument(
+        '--sfx', dest="sfx", default="", help="PDF rendering suffix to differentiate runs.")
 
     mafft_group = parser.add_mutually_exclusive_group()
     mafft_group.add_argument('--linsi', dest='linsi', action='store_true',
@@ -660,7 +669,8 @@ if __name__ == '__main__':
     # alignment length
     af_length = len(filtered_alignment[0])
     ag_length = len(alignment[0])
-    count_max = 0
+    count_max = -np.inf
+    count_min = np.inf
     matCalc = DistanceCalculator('identity')
     global_paired_distance = matCalc.get_distance(alignment)
     filtered_paired_distance = matCalc.get_distance(filtered_alignment)
@@ -681,6 +691,7 @@ if __name__ == '__main__':
             aa_json[aa_letters_1to3[aa]].append(
                 {'global': global_val, 'filtered': filtered_val, "species": seq_names[i]})
             count_max = max(filtered_val, global_val, count_max)
+            count_min = min(filtered_val, global_val, count_min)
             genome_aa_freq[seq_names[i]][aa_letters_1to3[aa]] = global_val
 
         for j in xrange(i + 1):
@@ -750,7 +761,7 @@ if __name__ == '__main__':
         json.dump(sim_json, outfile1, indent=4)
     with open(TMP + "aafrequency.json", "w") as outfile2:
         json.dump(
-            {"AA": aa_json, "EXP": expected_freq, "MAX": count_max}, outfile2, indent=4)
+            {"AA": aa_json, "EXP": expected_freq, "MAX": count_max, "MIN" : count_min}, outfile2, indent=4)
     with open(TMP + "aause.json", "w") as outfile3:
         json.dump(aa_shift_json, outfile3, indent=4)
 
@@ -769,9 +780,9 @@ if __name__ == '__main__':
         i = 0
         while i < len(common_list) and common_list[i][1] > COUNTER_THRESHOLD*len(seq_names):
             global_freq_use = genome_aa_freq[common_list[i][0]][key]
-            # we are going to use a radius of 0.5 around our expected values
-            if(abs(1-global_freq_use) <= 0.7):
-                most_common[key].append(common_list[i]+(global_freq_use,))
+            # we are going to use a radius around our expected values
+            #if(abs(1-global_freq_use) <= 1):
+            most_common[key].append(common_list[i]+(global_freq_use,))
             i += 1
 
     # Let's say that at this step we have the most suspected species for each aa.
@@ -798,7 +809,6 @@ if __name__ == '__main__':
 
 
     fitch_tree = []
-    COUNT_THRE = 2
     for key1, dict2 in aa2aa_rea.iteritems():
         for key2, val in dict2.iteritems():
             t = sptree.copy("newick")
@@ -807,7 +817,18 @@ if __name__ == '__main__':
             for s in slist:
                 rec = record2seq[s]
                 leaf = (n.tree&s)
+                ori_count = 0
+                try :
+                    id_ind = [x for x in xrange(len(most_common[key1])) if most_common[key1][x][0]==s]
+                    if(id_ind):
+                        counter = Counter(most_common[key1][id_ind[0]][3])
+                        ori_count = counter[key2]
+                except Exception:
+                    #wtver happen, do nothing
+                    pass
+
                 leaf.add_features(count=0)
+                leaf.add_features(filter_count=ori_count)
                 leaf.add_features(lost=False)
                 for position in range(len(rec)):
                     if global_consensus[position] == aa_letters_3to1[key1] \
@@ -821,7 +842,7 @@ if __name__ == '__main__':
                 print "\tsuspected species : ", slist
 
             if(n.is_valid()):
-                n.render_tree()
+                n.render_tree(suffix=args.sfx)
                 fitch_tree.append(n)
 
     if(args.debug):
