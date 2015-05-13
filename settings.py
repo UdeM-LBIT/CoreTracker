@@ -18,9 +18,6 @@ MAFFT_OUTPUT = TMP+"alignment.fasta"
 # and ic content
 ARM_SEQUENCE = None
 
-# Threshold require to determine if an aa is majoritary in a column
-AA_MAJORITY_THRESH = 0.8
-
 # Set this to decide whether or not, coretracker should perform a new alignement at each
 # node of the tree (when we calculate the substitution matrix)
 REALIGN_AT_EACH_NODE = False
@@ -31,20 +28,28 @@ USE_EXPECTED_FREQ_FOR_IC = False
 
 # amino acid to exclude from the plot
 # this will speed up a lot the data generation
-EXCLUDE_AA = 'WY'
+EXCLUDE_AA = ""
 
 # value to use for ic information threshold (in percent (%), the true threshold will then be determined
 # by : max(IC_INFO_VECTOR)*(IC_INFO_THRESHOLD/ 100.0))
-IC_INFO_THRESHOLD = 0.6
+IC_INFO_THRESHOLD = 0.5
+
+# Threshold require to determine if an aa is majoritary in a column
+AA_MAJORITY_THRESH = 0.5
 
 # skip mafft alignment, use this to gain time for debug purpose
-SKIPMAFFT = False
+SKIPMAFFT = True
 
 # skip substitution matrix computing
 SKIPSUBMATRIX = True
+
+# limit substitution count and analyses to suspected species only 
+LIMIT_TO_SUSPECTED_SPECIES = False
 
 # Counter threshold, using a random threshold is a bad idea
 # Find the probability of global>filtered happening randomly and use that
 # to compare 
 COUNTER_THRESHOLD = 0.1
 
+# Substitution must appear at least COUNT_THRE time in the global alignment to be considered
+COUNT_THRE = 2

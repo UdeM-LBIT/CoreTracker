@@ -173,14 +173,17 @@ class NaiveFitch(object):
         """Fitch algorithm part 2 : top down"""
         pass
 
-    def get_species_list(self):
+    def get_species_list(self, limit_to_reassigned=True):
         """Get the species list for which we are almost certain
         that there is a reassignment
         """
         slist = set()
-        for node in self.tree.traverse():
-            if 'reassigned' in node.features and (1 in node.reassigned):
-                slist.update(node.get_leaf_names())
+        if limit_to_reassigned :
+            for node in self.tree.traverse():
+                if 'reassigned' in node.features and (1 in node.reassigned):
+                    slist.update(node.get_leaf_names())
+        else :
+            slist = set(self.tree.get_tree_root().get_leaf_names())
         return slist
 
     def render_tree(self, output="", suffix=""):
@@ -225,12 +228,12 @@ class NaiveFitch(object):
                     faces.add_face_to_node(AttrFace("filter_count", fsize=5, fgcolor="indigo"), node, column=1, position="branch-top")
 
                 if 'lost' in node.features and node.lost:
-                    faces.add_face_to_node(AttrFace("name", fgcolor="#cccccc"), node, 0, position="aligned")
+                    faces.add_face_to_node(AttrFace("name", fgcolor="#cccccc",text_suffix="_G"), node, 0, position="aligned")
                 elif 'lost' in node.features and not node.lost:
                     if(node.is_leaf() and node.reassigned == {0}):
-                        faces.add_face_to_node(AttrFace("name", fgcolor="seagreen"), node, 0, position="aligned")
+                        faces.add_face_to_node(AttrFace("name", fgcolor="seagreen", text_suffix="_V"), node, 0, position="aligned")
                     else : 
-                        faces.add_face_to_node(AttrFace("name", fgcolor="red"), node, 0, position="aligned")
+                        faces.add_face_to_node(AttrFace("name", fgcolor="red", fstyle ="italic",text_suffix="_R"), node, 0, position="aligned")
 
                 else:
                     faces.add_face_to_node(AttrFace("name"), node, 0, position="aligned")
@@ -787,6 +790,8 @@ if __name__ == '__main__':
 
     # Let's say that at this step we have the most suspected species for each aa.
     # for each aa let's find the targeted aa
+    # FIX ME: this part of the code is now almost useless
+
     aa2aa_rea = collections.defaultdict(dict)
     for key, values in most_common.iteritems():
         susspeclist = [val[0] for val in values]
@@ -809,37 +814,42 @@ if __name__ == '__main__':
 
 
     fitch_tree = []
+    counts = []
     for key1, dict2 in aa2aa_rea.iteritems():
+        
+        key1_alignment = aa2alignment[key1]
         for key2, val in dict2.iteritems():
             t = sptree.copy("newick")
             n = NaiveFitch(t, val, key2, key1)
-            slist = n.get_species_list()
+            slist = n.get_species_list(LIMIT_TO_SUSPECTED_SPECIES)
+            sslist = n.get_species_list()
             for s in slist:
                 rec = record2seq[s]
                 leaf = (n.tree&s)
                 ori_count = 0
                 try :
-                    id_ind = [x for x in xrange(len(most_common[key1])) if most_common[key1][x][0]==s]
-                    if(id_ind):
-                        counter = Counter(most_common[key1][id_ind[0]][3])
-                        ori_count = counter[key2]
+                                 
+                    ori_count = len([y for x in key1_alignment for y in x if x.id==s and y!='-' and aa_letters_1to3[y]==key2])
                 except Exception:
                     #wtver happen, do nothing
                     pass
 
                 leaf.add_features(count=0)
                 leaf.add_features(filter_count=ori_count)
-                leaf.add_features(lost=False)
                 for position in range(len(rec)):
                     if global_consensus[position] == aa_letters_3to1[key1] \
                         and rec[position] == aa_letters_3to1[key2]:
                         leaf.count+=1
-                if leaf.count < COUNT_THRE:
-                    leaf.lost = True
+                
+                if s in sslist:
+                    leaf.add_features(lost=False)
+                    if(leaf.count < COUNT_THRE):
+                        leaf.lost = True
 
+                counts.append((s, str(leaf.count), str(leaf.filter_count)))
             if(args.debug):
-                print "\n\n", key1, " to ", key2 , "; "
-                print "\tsuspected species : ", slist
+                print "\n\n", key1, " to ", key2 , ": "
+                print "(Suspected species, global_count, filtered_count) : \n", "\n".join("\t".join(c) for c in counts)
 
             if(n.is_valid()):
                 n.render_tree(suffix=args.sfx)

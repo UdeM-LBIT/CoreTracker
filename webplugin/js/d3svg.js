@@ -2,6 +2,11 @@
 var categorie_color = d3.scale.category10();   
 
 
+function toFixed(value, precision) {
+    var power = Math.pow(10, precision || 0);
+    return String(Math.round(value * power) / power);
+}
+
 function makeTable(container, data) {
     var keys = Object.keys(data);
     keys = keys.sort();
