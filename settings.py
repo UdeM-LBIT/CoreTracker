@@ -28,7 +28,7 @@ USE_EXPECTED_FREQ_FOR_IC = False
 
 # amino acid to exclude from the plot
 # this will speed up a lot the data generation
-EXCLUDE_AA = ""
+EXCLUDE_AA = "ALCDEFGHIKMNPQRSVWY"
 
 # value to use for ic information threshold (in percent (%), the true threshold will then be determined
 # by : max(IC_INFO_VECTOR)*(IC_INFO_THRESHOLD/ 100.0))
@@ -46,10 +46,26 @@ SKIPSUBMATRIX = True
 # limit substitution count and analyses to suspected species only 
 LIMIT_TO_SUSPECTED_SPECIES = False
 
-# Counter threshold, using a random threshold is a bad idea
-# Find the probability of global>filtered happening randomly and use that
-# to compare 
-COUNTER_THRESHOLD = 0.1
+# Dump result into a file for the web app
+JSON_DUMP = False
 
-# Substitution must appear at least COUNT_THRE time in the global alignment to be considered
-COUNT_THRE = 2
+# frequency threshold, uing a random threshold is a bad idea
+# It's better to Find the probability of global>filtered happening randomly and use that
+# to compare 
+FREQUENCY_THRESHOLD = 0.1
+
+# Substitution must appear at least COUNT_THRESHOLD time in the global alignment to be considered
+COUNT_THRESHOLD = 2
+
+# Genetic code 
+# standard : 1
+# vertebrate mitochondrial : 2
+# yeast mitochondrial : 3
+# mold mitochondrial : 4
+# yeast mitochondrial CUN : Leucine : -3
+# Bacterial and plant plastid : 11
+GENETIC_CODE = -3
+
+# DNA sequence input, analyses will stop after aa to aa reassignment if it is not provided
+# you should provide the absolute path
+DNA_SEQ_PATH = "/home/manu/html/CoreTracker/input/cox1_genes.seq"
