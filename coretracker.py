@@ -27,6 +27,7 @@ from TreeLib import TreeClass
 from ete2 import PhyloTree
 from settings import *
 from utils import *
+from shutil import copyfile
 
 
 __author__ = "Emmanuel Noutahi"
@@ -155,6 +156,9 @@ if __name__ == '__main__':
     # check duplicated sequence name in the alignment file
     original_len = len(seq_order)
 
+    # get dna to perform codon alignment
+    dnaseq = SeqIO.parse(DNA_SEQ_PATH, 'fasta',generic_nucleotide)
+
     if len(set(seq_order)) != original_len or (set(seq_order) - leave_names):
         Output.error("Sequence not matching found, attempt to correct... ", "Warning")
         seq_order[:] = list(set(seq_order) & leave_names)
@@ -168,6 +172,7 @@ if __name__ == '__main__':
     # prune tree to sequence list
     specietree.prune(seq_order)
     debug_infos = []
+    dnaseq = [dna for dna in dnaseq if dna.id in seq_order]
 
     # Convert tree to mafft format
     convert_tree_to_mafft(specietree, seq_order, mtoutput, args.scale)
@@ -181,7 +186,7 @@ if __name__ == '__main__':
 
     # check if is already aligned
     elif is_already_aligned:
-        MAFFT_OUTPUT = args.seq
+        copyfile(args.seq, MAFFT_OUTPUT)
 
     # Reload mafft alignment and filter alignment (remove gap positions and
     # positions not conserved)
@@ -446,14 +451,11 @@ if __name__ == '__main__':
     # Parsimony fitch tree list
     fitch_tree = []
 
-    # get dna to perform codon alignment
-    dnaseq = SeqIO.parse(DNA_SEQ_PATH, 'fasta',generic_nucleotide)
     codon_alignment, fcodon_alignment = codon_align(dnaseq, record2seq, gap_filtered_position, tt_filter_position)
-    
     #codon_lst = []
     #for codon_aln in codon_alignment.values():
         #codon_lst.append(_get_codon_list(codon_aln.seq))
-            
+
     for key1, dict2 in aa2aa_rea.iteritems():
     
         key1_alignment = aa2alignment[aa_letters_1to3[key1]]
@@ -494,6 +496,7 @@ if __name__ == '__main__':
             if(n.is_valid()):
                 n.render_tree(suffix=args.sfx)
                 fitch_tree.append(n)
+            sys.exit()
 
 
     if(args.debug):

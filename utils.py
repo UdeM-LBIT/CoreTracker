@@ -31,7 +31,7 @@ from TreeLib import TreeClass
 from cStringIO import StringIO
 from ete2 import PhyloTree
 from settings import *
-from PPieChartFace import PPieChartFace
+from PPieChartFace import PPieChartFace, LineFace
 
 
 __author__ = "Emmanuel Noutahi"
@@ -104,19 +104,30 @@ class CodonReaData(object):
         self.reacodons = collections.defaultdict(collections.Counter)
         # find codon usage in the sequence
         self.usedcodons = collections.defaultdict(collections.Counter)
-        #print len(consensus)
+        self.mixtecodon = collections.defaultdict(collections.Counter)
         #print len(codon_align_dict.values()[0])
+        self.specs_amino_count = collections.defaultdict(collections.Counter)
         self._spec_codon_usage()
 
     def _spec_codon_usage(self):
         for i, aa in enumerate(self.consensus):
             for spec in self.codon_alignment.keys():
                 spec_codon = self.codon_alignment[spec].seq.get_codon(i)
-                if('-' not in spec_codon):
-                    if aa==self.aa1 and dct.forward_table[spec_codon]==self.aa2:
+                spec_aa = dct.forward_table[spec_codon] if '-' not in spec_codon else None
+                if(spec_aa):
+                    # determine aa use in each specie
+                    if spec_aa == self.aa2 :
+                        self.specs_amino_count[spec][self.aa2]+=1
+                    elif spec_aa == self.aa1:
+                        self.specs_amino_count[spec][self.aa1]+=1
+
+                    # potential reassignment counter
+                    if aa==self.aa1 and spec_aa==self.aa2:
                         self.reacodons[spec].update([spec_codon])
-                    elif aa==self.aa2 and dct.forward_table[spec_codon]==self.aa2:
+                    elif aa==self.aa2 and spec_aa==self.aa2:
                         self.usedcodons[spec].update([spec_codon])
+                    elif(spec_aa == self.aa2):
+                        self.mixtecodon[spec].update([spec_codon])
 
     
     def __getitem__(self, key):
@@ -125,8 +136,20 @@ class CodonReaData(object):
     def get_reacodons(self, specie):
         return self.reacodons[specie]
 
+    def get_mixtecodons(self, specie):
+       return self.mixtecodon[specie]
+
     def get_usedcodons(self, specie):
         return self.usedcodons[specie]
+
+    def get_usedcodon_freq(self, specie):
+        return self.get_usedcodons(specie)*1.0 / self.specs_amino_count[specie][self.aa2]
+
+    def get_reacodon_freq(self,specie):
+        return self.get_reacodons(specie)*1.0 / self.specs_amino_count[specie][self.aa2]        
+
+    def get_mixtecodon_freq(self,specie):
+        return self.get_mixtecodons(specie)*1.0 / self.specs_amino_count[specie][self.aa2]        
 
     def get_string(self, specie):
         """ Return a string representation for the specie"""
@@ -248,7 +271,7 @@ class NaiveFitch(object):
         return (self.codon_rea_global, self.codon_rea_filtered) != (None, None)
 
 
-    def render_tree(self, output="", suffix="", pie_size=50):
+    def render_tree(self, output="", suffix="", pie_size=50, format=IMAGE_FORMAT):
 
         GRAPHICAL_ACCESS = True
 
@@ -258,7 +281,7 @@ class NaiveFitch(object):
             GRAPHICAL_ACCESS = False
 
         if not output:
-            output = TMP+self.ori_aa+"_to_"+self.dest_aa+suffix+".pdf"
+            output = TMP+self.ori_aa+"_to_"+self.dest_aa+suffix+"."+format
 
         if(GRAPHICAL_ACCESS):
             ts = TreeStyle()
@@ -315,21 +338,38 @@ class NaiveFitch(object):
                     node_colors = aa_letters_3to1[self.ori_aa]
                     spec_codonrea_g = self.codon_rea_global.get_reacodons(node.name)
                     spec_codonused_g = self.codon_rea_global.get_usedcodons(node.name)
-                    #spec_codonrea_f = self.codon_rea_filtered.get_reacodons(node.name)
-                    #spec_codonused_f = self.codon_rea_filtered.get_usedcodons(node.name)
-
+                    
                     faces.add_face_to_node(PPieChartFace(spec_codonrea_g.values(), pie_size, pie_size, labels=[], \
                         colors=[self.colors[k] for k in spec_codonrea_g.keys()]), node, column=1, position="aligned")
                     
                     faces.add_face_to_node(PPieChartFace(spec_codonused_g.values(), pie_size, pie_size, labels=[],\
                      colors=[self.colors[k] for k in spec_codonused_g.keys()]), node, column=2, position="aligned")
                     
-                    #faces.add_face_to_node(PPieChartFace(spec_codonrea_f.values(), pie_size, pie_size, labels=[],\
-                    # colors=[self.colors[k] for k in spec_codonused_g.keys()]), node, column=2, position="aligned")
+                    if(SHOW_MIXTE_CODONS):
+                        spec_mixtecodon_g = self.codon_rea_global.get_mixtecodons(node.name)
+                        faces.add_face_to_node(PPieChartFace(spec_mixtecodon_g.values(), pie_size, pie_size, labels=[], \
+                            colors=[self.colors[k] for k in spec_mixtecodon_g.keys()]), node, column=3, position="aligned")
+                    
+                    if(SHOW_FILTERED_CODON_DATA): 
 
-                    #faces.add_face_to_node(PPieChartFace(spec_codonused_f.values(),  pie_size, pie_size, labels=[],\
-                    #colors=[self.colors[k] for k in spec_codonused_g.keys()]), node, column=2, position="aligned")
+                        spec_codonrea_f = self.codon_rea_filtered.get_reacodons(node.name)
+                        spec_codonused_f = self.codon_rea_filtered.get_usedcodons(node.name)
+                    
+                        # add separator 
+                        faces.add_face_to_node(LineFace(pie_size, pie_size, None), node, column=4, position="aligned")
+                        
+                        # add data
+                        faces.add_face_to_node(PPieChartFace(spec_codonrea_f.values(), pie_size, pie_size, labels=[],\
+                            colors=[self.colors[k] for k in spec_codonrea_f.keys()]), node, column=5, position="aligned")
 
+                        faces.add_face_to_node(PPieChartFace(spec_codonused_f.values(),  pie_size, pie_size, labels=[],\
+                            colors=[self.colors[k] for k in spec_codonused_f.keys()]), node, column=6, position="aligned")
+        
+                        if(SHOW_MIXTE_CODONS):
+                            spec_mixtecodon_f = self.codon_rea_filtered.get_mixtecodons(node.name)
+                            faces.add_face_to_node(PPieChartFace(spec_mixtecodon_f.values(), pie_size, pie_size, labels=[], \
+                                colors=[self.colors[k] for k in spec_mixtecodon_f.keys()]), node, column=7, position="aligned")
+            
 
             ts.layout_fn = layout
             ts.title.add_face(TextFace(self.ori_aa+" --> "+self.dest_aa, fsize=14), column=0)
@@ -359,13 +399,16 @@ def get_argsname(command_dict, command_list, prefix=""):
     return ["%s%s" % (prefix, command) for command in command_list if command_dict[command]]
 
 
-def clean_spec_list(dnaseq, protseq):
+def clean_spec_list(dna_dict, prot_dict):
     """ Restrict analyses to a list of species, 
     multi-alignment and tree will be pruned to that list"""
     
-    dna_dict =  dict((d.id, d) for d in dnaseq)
-    prot_dict = dict((p.id, p) for p in protseq)
+    if not isinstance(dnaseq, dict):
+        dna_dict =  dict((d.id, d) for d in dna_dict)
+    if not isinstance(dnaseq, dict):
+        prot_dict = dict((p.id, p) for p in prot_dict)
     common_genome = set(dna_dict.keys()).intersection(prot_dict.keys())
+    print common_genome
     # remove every dna sequence that are not cds
     #print [(x, len(dna_dict[x]), len(prot_dict[x].seq.ungap('-'))+1, len(dna_dict[x])==(len(prot_dict[x].seq.ungap('-'))+1)*3) for x in common_genome ]
     common_genome = [x for x in common_genome if len(dna_dict[x])==(len(prot_dict[x].seq.ungap('-'))+1)*3 ]
@@ -391,9 +434,9 @@ def codon_align(dnaseq, prot_dict, keep_global_pos, keep_filtered_pos, get_dict=
     # because duplicated key can cause problems
 
     # at this step, we are confident all genome in the prot alignement are in the tree
-    protseq = prot_dict.values()
 
-    common_genome, dna_seq = clean_spec_list(dnaseq, protseq)
+    common_genome, dna_seq, protseq = clean_spec_list(dnaseq, prot_dict)
+    print common_genome
     #print common_genome
     prot_seq =  [s for s in prot_dict.values() if s.id in common_genome]
     for s in prot_seq:
@@ -402,11 +445,12 @@ def codon_align(dnaseq, prot_dict, keep_global_pos, keep_filtered_pos, get_dict=
     prot_align = MultipleSeqAlignment(prot_seq, alphabet=alpha)
     # build codon alignment
     codon_alignment = codonalign.build(prot_align, dna_seq, codon_table=dct)
-
+    
     keep_global_pos = sorted(keep_global_pos)
     
     codon_align =  copy_codon_alignment(codon_alignment)
     fcodon_align = copy_codon_alignment(codon_alignment)
+
     # alignment[:, slice(index_array[0], index_array[0] + 1)]
     for i in xrange(len(codon_align)) :
         codseq = CodonSeq('')

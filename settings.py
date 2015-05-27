@@ -44,7 +44,7 @@ SKIPMAFFT = True
 SKIPSUBMATRIX = True
 
 # limit substitution count and analyses to suspected species only 
-LIMIT_TO_SUSPECTED_SPECIES = False
+LIMIT_TO_SUSPECTED_SPECIES = True
 
 # Dump result into a file for the web app
 JSON_DUMP = False
@@ -68,4 +68,15 @@ GENETIC_CODE = -3
 
 # DNA sequence input, analyses will stop after aa to aa reassignment if it is not provided
 # you should provide the absolute path
-DNA_SEQ_PATH = "/home/manu/html/CoreTracker/input/cox1_genes.seq"
+DNA_SEQ_PATH = "/home/manu/html/CoreTracker/input/concat_gene_clean2.nuc"
+
+# Display setting
+# Show mixte codon (Codon at not-conserved position in the specie) in the pdf
+SHOW_MIXTE_CODONS = False
+
+# Show Filtered codon data
+SHOW_FILTERED_CODON_DATA = False
+
+#IMAGE FORMAT
+# Accepted format : svg, png and pdf
+IMAGE_FORMAT = "pdf"

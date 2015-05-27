@@ -1,10 +1,9 @@
 import re
 from PyQt4.QtGui import (QGraphicsRectItem, QGraphicsLineItem,
-                         QGraphicsPolygonItem, QGraphicsEllipseItem,
-                         QPen, QColor, QBrush, QPolygonF, QFont,
-                         QPixmap, QFontMetrics, QPainter,
-                         QRadialGradient, QGraphicsSimpleTextItem,
-                         QGraphicsItem)
+                         QGraphicsEllipseItem, QPen, QColor, QBrush,
+                         QFont, QPixmap, QFontMetrics, QPainter,
+                         QGraphicsSimpleTextItem, QGraphicsItem)
+
 from PyQt4.QtCore import Qt,  QPointF, QRect, QRectF
 from ete2 import faces
 from ete2.treeview.main import *
@@ -20,7 +19,7 @@ class PPieChartFace(faces.StaticItemFace):
     :param colors: a list of colors (same length as percents)
     :param line_color: color used to render the border of the piechart (None=transparent)
     """
-    def __init__(self, percents, width, height, colors=None, line_color=None, label_size=6, labels=None, is_percent=False):
+    def __init__(self, percents, width, height, colors=None, line_color=None, label_size=2, labels=None, is_percent=False):
         faces.Face.__init__(self)
 
 
@@ -51,7 +50,7 @@ class PPieChartFace(faces.StaticItemFace):
 
     def update_items(self):
         self.item = _PieChartItem(self.percents, self.width,
-                                  self.height, self.colors, self.line_color, self.labels, self.label_size)
+                    self.height, self.colors, self.line_color, self.labels, self.label_size)
 
     def _width(self):
         return self.item.rect().width()
@@ -61,7 +60,7 @@ class PPieChartFace(faces.StaticItemFace):
 
 
 class _PieChartItem(QGraphicsRectItem):
-    def __init__(self, percents, width, height, colors, line_color=None, labels=None, label_size=8):
+    def __init__(self, percents, width, height, colors, line_color=None, labels=None, label_size=2):
         QGraphicsRectItem.__init__(self, 0, 0, width, height)
         self.percents = percents
         self.labels = labels
@@ -96,7 +95,7 @@ class _PieChartItem(QGraphicsRectItem):
                 text.setPen(QColor('#000000'))
                 #text.setBrush(Qt.NoBrush)
 
-                text.setFont(QFont("Arial", self.label_size))
+                text.setFont(QFont("Helvetica", self.label_size))
                 tw = text.boundingRect().width()/2.
                 th = text.boundingRect().height()/2.
 
@@ -105,3 +104,35 @@ class _PieChartItem(QGraphicsRectItem):
                 # Center text according to masterItem size
                 text.setPos(x, y)
                 #painter.drawRect(self.boundingRect())
+
+
+class LineFace(faces.Face):
+    """
+    Creates a Line face.
+    """
+    def __init__(self, width, height, fgcolor):
+        faces.Face.__init__(self)
+        self.width = width
+        self.height = height
+        self.fgcolor = fgcolor
+        self.type = "item"
+        self.rotable = True
+
+    def update_items(self):
+        self.item = _LineItem(self.width, self.height, self.fgcolor)
+
+    def _width(self):
+        return self.width
+
+    def _height(self):
+        return self.height
+
+
+class _LineItem(QGraphicsLineItem):
+    def __init__(self, w, h, fgcolor):
+        QGraphicsLineItem.__init__(self)
+        self.setLine(w/2., 0, w/2., h)
+        if fgcolor:
+            self.setPen(QPen(QColor(fgcolor)))
+        else:
+            self.setPen(QPen(QColor('#000000')))
