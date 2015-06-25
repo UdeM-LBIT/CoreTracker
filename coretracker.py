@@ -496,8 +496,6 @@ if __name__ == '__main__':
             if(n.is_valid()):
                 n.render_tree(suffix=args.sfx)
                 fitch_tree.append(n)
-            sys.exit()
-
 
     if(args.debug):
         for line in debug_infos:

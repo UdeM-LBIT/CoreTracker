@@ -28,7 +28,8 @@ USE_EXPECTED_FREQ_FOR_IC = False
 
 # amino acid to exclude from the plot
 # this will speed up a lot the data generation
-EXCLUDE_AA = "ALCDEFGHIKMNPQRSVWY"
+
+EXCLUDE_AA = ""
 
 # value to use for ic information threshold (in percent (%), the true threshold will then be determined
 # by : max(IC_INFO_VECTOR)*(IC_INFO_THRESHOLD/ 100.0))
@@ -44,10 +45,10 @@ SKIPMAFFT = True
 SKIPSUBMATRIX = True
 
 # limit substitution count and analyses to suspected species only 
-LIMIT_TO_SUSPECTED_SPECIES = True
+LIMIT_TO_SUSPECTED_SPECIES = False
 
 # Dump result into a file for the web app
-JSON_DUMP = False
+JSON_DUMP = True
 
 # frequency threshold, uing a random threshold is a bad idea
 # It's better to Find the probability of global>filtered happening randomly and use that
@@ -64,19 +65,23 @@ COUNT_THRESHOLD = 2
 # mold mitochondrial : 4
 # yeast mitochondrial CUN : Leucine : -3
 # Bacterial and plant plastid : 11
-GENETIC_CODE = -3
+
+#GENETIC_CODE = -3
+GENETIC_CODE = 4
+
 
 # DNA sequence input, analyses will stop after aa to aa reassignment if it is not provided
 # you should provide the absolute path
+#DNA_SEQ_PATH = "/home/caldero/software/CoreTracker-master_d/CoreTracker-master/input/concat_gene_clean2.fas"
 DNA_SEQ_PATH = "/home/manu/html/CoreTracker/input/concat_gene_clean2.nuc"
 
 # Display setting
 # Show mixte codon (Codon at not-conserved position in the specie) in the pdf
-SHOW_MIXTE_CODONS = False
+SHOW_MIXTE_CODONS = True
 
 # Show Filtered codon data
-SHOW_FILTERED_CODON_DATA = False
+SHOW_FILTERED_CODON_DATA = True
 
 #IMAGE FORMAT
 # Accepted format : svg, png and pdf
-IMAGE_FORMAT = "pdf"
+IMAGE_FORMAT = "svg"
