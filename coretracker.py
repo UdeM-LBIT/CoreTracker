@@ -479,8 +479,7 @@ if __name__ == '__main__':
 
                 leaf.add_features(count=0)
                 leaf.add_features(filter_count=ori_count)
-                if (n.is_reassigned(leaf)):
-                    leaf.add_features(lost=False)
+                leaf.add_features(lost=False)
                 for position in range(len(rec)):
                     if global_consensus[position] == key1 \
                         and rec[position] == key2:

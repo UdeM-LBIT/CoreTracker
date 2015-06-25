@@ -29,7 +29,7 @@ USE_EXPECTED_FREQ_FOR_IC = False
 # amino acid to exclude from the plot
 # this will speed up a lot the data generation
 
-EXCLUDE_AA = ""
+EXCLUDE_AA = "ACDEFGHIKLMNPQRSVWY"
 
 # value to use for ic information threshold (in percent (%), the true threshold will then be determined
 # by : max(IC_INFO_VECTOR)*(IC_INFO_THRESHOLD/ 100.0))
@@ -73,7 +73,7 @@ GENETIC_CODE = 4
 # DNA sequence input, analyses will stop after aa to aa reassignment if it is not provided
 # you should provide the absolute path
 #DNA_SEQ_PATH = "/home/caldero/software/CoreTracker-master_d/CoreTracker-master/input/concat_gene_clean2.fas"
-DNA_SEQ_PATH = "/home/manu/html/CoreTracker/input/concat_gene_clean2.nuc"
+DNA_SEQ_PATH = "/home/manu/html/CoreTracker/input/cox1_genes.seq"
 
 # Display setting
 # Show mixte codon (Codon at not-conserved position in the specie) in the pdf
@@ -85,3 +85,5 @@ SHOW_FILTERED_CODON_DATA = True
 #IMAGE FORMAT
 # Accepted format : svg, png and pdf
 IMAGE_FORMAT = "svg"
+#set this to true if you cannot output color
+ADD_LABEL_TO_LEAF = False

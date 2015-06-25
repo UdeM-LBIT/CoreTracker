@@ -68,7 +68,7 @@ aa_letters_3to1 = dict((x[1], x[0]) for x in
 nuc_letters = "ACTG"
 
 class Output(object):
-	"""A simple Class to output results
+    """A simple Class to output results
     Either in a file or on stdout
     """
 
@@ -307,6 +307,9 @@ class NaiveFitch(object):
             prob_lost["hz_line_color"] = "#cccccc"
             
             def layout(node):
+
+                get_suffix = lambda x : x if ADD_LABEL_TO_LEAF else ""
+
                 N = AttrFace("rea", fsize=10)
                 faces.add_face_to_node(N, node, 0, position="branch-right")
                 has_count, has_fcount = 0, 0
@@ -318,23 +321,25 @@ class NaiveFitch(object):
                     faces.add_face_to_node(AttrFace("filter_count", fsize=6, fgcolor="indigo"), node, column=1, position="branch-top")
                     has_fcount = node.filter_count
 
-                if 'lost' in node.features and node.lost:
-                    faces.add_face_to_node(AttrFace("name", fgcolor="#cccccc",text_suffix="_G"), node, 0, position="aligned")
-
-                elif 'lost' in node.features and not node.lost:
-                    if(node.is_leaf() and node.reassigned == {0}):
-                        faces.add_face_to_node(AttrFace("name", fgcolor="seagreen", text_suffix="_V"), node, 0, position="aligned")
-                    else : 
-                        faces.add_face_to_node(AttrFace("name", fgcolor="red", fstyle ="italic",text_suffix="_R"), node, 0, position="aligned")
-
-                elif has_count and not has_fcount:
-                    faces.add_face_to_node(AttrFace("name", fgcolor="gold", text_suffix="_O"), node, 0, position="aligned")
-
-                else:
+                if not (has_fcount or has_count):
                     faces.add_face_to_node(AttrFace("name"), node, 0, position="aligned")
 
-                if(self.has_codon_data() and node.is_leaf()):
+                else:
+                    # if lost in node.features, then node is already a leaf
+                    if 'lost' in node.features and node.lost:
+                        if(self.is_reassigned(node)):
+                           	faces.add_face_to_node(AttrFace("name", fgcolor="seagreen",text_suffix=get_suffix("_V")), node, 0, position="aligned")
+                        else :
+                            faces.add_face_to_node(AttrFace("name", fgcolor="#cccccc",text_suffix=get_suffix("_G")), node, 0, position="aligned")
 
+                    elif 'lost' in node.features and not node.lost:
+                        if(self.is_reassigned(node)):
+                            faces.add_face_to_node(AttrFace("name", fgcolor="red", fstyle ="italic",text_suffix=get_suffix("_R")), node, 0, position="aligned")
+                        else : 
+                            faces.add_face_to_node(AttrFace("name", fgcolor="gold", text_suffix=get_suffix("_O")), node, 0, position="aligned")
+
+
+                if(self.has_codon_data() and node.is_leaf()):
                     node_colors = aa_letters_3to1[self.ori_aa]
                     spec_codonrea_g = self.codon_rea_global.get_reacodons(node.name)
                     spec_codonused_g = self.codon_rea_global.get_usedcodons(node.name)
@@ -630,4 +635,3 @@ def is_aligned(seqfile, format):
 def execute_mafft(cmdline):
     """Execute the mafft command line"""
     executeCMD(cmdline, 'mafft')
->>>>>>> 2bebb4ab7017580abb866ddc49ee060e98ae48a3
