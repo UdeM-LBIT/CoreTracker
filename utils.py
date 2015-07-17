@@ -1,4 +1,3 @@
-
 import argparse
 import collections
 import glob
@@ -156,7 +155,9 @@ class CodonReaData(object):
 
         seq = "%s\t%s"%(dict(self.get_reacodons(specie)), dict(self.get_usedcodons(specie)))
         if show_mixte:
-            seq = "%s\t%s"%(seq, dict(self.get_mixtecodons(specie)))
+            seq += "\t%s" %(dict(self.get_mixtecodons(specie)))
+
+        return seq
 
     def is_valid(self):
         pass
@@ -449,7 +450,8 @@ def codon_align(dnaseq, prot_dict, keep_global_pos, keep_filtered_pos, get_dict=
 
     common_genome, dna_seq, prot_dict = clean_spec_list(dnaseq, prot_dict)
 
-#common_genome, dna_seq, protseq = clean_spec_list(dnaseq, prot_dict)
+    #common_genome, dna_seq, protseq = clean_spec_list(dnaseq, prot_dict)
+    print "List of common genome"
     print common_genome
     prot_seq =  [s for s in prot_dict.values() if s.id in common_genome]
     for s in prot_seq:

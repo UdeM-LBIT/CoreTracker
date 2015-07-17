@@ -488,12 +488,12 @@ if __name__ == '__main__':
                 if('lost' in leaf.features and leaf.count < COUNT_THRESHOLD):
                     leaf.lost = True
 
-                counts.append((s, str(leaf.count), str(leaf.filter_count), gcodon_rea.get_string(s,SHOW_MIXTE_CODONS), fcodon_rea.get_string(s, SHOW_MIXTE_CODONS)))
-                debug_infos.append("\n\n Substitutions : " + key2 + " to "+ key1 + ": ")
-                if(SHOW_MIXTE_CODONS):
-                    debug_infos.append("species\tglob_AA_count\tfilt_AA_count\tglob_reacodon_count\tglob_usedcodon_count\tglob_mixtecodon_count\tfilt_reacodon_count\tfilt_usedcodon_count\tfilt_mixtecodon_count\n" + "\n".join("\t".join(c) for c in counts))
-                else:
-                    debug_infos.append("species\tglob_AA_count\tfilt_AA_count\tglob_reacodon_count\tglob_othercodon_count\tfilt_reacodon_count\tfilt_othercodon_count\n" + "\n".join("\t".join(c) for c in counts))
+                counts.append((s, str(leaf.count), str(leaf.filter_count), gcodon_rea.get_string(s, SHOW_MIXTE_CODONS), fcodon_rea.get_string(s, SHOW_MIXTE_CODONS)))
+            debug_infos.append("\n\n Substitutions : " + key2 + " to "+ key1 + ": ")
+            if(SHOW_MIXTE_CODONS):
+                debug_infos.append("species\tglob_AA_count\tfilt_AA_count\tglob_reacodon_count\tglob_usedcodon_count\tglob_mixtecodon_count\tfilt_reacodon_count\tfilt_usedcodon_count\tfilt_mixtecodon_count\n" + "\n".join("\t".join(c) for c in counts))
+            else:
+                debug_infos.append("species\tglob_AA_count\tfilt_AA_count\tglob_reacodon_count\tglob_othercodon_count\tfilt_reacodon_count\tfilt_othercodon_count\n" + "\n".join("\t".join(c) for c in counts))
 
             if(n.is_valid()):
                 n.render_tree(suffix=args.sfx)
