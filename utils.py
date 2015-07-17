@@ -151,9 +151,12 @@ class CodonReaData(object):
     def get_mixtecodon_freq(self,specie):
         return self.get_mixtecodons(specie)*1.0 / self.specs_amino_count[specie][self.aa2]        
 
-    def get_string(self, specie):
+    def get_string(self, specie, show_mixte=False):
         """ Return a string representation for the specie"""
-        return "%s\t%s"%(dict(self.get_reacodons(specie)), dict(self.get_usedcodons(specie)))
+
+        seq = "%s\t%s"%(dict(self.get_reacodons(specie)), dict(self.get_usedcodons(specie)))
+        if show_mixte:
+            seq = "%s\t%s"%(seq, dict(self.get_mixtecodons(specie)))
 
     def is_valid(self):
         pass
