@@ -28,7 +28,7 @@ USE_EXPECTED_FREQ_FOR_IC = False
 
 # amino acid to exclude from the plot
 # this will speed up a lot the data generation
-
+# If you exclude an amino acid, there won't be a reassignation to that aa
 EXCLUDE_AA = "ACDEFGHIKLMNPQRSVWY"
 
 # value to use for ic information threshold (in percent (%), the true threshold will then be determined
@@ -50,7 +50,8 @@ LIMIT_TO_SUSPECTED_SPECIES = False
 # Dump result into a file for the web app
 JSON_DUMP = True
 
-# frequency threshold, uing a random threshold is a bad idea
+# Minimum frequency of global>filtered required for each specie 
+# Using a random threshold is a bad idea
 # It's better to Find the probability of global>filtered happening randomly and use that
 # to compare 
 FREQUENCY_THRESHOLD = 0.1

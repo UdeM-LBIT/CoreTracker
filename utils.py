@@ -417,7 +417,6 @@ def clean_spec_list(dna_dict, prot_dict):
     if not isinstance(prot_dict, dict):
         prot_dict = dict((p.id, p) for p in prot_dict)
     common_genome = set(dna_dict.keys()).intersection(prot_dict.keys())
-    #print common_genome
     # remove every dna sequence that are not cds
     #print [(x, len(dna_dict[x]), len(prot_dict[x].seq.ungap('-'))+1, len(dna_dict[x])==(len(prot_dict[x].seq.ungap('-'))+1)*3) for x in common_genome ]
     #common_genome = [x for x in common_genome if len(dna_dict[x])==(len(prot_dict[x].seq.ungap('-'))+1)*3 ]
