@@ -25,7 +25,7 @@ function update_dot(data, svg, line, x, y, color, container, radius) {
         d.filtered = +d.filtered;
         d.global = +d.global;
         if(container && d.global>d.filtered){
-            var speclist = d.species.split('_');
+            var speclist = d.species.split('||');
             if(speclist.length >1){
                 splist[speclist[0]] = 1 +(splist[speclist[0]] || 0);
                 splist[speclist[1]] = 1 +(splist[speclist[1]] || 0);
@@ -56,7 +56,7 @@ function update_dot(data, svg, line, x, y, color, container, radius) {
         return y(d.filtered);
     })
     .style("fill", function(d) {
-        species = d.species.split('_');
+        species = d.species.split('||');
 
 //        if (species.length >1 ){
             var delta = d.filtered > d.global ? -1 : 1;

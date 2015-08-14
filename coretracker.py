@@ -8,6 +8,7 @@ import json
 import numpy as np
 import os
 import random
+import traceback
 import subprocess
 
 from multiprocessing import Pool
@@ -386,7 +387,7 @@ if __name__ == '__main__':
         for aa in aa_letters:
             if(aa in aa2identy_dict.keys()):
                 fpaired = 1 - aa2identy_dict[aa][seq_names[i], seq_names[j]]
-                aa_shift_json[aa_letters_1to3[aa]].append({'global':gpaired , 'filtered': fpaired, "species": "%s_%s" % (seq_names[i], seq_names[j])})
+                aa_shift_json[aa_letters_1to3[aa]].append({'global':gpaired , 'filtered': fpaired, "species": "%s||%s" % (seq_names[i], seq_names[j])})
         return aa_shift_json
 
 
@@ -412,7 +413,7 @@ if __name__ == '__main__':
     most_common = collections.defaultdict(list)
     for key, value in aa_shift_json.iteritems():
         for v in value:
-            specs = v['species'].split('_')
+            specs = v['species'].split('||')
             if(v['global']> v['filtered']):
                 suspect_species[key][specs[0]] = (suspect_species[key][specs[0]] or 0) + 1
                 suspect_species[key][specs[1]] = (suspect_species[key][specs[1]] or 0) + 1
