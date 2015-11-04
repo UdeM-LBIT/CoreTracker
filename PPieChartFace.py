@@ -5,8 +5,8 @@ from PyQt4.QtGui import (QGraphicsRectItem, QGraphicsLineItem,
                          QGraphicsSimpleTextItem, QGraphicsItem)
 
 from PyQt4.QtCore import Qt,  QPointF, QRect, QRectF
-from ete2 import faces
-from ete2.treeview.main import *
+from ete3 import faces
+from ete3.treeview.main import *
 import math
 
 

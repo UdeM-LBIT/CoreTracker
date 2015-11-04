@@ -1,4 +1,4 @@
-WEB_APP_BASE_PATH = "/home/manu/html/CoreTracker/"
+WEB_APP_BASE_PATH = "/usr/local/www/CoreTracker/"
 WEB_APP_PATH = WEB_APP_BASE_PATH + "wsgi/"
 WEB_APP_PLUGIN = WEB_APP_BASE_PATH +"webplugin/"
 TMP_TREE_RELATIVE_PATH = "CoreTracker/tmp/"

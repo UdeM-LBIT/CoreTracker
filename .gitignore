@@ -58,6 +58,6 @@ docs/_build/
 # PyBuilder
 target/
 # results
-tmp/
-result/
-input/
+tmp/*
+result/*
+input/*

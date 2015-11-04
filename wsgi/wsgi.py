@@ -1,27 +1,28 @@
-import re, os, time, sys, json
-
+import re, os, time, sys, json, cgi
+from cgi import escape
 from hashlib import md5
-from string import strip
+from collections import namedtuple
+
 #from pyvirtualdisplay import Display
 
-WEB_APP_BASE_PATH = "/home/manu/html/CoreTracker/"
+WEB_APP_BASE_PATH = "/usr/local/www/CoreTracker/"
 
 sys.path.insert(0,'/anaconda/lib/python2.7/site-packages')
 
 sys.path.insert(0, WEB_APP_BASE_PATH)
+sys.path.append(os.path.dirname(__file__))
 
 import settings
 from Bio.Alphabet import IUPAC
 from Bio import AlignIO
 from Bio import Alphabet
 from Bio.Align import AlignInfo
-
-from ete2 import WebTreeApplication # Required to use the webplugin
+from server import WebTreeApplication  # Required to use the webplugin
 
 from ete2 import PhyloTree
 from ete2 import TreeStyle
 from ete2 import faces
-
+import posixpath
 TREE = "phylotree.nw"
 TMP = WEB_APP_BASE_PATH+"/tmp/"
 global IC_CONTENT
@@ -37,56 +38,132 @@ ts.show_scale = False
 
 # In order to extend the default WebTreeApplication, we define our own
 # WSGI function that handles URL queries
-def coretracker(environ, start_response, queries):
-    asked_method = environ['PATH_INFO'].split("/")
-    URL = environ['REQUEST_URI']
 
+
+def call_coretracker(environ, start_response):
+    
+
+def save_uploaded_file(folder, filename, file, chunk_size=1000):
+    """ save file in a directory"""
+    # Using chung reduce the data size
+    # saving memory
+    with open(os.path.join(folder,filename), 'wb') as FILE:
+        while True:
+            data = file.read(chunk_size)
+            if not data : break
+            FILE.write(data)
+
+def index(environ, start_response):
+    """Return the index file mounted at "/" and display"""
+    start_response('200 OK', [('Content-Type', 'text/html')])
+    print("INDEX was called")
+    return [open(os.path.join(WEB_APP_BASE_PATH, "webplugin/index.html"), 'r').read()]
+
+def not_found(environ, start_response):
+    """Called if no URL matches."""
+    start_response('404 NOT FOUND', [('Content-Type', 'text/plain')])
+    return ['Not Found']
+
+
+def uploadfile(environ, start_response):
+    """ Upload file here"""
+    start_response('200 OK', [('Content-Type', 'application/json')])
+    result = {}
+    try : 
+        post_env = environ.copy()
+        post = cgi.FieldStorage(
+            fp=post_env['wsgi.input'],
+            environ=post_env,
+            keep_blank_values=True
+        )
+        t = time.time() # timestamp to find url relative to the current run
+        folder = os.path.join(WEB_APP_BASE_PATH, 'input', str(t))
+        if not os.path.exists(folder):
+            os.makedirs(folder)
+        for f in post.keys():
+            c_file = post[f].file
+            if c_file:
+                save_uploaded_file(folder, f, c_file)
+                # returning all the path is a huge security risk
+                # let's just return the relative path
+                result[f] = os.path.join(str(t), f)
+        
+
+    except Exception as e:
+        print e
+
+        result['error'] = "Problem with uploading your file. Please try again.\nContact the admin if the problem persist"
+
+    return json.dumps(result)
+
+
+def track(environ, start_response):
     # expected arguments from the URL (POST or GET method)
+
+    queries = {}
+    
+    if environ['REQUEST_METHOD'].upper() == 'GET' and  environ['QUERY_STRING']:
+        queries = cgi.parse_qs(environ['QUERY_STRING'])
+    elif environ['REQUEST_METHOD'].upper() == 'POST' and environ['wsgi.input']:
+        queries = cgi.parse_qs(environ['wsgi.input'].read())
+
     param_seqid = queries.get("seqtype", [None])[0]
     treeid = queries.get("treeid", [None])[0]
 
     param_browser_id_start = queries.get("browser_id_start", [None])[0]
+    if None in set([param_seqid]):
+        return ["Error, Not enough params"]
 
-    start_response('202 OK', [('content-type', 'text/plain')])
-
-    if asked_method[1]=="track":
-        if None in set([param_seqid]):
-            return "Not enough params"
-
-        if not treeid:
-            treeid = md5(str(time.time())).hexdigest()
-
-        else:
-            sptree = PhyloTree(TMP+TREE, alignment=TMP+ALIGNMENT[param_seqid])
-            
-            selected_align = AlignIO.read(TMP+ALIGNMENT[param_seqid], 'fasta', alphabet=Alphabet.Gapped(IUPAC.protein))
-            summary_info = AlignInfo.SummaryInfo(selected_align)        
-            total_ic_content = summary_info.information_content()
-            global IC_CONTENT
-            IC_CONTENT = summary_info.ic_vector.values()
-            threshold = float(max(IC_CONTENT)* settings.IC_INFO_THRESHOLD)
-            #print threshold, max(IC_CONTENT)
-
-            global ts
-            ts = TreeStyle()
-            ts.branch_vertical_margin = 5
-            ts.show_scale = False
-            ic_plot = faces.SequencePlotFace(IC_CONTENT, hlines=[threshold], hlines_col=['red'], ylim=(int(min(IC_CONTENT)-0.5), int(max(IC_CONTENT)+0.5)), fsize=10, col_width=14, header="Information Content", kind='bar', ylabel="ic")
-            ts.aligned_header.add_face(ic_plot, 1)            
-            application.set_tree_style(ts)
-
-            newick = sptree.write(features=[])
-            result =""" <script>$("#treenewick").css("visibility", "visible");
-                            $("#treenewick").val("%s");
-                            draw_tree(%s, "%s", "#img1");
-                            $("#treenewick").attr('disabled', true);
-
-                            </script>"""%(newick, treeid, newick)
-
-            return result
+    if not treeid:
+        treeid = md5(str(time.time())).hexdigest()
 
     else:
-        return "<br><p>ERROR, please try again </p>"
+        sptree = PhyloTree(TMP+TREE, alignment=TMP+ALIGNMENT[param_seqid])
+        
+        selected_align = AlignIO.read(TMP+ALIGNMENT[param_seqid], 'fasta', alphabet=Alphabet.Gapped(IUPAC.protein))
+        summary_info = AlignInfo.SummaryInfo(selected_align)        
+        total_ic_content = summary_info.information_content()
+        global IC_CONTENT
+        IC_CONTENT = summary_info.ic_vector.values()
+        threshold = float(max(IC_CONTENT)* settings.IC_INFO_THRESHOLD)
+        #print threshold, max(IC_CONTENT)
+
+        global ts
+        ts = TreeStyle()
+        ts.branch_vertical_margin = 5
+        ts.show_scale = False
+        ic_plot = faces.SequencePlotFace(IC_CONTENT, hlines=[threshold], hlines_col=['red'], ylim=(int(min(IC_CONTENT)-0.5), int(max(IC_CONTENT)+0.5)), fsize=10, col_width=14, header="Information Content", kind='bar', ylabel="ic")
+        ts.aligned_header.add_face(ic_plot, 1)            
+        application.set_tree_style(ts)
+
+        newick = sptree.write(features=[])
+        result =""" <script>$("#treenewick").css("visibility", "visible");
+                        $("#treenewick").val("%s");
+                        draw_tree(%s, "%s", "#img1");
+                        $("#treenewick").attr('disabled', true);
+
+                        </script>"""%(newick, treeid, newick)
+
+        return [result]
+
+# map urls to functions
+urls = [
+    (r'^$', index),
+    (r'/track(.*)$', track),
+    (r'/uploadfile(.*)$', uploadfile)
+]
+
+def application(environ, start_response):
+    asked_method = environ.get('PATH_INFO', '').lstrip('/')
+    for regex, callback in urls:
+        match = re.search(regex, asked_method)
+        if match is not None:
+            print asked_method
+            return callback(environ, start_response)
+
+    # maybe use json output here
+    return not_found(environ, start_response)
+
         
 
 # ==============================================================================
@@ -541,7 +618,7 @@ def tree_renderer(tree, treeid, application):
 # ==============================================================================
 
 # Create a basic ETE WebTreeApplication
-application = WebTreeApplication()
+application = WebTreeApplication(application)
 
 # Set your temporal dir to allow web user to generate files. This two
 # paths should point to the same place, one using the absolute path in
@@ -549,7 +626,7 @@ application = WebTreeApplication()
 # directory. Note that the referred directory must be writable by the
 # webserver.
 #application.CONFIG["temp_dir"] = "/home/services/web/etetoolkit.org/webplugin/tmp/"
-application.CONFIG["temp_dir"] = "/home/manu/html/CoreTracker/tmp"
+application.CONFIG["temp_dir"] = "/home/manu/html/application/tmp"
 application.CONFIG["temp_url"] = "./../tmp" # Relative to web site Document Root
 
 # Set the DISPLAY port that ETE should use to draw pictures. You will
@@ -563,9 +640,6 @@ application.CONFIG["DISPLAY"] = ":0" # This is the most common
  # start virtual display
 #xvfb=Display(visible=0, size=(1024, 768)).start()
 #application.CONFIG["DISPLAY"] = str(xvfb.new_display_var)
-# We extend the minimum WebTreeApplication with our own WSGI
-# application
-application.set_external_app_handler(coretracker)
 
 # Lets now apply our custom tree loader function to the main
 # application 

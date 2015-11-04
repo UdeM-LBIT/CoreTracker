@@ -1,6 +1,6 @@
-#! /usr/bin/env python
-from __future__ import division
+#!/usr/bin/env python
 
+from __future__ import division
 import argparse
 import collections
 import itertools
@@ -15,19 +15,23 @@ from multiprocessing import Pool
 
 from collections import Counter
 
+import warnings
+warnings.filterwarnings("ignore") 
 from Bio import AlignIO
 from Bio import SeqIO
 from Bio import SubsMat
 from Bio.Align import AlignInfo
+from Bio.codonalign import CodonAlignment
 from Bio.Align import MultipleSeqAlignment
 from Bio.Alphabet import generic_nucleotide
 from Bio.Phylo.TreeConstruction import DistanceCalculator
 from Bio.Seq import Seq
 from Bio.codonalign.codonseq import _get_codon_list
 from TreeLib import TreeClass
-from ete2 import PhyloTree
+from ete3 import PhyloTree
 from settings import *
 from utils import *
+from functools import partial
 from shutil import copyfile
 
 
@@ -37,191 +41,109 @@ __email__ = "fmr.noutahi@umontreal.ca"
 __license__ = "The MIT License (MIT)"
 
 
-if not os.path.exists(TMP):
-    os.makedirs(TMP)
 
-MAFFT_AUTO_COMMAND = [
-    'linsi', 'ginsi', 'einsi', 'fftnsi', 'fftns', 'nwnsi', 'nwns']
-
-MAFFT_DETAILLED_COMMAND = [
-    'auto', 'retree', 'maxiterate', 'nofft', 'memsave', 'parttree', 'leavegappyregion']
-# This is the multiple alignment used to estimate the accepted replacement
-# matrix
+MAFFT_AUTO_COMMAND = ['linsi', 'ginsi', 'einsi', 'fftnsi', 'fftns', 'nwnsi', 'nwns', 'auto']
 
 
-if __name__ == '__main__':
+def testting_a_lot(args):
 
-    # argument parser
-    parser = argparse.ArgumentParser(
-        description='Convert newick tree format to mafft format')
-    parser.add_argument('-s', '--scale', type=float, default=1.0,
-                        dest='scale', help="Scale to compute the branch format")
-    parser.add_argument(
-        '-o', '--output', type=argparse.FileType('w+'), dest="output", help="Output file")
-    parser.add_argument('-r', '--resample', type=int,
-                        help="For debug and memory purpose. Choose only x sequence")
-    parser.add_argument('--version', action='version', version='%(prog)s 1.0')
-    parser.add_argument('--excludegap', type=float,  default=0.6, dest='excludegap',
-                        help="Remove position with gap from the alignment, using excludegap as threshold. The absolute values are taken")
-    parser.add_argument('--idfilter', type=float, default=0.8, dest='idfilter',
-                        help="Conserve only position with at least idfilter residue identity")
-    parser.add_argument(
-        '--verbose', '-v', action='store_true', dest="verbose", help="Verbosity level")
 
-    parser.add_argument(
-        '--debug', action='store_true', dest="debug", help="Print debug infos")
+def coretracker(args):
+    """Run coretracker on the argument list"""
+      # Check mafft command input
+    global OUTDIR
+    global aa_letters
+    run_alignment = False
+    mafft_detail = get_argsname(args.__dict__, MAFFT_AUTO_COMMAND, prefix="--")
+    mafft_cmd = "mafft "
+    if(mafft_detail):
+        run_alignment = True
+        mafft_cmd += mafft_detail[0]
+    if args.outdir:
+        OUTDIR = args.outdir
 
-    parser.add_argument(
-        '--sfx', dest="sfx", default="", help="PDF rendering suffix to differentiate runs.")
-
-    mafft_group = parser.add_mutually_exclusive_group()
-    mafft_group.add_argument('--linsi', dest='linsi', action='store_true',
-                             help="L-INS-i (probably most accurate; recommended for <200 sequences; iterative refinement method incorporating local pairwise alignment information)")
-    mafft_group.add_argument('--ginsi', dest='ginsi', action='store_true',
-                             help="G-INS-i (suitable for sequences of similar lengths; recommended for <200 sequences; iterative refinement method incorporating global pairwise alignment information)")
-    mafft_group.add_argument('--einsi', dest='einsi', action='store_true',
-                             help="E-INS-i (suitable for sequences containing large unalignable regions; recommended for <200 sequences)")
-    mafft_group.add_argument('--fftnsi', dest='fftnsi', action='store_true',
-                             help="FFT-NS-i (iterative refinement method; two cycles only)")
-    mafft_group.add_argument(
-        '--fftns', dest='fftns', action='store_true', help="FFT-NS-2 (fast; progressive method)")
-    mafft_group.add_argument('--nwnsi', dest='nwnsi', action='store_true',
-                             help="NW-NS-i (iterative refinement method without FFT approximation; two cycles only)")
-    mafft_group.add_argument('--nwns', dest='nwns', action='store_true',
-                             help="NW-NS-2 (fast; progressive method without the FFT approximation)")
-
-    parser.add_argument('-t', '--intree', dest="tree",
-                        help='Input specietree in newick format', required=True)
-    parser.add_argument('-a', '--alignment', dest='seq',
-                        help="The sequence input in fasta format", required=True)
-
-    subparsers = parser.add_subparsers(
-        title="Mafft options", description="Use mafft command to perform alignment")
-    subparsers.required = False
-    subparsers.dest = 'command'
-
-    parser_align = subparsers.add_parser(
-        'align', help='Perform alignment with mafft: The following additional argument will be mandatory. (See mafft doc) "--auto", "--retree", "--maxiterate", "--nofft", "--memsave", "--parttree", "--leavegappyregion"')
-    parser_align.add_argument(
-        '--auto', dest='auto', action='store_true', help="If unsure which option to use, try this option")
-    parser_align.add_argument('--retree', dest='retree', type=int,
-                              help="Guide tree is built number times in the progressive stage")
-    parser_align.add_argument('--maxiterate', dest='maxiterate', type=int,
-                              help="number cycles of iterative refinement are performed")
-    parser_align.add_argument('--nofft', dest='nofft', action='store_true',
-                              help="Do not use FFT approximation in group-to-group alignment.")
-    parser_align.add_argument(
-        '--memsave', dest='memsave', action='store_true', help="Use the Myers-Miller (1988) algorithm.")
-    parser_align.add_argument('--parttree', dest='parttree', action='store_true',
-                              help="Use a fast tree-building method (PartTree, Katoh and Toh 2007) with the 6mer distance.")
-
-    parser_align.add_argument('--leavegappyregion', dest='leavegappyregion', action='store_true',
-                              help="Leave gappy region. The default gap scoring scheme has been changed in version 7.110 (2013 Oct). It tends to insert more gaps into gap-rich regions than previous versions. To disable this change, add the --leavegappyregion option")
-
-    args = parser.parse_args()
-
-    # Check mafft command input
-    mafft_short = get_argsname(args.__dict__, MAFFT_AUTO_COMMAND)
-    mafft_detail = get_argsname(
-        args.__dict__, MAFFT_DETAILLED_COMMAND, prefix="--")
-    enable_mafft = False
-
-    if(mafft_detail and mafft_short):
-        parser.error(
-            "You cannot use the shortcuts and the detailled parameters for mafft at the same time")
-
-    if(mafft_detail or mafft_short):
-        enable_mafft = "mafft " + \
-            " ".join(mafft_detail) if mafft_detail else "".join(mafft_short)
-        args.output = args.output or TMP + "tree.mafft"
-
-    # Output stream setting
-    mtoutput = Output(args.output)
-
+    align_out = os.path.join(OUTDIR, 'alignment.fasta')
+    
     # Manage fasta sequence input
-    seq_order = []  # sequence id in the multi-alignment fasta file
     fasta_sequences = SeqIO.parse(args.seq, "fasta")
-    record_dict = {}
-    for fasta in fasta_sequences:
-        seq_order.append(fasta.description)
-        record_dict[fasta.description] = fasta
+    record_dict = dict((seq.id, seq) for seq in fasta_sequences)
+    seq_names = record_dict.keys()  # sequence id in the multi-alignment fasta file
 
     # load tree
     specietree = TreeClass(args.tree)
     leave_names = set(specietree.get_leaf_name())
     
-    # Use a portion of the sequence for test if asked by the user
-    if args.resample:
-        seq_order = random.sample(seq_order, args.resample)
-    
     # check duplicated sequence name in the alignment file
-    original_len = len(seq_order)
+    original_len = len(seq_names)
 
     # get dna to perform codon alignment
-    dnaseq = SeqIO.parse(DNA_SEQ_PATH, 'fasta',generic_nucleotide)
+    dnaseq = SeqIO.parse(args.dnaseq, 'fasta',generic_nucleotide)
+    dnaseq_ids = set([dna.id for dna in dnaseq])
 
-    if len(set(seq_order)) != original_len or (set(seq_order) - leave_names):
+    if len(set(seq_names)) != original_len or (set(seq_names) - leave_names) or (dnaseq_ids - leave_names):
         Output.error("Sequence not matching found, attempt to correct... ", "Warning")
-        seq_order[:] = list(set(seq_order) & leave_names)
-
-        args.seq = args.seq + "_"
-        with open(args.seq, 'w') as FASTAOUT:
-            for seq in seq_order:
+        seq_names[:] = list(set(seq_names) & leave_names & dnaseq_ids)
+        tmpseq = os.path.join(OUTDIR, "corr_seq_input.fasta")
+        with open(tmpseq, 'w') as FASTAOUT:
+            for seq in seq_names:
                 FASTAOUT.write(record_dict[seq].format("fasta"))
-
+        args.seq = tmpseq
 
     # prune tree to sequence list
-    specietree.prune(seq_order)
+    specietree.prune(seq_names)
+    # set dna to sequence list
+    dnaseq = [dna for dna in dnaseq if dna.id in seq_names]
+
+    # debug list infos
     debug_infos = []
-    dnaseq = [dna for dna in dnaseq if dna.id in seq_order]
 
-    # Convert tree to mafft format
-    convert_tree_to_mafft(specietree, seq_order, mtoutput, args.scale)
-    mtoutput.close()
+    # execute mafft    
+    is_already_aligned = is_aligned(args.seq, 'fasta')
 
-    # execute mafft
-    is_already_aligned = is_aligned(args.seq, "fasta")
-    if(enable_mafft and not (SKIPMAFFT and is_already_aligned)):
-        execute_mafft(enable_mafft + " --treein %s %s > %s" %
-                      (mtoutput.file, args.seq, MAFFT_OUTPUT))
+    if not (SKIP_ALIGNMENT and is_already_aligned):
+        if not run_alignment:
+            raise ValueError("Could not align sequences\nAlignment parameters not provided")
+        else :
+            # this is the case where we need to convert the tree to mafft tree before
+            # Output stream setting
+            mtoutput = Output(os.path.join(OUTDIR,"tree_mafft.nw"))
+            # Convert tree to mafft format
+            convert_tree_to_mafft(specietree, seq_names, mtoutput, args.scale)
+            mtoutput.close()
 
-    # check if is already aligned
-    elif is_already_aligned:
-        copyfile(args.seq, MAFFT_OUTPUT)
+            execute_mafft(mafft_cmd + " --treein %s %s > %s" %
+                          (mtoutput.file, args.seq, align_out))
+
+    else :
+        copyfile(args.seq, align_out)
+
+    # save tree
+    specietree.write(outfile=os.path.join(OUTDIR,"phylotree.nw"))
 
     # Reload mafft alignment and filter alignment (remove gap positions and
     # positions not conserved)
-    alignment = AlignIO.read(MAFFT_OUTPUT, 'fasta', alphabet=alpha)
+    alignment = AlignIO.read(align_out, 'fasta', alphabet=alpha)
     record2seq = SeqIO.to_dict(alignment)
     debug_infos.append("Initial alignment length : %d"%alignment.get_alignment_length())
     
     # add this to keep trace of the gap filtered position 
-    gap_filtered_position  = []
-    tt_filter_position =  np.asarray(xrange(alignment.get_alignment_length()))
+    gap_filtered_position = []
+    tt_filter_position = np.asarray(xrange(alignment.get_alignment_length()))
 
     if(args.excludegap): 
         alignment, gap_filtered_position = clean_alignment(
             alignment, threshold=(abs(args.excludegap) <= 1 or 0.01) * abs(args.excludegap))
         AlignIO.write(
-            alignment, open(MAFFT_OUTPUT + "_ungapped", 'w'), 'fasta')
+            alignment, open(align_out + "_gapfilter", 'w'), 'fasta')
 
         debug_infos.append("Alignment length after removing gaps : %d"%alignment.get_alignment_length())
 
     # update list of position from the original alignment
     tt_filter_position = tt_filter_position[gap_filtered_position]
 
-    # Get the substitution matrice at each node
-    sptree = PhyloTree(specietree.write(), alignment=alignment.format(
-        "fasta"), alg_format="fasta")
-
     # Compute expected frequency from the entire alignment and update at each
     # node
     armseq = alignment
-
-    # We could use another alignment to compute those frequency if it's set
-    if(ARM_SEQUENCE):
-        armseq = AlignIO.read(ARM_SEQUENCE, 'fasta', alphabet=alpha)
-
     summary_info = AlignInfo.SummaryInfo(armseq)
     acc_rep_mat = SubsMat.SeqMat(summary_info.replacement_dictionary())
     # format of the acc_rep_mat:
@@ -236,45 +158,17 @@ if __name__ == '__main__':
     # if the two aa are differents, add half of the frequency
     # else add the frequency value
     # this unfortunaly assume that A-->C and C-->A have the same probability
-
-    if (not SKIPSUBMATRIX):
-        for node in sptree.traverse():
-            if not node.is_leaf():
-                spec_under_node = node.get_leaf_names()
-                node_alignment = MultipleSeqAlignment(
-                    [record[:] for record in alignment if record.id in spec_under_node], alphabet=alpha)
-
-                if(REALIGN_AT_EACH_NODE and not node.is_root()):
-                    node_alignment = realign(node_alignment, node, enable_mafft)
-
-                node_align_info = AlignInfo.SummaryInfo(node_alignment)
-                replace_info = node_align_info.replacement_dictionary()
-                node_align_arm = SubsMat.SeqMat(replace_info)
-
-                node_sub_matrix = SubsMat.make_log_odds_matrix(
-                    node_align_arm, exp_freq_table=exp_freq_table)
-
-                node.add_feature('submatrix', node_sub_matrix)
-
-                if(args.verbose):
-                    print "Sequences under node"
-                    print spec_under_node
-                    print "ARM matrix"
-                    print node_align_arm
-                    print "SUB matrix"
-                    print node_sub_matrix
-
     
     # Filter using the ic content
-    if IC_INFO_THRESHOLD:
+    if args.iccontent:
         align_info = AlignInfo.SummaryInfo(alignment)
         ic_content = align_info.information_content(e_freq_table=(exp_freq_table if USE_EXPECTED_FREQ_FOR_IC else None))
-        max_val = max(align_info.ic_vector.values())*IC_INFO_THRESHOLD
+        max_val = max(align_info.ic_vector.values())* ((abs(args.iccontent) <= 1 or 0.01) * abs(args.iccontent))
         ic_pos = (np.asarray(align_info.ic_vector.values())>max_val).nonzero()
         filtered_alignment = filter_align_position(alignment, ic_pos[0])
         # update list of position based on change in ic_position
         tt_filter_position = tt_filter_position[ic_pos]
-        AlignIO.write(filtered_alignment, open(MAFFT_OUTPUT + "_filtered_IC", 'w'), 'fasta')
+        AlignIO.write(filtered_alignment, open(align_out + "_ICfilter", 'w'), 'fasta')
         
         debug_infos.append("Alignment length after removing low IC columns : %d"%filtered_alignment.get_alignment_length())
 
@@ -285,82 +179,81 @@ if __name__ == '__main__':
         filtered_alignment, position = filter_alignment(
             filtered_alignment, threshold=(abs(args.idfilter) <= 1 or 0.01) * abs(args.idfilter))
         AlignIO.write(
-            filtered_alignment, open(MAFFT_OUTPUT + "_filtered", 'w'), 'fasta')
+            filtered_alignment, open(align_out + "_IDfilter", 'w'), 'fasta')
 
         # update : remove position not conserved
         tt_filter_position = tt_filter_position[position]
         debug_infos.append("Alignment length after removing columns less conserved than threshold (%f) : %d"%(args.idfilter, filtered_alignment.get_alignment_length()))
-        
-        # no keeping a variable for this
-        filtered_alignment, position = filter_alignment(filtered_alignment, remove_identity=True, threshold=(
-            abs(args.idfilter) <= 1 or 0.01) * abs(args.idfilter))
-        AlignIO.write(filtered_alignment, open(
-            MAFFT_OUTPUT + "_matchremoved", 'w'), 'fasta')
+    
 
-        # update remove of identical column
-        tt_filter_position = tt_filter_position[position]
-        debug_infos.append("Alignment length after removing columns less conserved than threshold (%f) and 100%% identical : %d"%(args.idfilter, filtered_alignment.get_alignment_length()))
+    # Rmoving 100% match is done whether or not the others filters were applied
+    filtered_alignment, position = filter_alignment(filtered_alignment, remove_identity=True, threshold=(
+        abs(args.idfilter) <= 1 or 0.01) * abs(args.idfilter))
+    AlignIO.write(filtered_alignment, open(align_out + "_filtered", 'w'), 'fasta')
 
-
-    #################################################################################################
-
-    # Compute sequence identity in global and filtered alignment
-    seq_names = [rec.id for rec in alignment]
-    number_seq = len(seq_names)
-    sim_json = collections.defaultdict(list)
-    aa_json = collections.defaultdict(list)
-    expected_freq = collections.defaultdict(float)
-    # alignment length
-    af_length = len(filtered_alignment[0])
-    ag_length = len(alignment[0])
-    count_max = -np.inf
-    count_min = np.inf
-    matCalc = DistanceCalculator('identity')
-    global_paired_distance = matCalc.get_distance(alignment)
-    filtered_paired_distance = matCalc.get_distance(filtered_alignment)
-    suspect_species = collections.defaultdict(Counter)
+    # update remove of identical column
+    tt_filter_position = tt_filter_position[position]
+    debug_infos.append("Alignment length after removing columns less conserved than threshold (%f) and 100%% identical : %d"%(args.idfilter, filtered_alignment.get_alignment_length()))
 
     if(EXCLUDE_AA):
         aa_letters = "".join([aa for aa in aa_letters if aa not in EXCLUDE_AA])
 
+    print aa_letters
+    # Compute sequence identity in global and filtered alignment
+    number_seq = len(seq_names)
+    matCalc = DistanceCalculator('identity')
+    global_paired_distance = matCalc.get_distance(alignment)
+    filtered_paired_distance = matCalc.get_distance(filtered_alignment)
+    suspect_species = collections.defaultdict(Counter)
     genome_aa_freq = collections.defaultdict(dict)
-    for i in xrange(number_seq):
-        # Get aa count for each sequence
-        count1 = Counter(alignment[i])
-        count2 = Counter(filtered_alignment[i])
-        for aa in aa_letters:
-            expected_freq[aa_letters_1to3[aa]] = exp_freq_table[aa]
-            global_val = count1[aa] / (ag_length * exp_freq_table[aa])
-            filtered_val = count2[aa] / (af_length * exp_freq_table[aa])
-            aa_json[aa_letters_1to3[aa]].append(
-                {'global': global_val, 'filtered': filtered_val, "species": seq_names[i]})
-            count_max = max(filtered_val, global_val, count_max)
-            count_min = min(filtered_val, global_val, count_min)
-            genome_aa_freq[seq_names[i]][aa_letters_1to3[aa]] = global_val
+   
+    if args.debug :
+        aa_json = collections.defaultdict(list)
+        expected_freq = collections.defaultdict(float)
+        count_max = -np.inf
+        count_min = np.inf
+        sim_json = collections.defaultdict(list)
+         # alignment length
+        af_length = filtered_alignment.get_alignment_length()
+        ag_length = alignment.get_alignment_length()
+        for i in xrange(number_seq):
+            # Get aa count for each sequence
+            count1 = Counter(alignment[i])
+            count2 = Counter(filtered_alignment[i])
+            for aa in aa_letters:
 
-        for j in xrange(i + 1):
+                expected_freq[aa_letters_1to3[aa]] = exp_freq_table[aa]
+                global_val = count1[aa] / (ag_length * exp_freq_table[aa]) if count1[aa]>0 else 0.0
+                filtered_val = count2[aa] / (af_length * exp_freq_table[aa]) if count1[aa]>0 else 0.0
+                aa_json[aa_letters_1to3[aa]].append(
+                    {'global': global_val, 'filtered': filtered_val, "species": seq_names[i]})
+                count_max = max(filtered_val, global_val, count_max)
+                count_min = min(filtered_val, global_val, count_min)
+                genome_aa_freq[seq_names[i]][aa_letters_1to3[aa]] = global_val
 
-            sim_json[seq_names[i]].append({"global": (1-global_paired_distance[seq_names[i], seq_names[j]])
-                                          , "filtered":(1-filtered_paired_distance[seq_names[i], seq_names[j]]), "species": seq_names[j]})
-            if i != j:
-                sim_json[seq_names[j]].append({"global": (1-global_paired_distance[seq_names[i], seq_names[j]])
-                                          , "filtered": (1-filtered_paired_distance[seq_names[i], seq_names[j]]), "species": seq_names[i]})
-                
-            # do not add identity to itself twice
-         
-    sptree.write(outfile=TMP + "phylotree.nw")
+            for j in xrange(i + 1):
 
-    # for performance issues, better make another loop to
+                sim_json[seq_names[i]].append({"global": (1-global_paired_distance[seq_names[i], seq_names[j]])
+                                              , "filtered":(1-filtered_paired_distance[seq_names[i], seq_names[j]]), "species": seq_names[j]})
+                if i != j:
+                    sim_json[seq_names[j]].append({"global": (1-global_paired_distance[seq_names[i], seq_names[j]])
+                                              , "filtered": (1-filtered_paired_distance[seq_names[i], seq_names[j]]), "species": seq_names[i]})
+                    
+                # do not add identity to itself twice
+        if(JSON_DUMP):
+            with open(os.path.join(OUTDIR,"similarity.json"), "w") as outfile1:
+                json.dump(sim_json, outfile1, indent=4)
+            with open(os.path.join(OUTDIR, "aafrequency.json"), "w") as outfile2:
+                json.dump({"AA": aa_json, "EXP": expected_freq, "MAX": count_max, "MIN" : count_min}, outfile2, indent=4)
+        
+
+    # for performance issues, it's better to make another loop to
     # get the data to plot the conservation of aa in each column
     # of the alignment
 
-    consensus = get_consensus(filtered_alignment, AA_MAJORITY_THRESH)
-    
+    consensus = get_consensus(filtered_alignment, AA_MAJORITY_THRESH)  
     # A little pretraitment to speed access to each record later
     global_consensus = get_consensus(alignment, AA_MAJORITY_THRESH)
-    record2ungapedseq = {}
-    for record in alignment:
-        record2ungapedseq[record.id] = record
 
     debug_infos.append("Filtered alignment consensus : \n%s\n"%consensus)
 
@@ -375,36 +268,18 @@ if __name__ == '__main__':
             aa2identy_dict[aa] =  matCalc.get_distance(aa_filtered_alignment)
 
 
-    def get_aa_maj(mapinput):
-        aa_shift_json = collections.defaultdict(list)
-        i, j = mapinput
-        global global_paired_distance
-        global aa_letters
-        global seq_names
-        global aa2identy_dict
-        gpaired = 1-global_paired_distance[seq_names[i], seq_names[j]]
-
+    aa_shift_json = collections.defaultdict(list)
+    for ind in itertools.combinations(xrange(number_seq), r=2):
+        i, j = max(ind), min(ind)
+        gpaired = 1 - global_paired_distance[seq_names[i], seq_names[j]]
         for aa in aa_letters:
-            if(aa in aa2identy_dict.keys()):
+            if aa in aa2identy_dict.keys():
                 fpaired = 1 - aa2identy_dict[aa][seq_names[i], seq_names[j]]
                 aa_shift_json[aa_letters_1to3[aa]].append({'global':gpaired , 'filtered': fpaired, "species": "%s||%s" % (seq_names[i], seq_names[j])})
-        return aa_shift_json
-
-
-    p = Pool(PROCESS_ENABLED)
-    result = p.map(get_aa_maj, [(max(ind), min(ind)) for ind in itertools.combinations(xrange(number_seq), r=2)])
-
-    aa_shift_json = Counter()
-    for r in result:
-        aa_shift_json += Counter(r)
 
     # dumping in json to reload with the web interface using d3.js
-    if(JSON_DUMP):
-        with open(TMP + "similarity.json", "w") as outfile1:
-            json.dump(sim_json, outfile1, indent=4)
-        with open(TMP + "aafrequency.json", "w") as outfile2:
-            json.dump({"AA": aa_json, "EXP": expected_freq, "MAX": count_max, "MIN" : count_min}, outfile2, indent=4)
-        with open(TMP + "aause.json", "w") as outfile3:
+    if JSON_DUMP:
+        with open(os.path.join(OUTDIR,"aause.json"), "w") as outfile3:
             json.dump(aa_shift_json, outfile3, indent=4)
 
 
@@ -415,44 +290,44 @@ if __name__ == '__main__':
         for v in value:
             specs = v['species'].split('||')
             if(v['global']> v['filtered']):
+                # Similarity higher in the global alignment
+                # add the two species in the count
                 suspect_species[key][specs[0]] = (suspect_species[key][specs[0]] or 0) + 1
                 suspect_species[key][specs[1]] = (suspect_species[key][specs[1]] or 0) + 1
 
+        # sort species list by the number of time it have a higher similarity in the global alignment
         common_list =  suspect_species[key].most_common()
         i = 0
         while i < len(common_list) and common_list[i][1] > FREQUENCY_THRESHOLD*len(seq_names):
-            global_freq_use = genome_aa_freq[common_list[i][0]][key]
-            most_common[key].append(common_list[i]+(global_freq_use,))
+            most_common[key].append(common_list[i])
             i += 1
 
     # At this step we have the most suspected species for each aa.
     # for each aa let's find the targeted aa
-
     aa2aa_rea = collections.defaultdict(dict)
-    for key, values in most_common.iteritems():
-        susspeclist = [val[0] for val in values]
-        aa_alignment = aa2alignment[key]
-
-        for s in aa_alignment:
-            if s.id in susspeclist:
-                suspected_aa = []
-                for i in range(len(s)):
-                    one_letter_key = aa_letters_3to1[key]
-                    if(s[i]!='-' and s[i] != one_letter_key):
-                        suspected_aa.append(s[i])
-                        try :
-                            aa2aa_rea[one_letter_key][s[i]].add(s.id)
-                        except KeyError:
-                            aa2aa_rea[one_letter_key] = collections.defaultdict(set)
-                            aa2aa_rea[one_letter_key][s[i]].add(s.id)
-
-                #pos = susspeclist.index(s.id)
-                #most_common[key][pos] += (suspected_aa,)
+    for key, sspecies in most_common.iteritems():
+        aa_alignment = dict((x.id, x) for x in aa2alignment[key])
+        
+        one_letter_key = aa_letters_3to1[key]
+        for (spec, count) in sspecies :
+            suspected_aa = []
+            for cur_aa in aa_alignment[spec]:
+                print cur_aa
+                if(cur_aa !='-' and cur_aa != one_letter_key):
+                    suspected_aa.append(cur_aa)
+                    try :
+                        aa2aa_rea[one_letter_key][cur_aa].add(spec)
+                    except KeyError:
+                        aa2aa_rea[one_letter_key] = collections.defaultdict(set)
+                        aa2aa_rea[one_letter_key][cur_aa].add(spec)
 
     # Parsimony fitch tree list
     fitch_tree = []
 
     codon_alignment, fcodon_alignment = codon_align(dnaseq, record2seq, gap_filtered_position, tt_filter_position)
+
+    AlignIO.write(CodonAlignment(codon_alignment.values()), open(align_out + "_codon_align", 'w'), 'fasta')
+
     #codon_lst = []
     #for codon_aln in codon_alignment.values():
         #codon_lst.append(_get_codon_list(codon_aln.seq))
@@ -464,12 +339,12 @@ if __name__ == '__main__':
             gcodon_rea = CodonReaData((key1, key2), global_consensus, codon_alignment)
             fcodon_rea = CodonReaData((key1, key2), consensus, fcodon_alignment)
             counts = []
-            t = sptree.copy("newick")
+            t = specietree.copy("newick")
             n = NaiveFitch(t, val, aa_letters_1to3[key2], aa_letters_1to3[key1], (gcodon_rea, fcodon_rea))
             slist = n.get_species_list(LIMIT_TO_SUSPECTED_SPECIES)
             
             for s in slist:
-                rec = record2ungapedseq[s]
+                rec = record2seq[s]
                 leaf = (n.tree&s)
                 ori_count = 0
                 try :
@@ -500,7 +375,76 @@ if __name__ == '__main__':
                 n.render_tree(suffix=args.sfx)
                 fitch_tree.append(n)
 
-    if(args.debug):
+    if(args.debug and args.verbose>1):
         for line in debug_infos:
-            print line
-        print "After validating the ancestral state and checking in the global alignment, %d cases were found interesting"%len(fitch_tree)
+            print(line)
+        print("After validating the ancestral state and checking in the global alignment, %d cases were found interesting"%len(fitch_tree))
+
+
+
+if __name__ == '__main__':
+
+    # argument parser
+    parser = argparse.ArgumentParser(
+        description='CoreTracker, A codon reassignment tracker newick tree format to mafft format')
+
+    parser.add_argument(
+        '--wdir', '--outdir', dest="outdir", help="Working directory")
+
+    parser.add_argument('--version', action='version', version='%(prog)s 1.0')
+
+    parser.add_argument('--excludegap', '--gap', type=float,  default=0.6, dest='excludegap',
+                        help="Remove position with gap from the alignment, using excludegap as threshold. The absolute values are taken")
+    
+    parser.add_argument('--idfilter', '--id', type=float, default=0.8, dest='idfilter',
+                        help="Conserve only position with at least idfilter residue identity")
+    
+    parser.add_argument('--iccontent', '--ic', type=float, default=0.5, dest='iccontent',
+                        help="Shannon entropy threshold (default : 0.5 ). This will be used to discard column where IC < max(IC_INFO_VECTOR)*(IC_INFO_THRESHOLD/ 100.0)))")
+    
+
+    parser.add_argument(
+        '--verbose', '-v', choices=[0,1,2], type=int, default=0, dest="verbose", help="Verbosity level")
+
+    parser.add_argument(
+        '--debug', action='store_true', dest="debug", help="Print debug infos")
+
+    parser.add_argument(
+        '--sfx', dest="sfx", default="", help="PDF rendering suffix to differentiate runs.")
+
+    parser.add_argument('-t', '--intree', dest="tree",
+                        help='Input specietree in newick format', required=True)
+    
+    parser.add_argument('-s', '--scale', type=float, default=1.0,
+                        dest='scale', help="Scale to compute the branch format")
+
+    parser.add_argument('--protseq', '--aa', '-p', '-a', dest='seq',
+                        help="Protein sequence input in fasta format", required=True)
+
+    parser.add_argument('--dnaseq', '--dna', '-n', dest='dnaseq',
+                        help="Nucleotides sequences input in fasta format", required=True)
+   
+
+    mafft_group = parser.add_mutually_exclusive_group()
+    mafft_group.add_argument('--linsi', dest='linsi', action='store_true',
+                             help="L-INS-i (probably most accurate; recommended for <200 sequences; iterative refinement method incorporating local pairwise alignment information)")
+    mafft_group.add_argument('--ginsi', dest='ginsi', action='store_true',
+                             help="G-INS-i (suitable for sequences of similar lengths; recommended for <200 sequences; iterative refinement method incorporating global pairwise alignment information)")
+    mafft_group.add_argument('--einsi', dest='einsi', action='store_true',
+                             help="E-INS-i (suitable for sequences containing large unalignable regions; recommended for <200 sequences)")
+    mafft_group.add_argument('--fftnsi', dest='fftnsi', action='store_true',
+                             help="FFT-NS-i (iterative refinement method; two cycles only)")
+    mafft_group.add_argument(
+        '--fftns', dest='fftns', action='store_true', help="FFT-NS-2 (fast; progressive method)")
+    mafft_group.add_argument('--nwnsi', dest='nwnsi', action='store_true',
+                             help="NW-NS-i (iterative refinement method without FFT approximation; two cycles only)")
+    mafft_group.add_argument('--nwns', dest='nwns', action='store_true',
+                             help="NW-NS-2 (fast; progressive method without the FFT approximation)")
+   
+    mafft_group.add_argument(
+        '--auto', dest='auto', action='store_true', help="If unsure which option to use, try this option")
+
+    args = parser.parse_args()
+
+
+    coretracker(args)

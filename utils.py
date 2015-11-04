@@ -28,7 +28,7 @@ from Bio.Align import MultipleSeqAlignment
 from Bio.Alphabet import IUPAC, generic_protein
 from TreeLib import TreeClass
 from cStringIO import StringIO
-from ete2 import PhyloTree
+from ete3 import PhyloTree
 from settings import *
 from PPieChartFace import PPieChartFace, LineFace
 
@@ -38,9 +38,6 @@ __version__ = "0.1"
 __email__ = "fmr.noutahi@umontreal.ca"
 __license__ = "The MIT License (MIT)"
 
-# hardcorded settings variables
-alpha = Alphabet.Gapped(IUPAC.protein)
-DIST_THRES = 1e-10
 aa_letters = "ACDEFGHIKLMNPQRSTVWY"
 aa_letters_1to3 = {
 
@@ -51,6 +48,9 @@ aa_letters_1to3 = {
     'S': 'Ser', 'T': 'Thr', 'V': 'Val', 'W': 'Trp',
     'Y': 'Tyr',
 }
+# hardcorded settings variables
+alpha = Alphabet.Gapped(IUPAC.protein)
+DIST_THRES = 1e-10
 
 dct = CodonTable.unambiguous_dna_by_id[abs(GENETIC_CODE)]
 if GENETIC_CODE < 0:
@@ -280,7 +280,7 @@ class NaiveFitch(object):
         GRAPHICAL_ACCESS = True
 
         try:
-            from ete2 import TreeStyle, NodeStyle, faces, AttrFace, TextFace, CircleFace
+            from ete3 import TreeStyle, NodeStyle, faces, AttrFace, TextFace, CircleFace
         except ImportError, e:
             GRAPHICAL_ACCESS = False
 
@@ -353,31 +353,32 @@ class NaiveFitch(object):
                     
                     faces.add_face_to_node(PPieChartFace(spec_codonused_g.values(), pie_size, pie_size, labels=[],\
                      colors=[self.colors[k] for k in spec_codonused_g.keys()]), node, column=2, position="aligned")
-                    
+                    next_column = 3
                     if(SHOW_MIXTE_CODONS):
                         spec_mixtecodon_g = self.codon_rea_global.get_mixtecodons(node.name)
                         faces.add_face_to_node(PPieChartFace(spec_mixtecodon_g.values(), pie_size, pie_size, labels=[], \
-                            colors=[self.colors[k] for k in spec_mixtecodon_g.keys()]), node, column=3, position="aligned")
-                    
+                            colors=[self.colors[k] for k in spec_mixtecodon_g.keys()]), node, column=next_column, position="aligned")
+                        next_column = 4
+
                     if(SHOW_FILTERED_CODON_DATA): 
 
                         spec_codonrea_f = self.codon_rea_filtered.get_reacodons(node.name)
                         spec_codonused_f = self.codon_rea_filtered.get_usedcodons(node.name)
                     
                         # add separator 
-                        faces.add_face_to_node(LineFace(pie_size, pie_size, None), node, column=4, position="aligned")
+                        faces.add_face_to_node(LineFace(pie_size, pie_size, None), node, column=next_column, position="aligned")
                         
                         # add data
                         faces.add_face_to_node(PPieChartFace(spec_codonrea_f.values(), pie_size, pie_size, labels=[],\
-                            colors=[self.colors[k] for k in spec_codonrea_f.keys()]), node, column=5, position="aligned")
+                            colors=[self.colors[k] for k in spec_codonrea_f.keys()]), node, column=next_column+1, position="aligned")
 
                         faces.add_face_to_node(PPieChartFace(spec_codonused_f.values(),  pie_size, pie_size, labels=[],\
-                            colors=[self.colors[k] for k in spec_codonused_f.keys()]), node, column=6, position="aligned")
+                            colors=[self.colors[k] for k in spec_codonused_f.keys()]), node, column=next_column+2, position="aligned")
         
                         if(SHOW_MIXTE_CODONS):
                             spec_mixtecodon_f = self.codon_rea_filtered.get_mixtecodons(node.name)
                             faces.add_face_to_node(PPieChartFace(spec_mixtecodon_f.values(), pie_size, pie_size, labels=[], \
-                                colors=[self.colors[k] for k in spec_mixtecodon_f.keys()]), node, column=7, position="aligned")
+                                colors=[self.colors[k] for k in spec_mixtecodon_f.keys()]), node, column=next_column+3, position="aligned")
             
 
             ts.layout_fn = layout
@@ -398,6 +399,7 @@ class NaiveFitch(object):
                     n.set_style(prob_lost)
 
             # Save tree as figure
+
             self.tree.render(output, dpi=400, tree_style=ts)
 
 
@@ -423,7 +425,7 @@ def clean_spec_list(dna_dict, prot_dict):
     #return common_genome, dict((k, v) for k, v in dna_dict.items() if k in common_genome)
 
     #print [(x, len(dna_dict[x]), len(prot_dict[x].seq.ungap('-'))+1, len(dna_dict[x])==(len(prot_dict[x].seq.ungap('-')))*3) for x in common_genome ]
-    common_genome = [x for x in common_genome if len(dna_dict[x])==(len(prot_dict[x].seq.ungap('-')))*3 ]
+    common_genome = [x for x in common_genome if (len(dna_dict[x]) in [len(prot_dict[x].seq.ungap('-'))*3, len(prot_dict[x].seq.ungap('-'))*3 +3])]
     return common_genome, dict((k, v) for k, v in dna_dict.items() if k in common_genome), prot_dict
 
 

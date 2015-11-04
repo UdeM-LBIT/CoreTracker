@@ -1,7 +1,119 @@
  body {
     margin-top: 30px;
+    overflow-y: scroll;
+    overflow-x: scroll;
     font: 10px sans-serif;
+    
 }
+body h1{
+    text-align : center;
+    margin-bottom: 40px;
+}
+
+#block{
+    margin: auto;
+    width: 70%;
+    min-width: 700px;
+
+    border:1px solid #888;
+    padding: 25px;
+}
+
+
+fieldset{
+    margin-bottom: 15px;
+}
+
+fieldset legend {
+    color: red;
+}
+
+.leftalign{
+    text-align: left;
+    font-size: 13px;
+
+}
+
+.leftalign label, .leftalign input{
+    display: inline-block;
+    padding: 8px;
+    margin-right: 5px;
+}
+
+#showadvanced{
+    float: right;
+    font-size : 13px;
+    display: inline-block;
+     cursor: pointer;
+
+}
+
+
+#submitbutton{
+    text-align: center;
+    font-size : 15px;
+    width : 200px;
+    padding : 5px;
+    margin : 15px auto;
+    display: block;
+}
+
+#advanced-drop{
+    display : none;
+
+}
+
+#submitbutton input
+{
+    width :80%;
+}
+
+
+.ui-icon {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-left: 2px;
+    top: -1px;
+}
+
+.ui-icon-help{
+    display: inline-block;
+  -moz-border-radius: 60px;
+  -webkit-border-radius: 60px;
+  border-radius: 60px;
+  -moz-box-shadow: 0px 0px 2px #888;
+  -webkit-box-shadow: 0px 0px 2px #888;
+  box-shadow: 0px 0px 2px #888;
+}
+
+input[type=checkbox]{
+    width: 13px;
+    height: 13px;
+    padding: 0;
+
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+
+input[type=text]{
+    font-size: 12px;
+    padding: 2px;
+    max-width: 75px;
+    text-align: center;
+
+}
+
+#show-error{
+    display:  None;
+    color : #cc0000;
+}
+
+.border-error{
+    border: 1px solid #ff3333;
+}
+
 .axis path,
 .axis line {
     fill: none;

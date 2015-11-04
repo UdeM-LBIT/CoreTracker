@@ -8,19 +8,7 @@ except ImportError, e:
 	PROCESS_ENABLED = 2
 
 # set up a temporary directory
-TMP = "tmp/"
-
-# Mafft output file 
-MAFFT_OUTPUT = TMP+"alignment.fasta"
-
-# Provide a multiple alignment sequence to compute the Accepted Replacement Matrix.
-# This will be provided as additionnal input to compute everything related to substitution matrix
-# and ic content
-ARM_SEQUENCE = None
-
-# Set this to decide whether or not, coretracker should perform a new alignement at each
-# node of the tree (when we calculate the substitution matrix)
-REALIGN_AT_EACH_NODE = False
+OUTDIR = "tmp/"
 
 # Use this to enable or disable the use of expected frequence (computed from the ARM_SEQUENCE)
 # when the ic_information per site is computed
@@ -29,20 +17,19 @@ USE_EXPECTED_FREQ_FOR_IC = False
 # amino acid to exclude from the plot
 # this will speed up a lot the data generation
 # If you exclude an amino acid, there won't be a reassignation to that aa
-EXCLUDE_AA = "ACDEFGHIKLMNPQRSVWY"
-
-# value to use for ic information threshold (in percent (%), the true threshold will then be determined
-# by : max(IC_INFO_VECTOR)*(IC_INFO_THRESHOLD/ 100.0))
-IC_INFO_THRESHOLD = 0.5
+EXCLUDE_AA = "DEFGHPRSVWY"
 
 # Threshold require to determine if an aa is majoritary in a column
 AA_MAJORITY_THRESH = 0.5
 
 # skip mafft alignment, use this to gain time for debug purpose
-SKIPMAFFT = True
+SKIP_ALIGNMENT = True
 
 # skip substitution matrix computing
 SKIPSUBMATRIX = True
+
+# this is a temporary mode to compute suspected species
+MODE = 0
 
 # limit substitution count and analyses to suspected species only 
 LIMIT_TO_SUSPECTED_SPECIES = False
@@ -54,10 +41,10 @@ JSON_DUMP = True
 # Using a random threshold is a bad idea
 # It's better to Find the probability of global>filtered happening randomly and use that
 # to compare 
-FREQUENCY_THRESHOLD = 0.1
+FREQUENCY_THRESHOLD = 0.4
 
 # Substitution must appear at least COUNT_THRESHOLD time in the global alignment to be considered
-COUNT_THRESHOLD = 2
+COUNT_THRESHOLD = 3
 
 # Genetic code 
 # standard : 1
@@ -68,13 +55,7 @@ COUNT_THRESHOLD = 2
 # Bacterial and plant plastid : 11
 
 #GENETIC_CODE = -3
-GENETIC_CODE = 4
-
-
-# DNA sequence input, analyses will stop after aa to aa reassignment if it is not provided
-# you should provide the absolute path
-#DNA_SEQ_PATH = "/home/caldero/software/CoreTracker-master_d/CoreTracker-master/input/concat_gene_clean2.fas"
-DNA_SEQ_PATH = "/home/manu/html/CoreTracker/input/cox1_genes.seq"
+GENETIC_CODE = 1
 
 # Display setting
 # Show mixte codon (Codon at not-conserved position in the specie) in the pdf
@@ -85,6 +66,7 @@ SHOW_FILTERED_CODON_DATA = True
 
 #IMAGE FORMAT
 # Accepted format : svg, png and pdf
-IMAGE_FORMAT = "svg"
+IMAGE_FORMAT = "png"
+
 #set this to true if you cannot output color
 ADD_LABEL_TO_LEAF = False
