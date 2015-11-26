@@ -1,7 +1,9 @@
 import re, os, time, sys, json, cgi
 from cgi import escape
 from hashlib import md5
+import shutil
 from collections import namedtuple
+import logging
 
 #from pyvirtualdisplay import Display
 
@@ -12,36 +14,209 @@ sys.path.insert(0,'/anaconda/lib/python2.7/site-packages')
 sys.path.insert(0, WEB_APP_BASE_PATH)
 sys.path.append(os.path.dirname(__file__))
 
-import settings
 from Bio.Alphabet import IUPAC
 from Bio import AlignIO
 from Bio import Alphabet
 from Bio.Align import AlignInfo
 from server import WebTreeApplication  # Required to use the webplugin
-
+from coretracker import testing_a_lot, coretracker
+import utils
 from ete2 import PhyloTree
 from ete2 import TreeStyle
 from ete2 import faces
 import posixpath
+import threading
+from Queue import Queue
+
 TREE = "phylotree.nw"
 TMP = WEB_APP_BASE_PATH+"/tmp/"
 global IC_CONTENT
 IC_CONTENT = []
+AALIST = "ACDEFGHIKLMNPQRSTVWY"
+global BadRunList
+BadRunList = Queue()
 
 ALIGNMENT = {"filtered": "alignment.fasta_filtered", "global" : "alignment.fasta", "ungapped": "alignment.fasta_ungapped", "ID_filtered" : "alignment.fasta_matchremoved"}
-
+EXPIRE_TIME = 60
+CHECK_TIME = 10
 #tree style 
 ts = TreeStyle()
 ts.branch_vertical_margin = 5
 ts.show_scale = False
+THREAD_MAX = 2
 #ts.scale = 20
 
 # In order to extend the default WebTreeApplication, we define our own
 # WSGI function that handles URL queries
+q = Queue()
+
+def call_coretracker(args, setting):
+    return testing_a_lot(args, setting)
+
+def del_run(runid=None):
+    if runid:
+        try:
+            folder = os.path.join(WEB_APP_BASE_PATH, 'input', runid)
+            shutil.rmtree(folder)
+            return True
+        except:
+            return False
+    return False
 
 
-def call_coretracker(environ, start_response):
-    
+class ThreadParameters():
+    RES = {}
+    ERRORS = []
+    EXECUTING = {}
+
+ThreadParameters.lock = threading.Lock()
+
+global ThreadParam
+ThreadParam = ThreadParameters()
+
+
+class RunInfo(object):
+    """
+    This is a class that we keep information for each coretracker 
+    run instance
+    """
+    def __init__(self, name, ctime, result):
+        self._id = name
+        self._ctime = ctime
+        self._result = [str(x) for x in result]
+
+    def get_ctime(self):
+        return self._ctime
+
+    def get_result(self):
+        return self._result
+
+    def get_id(self):
+        return self._id
+
+
+class CoreTrackerThread(threading.Thread):
+    """
+    The concept of this class was copied from 
+    http://softwareramblings.com/2008/06/running-functions-as-threads-in-python.html
+    """
+
+    def __init__(self, target, queue, **kwargs):
+        self._target = target
+        self.queue = queue
+        threading.Thread.__init__(self, **kwargs)
+
+    def run(self):
+        global ThreadParam
+        global CHECK_TIME
+        while True:
+            args, setting, runid = self.queue.get(True)
+            with ThreadParameters.lock:
+                ThreadParameters.EXECUTING[runid] = True
+            logging.debug('Starting coretracker execution for runid : '+ runid)
+            # hopping this will execute this item
+            try :
+                answer = self._target(args, setting)
+                with ThreadParameters.lock:
+                    ThreadParam.RES[runid] = RunInfo(runid, time.time(), answer)
+                    del ThreadParam.EXECUTING[runid]
+
+                logging.debug('SUCCESS : Finishing coretracker execution for runid = '+ runid)
+            except:
+                with ThreadParameters.lock:
+                    ThreadParam.ERRORS.append(runid)
+                logging.debug('ERROR: Finishing coretracker execution for runid = '+ runid)
+            self.queue.task_done()
+            # this won't hold the CPU
+            time.sleep(CHECK_TIME)
+
+class RunDelThread(threading.Thread):
+
+    def __init__(self, target, wt, ut, queue,  **kwargs):
+        self._target = target
+        self._wt = wt
+        self._ut = ut
+        self._queue = queue
+        threading.Thread.__init__(self, **kwargs)
+        
+    def run(self):
+        global ThreadParam
+        while True:
+            time.sleep(self._ut)
+            to_delete = []
+            with ThreadParameters.lock:
+                while len(ThreadParam.ERRORS):
+                    to_delete.append(ThreadParameters.ERRORS.pop())
+                c_time = time.time()
+                for r in ThreadParam.RES.keys():
+                    r_info = ThreadParam.RES[r]
+                    if c_time - r_info.get_ctime() > self._wt:
+                        to_delete.append(r)
+                        del ThreadParam.RES[r]
+            
+            while not self._queue.empty():
+                to_delete.append(self._queue.get())
+
+            for runid in to_delete:
+                ntry = 3
+                deleted = self._target(runid)
+                if deleted:
+                    logging.debug('Delete run ' + runid)
+
+                else :
+                    while not deleted and ntry>0:
+                        logging.debug('Unable to delete run ' + runid + ' will try again in 5s')
+                        time.sleep(5)
+                        deleted = self._target(runid)
+                        ntry -= 1
+                    if deleted:
+                        logging.debug('Was finally able to delete run ' + runid)
+            # get in sleep mode and retry in self._ut time
+   
+
+def coretracker_run(environ, start_response):
+    fieldlist = ['outdir', 'seq', 'tree', 'dnaseq', 'scale', 'excludegap', 'iccontent',\
+                'idfilter', 'debug', 'verbose' ]
+    CRTArgs = namedtuple("CRTArgs", fieldlist)
+    start_response('200 OK', [('Content-Type', 'application/json')])
+    res = {}
+    if environ['REQUEST_METHOD'].upper() == 'GET' and  environ['QUERY_STRING']:
+        queries = cgi.parse_qs(environ['QUERY_STRING'])
+        runid = queries.get('time', '')[0]
+        folder = os.path.join(WEB_APP_BASE_PATH, 'input', runid)
+        if os.path.exists(folder):
+            
+            args =  CRTArgs(TMP, queries.get('sseq', [None])[0], 
+                        queries.get('stree', [None])[0], 
+                        queries.get('gseq', [None])[0], 1.0, 
+                        float(queries.get('gapfilter')[0]),
+                        float(queries.get('icfilter')[0]),
+                        float(queries.get('idfilter')[0]) , True, 2
+            )
+            
+            setting = utils.Settings()
+            EXCLUDE_AA = "".join([x for x in AALIST if x not in queries.get('includeAA')[0]])
+            AA_MAJORITY_THRESH = float(queries.get('aamajthresh')[0])
+            FREQUENCY_THRESHOLD = float(queries.get('freqthresh')[0])
+            GENETIC_CODE = int(queries.get('gcode')[0])
+            COUNT_THRESHOLD = int(queries.get('ctthresh')[0])
+            LIMIT_TO_SUSPECTED_SPECIES = queries.get('limsuspected')[0] == 'on'
+
+            setting.set(EXCLUDE_AA=EXCLUDE_AA, AA_MAJORITY_THRESH=AA_MAJORITY_THRESH, 
+                        FREQUENCY_THRESHOLD=FREQUENCY_THRESHOLD, GENETIC_CODE=GENETIC_CODE,
+                        COUNT_THRESHOLD=COUNT_THRESHOLD, LIMIT_TO_SUSPECTED_SPECIES=LIMIT_TO_SUSPECTED_SPECIES)
+
+            q.put((args, setting, runid ))
+
+        else:
+            res['error'] = True
+            BadRunList.put(runid)
+    else :
+        print 'Error is from request'
+        res['error'] = True
+
+    return json.dumps(res)
+
 
 def save_uploaded_file(folder, filename, file, chunk_size=1000):
     """ save file in a directory"""
@@ -56,7 +231,6 @@ def save_uploaded_file(folder, filename, file, chunk_size=1000):
 def index(environ, start_response):
     """Return the index file mounted at "/" and display"""
     start_response('200 OK', [('Content-Type', 'text/html')])
-    print("INDEX was called")
     return [open(os.path.join(WEB_APP_BASE_PATH, "webplugin/index.html"), 'r').read()]
 
 def not_found(environ, start_response):
@@ -69,6 +243,7 @@ def uploadfile(environ, start_response):
     """ Upload file here"""
     start_response('200 OK', [('Content-Type', 'application/json')])
     result = {}
+    t = time.time() # timestamp to find url relative to the current run
     try : 
         post_env = environ.copy()
         post = cgi.FieldStorage(
@@ -76,7 +251,6 @@ def uploadfile(environ, start_response):
             environ=post_env,
             keep_blank_values=True
         )
-        t = time.time() # timestamp to find url relative to the current run
         folder = os.path.join(WEB_APP_BASE_PATH, 'input', str(t))
         if not os.path.exists(folder):
             os.makedirs(folder)
@@ -87,13 +261,12 @@ def uploadfile(environ, start_response):
                 # returning all the path is a huge security risk
                 # let's just return the relative path
                 result[f] = os.path.join(str(t), f)
-        
 
     except Exception as e:
         print e
-
         result['error'] = "Problem with uploading your file. Please try again.\nContact the admin if the problem persist"
 
+    result['time'] = str(t) 
     return json.dumps(result)
 
 
@@ -146,19 +319,61 @@ def track(environ, start_response):
 
         return [result]
 
+
+def checkrun(environ, start_response):
+    """This serve to check each run from the link"""
+    queries = {}
+    if environ['REQUEST_METHOD'].upper() == 'GET' and  environ['QUERY_STRING']:
+        queries = cgi.parse_qs(environ['QUERY_STRING'])
+        print queries
+    elif environ['REQUEST_METHOD'].upper() == 'POST' and environ['wsgi.input']:
+        queries = cgi.parse_qs(environ['wsgi.input'].read())
+
+
+    runid = queries.get('id', [None])[0]
+    global ThreadParam
+    valid_run = ThreadParam.RES
+    exec_run = ThreadParam.EXECUTING
+    failed_run = ThreadParam.ERRORS
+
+    def runnotfound(runid):
+        print runid
+        print q.queue
+        print exec_run
+        print valid_run
+        print failed_run
+        return not (runid and (runid in q.queue or runid in valid_run.keys() or runid in failed_run or runid in exec_run))
+
+    if runnotfound(runid):
+        return not_found(environ, start_response)
+
+    elif runid in valid_run.keys():
+        start_response('202 OK', [('Content-Type', 'text/plain')])
+        return valid_run[runid].get_result()
+    
+    elif runid in exec_run:
+        start_response('202 OK', [('Content-Type', 'text/plain')])
+        return ['Refresh this page later']
+    else:
+        start_response('202 OK', [('Content-Type', 'text/plain')])
+        return ['There was an error with your request']
+
+    
 # map urls to functions
 urls = [
     (r'^$', index),
     (r'/track(.*)$', track),
-    (r'/uploadfile(.*)$', uploadfile)
+    (r'/uploadfile(.*)$', uploadfile),
+    (r'/calltracker(.*)$', coretracker_run),
+    (r'/results/run(.*)$', checkrun),
 ]
 
 def application(environ, start_response):
     asked_method = environ.get('PATH_INFO', '').lstrip('/')
+    print "REALLY"
     for regex, callback in urls:
         match = re.search(regex, asked_method)
         if match is not None:
-            print asked_method
             return callback(environ, start_response)
 
     # maybe use json output here
@@ -619,6 +834,20 @@ def tree_renderer(tree, treeid, application):
 
 # Create a basic ETE WebTreeApplication
 application = WebTreeApplication(application)
+
+# this is another thread to deleted all file older than 3days
+del_thread = RunDelThread(del_run, EXPIRE_TIME, CHECK_TIME, BadRunList)
+del_thread.setDaemon(True)
+del_thread.start()
+del_thread.name = 'Request_run_gc'
+
+# we start 5 thread to run request
+for i in xrange(THREAD_MAX):
+    print "this is hella strange ", i
+    t = CoreTrackerThread(call_coretracker, q)
+    t.setDaemon(True)
+    t.start()
+    t.name = "Coretracker_exec_%d"%i
 
 # Set your temporal dir to allow web user to generate files. This two
 # paths should point to the same place, one using the absolute path in

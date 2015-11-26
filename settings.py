@@ -7,12 +7,10 @@ try:
 except ImportError, e:
 	PROCESS_ENABLED = 2
 
-# set up a temporary directory
+# Output directory name
 OUTDIR = "tmp/"
 
-# Use this to enable or disable the use of expected frequence (computed from the ARM_SEQUENCE)
-# when the ic_information per site is computed
-USE_EXPECTED_FREQ_FOR_IC = False
+# Save fitered file at each step
 
 # amino acid to exclude from the plot
 # this will speed up a lot the data generation
@@ -24,9 +22,6 @@ AA_MAJORITY_THRESH = 0.5
 
 # skip mafft alignment, use this to gain time for debug purpose
 SKIP_ALIGNMENT = True
-
-# skip substitution matrix computing
-SKIPSUBMATRIX = True
 
 # this is a temporary mode to compute suspected species
 MODE = 0
@@ -55,18 +50,14 @@ COUNT_THRESHOLD = 3
 # Bacterial and plant plastid : 11
 
 #GENETIC_CODE = -3
-GENETIC_CODE = 1
-
-# Display setting
-# Show mixte codon (Codon at not-conserved position in the specie) in the pdf
-SHOW_MIXTE_CODONS = True
+GENETIC_CODE = 1 # is in utils
 
 # Show Filtered codon data
-SHOW_FILTERED_CODON_DATA = True
+SHOW_FILTERED_CODON_DATA = True # is in utils
 
 #IMAGE FORMAT
 # Accepted format : svg, png and pdf
-IMAGE_FORMAT = "png"
+IMAGE_FORMAT = "png"  # is in utils
 
 #set this to true if you cannot output color
-ADD_LABEL_TO_LEAF = False
+ADD_LABEL_TO_LEAF = False # is in utils

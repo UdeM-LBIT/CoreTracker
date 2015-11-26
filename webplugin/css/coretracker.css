@@ -40,6 +40,22 @@ fieldset legend {
     margin-right: 5px;
 }
 
+#show-link{
+    display : none;
+    text-align: center;
+    padding: 10px;
+    font-size: 2em;
+
+}
+
+#show-link a{
+    color : 333;
+    font-weight: 500;
+    text-decoration: underline;
+
+}
+
+
 #showadvanced{
     float: right;
     font-size : 13px;

@@ -25,6 +25,8 @@
     <link rel="stylesheet" type="text/css" href="/webplugin/css/ete.css" >
     <link rel="stylesheet" type="text/css" href="/webplugin/css/bootstrap.min.css" >
     <link rel="stylesheet" type="text/css" href="/webplugin/css/coretracker.css" >
+    <link rel="icon" href="/webplugin/image/favicon.ico" />
+
   </head>
   <body>
   	<h1><b>CoreTracker</b></h1>
@@ -58,7 +60,7 @@
 	</fieldset>
 
 	<fieldset>
-    <legend> Parameters </legend>
+    <legend>Filtering Parameters </legend>
     <div data-role="fieldcontain" class="leftalign">
     <table>
     <tr>
@@ -107,8 +109,8 @@
  		<td><input type="file" name="trna" id="trna"/></td>
 	</tr>
   	<tr>
-		<td><label for="excludeAA"> Exclude AAs :  <span class="ui-icon  ui-icon-help" title="Enter the one-character representation of AA to which reassignment won't be considered"> </span> </label></td>
- 		<td><input type="text" name="excludeAA" id="excludeAA" value=""/></td>
+		<td><label for="includeAA"> include AAs :  <span class="ui-icon  ui-icon-help" title="Enter the one-character representation of AA to which reassignment will be considered. By default, all amino acids are considered"> </span> </label></td>
+ 		<td><input type="text" name="includeAA" id="includeAA" value="GAVLISTDENQKHWYFPMCR"/></td>
 	</tr>
 	  <tr>
 		<td><label for="aamajthresh">&#915; <span class="ui-icon  ui-icon-help" title="Frequency threshold required to consider an amino acid majoritary in a column for the filtered alignment "> </span></label></td>
@@ -138,9 +140,15 @@
 	</div>
 
 	</form>
+
+  <div id="show-link"></div>
     </div>
     <!-- This layer must be called "popup" -->
+  
     <div id="popup"></div>
+
+   <!--
+  
     <div style='text-align: left;'>
       <div style="clear:both;" >
         <select id="alignment" name="alignment">
@@ -155,7 +163,6 @@
     </div>
     
     <br>
-    <!-- Tree containers -->
     <div class="ete_image">
       <br>
       <div id="ete_tree">
@@ -163,7 +170,6 @@
         <br><br>
         <div id="img1"></div>    </div>
         <br><br>
-        <!--
         <div id="graph" >
           <div class="ui-widget">
             <label for="aa">Amino Acid: </label>

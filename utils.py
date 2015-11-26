@@ -1,5 +1,4 @@
 import argparse
-import collections
 import glob
 import itertools
 import json
@@ -9,8 +8,9 @@ import random
 import subprocess
 import sys
 import time
+from __future__ import division
 
-from collections import Counter
+from collections import Counter, defaultdict
 
 from Bio.Phylo.TreeConstruction import DistanceCalculator
 from Bio import AlignIO
@@ -19,6 +19,7 @@ from Bio.Seq import Seq
 from Bio.SeqRecord import SeqRecord
 from Bio import SeqIO
 from Bio import codonalign
+from Bio.Phylo.TreeConstruction import DistanceCalculator
 from Bio.codonalign.codonalphabet import default_codon_alphabet, get_codon_alphabet
 from Bio.Data import CodonTable
 from Bio.codonalign.codonseq import  _get_codon_list, CodonSeq
@@ -26,19 +27,20 @@ from Bio import SubsMat
 from Bio.Align import AlignInfo
 from Bio.Align import MultipleSeqAlignment
 from Bio.Alphabet import IUPAC, generic_protein
-from TreeLib import TreeClass
 from cStringIO import StringIO
-from ete3 import PhyloTree
-from settings import *
+from ete3 import PhyloTree, Tree
 from PPieChartFace import PPieChartFace, LineFace
-
-
+import settings as default_settings
+from functools import partial
+import scipy.stats as ss
+from scipy.cluster.vq import kmeans2
+import logging
 __author__ = "Emmanuel Noutahi"
 __version__ = "0.1"
 __email__ = "fmr.noutahi@umontreal.ca"
 __license__ = "The MIT License (MIT)"
 
-aa_letters = "ACDEFGHIKLMNPQRSTVWY"
+
 aa_letters_1to3 = {
 
     'A': 'Ala', 'C': 'Cys', 'D': 'Asp',
@@ -48,23 +50,44 @@ aa_letters_1to3 = {
     'S': 'Ser', 'T': 'Thr', 'V': 'Val', 'W': 'Trp',
     'Y': 'Tyr',
 }
+
+aa_letters_3to1 = dict((x[1], x[0]) for x in aa_letters_1to3.items())
+
 # hardcorded settings variables
 alpha = Alphabet.Gapped(IUPAC.protein)
 DIST_THRES = 1e-10
 
-dct = CodonTable.unambiguous_dna_by_id[abs(GENETIC_CODE)]
-if GENETIC_CODE < 0:
-    for codon in ['CTG', 'CTA', 'CTC', 'CTT']:
-        dct.forward_table[codon] = 'L'
-    dct.back_table = CodonTable.make_back_table(dct.forward_table, dct.stop_codons[0])
+#if settings.GENETIC_CODE < 0:
+    #for codon in ['CTG', 'CTA', 'CTC', 'CTT']:
+        #dct.forward_table[codon] = 'L'
+    #dct.back_table = CodonTable.make_back_table(dct.forward_table, dct.stop_codons[0])
 
-back_table = collections.defaultdict(list)
-for aa, codon in zip(dct.forward_table.values(), dct.forward_table.keys()):
-    back_table[aa].append(codon)
-
-aa_letters_3to1 = dict((x[1], x[0]) for x in
-                            aa_letters_1to3.items())
 nuc_letters = "ACTG"
+
+class Settings():
+    def __init__(self, mode=0):
+        # mode will set the type of construction we want
+        self.mode = mode
+   
+    def set(self, **kwargs):
+        self.PROCESS_ENABLED = kwargs.get('PROCESS_ENABLED', default_settings.PROCESS_ENABLED)
+        EXCLUDE_AA = kwargs.get('EXCLUDE_AA', default_settings.EXCLUDE_AA)
+        self.AA_LETTERS = "".join([aa for aa in "ACDEFGHIKLMNPQRSTVWY" if aa not in EXCLUDE_AA])
+        self.USE_EXPECTED_FREQ_FOR_IC = kwargs.get('USE_EXPECTED_FREQ_FOR_IC', default_settings.USE_EXPECTED_FREQ_FOR_IC)
+        self.OUTDIR = kwargs.get('OUTDIR', default_settings.OUTDIR)
+        self.SKIP_ALIGNMENT = kwargs.get('SKIP_ALIGNMENT', default_settings.SKIP_ALIGNMENT)
+        self.AA_MAJORITY_THRESH = kwargs.get('AA_MAJORITY_THRESH', default_settings.AA_MAJORITY_THRESH)
+        self.LIMIT_TO_SUSPECTED_SPECIES = kwargs.get('LIMIT_TO_SUSPECTED_SPECIES', default_settings.LIMIT_TO_SUSPECTED_SPECIES)
+        self.FREQUENCY_THRESHOLD = kwargs.get('FREQUENCY_THRESHOLD', default_settings.FREQUENCY_THRESHOLD)
+        self.COUNT_THRESHOLD = kwargs.get('COUNT_THRESHOLD', default_settings.COUNT_THRESHOLD)
+        self.GENETIC_CODE = kwargs.get('GENETIC_CODE', default_settings.GENETIC_CODE)
+        self.SHOW_FILTERED_CODON_DATA = kwargs.get('SHOW_FILTERED_CODON_DATA', default_settings.SHOW_FILTERED_CODON_DATA)
+        self.IMAGE_FORMAT = kwargs.get('IMAGE_FORMAT', default_settings.IMAGE_FORMAT)
+        self.ADD_LABEL_TO_LEAF = kwargs.get('ADD_LABEL_TO_LEAF', default_settings.ADD_LABEL_TO_LEAF)
+     
+    def fill(self, setting):
+        self.__dict__.update(setting.__dict__)
+
 
 class Output(object):
     """A simple Class to output results
@@ -95,17 +118,17 @@ class Output(object):
 class CodonReaData(object):
     """A representation of a reassignment in a species"""
     
-    def __init__(self, aas, consensus, codon_align_dict):
+    def __init__(self, aas, consensus, codon_align_dict, dct):
         
         self.aa1, self.aa2 = aas
         self.codon_alignment = codon_align_dict # 
         self.consensus = consensus
-        self.reacodons = collections.defaultdict(collections.Counter)
+        self.reacodons = defaultdict(Counter)
         # find codon usage in the sequence
-        self.usedcodons = collections.defaultdict(collections.Counter)
-        self.mixtecodon = collections.defaultdict(collections.Counter)
+        self.usedcodons = defaultdict(Counter)
+        self.mixtecodon = defaultdict(Counter)
         #print len(codon_align_dict.values()[0])
-        self.specs_amino_count = collections.defaultdict(collections.Counter)
+        self.specs_amino_count = defaultdict(partial(defaultdict, Counter))
         self._spec_codon_usage()
 
     def _spec_codon_usage(self):
@@ -115,16 +138,16 @@ class CodonReaData(object):
                 spec_aa = dct.forward_table[spec_codon] if '-' not in spec_codon else None
                 if(spec_aa):
                     # determine aa use in each specie
-                    if spec_aa == self.aa2 :
-                        self.specs_amino_count[spec][self.aa2]+=1
-                    elif spec_aa == self.aa1:
-                        self.specs_amino_count[spec][self.aa1]+=1
+                    self.specs_amino_count[spec][spec_aa].update([spec_codon])
 
                     # potential reassignment counter
-                    if aa==self.aa1 and spec_aa==self.aa2:
+                    # species use aa2 while aa1 is prevalent
+                    if spec_aa==self.aa2 and aa ==self.aa1 :
                         self.reacodons[spec].update([spec_codon])
-                    elif aa==self.aa2 and spec_aa==self.aa2:
+                    # species use aa2 while aa2 is prevalent
+                    elif spec_aa==self.aa2 and aa==self.aa2 :
                         self.usedcodons[spec].update([spec_codon])
+                    # other position where aa2 is used in species
                     elif(spec_aa == self.aa2):
                         self.mixtecodon[spec].update([spec_codon])
 
@@ -150,6 +173,9 @@ class CodonReaData(object):
     def get_mixtecodon_freq(self,specie):
         return self.get_mixtecodons(specie)*1.0 / self.specs_amino_count[specie][self.aa2]        
 
+    def get_aa_usage(self, specie):
+        return self.specs_amino_count[specie]
+
     def get_string(self, specie, show_mixte=False):
         """ Return a string representation for the specie"""
 
@@ -159,19 +185,17 @@ class CodonReaData(object):
 
         return seq
 
-    def is_valid(self):
-        pass
-
 
 class NaiveFitch(object):
     """A NaiveFitch algorithm for finding the most parcimonious solution"""
-    def __init__(self, tree, reassigned, ori_aa="", dest_aa="", codon_rea=(None, None)):
+    def __init__(self, tree, reassigned, ori_aa="", dest_aa="", settings, dct, codon_rea=(None, None)):
         self.id = {}
         self.tree = tree
         self.corr = {'0':ori_aa, '1':dest_aa}
         self.codon_rea_global, self.codon_rea_filtered = codon_rea
         colors=['#a6cee3', '#1f78b4', '#b2df8a', '#33a02c', '#fb9a99', '#e31a1c', '#fdbf6f']
-        codon_list = back_table[aa_letters_3to1[ori_aa]]
+        self.init_back_table()
+        codon_list = self.back_table[aa_letters_3to1[ori_aa]]
         self.colors = dict(zip(codon_list,colors))
         for leaf in tree:
             if leaf.name in reassigned:
@@ -188,7 +212,12 @@ class NaiveFitch(object):
         self.newick = tree.write(features=['name', 'dist', 'support', 'state'])
         self._bottomup(self.tree)
         self._topdown(self.tree)
-     
+    
+    def init_back_table(self):
+        self.back_table = defaultdict(list)
+        for aa, codon in zip(dct.forward_table.values(), dct.forward_table.keys()):
+            self.back_table[aa].append(codon)
+
     def update_codon_data(codon_rea):
         """Update codon reassignment data (global and filtered)
         """
@@ -237,11 +266,6 @@ class NaiveFitch(object):
                 if(intersect):
                     node.add_features(reassigned=intersect)
                     
-                    #if len(intersect) == 1:
-                        # if only one one element in the intersection
-                        # the children should have that elemenent
-                    #    for c in node.get_children():
-                    #        c.reassigned = intersect
                 else:
                     node.add_features(reassigned=union)
 
@@ -257,28 +281,35 @@ class NaiveFitch(object):
             return True
         return False
 
-    def get_species_list(self, limit_to_reassigned=True):
+    def get_species_list(self, limit_to_reassigned=False):
         """Get the species list for which we are almost certain
         that there is a reassignment
         """
         slist = set()
         if limit_to_reassigned :
             for node in self.tree.traverse():
-                if 'reassigned' in node.features and (1 in node.reassigned):
+                if 'reassigned' in node.features and node.reassigned=={1}:
                     slist.update(node.get_leaf_names())
         else :
             slist = set(self.tree.get_tree_root().get_leaf_names())
         return slist
 
+    def get_distance_to_rea_node(self, node):
+        if isinstance(node, str):
+            node = self.tree&node
+        dist = 0
+        while node not self.is_reassigned(node):
+            dist += 1
+            node = node.up
+        return 0
     
     def has_codon_data(self):
         return (self.codon_rea_global, self.codon_rea_filtered) != (None, None)
 
 
-    def render_tree(self, output="", suffix="", pie_size=50, format=IMAGE_FORMAT):
+    def render_tree(self, output="", suffix="", pie_size=50, format=settings.IMAGE_FORMAT):
 
         GRAPHICAL_ACCESS = True
-
         try:
             from ete3 import TreeStyle, NodeStyle, faces, AttrFace, TextFace, CircleFace
         except ImportError, e:
@@ -312,7 +343,7 @@ class NaiveFitch(object):
             
             def layout(node):
 
-                get_suffix = lambda x : x if ADD_LABEL_TO_LEAF else ""
+                get_suffix = lambda x : x if settings.ADD_LABEL_TO_LEAF else ""
 
                 N = AttrFace("rea", fsize=10)
                 faces.add_face_to_node(N, node, 0, position="branch-right")
@@ -332,7 +363,7 @@ class NaiveFitch(object):
                     # if lost in node.features, then node is already a leaf
                     if 'lost' in node.features and node.lost:
                         if(self.is_reassigned(node)):
-                           	faces.add_face_to_node(AttrFace("name", fgcolor="seagreen",text_suffix=get_suffix("_V")), node, 0, position="aligned")
+                            faces.add_face_to_node(AttrFace("name", fgcolor="seagreen",text_suffix=get_suffix("_V")), node, 0, position="aligned")
                         else :
                             faces.add_face_to_node(AttrFace("name", fgcolor="#cccccc",text_suffix=get_suffix("_G")), node, 0, position="aligned")
 
@@ -354,13 +385,13 @@ class NaiveFitch(object):
                     faces.add_face_to_node(PPieChartFace(spec_codonused_g.values(), pie_size, pie_size, labels=[],\
                      colors=[self.colors[k] for k in spec_codonused_g.keys()]), node, column=2, position="aligned")
                     next_column = 3
-                    if(SHOW_MIXTE_CODONS):
+                    if(settings.SHOW_MIXTE_CODONS):
                         spec_mixtecodon_g = self.codon_rea_global.get_mixtecodons(node.name)
                         faces.add_face_to_node(PPieChartFace(spec_mixtecodon_g.values(), pie_size, pie_size, labels=[], \
                             colors=[self.colors[k] for k in spec_mixtecodon_g.keys()]), node, column=next_column, position="aligned")
                         next_column = 4
 
-                    if(SHOW_FILTERED_CODON_DATA): 
+                    if(settings.SHOW_FILTERED_CODON_DATA): 
 
                         spec_codonrea_f = self.codon_rea_filtered.get_reacodons(node.name)
                         spec_codonused_f = self.codon_rea_filtered.get_usedcodons(node.name)
@@ -403,101 +434,458 @@ class NaiveFitch(object):
             self.tree.render(output, dpi=400, tree_style=ts)
 
 
-def get_argsname(command_dict, command_list, prefix=""):
-    """ Get the mafft command from the argparse dict : command_dict
-    and a command_list
-    """
-    return ["%s%s" % (prefix, command) for command in command_list if command_dict[command]]
+class SequenceSet(object):
+
+    def __init__(self, dnadict, prot_align, phylotree, table_num, stopcodon=False):
+        # using sequence set suppose that the alignment and the protein concatenation was already done
+        self.codontable = CodonTable.unambiguous_dna_by_id[abs(table_num)]
+        self.prot_align = prot_alignment
+        self.phylotree = phylotree
+        self.common_genome = None
+        self.stop_positions = []
+        self.dna_dict = dnadict
+        if stopcodon:
+            self.split_and_concat()
+        self.prot_dict = SeqIO.to_dict(prot_alignment)
+        self.restrict_to_common()
+        self.codon_align()
+
+    def split_and_concat(self):
+        # we expect all stop to be at the same position in all the aligned sequence
+        # this is not checked, user should check that instead
+        for i, c in enumerate(self.prot_align[0]):
+            if c == '*':
+                self.stop_positions.append(i)
+
+        # we don't need to remove stop codons, since this will be done later in the filtering
+
+    def restrict_to_common(self):
+        """ Keep only the species present in the dna, prot seq and in the tree """
+        if not isinstance(dna_dict, dict):
+            dna_dict =  dict((d.id, d) for d in dna_dict)
+
+        if not isinstance(prot_dict, dict):
+            prot_dict = dict((p.id, p) for p in prot_dict)
+
+        dna_set = set(dna_dict.keys())
+        prot_set = prot_dict.keys()
+        species_set = set(phylotree.get_leaf_names())
+        common_genome = dna_set.intersection(prot_set)
+        # remove every dna sequence that are not cds
+        common_genome = [x for x in common_genome if (len(dna_dict[x]) in [len(prot_dict[x].seq.ungap('-'))*3, len(prot_dict[x].seq.ungap('-'))*3 +3])]   
+        # print [(x, len(dna_dict[x]), len(prot_dict[x].seq.ungap('-'))+1, len(dna_dict[x])==(len(prot_dict[x].seq.ungap('-'))+1)*3) for x in common_genome ]
+        # common_genome = [x for x in common_genome if len(dna_dict[x])==(len(prot_dict[x].seq.ungap('-'))+1)*3 ]
+        # return common_genome, dict((k, v) for k, v in dna_dict.items() if k in common_genome)
+        speclen =  len(common_genome)
+        common_genome.intersection_update(species_set)
+
+        if not common_genome:
+            raise ValueError('ID intersection for dna, prot and species tree is empty')
+        if len(prot_set) != speclen or len(dna_set) != speclen or len(species_set) != common_genome:
+            logging.debug('Non-uniform sequence in dna sequences, prot sequences and trees')
+            logging.debug('Recheck the following id %s' % set.union(species_set, prot_set, dna_set) - common_genome)
+
+        # prune tree to sequence list
+        specietree.prune(common_genome)
+        self.common_genome = common_genome
+        logging.debug("List of common genome")
+        logging.debug(common_genome)
+        #return common_genome, dict((k, v) for k, v in dna_dict.items() if k in common_genome), prot_dict
+        self.dna_dict, self.prot_dict = dict((k, v) for k, v in dna_dict.items() if k in common_genome), dict((k, v) for k, v in dna_dict.items() if k in common_genome)
+        
+        for k,v in self.prot_dict.items()
+            s.seq.alphabet = generic_protein
+            s.id = k
+
+        self.prot_align = MultipleSeqAlignment(self.prot_dict.values(), alphabet=alpha)
 
 
-def clean_spec_list(dna_dict, prot_dict):
-    """ Restrict analyses to a list of species, 
-    multi-alignment and tree will be pruned to that list"""
+    @staticmethod
+    def copy_codon_record(record, codontable, gap_char='-'):
+        """Return a Codon seq sequence from a dna sequence"""
+        alphabet = get_codon_alphabet(codontable, gap_char=gap_char)
+        return SeqRecord(CodonSeq(record.seq._data, alphabet=alphabet), id=record.id)
+
+
     
-    if not isinstance(dna_dict, dict):
-        dna_dict =  dict((d.id, d) for d in dna_dict)
-    if not isinstance(prot_dict, dict):
-        prot_dict = dict((p.id, p) for p in prot_dict)
-    common_genome = set(dna_dict.keys()).intersection(prot_dict.keys())
-    # remove every dna sequence that are not cds
-    #print [(x, len(dna_dict[x]), len(prot_dict[x].seq.ungap('-'))+1, len(dna_dict[x])==(len(prot_dict[x].seq.ungap('-'))+1)*3) for x in common_genome ]
-    #common_genome = [x for x in common_genome if len(dna_dict[x])==(len(prot_dict[x].seq.ungap('-'))+1)*3 ]
-    #return common_genome, dict((k, v) for k, v in dna_dict.items() if k in common_genome)
-
-    #print [(x, len(dna_dict[x]), len(prot_dict[x].seq.ungap('-'))+1, len(dna_dict[x])==(len(prot_dict[x].seq.ungap('-')))*3) for x in common_genome ]
-    common_genome = [x for x in common_genome if (len(dna_dict[x]) in [len(prot_dict[x].seq.ungap('-'))*3, len(prot_dict[x].seq.ungap('-'))*3 +3])]
-    return common_genome, dict((k, v) for k, v in dna_dict.items() if k in common_genome), prot_dict
+    def copy_codon_alignment(self, codon_alignment, alphabet=default_codon_alphabet):
+        """Return a codon alignment object from a list of codon seq sequences"""
+        return codonalign.CodonAlignment((copy_codon_record(rec, self.codontable) for rec in codon_alignment._records), alphabet=alphabet)
 
 
-def copy_codon_record(record, codon_table=dct, gap_char='-'):
-    alphabet = get_codon_alphabet(codon_table, gap_char=gap_char)
+    def codon_align(self):
+        """ Perform a codon alignment based on a protein multiple alignment
+        and remove gaped positions
+        """
+        if self.common_genome is None:
+            self.restrict_to_common()
+        # build codon alignment and return it
+        self.codon_alignment = codonalign.build(self.prot_align, dna_dict, codon_table=self.codontable)
+        
 
-    return SeqRecord(CodonSeq(record.seq._data, alphabet=alphabet), id=record.id)
+    def filter_codon_alignment(self, ind_array=None, get_dict=False, alphabet=default_codon_alphabet):
+
+        """Return the codon aligment from a list of in array"""
+        if not ind_array:
+            ind_array = (self.filt_position, )
+
+        elif isinstance(ind_array, tuple):
+            raise ValueError('Expect tuple for ind_array, got %s'%(type(ind_array)))
+        else : 
+            codon_align =  self.copy_codon_alignment(codon_alignment)
+
+            for indexes in ind_array:
+                indexes = sorted(indexes)
+                filt_codon_align = codonalign.CodonAlignment([])
+                for i in xrange(len(codon_align)) :
+                    codseq = CodonSeq('') 
+                    for pos in indexes:
+                        codseq += codon_align[i].seq.get_codon(pos)
+                    filt_codon_align[i].seq = codseq
+                if get_dict:
+                    filt_codon_align = SeqIO.to_dict(filt_codon_align)
+                yield filt_codon_align
 
 
-def copy_codon_alignment(codon_alignment, alphabet=default_codon_alphabet):
-    return codonalign.CodonAlignment((copy_codon_record(rec) for rec in codon_alignment._records), alphabet=alphabet)
+    def get_codon_alignment(self):
+        self.fcodon_alignment = next(self.filter_codon_alignment())
+        return self.codon_alignment, self.fcodon_alignment
 
 
-def codon_align(dnaseq, prot_dict, keep_global_pos, keep_filtered_pos, get_dict=True):
-    """ Perform a codon alignment based on a protein multiple alignment
-    and remove gaped positions
-    """
+    def prot_filtering(self, id_thresh=None, gap_thresh=None, ic_thresh=None, rmcnst=True):
+        
+        current_alignment = self.prot_align
+        tt_filter_position = np.asarray(xrange(current_alignment.get_alignment_length()))
 
-    # dnaseq should be open with a Bio.SeqIO.parse
-    # because duplicated key can cause problems
+        if(gap_thresh): 
+            self._gap_alignment, self._gap_filtered_position = clean_alignment(current_alignment, threshold=(abs(gap_thresh) <= 1 or 0.01) * abs(gap_thresh))
+            current_alignment = self._gap_alignment
+            logging.debug("Alignment length after removing gaps : %d"%current_alignment.get_alignment_length())
+            tt_filter_position = tt_filter_position[self._gap_filtered_position]      
+        
+        if(ic_thresh):
+            align_info = AlignInfo.SummaryInfo(current_alignment)
+            ic_content = align_info.information_content()
+            max_val = max(align_info.ic_vector.values()) * ((abs(ic_thresh) <= 1 or 0.01) * abs(ic_thresh))
+            ic_pos = (np.asarray(align_info.ic_vector.values())>max_val).nonzero()
+            logging.debug("Filtering with ic_content, vector to discard is %s"%str(ic_pos[0]))
+            # ic_pos here is a tuple, so we should access the first element
+            self._ic_alignment = filter_align_position(alignment, ic_pos[0])
+            self._ic_filtered_positions = ic_pos
+            current_alignment = self._ic_alignment
+            tt_filter_position = tt_filter_position[self._ic_filtered_positions]    
+            logging.debug("Alignment length filtering with information content: %d"%current_alignment.get_alignment_length())
 
-    # at this step, we are confident all genome in the prot alignement are in the tree
+        if(id_thresh):
+            self._id_alignment, self._id_filtered_position = filter_alignment(current_alignment, remove_identity=rmcnst, threshold=(abs(id_filter) <= 1 or 0.01) * abs(id_filter))
+            current_alignment = self._id_alignment
+            tt_filter_position = tt_filter_position[self._id_filtered_position]
+            logging.debug("Alignment length after filtering by sequence identity : %d"%current_alignment.get_alignment_length())
+     
+        self.filt_prot_align = current_alignment
+        self.filt_position = tt_filter_position
 
-    common_genome, dna_seq, prot_dict = clean_spec_list(dnaseq, prot_dict)
 
-    #common_genome, dna_seq, protseq = clean_spec_list(dnaseq, prot_dict)
-    print "List of common genome"
-    print common_genome
-    prot_seq =  [s for s in prot_dict.values() if s.id in common_genome]
-    for s in prot_seq:
-        s.seq.alphabet = generic_protein
+    def write_data(self, id_filtered=None, gap_filtered=None, ic_filtered=None, tree=None):
+        """Save file depending on the file use as input"""
+        if id_filtered: 
+            AlignIO.write(self._id_alignment, open(id_filtered, 'w'), 'fasta')
+        if gap_filtered: 
+            AlignIO.write(self._gap_alignment, open(gap_filtered, 'w'), 'fasta')
+        if ic_filtered: 
+            AlignIO.write(self._ic_alignment, open(ic_filtered, 'w'), 'fasta')
+        if tree:
+            self.phylotree.write(outfile=tree)
 
-    prot_align = MultipleSeqAlignment(prot_seq, alphabet=alpha)
-    # build codon alignment
-    codon_alignment = codonalign.build(prot_align, dna_seq, codon_table=dct)
+
+    @staticmethod
+    def filter_align_position(alignment, index_array, alphabet=generic_protein):
+        """Keep only columns specified by index_array from the alignment"""
+        edited_alignment =  alignment[:,:]
+        index_array = sorted(index_array)
+        # alignment[:, slice(index_array[0], index_array[0] + 1)]
+        for seqrec in edited_alignment :
+            seq = Seq('', alphabet)
+            for i in index_array:
+                seq += seqrec[i]
+            seqrec.seq = seq
+
+        return edited_alignment
+        
+
+    @staticmethod
+    def clean_alignment(self, alignment=None, characs=['-'], threshold=0.5):
+        """Remove position of alignment which contain character from characs"""
+        if not self
+        align_array = np.array([list(rec) for rec in alignment], np.character)
+        indel_array = np.where((np.mean(np.in1d(align_array,
+                                                characs).reshape(align_array.shape), axis=0) > threshold) == False)[0].tolist()
+
+        return filter_align_position(alignment, indel_array), indel_array
+
+
+    @staticmethod
+    def filter_alignment(alignment, threshold=0.8, remove_identity=False):
+        """Filter an alignment using threshold as the minimum aa identity per columns"""
+        aligninfo = AlignInfo.SummaryInfo(alignment)
+        # Smart move : Make a consensus sequence with threshold
+        # remove all gap position
+        consensus = aligninfo.gap_consensus(threshold=threshold, ambiguous='X')
+        cons_array = [i for i, c in enumerate(consensus) if c != 'X']
+
+        if(remove_identity):
+            matched_consensus = aligninfo.gap_consensus(threshold=1, ambiguous='X')
+            cons_array = [i for i, c in enumerate(
+                consensus) if c != 'X' and matched_consensus[i] == 'X']
+
+        return filter_align_position(alignment, cons_array), cons_array
+
+
+    @staticmethod
+    def get_identity(seq1, seq2, ignore_gap=True, percent=True):
+        """Return percent of columns with same aa in a multiple alignment"""
+        assert len(seq1) == len(seq2), "Sequence not aligned"
+        identity = 0.0
+        for i, character in enumerate(seq1):
+            if not ignore_gap or character not in ['-', '.']:
+                if(character == seq2[i]):
+                    identity += 1
+        return identity * (99.0 * percent + 1.0) / len(seq1)
+
+
+    @classmethod
+    def get_consensus(clc, alignment, threshold):
+        """return consensus, using a defined threshold"""
+        aligninfo = AlignInfo.SummaryInfo(alignment)
+        consensus = aligninfo.gap_consensus(threshold=threshold, ambiguous='X')
+        return consensus
+
+    @classmethod
+    def get_aa_filtered_alignment(clc, consensus, aa):
+        """Get the filtered alignment for an amino acid"""
+        aa = aa.upper()
+        cons_array = [i for i, c in enumerate(consensus) if c.upper() == aa]
+        return cons_array
+
+
+    def get_total_genomes(self):
+        """Return the total number of genomes. This should be genome present in dna, prot and tree """
+        return len(self.common_genome)
+
+
+class ReaGenomeFinder:
+
+    def __init__(self, seqset, settings, mode="count", method="identity"):
+        self.seqset = seqset
+        self.mode =  getattr(settings, 'mode', None)
+        self.method =  getattr(settings, 'method', None)
+        if self.mode is None:
+            self.mode = mode
+        if self.method is None:
+            self.method = method
+        self.suspected_species = defaultdict(dict)
+        aa2aa_rea = defaultdict(dict)
+        
+        def makehash():
+            return collections.defaultdict(makehash)
+        self.reassignment_mapper = makehash()
+        
+
+    def compute_sequence_identity(self, matCalc=None):
+        if not matCalc:
+            matCalc = DistanceCalculator(self.method)
+        self.global_paired_distance = matCalc.get_distance(self.seqset.prot_align)
+        self.filtered_paired_distance = matCalc.get_distance(self.seqset.filt_prot_align)
+
+
+    def get_genomes(self, use_similarity=1):
+        matCalc = DistanceCalculator(self.method)
+        self.compute_sequence_identity(matCalc)
+
+        self.filtered_consensus = self.seqset.get_consensus(self.seqset.filt_prot_align, self.settings.AA_MAJORITY_THRESH)  
+        self.global_consensus = self.seqset.get_consensus(self.seqset.prot_align, self.settings.AA_MAJORITY_THRESH)  
+       
+        logging.debug("Filtered alignment consensus : \n%s\n"%filtered_consensus)    
+        number_seq = self.seqset.get_total_genomes()
+        seq_names =  self.seqset.common_genome
+        self.sim_json = defaultdict(list)
+
+        self.seqset.aa_filt_prot_align = {}
+        self.aa_paired_distance = {}
+        for aa in self.settings.AA_LETTERS:
+            cons_array = get_aa_filtered_alignment(consensus, aa)
+            if(cons_array):
+                self.seqset.aa_filt_prot_align[aa_letters_1to3[aa]] = SequenceSet.filter_align_position(self.filt_prot_align, cons_array)
+                self.aa_paired_distance[aa] =  matCalc.get_distance(self.seqset.aa_filt_prot_align[aa_letters_1to3[aa]])
+                self.seqset.aa_filt_prot_align[aa_letters_1to3[aa]] = SeqIO.to_dict(self.seqset.aa_filt_prot_align[aa_letters_1to3[aa]])
+
+        self.aa_sim_json = defaultdict(list)
+        aa2suspect = defaultdict(Counter)
+        aa2suspect_dist = defaultdict(partial(defaultdict, list))
+        for (j, i) in itertools.combinations(xrange(number_seq), r=2):
+            gpaired = abs(use_similarity - self.global_paired_distance[seq_names[i], seq_names[j]])
+            fpaired = abs(use_similarity - self.filtered_paired_distance[seq_names[i], seq_names[j]])
+            self.sim_json[seq_names[i]].append({"global": gpaired, "filtered": fpaired, "species": seq_names[j]})
+            for aa in self.aa_paired_distance[aa].keys():
+                aapaired = abs(use_similarity - self.aa_paired_distance[aa][seq_names[i], seq_names[j]])
+                self.aa_sim_json[aa_letters_1to3[aa]].append({'global':gpaired , 'filtered': aapaired, "species": "%s||%s" % (seq_names[i], seq_names[j])})
+                if (gpaired > aapaired and use_similarity) or (gpaired < aapaired and  not use_similarity):
+                    aa2suspect[aa][seq_names[i]] = aa2suspect[aa].get(seq_names[i], 0) + 1
+                    aa2suspect[aa][seq_names[j]] = aa2suspect[aa].get(seq_names[j], 0) + 1
+                
+                aa2suspect_dist[aa][seq_name[i]].append([gpaired, aapaired])
+                aa2suspect_dist[aa][seq_name[j]].append([gpaired, aapaired])
+
+        if self.mode == 'count':
+            self.get_suspect_by_count(aa2suspect, number_seq)
+        elif self.mode == 'wilc'
+            self.get_suspect_by_wilcoxon(aa2suspect_dist, number_seq, use_similarity)
+        else :
+            self.get_suspect_by_clustering(aa2suspect_dist, number_seq)
+
+
+    def get_suspect_by_count(self,  aa2suspect, seq_num):
+        for aa in aa2suspect.keys():
+            tmp_list = aa2suspect[aa].most_common()
+            i = 0
+            while i < len(tmp_list) and tmp_list[i][1] > self.settings.FREQUENCY_THRESHOLD*seq_num:
+                self.suspected_species[aa][tmp_list[i][0]] = tmp_list[i][1]
+                i += 1
+            
+    def get_suspect_by_wilcoxon(self, aa2suspect_dist, seq_num, use_similarity=1):
+        for aa in aa2suspect_dist.keys():
+            tmp_list = aa2suspect_dist[aa]
+            for seq, val in tmp_list.iteritems():
+                val =  np.asarray(val)
+                rank, pval = self.get_wilcoxon(val[:, 0], val[:, 1], use_similarity)
+                if pval < self.settings.pval:
+                    self.suspected_species[aa][seq] = pval
+
+
+    def get_suspect_by_clustering(aa2suspect_dist, number_seq), use_similarity=1):
+        for aa in aa2suspect_dist.keys():
+            aafilt2dict =  self.seqset.aa_filt_prot_align[aa_letters_1to3[aa]]
+            tmp_list = aa2suspect_dist[aa]
+            cluster_list = {}
+            aa_set = set([])
+            for seq, val in tmp_list.iteritems():
+                val =  np.mean(val, axis=0)
+                if (val[0] > val[1] and use_similarity) or (val[0] < val[1] and not use_similarity):
+                    aa_set.add(seq)
+                aa_freq = np.mean([x == aa for x in aafilt2dict[seq]])
+                cluster_list[seq] = np.append(val, aa_freq)
+
+            centroid, labels = self.get_cluster(cluster_list)
+            lab1 = set(np.asarray(cluster_list.keys())[labels==True])
+            lab2 = set(np.asarray(cluster_list.keys())[labels==False])
+            size1 = aa_set.intersection(lab1)
+            size2 = aa_set.intersection(lab2)
+            lab = lab1 if size1> size2 else lab2
+            for specie in lab:
+                self.suspected_species[aa][seq] = 1
+
+
+    def get_cluster(self, cluster_list):
+        features =  np.asarray(cluster_list.values())
+        centroid, labels = kmeans2(features, 2, iter=100)
+
+
+    def get_wilcoxon(self, y1, y2, use_similarity):
+        rank, pval = ss.wilcoxon(y1, y2, correction=True)
+        if use_similarity :
+            return rank, pval/2.0
+        else :
+            return rank, 1 - pval/2.0
+
+
+    def possible_aa_reassignation(self):
+        """Find to which amino acid the reassignation are probable"""
+        for aa, suspect in self.suspected_species.iteritems():
+            aa_alignment = self.seqset.aa_filt_prot_align[aa_letters_1to3[aa]]
+            suspected_aa = []
+            for spec in suspect.keys():
+                for cur_aa in aa_alignment[spec]:
+                    if cur_aa !='-' and cur_aa != aa:
+                        suspected_aa.append(cur_aa)
+                        try : 
+                            self.aa2aa_rea[aa][cur_aa].add(spec)
+                        except KeyError:
+                            self.aa2aa_rea[aa] = defaultdict(set)
+                            self.aa2aa_rea[aa][cur_aa].add(spec)
+
     
-    keep_global_pos = sorted(keep_global_pos)
-    
-    codon_align =  copy_codon_alignment(codon_alignment)
-    fcodon_align = copy_codon_alignment(codon_alignment)
-
-    # alignment[:, slice(index_array[0], index_array[0] + 1)]
-    for i in xrange(len(codon_align)) :
-        codseq = CodonSeq('')
-        fcodseq = CodonSeq('')
-
-        for j in keep_global_pos:
-            codseq += codon_align[i].seq.get_codon(j)
-            if(j in keep_filtered_pos):
-                fcodseq += fcodon_align[i].seq.get_codon(j)
-
-        codon_align[i].seq = codseq
-        fcodon_align[i].seq = fcodseq
-
-    # fcodon_align does not necessary contains all species
-    if get_dict:
-        return SeqIO.to_dict(codon_align), SeqIO.to_dict(fcodon_align)
-    return codon_align, fcodon_align
+    def save_json(self):
+        with open(os.path.join(self.settings.OUTDIR,"aause.json"), "w") as outfile1:
+            json.dump(self.aa_sim_json, outfile1, indent=4)
+        with open(os.path.join(self.settings.OUTDIR,"similarity.json"), "w") as outfile2:
+            json.dump(self.sim_json, outfile2, indent=4)
+        with open(os.path.join(self.settings.OUTDIR,"reassignment.json"), "w") as outfile3:
+            json.dump(self.reassignment_mapper, outfile3, indent=4)
 
 
-def timeit(func):
-    """Utility function to time command line execution"""
-    def timed(*args, **kw):
-        tstart = time.time()
-        result = func(*args, **kw)
-        tend = time.time()
-        ttime = tend - tstart
+    def save_all(self):
+        self.save_json()
+        id_filtfile = os.path.join(self.settings.OUTDIR,"id_filt.fasta")
+        ic_filtfile = os.path.join(self.settings.OUTDIR,"ic_filt.fasta")
+        gap_filtfile = os.path.join(self.settings.OUTDIR,"gap_filt.fasta")
+        newick = os.path.join(self.settings.OUTDIR,"tree.nwk")
+        self.seqset.write_data(id_filtered=id_filtfile, gap_filtered=gap_filtfile, ic_filtered=ic_filtfile, tree=newick):
 
-        print '%r (%r, %r) %2.2f sec' % (func.__name__, args, kw, ttime)
-        return ttime, result
 
-    return timed
+    def run_analysis(self):
+        """ Run the filtering analysis of the current dataset in sequenceset"""
+        self.get_genomes()
+        self.interesting_case = []
+        self.possible_aa_reassignation()
+        codon_align, fcodon_align = self.seqset.get_codon_alignment()
+        for aa1, aarea  in self.aa2aa_rea.iteritems():
+            aa_alignment = self.seqset.aa_filt_prot_align[aa_letters_1to3[aa]]
+            for aa2, species in aarea.iteritems():
+                gcodon_rea = CodonReaData((aa1, aa2), self.global_consensus, codon_align, self.seqset.codontable)
+                fcodon_rea = CodonReaData((aa1, aa2), self.filtered_consensus, fcodon_align, self.seqset.codontable)
+                counts = []
+                t = self.seqset.phylotree.copy("newick")
+                fitch = NaiveFitch(t, val, aa_letters_1to3[aa2], aa_letters_1to3[aa1], self.settings,  self.seqset.codontable, (gcodon_rea, fcodon_rea))
+                slist = fitch.get_species_list(self.settings.LIMIT_TO_SUSPECTED_SPECIES)
+
+                for genome in slist :
+                    rec = self.seqset.prot_dict[genome]
+                    leaf = fitch.tree&genome
+                    filt_count = 0
+                    try :
+                        filt_count = len([y for y in aa_alignment[genome] if y !='-' and y==aa2])
+                    except Exception:
+                        #wtver happen, do nothing
+                        pass
+                    leaf.add_features(count=0)
+                    leaf.add_features(filter_count=filt_count)
+                    leaf.add_features(lost=False)
+                    for pos in xrange(len(self.global_consensus)):
+                        if self.global_consensus[pos] == aa1 and rec[pos] == aa2:
+                            leaf.count += 1
+                    if('lost' in leaf.features and leaf.count < settings.COUNT_THRESHOLD):
+                        leaf.lost = True
+
+                    self.reassignment_mapper['genome'][genome] = gcodon_rea.get_aa_usage(genome) 
+                    gdata = {}
+                    greacodon = gcodon_rea.get_reacodons(genome)
+                    gusedcodon = gcodon_rea.get_usedcodons(genome)
+                    gmixtecodon = gcodon_rea.get_mixtecodons(genome)
+                    gdata['global'] = {'rea_codon' : greacodon, 'use_codon': gsusedcodon, 'mixte_codon' : gmixtecodon, 'count' : leaf.count}
+                    freacodon = fcodon_rea.get_reacodons(genome)
+                    fusedcodon = fcodon_rea.get_usedcodons(genome)
+                    fmixtecodon = fcodon_rea.get_mixtecodons(genome)
+                    gdata['filtered'] = {'rea_codon' : freacodon, 'use_codon': fsusedcodon, 'mixte_codon' : fmixtecodon, 'count' : leaf.filter_count}
+                    gdata['suspected'] = self.suspected_species[aa1][genome]
+                    gdata['fitch'] = fitch.get_distance_to_rea_node(leaf)
+                    gdata['codons'] = self.reassignment_mapper['genome'][genome][aa2]
+                    self.reassignment_mapper[aa2][aa1][genome] = gdata
+                
+            if(fitch.is_valid()):
+                fitch.render_tree(self.settings.suffix)
+                self.interesting_case.append(n)
+
+        logging.debug("After validating the ancestral state and checking in the global alignment, %d cases were found interesting"%len(self.interesting_case))
 
 
 def executeCMD(cmd, prog):
@@ -510,105 +898,6 @@ def executeCMD(cmd, prog):
     print "%s : \n----------------- %s" % (prog, out)
     return err
 
-
-def filter_align_position(alignment, index_array):
-    """Keep only columns specified by index_array from the alignment"""
-    edited_alignment =  alignment[:,:]
-    index_array = sorted(index_array)
-    # alignment[:, slice(index_array[0], index_array[0] + 1)]
-    for seqrec in edited_alignment :
-        seq = Seq('', alpha)
-        for i in index_array:
-            seq += seqrec[i]
-        seqrec.seq = seq
-
-    return edited_alignment
-
-
-def clean_alignment(alignment, characs=['-'], threshold=0.5):
-    """Remove position of alignment which contain character from characs"""
-    align_array = np.array([list(rec) for rec in alignment], np.character)
-    indel_array = np.where((np.mean(np.in1d(align_array,
-                                            characs).reshape(align_array.shape), axis=0) > threshold) == False)[0].tolist()
-
-    return filter_align_position(alignment, indel_array), indel_array
-
-
-def filter_alignment(alignment, threshold=0.8, remove_identity=False):
-    """Filter an alignment using threshold as the minimum aa identity per columns"""
-    aligninfo = AlignInfo.SummaryInfo(alignment)
-    # Smart move : Make a consensus sequence with threshold
-    # remove all gap position
-    consensus = aligninfo.gap_consensus(threshold=threshold, ambiguous='X')
-    cons_array = [i for i, c in enumerate(consensus) if c != 'X']
-
-    if(remove_identity):
-        matched_consensus = aligninfo.gap_consensus(threshold=1, ambiguous='X')
-        cons_array = [i for i, c in enumerate(
-            consensus) if c != 'X' and matched_consensus[i] == 'X']
-
-    return filter_align_position(alignment, cons_array), cons_array
-
-
-def get_identity(seq1, seq2, ignore_gap=True, percent=True):
-    """Return percent of columns with same aa in a multiple alignment"""
-    assert len(seq1) == len(seq2), "Sequence not aligned"
-    identity = 0.0
-    for i, character in enumerate(seq1):
-        if not ignore_gap or character not in ['-', '.']:
-            if(character == seq2[i]):
-                identity += 1
-    return identity * (99.0 * percent + 1.0) / len(seq1)
-
-
-def convert_tree_to_mafft(tree, seq_order, output, scale):
-    """Convert a tree in a newick format to the mafft matrix format"""
-    seqnames = [-1, -1]
-    branchlens = [-1, -1]
-    for node in tree.traverse("postorder"):
-        if node.dist <= DIST_THRES:
-            node.dist = 0.0
-
-        if not node.is_leaf():
-            left_branch = node.get_child_at(0)
-            right_branch = node.get_child_at(1)
-            left_branch_leaf = left_branch.get_leaf_name()
-            right_branch_leaf = right_branch.get_leaf_name()
-
-            seqnames = [min(map(lambda x: seq_order.index(x), left_branch_leaf)) +
-                        1,  min(map(lambda x: seq_order.index(x), right_branch_leaf)) + 1, ]
-            #seqnames = [seq_order.index(left_branch_leaf.name)+1, seq_order.index(right_branch_leaf.name)+1]
-            #seqnames = [left_branch_leaf.name, right_branch_leaf.name]
-            branchlens = [
-                left_branch.dist * scale, right_branch.dist * scale]
-
-            if seqnames[1] < seqnames[0]:
-                seqnames.reverse()
-                branchlens.reverse()
-
-            if filter(lambda x: x > 10, branchlens):
-                raise ValueError(
-                    "Your branch length cannot be greater than 10.0. Mafft won't run.")
-
-            output.write("%5d %5d %10.5f %10.5f\n" %
-                         (seqnames[0], seqnames[1], branchlens[0], branchlens[1]))
-
-
-def get_consensus(alignment, threshold):
-    """return consensus, using a defined threshold"""
-    aligninfo = AlignInfo.SummaryInfo(alignment)
-    consensus = aligninfo.gap_consensus(threshold=threshold, ambiguous='X')
-    return consensus
-
-
-def get_aa_filtered_alignment(consensus, aa):
-    """Get the filtered alignment for an amino acid"""
-    aa = aa.upper()
-    assert aa in aa_letters, "Amino acid %s not found" % aa
-    cons_array = [i for i, c in enumerate(consensus) if c.upper() == aa]
-    return cons_array
-
-
 def realign(msa, tree, enable_mafft):
     """Realign a msa according to a tree"""
     tmpseq = TMP + "tmp0msa.fasta"
@@ -619,7 +908,7 @@ def realign(msa, tree, enable_mafft):
         seq_ord.append(seqrec.description)
     AlignIO.write(msa, open(tmpseq, 'w'), 'fasta')
     out = Output(file=TMP + "tmp0treeout.mafft")
-    convert_tree_to_mafft(TreeClass(tree.write(
+    convert_tree_to_mafft(Tree(tree.write(
         features=['name', 'support', 'dist'], format_root_node=True)), seq_ord, out)
     out.close()
     execute_mafft(enable_mafft + " --treein %s %s > %s" %
@@ -630,12 +919,9 @@ def realign(msa, tree, enable_mafft):
         os.remove(f)
     return msa
 
-def is_aligned(seqfile, format):
-    try:
-        a = AlignIO.read(open(seqfile), format)
-    except ValueError:
-        return False
-    return True
+def align(seqlist):
+    pass
+
 
 @timeit
 def execute_mafft(cmdline):

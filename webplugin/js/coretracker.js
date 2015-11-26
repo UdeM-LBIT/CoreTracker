@@ -94,8 +94,6 @@ $(document).ready(function() {
 			
 		});
 
-			
-
 		function uploadFiles(event) {
 			event.stopPropagation();
 			spinner.spin(spinspan);
@@ -140,26 +138,29 @@ function submitForm(event, data) {
 	var formData = $form.serialize();
 
 
+	var runid = '';
 	// You should sterilise the file names
 	$.each(data, function(key, value) {
+		if(key=="time"){
+			runid = value;
+		}
 		formData = formData + '&'+key+'=' + value;
 	});
 
 	$.ajax({
-		url: ete_webplugin_URL + '/exectracker',
+		url: ete_webplugin_URL + '/calltracker',
 		type: 'GET',
 		data: formData,
-		dataType: 'json',
 		success: function(data, textStatus, jqXHR) {
 			if (typeof data.error === 'undefined') {
 				// Success so call function to process the form
-				console.log('SUCCESS: ' + data.success);
+				console.log('SUCCESS: ' + data.error);
 				// If this is a success,
 				// add a link to where we should see the rest of the data and 
 				// instruction to how to refresh every x second
 			} else {
 				// Handle errors here
-				console.log('ERRORS: ' + data.error);
+				$('#show-error').text(data.error).slideToggle().delay(10000).slideToggle();
 			}
 		},
 		error: function(jqXHR, textStatus, errorThrown) {
@@ -168,6 +169,9 @@ function submitForm(event, data) {
 		},
 		complete: function() {
 			spinner.stop();
+			var info = "Your results could be fetched here : " + "<a href=\"" +"/results/run?id=" + runid + "\">"+runid+"</a>"
+			$('#show-link').html(info).slideToggle()
+
 		}
 	});
 }
