@@ -74,7 +74,7 @@ def testing_a_lot(args, settings):
             settings.GENETIC_CODE, settings.COUNT_THRESHOLD, settings.LIMIT_TO_SUSPECTED_SPECIES]
 
 
-def is_aligned(cls, seqfile, format):
+def is_aligned(seqfile, format):
     try:
         a = AlignIO.read(open(seqfile), format)
     except ValueError:
@@ -85,18 +85,15 @@ def is_aligned(cls, seqfile, format):
 def coretracker(args, settings):
     """Run coretracker on the argument list"""
       # Check mafft command input
-    ut_setting.fill(settings)
-    global OUTDIR
-    global aa_letters
-    OUTDIR =  settings.OUTDIR
     run_alignment = False
     mafft_detail = get_argsname(args.__dict__, MAFFT_AUTO_COMMAND, prefix="--")
     mafft_cmd = "mafft "
     if(mafft_detail):
         run_alignment = True
         mafft_cmd += mafft_detail[0]
+    
     if args.outdir:
-        OUTDIR = args.outdir
+        settings.OUTDIR = args.outdir
 
     input_alignment = args.seq
 
@@ -114,7 +111,7 @@ def coretracker(args, settings):
     dnadict = dict((seq.id, seq) for seq in dnaseq)
     c_genome.intersection_update(dnadict.keys())
 
-    if len(c_genome) <  0.5 * (len(leaf_names) + len(dnadict.keys() + len(seq_names)))/3.0 :
+    if len(c_genome) <  0.5 * (len(leaf_names) + len(dnadict.keys()) + len(seq_names))/3.0 :
         raise ValueError("Too many ID do not match in protein sequence, nucleic sequence and species tree.") 
 
     # execute mafft    
@@ -126,7 +123,7 @@ def coretracker(args, settings):
         else :
             # this is the case where we need to convert the tree to mafft tree before
             # Output stream setting
-            mtoutput = Output(os.path.join(OUTDIR,"tree_mafft.nw"))
+            mtoutput = Output(os.path.join(settings.OUTDIR,"tree_mafft.nw"))
             # Convert tree to mafft format
             convert_tree_to_mafft(specietree, seq_names, mtoutput, args.scale)
             mtoutput.close()
@@ -157,8 +154,8 @@ if __name__ == '__main__':
 
     parser.add_argument('--version', action='version', version='%(prog)s 1.0')
 
-    parser.add_argument('--excludegap', '--gap', type=float,  default=0.6, dest='excludegap',
-                        help="Remove position with gap from the alignment, using excludegap as threshold. The absolute values are taken")
+    parser.add_argument('--gapfilter', '--gap', type=float,  default=0.6, dest='gapfilter',
+                        help="Remove position with gap from the alignment, using gapfilter as threshold. The absolute values are taken")
     
     parser.add_argument('--idfilter', '--id', type=float, default=0.8, dest='idfilter',
                         help="Conserve only position with at least idfilter residue identity")
@@ -170,8 +167,6 @@ if __name__ == '__main__':
     parser.add_argument(
         '--verbose', '-v', choices=[0,1,2], type=int, default=0, dest="verbose", help="Verbosity level")
 
-    parser.add_argument(
-        '--debug', action='store_true', dest="debug", help="Print debug infos")
 
     parser.add_argument(
         '--sfx', dest="sfx", default="", help="PDF rendering suffix to differentiate runs.")
@@ -182,14 +177,14 @@ if __name__ == '__main__':
     parser.add_argument('-s', '--scale', type=float, default=1.0,
                         dest='scale', help="Scale to compute the branch format")
 
-    parser.add_argument('--protseq', '--aa', '-p', '-a', dest='seq',
+    parser.add_argument('--protseq', '--prot', '-p', dest='seq',
                         help="Protein sequence input in fasta format", required=True)
 
     parser.add_argument('--dnaseq', '--dna', '-n', dest='dnaseq',
                         help="Nucleotides sequences input in fasta format", required=True)
    
     parser.add_argument('--stopcodon', dest='stopcodon', action='store_true',
-                        help="Whether or not stop present in protein alignment and dna sequences.", required=True)
+                        help="Whether or not stop present in protein alignment and dna sequences.")
 
     mafft_group = parser.add_mutually_exclusive_group()
     mafft_group.add_argument('--linsi', dest='linsi', action='store_true',
@@ -212,6 +207,6 @@ if __name__ == '__main__':
 
 
     args = parser.parse_args()
-    setting =  Setting()
+    setting =  Settings()
     setting.set()
     coretracker(args, setting)

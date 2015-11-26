@@ -502,25 +502,49 @@ class SequenceSet(object):
         alphabet = get_codon_alphabet(codontable, gap_char=gap_char)
         return SeqRecord(CodonSeq(record.seq._data, alphabet=alphabet), id=record.id)
 
-
     
     def copy_codon_alignment(self, codon_alignment, alphabet=default_codon_alphabet):
         """Return a codon alignment object from a list of codon seq sequences"""
         return codonalign.CodonAlignment((copy_codon_record(rec, self.codontable) for rec in codon_alignment._records), alphabet=alphabet)
 
 
-    def codon_align(self):
+    def codon_align(self, alphabet=default_codon_alphabet, gap_char='-'):
         """ Perform a codon alignment based on a protein multiple alignment
         and remove gaped positions
         """
+        alphabet = get_codon_alphabet(self.codontable, gap_char=gap_char)
         if self.common_genome is None:
             self.restrict_to_common()
         # build codon alignment and return it
-        print self.prot_align
-        print self.dna_dict['LmeyeA']
-        print self.prot_dict['LmeyeA']
-        self.codon_alignment = codonalign.build(self.prot_align, self.dna_dict, codon_table=self.codontable)
-        
+        codon_aln = []
+        for g in self.dna_dict.keys():
+            codon_rec = self._get_codon_record(self.dna_dict[g], self.prot_dict[g], self.codontable, alphabet)
+            codon_aln.append(codon_rec)
+
+        self.codon_alignment = codonalign.CodonAlignment(codon_aln, alphabet=alphabet)
+        #self.codon_alignment = codonalign.build(self.prot_align, self.dna_dict, codon_table=self.codontable)
+    
+
+    def _get_codon_record(self, dnarec, protrec, codontable, alphabet, gap_char='-'):
+        nuc_seq =  dnarec.seq.ungap(gap_char)
+        codon_seq = ""
+        aa_num = 0
+        max_error = 10
+        for aa in protrec.seq:
+            if aa == gap_char:
+                codon_seq += gap_char*3
+            else : 
+                next_codon =  nuc_seq._data[aa_num*3 : (aa_num+1)*3]
+                if not str(Seq(next_codon.upper()).translate(table=codontable)) == aa.upper():
+                    logging.warn("%s(%s %d) does not correspond to %s(%s)"
+                                  % (protrec.id, aa, aa_num, dnarec.id, next_codon))
+                    max_error -= 1
+                if max_error <= 0:
+                    raise ValueError("You're obviously using the wrong genetic code")
+                codon_seq += next_codon
+                aa_num += 1
+        return SeqRecord(CodonSeq(codon_seq, alphabet), id=dnarec.id)
+
 
     def filter_codon_alignment(self, ind_array=None, get_dict=False, alphabet=default_codon_alphabet):
 
@@ -557,7 +581,7 @@ class SequenceSet(object):
         tt_filter_position = np.asarray(xrange(current_alignment.get_alignment_length()))
 
         if(gap_thresh): 
-            self._gap_alignment, self._gap_filtered_position = clean_alignment(current_alignment, threshold=(abs(gap_thresh) <= 1 or 0.01) * abs(gap_thresh))
+            self._gap_alignment, self._gap_filtered_position = self.clean_alignment(current_alignment, threshold=(abs(gap_thresh) <= 1 or 0.01) * abs(gap_thresh))
             current_alignment = self._gap_alignment
             logging.debug("Alignment length after removing gaps : %d"%current_alignment.get_alignment_length())
             tt_filter_position = tt_filter_position[self._gap_filtered_position]      
@@ -569,14 +593,14 @@ class SequenceSet(object):
             ic_pos = (np.asarray(align_info.ic_vector.values())>max_val).nonzero()
             logging.debug("Filtering with ic_content, vector to discard is %s"%str(ic_pos[0]))
             # ic_pos here is a tuple, so we should access the first element
-            self._ic_alignment = filter_align_position(alignment, ic_pos[0])
+            self._ic_alignment = self.filter_align_position(current_alignment, ic_pos[0])
             self._ic_filtered_positions = ic_pos
             current_alignment = self._ic_alignment
             tt_filter_position = tt_filter_position[self._ic_filtered_positions]    
             logging.debug("Alignment length filtering with information content: %d"%current_alignment.get_alignment_length())
 
         if(id_thresh):
-            self._id_alignment, self._id_filtered_position = filter_alignment(current_alignment, remove_identity=rmcnst, threshold=(abs(id_filter) <= 1 or 0.01) * abs(id_filter))
+            self._id_alignment, self._id_filtered_position = self.filter_alignment(current_alignment, remove_identity=rmcnst, threshold=(abs(id_thresh) <= 1 or 0.01) * abs(id_thresh))
             current_alignment = self._id_alignment
             tt_filter_position = tt_filter_position[self._id_filtered_position]
             logging.debug("Alignment length after filtering by sequence identity : %d"%current_alignment.get_alignment_length())
@@ -597,8 +621,8 @@ class SequenceSet(object):
             self.phylotree.write(outfile=tree)
 
 
-    @staticmethod
-    def filter_align_position(alignment, index_array, alphabet=generic_protein):
+    @classmethod
+    def filter_align_position(clc, alignment, index_array, alphabet=generic_protein):
         """Keep only columns specified by index_array from the alignment"""
         edited_alignment =  alignment[:,:]
         index_array = sorted(index_array)
@@ -612,35 +636,35 @@ class SequenceSet(object):
         return edited_alignment
         
 
-    @staticmethod
-    def clean_alignment(alignment=None, characs=['-'], threshold=0.5):
+    @classmethod
+    def clean_alignment(clc, alignment=None, characs=['-'], threshold=0.5):
         """Remove position of alignment which contain character from characs"""
         align_array = np.array([list(rec) for rec in alignment], np.character)
         indel_array = np.where((np.mean(np.in1d(align_array,
                                                 characs).reshape(align_array.shape), axis=0) > threshold) == False)[0].tolist()
 
-        return filter_align_position(alignment, indel_array), indel_array
+        return clc.filter_align_position(alignment, indel_array), indel_array
 
 
-    @staticmethod
-    def filter_alignment(alignment, threshold=0.8, remove_identity=False):
+    @classmethod
+    def filter_alignment(clc, alignment, threshold=0.8, remove_identity=False, ambiguous='X', alphabet=generic_protein):
         """Filter an alignment using threshold as the minimum aa identity per columns"""
         aligninfo = AlignInfo.SummaryInfo(alignment)
         # Smart move : Make a consensus sequence with threshold
         # remove all gap position
-        consensus = aligninfo.gap_consensus(threshold=threshold, ambiguous='X')
-        cons_array = [i for i, c in enumerate(consensus) if c != 'X']
+        consensus = aligninfo.gap_consensus(threshold=threshold, ambiguous=ambiguous, consensus_alpha=alphabet)
+        cons_array = [i for i, c in enumerate(consensus) if c != ambiguous]
 
         if(remove_identity):
-            matched_consensus = aligninfo.gap_consensus(threshold=1, ambiguous='X')
+            matched_consensus = aligninfo.gap_consensus(threshold=1, ambiguous=ambiguous, consensus_alpha=alphabet)
             cons_array = [i for i, c in enumerate(
-                consensus) if c != 'X' and matched_consensus[i] == 'X']
+                consensus) if c != ambiguous and matched_consensus[i] == ambiguous]
 
-        return filter_align_position(alignment, cons_array), cons_array
+        return clc.filter_align_position(alignment, cons_array), cons_array
 
 
-    @staticmethod
-    def get_identity(seq1, seq2, ignore_gap=True, percent=True):
+    @classmethod
+    def get_identity(clc, seq1, seq2, ignore_gap=True, percent=True):
         """Return percent of columns with same aa in a multiple alignment"""
         assert len(seq1) == len(seq2), "Sequence not aligned"
         identity = 0.0
@@ -685,7 +709,7 @@ class ReaGenomeFinder:
         aa2aa_rea = defaultdict(dict)
         
         def makehash():
-            return collections.defaultdict(makehash)
+            return defaultdict(makehash)
         self.reassignment_mapper = makehash()
         
 
