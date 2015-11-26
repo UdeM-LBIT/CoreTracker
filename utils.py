@@ -1,3 +1,4 @@
+from __future__ import division
 import argparse
 import glob
 import itertools
@@ -8,7 +9,6 @@ import random
 import subprocess
 import sys
 import time
-from __future__ import division
 
 from collections import Counter, defaultdict
 
@@ -73,7 +73,6 @@ class Settings():
         self.PROCESS_ENABLED = kwargs.get('PROCESS_ENABLED', default_settings.PROCESS_ENABLED)
         EXCLUDE_AA = kwargs.get('EXCLUDE_AA', default_settings.EXCLUDE_AA)
         self.AA_LETTERS = "".join([aa for aa in "ACDEFGHIKLMNPQRSTVWY" if aa not in EXCLUDE_AA])
-        self.USE_EXPECTED_FREQ_FOR_IC = kwargs.get('USE_EXPECTED_FREQ_FOR_IC', default_settings.USE_EXPECTED_FREQ_FOR_IC)
         self.OUTDIR = kwargs.get('OUTDIR', default_settings.OUTDIR)
         self.SKIP_ALIGNMENT = kwargs.get('SKIP_ALIGNMENT', default_settings.SKIP_ALIGNMENT)
         self.AA_MAJORITY_THRESH = kwargs.get('AA_MAJORITY_THRESH', default_settings.AA_MAJORITY_THRESH)
@@ -188,9 +187,10 @@ class CodonReaData(object):
 
 class NaiveFitch(object):
     """A NaiveFitch algorithm for finding the most parcimonious solution"""
-    def __init__(self, tree, reassigned, ori_aa="", dest_aa="", settings, dct, codon_rea=(None, None)):
+    def __init__(self, tree, reassigned, ori_aa, dest_aa, settings, dct, codon_rea=(None, None)):
         self.id = {}
         self.tree = tree
+        self.settings =  settings
         self.corr = {'0':ori_aa, '1':dest_aa}
         self.codon_rea_global, self.codon_rea_filtered = codon_rea
         colors=['#a6cee3', '#1f78b4', '#b2df8a', '#33a02c', '#fb9a99', '#e31a1c', '#fdbf6f']
@@ -298,7 +298,7 @@ class NaiveFitch(object):
         if isinstance(node, str):
             node = self.tree&node
         dist = 0
-        while node not self.is_reassigned(node):
+        while not self.is_reassigned(node):
             dist += 1
             node = node.up
         return 0
@@ -307,7 +307,7 @@ class NaiveFitch(object):
         return (self.codon_rea_global, self.codon_rea_filtered) != (None, None)
 
 
-    def render_tree(self, output="", suffix="", pie_size=50, format=settings.IMAGE_FORMAT):
+    def render_tree(self, output="", suffix="", pie_size=50):
 
         GRAPHICAL_ACCESS = True
         try:
@@ -316,7 +316,7 @@ class NaiveFitch(object):
             GRAPHICAL_ACCESS = False
 
         if not output:
-            output = TMP+self.ori_aa+"_to_"+self.dest_aa+suffix+"."+format
+            output = TMP+self.ori_aa+"_to_"+self.dest_aa+suffix+"."+settings.IMAGE_FORMAT
 
         if(GRAPHICAL_ACCESS):
             ts = TreeStyle()
@@ -341,9 +341,10 @@ class NaiveFitch(object):
             prob_lost["hz_line_type"] = 1
             prob_lost["hz_line_color"] = "#cccccc"
             
+            add_label = self.settings.ADD_LABEL_TO_LEAF
             def layout(node):
 
-                get_suffix = lambda x : x if settings.ADD_LABEL_TO_LEAF else ""
+                get_suffix = lambda x : x if add_label else ""
 
                 N = AttrFace("rea", fsize=10)
                 faces.add_face_to_node(N, node, 0, position="branch-right")
@@ -439,14 +440,14 @@ class SequenceSet(object):
     def __init__(self, dnadict, prot_align, phylotree, table_num, stopcodon=False):
         # using sequence set suppose that the alignment and the protein concatenation was already done
         self.codontable = CodonTable.unambiguous_dna_by_id[abs(table_num)]
-        self.prot_align = prot_alignment
+        self.prot_align = prot_align
         self.phylotree = phylotree
         self.common_genome = None
         self.stop_positions = []
         self.dna_dict = dnadict
         if stopcodon:
             self.split_and_concat()
-        self.prot_dict = SeqIO.to_dict(prot_alignment)
+        self.prot_dict = SeqIO.to_dict(prot_align)
         self.restrict_to_common()
         self.codon_align()
 
@@ -461,18 +462,13 @@ class SequenceSet(object):
 
     def restrict_to_common(self):
         """ Keep only the species present in the dna, prot seq and in the tree """
-        if not isinstance(dna_dict, dict):
-            dna_dict =  dict((d.id, d) for d in dna_dict)
 
-        if not isinstance(prot_dict, dict):
-            prot_dict = dict((p.id, p) for p in prot_dict)
-
-        dna_set = set(dna_dict.keys())
-        prot_set = prot_dict.keys()
-        species_set = set(phylotree.get_leaf_names())
+        dna_set = set(self.dna_dict.keys())
+        prot_set = set(self.prot_dict.keys())
+        species_set = set(self.phylotree.get_leaf_names())
         common_genome = dna_set.intersection(prot_set)
         # remove every dna sequence that are not cds
-        common_genome = [x for x in common_genome if (len(dna_dict[x]) in [len(prot_dict[x].seq.ungap('-'))*3, len(prot_dict[x].seq.ungap('-'))*3 +3])]   
+        common_genome = set([x for x in common_genome if (len(self.dna_dict[x]) in [len(self.prot_dict[x].seq.ungap('-'))*3, len(self.prot_dict[x].seq.ungap('-'))*3 +3])])
         # print [(x, len(dna_dict[x]), len(prot_dict[x].seq.ungap('-'))+1, len(dna_dict[x])==(len(prot_dict[x].seq.ungap('-'))+1)*3) for x in common_genome ]
         # common_genome = [x for x in common_genome if len(dna_dict[x])==(len(prot_dict[x].seq.ungap('-'))+1)*3 ]
         # return common_genome, dict((k, v) for k, v in dna_dict.items() if k in common_genome)
@@ -483,19 +479,19 @@ class SequenceSet(object):
             raise ValueError('ID intersection for dna, prot and species tree is empty')
         if len(prot_set) != speclen or len(dna_set) != speclen or len(species_set) != common_genome:
             logging.debug('Non-uniform sequence in dna sequences, prot sequences and trees')
-            logging.debug('Recheck the following id %s' % set.union(species_set, prot_set, dna_set) - common_genome)
+            logging.debug('Recheck the following id %s' % (set.union(species_set , prot_set , dna_set) - common_genome))
 
         # prune tree to sequence list
-        specietree.prune(common_genome)
+        self.phylotree.prune(common_genome)
         self.common_genome = common_genome
         logging.debug("List of common genome")
         logging.debug(common_genome)
         #return common_genome, dict((k, v) for k, v in dna_dict.items() if k in common_genome), prot_dict
-        self.dna_dict, self.prot_dict = dict((k, v) for k, v in dna_dict.items() if k in common_genome), dict((k, v) for k, v in dna_dict.items() if k in common_genome)
+        self.dna_dict, self.prot_dict = dict((k, v) for k, v in self.dna_dict.items() if k in common_genome), dict((k, v) for k, v in self.prot_dict.items() if k in common_genome)
         
-        for k,v in self.prot_dict.items()
-            s.seq.alphabet = generic_protein
-            s.id = k
+        for k,v in self.prot_dict.items():
+            v.seq.alphabet = generic_protein
+            v.id = k
 
         self.prot_align = MultipleSeqAlignment(self.prot_dict.values(), alphabet=alpha)
 
@@ -520,7 +516,10 @@ class SequenceSet(object):
         if self.common_genome is None:
             self.restrict_to_common()
         # build codon alignment and return it
-        self.codon_alignment = codonalign.build(self.prot_align, dna_dict, codon_table=self.codontable)
+        print self.prot_align
+        print self.dna_dict['LmeyeA']
+        print self.prot_dict['LmeyeA']
+        self.codon_alignment = codonalign.build(self.prot_align, self.dna_dict, codon_table=self.codontable)
         
 
     def filter_codon_alignment(self, ind_array=None, get_dict=False, alphabet=default_codon_alphabet):
@@ -614,9 +613,8 @@ class SequenceSet(object):
         
 
     @staticmethod
-    def clean_alignment(self, alignment=None, characs=['-'], threshold=0.5):
+    def clean_alignment(alignment=None, characs=['-'], threshold=0.5):
         """Remove position of alignment which contain character from characs"""
-        if not self
         align_array = np.array([list(rec) for rec in alignment], np.character)
         indel_array = np.where((np.mean(np.in1d(align_array,
                                                 characs).reshape(align_array.shape), axis=0) > threshold) == False)[0].tolist()
@@ -738,7 +736,7 @@ class ReaGenomeFinder:
 
         if self.mode == 'count':
             self.get_suspect_by_count(aa2suspect, number_seq)
-        elif self.mode == 'wilc'
+        elif self.mode == 'wilcoxon':
             self.get_suspect_by_wilcoxon(aa2suspect_dist, number_seq, use_similarity)
         else :
             self.get_suspect_by_clustering(aa2suspect_dist, number_seq)
@@ -762,7 +760,7 @@ class ReaGenomeFinder:
                     self.suspected_species[aa][seq] = pval
 
 
-    def get_suspect_by_clustering(aa2suspect_dist, number_seq), use_similarity=1):
+    def get_suspect_by_clustering(aa2suspect_dist, number_seq, use_similarity=1):
         for aa in aa2suspect_dist.keys():
             aafilt2dict =  self.seqset.aa_filt_prot_align[aa_letters_1to3[aa]]
             tmp_list = aa2suspect_dist[aa]
@@ -829,7 +827,7 @@ class ReaGenomeFinder:
         ic_filtfile = os.path.join(self.settings.OUTDIR,"ic_filt.fasta")
         gap_filtfile = os.path.join(self.settings.OUTDIR,"gap_filt.fasta")
         newick = os.path.join(self.settings.OUTDIR,"tree.nwk")
-        self.seqset.write_data(id_filtered=id_filtfile, gap_filtered=gap_filtfile, ic_filtered=ic_filtfile, tree=newick):
+        self.seqset.write_data(id_filtered=id_filtfile, gap_filtered=gap_filtfile, ic_filtered=ic_filtfile, tree=newick)
 
 
     def run_analysis(self):
@@ -919,9 +917,21 @@ def realign(msa, tree, enable_mafft):
         os.remove(f)
     return msa
 
+
 def align(seqlist):
     pass
 
+def timeit(func):
+
+    def timed(*args, **kw):
+        tstart = time.time()
+        result = func(*args, **kw)
+        tend = time.time()
+        ttime = tend - tstart
+        #print '%r (%r, %r) %2.2f sec' % (func.__name__, args, kw, ttime)
+        return ttime, result
+
+    return timed
 
 @timeit
 def execute_mafft(cmdline):
