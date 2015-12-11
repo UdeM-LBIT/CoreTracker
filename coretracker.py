@@ -7,64 +7,16 @@ import traceback
 import warnings
 warnings.filterwarnings("ignore") 
 sys.path.append(os.path.dirname(__file__))
-from Bio import AlignIO
-from Bio import SeqIO
 
-from Bio.Align import AlignInfo
-from Bio.Align import MultipleSeqAlignment
-from Bio.Alphabet import generic_nucleotide
-from Bio.Seq import Seq
 from ete3 import Tree
 from utils import *
-from shutil import copyfile
 import random
+import logging
 
 __author__ = "Emmanuel Noutahi"
-__version__ = "0.1"
+__version__ = "1.1"
 __email__ = "fmr.noutahi@umontreal.ca"
 __license__ = "The MIT License (MIT)"
-
-
-MAFFT_AUTO_COMMAND = ['linsi', 'ginsi', 'einsi', 'fftnsi', 'fftns', 'nwnsi', 'nwns', 'auto']
-
-def convert_tree_to_mafft(tree, seq_order, output, scale):
-    """Convert a tree in a newick format to the mafft matrix format"""
-    seqnames = [-1, -1]
-    branchlens = [-1, -1]
-    for node in tree.traverse("postorder"):
-        if node.dist <= DIST_THRES:
-            node.dist = 0.0
-
-        if not node.is_leaf():
-            left_branch = node.children[0]
-            right_branch = node.children[0]
-            left_branch_leaf = left_branch.get_leaf_names()
-            right_branch_leaf = right_branch.get_leaf_names()
-
-            seqnames = [min(map(lambda x: seq_order.index(x), left_branch_leaf)) +
-                        1,  min(map(lambda x: seq_order.index(x), right_branch_leaf)) + 1, ]
-            #seqnames = [seq_order.index(left_branch_leaf.name)+1, seq_order.index(right_branch_leaf.name)+1]
-            #seqnames = [left_branch_leaf.name, right_branch_leaf.name]
-            branchlens = [
-                left_branch.dist * scale, right_branch.dist * scale]
-
-            if seqnames[1] < seqnames[0]:
-                seqnames.reverse()
-                branchlens.reverse()
-
-            if filter(lambda x: x > 10, branchlens):
-                raise ValueError(
-                    "Your branch length cannot be greater than 10.0. Mafft won't run.")
-
-            output.write("%5d %5d %10.5f %10.5f\n" %
-                         (seqnames[0], seqnames[1], branchlens[0], branchlens[1]))
-
-
-def get_argsname(command_dict, command_list, prefix=""):
-    """ Get the mafft command from the argparse dict : command_dict
-    and a command_list
-    """
-    return ["%s%s" % (prefix, command) for command in command_list if command_dict[command]]
 
 
 def testing_a_lot(args, settings):
@@ -74,72 +26,36 @@ def testing_a_lot(args, settings):
             settings.GENETIC_CODE, settings.COUNT_THRESHOLD, settings.LIMIT_TO_SUSPECTED_SPECIES]
 
 
-def is_aligned(seqfile, format):
-    try:
-        a = AlignIO.read(open(seqfile), format)
-    except ValueError:
-        return False
-    return True
-
-
 def coretracker(args, settings):
     """Run coretracker on the argument list"""
       # Check mafft command input
-    run_alignment = False
-    mafft_detail = get_argsname(args.__dict__, MAFFT_AUTO_COMMAND, prefix="--")
-    mafft_cmd = "mafft "
-    if(mafft_detail):
-        run_alignment = True
-        mafft_cmd += mafft_detail[0]
+    progcmd = lambda x: x+' --auto' if x=='mafft' else x
+
+    if args.debug:
+        logging.basicConfig(level=logging.DEBUG)
     
     if args.outdir:
         settings.OUTDIR = args.outdir
 
-    input_alignment = args.seq
-
-
-    # Manage fasta sequence input
-    protseq = SeqIO.parse(input_alignment, "fasta")
-    seq_names = set([seq.id for seq in protseq])
-    # load tree
-    specietree = Tree(args.tree)
-    leaf_names = specietree.get_leaf_names()
-    c_genome = seq_names.intersection(leaf_names)
+    msaprg = progcmd(args.align)
     
-    # get dna to perform codon alignment
-    dnaseq = SeqIO.parse(args.dnaseq, 'fasta', generic_nucleotide)
-    dnadict = dict((seq.id, seq) for seq in dnaseq)
-    c_genome.intersection_update(dnadict.keys())
+    input_alignment = args.seq
+    use_tree = None
+    specietree = Tree(args.tree)
+    
+    if args.usetree:
+        use_tree = args.tree
 
-    if len(c_genome) <  0.5 * (len(leaf_names) + len(dnadict.keys()) + len(seq_names))/3.0 :
-        raise ValueError("Too many ID do not match in protein sequence, nucleic sequence and species tree.") 
-
-    # execute mafft    
-    is_already_aligned = is_aligned(input_alignment, 'fasta')
-
-    if not (settings.SKIP_ALIGNMENT and is_already_aligned):
-        if not run_alignment:
-            raise ValueError("Could not align sequences\nAlignment parameters not provided")
-        else :
-            # this is the case where we need to convert the tree to mafft tree before
-            # Output stream setting
-            mtoutput = Output(os.path.join(settings.OUTDIR,"tree_mafft.nw"))
-            # Convert tree to mafft format
-            convert_tree_to_mafft(specietree, seq_names, mtoutput, args.scale)
-            mtoutput.close()
-            unaligned_seqs = input_alignment+"_unaligned"
-            copyfile(input_alignment, unaligned_seqs)
-            execute_mafft(mafft_cmd + " --treein %s %s > %s" %
-                          (mtoutput.file, unaligned_seqs, input_alignment))
-
-
+    settings.scale = args.scale
+    core = CoreFile(input_alignment, args.dnaseq, settings, args.gapfilter,
+                    has_stop=args.hasstop, use_tree=args.usetree, refine_alignment=args.refine, msaprog=msaprg)
 
     # create sequence set
-    alignment = AlignIO.read(input_alignment, 'fasta', alphabet=alpha)
-    setseq = SequenceSet(dnadict, alignment, specietree, settings.GENETIC_CODE, args.stopcodon)
+    setseq = SequenceSet(core, specietree, settings.GENETIC_CODE)
     setseq.prot_filtering(args.idfilter, args.gapfilter, args.iccontent)
+    
     reafinder =  ReaGenomeFinder(setseq, settings)
-    reafinder.get_genomes()
+    reafinder.run_analysis()
     reafinder.save_all()
 
 
@@ -183,30 +99,21 @@ if __name__ == '__main__':
     parser.add_argument('--dnaseq', '--dna', '-n', dest='dnaseq',
                         help="Nucleotides sequences input in fasta format", required=True)
    
-    parser.add_argument('--stopcodon', dest='stopcodon', action='store_true',
-                        help="Whether or not stop present in protein alignment and dna sequences.")
+    parser.add_argument('--stopcodon', dest='hasstop', action='store_true',
+                        help="Whether or not stop are present in protein alignment and dna sequences.")
 
-    mafft_group = parser.add_mutually_exclusive_group()
-    mafft_group.add_argument('--linsi', dest='linsi', action='store_true',
-                             help="L-INS-i (probably most accurate; recommended for <200 sequences; iterative refinement method incorporating local pairwise alignment information)")
-    mafft_group.add_argument('--ginsi', dest='ginsi', action='store_true',
-                             help="G-INS-i (suitable for sequences of similar lengths; recommended for <200 sequences; iterative refinement method incorporating global pairwise alignment information)")
-    mafft_group.add_argument('--einsi', dest='einsi', action='store_true',
-                             help="E-INS-i (suitable for sequences containing large unalignable regions; recommended for <200 sequences)")
-    mafft_group.add_argument('--fftnsi', dest='fftnsi', action='store_true',
-                             help="FFT-NS-i (iterative refinement method; two cycles only)")
-    mafft_group.add_argument(
-        '--fftns', dest='fftns', action='store_true', help="FFT-NS-2 (fast; progressive method)")
-    mafft_group.add_argument('--nwnsi', dest='nwnsi', action='store_true',
-                             help="NW-NS-i (iterative refinement method without FFT approximation; two cycles only)")
-    mafft_group.add_argument('--nwns', dest='nwns', action='store_true',
-                             help="NW-NS-2 (fast; progressive method without the FFT approximation)")
-   
-    mafft_group.add_argument(
-        '--auto', dest='auto', action='store_true', help="If unsure which option to use, try this option")
+    parser.add_argument('--debug', dest='debug', action='store_true',
+                        help="Enable debug printing")
 
+    parser.add_argument('--norefine', dest='refine', action='store_false', help="Do not refine the alignment. By default the alignment will be refined. This option should never be used if you have made your own multiple alignment and concatenate it. Else you will have absurd alignment (TO FIX)")
+
+    parser.add_argument('--align', dest='align', choices=['muscle', 'mafft'], default="muscle", help="Choose a program to align your sequences")
+
+    parser.add_argument('--use_tree', dest='usetree', action="store_true", help="This is helpfull only if the mafft alignment is selected. Perform multiple alignment, using species tree as guide tree.")
+    parser.add_argument('--submat', dest='submat', choices=AVAILABLE_MAT, default="blosum62", help="Choose a substitution matrix to compute codon alignment to amino acid likelihood, Default value is blosum62")
 
     args = parser.parse_args()
     setting =  Settings()
     setting.set()
+    setting.update_params(SUBMAT=args.submat)
     coretracker(args, setting)
