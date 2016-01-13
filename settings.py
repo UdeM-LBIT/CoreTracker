@@ -17,8 +17,8 @@ AA_MAJORITY_THRESH = 0.5
 SKIP_ALIGNMENT = True
 
 # this is a temporary mode to compute suspected species
-# possible values : count, wilcoxon, any other
-MODE = 'count'
+# possible values : count, wilcoxon, mannwhitney and kmean, ttest
+MODE = 'wilcoxon'
 
 # Distance matrice:
 MATRIX = 'identity'
@@ -63,3 +63,9 @@ IMAGE_FORMAT = "pdf"  # is in utils
 
 #set this to true if you cannot output color
 ADD_LABEL_TO_LEAF = False # is in utils
+
+# This is a private parameter
+USE_GLOBAL = False # is in utils
+
+# alpha : rejection of the null hypothesis
+CONF = 0.01
