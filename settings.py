@@ -18,7 +18,7 @@ SKIP_ALIGNMENT = True
 
 # this is a temporary mode to compute suspected species
 # possible values : count, wilcoxon, mannwhitney and kmean, ttest
-MODE = 'wilcoxon'
+MODE = 'mannwhitney'
 
 # Distance matrice:
 MATRIX = 'identity'
@@ -40,7 +40,7 @@ JSON_DUMP = True
 FREQUENCY_THRESHOLD = 0.4
 
 # Substitution must appear at least COUNT_THRESHOLD time in the global alignment to be considered
-COUNT_THRESHOLD = 3
+COUNT_THRESHOLD = 2
 
 SHOW_MIXTE_CODONS = True
 # Genetic code 

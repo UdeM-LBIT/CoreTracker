@@ -71,6 +71,50 @@ DIST_THRES = 1e-10
 nuc_letters = "ACTG"
 
 
+class CodonSeq(CodonSeq):
+
+    def __init__(self, data='', alphabet=default_codon_alphabet,
+                 gap_char="-", rf_table=None, enable_undef=False):
+
+        Seq.__init__(self, data.upper(), alphabet=alphabet)
+        self.gap_char = gap_char
+        self.enable_undef =  enable_undef
+
+        # check the length of the alignment to be a triple
+        if rf_table is None:
+            seq_ungapped = self._data.replace(gap_char, "")
+            assert len(self) % 3 == 0, "Sequence length is not a triple number"
+            self.rf_table = list(filter(lambda x: x % 3 == 0,
+                                        range(len(seq_ungapped))))
+            # check alphabet
+            # Not use Alphabet._verify_alphabet function because it
+            # only works for single alphabet
+            for i in self.rf_table:
+                if self._data[i:i + 3] not in alphabet.letters and not self.is_ambiguous_codon(self._data[i:i + 3]):
+                    raise ValueError("Sequence contain undefined letters from"
+                                     " alphabet "
+                                     "({0})! ".format(self._data[i:i + 3]))
+        else:
+            # if gap_char in self._data:
+            #    assert  len(self) % 3 == 0, \
+            #            "Gapped sequence length is not a triple number"
+            assert isinstance(rf_table, (tuple, list)), \
+                    "rf_table should be a tuple or list object"
+            assert all(isinstance(i, int) for i in rf_table), \
+                    "elements in rf_table should be int that specify " \
+                  + "the codon positions of the sequence"
+            seq_ungapped = self._data.replace(gap_char, "")
+            for i in rf_table:
+                if seq_ungapped[i:i + 3] not in alphabet.letters:
+                    raise ValueError("Sequence contain undefined letters "
+                                     "from alphabet "
+                                     "({0})!".format(seq_ungapped[i:i + 3]))
+            self.rf_table = rf_table
+
+    def is_ambiguous_codon(self, codon):
+        return ('N' in codon.upper()) and self.enable_undef
+
+
 class Settings():
 
     def __init__(self):
@@ -339,7 +383,7 @@ class NaiveFitch(object):
             if not l.is_leaf():
                 l.del_feature('reassigned')
                 l.del_feature('rea')
-            elif l.lost and l.state == self.dest_aa:
+            elif l.lost and (l.state == self.dest_aa or l.count < self.settings.COUNT_THRESHOLD):
                 l.add_features(reassigned={0})
                 l.add_features(rea=self.corr['0'])
                 l.add_features(state=self.ori_aa)
@@ -544,10 +588,11 @@ class NaiveFitch(object):
 
             # Apply node style
             for n in self.tree.traverse():
-                if n.reassigned == {1}:
-                    n.set_style(rea_style)
-                elif len(n.reassigned) > 1:
-                    n.set_style(other_style)
+                if not n.is_leaf():
+                    if n.reassigned == {1}:
+                        n.set_style(rea_style)
+                    elif len(n.reassigned) > 1:
+                        n.set_style(other_style)
                 if 'lost' in n.features and n.lost:
                     n.set_style(prob_lost)
 
@@ -563,14 +608,15 @@ class SequenceSet(object):
         # concatenation was already done
         self.codontable = CodonTable.unambiguous_dna_by_id[abs(table_num)]
 
-        self.prot_align, self.dna_dict, self.gene_limits = coreinstance.concat()
+        self.prot_dict, self.dna_dict, self.gene_limits = coreinstance.concat()
+        self.prot_align = MultipleSeqAlignment(self.prot_dict.values())
         self.compute_current_mat()
         self.core = coreinstance
         self.phylotree = phylotree
         self.common_genome = []
-        self.prot_dict = SeqIO.to_dict(self.prot_align)
         self.restrict_to_common()
         self.codon_align()
+
 
     def compute_current_mat(self):
         suminfo = AlignInfo.SummaryInfo(self.prot_align)
@@ -584,7 +630,7 @@ class SequenceSet(object):
         self.lo_mat = SubsMat._build_log_odds_mat(self.subs_mat)
 
     def get_genes_per_species(self):
-        """ Return the number of genes that spec"""
+        """ Return the number of genes in each species"""
         gene_in_spec = {}
         for spec in self.common_genome:
             gene_in_spec[spec] = np.sum(
@@ -651,35 +697,56 @@ class SequenceSet(object):
             self.restrict_to_common()
         # build codon alignment and return it
         codon_aln = []
+        undef_codon = set([])
         for g in self.dna_dict.keys():
-            codon_rec = self._get_codon_record(self.dna_dict[g], self.prot_dict[
-                                               g], self.codontable, alphabet)
+            codon_rec, undef_c = self._get_codon_record(self.dna_dict[g], self.prot_dict[g], self.codontable, alphabet)
+            undef_codon.update(undef_c)
             codon_aln.append(codon_rec)
 
         self.codon_alignment = codonalign.CodonAlignment(
             codon_aln, alphabet=alphabet)
+        if undef_codon:
+            undef_codon = sorted(list(undef_codon))
+            R_aa_position = np.asarray(xrange(current_alignment.get_alignment_length()))
+            R_aa_position = np.setxor1d(tt_filter_position, np.asarray(undef_codon))
+            self.prot_align = self.filter_align_position(self.prot_align, R_aa_position, alphabet=generic_protein)
+            self.prot_dict = SeqIO.to_dict(self.prot_align)
+            self.codon_alignment = next(self.filter_codon_alignment((R_aa_position,)))
+            # remove all the position with undef codon from the dna_dict
+            for k in dna_dict.keys():
+                cur_seq = dna_dict[k].seq
+                dna_dict[k] = SeqRecord(Seq("".join([cur_seq[x*3:(x+1)*3] for x in undef_codon]), generic_nucleotide), id=k, name=k)
+            
         #self.codon_alignment = codonalign.build(self.prot_align, self.dna_dict, codon_table=self.codontable)
 
     def _get_codon_record(self, dnarec, protrec, codontable, alphabet, gap_char='-'):
         nuc_seq = dnarec.seq.ungap(gap_char)
         codon_seq = ""
         aa_num = 0
-        max_error = 10
+        max_error = 1000
+        x_undecoded = []
         for aa in protrec.seq:
             if aa == gap_char:
                 codon_seq += gap_char * 3
             else:
                 next_codon = nuc_seq._data[aa_num * 3: (aa_num + 1) * 3]
-                if not str(Seq(next_codon.upper()).translate(table=codontable)) == aa.upper():
+
+                if 'N' in next_codon.upper():
+                    x_undecoded.append(aa_num)
+                    if aa.upper() != 'X':
+                        logging.warn("%s(%s %d) decoded by undefined codon %s(%s)"
+                                 % (protrec.id, aa, aa_num, dnarec.id, next_codon))
+                        max_error -= 1
+                elif not str(Seq(next_codon.upper()).translate(table=codontable)) == aa.upper():
                     logging.warn("%s(%s %d) does not correspond to %s(%s)"
                                  % (protrec.id, aa, aa_num, dnarec.id, next_codon))
                     max_error -= 1
                 if max_error <= 0:
                     raise ValueError(
-                        "You're obviously using the wrong genetic code")
+                        "You're obviously using the wrong genetic code or you have too much undefined codon coding for Amino acid")
                 codon_seq += next_codon
                 aa_num += 1
-        return SeqRecord(CodonSeq(codon_seq, alphabet), id=dnarec.id)
+        return SeqRecord(CodonSeq(codon_seq, alphabet, enable_undef=True), id=dnarec.id), x_undecoded
 
     def filter_codon_alignment(self, ind_array=None, get_dict=False, alphabet=default_codon_alphabet):
         """Return the codon aligment from a list of in array"""
@@ -731,7 +798,7 @@ class SequenceSet(object):
             max_val = max(align_info.ic_vector.values()) * \
                 ((abs(ic_thresh) <= 1 or 0.01) * abs(ic_thresh))
             ic_pos = (np.asarray(align_info.ic_vector.values())
-                      > max_val).nonzero()
+                      >= max_val).nonzero()
             logging.debug(
                 "Filtering with ic_content, vector to discard is %s" % str(ic_pos[0]))
             # ic_pos here is a tuple, so we should access the first element
@@ -839,6 +906,12 @@ class SequenceSet(object):
         """Return the total number of genomes. This should be genome present in dna, prot and tree """
         return len(self.common_genome)
 
+    def get_genome_size(self, aligntype='global'):
+        use_alignment = self.prot_align
+        if aligntype == 'filtered':
+            use_alignment =  self.filt_prot_align
+        gsize = dict((k, len(v.seq.ungap())) for k, v in SeqIO.to_dict(use_alignment))
+        return gsize
 
 class ReaGenomeFinder:
 
@@ -1036,6 +1109,8 @@ class ReaGenomeFinder:
         self.possible_aa_reassignation()
         codon_align, fcodon_align = self.seqset.get_codon_alignment()
         self.reassignment_mapper['genes'] = self.seqset.get_genes_per_species()
+        self.reassignment_mapper['genome']['global'] = self.seqset.get_genome_size()
+        self.reassignment_mapper['genome']['filtered'] = self.seqset.get_genome_size("filtered")
         for aa1, aarea in self.aa2aa_rea.items():
             aa_alignment = self.seqset.aa_filt_prot_align[aa_letters_1to3[aa1]]
             gcodon_rea = CodonReaData((aa1, aarea), self.seqset.prot_align, self.global_consensus, codon_align,
@@ -1094,19 +1169,16 @@ class ReaGenomeFinder:
                     g_rea_dist = gcodon_rea.get_rea_aa_codon_distribution(
                         genome, aa2)
                     g_total_rea_dist = gcodon_rea.get_total_rea_aa_codon_distribution(genome, aa2)
-                    gdata['global'] = {'rea_codon': greacodon, 'used_codon': gusedcodon,
-                                       'mixte_codon': gmixtecodon, 'count': leaf.count, 'rea_distribution': g_rea_dist, 'total_rea_distribution': g_total_rea_dist}
+                    gdata['global'] = {'rea_codon': greacodon, 'used_codon': gusedcodon, 'mixte_codon': gmixtecodon,
+                                     'count': leaf.count, 'rea_distribution': g_rea_dist, 'total_rea_distribution': g_total_rea_dist}
                     freacodon = fcodon_rea.get_reacodons(genome, aa2)
                     fusedcodon = fcodon_rea.get_usedcodons(genome, aa2)
                     fmixtecodon = fcodon_rea.get_mixtecodons(genome, aa2)
-                    f_rea_dist = fcodon_rea.get_rea_aa_codon_distribution(
-                        genome, aa2)
+                    f_rea_dist = fcodon_rea.get_rea_aa_codon_distribution(genome, aa2)
                     f_total_rea_dist = fcodon_rea.get_total_rea_aa_codon_distribution(genome, aa2)
-
-                    gdata['filtered'] = {'rea_codon': freacodon, 'used_codon': fusedcodon,
-                                         'mixte_codon': fmixtecodon, 'count': leaf.filter_count, 'rea_distribution': f_rea_dist, 'total_rea_distribution': f_total_rea_dist}
-                    gdata['suspected'] = self.suspected_species[
-                        aa1].get(genome, 0)
+                    gdata['filtered'] = {'rea_codon': freacodon, 'used_codon': fusedcodon, 'mixte_codon': fmixtecodon, 
+                                         'count': leaf.filter_count, 'rea_distribution': f_rea_dist, 'total_rea_distribution': f_total_rea_dist}
+                    gdata['suspected'] = self.suspected_species[aa1].get(genome, 0)
                     gdata['score'] = {'global' : gcodon_rea.get_score(genome, aa2, aa1), 'filtered' : fcodon_rea.get_score(genome, aa2, aa1)}
 
                     gdata['lost'] = {'pval': pval, 'pass' : 1 if leaf.lost else 0}
@@ -1260,6 +1332,7 @@ class CoreFile:
                 "Can't find genes present in protein and nucleotide file.")
         logging.debug('List of selected genes : %s ' % str(self.genes))
 
+        self.true_spec_list = set().union(*self.common_spec_per_gene.values())
         if (stop_removed and has_stop):
             self.clean_stop()
             logging.debug('Stop codon removed for sequences')
@@ -1275,7 +1348,7 @@ class CoreFile:
             logging.debug(
                 'Sequence is already aligned but refine was requested')
             for g in self.genes:
-                alignment[g] = self.__class__.refine(alignment[
+                alignment[g] = self.__class__._refine(alignment[
                                                      g], 9999, settings.OUTDIR, settings.hmmbuild, settings.hmmalign, settings.eslalimanip, settings.eslalimask)
 
         self.alignment = alignment
@@ -1300,22 +1373,25 @@ class CoreFile:
             lastpos += al_len
             spec_dict = dict((x.id, x) for x in cur_al)
             dna_spec_dict = dict((x.id, x) for x in self.dnasequences[gene])
-            for spec in self.common_spec_per_gene[gene]:
+            for spec in self.true_spec_list:
                 # default , put missing data
                 adding = SeqRecord(
                     Seq(missing * al_len, alpha), id=spec, name=spec)
-                if(spec in spec_dict.keys()):
+                dna_adding =  SeqRecord(
+                    Seq("", generic_nucleotide), id=spec, name=spec)
+                if(spec in self.common_spec_per_gene[gene]):
                     adding = spec_dict[spec]
+                    dna_adding = dna_spec_dict[spec]
                 try:
                     align_dict[spec] += adding
                 except (KeyError, ValueError):
                     align_dict[spec] = adding
                 try:
-                    dna_dict[spec] += dna_spec_dict[spec]
+                    dna_dict[spec] += dna_adding
                 except (KeyError, ValueError):
-                    dna_dict[spec] = dna_spec_dict[spec]
+                    dna_dict[spec] = dna_adding
 
-        return MultipleSeqAlignment(align_dict.values()), dna_dict, genepos
+        return align_dict, dna_dict, genepos
 
     def align(self, settings, msaprog, refine=True, tree=None, scale=1.0, alpha=generic_protein):
         alignment = {}
@@ -1326,13 +1402,13 @@ class CoreFile:
             al = self.__class__._align(
                 self.sequences[gene], msaprog, tree, scale, outdir, alpha)
             if refine:
-                al = self.__class__.refine(
+                al = self.__class__._refine(
                     al, 9999, outdir, settings.hmmbuild, settings.hmmalign, settings.eslalimanip, settings.eslalimask)
             alignment[gene] = al
         return alignment
 
     @classmethod
-    def _align(clc, msa, msaprog, tree, scale, outdir, alpha, is_aligned=False):
+    def _align(clc, msa, msaprog, tree, scale, outdir, alpha=generic_protein, is_aligned=False):
         """Realign a msa according to a tree"""
         tmpseq = os.path.join(outdir, "tmp_seq.fasta")
         align_seq = os.path.join(outdir, "tmp_msa.fasta")
@@ -1359,7 +1435,7 @@ class CoreFile:
         return msa
 
     @classmethod
-    def refine(clc, alignment, timeout, outdir, hmmbuild="hmmbuild", hmmalign="hmmalign",
+    def _refine(clc, alignment, timeout, outdir, hmmbuild="hmmbuild", hmmalign="hmmalign",
                eslalimanip="esl-alimanip", eslalimask="esl-alimask", loop=10, minqual=9, clean=True):
         """Align and refine at the same time with hmmalign and muscle"""
 
@@ -1499,6 +1575,30 @@ class CoreFile:
             for gene, sequences in clc._internal_coreparser(handle, alphabet):
                 core_dict[gene] = sequences
         return core_dict
+
+    @classmethod
+    def translate(clc, core_inst, gcode=1):
+        codontable = CodonTable.unambiguous_dna_by_id[1]
+        try :
+            codontable = CodonTable.unambiguous_dna_by_id[abs(gcode)]
+        except:
+            logging.warn("Wrong genetic code, resetting it to 1")
+
+        if not isinstance(core_inst, dict):
+            core_inst =  clc.parse_corefile(core_inst, alphabet=generic_nucleotide)
+
+        core_prot_inst = {}
+        for gene, seqs in core_inst.items():
+            translated = []
+            for s in seqs:
+                if len(s)%3 != 0:
+                    raise ValueError("Frame-shifting detected in %s : [%s], current version does not supported it."%(s.id, gene))
+                else:
+                    trans_s = Seq("".join([codontable.forward_table.get(s[i:i+3], 'X') for i in xrange(0, len(s), 3)]), generic_protein)
+                    translated.append(SeqRecord(trans_s, id=s.id, name=s.name))
+            core_prot_inst[gene] = translated
+
+        return core_prot_inst
 
     @classmethod
     def _internal_coreparser(clc, handle, alphabet):
@@ -1671,7 +1771,7 @@ def chi2_is_possible(obs):
 
 @timeit
 def execute_alignment(cmdline, inp, out):
-    """Execute the mafft command line"""
+    """Execute the aligner command line"""
     prog = 'mafft'
     if 'muscle' in cmdline:
         prog = 'muscle'
@@ -1699,7 +1799,7 @@ def check_align_upgrade(al1, al2, settings, method="wilcoxon", column_list=None)
     if not column_list:
         column_list = range(al_len)
     
-    assert (nspec, al_len == len(al2), len(al2[0])), "The alignement are different"
+    assert (nspec == len(al2) and al_len == len(al2[0])), "The alignement are different"
     al1_sim, al2_sim = compute_SP_per_col(al1, al2, column_list, nspec, scoring_method)
     rank, pval = ReaGenomeFinder.get_paired_test(al1_sim, al2_sim, 1, method)
     return pval
