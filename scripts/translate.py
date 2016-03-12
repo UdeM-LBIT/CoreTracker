@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 from Bio import SeqIO
-from utils import CoreFile, purge_directory
+from coreutils import SequenceLoader
+import coreutils.utils as utils
 from Bio import AlignIO
 import sys
 import warnings
@@ -35,7 +36,7 @@ parser.add_argument('--hmmdir', dest='hmmdir',
 
 
 args = parser.parse_args()
-purge_directory(args.outdir)
+utils.purge_directory(args.outdir)
 
 dnafile = args.dnafile
 gcode = args.gcode
@@ -59,14 +60,14 @@ if args.hmmdir:
 
 # translate here
 print hmmfiles
-translated_prot = CoreFile.translate(dnafile, gcode)
+translated_prot = SequenceLoader.translate(dnafile, gcode)
 alignment = {}
 
 if align:
     for (gene, seqs) in translated_prot.items():
-        al = CoreFile._align(seqs, prog, None, 1.0, args.outdir)
+        al = SequenceLoader._align(seqs, prog, None, 1.0, args.outdir)
         if args.refine:
-            al = CoreFile._refine(al, 9999, args.outdir, loop=10,
+            al = SequenceLoader._refine(al, 9999, args.outdir, loop=10,
                                   clean=args.noclean, hmmfile=hmmfiles.get(gene, None))
         alignment[gene] = al
 

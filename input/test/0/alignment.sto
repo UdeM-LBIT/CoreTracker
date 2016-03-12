@@ -1,0 +1,293 @@
+# STOCKHOLM 1.0
+
+#=GS Drosophila     DE <unknown description>
+#=GS Halocynthia    DE <unknown description>
+#=GS Ciona          DE <unknown description>
+#=GS Homo           DE <unknown description>
+#=GS Terebratulina  DE <unknown description>
+#=GS Patiria        DE <unknown description>
+#=GS Balanoglossus  DE <unknown description>
+#=GS Myxine         DE <unknown description>
+#=GS Acropora       DE <unknown description>
+#=GS Saccoglossus   DE <unknown description>
+#=GS Blanceolatum   DE <unknown description>
+#=GS Geodia         DE <unknown description>
+#=GS Daphnia        DE <unknown description>
+#=GS Caenorhabditis DE <unknown description>
+#=GS Katharina      DE <unknown description>
+#=GS Schistosoma    DE <unknown description>
+#=GS Trichinella    DE <unknown description>
+#=GS Epigonichthys  DE <unknown description>
+#=GS Bfloridae      DE <unknown description>
+#=GS Metridium      DE <unknown description>
+#=GS Paracentrotus  DE <unknown description>
+#=GS Lumbricus      DE <unknown description>
+#=GS Fasciola       DE <unknown description>
+#=GS Limulus        DE <unknown description>
+#=GS Axinella       DE <unknown description>
+
+Drosophila             .....................................................................................................................................................mlkiiffllflipfcfinniywmvqiiiffirfifllinnfinywseisyf
+#=GR Drosophila     PP .....................................................................................................................................................***************************************************
+Halocynthia            .................................................................................................................................................vlgvlivliflvsflsfggrfsllwvsllilvgfilklyifnykywwsfelcsml
+#=GR Halocynthia    PP .................................................................................................................................................*******************************************************
+Ciona                  .........................................................................................................................................................vylilvpivflfyhkkfmiwflfyrffllfsilpiilktreivfsnh
+#=GR Ciona          PP .........................................................................................................................................................***********************************************
+Homo                   ......................................................................................................................................................mlklivptiillpltwlskkhiiwinttthsliisiipllffnqinnnlf
+#=GR Homo           PP ......................................................................................................................................................**************************************************
+Terebratulina          ...................................................................................................................................................mialflasssrlitrlinkanwtpvphslfivtflwlaslnsetlsfssfsti
+#=GR Terebratulina  PP ...................................................................................................................................................*****************************************************
+Patiria                ...................................................................................................................................................miyliltstltlattwivprkllwpssilksilisvirlnllknhstslwhkl
+#=GR Patiria        PP ...................................................................................................................................................*****************************************************
+Balanoglossus          ................................................................................................................................................................................mttitlfslailiaslttprqylw
+#=GR Balanoglossus  PP ................................................................................................................................................................................************************
+Myxine                 .......................................................................................................................................................mlktifsliaiipitlsfkkqffwtafisssflmpflffiftplsfnss
+#=GR Myxine         PP .......................................................................................................................................................*************************************************
+Acropora               ......................................................................................................................vfglnnglsliffllfmgginvmkvsredgvklkkvalewslailisvlvlwgafdlegqfqiinriewivspalnfqwgpg
+#=GR Acropora       PP ......................................................................................................................******************************************************************9999999999999999
+Saccoglossus           ...............................................................................................................................................................................mltltffslgititalivpgrwlwp
+#=GR Saccoglossus   PP ...............................................................................................................................................................................*************************
+Blanceolatum           ..................................................................mshliigyvglvlsvmvcgsrviwrigqvgglllallalrltrlnfcvssvsgiivgdfmsvgltvlriwllpliliasqrhivsesilyqrvfiicqvfltgalvlaflardlliilyciwiyftayananhp
+#=GR Blanceolatum   PP ..................................................................****************************************************************************9999998888887777777777777777777777777777777777777777777777
+Geodia                 ....................................................................................................................................mlelvalfpvmgilnilviireddirlkkialewslltltatillwasfdgegqfqaiknfewvpgsa
+#=GR Geodia         PP ....................................................................................................................................********************************************************************
+Daphnia                ....................................................................................................................................................mlkfilmgscitlffsnwgvavtllffiafvfgvgisgfglglvnliqvdli
+#=GR Daphnia        PP ....................................................................................................................................................****************************************************
+Caenorhabditis         ........................................................................................................................................................................lleflfisllwlfkpiyfllftvmfrflifnn
+#=GR Caenorhabditis PP ........................................................................................................................................................................********************************
+Katharina              ........................................................................................................................................................isafstvitknskinwykiswishfiffiitlnffspinipkinyexf
+#=GR Katharina      PP ........................................................................................................................................................************************************************
+Schistosoma            ..............................................................................................................................................mfagfywfikgliyrlllglivwchqyciglsysrikiclinglfirdclrflmvllv
+#=GR Schistosoma    PP ..............................................................................................................................................**********************************************************
+Trichinella            .........................................................................................................................................................................mmrnfgrvlvfmafgflwwvlvgvfgsvsml
+#=GR Trichinella    PP .........................................................................................................................................................................*******************************
+Epigonichthys          .....................................................................................................................................................mfniilgyvglaiivvvcnnafmwrltqvislllvlpvlklislnmrlsyv
+#=GR Epigonichthys  PP .....................................................................................................................................................***************************************************
+Bfloridae              ...........................................................................................................................................................mnhlvlgyvglvigvivtkksivwrvgqvgrvllilpatvlvnin
+#=GR Bfloridae      PP ...........................................................................................................................................................*********************************************
+Metridium              ......................................................................................................................mifhknwlgliflllflgiinvmrvprdnsvklkrtalewslatltatlilwaafdmegqfqtinqtewivppalnfkwgpl
+#=GR Metridium      PP ......................................................................................................................**********************************************************************************
+Paracentrotus          ......................................................................................................................................................mitlilfttgivmttlvipqkklwanaisqrallslsspllifskhwsap
+#=GR Paracentrotus  PP ......................................................................................................................................................**************************************************
+Lumbricus              ...................................................................................................................................................mlklqivlisllllplivnlypwiialtlralllptcfnlvnrasysifteyi
+#=GR Lumbricus      PP ...................................................................................................................................................*****************************************************
+Fasciola               ...........................................................................................................................................................vgfqkfdwycwclgvgglvlikglllllsgigmwllglyyvefgv
+#=GR Fasciola       PP ...........................................................................................................................................................*********************************************
+Limulus                ......................................................................................................................................................mlgififlfilslctfvcsweviqfglffvsflsllfiyrfsgfncfsli
+#=GR Limulus        PP ......................................................................................................................................................**************************************************
+Axinella               ..............................................................................................................................mlglvfvfplvgiflllitprenitrlrkialewslftltatillwasfdgegqfqsikkvewipgvepvfgpa
+#=GR Axinella       PP ..............................................................................................................................**************************************************************************
+#=GC PP_cons           ........................................................................................................................................................................................................
+#=GC RF                ........................................................................................................................................................................................................
+
+Drosophila             lgcdilsyglillslwicslillareiinkhnny-----------------------------------------------------------------.--------..........--..----.....-----KNLFLLNIIILLLLLILTFSRIRLF.......IFYLFFERRLIPTLFLILGWGYQPERLQAGLY
+#=GR Drosophila     PP **99999999999999999999999999999995......................................................................................................78899********************.......********************************
+Halocynthia            sfgtrliwflffafkwlsnvirdlarlrhlffrv-----------------------------------------------------------------.--------..........--..----.....------RFYVGLMITLLLFLFIFFSVWNLL.......LFFFMFESTIFPIFLIVGVWGAQPERILANYY
+#=GR Halocynthia    PP ******************************9866.......................................................................................................6688999*****************.......********************************
+Ciona                  fsswsrdsistilivlsilvillsgiiiiernrn-----------------------------------------------------------------.--------..........--..----.....------NYIIISFFFSILFLILFFRSDDLL.......NFLVFFELSILPIFLLIGWWGKRKERIFSNYY
+#=GR Ciona          PP ********************************75.......................................................................................................566777888899999999999999.......9*******************************
+Homo                   scsptfssdplttpllilttwllpltimasqrhl-----------------------------------------------------------------.--------..........--..--SS.....EPLSRKKLYLSILISLQISLIITFTATELI.......IFYIFFETTLIPTLAIITRWGNQPERLNAGTY
+#=GR Homo           PP *******988888888877777777776655542..........................................................................................33.....899***************************.......********************************
+Terebratulina          ctsdlirgelsvlslwisaliiysinptkilrkl-----------------------------------------------------------------.--------..........--..----.....------RSFCIITVFLNITLILAFHSRSLV.......TFFILFETSLIPTIIIILSWGYQPERVQAGLY
+#=GR Terebratulina  PP ********************************86.......................................................................................................679999******************.......********************************
+Patiria                slkfatdptstpliilrswlvpisliariktiqn-----------------------------------------------------------------.--------..........--..----.....HKHINQRTFISLVFTILTALILTFSSLELS.......LFYIAFETTLLPTLTLISRWGAQKERYQARIY
+#=GR Patiria        PP *************************988776543.................................................................................................567899************************.......********************************
+Balanoglossus          anllaqssllallsltllpnhtssswhnltfata-------------------------------------------------------TDSLSTPLIV-LSIWLLPL..........SL..LASWrhlqqEPFPRQRIYAALLCSLTLILIVTFSALDLL.......LFYIAFEATLIPTLIVITRWGYQPERLQAGTY
+#=GR Balanoglossus  PP *****************************99999.......................................................6999999999999999998..........66..5555556669999**************************.......********************************
+Myxine                 flmhlqnklfgydiisaplvflslwilplialas-----------------------------------------------------------------.--------..........--..---QhhikkSPLSYQLLYITILIIIQTLLILTFLSTNLI.......NFYILFESSLIPILLIIFRWGNQKERINAGIY
+#=GR Myxine         PP ***********76555555555555555555443...........................................................................................22334488999*************************.......********************************
+Acropora               vfaldgvslfffvltallipiciliswksikhlf-----------------------------------------------------------------.--------..........--..----.....------KEFLLCLLFLEALLVGVFLVLDLL.......LFYLLFEGILIPMFLLIGVWGSREEKVRASYY
+#=GR Acropora       PP 9999999999999999999999999999999975.......................................................................................................79**********************.......********************************
+Saccoglossus           sllvqssilplitlilllphhssstwhtlstsla-------------------------------------------------------TDSLSSPLII-LSAWLLPL--...sllasR-..---Qhl.skEPLARQRSYLTLLSSLVLSLIITFSALDLI.......LFYIAFEATLVPTLIVITRWGNQPERLQAGTY
+#=GR Saccoglossus   PP ******************************9999.......................................................588888888888888888777...433222......134.4599****************************.......********************************
+Blanceolatum           lrgpkravsswnifyilyvgrvfallvclvgqyq-----------------------------------------------------------------.--------..........--..----.....------------------------------.......--------------------------------
+#=GR Blanceolatum   PP 7777777777776666666666555555555555......................................................................................................................................................................
+Geodia                 lfavdgislffliltalltpicvlisrnsiksli-----------------------------------------------------------------.--------..........--..----.....------KEFLLCLLVIEILLMGVFTVLDLV.......GFYILFEGVLIPMVLIIGIWGSREEKVQAAYY
+#=GR Geodia         PP ********************************97.......................................................................................................689*********************.......********************************
+Daphnia                syflrylsiwilammiiisfyvkdhksfpevflg-----------------------------------------------------------------.--------..........--..----.....-----------LGVGILIFLLVSFGTSDLL.......IYYIAFETTLIPIFLLVMGWGYQPERISASYF
+#=GR Daphnia        PP ***************************9987555............................................................................................................5566889999999999999.......********************************
+Caenorhabditis         fswgglflvldsyrfillivirlfilgiivirek-----------------------------------------------------------------.--------..........--..----.....-----NNNLLILSEILVFICIIFFIPSNII.......ILYMFFELSIFPILVIILGYGSQIEKINSSYY
+#=GR Caenorhabditis PP *********************************6......................................................................................................5678889999***************.......********************************
+Katharina              sdnfsvpliilrcwitgliiisrykilknnnlvr-----------------------------------------------------------------.--------..........--..----.....-------FFLLNVIILNFIIIIVFTQKRLF.......SLYIFFEASLIPTLILILIWGYQPERLQAGIY
+#=GR Katharina      PP *******************************975........................................................................................................68899999*************99.......********************************
+Schistosoma            vtivwafvvmglssmvlylrmiraiivsvvnkal-----------------------------------------------------------------.--------..........--..----.....------------------------------.......LFWFFYELSIISALYLLVKKRLYPERYVARWY
+#=GR Schistosoma    PP **********************************......................................................................................................................................7*******************************
+Trichinella            vgcrdnlryfmvslrfilgmvflvyvvvyvvgfr-----------------------------------------------------------------.--------..........--..----.....----------ELVYVYFVVLVLFFLSDNVM.......MFYVLFEVSIVPIYFIVLGWGNQPERLMAANY
+#=GR Trichinella    PP *****************************99755...........................................................................................................577888999***********.......********************************
+Epigonichthys          ntgftsgvssvalvglsawllpliirarqrhikv-----------------------------------------------------------------.--------..........--..----.....ESFLYQRVFIFCQVVLTGALIVSFLASDLL.......LFYISFEATLLPTLMLITRWGAQKERYQAGTY
+#=GR Epigonichthys  PP **************************99987654.................................................................................................667899************************.......********************************
+Bfloridae              mtisnvryiitrdfvslgltvlsiwllplillas-----------------------------------------------------------------.--------..........--..---QqhivsESLIYQRVFVGCQVFLTGALVLAFIASDLL.......LFYIAFESTLLPTLILITRWGAQKERYQAGTY
+#=GR Bfloridae      PP ***********86555555555555555555443...........................................................................................3344557899**************************.......********************************
+Metridium              flavdgislffliltalltpiciliswnsikfll-----------------------------------------------------------------.--------..........--..----.....------KEFLLCLLFLEVLLMGVFSALDLL.......LFYILFEGILIPMFLLIGVWGSREEKVRASYY
+#=GR Metridium      PP ********************************86.......................................................................................................789*********************.......********************************
+Paracentrotus          whnlsnilasdsisaplialscwlapisliarkk-----------------------------------------------------------------.--------..........--..---Ti..rkQSELNQRTFIIIVIFIAGALIITFSALELL.......LFYVAFETTLIPTLILITRWGAQMERFQAGLY
+#=GR Paracentrotus  PP *********7655555555555555555555544...........................................................................................23..4477899*************************.......********************************
+Lumbricus              ssdimsftlsaltiwvtviiilartkimhlnmyp-----------------------------------------------------------------.--------..........--..----.....------KIFMTNLVILLIILINCFLSPNLI.......IFYIWFEASLIPTIVLIMTWGYQPERSQARIY
+#=GR Lumbricus      PP ********************************86.......................................................................................................67999*******************.......********************************
+Fasciola               fvfdsvsfyfcllslflgislvfvlselglgski-----------------------------------------------------------------.--------..........--..----.....-----------MLVFSLVSSLLCYCCVKGV.......WFWCFYEMSILPLLFLLISESPYSERFIASWY
+#=GR Fasciola       PP **********************************............................................................................................................5778888888888888888.......9*******************************
+Limulus                lggdllsyslfglscwicslmlmarykvyknnne-----------------------------------------------------------------.--------..........--..----.....-----KVKFSFLVVLSLVFLFLRFCCLDLL.......FFYVSFESVLIPTLLMIIGWGGQPERLQAGIY
+#=GR Limulus        PP ***9999999999999999999999988888886......................................................................................................567999*******************.......********************************
+Axinella               lfavdgisiffliltalltpiciliswssirfli-----------------------------------------------------------------.--------..........--..----.....------KEFLLCLLSIEILLMGVFTILDLV.......GFYVLFEGILIPMFLIIGIWGSREEKVQASYY
+#=GR Axinella       PP ********************************97.......................................................................................................689*********************.......********************************
+#=GC PP_cons           .........................................................................................5889999999.99999988..........46..5543.....789999889999999***************.......********************************
+#=GC RF                ..................................xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxx..........xx..xxxx.....xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.......xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+Drosophila             LLFYTLLVSLPILIGIFYVIN.......KIG....SINFYLINNF................MFNYDLLYFCLLCAFLVKIPIFLVYLWLPKAHVEAPVSGSIILAGIILKLGGYGILR.VIS..FLQL.....IN..L..K.......YRFV.......WIRIRLVGGVLVRLVCLRQTDLKALIAYSSVAHIGIVLSGL
+#=GR Drosophila     PP *********************.......***....**********................99*******************************************************.***..****.....98..8..9.......9***.......*****************************************
+Halocynthia            FFIYTILGGFPVMVFIMLGYR.......IFL....RYGLWYLLES...............sFWWRAVYFYFMVSAFLCKIPLFRLHLWLPKAHVEAPVGGSIVLAGLLLKLGGYGVLR.LMS..VVWV.....EF..S..F.......IFVV.......LLGLGVWGSCVCGLVCIRQIDVKSLIAYSSVGHISLSFRGL
+#=GR Halocynthia    PP *****************9998.......777....7777666666...............7*********************************************************.999..9999.....88..8..8.......99**.......*****************************************
+Ciona                  FFLYTLVTSLPIFILILKTLT......lRIE....SITIYNFYAIqi............swF-----IFILLVLRFLTKLPIYRLHIWLPKAHVDAPVRRSMVLARILLKIRRFRIIR.CFI..LLREe...vKL..T..Y.......SVFF.......IIFLGVWRLLFSRIICLRLTDFKVIVAFSSVSHISLSVSGL
+#=GR Ciona          PP ***********9998886554......1445....555555555577............897.....7999***********************************************.888..88764...456..6..7.......7778.......8999*************************************
+Homo                   FLFYTLVGSLPLLIALIYTHN.......TLG....SLNILLLTLTaqe..........lsnSWANNLIWLAYTIAFIVKIPLYGLHLWLPKAHVEAPIAGSIVLAAVLLKLGGYGIIR.LTL..ILNP.....LT..K..H.......IAYP.......FLVLSLWGIIITSSICLRQTDLKSLIAYSSISHIALVVTAI
+#=GR Homo           PP *********************.......9**....***999999999*..........***9********************************************************.***..****.....**..*..*.......****.......*****************************************
+Terebratulina          ILFYTLAASLPLLVNIIFLNI.......ERN....HSSFFSPYIVgpt..........tqlSAAPALWWLIIILAFLVKIPIFVSHLWLPKAHVEAPVAGSIILAGVLLKLGGFGLIR.VRA..PFII.....IR..P..K.......VLPG.......LSRFCLWGGLLTRLICLRQRDIKALIAYASIGHIAIIMAAA
+#=GR Terebratulina  PP *******************85.......344....4444444444467..........9*99999*****************************************************.888..8866.....66..5..7.......8899.......999**************************************
+Patiria                FLFYTLIGSLPLLVSIIAIFS-...yekTII....LPSIHLTKYIt-...........slpITLTSIWWIFCFIAFIIKMPIYGFHLWLPKAHVEAPIAGSMILAAILLKLGGYGLLR.TIP..LFYT.....PS.sL..L.......LSPP.......ATAFCIWGALITRIICLRQTDLKALIAYSSVGHMSIVASGI
+#=GR Patiria        PP ******************9644...222667....7778888888**...........***999******************************************************.888..8877.....56.26..9.......****.......*****************************************
+Balanoglossus          FLFYTLFGSLPLLIALFSIYT.......STA....SVRIPLTILSsdl.........aqfsINSLTLWCVASIIAFLAKLPIYGTHLWLPKAHVEAPIAGSMILAAILLKLGGYGLVR.FSE..IFSY.....PT..N..A.......STTP.......IMIICIWGALATRLICVRQTDMKALIAYSSVGHMSLVAAGT
+#=GR Balanoglossus  PP ********************9.......999....999999888889*.........**987788999999***********************************************.***..****.....99..9..9.......9***.......*****************************************
+Myxine                 LSFYTLIGSLPLLASLLFLSN.......TLS....TLYIPILIIEs.............seIYHSPILWLGCFSALLIKTPLYGFHLWLPKAHVEATIAGSITLAALILKLGGYGIIR.LSL..MPFL.....HS..P..K.......LSLI.......LISIALWGAVITSFICLRQTDLKALIAYSSVSHMGLITASI
+#=GR Myxine         PP *********************.......999....99999999878.............9*99*******************************************************.776..6644.....44..4..8.......9***.......*****************************************
+Acropora               FFFYTFAGSVFMLLGLFQIYS.......VTG....TTDYQILLNIk.............lpVTTQKWVLAGIFLSLAVKIPQIPFHIWLPQAHVEAPVSGSVILAGILLKLGGYGFLRfSWP..ILPA.....AS..E..Y.......FAPL.......IIMLGVVAIIYGGLLTCRQVDFKRLIAYSSVAHMGLVPLGL
+#=GR Acropora       PP *********************.......***....***********.............**99*******************************************************9999..9999.....98..9..*.......****.......*****************************************
+Saccoglossus           FLFYTLFGSFPLLISLLSLLS.......LTS....SASIPLSSLNdlst........lefsNPSLALWWIASIIAFLAKLPIYGLHLWLPKAHVEAPIAGSMILAAILLKLGGYGLVR.ITA..LFSL.....PN..S..F.......ASEP.......IITFCIWGGLITSIICIRQTDMKALIAYSSVGHMSLVAAGI
+#=GR Saccoglossus   PP ******************998.......777....77777777666789........9998777899***************************************************.***..****.....99..9..9.......****.......*****************************************
+Blanceolatum           ---------------------.......LNG....SLAFNTIYSGfg............nsNYLVNFWWLGCILAFLVKLPLYGAHLWLPKAHVEAPIAGSIVLAGVLLKLGGYGIMR.VSY..IWGP.....AA..M..L.......SSEV.......VLGLALWGIASIGAICLRQTDLKSLIAYSSVGHIALVVGGI
+#=GR Blanceolatum   PP ............................567....777777777778............8888999****************************************************.***..****.....99..9..9.......9***.......*****************************************
+Geodia                 FFFYTFIGSVFMLLAIFFLYD.......QVG....TTDYQALCCQq.............yeRELQYFIFIGFFLSLAIKIPKIPFHIWLPQAHVEAPVAGSVILAGILLKLGGYGFIRfSWP..LLPE.....AS..E..Y.......FAPF.......IRILSLLAIIYGSLTTCRQVDLKRIVAYSSVAHMGLVTLSL
+#=GR Geodia         PP *********************.......***....*****999999.............9*999******************************************************8888..8888.....88..9..*.......****.......*****************************************
+Daphnia                LLFYTLAASLPLLLGILWVNF.......TDC....SLDYFFLGQG...............aQFSNPILFWLILLAFLVKLPVYFGHLWLPKAHVEAPVAGSIILAGVLLKLGGYGIVR.VVP..YIEL.....SL..S..E.......FSSF.......LMRVRLVGGVTASVICIRQTDCKSLVAYSSVAHIALVLLGV
+#=GR Daphnia        PP ********************8.......777....7777777777...............899*******************************************************.***..****.....98..8..9.......****.......*****************************************
+Caenorhabditis         LIFYAAFCSFPFLFVYFKSNF.......LLV....FTYYNFVISW................E-----IFFILSLRFIIKFPIYFLHLWLPKAHVEAPTTARILLAGLLLKLGTAGFLR.ILG..SLRF.....V-..-..-.......HNNV.......WILIAFLGIILGSFCCVFQRDSKALAAYSSVTHIRFLLLSL
+#=GR Caenorhabditis PP *****************9998.......99*....**********................8.....89*************************************************.999..8865.....5..............6899.......999**************************************
+Katharina              IIIYTILGALPFLINIFFIYS.......HNA....HLNLLIIISLpi...........ipyQAIISFWWLFIILVFLVKLPIYSFHLWLPKAHVEAPVAGSIILAALLLKLGGYGINTiNNN..IFKY.....-N..F..V.......LNYF.......IITLGLVGGVLRSLICLRQRDIKALIAYSSVGHIGLILAGL
+#=GR Katharina      PP ********************9.......888....888888887778...........9**88999**************************************************994455..5555......5..6..7.......9***.......*****************************************
+Schistosoma            MIGYVLLRGVPLLICILLVSL.......SEG....GFKILCWGND................NNELRLLYFIMVIMFCTKIPLVPFHRWLPIVHAEASRPVRVVLRGYIMKLGIVGVLR.VCS..RWLV.....-N..N..Y-...vssVVAV.......IFMVSLV----FMCWAYAEVDSKRWLAVLSLLHIVVRVVIL
+#=GR Schistosoma    PP ********************9.......9**....********99................999******************************************************.999..9966......4..4..44...2233344.......4444444....4456789***********************
+Trichinella            LVVYTLMFSFPLLVLIIRF--.......-LV....DCSVVGWASV................VWVNRVVMVIILLPFVVKLPVYLFHLWLPKAHVEAPVLGRMILASILLKTGGYGLVK.VSG..LNVG.....--..-..-.......-SGC-...vfgLVGLLLFLSLLSAVTTVVQNDLKKFVAYSSVTHMTMVLGL-
+#=GR Trichinella    PP **************99954..........45....5778889999................*********************************************************.988..8743.....................3223...23456666667777778899******************99765.
+Epigonichthys          FIFYTIAGSLPLLVCLIGQYQ.......LMG....RTNIDIEYTNil............sySYFINLWWLGCILAFLVKLPLYGGHLWLPKAHVEAPIAGSIVLAGVLLKLGGYGIIR.VGG..VWGA.....KA..L..I.......SREL.......VLGLGLWGVVVIGAICLRQTDIKSLIAYSSVGHMALVVGGI
+#=GR Epigonichthys  PP ********************9.......999....999999888889............9*999******************************************************.***..**99.....77..7..8.......9***.......*****************************************
+Bfloridae              FMFFTLVGSLPLLICLIGQYQ.......IVG....SLALDLSYEGvf............qlRYLVNFWWVGCILAFLVKLPLYGVHLWLPKAHVEAPIAGSIVLAGVLLKLGGYGIMR.VSL..IWGA.....TA..I..L.......SREV.......FLALALWGIVVIGGICLRQTDLKSLIAYSSVGHIALVVGGV
+#=GR Bfloridae      PP *********************.......9**....***999999899............9*999******************************************************.***..**99.....76..6..7.......99**.......*****************************************
+Metridium              FFFYTFVGSVFMLLGIFQLYS.......SVG....TTDYQALLNIe.............lpISTQKWIFAGFFLSLAVKIPQVPFHIWLPQAHVEAPVSGSVILAGILLKLGGYGFLRfTWP..ILPA.....AT..E..Y.......FAPF.......VIMLSVIAIIYGSLTTCRQVDLKRLIAYSSVAHMGLVTLGL
+#=GR Metridium      PP *********************.......***....***********.............**99*******************************************************9999..9999.....99..9..*.......****.......*****************************************
+Paracentrotus          FMFYTLFGSLPLLIRLIAIYI.......SSS....SLSIPKVELIwtp..........retMETLKIWWALSIIAFLIKMPIYGFHLWLPKAHVEAPVAGSMILAAILLKLGGYGLIR.LIN..LFAT.....IS.lK..S.......LSLA.......LITFCSWGALVTRIICVRQTDLKALIAYSSVGHMRIVAAAI
+#=GR Paracentrotus  PP ********************9.......899....999988888889*..........**9999******************************************************.999..9999.....87.67..9.......****.......*****************************************
+Lumbricus              LIIYTVAASLPMLIVLCKIFI.......VSK....TAMIPIFINMef...........pidYPSMALAWVLTLGGFLVKLPIFTVHLWLPKAHVEAPIAGSIILAAILLKLGGYGILR.ILR..LFHY.....IA..K..S.......TSRL.......LSRVALVGAVSTRLICLRQSDLKSLIAYSSVGHMGLIVAGA
+#=GR Lumbricus      PP *******************98.......888....888888888888...........998666788999999*********************************************.***..****.....99..9..9.......****.......*****************************************
+Fasciola               LLGYIVFSSLPMLLCILYLGG.......IMG....SYRVQSWSIDcv............gfG-----VFVVLAVMFITKIPLPPFHVWLPIVHAEASRPVSMFLRGYVMKLGLLGVLR.FCY.fLLSG.....--..F..I.......FRYW.......YVGLSLVFALLFFFSASRELDGKRWLAFLRLAHIVVVSVCF
+#=GR Fasciola       PP ********************9.......9**....****99998788............897.....8999***********************************************.885.25544.........6..7.......9***.......*****************************************
+Limulus                MLFYTLCASLPFLVGIFRLYG.......CEG....SAVFYYLELK...............gVSMGWFWFFVFVVAFLVKLPMFLFHLWLPKAHVEAPIAGSMVLAGVLLKLGGYGLFR.VLW..LFQS.....FV..K..S.......QGGW.......LVRVGLIGGLFTRFICMRQVDLKSLIAYSSVGHMGIVLGGV
+#=GR Limulus        PP ********************9.......889....9999988888...............88899*****************************************************.*99..9999.....88..8..8.......8999.......9****************************************
+Axinella               FFFYTFXGSVFMLLAMFTLYS.......YAG....TTDYQVLCCLq.............idKELQYFIFLGFFISFAIKIPKIPFHIWLPQAHVEAPVAGSVLLAGVLLKLGGYGFIRfSWP..LLPE.....AS..E..F.......FAPL.......IQTLSLLAIIYGSLTTCRQVDLKRIIAYSSVAHMGLVTLSL
+#=GR Axinella       PP *********************.......***....******99999.............9*99*******************************************************8888..8888.....88..9..*.......****.......*****************************************
+#=GC PP_cons           *****************9998.......888....8888888888................9999*****************************************************.999..9988.....87..7..8.......9999.......999**************************************
+#=GC RF                xxxxxxxxxxxxxxxxxxxxx.......xxx....xxxxxxxxxx................xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxx..xxxx.....xx..x..x.......xxxx.......xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+Drosophila             LTITYWGLCGS.YTLIIAHGLCSSGLFCLANVSYERLGSRRILINKGLLNF.IPSI-TLWWFLLRSANIAAPPTLNLLGEISLLNRIVSWSWISIILLSFLSFFRA-AYTLYLYSFSQHGKLFSGVY...SFRRGKIREYLL.....ILLHWLPLNLLILKRESFI---l----------------wl-...........
+#=GR Drosophila     PP ***********.***************************************.***************************************************************************...************.....*************998775...8*******************...........
+Halocynthia            LICFFWGFKGR.FLLLLAHRLVSLHYLEQEIVFYERNRSRVLLAIRSYHRR.VSVL-SFFFFFFLACNFRFPPTVNFFRELSLYFGLLEVDFLLLGLLGMRMVITG.--------------------...------------.....-----------------------iamlkfyskv--------fs---rmgvgvf
+#=GR Halocynthia    PP ***********.***********99999999********************.**************************************************9985...............................................................99999999***********************
+Ciona                  ISYYYWRFKRS.YLIFLGHGILSPVLFLFRDLLYKRFHSRHINSLKRLISSsSFMF.YLISLFFFAINFGFPPFVNFFREIRLFISLLSFNILQVFFLIRGFLIA-.--------------------...------------.....----------------------r-ifiinifviirqskkllfq----kiilln
+#=GR Ciona          PP ***********.******************************99999876615677.78888999********************************99998886................................................................5666666667777788899************
+Homo                   LIQTPWSFTGA.VILIIAHGLTSSLLFCLANSNYERTHSRIIILSQGLQTL.LPLI-AFWWLLASLANLALPPTINLLGELSVLVTTFSWSNITLLLTGLNILVTA-LYSLYIFTTTQWGSLTHHIN...NIKPSFTRENTL.....MFIHLSPILLLSLNPDIIT---g-------fs----------...........
+#=GR Homo           PP ***********.***************************************.***************************************************************************...************.....**************99886...7*******************...........
+Terebratulina          FSNSTWAWDGA.LTLIVAHGACSSGIFIAANQWYTQSGSRRLTMRKGLLTI.YPIL-TILWFLLNSANISAPPTINLIGEILLVLAILASNTLVLPILLATTFITG-AYSLYLFSQSTHGTLSEQ--...------------.....----------------------tp---lkpaaksisfsi-----iglhwapln
+#=GR Terebratulina  PP ***********.***************************************.********************************************************************98865............................................79*****************************
+Patiria                FSLSLWGIKGA.LTLMIAHGLISSALFCLAKLLYERKGTRTLSITRGFKMV.TPLL-TLWWTITCVANLGLPPTPNLIGELLILVAIIDWKTLSAPIITMATVFGA-IYSLLILRRTNKSSFPQFLS...KIQPTNTSEHTL.....ITFHLIPLVFLILKPSAIL---i---------------g---...........
+#=GR Patiria        PP ***********.***************************************.***************************************************************************...************.....**************99875...7*******************...........
+Balanoglossus          FSQTTWGIHGR.LILMIAHGLVSSALFCLANLSYERTHTRTLALNRGLKLL.MPLS-TTWWLLTAAANLGLPPLPNLFGELFIINTLISWSPLTLLTTGLMVIFSA-VYSLYLFQSSQHSSQPQYLK...KIQPSFSLEHLN.....MTLHLTPLLLLTLKPELIC---i---------------qwha...........
+#=GR Balanoglossus  PP ***********.***************************************.***************************************************************************...************.....****************997...7*******************...........
+Myxine                 ITLSLWGISGA.FIIMIAHGLSSSALFFLANSNYEKTNTRTIILLRHTQIL.LPLT-SLWWLFIILTNLAMPPSINFISEITIISSLFLWSPLTFPFLALTIVITT-TYSISIFIL-----------...------------.....----------------------aq-gklskitk---ilspfstrehlt-----
+#=GR Myxine         PP ***********.***************************************.*****************************************************99999999865.....................................................5699999999999999999999999999999
+Acropora               FTHTIEGLVAA.VFMMLAHGFVSSALFIAITYLYERHHTRLIKYYRGVTLT.MPVF-VCIMMVLSLSNMGIPLSCNFVGEFFSLLAAVEYNFGLGVLATSGMVWSA-AYSLYLYNRISFGAASNYL-...------------.....----------------------l---firdlnrcella-----isplliaifi
+#=GR Acropora       PP ***********.***************************************.**********************************************************************9987...........................................5888888888888888888888888888888
+Saccoglossus           FSETTWGLNGA.LILMIAHGLISSALFCLANLSYERTFTRTLSLNRGLKLI.TPLS-AAWWLIVSAANLALPPTPNFSGELLIVTNLISWNPWTALFLGLTALFTA-IYSLYLYQSSQHSPNPSSFK...KISQTLTIEHLN.....IFLHLTPLILLIGKPELI----sl---------------aw--..........
+#=GR Saccoglossus   PP ***********.***************************************.************************************************************************999...999999999999.....999999999999999987....68*******************..........
+Blanceolatum           ITGTVWGYNGA.IILMIAHGLVSSCLFSLANFWYERSGTRNLVGSRGVIIL.FPLI-GLGWLSIRLINLALPPAINLFGELISMVAVYNWSIYRIVLISLGAVLTA-GYSLYMFGISQWGDTMKTYK...NLYVITSREYLL.....---------------------------vllhlspavylvfylgli--------
+#=GR Blanceolatum   PP ***********.***************************************.***********************************************************************9988...777777777776...........................55555555555555556677889********
+Geodia                 FSHTVQGLVAA.VFLMLAHGLVSSALFIAVTFLYERHHTRLVRYYRGMVIT.MPLF-GALTLALVLANASIPLSCNFVGEFFSLLAAFEYSYVVGVLASLGTVLSA-GYSIYLYNRVCFGFPS----...------------.....----------------------kfif---ysrdlnrrefyi-----llilvil
+#=GR Geodia         PP ***********.***************************************.*****99999999***************************************************9998555..............................................5678999999999999***************
+Daphnia                VINSSVGLAGV.VTIIISHGLCSSGLFRLVGIIYERMGTRRIILIRSLITL.APLS-TLWWFLFAISNIAAPPSPNLLGEIYLFISSIGWWGGSSLLVGGLSFIAG-AYNLFLFVSTQHGTDS----...------------.....----------------------flsn---rmgdcsfrehlv-----lflhmap
+#=GR Daphnia        PP ***********.***************************************.********************************************************************865..............................................5678999999999999999999999999999
+Caenorhabditis         VFITMSSKIRR.VMLMLAHGYTSTLMFYLIGEFYHTSGRRIIYFISRFFRS.RIII-GILFSVVFLSNRGVPPSLSFLSEFLVISNSILIRKSIFVIIFIYFVVSF-YYSLFLITRSLIGKGYHNF-...------------.....----------------------n---twnvgfsaplvl-----iiynvfwlsv
+#=GR Caenorhabditis PP ***********.**************************************9.9999999*************************************************************998875...........................................7******************************
+Katharina              LSRFEFGLKIA.LLIIIAHGLSSSGLFSIRNIIYEKSGSRRLFITKGFISL.VPTF-RISFFLICSINIAAPPSINLLREAGLIISTVSISKFLIILLALIAFVSA-VYTLFLFTNTQHGKISSFV-...------------.....----------------------n---pfnnfkplyynv-----iflhwipaql
+#=GR Katharina      PP ***********.***************************************.*********************************************************************99865...........................................7999999999999999999999999999999
+Schistosoma            IFGEYNTDLIS.LLYLYGHGCSVSAMFIFIWWGYRCILSRRWLILSTVFCS.VIFI-QVVSVMVFMGASSFPPTLQFFGEVGVAVISLLRQDFVLILSAVMILFGG.--------------------...------------.....----------------------rllglmvlglvins-------------lldr
+#=GR Schistosoma    PP ***********.***********************************9999.998898999999999**************8876665666666666666666554...............................................................4455556677899******************
+Trichinella            VVMGFEVLDSAvVCLMLSHGVLSNSMFFMVGMLSGSSKTRLLFKQQGLLRL.SPVV-WFFLVFLLFIGSRVPPSVGMVGEVSYVVCCVSVCRVNLVLLVLLFVVLL-YYPLWFVCMLAVGKLSGSL-...------------.....----------------------vvgwtlcdlvvrgwipcl---vllywfnral
+#=GR Trichinella    PP 555566665551679************************************.***99999999999999***************************999999998899999999999999887655...........................................56778889999********************
+Epigonichthys          LTSSVWGYTGA.ILLIIAHGLVSSCLFCLANCWYERSGTRNLMRSRGGALL.FPIL-GVIWLVIGLINLALPPSINLFGEMFSMVAIYGWRETTVWLMALGGVLTA-GYTLYLFGASQWGRQIDAHK...NFYLLTGREYLL.....IMLHFVPALYLIP---------gvqmvy--------------------.....
+#=GR Epigonichthys  PP ***********.***************************************.********************************************************************9988877...777777777777.....7777777766665.........556678********************.....
+Bfloridae              LTGVAWGYNGA.IVLMIAHGLVSSCLFCLANLWYERSSTRNLSGSRGLIII.FPLI-SLGWFLISLINIALPPAINLFGELVAIVALYNWSPYSIVYMSLGAVLTA-AYSLYLFGMSQWGNTIKNYK...NLYTITSREYLL.....TTLHLVPAIYLIFYL-------glm---------------------.......
+#=GR Bfloridae      PP ***********.***************************************.**************************************************************************9...999999999999.....999999999888765.......667*********************.......
+Metridium              FTHTIEGLVAA.VFMMLAHGLVSSALFIAVTYLYERHHTRLIKYYRGITFS.MPIF-VSVFLVLTLTNMAIPLSCNFVAEFFSLLAAFEYNIVIGVLAATGMVWSA-AYSLYLYNRVSFGASSNYLL...------------.....-------------------------ftrdlnrrelia-----isplvilifil
+#=GR Metridium      PP ***********.***************************************.**********************************************************************99876..........................................6666666666667777777777777777777
+Paracentrotus          FSSTKWGTKGA.LILMIAYGLVSSDLFSLAKTVYERRGTRTLAITRGLKTI.LPLS-TLWWLVMSAAKLGLPPSPKLIGEILILSSLIAWSIWLFPIIGLATIFGA-IYSLMIFQLSQQGTPTKKIN...KISLSFSREHLL.....ATLHTLPLILIIINPI------sali---------------twlk........
+#=GR Paracentrotus  PP ***********.***************************************.***************************************************************************...************.....9999999999999875......6789*******************........
+Lumbricus              LISSNWGFQAA.LAIIIAHGLSSSALFVIANINYELTHTRSLFLIKGLLVL.APTL-TIWWFLFTARNIAAPPSINLLREIMLITSILKISTSAFILLGLTRFFTA-AYCLYMYTSIHHGPLILTSN...PIPQFKVKDLTL.....ITIHLVPTILIIFKPELI----tr-------------------..........
+#=GR Lumbricus      PP ***********.***************************************.********************************************************************9988777...677777777777.....777777777777777766....68*******************..........
+Fasciola               SFCWFDEASLS.LVYSLGHGLSAGVTFMLLWLLYEVSGSRNWLVLKSAVSG.RLAV-RCILVMCVCSVASVPPTVNFFSEVVILSEVGFSWLFYSLLFCVYLFVGG-LVPVFLLGCLLSRHCT----...------------.....----------------------igyd---rgyvvsyvggiv-----flvvwcy
+#=GR Fasciola       PP ***********.***************************************.*****************************************************999999999998887765..............................................6789***************************
+Limulus                ITLRRWGCGGA.LLLMVAHGLCSSALFCLANVVYERFFSRRLVLLRGIIRV.FPSL-ALWWFLFCVFNMAAPPSINLFGEISLMVRLVGWREWTVVCLGMLSFFSA-YYSLFMFSSTQHGKSWA---...------------.....----------------------vf----ciegvnfrefll-----lllhlvpl
+#=GR Limulus        PP ***********.***************************************.********************************************************************9875.............................................6788888888888888888888888888888
+Axinella               FSHTIQGLVAA.VYLMLAHGLVSSALFIAVTFLYERHYTRLVKYYRGMVIT.MPLF-GVLMLALILANASIPLSCNFIGEFLSILAAFEYSFIVGALASLGMVLSA-GYSIYLYNRVCFGMPSKY--...------------.....----------------------lh---yprdlnrrefyi-----lfsltfiif
+#=GR Axinella       PP ***********.***************************************.*****999999*******************************************************9988776............................................57*****************************
+#=GC PP_cons           ***********.***************************************.****.***********************************************99.*************9988889...999999999999.....9999999999998888876..................................
+#=GC RF                xxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxx...xxxxxxxxxxxx.....xxxxxxxxxxxxxxxxxxxxxx...............................
+
+Drosophila             ..................................................
+#=GR Drosophila     PP ..................................................
+Halocynthia            tegaitprwgyfffifyciy-----------------------------.
+#=GR Halocynthia    PP *************************************************.
+Ciona                  yektti-----flffisyvsmsflfssii---------------------
+#=GR Ciona          PP **************************************************
+Homo                   ..................................................
+#=GR Homo           PP ..................................................
+Terebratulina          liilspeillw-------------------....................
+#=GR Terebratulina  PP ******************************....................
+Patiria                ..................................................
+#=GR Patiria        PP ..................................................
+Balanoglossus          ..................................................
+#=GR Balanoglossus  PP ..................................................
+Myxine                 lflhlfpiiaiiaypniiin---------------ifc-...........
+#=GR Myxine         PP 99999999999999999999*******************...........
+Acropora               fgifpfiiidpvkngvifspggg------.....................
+#=GR Acropora       PP 888888999999*****************.....................
+Saccoglossus           ..................................................
+#=GR Saccoglossus   PP ..................................................
+Blanceolatum           -------------.....................................
+#=GR Blanceolatum   PP *************.....................................
+Geodia                 iylmgifpflaidviksxvifqeevkiaqw--..................
+#=GR Geodia         PP ********************************..................
+Daphnia                fillfpvlshlf--------------------..................
+#=GR Daphnia        PP 9999999*************************..................
+Caenorhabditis         fy---------------------------.....................
+#=GR Caenorhabditis PP *****************************.....................
+Katharina              lillrtt----------------------.....................
+#=GR Katharina      PP 999**************************.....................
+Schistosoma            kgiivmgikgllvyviyfmfigllmfmvv--------------------.
+#=GR Schistosoma    PP *************************************************.
+Trichinella            lv---------------------------.....................
+#=GR Trichinella    PP *****************************.....................
+Epigonichthys          ..................................................
+#=GR Epigonichthys  PP ..................................................
+Bfloridae              ..................................................
+#=GR Bfloridae      PP ..................................................
+Metridium              gvlpsliidpvknaimfspgga------......................
+#=GR Metridium      PP 77777778899*****************......................
+Paracentrotus          ..................................................
+#=GR Paracentrotus  PP ..................................................
+Lumbricus              ..................................................
+#=GR Lumbricus      PP ..................................................
+Fasciola               vmfvvl--------------------------..................
+#=GR Fasciola       PP ********************************..................
+Limulus                nllilnldlwly----------------wf-...................
+#=GR Limulus        PP 88888888999********************...................
+Axinella               lmgifplpivdivkgsvifqeryf---w--....................
+#=GR Axinella       PP ******************************....................
+#=GC PP_cons           ..................................................
+#=GC RF                ..................................................
+//

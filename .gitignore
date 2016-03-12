@@ -60,4 +60,13 @@ target/
 # results
 tmp/*
 result/*
-input/*
+test/*
+scripts/*
+
+wsgi/*
+
+# discard images
+*.png
+*.svg
+*.jpg
+*.pdf
