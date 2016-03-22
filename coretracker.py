@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-
 import argparse
 import glob
 import logging
@@ -7,26 +6,38 @@ import os
 import random
 import sys
 import traceback
-import warnings
 from collections import defaultdict as ddict
 
+from math import log10
 from Bio import SeqIO
 from ete3 import Tree
 
-from utils.classifier import Classifier, getDataFromFeatures, read_from_json
-from settings import Settings, parameters
-from coreutils import *
-import coreutils.utils as utils
+from CoreTracker.coreutils import *
+from CoreTracker.classifier import *
+from CoreTracker.settings import *
 
-warnings.filterwarnings("ignore")
-sys.path.append(os.path.dirname(__file__))
-
+ENABLE_PAR = True
+CPU_COUNT = 0
+try:
+    from multiprocessing import cpu_count
+    CPU_COUNT = cpu_count()
+    from joblib import Parallel, delayed
+except ImportError:
+    try:
+        from sklearn.externals.joblib import Parallel, delayed
+    except:
+        ENABLE_PAR = False
 
 __author__ = "Emmanuel Noutahi"
 __version__ = "1.2"
 __email__ = "fmr.noutahi@umontreal.ca"
 __license__ = "The MIT License (MIT)"
 
+MODELPATH = 'CoreTracker/classifier/model/classifier.plk'
+etiquette = ["fitch", "suspected", "Fisher pval", "Gene frac",
+                    "N. rea", "N. used", "Cod. count", "Sub. count",
+                    "G. len", "codon_lik", "N. mixte" ,"id"] #, 'total_aa']
+selected_feats = [2,3,4,5,6,7,8,9,11]
 
 def testing_a_lot(args, settings):
     t = random.randint(30, 90)
@@ -34,8 +45,8 @@ def testing_a_lot(args, settings):
     return [settings.EXCLUDE_AA, settings.AA_MAJORITY_THRESH, settings.FREQUENCY_THRESHOLD,
             settings.GENETIC_CODE, settings.COUNT_THRESHOLD, settings.LIMIT_TO_SUSPECTED_SPECIES]
 
-def coretracker(args, settings):
-    """Run coretracker on the argument list"""
+def set_coretracker(args, settings):
+    """Set all data for coretracker from the argument list"""
     # Check mafft command input
     progcmd = lambda x: x + ' --auto' if x == 'mafft' else x
 
@@ -66,6 +77,11 @@ def coretracker(args, settings):
         except:
             pass
 
+    clf = Classifier.load_from_file(MODELPATH)
+
+    if clf is None or not clf.trained:
+        raise ValueError("Classifier not found or not trained!")
+
     seqloader = SequenceLoader(input_alignment, args.dnaseq, settings, args.gapfilter, has_stop=args.hasstop,
                     use_tree=args.usetree, refine_alignment=args.refine, msaprog=msaprg,  hmmdict=hmmfiles)
 
@@ -77,35 +93,21 @@ def coretracker(args, settings):
     reafinder = ReaGenomeFinder(setseq, settings)
     reafinder.get_genomes()
     reafinder.possible_aa_reassignation()
-    codon_align, fcodon_align = reafinder.seqset.get_codon_alignment()
-    cod_align = SeqIO.to_dict(fcodon_align)
-    reafinder.set_rea_mapper()
-    clf = Classifier.load_from_file(parameters.MODELPATH)
-    etiquette = ["fitch", "suspected", "Fisher pval", "Gene frac",
-                    "N. rea", "N. used", "Cod. count", "Sub. count",
-                    "G. len", "codon_lik", "N. mixte" ,"id"] #, 'total_aa']
-    selected_feats = [2,3,4,5,6,7,8,9,11]
+    return reafinder, clf
 
-    if clf is None or not clf.trained:
-        logging.error("Classifier not found or not trained!")
-
-    for (fitch, data) in reafinder.run_analysis(codon_align, fcodon_align):
-        s_complete_data = makehash()
-        s_complete_data['aa'][fitch.ori_aa1][fitch.dest_aa1] = data
-        s_complete_data['genome'] = reafinder.reassignment_mapper['genome']
-        X_data, X_labels, _ = classifier.read_from_json(s_complete_data, None, use_global=False)
-        # extract usefull features
-        X_data, _ = classifier.getDataFromFeatures(X_data, etiquette, feats=selected_feats)
-        pred_prob = clf.predict_proba(X_data)
-        pred =  clf.predict(X_data)
-        utils.get_report(fitch, data, reafinder, cod_align, (X_data, X_labels, pred_prob, pred))
-
-    # Print list of interesting cases
-    logging.debug("After validation, %d cases were found interesting" % len(reafinder.interesting_case))
-    for case in reafinder.interesting_case:
-        logging.debug(case)
-
-    reafinder.save_all()
+def compile_result(x, clf, cod_align):
+    """compile result from analysis"""
+    reafinder, fitch, data = x
+    s_complete_data = utils.makehash()
+    s_complete_data['aa'][fitch.ori_aa1][fitch.dest_aa1] = data
+    s_complete_data['genome'] = reafinder.reassignment_mapper['genome']
+    X_data, X_labels, _ = read_from_json(s_complete_data, None, use_global=False)
+    # extract usefull features
+    X_data, _ = getDataFromFeatures(X_data, etiquette, feats=selected_feats)
+    pred_prob = clf.predict_proba(X_data)
+    pred =  clf.predict(X_data)
+    sppval, outdir = utils.get_report(fitch, data, reafinder, cod_align, (X_data, X_labels, pred_prob, pred))
+    utils.print_data_to_txt(os.path.join(outdir,"data.txt"), etiquette, X_data, X_labels, pred, sppval, fitch.dest_aa)
 
 
 if __name__ == '__main__':
@@ -115,7 +117,7 @@ if __name__ == '__main__':
         description='CoreTracker, A codon reassignment tracker newick tree format to mafft format')
 
     parser.add_argument(
-        '--wdir', '--outdir', dest="outdir", help="Working directory")
+        '--wdir', '--outdir', dest="outdir", default="output", help="Working directory")
 
     parser.add_argument('--version', action='version', version='%(prog)s 1.0')
 
@@ -130,9 +132,6 @@ if __name__ == '__main__':
 
     parser.add_argument(
         '--verbose', '-v', choices=[0, 1, 2], type=int, default=0, dest="verbose", help="Verbosity level")
-
-    parser.add_argument(
-        '--sfx', dest="sfx", default="", help="PDF rendering suffix to differentiate runs.")
 
     parser.add_argument('-t', '--intree', dest="tree",
                         help='Input specietree in newick format', required=True)
@@ -166,14 +165,35 @@ if __name__ == '__main__':
 
     parser.add_argument('--use_tree', dest='usetree', action="store_true",
                         help="This is helpfull only if the mafft alignment is selected. Perform multiple alignment, using species tree as guide tree.")
-    parser.add_argument('--submat', dest='submat', choices=AVAILABLE_MAT, default="blosum62",
+
+    parser.add_argument('--submat', dest='submat', choices=utils.AVAILABLE_MAT, default="blosum62",
                         help="Choose a substitution matrix to compute codon alignment to amino acid likelihood, Default value is blosum62")
 
     parser.add_argument('--hmmdir', dest='hmmdir',
                         help="Link a directory with hmm files for alignment. Each hmmfile should be named in the following format : genename.hmm")
 
+    parser.add_argument('--parallel', dest='parallel', nargs='?', const=CPU_COUNT, type=int, default=0,
+                    help="Use Parallelization during execution for each reassignment. This does not guarantee an increase in speed. CPU count will be used if no argument is provided")
+
     args = parser.parse_args()
     setting = Settings()
-    setting.set()
+    setting.set(OUTDIR=args.outdir)
     setting.update_params(SUBMAT=args.submat)
-    coretracker(args, setting)
+    parallel = args.parallel
+    reafinder, clf = set_coretracker(args, setting)
+    codon_align, fcodon_align = reafinder.seqset.get_codon_alignment()
+    cod_align = SeqIO.to_dict(fcodon_align)
+    reafinder.set_rea_mapper()
+
+    done = False
+    if args.parallel>0 and ENABLE_PAR:
+        results = Parallel(n_jobs=args.parallel, verbose=2)(delayed(compile_result)(x, clf, cod_align) for x in reafinder.run_analysis(codon_align, fcodon_align))
+        done = True
+    elif args.parallel>0:
+        logging.warning("Joblib requirement not found! Disabling parallelization")
+
+    if not done:
+        for x in reafinder.run_analysis(codon_align, fcodon_align):
+            compile_result(x, clf, cod_align)
+
+    reafinder.save_all()

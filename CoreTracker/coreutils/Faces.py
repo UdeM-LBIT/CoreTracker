@@ -35,6 +35,7 @@ _aafgcolors = {
     'X':"#000000",
     '.':"#000000",
     '-':"#000000",
+    '*':"#000000",
 }
 
 _aabgcolors = {
@@ -90,14 +91,14 @@ _ntbgcolors = {
     ' ':"#FFFFFF"
 }
 
-def _get_codon_fgcolors(codontable):
+def _get_codon_fgcolors(codontable, cible_aa):
     """Get colon foreground color"""
-    return dict((k, _aafgcolors[v]) for (k,v) in codontable.items())
+    return dict((k, (_aafgcolors[v] if v != cible_aa else '#FFFFFF')) for (k,v) in codontable.items())
 
 
-def _get_codon_bgcolors(codontable, spec_codon_col):
+def _get_codon_bgcolors(codontable, cible_aa, spec_codon_col):
     """Get colon background color"""
-    return dict((k, spec_codon_col.get(k, "#FFFFFF")) for (k,v) in codontable.items())
+    return dict((k, spec_codon_col.get(k, ("#FFFFFF" if v != cible_aa else '#000000'))) for (k,v) in codontable.items())
 
 
 class PPieChartFace(faces.StaticItemFace):
@@ -241,7 +242,7 @@ class SequenceFace(faces.StaticItemFace):
     :param None special_col: list of lists containing the bounds
       of columns to be displayed with alt_col_w as width
       """
-    def __init__(self, seq, seqtype="aa", fsize=10,
+    def __init__(self, seq, cible_aa, seqtype="aa", fsize=10,
                  fg_colors=None, bg_colors=None, codon=None,
                  col_w=None, alt_col_w=3, special_col=None,
                  spec_codon_col=None, codontable={}):
@@ -267,9 +268,9 @@ class SequenceFace(faces.StaticItemFace):
                 self.seq = [self.seq[i:i+3] for i in xrange(0, \
                             len(self.seq)- len(self.seq)%3, 3)]
             if not fg_colors:
-                fg_colors = _get_codon_fgcolors(codontable)
+                fg_colors = _get_codon_fgcolors(codontable, cible_aa)
             if not bg_colors:
-                bg_colors = _get_codon_bgcolors(codontable, spec_codon_col)
+                bg_colors = _get_codon_bgcolors(codontable, cible_aa, spec_codon_col)
 
         else:
             if not fg_colors:
@@ -305,7 +306,6 @@ class SequenceFace(faces.StaticItemFace):
                 if reg[0] < i <= reg[1]:
                     width = self.alt_col_w
                     break
-            #load interactive item if called correspondingly
             rectitem = rect_cls(0, 0, width, self.row_h, parent=self.item)
             rectitem.setX(seq_width) # to give correct X to children item
             rectitem.setBrush(self.bg_col[letter])

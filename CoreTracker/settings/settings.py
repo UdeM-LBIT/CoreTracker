@@ -17,8 +17,6 @@ class Settings():
         # list of accepted aa
         self.AA_LETTERS = "".join(
             [aa for aa in "ACDEFGHIKLMNPQRSTVWY" if aa not in EXCLUDE_AA])
-        # Set output directory
-        self.OUTDIR = kwargs.get('OUTDIR', parameters.OUTDIR)
         self.AA_MAJORITY_THRESH = kwargs.get(
             # Set min frequency per column to use an aa as the most predominant
             'AA_MAJORITY_THRESH', parameters.AA_MAJORITY_THRESH)
