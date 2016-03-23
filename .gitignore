@@ -59,11 +59,8 @@ docs/_build/
 target/
 # results
 tmp/*
-result/*
 test/*
-scripts/*
 
-wsgi/*
 
 # discard images
 *.png

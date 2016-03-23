@@ -1896,18 +1896,6 @@ def get_report(fitchtree, gdata, reafinder, codon_align, prediction, output="", 
         table['---'] = '-'
         table['...'] = '.'
         data_present, data_var = codon_adjust_improve(fitchtree, reafinder, codon_align, table, prediction, outdir=OUTDIR)
-        #outfile = rep_out+"_report.pdf"
-        #pdflist = [output, rep_out+"_Rep.pdf"] + ([] if not data_present else [improve])
-        #concat_pdf(outfile, *pdflist)
-        #glob_purge.append(improve)
-        #glob_purge.append(rep_out+"_Rep.pdf")
-        #for g in glob_purge:
-        #    if g is not None:
-        #        try:
-        #            os.remove(g)
-        #        except:
-        #            pass #do nothing
-
         return data_var, OUTDIR
 
 def format_tree(tree, codon, cible, alignment, SP_score, ic_contents, pos=[],
@@ -1949,42 +1937,6 @@ def format_tree(tree, codon, cible, alignment, SP_score, ic_contents, pos=[],
     if limiter is None:
         limiter = [(len(pos), 'All')]
 
-    if dtype == 'aa':
-        gfunc = lambda x : '*' if x==1 else ' '
-        if pos:
-
-            ts.title.add_face(TextFace('(%s) - SP score : %.0f | IC = %.2f'%(codon, sum(SP_score), sum(ic_contents)),
-                                                            fsize=14, fgcolor='red'), 0)
-            ts.aligned_header.add_face(faces.RectFace(12, 12, 'white', 'white'), 1)
-            #ts.aligned_foot.add_face(faces.RectFace(12, 12, 'white', 'white'), 1)
-            start = 0
-            ind = 3
-            for (l, name) in limiter:
-                ic_content = np.asarray(ic_contents)[pos[start:l]]
-                footer_seq = SequenceFace("".join([gfunc(st) for st in start_holder[start:l]]), None, dtype, fsize=13)
-                start = l
-
-                #SP_score = np.asarray(SP_score)[pos]
-                ic_plot = faces.SequencePlotFace(ic_content, hlines=[(int(min(ic_content)-0.5))],
-                                         hlines_col=['white'], ylim=(int(min(ic_content)-0.5),
-                                         int(max(ic_content)+1)), fsize=10, col_width=14,
-                                         header="IC", kind='bar')
-                ts.aligned_header.add_face(ic_plot, ind)
-                ts.aligned_foot.add_face(footer_seq, ind)
-                ts.aligned_foot.add_face(TextFace(name), ind)
-                ind += 2
-
-    else:
-        for (cod, col) in codon_col.items():
-            ts.legend.add_face(faces.RectFace(20, 10, col, col), column=0)
-            ts.legend.add_face(TextFace("  %s "%cod, fsize=8), column=0)
-        ts.legend.add_face(faces.RectFace(20, 10, 'black', 'black'), column=0)
-        ts.legend.add_face(TextFace("  %s\'s codons "%(cible), fsize=8), column=0)
-
-        ts.legend_position = 4
-
-    t.dist = 0
-
     ns = NodeStyle()
     ns['shape'] = 'square'
     ns['fgcolor'] = 'black'
@@ -1999,14 +1951,60 @@ def format_tree(tree, codon, cible, alignment, SP_score, ic_contents, pos=[],
                 ind = 0
                 for (k, name) in limiter:
                     seq = node.sequence[name]
-                    seqface =  SequenceFace(seq, cible, dtype, fsize=13,
+                    seqface = faces.SequenceFace(seq, fsize=13)
+                    if dtype != 'aa':
+                        seqface =  SequenceFace(seq, cible, seqtype=dtype, fsize=13,
                                             codontable=codontable, spec_codon_col=codon_col)
                     faces.add_face_to_node(seqface, node, 2+ind, aligned=True)
                     # add separator
                     #faces.add_face_to_node(LineFace(25, 25, None), node, column=next_sep, position="aligned")
-                    ind += 1
+                    ind += 2
 
     ts.layout_fn = layout
+
+    if dtype == 'aa':
+        gfunc = lambda x : '*' if x==1 else ' '
+        if pos:
+
+            ts.title.add_face(TextFace('(%s) - SP score : %.0f | IC = %.2f'%(codon, sum(SP_score), sum(ic_contents)),
+                                                            fsize=14, fgcolor='red'), 0)
+            ts.aligned_header.add_face(faces.RectFace(14, 14, 'white', 'white'), 1)
+
+            ts.aligned_foot.add_face(faces.RectFace(14, 14, 'white', 'white'), 1)
+            start = 0
+            ind = 3
+            for (l, name) in limiter:
+                ic_content = np.asarray(ic_contents)[pos[start:l]]
+                #sp_score = np.asarray(SP_score)[pos]
+                footer_seq = SequenceFace("".join([gfunc(st) for st in start_holder[start:l]]), None, dtype, fsize=13)
+                start = l
+                ic_plot = faces.SequencePlotFace(ic_content, hlines=[(int(min(ic_content)-0.5))],
+                                         hlines_col=['white'], ylim=(int(min(ic_content)-0.5),
+                                         int(max(ic_content)+1)), fsize=10, col_width=14,
+                                         header="IC", kind='bar')
+                ts.aligned_header.add_face(ic_plot, ind)
+                ts.aligned_foot.add_face(footer_seq, ind)
+                ts.aligned_foot.add_face(TextFace(name), ind)
+                ind += 2
+
+    else:
+        for (cod, col) in codon_col.items():
+            ts.legend.add_face(faces.RectFace(70, 45, col, col), column=0)
+            ts.legend.add_face(TextFace("%s"%cod, fsize=8), column=1)
+        ts.legend.add_face(faces.RectFace(70, 45, 'black', 'black'), column=0)
+        ts.legend.add_face(TextFace("  %s\'s codons "%(cible), fsize=8), column=1)
+        ts.legend_position = 3
+        ind = 3
+        lprev = 0
+        ts.aligned_foot.add_face(faces.RectFace(14, 14, 'white', 'white'), 1)
+        for (l, name) in limiter[:-1]:
+            ts.aligned_foot.add_face(TextFace(name, fsize=14), ind)
+            ts.aligned_foot.add_face(faces.RectFace(14*(l-lprev)*3, 14, 'white', 'white'), ind+1)
+            ind +=2
+            lprev = l
+        ts.aligned_foot.add_face(TextFace(name, fsize=14), ind)
+
+    t.dist = 0
     return t, ts
 
 
@@ -2068,7 +2066,7 @@ def codon_adjust_improve(fitchtree, reafinder, codon_align, codontable, predicti
     ori_al = None
     tree = fitchtree.tree
 
-    def _limit_finder(codon_pos, gene_limit=genelimit, proche=10):
+    def _limit_finder(codon_pos, gene_limit=genelimit, proche=settings.startdist):
         """ Return the gene for each position of codon pos"""
         gene_pos = []
         gene_break = []
@@ -2083,7 +2081,7 @@ def codon_adjust_improve(fitchtree, reafinder, codon_align, codontable, predicti
             if brokn and i>0:
                 gene_break.append((i, gene_limit[entering][0]))
                 entering = start
-            if codon_pos[i] - start <= proche:
+            if codon_pos[i] - gene_limit[start][1] <= proche:
                 close_to_start.append(1)
             else:
                 close_to_start.append(0)
@@ -2123,7 +2121,7 @@ def codon_adjust_improve(fitchtree, reafinder, codon_align, codontable, predicti
 
             ori_t.render(ori_out, dpi=800, tree_style=ori_ts)
             rea_t.render(rea_out, dpi=800, tree_style=rea_ts)
-            #cod_t.render(cod_out, dpi=800, tree_style=cod_ts)
+            cod_t.render(cod_out, dpi=800, tree_style=cod_ts)
 
             data_var[codon] = score_improve
 
@@ -2131,11 +2129,7 @@ def codon_adjust_improve(fitchtree, reafinder, codon_align, codontable, predicti
             glob_purge.append(rea_out)
             glob_purge.append(ori_out)
             glob_purge.append(violinout)
-            #out = output+"%s_improve.pdf"%codon
-            # concat_pdf(out, violinout+".pdf", cod_out, ori_out, rea_out)
-            # out = export_from_html(data_var, output+"%s_improve.pdf"%codon,
-            #                       base_url=os.path.abspath(output).replace(output, ""), template=1)
-            outputs.append(True) #append(out)
+            outputs.append(True)
 
     return len(outputs)>0, data_var
 

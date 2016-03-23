@@ -65,6 +65,7 @@ class Settings():
         self.hmmalign = kwargs.get('hmmalign', 'hmmalign')
         # alpha to use , default is 0.05
         self.conf = kwargs.get('CONF', parameters.CONF)
+        self.startdist = kwargs.get('STARTDIST', parameters.STARTDIST)
         self.SHOW_ALL = False
         # matrix used to compute score (close to likelihood score)
         self.SUBMAT = getattr(MatrixInfo, 'blosum62')

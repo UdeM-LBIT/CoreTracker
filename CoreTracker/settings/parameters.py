@@ -72,6 +72,5 @@ USE_GLOBAL = False
 # alpha : rejection of the null hypothesis
 CONF = 0.05
 
-
-# alpha : rejection of the null hypothesis
-CONF = 0.05
+# Selection start codon range
+STARTDIST = 20

@@ -2,7 +2,7 @@ import re
 from PyQt4.QtGui import (QGraphicsRectItem, QGraphicsLineItem,
                          QGraphicsEllipseItem, QPen, QColor, QBrush,
                          QFont, QPixmap, QFontMetrics, QPainter,
-                         QGraphicsSimpleTextItem, QGraphicsItem)
+                         QGraphicsSimpleTextItem, QGraphicsTextItem, QGraphicsItem)
 
 from PyQt4.QtCore import Qt,  QPointF, QRect, QRectF
 from ete3 import faces
@@ -64,7 +64,7 @@ _aabgcolors = {
     'X':"#BEA06E",
     '.':"#FFFFFF",
     '-':"#FFFFFF",
-    '*':"#FFFFFF"
+    '*':"#FFFFFF",
     }
 
 _ntfgcolors = {
