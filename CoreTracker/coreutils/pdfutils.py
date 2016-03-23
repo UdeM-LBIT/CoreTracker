@@ -3,7 +3,8 @@ from template import BasicTemplate
 from weasyprint import HTML
 import os
 
-template_dir =  os.path.abspath('../templates')
+curdir = os.path.dirname(os.path.realpath(__file__))
+template_dir =  os.path.join(curdir,'templates')
 templates = [os.path.join(template_dir, "default.html"),
                 os.path.join(template_dir, "rea_improve.html")]
 default_style = os.path.join(template_dir, "style.css")

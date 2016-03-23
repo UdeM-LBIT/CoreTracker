@@ -1910,7 +1910,7 @@ def get_report(fitchtree, gdata, reafinder, codon_align, prediction, output="", 
 
         return data_var, OUTDIR
 
-def format_tree(tree, cible, alignment, SP_score, ic_contents, pos=[],
+def format_tree(tree, codon, cible, alignment, SP_score, ic_contents, pos=[],
                 limits=(None, None, None), dtype="aa", codontable={}, codon_col={}):
     """Format the rendering of tree data for alignment"""
     t = tree.copy('newick')
@@ -1952,8 +1952,9 @@ def format_tree(tree, cible, alignment, SP_score, ic_contents, pos=[],
     if dtype == 'aa':
         gfunc = lambda x : '*' if x==1 else ' '
         if pos:
-            #ts.aligned_header.add_face(TextFace('SP score : %.0f | IC = %.2f'%(sum(SP_score), sum(ic_contents)),
-            #                                                fsize=14, fgcolor='red'), 1)
+
+            ts.title.add_face(TextFace('(%s) - SP score : %.0f | IC = %.2f'%(codon, sum(SP_score), sum(ic_contents)),
+                                                            fsize=14, fgcolor='red'), 0)
             ts.aligned_header.add_face(faces.RectFace(12, 12, 'white', 'white'), 1)
             #ts.aligned_foot.add_face(faces.RectFace(12, 12, 'white', 'white'), 1)
             start = 0
@@ -2003,7 +2004,7 @@ def format_tree(tree, cible, alignment, SP_score, ic_contents, pos=[],
                     faces.add_face_to_node(seqface, node, 2+ind, aligned=True)
                     # add separator
                     #faces.add_face_to_node(LineFace(25, 25, None), node, column=next_sep, position="aligned")
-                    ind += 2
+                    ind += 1
 
     ts.layout_fn = layout
     return t, ts
@@ -2105,14 +2106,12 @@ def codon_adjust_improve(fitchtree, reafinder, codon_align, codontable, predicti
             sp, cor_sp = alsp
             ic, cor_ic = alic
             ori_al, new_al = als
-            ori_t, ori_ts = format_tree(tree, cible_aa, ori_al, sp, ic, pos, limits)
-            rea_t, rea_ts = format_tree(tree, cible_aa, new_al, cor_sp, cor_ic, pos, limits)
-            cod_t, cod_ts = format_tree(tree, cible_aa, codon_align, None, None, pos, limits,
+            ori_t, ori_ts = format_tree(tree, codon, cible_aa, ori_al, sp, ic, pos, limits)
+            rea_t, rea_ts = format_tree(tree, codon, cible_aa, new_al, cor_sp, cor_ic, pos, limits)
+            cod_t, cod_ts = format_tree(tree, codon, cible_aa, codon_align, None, None, pos, limits,
                                             codontable=codontable, dtype="codon", codon_col=fitchtree.colors)
 
             cod_ts.title.add_face(TextFace("Prediction validation for "+codon+" to "+fitchtree.dest_aa, fsize=14), column=0)
-            ori_ts.title.add_face(TextFace("Original alignment ("+codon+")", fsize=14), column=0)
-            rea_ts.title.add_face(TextFace("Corrected alignment ("+codon+" to "+fitchtree.dest_aa+")", fsize=14), column=0)
 
             violinout = violin_plot({'Original':sp, 'Corrected':cor_sp},
                                     os.path.join(outdir, "%s_violin"%codon),

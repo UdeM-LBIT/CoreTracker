@@ -54,12 +54,12 @@ class Classifier(object):
     def load_from_file(clc, loadfile):
         """Load model from a file"""
         try:
-            classifier = joblib.load(loadfile)
-            return classifier
+            clf = joblib.load(loadfile)
+            return clf
         except IOError:
             print('Problem with file %s, can not open it' % loadfile)
         except Exception as e:
-            print(e)
+            raise e
         return None
 
     def save_model(self, outfile):
@@ -74,6 +74,12 @@ class Classifier(object):
         self.X = X
         self.y = Y
         self.trained = True
+
+    @classmethod
+    def from_classifier(clc, clfier):
+        newclf = clc(clfier.method, {}, clfier.scale)
+        newclf.__dict__.update(clfier.__dict__)
+        return newclf
 
     def get_score(self, X, Y):
         """Return score for classification on X"""
