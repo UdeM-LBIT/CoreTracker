@@ -780,7 +780,7 @@ class SequenceSet(object):
         c_genome = set([x for x in common_genome if (
                 len(self.dna_dict[x]) == len(self.prot_dict[x].seq.ungap('-')) * 3)])
 
-        print [(x, len(self.dna_dict[x]), len(self.prot_dict[x].seq.ungap('-'))*3, len(self.dna_dict[x])==(len(self.prot_dict[x].seq.ungap('-'))+1)*3) for x in common_genome ]
+        #print [(x, len(self.dna_dict[x]), len(self.prot_dict[x].seq.ungap('-'))*3, len(self.dna_dict[x])==(len(self.prot_dict[x].seq.ungap('-'))+1)*3) for x in common_genome ]
         if not c_genome:
             raise ValueError(
                     'ID intersection for dna, prot and species tree is empty')

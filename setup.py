@@ -25,12 +25,14 @@ setuptools.setup(
 	description="CoreTracker, A codon reassignment tracker",
 	url='https://github.com/UdeM-LBIT/CoreTracker',
 	author='Emmanuel Noutahi',
-	author_email='emmanuel.noutahi@hotmail.ca',
+	author_email='fmr.noutahi@umontreal.ca',
 	scripts = ['scripts/coretracker', 'scripts/translate'],
 
 	packages=setuptools.find_packages(exclude=['tests']),
 
 	entry_points={'console_scripts': []},
+
+	keywords="bioinformatics codon reassignment tracker",
 
 	long_description=(README + '\n'),
 	license='MIT',
@@ -48,12 +50,12 @@ setuptools.setup(
 	install_requires=[
 		'ete3',
 		'numpy >= 1.8.1',
-		'lxml',
-		'biopython',
-		'matplotlib',
 		'pandas',
 		'scikit-learn',
 		'scipy',
+		'biopython',
+		'matplotlib',
 		'WeasyPrint',
+		'PyYAML',
 	]
 )

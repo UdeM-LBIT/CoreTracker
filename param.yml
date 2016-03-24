@@ -1,10 +1,10 @@
 # amino acid to exclude from the plot
 # this will speed up a lot the data generation
 # If you exclude an amino acid, there won't be a reassignation to that aa
-EXCLUDE_AA: "ACDEFHIKLMNPQSTVWY"
+EXCLUDE_AA: "ACDEFHIKLMNPQTVWY"
 
 # If you exclude a aa, there won't be a reassignation from that aa
-EXCLUDE_AA: "ACDEFHIKLMNPQSTVWY"
+EXCLUDE_AA_FROM: "ACDEFHIKLMNPQTVWY"
 
 # Threshold require to determine if an aa is majoritary in a column
 AA_MAJORITY_THRESH: 0.5

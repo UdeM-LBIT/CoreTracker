@@ -72,7 +72,7 @@ class Settings():
 
     def fill(self, params):
         if isinstance(params, dict):
-            self.__dict__.update(params)
+            self.set(**params)
         else:
             self.__dict__.update(params.__dict__)
 

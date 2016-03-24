@@ -5,6 +5,7 @@ import logging
 import os
 import random
 import sys
+from yaml import load
 import traceback
 from collections import defaultdict as ddict
 
@@ -27,6 +28,11 @@ except ImportError:
         from sklearn.externals.joblib import Parallel, delayed
     except:
         ENABLE_PAR = False
+
+try:
+    from yaml import CLoader as Loader
+except ImportError:
+    from yaml import Loader
 
 __author__ = "Emmanuel Noutahi"
 __version__ = "1.2"
@@ -184,16 +190,15 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
     setting = Settings()
+
     paramfile = args.params
     ad_params = {}
-    try:
-        ad_params = yaml.load(paramfile)
-    except:
-        pass
+    with open(args.params) as f:
+        ad_params = load(f, Loader=Loader)
 
     setting.set(OUTDIR=args.outdir)
-    setting.update_params(SUBMAT=args.submat)
     setting.fill(ad_params)
+    setting.update_params(SUBMAT=args.submat)
     parallel = args.parallel
     reafinder, clf = set_coretracker(args, setting)
     codon_align, fcodon_align = reafinder.seqset.get_codon_alignment()
