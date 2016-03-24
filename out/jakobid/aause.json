@@ -1,0 +1,1042 @@
+{
+    "Cys": [
+        {
+            "filtered": 0.9032258064516129, 
+            "global": 0.5643899140179692, 
+            "species": "Reclinomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.7903225806451613, 
+            "global": 0.5317360641483915, 
+            "species": "Andalucia||Jlibera"
+        }, 
+        {
+            "filtered": 0.7580645161290323, 
+            "global": 0.5333784175441987, 
+            "species": "Seculomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.8709677419354839, 
+            "global": 0.5461308086175248, 
+            "species": "Jbahamiensis||Jlibera"
+        }, 
+        {
+            "filtered": 0.8387096774193549, 
+            "global": 0.5872862525359869, 
+            "species": "Andalucia||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.8387096774193549, 
+            "global": 0.6267993430586417, 
+            "species": "Seculomonas||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.9516129032258065, 
+            "global": 0.612501207612791, 
+            "species": "Jbahamiensis||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.8064516129032258, 
+            "global": 0.622355327987634, 
+            "species": "Seculomonas||Andalucia"
+        }, 
+        {
+            "filtered": 0.8225806451612904, 
+            "global": 0.6039996135639069, 
+            "species": "Jbahamiensis||Andalucia"
+        }, 
+        {
+            "filtered": 0.8225806451612904, 
+            "global": 0.5989759443532026, 
+            "species": "Jbahamiensis||Seculomonas"
+        }
+    ], 
+    "Asp": [
+        {
+            "filtered": 0.7982062780269058, 
+            "global": 0.5643899140179692, 
+            "species": "Reclinomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.7937219730941704, 
+            "global": 0.5317360641483915, 
+            "species": "Andalucia||Jlibera"
+        }, 
+        {
+            "filtered": 0.8475336322869955, 
+            "global": 0.5333784175441987, 
+            "species": "Seculomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.7982062780269058, 
+            "global": 0.5461308086175248, 
+            "species": "Jbahamiensis||Jlibera"
+        }, 
+        {
+            "filtered": 0.8340807174887892, 
+            "global": 0.5872862525359869, 
+            "species": "Andalucia||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.9013452914798207, 
+            "global": 0.6267993430586417, 
+            "species": "Seculomonas||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.8385650224215246, 
+            "global": 0.612501207612791, 
+            "species": "Jbahamiensis||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.8654708520179372, 
+            "global": 0.622355327987634, 
+            "species": "Seculomonas||Andalucia"
+        }, 
+        {
+            "filtered": 0.8295964125560538, 
+            "global": 0.6039996135639069, 
+            "species": "Jbahamiensis||Andalucia"
+        }, 
+        {
+            "filtered": 0.8699551569506726, 
+            "global": 0.5989759443532026, 
+            "species": "Jbahamiensis||Seculomonas"
+        }
+    ], 
+    "Ser": [
+        {
+            "filtered": 0.738498789346247, 
+            "global": 0.5643899140179692, 
+            "species": "Reclinomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.6997578692493946, 
+            "global": 0.5317360641483915, 
+            "species": "Andalucia||Jlibera"
+        }, 
+        {
+            "filtered": 0.6924939467312349, 
+            "global": 0.5333784175441987, 
+            "species": "Seculomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.738498789346247, 
+            "global": 0.5461308086175248, 
+            "species": "Jbahamiensis||Jlibera"
+        }, 
+        {
+            "filtered": 0.711864406779661, 
+            "global": 0.5872862525359869, 
+            "species": "Andalucia||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.738498789346247, 
+            "global": 0.6267993430586417, 
+            "species": "Seculomonas||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.7602905569007264, 
+            "global": 0.612501207612791, 
+            "species": "Jbahamiensis||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.6924939467312349, 
+            "global": 0.622355327987634, 
+            "species": "Seculomonas||Andalucia"
+        }, 
+        {
+            "filtered": 0.7288135593220338, 
+            "global": 0.6039996135639069, 
+            "species": "Jbahamiensis||Andalucia"
+        }, 
+        {
+            "filtered": 0.738498789346247, 
+            "global": 0.5989759443532026, 
+            "species": "Jbahamiensis||Seculomonas"
+        }
+    ], 
+    "Gln": [
+        {
+            "filtered": 0.8527131782945736, 
+            "global": 0.5643899140179692, 
+            "species": "Reclinomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.7829457364341085, 
+            "global": 0.5317360641483915, 
+            "species": "Andalucia||Jlibera"
+        }, 
+        {
+            "filtered": 0.875968992248062, 
+            "global": 0.5333784175441987, 
+            "species": "Seculomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.8527131782945736, 
+            "global": 0.5461308086175248, 
+            "species": "Jbahamiensis||Jlibera"
+        }, 
+        {
+            "filtered": 0.8449612403100775, 
+            "global": 0.5872862525359869, 
+            "species": "Andalucia||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.8992248062015504, 
+            "global": 0.6267993430586417, 
+            "species": "Seculomonas||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.8682170542635659, 
+            "global": 0.612501207612791, 
+            "species": "Jbahamiensis||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.8449612403100775, 
+            "global": 0.622355327987634, 
+            "species": "Seculomonas||Andalucia"
+        }, 
+        {
+            "filtered": 0.8294573643410853, 
+            "global": 0.6039996135639069, 
+            "species": "Jbahamiensis||Andalucia"
+        }, 
+        {
+            "filtered": 0.9069767441860465, 
+            "global": 0.5989759443532026, 
+            "species": "Jbahamiensis||Seculomonas"
+        }
+    ], 
+    "Lys": [
+        {
+            "filtered": 0.7692307692307693, 
+            "global": 0.5643899140179692, 
+            "species": "Reclinomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.6586538461538461, 
+            "global": 0.5317360641483915, 
+            "species": "Andalucia||Jlibera"
+        }, 
+        {
+            "filtered": 0.75, 
+            "global": 0.5333784175441987, 
+            "species": "Seculomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.6826923076923077, 
+            "global": 0.5461308086175248, 
+            "species": "Jbahamiensis||Jlibera"
+        }, 
+        {
+            "filtered": 0.7644230769230769, 
+            "global": 0.5872862525359869, 
+            "species": "Andalucia||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.8509615384615384, 
+            "global": 0.6267993430586417, 
+            "species": "Seculomonas||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.7548076923076923, 
+            "global": 0.612501207612791, 
+            "species": "Jbahamiensis||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.7067307692307693, 
+            "global": 0.622355327987634, 
+            "species": "Seculomonas||Andalucia"
+        }, 
+        {
+            "filtered": 0.6778846153846154, 
+            "global": 0.6039996135639069, 
+            "species": "Jbahamiensis||Andalucia"
+        }, 
+        {
+            "filtered": 0.7548076923076923, 
+            "global": 0.5989759443532026, 
+            "species": "Jbahamiensis||Seculomonas"
+        }
+    ], 
+    "Trp": [
+        {
+            "filtered": 0.9652173913043478, 
+            "global": 0.5643899140179692, 
+            "species": "Reclinomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.8956521739130435, 
+            "global": 0.5317360641483915, 
+            "species": "Andalucia||Jlibera"
+        }, 
+        {
+            "filtered": 0.9304347826086956, 
+            "global": 0.5333784175441987, 
+            "species": "Seculomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.9217391304347826, 
+            "global": 0.5461308086175248, 
+            "species": "Jbahamiensis||Jlibera"
+        }, 
+        {
+            "filtered": 0.9217391304347826, 
+            "global": 0.5872862525359869, 
+            "species": "Andalucia||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.9652173913043478, 
+            "global": 0.6267993430586417, 
+            "species": "Seculomonas||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.9565217391304348, 
+            "global": 0.612501207612791, 
+            "species": "Jbahamiensis||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.9043478260869565, 
+            "global": 0.622355327987634, 
+            "species": "Seculomonas||Andalucia"
+        }, 
+        {
+            "filtered": 0.8869565217391304, 
+            "global": 0.6039996135639069, 
+            "species": "Jbahamiensis||Andalucia"
+        }, 
+        {
+            "filtered": 0.9304347826086956, 
+            "global": 0.5989759443532026, 
+            "species": "Jbahamiensis||Seculomonas"
+        }
+    ], 
+    "Asn": [
+        {
+            "filtered": 0.7625, 
+            "global": 0.5643899140179692, 
+            "species": "Reclinomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.71875, 
+            "global": 0.5317360641483915, 
+            "species": "Andalucia||Jlibera"
+        }, 
+        {
+            "filtered": 0.7375, 
+            "global": 0.5333784175441987, 
+            "species": "Seculomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.73125, 
+            "global": 0.5461308086175248, 
+            "species": "Jbahamiensis||Jlibera"
+        }, 
+        {
+            "filtered": 0.79375, 
+            "global": 0.5872862525359869, 
+            "species": "Andalucia||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.8625, 
+            "global": 0.6267993430586417, 
+            "species": "Seculomonas||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.81875, 
+            "global": 0.612501207612791, 
+            "species": "Jbahamiensis||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.76875, 
+            "global": 0.622355327987634, 
+            "species": "Seculomonas||Andalucia"
+        }, 
+        {
+            "filtered": 0.75, 
+            "global": 0.6039996135639069, 
+            "species": "Jbahamiensis||Andalucia"
+        }, 
+        {
+            "filtered": 0.8625, 
+            "global": 0.5989759443532026, 
+            "species": "Jbahamiensis||Seculomonas"
+        }
+    ], 
+    "Pro": [
+        {
+            "filtered": 0.9018867924528302, 
+            "global": 0.5643899140179692, 
+            "species": "Reclinomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.8754716981132076, 
+            "global": 0.5317360641483915, 
+            "species": "Andalucia||Jlibera"
+        }, 
+        {
+            "filtered": 0.9132075471698113, 
+            "global": 0.5333784175441987, 
+            "species": "Seculomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.8528301886792453, 
+            "global": 0.5461308086175248, 
+            "species": "Jbahamiensis||Jlibera"
+        }, 
+        {
+            "filtered": 0.8981132075471698, 
+            "global": 0.5872862525359869, 
+            "species": "Andalucia||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.9471698113207547, 
+            "global": 0.6267993430586417, 
+            "species": "Seculomonas||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.8981132075471698, 
+            "global": 0.612501207612791, 
+            "species": "Jbahamiensis||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.9132075471698113, 
+            "global": 0.622355327987634, 
+            "species": "Seculomonas||Andalucia"
+        }, 
+        {
+            "filtered": 0.8716981132075472, 
+            "global": 0.6039996135639069, 
+            "species": "Jbahamiensis||Andalucia"
+        }, 
+        {
+            "filtered": 0.909433962264151, 
+            "global": 0.5989759443532026, 
+            "species": "Jbahamiensis||Seculomonas"
+        }
+    ], 
+    "Thr": [
+        {
+            "filtered": 0.8200692041522492, 
+            "global": 0.5643899140179692, 
+            "species": "Reclinomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.7231833910034602, 
+            "global": 0.5317360641483915, 
+            "species": "Andalucia||Jlibera"
+        }, 
+        {
+            "filtered": 0.8027681660899654, 
+            "global": 0.5333784175441987, 
+            "species": "Seculomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.7647058823529411, 
+            "global": 0.5461308086175248, 
+            "species": "Jbahamiensis||Jlibera"
+        }, 
+        {
+            "filtered": 0.7681660899653979, 
+            "global": 0.5872862525359869, 
+            "species": "Andalucia||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.8719723183391004, 
+            "global": 0.6267993430586417, 
+            "species": "Seculomonas||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.8408304498269896, 
+            "global": 0.612501207612791, 
+            "species": "Jbahamiensis||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.7647058823529411, 
+            "global": 0.622355327987634, 
+            "species": "Seculomonas||Andalucia"
+        }, 
+        {
+            "filtered": 0.7439446366782007, 
+            "global": 0.6039996135639069, 
+            "species": "Jbahamiensis||Andalucia"
+        }, 
+        {
+            "filtered": 0.7854671280276817, 
+            "global": 0.5989759443532026, 
+            "species": "Jbahamiensis||Seculomonas"
+        }
+    ], 
+    "Phe": [
+        {
+            "filtered": 0.7557894736842106, 
+            "global": 0.5643899140179692, 
+            "species": "Reclinomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.7431578947368421, 
+            "global": 0.5317360641483915, 
+            "species": "Andalucia||Jlibera"
+        }, 
+        {
+            "filtered": 0.7221052631578947, 
+            "global": 0.5333784175441987, 
+            "species": "Seculomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.7368421052631579, 
+            "global": 0.5461308086175248, 
+            "species": "Jbahamiensis||Jlibera"
+        }, 
+        {
+            "filtered": 0.7936842105263158, 
+            "global": 0.5872862525359869, 
+            "species": "Andalucia||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.8168421052631579, 
+            "global": 0.6267993430586417, 
+            "species": "Seculomonas||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.791578947368421, 
+            "global": 0.612501207612791, 
+            "species": "Jbahamiensis||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.7852631578947369, 
+            "global": 0.622355327987634, 
+            "species": "Seculomonas||Andalucia"
+        }, 
+        {
+            "filtered": 0.7621052631578947, 
+            "global": 0.6039996135639069, 
+            "species": "Jbahamiensis||Andalucia"
+        }, 
+        {
+            "filtered": 0.7789473684210526, 
+            "global": 0.5989759443532026, 
+            "species": "Jbahamiensis||Seculomonas"
+        }
+    ], 
+    "Ala": [
+        {
+            "filtered": 0.7684210526315789, 
+            "global": 0.5643899140179692, 
+            "species": "Reclinomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.7368421052631579, 
+            "global": 0.5317360641483915, 
+            "species": "Andalucia||Jlibera"
+        }, 
+        {
+            "filtered": 0.7710526315789473, 
+            "global": 0.5333784175441987, 
+            "species": "Seculomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.7342105263157894, 
+            "global": 0.5461308086175248, 
+            "species": "Jbahamiensis||Jlibera"
+        }, 
+        {
+            "filtered": 0.7894736842105263, 
+            "global": 0.5872862525359869, 
+            "species": "Andalucia||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.8368421052631579, 
+            "global": 0.6267993430586417, 
+            "species": "Seculomonas||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.7921052631578948, 
+            "global": 0.612501207612791, 
+            "species": "Jbahamiensis||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.8184210526315789, 
+            "global": 0.622355327987634, 
+            "species": "Seculomonas||Andalucia"
+        }, 
+        {
+            "filtered": 0.7578947368421053, 
+            "global": 0.6039996135639069, 
+            "species": "Jbahamiensis||Andalucia"
+        }, 
+        {
+            "filtered": 0.7842105263157895, 
+            "global": 0.5989759443532026, 
+            "species": "Jbahamiensis||Seculomonas"
+        }
+    ], 
+    "Gly": [
+        {
+            "filtered": 0.8951781970649895, 
+            "global": 0.5643899140179692, 
+            "species": "Reclinomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.8616352201257862, 
+            "global": 0.5317360641483915, 
+            "species": "Andalucia||Jlibera"
+        }, 
+        {
+            "filtered": 0.8909853249475891, 
+            "global": 0.5333784175441987, 
+            "species": "Seculomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.8721174004192872, 
+            "global": 0.5461308086175248, 
+            "species": "Jbahamiensis||Jlibera"
+        }, 
+        {
+            "filtered": 0.9035639412997903, 
+            "global": 0.5872862525359869, 
+            "species": "Andalucia||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.9182389937106918, 
+            "global": 0.6267993430586417, 
+            "species": "Seculomonas||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.9077568134171907, 
+            "global": 0.612501207612791, 
+            "species": "Jbahamiensis||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.8763102725366876, 
+            "global": 0.622355327987634, 
+            "species": "Seculomonas||Andalucia"
+        }, 
+        {
+            "filtered": 0.8846960167714885, 
+            "global": 0.6039996135639069, 
+            "species": "Jbahamiensis||Andalucia"
+        }, 
+        {
+            "filtered": 0.8846960167714885, 
+            "global": 0.5989759443532026, 
+            "species": "Jbahamiensis||Seculomonas"
+        }
+    ], 
+    "Ile": [
+        {
+            "filtered": 0.6394422310756972, 
+            "global": 0.5643899140179692, 
+            "species": "Reclinomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.5378486055776892, 
+            "global": 0.5317360641483915, 
+            "species": "Andalucia||Jlibera"
+        }, 
+        {
+            "filtered": 0.6274900398406374, 
+            "global": 0.5333784175441987, 
+            "species": "Seculomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.6155378486055777, 
+            "global": 0.5461308086175248, 
+            "species": "Jbahamiensis||Jlibera"
+        }, 
+        {
+            "filtered": 0.5956175298804781, 
+            "global": 0.5872862525359869, 
+            "species": "Andalucia||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.7470119521912351, 
+            "global": 0.6267993430586417, 
+            "species": "Seculomonas||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.701195219123506, 
+            "global": 0.612501207612791, 
+            "species": "Jbahamiensis||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.5956175298804781, 
+            "global": 0.622355327987634, 
+            "species": "Seculomonas||Andalucia"
+        }, 
+        {
+            "filtered": 0.5756972111553785, 
+            "global": 0.6039996135639069, 
+            "species": "Jbahamiensis||Andalucia"
+        }, 
+        {
+            "filtered": 0.701195219123506, 
+            "global": 0.5989759443532026, 
+            "species": "Jbahamiensis||Seculomonas"
+        }
+    ], 
+    "Leu": [
+        {
+            "filtered": 0.7161214953271028, 
+            "global": 0.5643899140179692, 
+            "species": "Reclinomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.6822429906542056, 
+            "global": 0.5317360641483915, 
+            "species": "Andalucia||Jlibera"
+        }, 
+        {
+            "filtered": 0.6939252336448598, 
+            "global": 0.5333784175441987, 
+            "species": "Seculomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.6892523364485982, 
+            "global": 0.5461308086175248, 
+            "species": "Jbahamiensis||Jlibera"
+        }, 
+        {
+            "filtered": 0.7161214953271028, 
+            "global": 0.5872862525359869, 
+            "species": "Andalucia||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.7546728971962616, 
+            "global": 0.6267993430586417, 
+            "species": "Seculomonas||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.7371495327102804, 
+            "global": 0.612501207612791, 
+            "species": "Jbahamiensis||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.7126168224299065, 
+            "global": 0.622355327987634, 
+            "species": "Seculomonas||Andalucia"
+        }, 
+        {
+            "filtered": 0.6927570093457944, 
+            "global": 0.6039996135639069, 
+            "species": "Jbahamiensis||Andalucia"
+        }, 
+        {
+            "filtered": 0.7254672897196262, 
+            "global": 0.5989759443532026, 
+            "species": "Jbahamiensis||Seculomonas"
+        }
+    ], 
+    "His": [
+        {
+            "filtered": 0.8865248226950354, 
+            "global": 0.5643899140179692, 
+            "species": "Reclinomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.8368794326241135, 
+            "global": 0.5317360641483915, 
+            "species": "Andalucia||Jlibera"
+        }, 
+        {
+            "filtered": 0.8794326241134752, 
+            "global": 0.5333784175441987, 
+            "species": "Seculomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.851063829787234, 
+            "global": 0.5461308086175248, 
+            "species": "Jbahamiensis||Jlibera"
+        }, 
+        {
+            "filtered": 0.8723404255319149, 
+            "global": 0.5872862525359869, 
+            "species": "Andalucia||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.9219858156028369, 
+            "global": 0.6267993430586417, 
+            "species": "Seculomonas||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.8865248226950354, 
+            "global": 0.612501207612791, 
+            "species": "Jbahamiensis||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.8652482269503546, 
+            "global": 0.622355327987634, 
+            "species": "Seculomonas||Andalucia"
+        }, 
+        {
+            "filtered": 0.8156028368794326, 
+            "global": 0.6039996135639069, 
+            "species": "Jbahamiensis||Andalucia"
+        }, 
+        {
+            "filtered": 0.8723404255319149, 
+            "global": 0.5989759443532026, 
+            "species": "Jbahamiensis||Seculomonas"
+        }
+    ], 
+    "Arg": [
+        {
+            "filtered": 0.85, 
+            "global": 0.5643899140179692, 
+            "species": "Reclinomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.8409090909090909, 
+            "global": 0.5317360641483915, 
+            "species": "Andalucia||Jlibera"
+        }, 
+        {
+            "filtered": 0.8636363636363636, 
+            "global": 0.5333784175441987, 
+            "species": "Seculomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.8590909090909091, 
+            "global": 0.5461308086175248, 
+            "species": "Jbahamiensis||Jlibera"
+        }, 
+        {
+            "filtered": 0.9090909090909091, 
+            "global": 0.5872862525359869, 
+            "species": "Andalucia||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.9409090909090909, 
+            "global": 0.6267993430586417, 
+            "species": "Seculomonas||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.9227272727272727, 
+            "global": 0.612501207612791, 
+            "species": "Jbahamiensis||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.9, 
+            "global": 0.622355327987634, 
+            "species": "Seculomonas||Andalucia"
+        }, 
+        {
+            "filtered": 0.8954545454545455, 
+            "global": 0.6039996135639069, 
+            "species": "Jbahamiensis||Andalucia"
+        }, 
+        {
+            "filtered": 0.9227272727272727, 
+            "global": 0.5989759443532026, 
+            "species": "Jbahamiensis||Seculomonas"
+        }
+    ], 
+    "Met": [
+        {
+            "filtered": 0.7431693989071039, 
+            "global": 0.5643899140179692, 
+            "species": "Reclinomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.726775956284153, 
+            "global": 0.5317360641483915, 
+            "species": "Andalucia||Jlibera"
+        }, 
+        {
+            "filtered": 0.7540983606557377, 
+            "global": 0.5333784175441987, 
+            "species": "Seculomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.7540983606557377, 
+            "global": 0.5461308086175248, 
+            "species": "Jbahamiensis||Jlibera"
+        }, 
+        {
+            "filtered": 0.7923497267759563, 
+            "global": 0.5872862525359869, 
+            "species": "Andalucia||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.825136612021858, 
+            "global": 0.6267993430586417, 
+            "species": "Seculomonas||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.8524590163934426, 
+            "global": 0.612501207612791, 
+            "species": "Jbahamiensis||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.7868852459016393, 
+            "global": 0.622355327987634, 
+            "species": "Seculomonas||Andalucia"
+        }, 
+        {
+            "filtered": 0.8032786885245902, 
+            "global": 0.6039996135639069, 
+            "species": "Jbahamiensis||Andalucia"
+        }, 
+        {
+            "filtered": 0.825136612021858, 
+            "global": 0.5989759443532026, 
+            "species": "Jbahamiensis||Seculomonas"
+        }
+    ], 
+    "Val": [
+        {
+            "filtered": 0.7095238095238096, 
+            "global": 0.5643899140179692, 
+            "species": "Reclinomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.6666666666666666, 
+            "global": 0.5317360641483915, 
+            "species": "Andalucia||Jlibera"
+        }, 
+        {
+            "filtered": 0.680952380952381, 
+            "global": 0.5333784175441987, 
+            "species": "Seculomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.6952380952380952, 
+            "global": 0.5461308086175248, 
+            "species": "Jbahamiensis||Jlibera"
+        }, 
+        {
+            "filtered": 0.7380952380952381, 
+            "global": 0.5872862525359869, 
+            "species": "Andalucia||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.780952380952381, 
+            "global": 0.6267993430586417, 
+            "species": "Seculomonas||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.7666666666666667, 
+            "global": 0.612501207612791, 
+            "species": "Jbahamiensis||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.7428571428571429, 
+            "global": 0.622355327987634, 
+            "species": "Seculomonas||Andalucia"
+        }, 
+        {
+            "filtered": 0.7095238095238096, 
+            "global": 0.6039996135639069, 
+            "species": "Jbahamiensis||Andalucia"
+        }, 
+        {
+            "filtered": 0.75, 
+            "global": 0.5989759443532026, 
+            "species": "Jbahamiensis||Seculomonas"
+        }
+    ], 
+    "Glu": [
+        {
+            "filtered": 0.8455284552845529, 
+            "global": 0.5643899140179692, 
+            "species": "Reclinomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.7642276422764228, 
+            "global": 0.5317360641483915, 
+            "species": "Andalucia||Jlibera"
+        }, 
+        {
+            "filtered": 0.8373983739837398, 
+            "global": 0.5333784175441987, 
+            "species": "Seculomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.8130081300813008, 
+            "global": 0.5461308086175248, 
+            "species": "Jbahamiensis||Jlibera"
+        }, 
+        {
+            "filtered": 0.7926829268292683, 
+            "global": 0.5872862525359869, 
+            "species": "Andalucia||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.8699186991869918, 
+            "global": 0.6267993430586417, 
+            "species": "Seculomonas||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.8617886178861789, 
+            "global": 0.612501207612791, 
+            "species": "Jbahamiensis||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.8170731707317073, 
+            "global": 0.622355327987634, 
+            "species": "Seculomonas||Andalucia"
+        }, 
+        {
+            "filtered": 0.7967479674796748, 
+            "global": 0.6039996135639069, 
+            "species": "Jbahamiensis||Andalucia"
+        }, 
+        {
+            "filtered": 0.8617886178861789, 
+            "global": 0.5989759443532026, 
+            "species": "Jbahamiensis||Seculomonas"
+        }
+    ], 
+    "Tyr": [
+        {
+            "filtered": 0.7809187279151943, 
+            "global": 0.5643899140179692, 
+            "species": "Reclinomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.7279151943462897, 
+            "global": 0.5317360641483915, 
+            "species": "Andalucia||Jlibera"
+        }, 
+        {
+            "filtered": 0.7703180212014135, 
+            "global": 0.5333784175441987, 
+            "species": "Seculomonas||Jlibera"
+        }, 
+        {
+            "filtered": 0.7703180212014135, 
+            "global": 0.5461308086175248, 
+            "species": "Jbahamiensis||Jlibera"
+        }, 
+        {
+            "filtered": 0.7915194346289752, 
+            "global": 0.5872862525359869, 
+            "species": "Andalucia||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.8975265017667845, 
+            "global": 0.6267993430586417, 
+            "species": "Seculomonas||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.8869257950530035, 
+            "global": 0.612501207612791, 
+            "species": "Jbahamiensis||Reclinomonas"
+        }, 
+        {
+            "filtered": 0.7985865724381626, 
+            "global": 0.622355327987634, 
+            "species": "Seculomonas||Andalucia"
+        }, 
+        {
+            "filtered": 0.7809187279151943, 
+            "global": 0.6039996135639069, 
+            "species": "Jbahamiensis||Andalucia"
+        }, 
+        {
+            "filtered": 0.8551236749116607, 
+            "global": 0.5989759443532026, 
+            "species": "Jbahamiensis||Seculomonas"
+        }
+    ]
+}

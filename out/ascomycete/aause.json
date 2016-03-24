@@ -1,0 +1,4542 @@
+{
+    "Cys": [
+        {
+            "filtered": 0.9523809523809523, 
+            "global": 0.9154905628294507, 
+            "species": "Fusarium||Fsolani"
+        }, 
+        {
+            "filtered": 0.6666666666666666, 
+            "global": 0.6150314572351641, 
+            "species": "Aniger||Fsolani"
+        }, 
+        {
+            "filtered": 0.6666666666666666, 
+            "global": 0.6607719775548376, 
+            "species": "Trichoderma||Fsolani"
+        }, 
+        {
+            "filtered": 0.2857142857142857, 
+            "global": 0.36915490562829456, 
+            "species": "Aoryzae||Fsolani"
+        }, 
+        {
+            "filtered": 0.7619047619047619, 
+            "global": 0.6169018874341099, 
+            "species": "Paracoccidioides||Fsolani"
+        }, 
+        {
+            "filtered": 0.9047619047619048, 
+            "global": 0.804795102873661, 
+            "species": "Cordyceps||Fsolani"
+        }, 
+        {
+            "filtered": 0.9523809523809523, 
+            "global": 0.8933854786600918, 
+            "species": "Foxysporum||Fsolani"
+        }, 
+        {
+            "filtered": 0.4285714285714286, 
+            "global": 0.5029756844074137, 
+            "species": "Phaeosparia||Fsolani"
+        }, 
+        {
+            "filtered": 0.7619047619047619, 
+            "global": 0.683897296378167, 
+            "species": "Trychophyton||Fsolani"
+        }, 
+        {
+            "filtered": 0.7142857142857143, 
+            "global": 0.602618602278524, 
+            "species": "Aniger||Fusarium"
+        }, 
+        {
+            "filtered": 0.7142857142857143, 
+            "global": 0.6478490052712124, 
+            "species": "Trichoderma||Fusarium"
+        }, 
+        {
+            "filtered": 0.2857142857142857, 
+            "global": 0.36422377146743745, 
+            "species": "Aoryzae||Fusarium"
+        }, 
+        {
+            "filtered": 0.7142857142857143, 
+            "global": 0.6201326305050161, 
+            "species": "Paracoccidioides||Fusarium"
+        }, 
+        {
+            "filtered": 0.9523809523809523, 
+            "global": 0.805135181091651, 
+            "species": "Cordyceps||Fusarium"
+        }, 
+        {
+            "filtered": 1.0, 
+            "global": 0.9328345519469478, 
+            "species": "Foxysporum||Fusarium"
+        }, 
+        {
+            "filtered": 0.47619047619047616, 
+            "global": 0.4951538853936406, 
+            "species": "Phaeosparia||Fusarium"
+        }, 
+        {
+            "filtered": 0.8095238095238095, 
+            "global": 0.6878081958850536, 
+            "species": "Trychophyton||Fusarium"
+        }, 
+        {
+            "filtered": 0.47619047619047616, 
+            "global": 0.612310831491243, 
+            "species": "Trichoderma||Aniger"
+        }, 
+        {
+            "filtered": 0.5238095238095238, 
+            "global": 0.4274783200136032, 
+            "species": "Aoryzae||Aniger"
+        }, 
+        {
+            "filtered": 0.7142857142857143, 
+            "global": 0.5844244176160517, 
+            "species": "Paracoccidioides||Aniger"
+        }, 
+        {
+            "filtered": 0.6666666666666666, 
+            "global": 0.5944567250467607, 
+            "species": "Cordyceps||Aniger"
+        }, 
+        {
+            "filtered": 0.7142857142857143, 
+            "global": 0.5964971943547016, 
+            "species": "Foxysporum||Aniger"
+        }, 
+        {
+            "filtered": 0.5238095238095238, 
+            "global": 0.5834041829620813, 
+            "species": "Phaeosparia||Aniger"
+        }, 
+        {
+            "filtered": 0.8571428571428571, 
+            "global": 0.649379357252168, 
+            "species": "Trychophyton||Aniger"
+        }, 
+        {
+            "filtered": 0.19047619047619047, 
+            "global": 0.4109845264410814, 
+            "species": "Aoryzae||Trichoderma"
+        }, 
+        {
+            "filtered": 0.4285714285714286, 
+            "global": 0.4563849685427648, 
+            "species": "Paracoccidioides||Trichoderma"
+        }, 
+        {
+            "filtered": 0.7619047619047619, 
+            "global": 0.6400272062574393, 
+            "species": "Cordyceps||Trichoderma"
+        }, 
+        {
+            "filtered": 0.7142857142857143, 
+            "global": 0.6366264240775379, 
+            "species": "Foxysporum||Trichoderma"
+        }, 
+        {
+            "filtered": 0.5714285714285714, 
+            "global": 0.5774528141472539, 
+            "species": "Phaeosparia||Trichoderma"
+        }, 
+        {
+            "filtered": 0.5238095238095238, 
+            "global": 0.5289916680836593, 
+            "species": "Trychophyton||Trichoderma"
+        }, 
+        {
+            "filtered": 0.4285714285714286, 
+            "global": 0.3671144363203537, 
+            "species": "Paracoccidioides||Aoryzae"
+        }, 
+        {
+            "filtered": 0.2857142857142857, 
+            "global": 0.36847474919231415, 
+            "species": "Cordyceps||Aoryzae"
+        }, 
+        {
+            "filtered": 0.2857142857142857, 
+            "global": 0.3632035368134672, 
+            "species": "Foxysporum||Aoryzae"
+        }, 
+        {
+            "filtered": 0.19047619047619047, 
+            "global": 0.4373405883353172, 
+            "species": "Phaeosparia||Aoryzae"
+        }, 
+        {
+            "filtered": 0.4285714285714286, 
+            "global": 0.40095221901037237, 
+            "species": "Trychophyton||Aoryzae"
+        }, 
+        {
+            "filtered": 0.6666666666666666, 
+            "global": 0.6145213399081789, 
+            "species": "Cordyceps||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.7142857142857143, 
+            "global": 0.6131610270362183, 
+            "species": "Foxysporum||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.38095238095238093, 
+            "global": 0.43189933684747495, 
+            "species": "Phaeosparia||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.8095238095238095, 
+            "global": 0.6784560448903247, 
+            "species": "Trychophyton||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.9523809523809523, 
+            "global": 0.8029246726747152, 
+            "species": "Foxysporum||Cordyceps"
+        }, 
+        {
+            "filtered": 0.4285714285714286, 
+            "global": 0.4885223601428328, 
+            "species": "Phaeosparia||Cordyceps"
+        }, 
+        {
+            "filtered": 0.7619047619047619, 
+            "global": 0.6855976874681177, 
+            "species": "Trychophyton||Cordyceps"
+        }, 
+        {
+            "filtered": 0.47619047619047616, 
+            "global": 0.4905628294507737, 
+            "species": "Phaeosparia||Foxysporum"
+        }, 
+        {
+            "filtered": 0.8095238095238095, 
+            "global": 0.6852576092501276, 
+            "species": "Trychophyton||Foxysporum"
+        }, 
+        {
+            "filtered": 0.5714285714285714, 
+            "global": 0.49328345519469474, 
+            "species": "Trychophyton||Phaeosparia"
+        }
+    ], 
+    "Asp": [
+        {
+            "filtered": 1.0, 
+            "global": 0.9154905628294507, 
+            "species": "Fusarium||Fsolani"
+        }, 
+        {
+            "filtered": 0.7671232876712328, 
+            "global": 0.6150314572351641, 
+            "species": "Aniger||Fsolani"
+        }, 
+        {
+            "filtered": 0.7397260273972602, 
+            "global": 0.6607719775548376, 
+            "species": "Trichoderma||Fsolani"
+        }, 
+        {
+            "filtered": 0.410958904109589, 
+            "global": 0.36915490562829456, 
+            "species": "Aoryzae||Fsolani"
+        }, 
+        {
+            "filtered": 0.726027397260274, 
+            "global": 0.6169018874341099, 
+            "species": "Paracoccidioides||Fsolani"
+        }, 
+        {
+            "filtered": 0.9726027397260274, 
+            "global": 0.804795102873661, 
+            "species": "Cordyceps||Fsolani"
+        }, 
+        {
+            "filtered": 1.0, 
+            "global": 0.8933854786600918, 
+            "species": "Foxysporum||Fsolani"
+        }, 
+        {
+            "filtered": 0.410958904109589, 
+            "global": 0.5029756844074137, 
+            "species": "Phaeosparia||Fsolani"
+        }, 
+        {
+            "filtered": 0.821917808219178, 
+            "global": 0.683897296378167, 
+            "species": "Trychophyton||Fsolani"
+        }, 
+        {
+            "filtered": 0.7671232876712328, 
+            "global": 0.602618602278524, 
+            "species": "Aniger||Fusarium"
+        }, 
+        {
+            "filtered": 0.7397260273972602, 
+            "global": 0.6478490052712124, 
+            "species": "Trichoderma||Fusarium"
+        }, 
+        {
+            "filtered": 0.410958904109589, 
+            "global": 0.36422377146743745, 
+            "species": "Aoryzae||Fusarium"
+        }, 
+        {
+            "filtered": 0.726027397260274, 
+            "global": 0.6201326305050161, 
+            "species": "Paracoccidioides||Fusarium"
+        }, 
+        {
+            "filtered": 0.9726027397260274, 
+            "global": 0.805135181091651, 
+            "species": "Cordyceps||Fusarium"
+        }, 
+        {
+            "filtered": 1.0, 
+            "global": 0.9328345519469478, 
+            "species": "Foxysporum||Fusarium"
+        }, 
+        {
+            "filtered": 0.410958904109589, 
+            "global": 0.4951538853936406, 
+            "species": "Phaeosparia||Fusarium"
+        }, 
+        {
+            "filtered": 0.821917808219178, 
+            "global": 0.6878081958850536, 
+            "species": "Trychophyton||Fusarium"
+        }, 
+        {
+            "filtered": 0.6301369863013698, 
+            "global": 0.612310831491243, 
+            "species": "Trichoderma||Aniger"
+        }, 
+        {
+            "filtered": 0.3835616438356164, 
+            "global": 0.4274783200136032, 
+            "species": "Aoryzae||Aniger"
+        }, 
+        {
+            "filtered": 0.7534246575342466, 
+            "global": 0.5844244176160517, 
+            "species": "Paracoccidioides||Aniger"
+        }, 
+        {
+            "filtered": 0.7397260273972602, 
+            "global": 0.5944567250467607, 
+            "species": "Cordyceps||Aniger"
+        }, 
+        {
+            "filtered": 0.7671232876712328, 
+            "global": 0.5964971943547016, 
+            "species": "Foxysporum||Aniger"
+        }, 
+        {
+            "filtered": 0.452054794520548, 
+            "global": 0.5834041829620813, 
+            "species": "Phaeosparia||Aniger"
+        }, 
+        {
+            "filtered": 0.7534246575342466, 
+            "global": 0.649379357252168, 
+            "species": "Trychophyton||Aniger"
+        }, 
+        {
+            "filtered": 0.36986301369863006, 
+            "global": 0.4109845264410814, 
+            "species": "Aoryzae||Trichoderma"
+        }, 
+        {
+            "filtered": 0.5068493150684932, 
+            "global": 0.4563849685427648, 
+            "species": "Paracoccidioides||Trichoderma"
+        }, 
+        {
+            "filtered": 0.7397260273972602, 
+            "global": 0.6400272062574393, 
+            "species": "Cordyceps||Trichoderma"
+        }, 
+        {
+            "filtered": 0.7397260273972602, 
+            "global": 0.6366264240775379, 
+            "species": "Foxysporum||Trichoderma"
+        }, 
+        {
+            "filtered": 0.547945205479452, 
+            "global": 0.5774528141472539, 
+            "species": "Phaeosparia||Trichoderma"
+        }, 
+        {
+            "filtered": 0.5753424657534246, 
+            "global": 0.5289916680836593, 
+            "species": "Trychophyton||Trichoderma"
+        }, 
+        {
+            "filtered": 0.4383561643835616, 
+            "global": 0.3671144363203537, 
+            "species": "Paracoccidioides||Aoryzae"
+        }, 
+        {
+            "filtered": 0.3835616438356164, 
+            "global": 0.36847474919231415, 
+            "species": "Cordyceps||Aoryzae"
+        }, 
+        {
+            "filtered": 0.410958904109589, 
+            "global": 0.3632035368134672, 
+            "species": "Foxysporum||Aoryzae"
+        }, 
+        {
+            "filtered": 0.3561643835616438, 
+            "global": 0.4373405883353172, 
+            "species": "Phaeosparia||Aoryzae"
+        }, 
+        {
+            "filtered": 0.4383561643835616, 
+            "global": 0.40095221901037237, 
+            "species": "Trychophyton||Aoryzae"
+        }, 
+        {
+            "filtered": 0.7397260273972602, 
+            "global": 0.6145213399081789, 
+            "species": "Cordyceps||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.726027397260274, 
+            "global": 0.6131610270362183, 
+            "species": "Foxysporum||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.36986301369863006, 
+            "global": 0.43189933684747495, 
+            "species": "Phaeosparia||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.7808219178082192, 
+            "global": 0.6784560448903247, 
+            "species": "Trychophyton||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.9726027397260274, 
+            "global": 0.8029246726747152, 
+            "species": "Foxysporum||Cordyceps"
+        }, 
+        {
+            "filtered": 0.3972602739726028, 
+            "global": 0.4885223601428328, 
+            "species": "Phaeosparia||Cordyceps"
+        }, 
+        {
+            "filtered": 0.7945205479452054, 
+            "global": 0.6855976874681177, 
+            "species": "Trychophyton||Cordyceps"
+        }, 
+        {
+            "filtered": 0.410958904109589, 
+            "global": 0.4905628294507737, 
+            "species": "Phaeosparia||Foxysporum"
+        }, 
+        {
+            "filtered": 0.821917808219178, 
+            "global": 0.6852576092501276, 
+            "species": "Trychophyton||Foxysporum"
+        }, 
+        {
+            "filtered": 0.410958904109589, 
+            "global": 0.49328345519469474, 
+            "species": "Trychophyton||Phaeosparia"
+        }
+    ], 
+    "Ser": [
+        {
+            "filtered": 0.9514925373134329, 
+            "global": 0.9154905628294507, 
+            "species": "Fusarium||Fsolani"
+        }, 
+        {
+            "filtered": 0.6828358208955224, 
+            "global": 0.6150314572351641, 
+            "species": "Aniger||Fsolani"
+        }, 
+        {
+            "filtered": 0.7574626865671642, 
+            "global": 0.6607719775548376, 
+            "species": "Trichoderma||Fsolani"
+        }, 
+        {
+            "filtered": 0.33582089552238803, 
+            "global": 0.36915490562829456, 
+            "species": "Aoryzae||Fsolani"
+        }, 
+        {
+            "filtered": 0.7425373134328358, 
+            "global": 0.6169018874341099, 
+            "species": "Paracoccidioides||Fsolani"
+        }, 
+        {
+            "filtered": 0.8805970149253731, 
+            "global": 0.804795102873661, 
+            "species": "Cordyceps||Fsolani"
+        }, 
+        {
+            "filtered": 0.9664179104477612, 
+            "global": 0.8933854786600918, 
+            "species": "Foxysporum||Fsolani"
+        }, 
+        {
+            "filtered": 0.49626865671641784, 
+            "global": 0.5029756844074137, 
+            "species": "Phaeosparia||Fsolani"
+        }, 
+        {
+            "filtered": 0.7611940298507462, 
+            "global": 0.683897296378167, 
+            "species": "Trychophyton||Fsolani"
+        }, 
+        {
+            "filtered": 0.664179104477612, 
+            "global": 0.602618602278524, 
+            "species": "Aniger||Fusarium"
+        }, 
+        {
+            "filtered": 0.746268656716418, 
+            "global": 0.6478490052712124, 
+            "species": "Trichoderma||Fusarium"
+        }, 
+        {
+            "filtered": 0.3246268656716418, 
+            "global": 0.36422377146743745, 
+            "species": "Aoryzae||Fusarium"
+        }, 
+        {
+            "filtered": 0.7276119402985075, 
+            "global": 0.6201326305050161, 
+            "species": "Paracoccidioides||Fusarium"
+        }, 
+        {
+            "filtered": 0.8507462686567164, 
+            "global": 0.805135181091651, 
+            "species": "Cordyceps||Fusarium"
+        }, 
+        {
+            "filtered": 0.9776119402985075, 
+            "global": 0.9328345519469478, 
+            "species": "Foxysporum||Fusarium"
+        }, 
+        {
+            "filtered": 0.4850746268656716, 
+            "global": 0.4951538853936406, 
+            "species": "Phaeosparia||Fusarium"
+        }, 
+        {
+            "filtered": 0.7350746268656716, 
+            "global": 0.6878081958850536, 
+            "species": "Trychophyton||Fusarium"
+        }, 
+        {
+            "filtered": 0.6119402985074627, 
+            "global": 0.612310831491243, 
+            "species": "Trichoderma||Aniger"
+        }, 
+        {
+            "filtered": 0.32835820895522394, 
+            "global": 0.4274783200136032, 
+            "species": "Aoryzae||Aniger"
+        }, 
+        {
+            "filtered": 0.664179104477612, 
+            "global": 0.5844244176160517, 
+            "species": "Paracoccidioides||Aniger"
+        }, 
+        {
+            "filtered": 0.6380597014925373, 
+            "global": 0.5944567250467607, 
+            "species": "Cordyceps||Aniger"
+        }, 
+        {
+            "filtered": 0.6716417910447762, 
+            "global": 0.5964971943547016, 
+            "species": "Foxysporum||Aniger"
+        }, 
+        {
+            "filtered": 0.5, 
+            "global": 0.5834041829620813, 
+            "species": "Phaeosparia||Aniger"
+        }, 
+        {
+            "filtered": 0.6977611940298507, 
+            "global": 0.649379357252168, 
+            "species": "Trychophyton||Aniger"
+        }, 
+        {
+            "filtered": 0.3395522388059702, 
+            "global": 0.4109845264410814, 
+            "species": "Aoryzae||Trichoderma"
+        }, 
+        {
+            "filtered": 0.5597014925373134, 
+            "global": 0.4563849685427648, 
+            "species": "Paracoccidioides||Trichoderma"
+        }, 
+        {
+            "filtered": 0.7425373134328358, 
+            "global": 0.6400272062574393, 
+            "species": "Cordyceps||Trichoderma"
+        }, 
+        {
+            "filtered": 0.753731343283582, 
+            "global": 0.6366264240775379, 
+            "species": "Foxysporum||Trichoderma"
+        }, 
+        {
+            "filtered": 0.5223880597014925, 
+            "global": 0.5774528141472539, 
+            "species": "Phaeosparia||Trichoderma"
+        }, 
+        {
+            "filtered": 0.585820895522388, 
+            "global": 0.5289916680836593, 
+            "species": "Trychophyton||Trichoderma"
+        }, 
+        {
+            "filtered": 0.36567164179104483, 
+            "global": 0.3671144363203537, 
+            "species": "Paracoccidioides||Aoryzae"
+        }, 
+        {
+            "filtered": 0.3171641791044777, 
+            "global": 0.36847474919231415, 
+            "species": "Cordyceps||Aoryzae"
+        }, 
+        {
+            "filtered": 0.32835820895522394, 
+            "global": 0.3632035368134672, 
+            "species": "Foxysporum||Aoryzae"
+        }, 
+        {
+            "filtered": 0.3022388059701493, 
+            "global": 0.4373405883353172, 
+            "species": "Phaeosparia||Aoryzae"
+        }, 
+        {
+            "filtered": 0.332089552238806, 
+            "global": 0.40095221901037237, 
+            "species": "Trychophyton||Aoryzae"
+        }, 
+        {
+            "filtered": 0.6865671641791045, 
+            "global": 0.6145213399081789, 
+            "species": "Cordyceps||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.7388059701492538, 
+            "global": 0.6131610270362183, 
+            "species": "Foxysporum||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.43656716417910446, 
+            "global": 0.43189933684747495, 
+            "species": "Phaeosparia||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.7574626865671642, 
+            "global": 0.6784560448903247, 
+            "species": "Trychophyton||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.8656716417910447, 
+            "global": 0.8029246726747152, 
+            "species": "Foxysporum||Cordyceps"
+        }, 
+        {
+            "filtered": 0.45149253731343286, 
+            "global": 0.4885223601428328, 
+            "species": "Phaeosparia||Cordyceps"
+        }, 
+        {
+            "filtered": 0.7089552238805971, 
+            "global": 0.6855976874681177, 
+            "species": "Trychophyton||Cordyceps"
+        }, 
+        {
+            "filtered": 0.49626865671641784, 
+            "global": 0.4905628294507737, 
+            "species": "Phaeosparia||Foxysporum"
+        }, 
+        {
+            "filtered": 0.75, 
+            "global": 0.6852576092501276, 
+            "species": "Trychophyton||Foxysporum"
+        }, 
+        {
+            "filtered": 0.45149253731343286, 
+            "global": 0.49328345519469474, 
+            "species": "Trychophyton||Phaeosparia"
+        }
+    ], 
+    "Gln": [
+        {
+            "filtered": 1.0, 
+            "global": 0.9154905628294507, 
+            "species": "Fusarium||Fsolani"
+        }, 
+        {
+            "filtered": 0.8939393939393939, 
+            "global": 0.6150314572351641, 
+            "species": "Aniger||Fsolani"
+        }, 
+        {
+            "filtered": 0.803030303030303, 
+            "global": 0.6607719775548376, 
+            "species": "Trichoderma||Fsolani"
+        }, 
+        {
+            "filtered": 0.36363636363636365, 
+            "global": 0.36915490562829456, 
+            "species": "Aoryzae||Fsolani"
+        }, 
+        {
+            "filtered": 0.7727272727272727, 
+            "global": 0.6169018874341099, 
+            "species": "Paracoccidioides||Fsolani"
+        }, 
+        {
+            "filtered": 0.9545454545454546, 
+            "global": 0.804795102873661, 
+            "species": "Cordyceps||Fsolani"
+        }, 
+        {
+            "filtered": 1.0, 
+            "global": 0.8933854786600918, 
+            "species": "Foxysporum||Fsolani"
+        }, 
+        {
+            "filtered": 0.5303030303030303, 
+            "global": 0.5029756844074137, 
+            "species": "Phaeosparia||Fsolani"
+        }, 
+        {
+            "filtered": 0.8333333333333334, 
+            "global": 0.683897296378167, 
+            "species": "Trychophyton||Fsolani"
+        }, 
+        {
+            "filtered": 0.8939393939393939, 
+            "global": 0.602618602278524, 
+            "species": "Aniger||Fusarium"
+        }, 
+        {
+            "filtered": 0.803030303030303, 
+            "global": 0.6478490052712124, 
+            "species": "Trichoderma||Fusarium"
+        }, 
+        {
+            "filtered": 0.36363636363636365, 
+            "global": 0.36422377146743745, 
+            "species": "Aoryzae||Fusarium"
+        }, 
+        {
+            "filtered": 0.7727272727272727, 
+            "global": 0.6201326305050161, 
+            "species": "Paracoccidioides||Fusarium"
+        }, 
+        {
+            "filtered": 0.9545454545454546, 
+            "global": 0.805135181091651, 
+            "species": "Cordyceps||Fusarium"
+        }, 
+        {
+            "filtered": 1.0, 
+            "global": 0.9328345519469478, 
+            "species": "Foxysporum||Fusarium"
+        }, 
+        {
+            "filtered": 0.5303030303030303, 
+            "global": 0.4951538853936406, 
+            "species": "Phaeosparia||Fusarium"
+        }, 
+        {
+            "filtered": 0.8333333333333334, 
+            "global": 0.6878081958850536, 
+            "species": "Trychophyton||Fusarium"
+        }, 
+        {
+            "filtered": 0.7878787878787878, 
+            "global": 0.612310831491243, 
+            "species": "Trichoderma||Aniger"
+        }, 
+        {
+            "filtered": 0.33333333333333326, 
+            "global": 0.4274783200136032, 
+            "species": "Aoryzae||Aniger"
+        }, 
+        {
+            "filtered": 0.7727272727272727, 
+            "global": 0.5844244176160517, 
+            "species": "Paracoccidioides||Aniger"
+        }, 
+        {
+            "filtered": 0.8787878787878788, 
+            "global": 0.5944567250467607, 
+            "species": "Cordyceps||Aniger"
+        }, 
+        {
+            "filtered": 0.8939393939393939, 
+            "global": 0.5964971943547016, 
+            "species": "Foxysporum||Aniger"
+        }, 
+        {
+            "filtered": 0.5606060606060606, 
+            "global": 0.5834041829620813, 
+            "species": "Phaeosparia||Aniger"
+        }, 
+        {
+            "filtered": 0.8484848484848485, 
+            "global": 0.649379357252168, 
+            "species": "Trychophyton||Aniger"
+        }, 
+        {
+            "filtered": 0.4242424242424243, 
+            "global": 0.4109845264410814, 
+            "species": "Aoryzae||Trichoderma"
+        }, 
+        {
+            "filtered": 0.6212121212121212, 
+            "global": 0.4563849685427648, 
+            "species": "Paracoccidioides||Trichoderma"
+        }, 
+        {
+            "filtered": 0.8181818181818182, 
+            "global": 0.6400272062574393, 
+            "species": "Cordyceps||Trichoderma"
+        }, 
+        {
+            "filtered": 0.803030303030303, 
+            "global": 0.6366264240775379, 
+            "species": "Foxysporum||Trichoderma"
+        }, 
+        {
+            "filtered": 0.6060606060606061, 
+            "global": 0.5774528141472539, 
+            "species": "Phaeosparia||Trichoderma"
+        }, 
+        {
+            "filtered": 0.6666666666666666, 
+            "global": 0.5289916680836593, 
+            "species": "Trychophyton||Trichoderma"
+        }, 
+        {
+            "filtered": 0.33333333333333326, 
+            "global": 0.3671144363203537, 
+            "species": "Paracoccidioides||Aoryzae"
+        }, 
+        {
+            "filtered": 0.3787878787878788, 
+            "global": 0.36847474919231415, 
+            "species": "Cordyceps||Aoryzae"
+        }, 
+        {
+            "filtered": 0.36363636363636365, 
+            "global": 0.3632035368134672, 
+            "species": "Foxysporum||Aoryzae"
+        }, 
+        {
+            "filtered": 0.43939393939393945, 
+            "global": 0.4373405883353172, 
+            "species": "Phaeosparia||Aoryzae"
+        }, 
+        {
+            "filtered": 0.3787878787878788, 
+            "global": 0.40095221901037237, 
+            "species": "Trychophyton||Aoryzae"
+        }, 
+        {
+            "filtered": 0.7727272727272727, 
+            "global": 0.6145213399081789, 
+            "species": "Cordyceps||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.7727272727272727, 
+            "global": 0.6131610270362183, 
+            "species": "Foxysporum||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.4696969696969697, 
+            "global": 0.43189933684747495, 
+            "species": "Phaeosparia||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.8333333333333334, 
+            "global": 0.6784560448903247, 
+            "species": "Trychophyton||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.9545454545454546, 
+            "global": 0.8029246726747152, 
+            "species": "Foxysporum||Cordyceps"
+        }, 
+        {
+            "filtered": 0.5303030303030303, 
+            "global": 0.4885223601428328, 
+            "species": "Phaeosparia||Cordyceps"
+        }, 
+        {
+            "filtered": 0.8181818181818182, 
+            "global": 0.6855976874681177, 
+            "species": "Trychophyton||Cordyceps"
+        }, 
+        {
+            "filtered": 0.5303030303030303, 
+            "global": 0.4905628294507737, 
+            "species": "Phaeosparia||Foxysporum"
+        }, 
+        {
+            "filtered": 0.8333333333333334, 
+            "global": 0.6852576092501276, 
+            "species": "Trychophyton||Foxysporum"
+        }, 
+        {
+            "filtered": 0.5151515151515151, 
+            "global": 0.49328345519469474, 
+            "species": "Trychophyton||Phaeosparia"
+        }
+    ], 
+    "Lys": [
+        {
+            "filtered": 1.0, 
+            "global": 0.9154905628294507, 
+            "species": "Fusarium||Fsolani"
+        }, 
+        {
+            "filtered": 0.6144578313253012, 
+            "global": 0.6150314572351641, 
+            "species": "Aniger||Fsolani"
+        }, 
+        {
+            "filtered": 0.8192771084337349, 
+            "global": 0.6607719775548376, 
+            "species": "Trichoderma||Fsolani"
+        }, 
+        {
+            "filtered": 0.28915662650602414, 
+            "global": 0.36915490562829456, 
+            "species": "Aoryzae||Fsolani"
+        }, 
+        {
+            "filtered": 0.6385542168674698, 
+            "global": 0.6169018874341099, 
+            "species": "Paracoccidioides||Fsolani"
+        }, 
+        {
+            "filtered": 0.8674698795180723, 
+            "global": 0.804795102873661, 
+            "species": "Cordyceps||Fsolani"
+        }, 
+        {
+            "filtered": 0.963855421686747, 
+            "global": 0.8933854786600918, 
+            "species": "Foxysporum||Fsolani"
+        }, 
+        {
+            "filtered": 0.3855421686746988, 
+            "global": 0.5029756844074137, 
+            "species": "Phaeosparia||Fsolani"
+        }, 
+        {
+            "filtered": 0.7349397590361446, 
+            "global": 0.683897296378167, 
+            "species": "Trychophyton||Fsolani"
+        }, 
+        {
+            "filtered": 0.6144578313253012, 
+            "global": 0.602618602278524, 
+            "species": "Aniger||Fusarium"
+        }, 
+        {
+            "filtered": 0.8192771084337349, 
+            "global": 0.6478490052712124, 
+            "species": "Trichoderma||Fusarium"
+        }, 
+        {
+            "filtered": 0.28915662650602414, 
+            "global": 0.36422377146743745, 
+            "species": "Aoryzae||Fusarium"
+        }, 
+        {
+            "filtered": 0.6385542168674698, 
+            "global": 0.6201326305050161, 
+            "species": "Paracoccidioides||Fusarium"
+        }, 
+        {
+            "filtered": 0.8674698795180723, 
+            "global": 0.805135181091651, 
+            "species": "Cordyceps||Fusarium"
+        }, 
+        {
+            "filtered": 0.963855421686747, 
+            "global": 0.9328345519469478, 
+            "species": "Foxysporum||Fusarium"
+        }, 
+        {
+            "filtered": 0.3855421686746988, 
+            "global": 0.4951538853936406, 
+            "species": "Phaeosparia||Fusarium"
+        }, 
+        {
+            "filtered": 0.7349397590361446, 
+            "global": 0.6878081958850536, 
+            "species": "Trychophyton||Fusarium"
+        }, 
+        {
+            "filtered": 0.6024096385542169, 
+            "global": 0.612310831491243, 
+            "species": "Trichoderma||Aniger"
+        }, 
+        {
+            "filtered": 0.3855421686746988, 
+            "global": 0.4274783200136032, 
+            "species": "Aoryzae||Aniger"
+        }, 
+        {
+            "filtered": 0.6385542168674698, 
+            "global": 0.5844244176160517, 
+            "species": "Paracoccidioides||Aniger"
+        }, 
+        {
+            "filtered": 0.5903614457831325, 
+            "global": 0.5944567250467607, 
+            "species": "Cordyceps||Aniger"
+        }, 
+        {
+            "filtered": 0.5903614457831325, 
+            "global": 0.5964971943547016, 
+            "species": "Foxysporum||Aniger"
+        }, 
+        {
+            "filtered": 0.42168674698795183, 
+            "global": 0.5834041829620813, 
+            "species": "Phaeosparia||Aniger"
+        }, 
+        {
+            "filtered": 0.6987951807228916, 
+            "global": 0.649379357252168, 
+            "species": "Trychophyton||Aniger"
+        }, 
+        {
+            "filtered": 0.3373493975903614, 
+            "global": 0.4109845264410814, 
+            "species": "Aoryzae||Trichoderma"
+        }, 
+        {
+            "filtered": 0.5542168674698795, 
+            "global": 0.4563849685427648, 
+            "species": "Paracoccidioides||Trichoderma"
+        }, 
+        {
+            "filtered": 0.7831325301204819, 
+            "global": 0.6400272062574393, 
+            "species": "Cordyceps||Trichoderma"
+        }, 
+        {
+            "filtered": 0.7951807228915663, 
+            "global": 0.6366264240775379, 
+            "species": "Foxysporum||Trichoderma"
+        }, 
+        {
+            "filtered": 0.5060240963855421, 
+            "global": 0.5774528141472539, 
+            "species": "Phaeosparia||Trichoderma"
+        }, 
+        {
+            "filtered": 0.6265060240963856, 
+            "global": 0.5289916680836593, 
+            "species": "Trychophyton||Trichoderma"
+        }, 
+        {
+            "filtered": 0.3855421686746988, 
+            "global": 0.3671144363203537, 
+            "species": "Paracoccidioides||Aoryzae"
+        }, 
+        {
+            "filtered": 0.3373493975903614, 
+            "global": 0.36847474919231415, 
+            "species": "Cordyceps||Aoryzae"
+        }, 
+        {
+            "filtered": 0.28915662650602414, 
+            "global": 0.3632035368134672, 
+            "species": "Foxysporum||Aoryzae"
+        }, 
+        {
+            "filtered": 0.37349397590361444, 
+            "global": 0.4373405883353172, 
+            "species": "Phaeosparia||Aoryzae"
+        }, 
+        {
+            "filtered": 0.3493975903614458, 
+            "global": 0.40095221901037237, 
+            "species": "Trychophyton||Aoryzae"
+        }, 
+        {
+            "filtered": 0.6024096385542169, 
+            "global": 0.6145213399081789, 
+            "species": "Cordyceps||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.6265060240963856, 
+            "global": 0.6131610270362183, 
+            "species": "Foxysporum||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.40963855421686746, 
+            "global": 0.43189933684747495, 
+            "species": "Phaeosparia||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.6867469879518072, 
+            "global": 0.6784560448903247, 
+            "species": "Trychophyton||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.8433734939759037, 
+            "global": 0.8029246726747152, 
+            "species": "Foxysporum||Cordyceps"
+        }, 
+        {
+            "filtered": 0.3975903614457832, 
+            "global": 0.4885223601428328, 
+            "species": "Phaeosparia||Cordyceps"
+        }, 
+        {
+            "filtered": 0.6987951807228916, 
+            "global": 0.6855976874681177, 
+            "species": "Trychophyton||Cordyceps"
+        }, 
+        {
+            "filtered": 0.37349397590361444, 
+            "global": 0.4905628294507737, 
+            "species": "Phaeosparia||Foxysporum"
+        }, 
+        {
+            "filtered": 0.7108433734939759, 
+            "global": 0.6852576092501276, 
+            "species": "Trychophyton||Foxysporum"
+        }, 
+        {
+            "filtered": 0.4337349397590362, 
+            "global": 0.49328345519469474, 
+            "species": "Trychophyton||Phaeosparia"
+        }
+    ], 
+    "Trp": [
+        {
+            "filtered": 1.0, 
+            "global": 0.9154905628294507, 
+            "species": "Fusarium||Fsolani"
+        }, 
+        {
+            "filtered": 0.8947368421052632, 
+            "global": 0.6150314572351641, 
+            "species": "Aniger||Fsolani"
+        }, 
+        {
+            "filtered": 0.6578947368421053, 
+            "global": 0.6607719775548376, 
+            "species": "Trichoderma||Fsolani"
+        }, 
+        {
+            "filtered": 0.0, 
+            "global": 0.36915490562829456, 
+            "species": "Aoryzae||Fsolani"
+        }, 
+        {
+            "filtered": 0.8421052631578947, 
+            "global": 0.6169018874341099, 
+            "species": "Paracoccidioides||Fsolani"
+        }, 
+        {
+            "filtered": 1.0, 
+            "global": 0.804795102873661, 
+            "species": "Cordyceps||Fsolani"
+        }, 
+        {
+            "filtered": 1.0, 
+            "global": 0.8933854786600918, 
+            "species": "Foxysporum||Fsolani"
+        }, 
+        {
+            "filtered": 0.5789473684210527, 
+            "global": 0.5029756844074137, 
+            "species": "Phaeosparia||Fsolani"
+        }, 
+        {
+            "filtered": 0.9210526315789473, 
+            "global": 0.683897296378167, 
+            "species": "Trychophyton||Fsolani"
+        }, 
+        {
+            "filtered": 0.8947368421052632, 
+            "global": 0.602618602278524, 
+            "species": "Aniger||Fusarium"
+        }, 
+        {
+            "filtered": 0.6578947368421053, 
+            "global": 0.6478490052712124, 
+            "species": "Trichoderma||Fusarium"
+        }, 
+        {
+            "filtered": 0.0, 
+            "global": 0.36422377146743745, 
+            "species": "Aoryzae||Fusarium"
+        }, 
+        {
+            "filtered": 0.8421052631578947, 
+            "global": 0.6201326305050161, 
+            "species": "Paracoccidioides||Fusarium"
+        }, 
+        {
+            "filtered": 1.0, 
+            "global": 0.805135181091651, 
+            "species": "Cordyceps||Fusarium"
+        }, 
+        {
+            "filtered": 1.0, 
+            "global": 0.9328345519469478, 
+            "species": "Foxysporum||Fusarium"
+        }, 
+        {
+            "filtered": 0.5789473684210527, 
+            "global": 0.4951538853936406, 
+            "species": "Phaeosparia||Fusarium"
+        }, 
+        {
+            "filtered": 0.9210526315789473, 
+            "global": 0.6878081958850536, 
+            "species": "Trychophyton||Fusarium"
+        }, 
+        {
+            "filtered": 0.5526315789473685, 
+            "global": 0.612310831491243, 
+            "species": "Trichoderma||Aniger"
+        }, 
+        {
+            "filtered": 0.0, 
+            "global": 0.4274783200136032, 
+            "species": "Aoryzae||Aniger"
+        }, 
+        {
+            "filtered": 0.8421052631578947, 
+            "global": 0.5844244176160517, 
+            "species": "Paracoccidioides||Aniger"
+        }, 
+        {
+            "filtered": 0.8947368421052632, 
+            "global": 0.5944567250467607, 
+            "species": "Cordyceps||Aniger"
+        }, 
+        {
+            "filtered": 0.8947368421052632, 
+            "global": 0.5964971943547016, 
+            "species": "Foxysporum||Aniger"
+        }, 
+        {
+            "filtered": 0.5, 
+            "global": 0.5834041829620813, 
+            "species": "Phaeosparia||Aniger"
+        }, 
+        {
+            "filtered": 0.8947368421052632, 
+            "global": 0.649379357252168, 
+            "species": "Trychophyton||Aniger"
+        }, 
+        {
+            "filtered": 0.3421052631578947, 
+            "global": 0.4109845264410814, 
+            "species": "Aoryzae||Trichoderma"
+        }, 
+        {
+            "filtered": 0.5, 
+            "global": 0.4563849685427648, 
+            "species": "Paracoccidioides||Trichoderma"
+        }, 
+        {
+            "filtered": 0.6578947368421053, 
+            "global": 0.6400272062574393, 
+            "species": "Cordyceps||Trichoderma"
+        }, 
+        {
+            "filtered": 0.6578947368421053, 
+            "global": 0.6366264240775379, 
+            "species": "Foxysporum||Trichoderma"
+        }, 
+        {
+            "filtered": 0.5, 
+            "global": 0.5774528141472539, 
+            "species": "Phaeosparia||Trichoderma"
+        }, 
+        {
+            "filtered": 0.5789473684210527, 
+            "global": 0.5289916680836593, 
+            "species": "Trychophyton||Trichoderma"
+        }, 
+        {
+            "filtered": 0.05263157894736836, 
+            "global": 0.3671144363203537, 
+            "species": "Paracoccidioides||Aoryzae"
+        }, 
+        {
+            "filtered": 0.0, 
+            "global": 0.36847474919231415, 
+            "species": "Cordyceps||Aoryzae"
+        }, 
+        {
+            "filtered": 0.0, 
+            "global": 0.3632035368134672, 
+            "species": "Foxysporum||Aoryzae"
+        }, 
+        {
+            "filtered": 0.39473684210526316, 
+            "global": 0.4373405883353172, 
+            "species": "Phaeosparia||Aoryzae"
+        }, 
+        {
+            "filtered": 0.0, 
+            "global": 0.40095221901037237, 
+            "species": "Trychophyton||Aoryzae"
+        }, 
+        {
+            "filtered": 0.8421052631578947, 
+            "global": 0.6145213399081789, 
+            "species": "Cordyceps||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.8421052631578947, 
+            "global": 0.6131610270362183, 
+            "species": "Foxysporum||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.4736842105263157, 
+            "global": 0.43189933684747495, 
+            "species": "Phaeosparia||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.8947368421052632, 
+            "global": 0.6784560448903247, 
+            "species": "Trychophyton||Paracoccidioides"
+        }, 
+        {
+            "filtered": 1.0, 
+            "global": 0.8029246726747152, 
+            "species": "Foxysporum||Cordyceps"
+        }, 
+        {
+            "filtered": 0.5789473684210527, 
+            "global": 0.4885223601428328, 
+            "species": "Phaeosparia||Cordyceps"
+        }, 
+        {
+            "filtered": 0.9210526315789473, 
+            "global": 0.6855976874681177, 
+            "species": "Trychophyton||Cordyceps"
+        }, 
+        {
+            "filtered": 0.5789473684210527, 
+            "global": 0.4905628294507737, 
+            "species": "Phaeosparia||Foxysporum"
+        }, 
+        {
+            "filtered": 0.9210526315789473, 
+            "global": 0.6852576092501276, 
+            "species": "Trychophyton||Foxysporum"
+        }, 
+        {
+            "filtered": 0.5263157894736842, 
+            "global": 0.49328345519469474, 
+            "species": "Trychophyton||Phaeosparia"
+        }
+    ], 
+    "Asn": [
+        {
+            "filtered": 0.9777777777777777, 
+            "global": 0.9154905628294507, 
+            "species": "Fusarium||Fsolani"
+        }, 
+        {
+            "filtered": 0.6592592592592592, 
+            "global": 0.6150314572351641, 
+            "species": "Aniger||Fsolani"
+        }, 
+        {
+            "filtered": 0.8, 
+            "global": 0.6607719775548376, 
+            "species": "Trichoderma||Fsolani"
+        }, 
+        {
+            "filtered": 0.3037037037037037, 
+            "global": 0.36915490562829456, 
+            "species": "Aoryzae||Fsolani"
+        }, 
+        {
+            "filtered": 0.7185185185185186, 
+            "global": 0.6169018874341099, 
+            "species": "Paracoccidioides||Fsolani"
+        }, 
+        {
+            "filtered": 0.8962962962962963, 
+            "global": 0.804795102873661, 
+            "species": "Cordyceps||Fsolani"
+        }, 
+        {
+            "filtered": 0.9703703703703703, 
+            "global": 0.8933854786600918, 
+            "species": "Foxysporum||Fsolani"
+        }, 
+        {
+            "filtered": 0.37777777777777777, 
+            "global": 0.5029756844074137, 
+            "species": "Phaeosparia||Fsolani"
+        }, 
+        {
+            "filtered": 0.7481481481481481, 
+            "global": 0.683897296378167, 
+            "species": "Trychophyton||Fsolani"
+        }, 
+        {
+            "filtered": 0.6370370370370371, 
+            "global": 0.602618602278524, 
+            "species": "Aniger||Fusarium"
+        }, 
+        {
+            "filtered": 0.7777777777777778, 
+            "global": 0.6478490052712124, 
+            "species": "Trichoderma||Fusarium"
+        }, 
+        {
+            "filtered": 0.3037037037037037, 
+            "global": 0.36422377146743745, 
+            "species": "Aoryzae||Fusarium"
+        }, 
+        {
+            "filtered": 0.7111111111111111, 
+            "global": 0.6201326305050161, 
+            "species": "Paracoccidioides||Fusarium"
+        }, 
+        {
+            "filtered": 0.8888888888888888, 
+            "global": 0.805135181091651, 
+            "species": "Cordyceps||Fusarium"
+        }, 
+        {
+            "filtered": 0.9777777777777777, 
+            "global": 0.9328345519469478, 
+            "species": "Foxysporum||Fusarium"
+        }, 
+        {
+            "filtered": 0.3555555555555556, 
+            "global": 0.4951538853936406, 
+            "species": "Phaeosparia||Fusarium"
+        }, 
+        {
+            "filtered": 0.7333333333333333, 
+            "global": 0.6878081958850536, 
+            "species": "Trychophyton||Fusarium"
+        }, 
+        {
+            "filtered": 0.6370370370370371, 
+            "global": 0.612310831491243, 
+            "species": "Trichoderma||Aniger"
+        }, 
+        {
+            "filtered": 0.3111111111111111, 
+            "global": 0.4274783200136032, 
+            "species": "Aoryzae||Aniger"
+        }, 
+        {
+            "filtered": 0.5777777777777777, 
+            "global": 0.5844244176160517, 
+            "species": "Paracoccidioides||Aniger"
+        }, 
+        {
+            "filtered": 0.6074074074074074, 
+            "global": 0.5944567250467607, 
+            "species": "Cordyceps||Aniger"
+        }, 
+        {
+            "filtered": 0.6370370370370371, 
+            "global": 0.5964971943547016, 
+            "species": "Foxysporum||Aniger"
+        }, 
+        {
+            "filtered": 0.4666666666666667, 
+            "global": 0.5834041829620813, 
+            "species": "Phaeosparia||Aniger"
+        }, 
+        {
+            "filtered": 0.6444444444444445, 
+            "global": 0.649379357252168, 
+            "species": "Trychophyton||Aniger"
+        }, 
+        {
+            "filtered": 0.27407407407407414, 
+            "global": 0.4109845264410814, 
+            "species": "Aoryzae||Trichoderma"
+        }, 
+        {
+            "filtered": 0.5407407407407407, 
+            "global": 0.4563849685427648, 
+            "species": "Paracoccidioides||Trichoderma"
+        }, 
+        {
+            "filtered": 0.7407407407407407, 
+            "global": 0.6400272062574393, 
+            "species": "Cordyceps||Trichoderma"
+        }, 
+        {
+            "filtered": 0.7777777777777778, 
+            "global": 0.6366264240775379, 
+            "species": "Foxysporum||Trichoderma"
+        }, 
+        {
+            "filtered": 0.4666666666666667, 
+            "global": 0.5774528141472539, 
+            "species": "Phaeosparia||Trichoderma"
+        }, 
+        {
+            "filtered": 0.5777777777777777, 
+            "global": 0.5289916680836593, 
+            "species": "Trychophyton||Trichoderma"
+        }, 
+        {
+            "filtered": 0.3555555555555556, 
+            "global": 0.3671144363203537, 
+            "species": "Paracoccidioides||Aoryzae"
+        }, 
+        {
+            "filtered": 0.2962962962962963, 
+            "global": 0.36847474919231415, 
+            "species": "Cordyceps||Aoryzae"
+        }, 
+        {
+            "filtered": 0.3037037037037037, 
+            "global": 0.3632035368134672, 
+            "species": "Foxysporum||Aoryzae"
+        }, 
+        {
+            "filtered": 0.2666666666666666, 
+            "global": 0.4373405883353172, 
+            "species": "Phaeosparia||Aoryzae"
+        }, 
+        {
+            "filtered": 0.3037037037037037, 
+            "global": 0.40095221901037237, 
+            "species": "Trychophyton||Aoryzae"
+        }, 
+        {
+            "filtered": 0.6592592592592592, 
+            "global": 0.6145213399081789, 
+            "species": "Cordyceps||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.7111111111111111, 
+            "global": 0.6131610270362183, 
+            "species": "Foxysporum||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.31851851851851853, 
+            "global": 0.43189933684747495, 
+            "species": "Phaeosparia||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.6814814814814815, 
+            "global": 0.6784560448903247, 
+            "species": "Trychophyton||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.8740740740740741, 
+            "global": 0.8029246726747152, 
+            "species": "Foxysporum||Cordyceps"
+        }, 
+        {
+            "filtered": 0.33333333333333326, 
+            "global": 0.4885223601428328, 
+            "species": "Phaeosparia||Cordyceps"
+        }, 
+        {
+            "filtered": 0.6518518518518519, 
+            "global": 0.6855976874681177, 
+            "species": "Trychophyton||Cordyceps"
+        }, 
+        {
+            "filtered": 0.36296296296296293, 
+            "global": 0.4905628294507737, 
+            "species": "Phaeosparia||Foxysporum"
+        }, 
+        {
+            "filtered": 0.725925925925926, 
+            "global": 0.6852576092501276, 
+            "species": "Trychophyton||Foxysporum"
+        }, 
+        {
+            "filtered": 0.3925925925925926, 
+            "global": 0.49328345519469474, 
+            "species": "Trychophyton||Phaeosparia"
+        }
+    ], 
+    "Pro": [
+        {
+            "filtered": 1.0, 
+            "global": 0.9154905628294507, 
+            "species": "Fusarium||Fsolani"
+        }, 
+        {
+            "filtered": 0.8521739130434782, 
+            "global": 0.6150314572351641, 
+            "species": "Aniger||Fsolani"
+        }, 
+        {
+            "filtered": 0.7043478260869566, 
+            "global": 0.6607719775548376, 
+            "species": "Trichoderma||Fsolani"
+        }, 
+        {
+            "filtered": 0.4782608695652174, 
+            "global": 0.36915490562829456, 
+            "species": "Aoryzae||Fsolani"
+        }, 
+        {
+            "filtered": 0.8521739130434782, 
+            "global": 0.6169018874341099, 
+            "species": "Paracoccidioides||Fsolani"
+        }, 
+        {
+            "filtered": 0.9826086956521739, 
+            "global": 0.804795102873661, 
+            "species": "Cordyceps||Fsolani"
+        }, 
+        {
+            "filtered": 0.991304347826087, 
+            "global": 0.8933854786600918, 
+            "species": "Foxysporum||Fsolani"
+        }, 
+        {
+            "filtered": 0.4608695652173913, 
+            "global": 0.5029756844074137, 
+            "species": "Phaeosparia||Fsolani"
+        }, 
+        {
+            "filtered": 0.8695652173913043, 
+            "global": 0.683897296378167, 
+            "species": "Trychophyton||Fsolani"
+        }, 
+        {
+            "filtered": 0.8521739130434782, 
+            "global": 0.602618602278524, 
+            "species": "Aniger||Fusarium"
+        }, 
+        {
+            "filtered": 0.7043478260869566, 
+            "global": 0.6478490052712124, 
+            "species": "Trichoderma||Fusarium"
+        }, 
+        {
+            "filtered": 0.4782608695652174, 
+            "global": 0.36422377146743745, 
+            "species": "Aoryzae||Fusarium"
+        }, 
+        {
+            "filtered": 0.8521739130434782, 
+            "global": 0.6201326305050161, 
+            "species": "Paracoccidioides||Fusarium"
+        }, 
+        {
+            "filtered": 0.9826086956521739, 
+            "global": 0.805135181091651, 
+            "species": "Cordyceps||Fusarium"
+        }, 
+        {
+            "filtered": 0.991304347826087, 
+            "global": 0.9328345519469478, 
+            "species": "Foxysporum||Fusarium"
+        }, 
+        {
+            "filtered": 0.4608695652173913, 
+            "global": 0.4951538853936406, 
+            "species": "Phaeosparia||Fusarium"
+        }, 
+        {
+            "filtered": 0.8695652173913043, 
+            "global": 0.6878081958850536, 
+            "species": "Trychophyton||Fusarium"
+        }, 
+        {
+            "filtered": 0.7391304347826086, 
+            "global": 0.612310831491243, 
+            "species": "Trichoderma||Aniger"
+        }, 
+        {
+            "filtered": 0.4086956521739131, 
+            "global": 0.4274783200136032, 
+            "species": "Aoryzae||Aniger"
+        }, 
+        {
+            "filtered": 0.782608695652174, 
+            "global": 0.5844244176160517, 
+            "species": "Paracoccidioides||Aniger"
+        }, 
+        {
+            "filtered": 0.8434782608695652, 
+            "global": 0.5944567250467607, 
+            "species": "Cordyceps||Aniger"
+        }, 
+        {
+            "filtered": 0.8434782608695652, 
+            "global": 0.5964971943547016, 
+            "species": "Foxysporum||Aniger"
+        }, 
+        {
+            "filtered": 0.5217391304347826, 
+            "global": 0.5834041829620813, 
+            "species": "Phaeosparia||Aniger"
+        }, 
+        {
+            "filtered": 0.782608695652174, 
+            "global": 0.649379357252168, 
+            "species": "Trychophyton||Aniger"
+        }, 
+        {
+            "filtered": 0.4695652173913043, 
+            "global": 0.4109845264410814, 
+            "species": "Aoryzae||Trichoderma"
+        }, 
+        {
+            "filtered": 0.6, 
+            "global": 0.4563849685427648, 
+            "species": "Paracoccidioides||Trichoderma"
+        }, 
+        {
+            "filtered": 0.7130434782608696, 
+            "global": 0.6400272062574393, 
+            "species": "Cordyceps||Trichoderma"
+        }, 
+        {
+            "filtered": 0.6956521739130435, 
+            "global": 0.6366264240775379, 
+            "species": "Foxysporum||Trichoderma"
+        }, 
+        {
+            "filtered": 0.5391304347826087, 
+            "global": 0.5774528141472539, 
+            "species": "Phaeosparia||Trichoderma"
+        }, 
+        {
+            "filtered": 0.6434782608695652, 
+            "global": 0.5289916680836593, 
+            "species": "Trychophyton||Trichoderma"
+        }, 
+        {
+            "filtered": 0.4782608695652174, 
+            "global": 0.3671144363203537, 
+            "species": "Paracoccidioides||Aoryzae"
+        }, 
+        {
+            "filtered": 0.4782608695652174, 
+            "global": 0.36847474919231415, 
+            "species": "Cordyceps||Aoryzae"
+        }, 
+        {
+            "filtered": 0.4782608695652174, 
+            "global": 0.3632035368134672, 
+            "species": "Foxysporum||Aoryzae"
+        }, 
+        {
+            "filtered": 0.3826086956521739, 
+            "global": 0.4373405883353172, 
+            "species": "Phaeosparia||Aoryzae"
+        }, 
+        {
+            "filtered": 0.4869565217391305, 
+            "global": 0.40095221901037237, 
+            "species": "Trychophyton||Aoryzae"
+        }, 
+        {
+            "filtered": 0.8434782608695652, 
+            "global": 0.6145213399081789, 
+            "species": "Cordyceps||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.8434782608695652, 
+            "global": 0.6131610270362183, 
+            "species": "Foxysporum||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.3913043478260869, 
+            "global": 0.43189933684747495, 
+            "species": "Phaeosparia||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.8695652173913043, 
+            "global": 0.6784560448903247, 
+            "species": "Trychophyton||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.9739130434782609, 
+            "global": 0.8029246726747152, 
+            "species": "Foxysporum||Cordyceps"
+        }, 
+        {
+            "filtered": 0.4608695652173913, 
+            "global": 0.4885223601428328, 
+            "species": "Phaeosparia||Cordyceps"
+        }, 
+        {
+            "filtered": 0.8782608695652174, 
+            "global": 0.6855976874681177, 
+            "species": "Trychophyton||Cordyceps"
+        }, 
+        {
+            "filtered": 0.4521739130434783, 
+            "global": 0.4905628294507737, 
+            "species": "Phaeosparia||Foxysporum"
+        }, 
+        {
+            "filtered": 0.8608695652173913, 
+            "global": 0.6852576092501276, 
+            "species": "Trychophyton||Foxysporum"
+        }, 
+        {
+            "filtered": 0.4434782608695652, 
+            "global": 0.49328345519469474, 
+            "species": "Trychophyton||Phaeosparia"
+        }
+    ], 
+    "Thr": [
+        {
+            "filtered": 0.9815950920245399, 
+            "global": 0.9154905628294507, 
+            "species": "Fusarium||Fsolani"
+        }, 
+        {
+            "filtered": 0.6503067484662577, 
+            "global": 0.6150314572351641, 
+            "species": "Aniger||Fsolani"
+        }, 
+        {
+            "filtered": 0.7423312883435583, 
+            "global": 0.6607719775548376, 
+            "species": "Trichoderma||Fsolani"
+        }, 
+        {
+            "filtered": 0.33742331288343563, 
+            "global": 0.36915490562829456, 
+            "species": "Aoryzae||Fsolani"
+        }, 
+        {
+            "filtered": 0.7116564417177914, 
+            "global": 0.6169018874341099, 
+            "species": "Paracoccidioides||Fsolani"
+        }, 
+        {
+            "filtered": 0.9141104294478528, 
+            "global": 0.804795102873661, 
+            "species": "Cordyceps||Fsolani"
+        }, 
+        {
+            "filtered": 0.9631901840490797, 
+            "global": 0.8933854786600918, 
+            "species": "Foxysporum||Fsolani"
+        }, 
+        {
+            "filtered": 0.5153374233128835, 
+            "global": 0.5029756844074137, 
+            "species": "Phaeosparia||Fsolani"
+        }, 
+        {
+            "filtered": 0.7668711656441718, 
+            "global": 0.683897296378167, 
+            "species": "Trychophyton||Fsolani"
+        }, 
+        {
+            "filtered": 0.6319018404907976, 
+            "global": 0.602618602278524, 
+            "species": "Aniger||Fusarium"
+        }, 
+        {
+            "filtered": 0.7239263803680982, 
+            "global": 0.6478490052712124, 
+            "species": "Trichoderma||Fusarium"
+        }, 
+        {
+            "filtered": 0.32515337423312884, 
+            "global": 0.36422377146743745, 
+            "species": "Aoryzae||Fusarium"
+        }, 
+        {
+            "filtered": 0.6993865030674846, 
+            "global": 0.6201326305050161, 
+            "species": "Paracoccidioides||Fusarium"
+        }, 
+        {
+            "filtered": 0.8957055214723927, 
+            "global": 0.805135181091651, 
+            "species": "Cordyceps||Fusarium"
+        }, 
+        {
+            "filtered": 0.9754601226993865, 
+            "global": 0.9328345519469478, 
+            "species": "Foxysporum||Fusarium"
+        }, 
+        {
+            "filtered": 0.5030674846625767, 
+            "global": 0.4951538853936406, 
+            "species": "Phaeosparia||Fusarium"
+        }, 
+        {
+            "filtered": 0.754601226993865, 
+            "global": 0.6878081958850536, 
+            "species": "Trychophyton||Fusarium"
+        }, 
+        {
+            "filtered": 0.6196319018404908, 
+            "global": 0.612310831491243, 
+            "species": "Trichoderma||Aniger"
+        }, 
+        {
+            "filtered": 0.3067484662576687, 
+            "global": 0.4274783200136032, 
+            "species": "Aoryzae||Aniger"
+        }, 
+        {
+            "filtered": 0.6748466257668712, 
+            "global": 0.5844244176160517, 
+            "species": "Paracoccidioides||Aniger"
+        }, 
+        {
+            "filtered": 0.6380368098159509, 
+            "global": 0.5944567250467607, 
+            "species": "Cordyceps||Aniger"
+        }, 
+        {
+            "filtered": 0.6196319018404908, 
+            "global": 0.5964971943547016, 
+            "species": "Foxysporum||Aniger"
+        }, 
+        {
+            "filtered": 0.5521472392638037, 
+            "global": 0.5834041829620813, 
+            "species": "Phaeosparia||Aniger"
+        }, 
+        {
+            "filtered": 0.7177914110429447, 
+            "global": 0.649379357252168, 
+            "species": "Trychophyton||Aniger"
+        }, 
+        {
+            "filtered": 0.3496932515337423, 
+            "global": 0.4109845264410814, 
+            "species": "Aoryzae||Trichoderma"
+        }, 
+        {
+            "filtered": 0.5030674846625767, 
+            "global": 0.4563849685427648, 
+            "species": "Paracoccidioides||Trichoderma"
+        }, 
+        {
+            "filtered": 0.7361963190184049, 
+            "global": 0.6400272062574393, 
+            "species": "Cordyceps||Trichoderma"
+        }, 
+        {
+            "filtered": 0.7116564417177914, 
+            "global": 0.6366264240775379, 
+            "species": "Foxysporum||Trichoderma"
+        }, 
+        {
+            "filtered": 0.5460122699386503, 
+            "global": 0.5774528141472539, 
+            "species": "Phaeosparia||Trichoderma"
+        }, 
+        {
+            "filtered": 0.5644171779141104, 
+            "global": 0.5289916680836593, 
+            "species": "Trychophyton||Trichoderma"
+        }, 
+        {
+            "filtered": 0.3619631901840491, 
+            "global": 0.3671144363203537, 
+            "species": "Paracoccidioides||Aoryzae"
+        }, 
+        {
+            "filtered": 0.35582822085889565, 
+            "global": 0.36847474919231415, 
+            "species": "Cordyceps||Aoryzae"
+        }, 
+        {
+            "filtered": 0.3067484662576687, 
+            "global": 0.3632035368134672, 
+            "species": "Foxysporum||Aoryzae"
+        }, 
+        {
+            "filtered": 0.3190184049079754, 
+            "global": 0.4373405883353172, 
+            "species": "Phaeosparia||Aoryzae"
+        }, 
+        {
+            "filtered": 0.35582822085889565, 
+            "global": 0.40095221901037237, 
+            "species": "Trychophyton||Aoryzae"
+        }, 
+        {
+            "filtered": 0.7055214723926381, 
+            "global": 0.6145213399081789, 
+            "species": "Cordyceps||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.6809815950920245, 
+            "global": 0.6131610270362183, 
+            "species": "Foxysporum||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.4355828220858895, 
+            "global": 0.43189933684747495, 
+            "species": "Phaeosparia||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.7607361963190185, 
+            "global": 0.6784560448903247, 
+            "species": "Trychophyton||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.8834355828220859, 
+            "global": 0.8029246726747152, 
+            "species": "Foxysporum||Cordyceps"
+        }, 
+        {
+            "filtered": 0.49693251533742333, 
+            "global": 0.4885223601428328, 
+            "species": "Phaeosparia||Cordyceps"
+        }, 
+        {
+            "filtered": 0.7607361963190185, 
+            "global": 0.6855976874681177, 
+            "species": "Trychophyton||Cordyceps"
+        }, 
+        {
+            "filtered": 0.49693251533742333, 
+            "global": 0.4905628294507737, 
+            "species": "Phaeosparia||Foxysporum"
+        }, 
+        {
+            "filtered": 0.7361963190184049, 
+            "global": 0.6852576092501276, 
+            "species": "Trychophyton||Foxysporum"
+        }, 
+        {
+            "filtered": 0.4785276073619632, 
+            "global": 0.49328345519469474, 
+            "species": "Trychophyton||Phaeosparia"
+        }
+    ], 
+    "Phe": [
+        {
+            "filtered": 0.9930313588850174, 
+            "global": 0.9154905628294507, 
+            "species": "Fusarium||Fsolani"
+        }, 
+        {
+            "filtered": 0.7282229965156795, 
+            "global": 0.6150314572351641, 
+            "species": "Aniger||Fsolani"
+        }, 
+        {
+            "filtered": 0.7421602787456446, 
+            "global": 0.6607719775548376, 
+            "species": "Trichoderma||Fsolani"
+        }, 
+        {
+            "filtered": 0.3623693379790941, 
+            "global": 0.36915490562829456, 
+            "species": "Aoryzae||Fsolani"
+        }, 
+        {
+            "filtered": 0.7735191637630662, 
+            "global": 0.6169018874341099, 
+            "species": "Paracoccidioides||Fsolani"
+        }, 
+        {
+            "filtered": 0.9094076655052264, 
+            "global": 0.804795102873661, 
+            "species": "Cordyceps||Fsolani"
+        }, 
+        {
+            "filtered": 0.9651567944250871, 
+            "global": 0.8933854786600918, 
+            "species": "Foxysporum||Fsolani"
+        }, 
+        {
+            "filtered": 0.48083623693379796, 
+            "global": 0.5029756844074137, 
+            "species": "Phaeosparia||Fsolani"
+        }, 
+        {
+            "filtered": 0.8013937282229965, 
+            "global": 0.683897296378167, 
+            "species": "Trychophyton||Fsolani"
+        }, 
+        {
+            "filtered": 0.7247386759581882, 
+            "global": 0.602618602278524, 
+            "species": "Aniger||Fusarium"
+        }, 
+        {
+            "filtered": 0.7421602787456446, 
+            "global": 0.6478490052712124, 
+            "species": "Trichoderma||Fusarium"
+        }, 
+        {
+            "filtered": 0.3623693379790941, 
+            "global": 0.36422377146743745, 
+            "species": "Aoryzae||Fusarium"
+        }, 
+        {
+            "filtered": 0.7700348432055749, 
+            "global": 0.6201326305050161, 
+            "species": "Paracoccidioides||Fusarium"
+        }, 
+        {
+            "filtered": 0.9094076655052264, 
+            "global": 0.805135181091651, 
+            "species": "Cordyceps||Fusarium"
+        }, 
+        {
+            "filtered": 0.9721254355400697, 
+            "global": 0.9328345519469478, 
+            "species": "Foxysporum||Fusarium"
+        }, 
+        {
+            "filtered": 0.4843205574912892, 
+            "global": 0.4951538853936406, 
+            "species": "Phaeosparia||Fusarium"
+        }, 
+        {
+            "filtered": 0.8013937282229965, 
+            "global": 0.6878081958850536, 
+            "species": "Trychophyton||Fusarium"
+        }, 
+        {
+            "filtered": 0.6689895470383276, 
+            "global": 0.612310831491243, 
+            "species": "Trichoderma||Aniger"
+        }, 
+        {
+            "filtered": 0.37630662020905925, 
+            "global": 0.4274783200136032, 
+            "species": "Aoryzae||Aniger"
+        }, 
+        {
+            "filtered": 0.735191637630662, 
+            "global": 0.5844244176160517, 
+            "species": "Paracoccidioides||Aniger"
+        }, 
+        {
+            "filtered": 0.7212543554006968, 
+            "global": 0.5944567250467607, 
+            "species": "Cordyceps||Aniger"
+        }, 
+        {
+            "filtered": 0.7073170731707317, 
+            "global": 0.5964971943547016, 
+            "species": "Foxysporum||Aniger"
+        }, 
+        {
+            "filtered": 0.519163763066202, 
+            "global": 0.5834041829620813, 
+            "species": "Phaeosparia||Aniger"
+        }, 
+        {
+            "filtered": 0.7665505226480837, 
+            "global": 0.649379357252168, 
+            "species": "Trychophyton||Aniger"
+        }, 
+        {
+            "filtered": 0.39372822299651566, 
+            "global": 0.4109845264410814, 
+            "species": "Aoryzae||Trichoderma"
+        }, 
+        {
+            "filtered": 0.578397212543554, 
+            "global": 0.4563849685427648, 
+            "species": "Paracoccidioides||Trichoderma"
+        }, 
+        {
+            "filtered": 0.7247386759581882, 
+            "global": 0.6400272062574393, 
+            "species": "Cordyceps||Trichoderma"
+        }, 
+        {
+            "filtered": 0.7247386759581882, 
+            "global": 0.6366264240775379, 
+            "species": "Foxysporum||Trichoderma"
+        }, 
+        {
+            "filtered": 0.5121951219512195, 
+            "global": 0.5774528141472539, 
+            "species": "Phaeosparia||Trichoderma"
+        }, 
+        {
+            "filtered": 0.6027874564459931, 
+            "global": 0.5289916680836593, 
+            "species": "Trychophyton||Trichoderma"
+        }, 
+        {
+            "filtered": 0.4006968641114983, 
+            "global": 0.3671144363203537, 
+            "species": "Paracoccidioides||Aoryzae"
+        }, 
+        {
+            "filtered": 0.37630662020905925, 
+            "global": 0.36847474919231415, 
+            "species": "Cordyceps||Aoryzae"
+        }, 
+        {
+            "filtered": 0.3623693379790941, 
+            "global": 0.3632035368134672, 
+            "species": "Foxysporum||Aoryzae"
+        }, 
+        {
+            "filtered": 0.2961672473867596, 
+            "global": 0.4373405883353172, 
+            "species": "Phaeosparia||Aoryzae"
+        }, 
+        {
+            "filtered": 0.38327526132404177, 
+            "global": 0.40095221901037237, 
+            "species": "Trychophyton||Aoryzae"
+        }, 
+        {
+            "filtered": 0.7665505226480837, 
+            "global": 0.6145213399081789, 
+            "species": "Cordyceps||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.7456445993031359, 
+            "global": 0.6131610270362183, 
+            "species": "Foxysporum||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.42508710801393734, 
+            "global": 0.43189933684747495, 
+            "species": "Phaeosparia||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.7874564459930313, 
+            "global": 0.6784560448903247, 
+            "species": "Trychophyton||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.8954703832752613, 
+            "global": 0.8029246726747152, 
+            "species": "Foxysporum||Cordyceps"
+        }, 
+        {
+            "filtered": 0.44250871080139365, 
+            "global": 0.4885223601428328, 
+            "species": "Phaeosparia||Cordyceps"
+        }, 
+        {
+            "filtered": 0.7735191637630662, 
+            "global": 0.6855976874681177, 
+            "species": "Trychophyton||Cordyceps"
+        }, 
+        {
+            "filtered": 0.46341463414634143, 
+            "global": 0.4905628294507737, 
+            "species": "Phaeosparia||Foxysporum"
+        }, 
+        {
+            "filtered": 0.7874564459930313, 
+            "global": 0.6852576092501276, 
+            "species": "Trychophyton||Foxysporum"
+        }, 
+        {
+            "filtered": 0.45296167247386765, 
+            "global": 0.49328345519469474, 
+            "species": "Trychophyton||Phaeosparia"
+        }
+    ], 
+    "Ala": [
+        {
+            "filtered": 0.9621621621621622, 
+            "global": 0.9154905628294507, 
+            "species": "Fusarium||Fsolani"
+        }, 
+        {
+            "filtered": 0.7081081081081081, 
+            "global": 0.6150314572351641, 
+            "species": "Aniger||Fsolani"
+        }, 
+        {
+            "filtered": 0.7783783783783784, 
+            "global": 0.6607719775548376, 
+            "species": "Trichoderma||Fsolani"
+        }, 
+        {
+            "filtered": 0.4378378378378378, 
+            "global": 0.36915490562829456, 
+            "species": "Aoryzae||Fsolani"
+        }, 
+        {
+            "filtered": 0.654054054054054, 
+            "global": 0.6169018874341099, 
+            "species": "Paracoccidioides||Fsolani"
+        }, 
+        {
+            "filtered": 0.9081081081081082, 
+            "global": 0.804795102873661, 
+            "species": "Cordyceps||Fsolani"
+        }, 
+        {
+            "filtered": 0.972972972972973, 
+            "global": 0.8933854786600918, 
+            "species": "Foxysporum||Fsolani"
+        }, 
+        {
+            "filtered": 0.47027027027027035, 
+            "global": 0.5029756844074137, 
+            "species": "Phaeosparia||Fsolani"
+        }, 
+        {
+            "filtered": 0.7081081081081081, 
+            "global": 0.683897296378167, 
+            "species": "Trychophyton||Fsolani"
+        }, 
+        {
+            "filtered": 0.7135135135135136, 
+            "global": 0.602618602278524, 
+            "species": "Aniger||Fusarium"
+        }, 
+        {
+            "filtered": 0.772972972972973, 
+            "global": 0.6478490052712124, 
+            "species": "Trichoderma||Fusarium"
+        }, 
+        {
+            "filtered": 0.44324324324324327, 
+            "global": 0.36422377146743745, 
+            "species": "Aoryzae||Fusarium"
+        }, 
+        {
+            "filtered": 0.6594594594594595, 
+            "global": 0.6201326305050161, 
+            "species": "Paracoccidioides||Fusarium"
+        }, 
+        {
+            "filtered": 0.8972972972972973, 
+            "global": 0.805135181091651, 
+            "species": "Cordyceps||Fusarium"
+        }, 
+        {
+            "filtered": 0.9783783783783784, 
+            "global": 0.9328345519469478, 
+            "species": "Foxysporum||Fusarium"
+        }, 
+        {
+            "filtered": 0.45945945945945943, 
+            "global": 0.4951538853936406, 
+            "species": "Phaeosparia||Fusarium"
+        }, 
+        {
+            "filtered": 0.7081081081081081, 
+            "global": 0.6878081958850536, 
+            "species": "Trychophyton||Fusarium"
+        }, 
+        {
+            "filtered": 0.7405405405405405, 
+            "global": 0.612310831491243, 
+            "species": "Trichoderma||Aniger"
+        }, 
+        {
+            "filtered": 0.4378378378378378, 
+            "global": 0.4274783200136032, 
+            "species": "Aoryzae||Aniger"
+        }, 
+        {
+            "filtered": 0.654054054054054, 
+            "global": 0.5844244176160517, 
+            "species": "Paracoccidioides||Aniger"
+        }, 
+        {
+            "filtered": 0.7135135135135136, 
+            "global": 0.5944567250467607, 
+            "species": "Cordyceps||Aniger"
+        }, 
+        {
+            "filtered": 0.7135135135135136, 
+            "global": 0.5964971943547016, 
+            "species": "Foxysporum||Aniger"
+        }, 
+        {
+            "filtered": 0.5243243243243243, 
+            "global": 0.5834041829620813, 
+            "species": "Phaeosparia||Aniger"
+        }, 
+        {
+            "filtered": 0.7135135135135136, 
+            "global": 0.649379357252168, 
+            "species": "Trychophyton||Aniger"
+        }, 
+        {
+            "filtered": 0.43243243243243246, 
+            "global": 0.4109845264410814, 
+            "species": "Aoryzae||Trichoderma"
+        }, 
+        {
+            "filtered": 0.5405405405405406, 
+            "global": 0.4563849685427648, 
+            "species": "Paracoccidioides||Trichoderma"
+        }, 
+        {
+            "filtered": 0.745945945945946, 
+            "global": 0.6400272062574393, 
+            "species": "Cordyceps||Trichoderma"
+        }, 
+        {
+            "filtered": 0.772972972972973, 
+            "global": 0.6366264240775379, 
+            "species": "Foxysporum||Trichoderma"
+        }, 
+        {
+            "filtered": 0.5513513513513514, 
+            "global": 0.5774528141472539, 
+            "species": "Phaeosparia||Trichoderma"
+        }, 
+        {
+            "filtered": 0.5945945945945946, 
+            "global": 0.5289916680836593, 
+            "species": "Trychophyton||Trichoderma"
+        }, 
+        {
+            "filtered": 0.43243243243243246, 
+            "global": 0.3671144363203537, 
+            "species": "Paracoccidioides||Aoryzae"
+        }, 
+        {
+            "filtered": 0.44324324324324327, 
+            "global": 0.36847474919231415, 
+            "species": "Cordyceps||Aoryzae"
+        }, 
+        {
+            "filtered": 0.4378378378378378, 
+            "global": 0.3632035368134672, 
+            "species": "Foxysporum||Aoryzae"
+        }, 
+        {
+            "filtered": 0.3405405405405406, 
+            "global": 0.4373405883353172, 
+            "species": "Phaeosparia||Aoryzae"
+        }, 
+        {
+            "filtered": 0.4378378378378378, 
+            "global": 0.40095221901037237, 
+            "species": "Trychophyton||Aoryzae"
+        }, 
+        {
+            "filtered": 0.6702702702702703, 
+            "global": 0.6145213399081789, 
+            "species": "Cordyceps||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.6648648648648648, 
+            "global": 0.6131610270362183, 
+            "species": "Foxysporum||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.37297297297297294, 
+            "global": 0.43189933684747495, 
+            "species": "Phaeosparia||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.7513513513513513, 
+            "global": 0.6784560448903247, 
+            "species": "Trychophyton||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.9081081081081082, 
+            "global": 0.8029246726747152, 
+            "species": "Foxysporum||Cordyceps"
+        }, 
+        {
+            "filtered": 0.45945945945945943, 
+            "global": 0.4885223601428328, 
+            "species": "Phaeosparia||Cordyceps"
+        }, 
+        {
+            "filtered": 0.7081081081081081, 
+            "global": 0.6855976874681177, 
+            "species": "Trychophyton||Cordyceps"
+        }, 
+        {
+            "filtered": 0.4648648648648649, 
+            "global": 0.4905628294507737, 
+            "species": "Phaeosparia||Foxysporum"
+        }, 
+        {
+            "filtered": 0.7081081081081081, 
+            "global": 0.6852576092501276, 
+            "species": "Trychophyton||Foxysporum"
+        }, 
+        {
+            "filtered": 0.42162162162162165, 
+            "global": 0.49328345519469474, 
+            "species": "Trychophyton||Phaeosparia"
+        }
+    ], 
+    "Gly": [
+        {
+            "filtered": 0.9872881355932204, 
+            "global": 0.9154905628294507, 
+            "species": "Fusarium||Fsolani"
+        }, 
+        {
+            "filtered": 0.75, 
+            "global": 0.6150314572351641, 
+            "species": "Aniger||Fsolani"
+        }, 
+        {
+            "filtered": 0.7457627118644068, 
+            "global": 0.6607719775548376, 
+            "species": "Trichoderma||Fsolani"
+        }, 
+        {
+            "filtered": 0.423728813559322, 
+            "global": 0.36915490562829456, 
+            "species": "Aoryzae||Fsolani"
+        }, 
+        {
+            "filtered": 0.7838983050847458, 
+            "global": 0.6169018874341099, 
+            "species": "Paracoccidioides||Fsolani"
+        }, 
+        {
+            "filtered": 0.9576271186440678, 
+            "global": 0.804795102873661, 
+            "species": "Cordyceps||Fsolani"
+        }, 
+        {
+            "filtered": 0.9703389830508474, 
+            "global": 0.8933854786600918, 
+            "species": "Foxysporum||Fsolani"
+        }, 
+        {
+            "filtered": 0.4872881355932204, 
+            "global": 0.5029756844074137, 
+            "species": "Phaeosparia||Fsolani"
+        }, 
+        {
+            "filtered": 0.8432203389830508, 
+            "global": 0.683897296378167, 
+            "species": "Trychophyton||Fsolani"
+        }, 
+        {
+            "filtered": 0.7415254237288136, 
+            "global": 0.602618602278524, 
+            "species": "Aniger||Fusarium"
+        }, 
+        {
+            "filtered": 0.7330508474576272, 
+            "global": 0.6478490052712124, 
+            "species": "Trichoderma||Fusarium"
+        }, 
+        {
+            "filtered": 0.4152542372881356, 
+            "global": 0.36422377146743745, 
+            "species": "Aoryzae||Fusarium"
+        }, 
+        {
+            "filtered": 0.7796610169491526, 
+            "global": 0.6201326305050161, 
+            "species": "Paracoccidioides||Fusarium"
+        }, 
+        {
+            "filtered": 0.9576271186440678, 
+            "global": 0.805135181091651, 
+            "species": "Cordyceps||Fusarium"
+        }, 
+        {
+            "filtered": 0.9830508474576272, 
+            "global": 0.9328345519469478, 
+            "species": "Foxysporum||Fusarium"
+        }, 
+        {
+            "filtered": 0.47881355932203395, 
+            "global": 0.4951538853936406, 
+            "species": "Phaeosparia||Fusarium"
+        }, 
+        {
+            "filtered": 0.8347457627118644, 
+            "global": 0.6878081958850536, 
+            "species": "Trychophyton||Fusarium"
+        }, 
+        {
+            "filtered": 0.7457627118644068, 
+            "global": 0.612310831491243, 
+            "species": "Trichoderma||Aniger"
+        }, 
+        {
+            "filtered": 0.36440677966101687, 
+            "global": 0.4274783200136032, 
+            "species": "Aoryzae||Aniger"
+        }, 
+        {
+            "filtered": 0.7161016949152542, 
+            "global": 0.5844244176160517, 
+            "species": "Paracoccidioides||Aniger"
+        }, 
+        {
+            "filtered": 0.7372881355932204, 
+            "global": 0.5944567250467607, 
+            "species": "Cordyceps||Aniger"
+        }, 
+        {
+            "filtered": 0.7288135593220338, 
+            "global": 0.5964971943547016, 
+            "species": "Foxysporum||Aniger"
+        }, 
+        {
+            "filtered": 0.559322033898305, 
+            "global": 0.5834041829620813, 
+            "species": "Phaeosparia||Aniger"
+        }, 
+        {
+            "filtered": 0.7838983050847458, 
+            "global": 0.649379357252168, 
+            "species": "Trychophyton||Aniger"
+        }, 
+        {
+            "filtered": 0.4110169491525424, 
+            "global": 0.4109845264410814, 
+            "species": "Aoryzae||Trichoderma"
+        }, 
+        {
+            "filtered": 0.576271186440678, 
+            "global": 0.4563849685427648, 
+            "species": "Paracoccidioides||Trichoderma"
+        }, 
+        {
+            "filtered": 0.7245762711864406, 
+            "global": 0.6400272062574393, 
+            "species": "Cordyceps||Trichoderma"
+        }, 
+        {
+            "filtered": 0.7203389830508474, 
+            "global": 0.6366264240775379, 
+            "species": "Foxysporum||Trichoderma"
+        }, 
+        {
+            "filtered": 0.559322033898305, 
+            "global": 0.5774528141472539, 
+            "species": "Phaeosparia||Trichoderma"
+        }, 
+        {
+            "filtered": 0.6313559322033898, 
+            "global": 0.5289916680836593, 
+            "species": "Trychophyton||Trichoderma"
+        }, 
+        {
+            "filtered": 0.44491525423728806, 
+            "global": 0.3671144363203537, 
+            "species": "Paracoccidioides||Aoryzae"
+        }, 
+        {
+            "filtered": 0.43220338983050843, 
+            "global": 0.36847474919231415, 
+            "species": "Cordyceps||Aoryzae"
+        }, 
+        {
+            "filtered": 0.4067796610169492, 
+            "global": 0.3632035368134672, 
+            "species": "Foxysporum||Aoryzae"
+        }, 
+        {
+            "filtered": 0.30932203389830515, 
+            "global": 0.4373405883353172, 
+            "species": "Phaeosparia||Aoryzae"
+        }, 
+        {
+            "filtered": 0.43644067796610164, 
+            "global": 0.40095221901037237, 
+            "species": "Trychophyton||Aoryzae"
+        }, 
+        {
+            "filtered": 0.7838983050847458, 
+            "global": 0.6145213399081789, 
+            "species": "Cordyceps||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.7669491525423728, 
+            "global": 0.6131610270362183, 
+            "species": "Foxysporum||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.39830508474576276, 
+            "global": 0.43189933684747495, 
+            "species": "Phaeosparia||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.826271186440678, 
+            "global": 0.6784560448903247, 
+            "species": "Trychophyton||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.940677966101695, 
+            "global": 0.8029246726747152, 
+            "species": "Foxysporum||Cordyceps"
+        }, 
+        {
+            "filtered": 0.47881355932203395, 
+            "global": 0.4885223601428328, 
+            "species": "Phaeosparia||Cordyceps"
+        }, 
+        {
+            "filtered": 0.8305084745762712, 
+            "global": 0.6855976874681177, 
+            "species": "Trychophyton||Cordyceps"
+        }, 
+        {
+            "filtered": 0.47457627118644075, 
+            "global": 0.4905628294507737, 
+            "species": "Phaeosparia||Foxysporum"
+        }, 
+        {
+            "filtered": 0.8177966101694916, 
+            "global": 0.6852576092501276, 
+            "species": "Trychophyton||Foxysporum"
+        }, 
+        {
+            "filtered": 0.4661016949152542, 
+            "global": 0.49328345519469474, 
+            "species": "Trychophyton||Phaeosparia"
+        }
+    ], 
+    "Ile": [
+        {
+            "filtered": 0.9360613810741688, 
+            "global": 0.9154905628294507, 
+            "species": "Fusarium||Fsolani"
+        }, 
+        {
+            "filtered": 0.5626598465473146, 
+            "global": 0.6150314572351641, 
+            "species": "Aniger||Fsolani"
+        }, 
+        {
+            "filtered": 0.6982097186700768, 
+            "global": 0.6607719775548376, 
+            "species": "Trichoderma||Fsolani"
+        }, 
+        {
+            "filtered": 0.26086956521739135, 
+            "global": 0.36915490562829456, 
+            "species": "Aoryzae||Fsolani"
+        }, 
+        {
+            "filtered": 0.6419437340153452, 
+            "global": 0.6169018874341099, 
+            "species": "Paracoccidioides||Fsolani"
+        }, 
+        {
+            "filtered": 0.8363171355498721, 
+            "global": 0.804795102873661, 
+            "species": "Cordyceps||Fsolani"
+        }, 
+        {
+            "filtered": 0.9386189258312021, 
+            "global": 0.8933854786600918, 
+            "species": "Foxysporum||Fsolani"
+        }, 
+        {
+            "filtered": 0.38618925831202044, 
+            "global": 0.5029756844074137, 
+            "species": "Phaeosparia||Fsolani"
+        }, 
+        {
+            "filtered": 0.670076726342711, 
+            "global": 0.683897296378167, 
+            "species": "Trychophyton||Fsolani"
+        }, 
+        {
+            "filtered": 0.5549872122762148, 
+            "global": 0.602618602278524, 
+            "species": "Aniger||Fusarium"
+        }, 
+        {
+            "filtered": 0.680306905370844, 
+            "global": 0.6478490052712124, 
+            "species": "Trichoderma||Fusarium"
+        }, 
+        {
+            "filtered": 0.2506393861892583, 
+            "global": 0.36422377146743745, 
+            "species": "Aoryzae||Fusarium"
+        }, 
+        {
+            "filtered": 0.6214833759590793, 
+            "global": 0.6201326305050161, 
+            "species": "Paracoccidioides||Fusarium"
+        }, 
+        {
+            "filtered": 0.8158567774936062, 
+            "global": 0.805135181091651, 
+            "species": "Cordyceps||Fusarium"
+        }, 
+        {
+            "filtered": 0.9565217391304348, 
+            "global": 0.9328345519469478, 
+            "species": "Foxysporum||Fusarium"
+        }, 
+        {
+            "filtered": 0.3734015345268542, 
+            "global": 0.4951538853936406, 
+            "species": "Phaeosparia||Fusarium"
+        }, 
+        {
+            "filtered": 0.6521739130434783, 
+            "global": 0.6878081958850536, 
+            "species": "Trychophyton||Fusarium"
+        }, 
+        {
+            "filtered": 0.5345268542199488, 
+            "global": 0.612310831491243, 
+            "species": "Trichoderma||Aniger"
+        }, 
+        {
+            "filtered": 0.2966751918158568, 
+            "global": 0.4274783200136032, 
+            "species": "Aoryzae||Aniger"
+        }, 
+        {
+            "filtered": 0.5447570332480819, 
+            "global": 0.5844244176160517, 
+            "species": "Paracoccidioides||Aniger"
+        }, 
+        {
+            "filtered": 0.5498721227621484, 
+            "global": 0.5944567250467607, 
+            "species": "Cordyceps||Aniger"
+        }, 
+        {
+            "filtered": 0.5677749360613811, 
+            "global": 0.5964971943547016, 
+            "species": "Foxysporum||Aniger"
+        }, 
+        {
+            "filtered": 0.42455242966751916, 
+            "global": 0.5834041829620813, 
+            "species": "Phaeosparia||Aniger"
+        }, 
+        {
+            "filtered": 0.6086956521739131, 
+            "global": 0.649379357252168, 
+            "species": "Trychophyton||Aniger"
+        }, 
+        {
+            "filtered": 0.25831202046035806, 
+            "global": 0.4109845264410814, 
+            "species": "Aoryzae||Trichoderma"
+        }, 
+        {
+            "filtered": 0.47058823529411764, 
+            "global": 0.4563849685427648, 
+            "species": "Paracoccidioides||Trichoderma"
+        }, 
+        {
+            "filtered": 0.6854219948849105, 
+            "global": 0.6400272062574393, 
+            "species": "Cordyceps||Trichoderma"
+        }, 
+        {
+            "filtered": 0.6854219948849105, 
+            "global": 0.6366264240775379, 
+            "species": "Foxysporum||Trichoderma"
+        }, 
+        {
+            "filtered": 0.4629156010230179, 
+            "global": 0.5774528141472539, 
+            "species": "Phaeosparia||Trichoderma"
+        }, 
+        {
+            "filtered": 0.5089514066496164, 
+            "global": 0.5289916680836593, 
+            "species": "Trychophyton||Trichoderma"
+        }, 
+        {
+            "filtered": 0.2966751918158568, 
+            "global": 0.3671144363203537, 
+            "species": "Paracoccidioides||Aoryzae"
+        }, 
+        {
+            "filtered": 0.2506393861892583, 
+            "global": 0.36847474919231415, 
+            "species": "Cordyceps||Aoryzae"
+        }, 
+        {
+            "filtered": 0.25575447570332477, 
+            "global": 0.3632035368134672, 
+            "species": "Foxysporum||Aoryzae"
+        }, 
+        {
+            "filtered": 0.28388746803069054, 
+            "global": 0.4373405883353172, 
+            "species": "Phaeosparia||Aoryzae"
+        }, 
+        {
+            "filtered": 0.2941176470588236, 
+            "global": 0.40095221901037237, 
+            "species": "Trychophyton||Aoryzae"
+        }, 
+        {
+            "filtered": 0.6061381074168798, 
+            "global": 0.6145213399081789, 
+            "species": "Cordyceps||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.6368286445012787, 
+            "global": 0.6131610270362183, 
+            "species": "Foxysporum||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.3069053708439897, 
+            "global": 0.43189933684747495, 
+            "species": "Phaeosparia||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.6317135549872123, 
+            "global": 0.6784560448903247, 
+            "species": "Trychophyton||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.8337595907928389, 
+            "global": 0.8029246726747152, 
+            "species": "Foxysporum||Cordyceps"
+        }, 
+        {
+            "filtered": 0.370843989769821, 
+            "global": 0.4885223601428328, 
+            "species": "Phaeosparia||Cordyceps"
+        }, 
+        {
+            "filtered": 0.6521739130434783, 
+            "global": 0.6855976874681177, 
+            "species": "Trychophyton||Cordyceps"
+        }, 
+        {
+            "filtered": 0.38874680306905374, 
+            "global": 0.4905628294507737, 
+            "species": "Phaeosparia||Foxysporum"
+        }, 
+        {
+            "filtered": 0.670076726342711, 
+            "global": 0.6852576092501276, 
+            "species": "Trychophyton||Foxysporum"
+        }, 
+        {
+            "filtered": 0.3759590792838874, 
+            "global": 0.49328345519469474, 
+            "species": "Trychophyton||Phaeosparia"
+        }
+    ], 
+    "Leu": [
+        {
+            "filtered": 0.9645669291338582, 
+            "global": 0.9154905628294507, 
+            "species": "Fusarium||Fsolani"
+        }, 
+        {
+            "filtered": 0.6771653543307087, 
+            "global": 0.6150314572351641, 
+            "species": "Aniger||Fsolani"
+        }, 
+        {
+            "filtered": 0.7618110236220472, 
+            "global": 0.6607719775548376, 
+            "species": "Trichoderma||Fsolani"
+        }, 
+        {
+            "filtered": 0.3307086614173229, 
+            "global": 0.36915490562829456, 
+            "species": "Aoryzae||Fsolani"
+        }, 
+        {
+            "filtered": 0.7539370078740157, 
+            "global": 0.6169018874341099, 
+            "species": "Paracoccidioides||Fsolani"
+        }, 
+        {
+            "filtered": 0.8976377952755905, 
+            "global": 0.804795102873661, 
+            "species": "Cordyceps||Fsolani"
+        }, 
+        {
+            "filtered": 0.9547244094488189, 
+            "global": 0.8933854786600918, 
+            "species": "Foxysporum||Fsolani"
+        }, 
+        {
+            "filtered": 0.47047244094488194, 
+            "global": 0.5029756844074137, 
+            "species": "Phaeosparia||Fsolani"
+        }, 
+        {
+            "filtered": 0.7834645669291339, 
+            "global": 0.683897296378167, 
+            "species": "Trychophyton||Fsolani"
+        }, 
+        {
+            "filtered": 0.6751968503937008, 
+            "global": 0.602618602278524, 
+            "species": "Aniger||Fusarium"
+        }, 
+        {
+            "filtered": 0.7401574803149606, 
+            "global": 0.6478490052712124, 
+            "species": "Trichoderma||Fusarium"
+        }, 
+        {
+            "filtered": 0.32874015748031504, 
+            "global": 0.36422377146743745, 
+            "species": "Aoryzae||Fusarium"
+        }, 
+        {
+            "filtered": 0.7519685039370079, 
+            "global": 0.6201326305050161, 
+            "species": "Paracoccidioides||Fusarium"
+        }, 
+        {
+            "filtered": 0.8799212598425197, 
+            "global": 0.805135181091651, 
+            "species": "Cordyceps||Fusarium"
+        }, 
+        {
+            "filtered": 0.9625984251968503, 
+            "global": 0.9328345519469478, 
+            "species": "Foxysporum||Fusarium"
+        }, 
+        {
+            "filtered": 0.46850393700787407, 
+            "global": 0.4951538853936406, 
+            "species": "Phaeosparia||Fusarium"
+        }, 
+        {
+            "filtered": 0.7795275590551181, 
+            "global": 0.6878081958850536, 
+            "species": "Trychophyton||Fusarium"
+        }, 
+        {
+            "filtered": 0.6653543307086615, 
+            "global": 0.612310831491243, 
+            "species": "Trichoderma||Aniger"
+        }, 
+        {
+            "filtered": 0.3188976377952756, 
+            "global": 0.4274783200136032, 
+            "species": "Aoryzae||Aniger"
+        }, 
+        {
+            "filtered": 0.6633858267716536, 
+            "global": 0.5844244176160517, 
+            "species": "Paracoccidioides||Aniger"
+        }, 
+        {
+            "filtered": 0.65748031496063, 
+            "global": 0.5944567250467607, 
+            "species": "Cordyceps||Aniger"
+        }, 
+        {
+            "filtered": 0.6751968503937008, 
+            "global": 0.5964971943547016, 
+            "species": "Foxysporum||Aniger"
+        }, 
+        {
+            "filtered": 0.49606299212598426, 
+            "global": 0.5834041829620813, 
+            "species": "Phaeosparia||Aniger"
+        }, 
+        {
+            "filtered": 0.7007874015748031, 
+            "global": 0.649379357252168, 
+            "species": "Trychophyton||Aniger"
+        }, 
+        {
+            "filtered": 0.3582677165354331, 
+            "global": 0.4109845264410814, 
+            "species": "Aoryzae||Trichoderma"
+        }, 
+        {
+            "filtered": 0.6023622047244095, 
+            "global": 0.4563849685427648, 
+            "species": "Paracoccidioides||Trichoderma"
+        }, 
+        {
+            "filtered": 0.75, 
+            "global": 0.6400272062574393, 
+            "species": "Cordyceps||Trichoderma"
+        }, 
+        {
+            "filtered": 0.75, 
+            "global": 0.6366264240775379, 
+            "species": "Foxysporum||Trichoderma"
+        }, 
+        {
+            "filtered": 0.5078740157480315, 
+            "global": 0.5774528141472539, 
+            "species": "Phaeosparia||Trichoderma"
+        }, 
+        {
+            "filtered": 0.639763779527559, 
+            "global": 0.5289916680836593, 
+            "species": "Trychophyton||Trichoderma"
+        }, 
+        {
+            "filtered": 0.38976377952755903, 
+            "global": 0.3671144363203537, 
+            "species": "Paracoccidioides||Aoryzae"
+        }, 
+        {
+            "filtered": 0.32677165354330706, 
+            "global": 0.36847474919231415, 
+            "species": "Cordyceps||Aoryzae"
+        }, 
+        {
+            "filtered": 0.3228346456692913, 
+            "global": 0.3632035368134672, 
+            "species": "Foxysporum||Aoryzae"
+        }, 
+        {
+            "filtered": 0.32086614173228345, 
+            "global": 0.4373405883353172, 
+            "species": "Phaeosparia||Aoryzae"
+        }, 
+        {
+            "filtered": 0.36220472440944884, 
+            "global": 0.40095221901037237, 
+            "species": "Trychophyton||Aoryzae"
+        }, 
+        {
+            "filtered": 0.7244094488188977, 
+            "global": 0.6145213399081789, 
+            "species": "Cordyceps||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.75, 
+            "global": 0.6131610270362183, 
+            "species": "Foxysporum||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.4311023622047244, 
+            "global": 0.43189933684747495, 
+            "species": "Phaeosparia||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.7736220472440944, 
+            "global": 0.6784560448903247, 
+            "species": "Trychophyton||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.8917322834645669, 
+            "global": 0.8029246726747152, 
+            "species": "Foxysporum||Cordyceps"
+        }, 
+        {
+            "filtered": 0.44881889763779526, 
+            "global": 0.4885223601428328, 
+            "species": "Phaeosparia||Cordyceps"
+        }, 
+        {
+            "filtered": 0.7696850393700787, 
+            "global": 0.6855976874681177, 
+            "species": "Trychophyton||Cordyceps"
+        }, 
+        {
+            "filtered": 0.46850393700787407, 
+            "global": 0.4905628294507737, 
+            "species": "Phaeosparia||Foxysporum"
+        }, 
+        {
+            "filtered": 0.781496062992126, 
+            "global": 0.6852576092501276, 
+            "species": "Trychophyton||Foxysporum"
+        }, 
+        {
+            "filtered": 0.47047244094488194, 
+            "global": 0.49328345519469474, 
+            "species": "Trychophyton||Phaeosparia"
+        }
+    ], 
+    "His": [
+        {
+            "filtered": 0.9838709677419355, 
+            "global": 0.9154905628294507, 
+            "species": "Fusarium||Fsolani"
+        }, 
+        {
+            "filtered": 0.8709677419354839, 
+            "global": 0.6150314572351641, 
+            "species": "Aniger||Fsolani"
+        }, 
+        {
+            "filtered": 0.5806451612903226, 
+            "global": 0.6607719775548376, 
+            "species": "Trichoderma||Fsolani"
+        }, 
+        {
+            "filtered": 0.3709677419354839, 
+            "global": 0.36915490562829456, 
+            "species": "Aoryzae||Fsolani"
+        }, 
+        {
+            "filtered": 0.8548387096774194, 
+            "global": 0.6169018874341099, 
+            "species": "Paracoccidioides||Fsolani"
+        }, 
+        {
+            "filtered": 0.9516129032258065, 
+            "global": 0.804795102873661, 
+            "species": "Cordyceps||Fsolani"
+        }, 
+        {
+            "filtered": 1.0, 
+            "global": 0.8933854786600918, 
+            "species": "Foxysporum||Fsolani"
+        }, 
+        {
+            "filtered": 0.5161290322580645, 
+            "global": 0.5029756844074137, 
+            "species": "Phaeosparia||Fsolani"
+        }, 
+        {
+            "filtered": 0.8870967741935484, 
+            "global": 0.683897296378167, 
+            "species": "Trychophyton||Fsolani"
+        }, 
+        {
+            "filtered": 0.8548387096774194, 
+            "global": 0.602618602278524, 
+            "species": "Aniger||Fusarium"
+        }, 
+        {
+            "filtered": 0.5645161290322581, 
+            "global": 0.6478490052712124, 
+            "species": "Trichoderma||Fusarium"
+        }, 
+        {
+            "filtered": 0.3709677419354839, 
+            "global": 0.36422377146743745, 
+            "species": "Aoryzae||Fusarium"
+        }, 
+        {
+            "filtered": 0.8387096774193549, 
+            "global": 0.6201326305050161, 
+            "species": "Paracoccidioides||Fusarium"
+        }, 
+        {
+            "filtered": 0.9354838709677419, 
+            "global": 0.805135181091651, 
+            "species": "Cordyceps||Fusarium"
+        }, 
+        {
+            "filtered": 0.9838709677419355, 
+            "global": 0.9328345519469478, 
+            "species": "Foxysporum||Fusarium"
+        }, 
+        {
+            "filtered": 0.5161290322580645, 
+            "global": 0.4951538853936406, 
+            "species": "Phaeosparia||Fusarium"
+        }, 
+        {
+            "filtered": 0.8709677419354839, 
+            "global": 0.6878081958850536, 
+            "species": "Trychophyton||Fusarium"
+        }, 
+        {
+            "filtered": 0.6129032258064516, 
+            "global": 0.612310831491243, 
+            "species": "Trichoderma||Aniger"
+        }, 
+        {
+            "filtered": 0.29032258064516125, 
+            "global": 0.4274783200136032, 
+            "species": "Aoryzae||Aniger"
+        }, 
+        {
+            "filtered": 0.7741935483870968, 
+            "global": 0.5844244176160517, 
+            "species": "Paracoccidioides||Aniger"
+        }, 
+        {
+            "filtered": 0.8225806451612904, 
+            "global": 0.5944567250467607, 
+            "species": "Cordyceps||Aniger"
+        }, 
+        {
+            "filtered": 0.8709677419354839, 
+            "global": 0.5964971943547016, 
+            "species": "Foxysporum||Aniger"
+        }, 
+        {
+            "filtered": 0.5967741935483871, 
+            "global": 0.5834041829620813, 
+            "species": "Phaeosparia||Aniger"
+        }, 
+        {
+            "filtered": 0.8225806451612904, 
+            "global": 0.649379357252168, 
+            "species": "Trychophyton||Aniger"
+        }, 
+        {
+            "filtered": 0.532258064516129, 
+            "global": 0.4109845264410814, 
+            "species": "Aoryzae||Trichoderma"
+        }, 
+        {
+            "filtered": 0.4516129032258065, 
+            "global": 0.4563849685427648, 
+            "species": "Paracoccidioides||Trichoderma"
+        }, 
+        {
+            "filtered": 0.5645161290322581, 
+            "global": 0.6400272062574393, 
+            "species": "Cordyceps||Trichoderma"
+        }, 
+        {
+            "filtered": 0.5806451612903226, 
+            "global": 0.6366264240775379, 
+            "species": "Foxysporum||Trichoderma"
+        }, 
+        {
+            "filtered": 0.5, 
+            "global": 0.5774528141472539, 
+            "species": "Phaeosparia||Trichoderma"
+        }, 
+        {
+            "filtered": 0.467741935483871, 
+            "global": 0.5289916680836593, 
+            "species": "Trychophyton||Trichoderma"
+        }, 
+        {
+            "filtered": 0.4032258064516129, 
+            "global": 0.3671144363203537, 
+            "species": "Paracoccidioides||Aoryzae"
+        }, 
+        {
+            "filtered": 0.3870967741935484, 
+            "global": 0.36847474919231415, 
+            "species": "Cordyceps||Aoryzae"
+        }, 
+        {
+            "filtered": 0.3709677419354839, 
+            "global": 0.3632035368134672, 
+            "species": "Foxysporum||Aoryzae"
+        }, 
+        {
+            "filtered": 0.29032258064516125, 
+            "global": 0.4373405883353172, 
+            "species": "Phaeosparia||Aoryzae"
+        }, 
+        {
+            "filtered": 0.3709677419354839, 
+            "global": 0.40095221901037237, 
+            "species": "Trychophyton||Aoryzae"
+        }, 
+        {
+            "filtered": 0.8387096774193549, 
+            "global": 0.6145213399081789, 
+            "species": "Cordyceps||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.8548387096774194, 
+            "global": 0.6131610270362183, 
+            "species": "Foxysporum||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.467741935483871, 
+            "global": 0.43189933684747495, 
+            "species": "Phaeosparia||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.8548387096774194, 
+            "global": 0.6784560448903247, 
+            "species": "Trychophyton||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.9516129032258065, 
+            "global": 0.8029246726747152, 
+            "species": "Foxysporum||Cordyceps"
+        }, 
+        {
+            "filtered": 0.5161290322580645, 
+            "global": 0.4885223601428328, 
+            "species": "Phaeosparia||Cordyceps"
+        }, 
+        {
+            "filtered": 0.8709677419354839, 
+            "global": 0.6855976874681177, 
+            "species": "Trychophyton||Cordyceps"
+        }, 
+        {
+            "filtered": 0.5161290322580645, 
+            "global": 0.4905628294507737, 
+            "species": "Phaeosparia||Foxysporum"
+        }, 
+        {
+            "filtered": 0.8870967741935484, 
+            "global": 0.6852576092501276, 
+            "species": "Trychophyton||Foxysporum"
+        }, 
+        {
+            "filtered": 0.4838709677419355, 
+            "global": 0.49328345519469474, 
+            "species": "Trychophyton||Phaeosparia"
+        }
+    ], 
+    "Arg": [
+        {
+            "filtered": 1.0, 
+            "global": 0.9154905628294507, 
+            "species": "Fusarium||Fsolani"
+        }, 
+        {
+            "filtered": 0.7352941176470589, 
+            "global": 0.6150314572351641, 
+            "species": "Aniger||Fsolani"
+        }, 
+        {
+            "filtered": 0.7647058823529411, 
+            "global": 0.6607719775548376, 
+            "species": "Trichoderma||Fsolani"
+        }, 
+        {
+            "filtered": 0.4558823529411764, 
+            "global": 0.36915490562829456, 
+            "species": "Aoryzae||Fsolani"
+        }, 
+        {
+            "filtered": 0.7352941176470589, 
+            "global": 0.6169018874341099, 
+            "species": "Paracoccidioides||Fsolani"
+        }, 
+        {
+            "filtered": 0.9411764705882353, 
+            "global": 0.804795102873661, 
+            "species": "Cordyceps||Fsolani"
+        }, 
+        {
+            "filtered": 1.0, 
+            "global": 0.8933854786600918, 
+            "species": "Foxysporum||Fsolani"
+        }, 
+        {
+            "filtered": 0.3970588235294117, 
+            "global": 0.5029756844074137, 
+            "species": "Phaeosparia||Fsolani"
+        }, 
+        {
+            "filtered": 0.8088235294117647, 
+            "global": 0.683897296378167, 
+            "species": "Trychophyton||Fsolani"
+        }, 
+        {
+            "filtered": 0.7352941176470589, 
+            "global": 0.602618602278524, 
+            "species": "Aniger||Fusarium"
+        }, 
+        {
+            "filtered": 0.7647058823529411, 
+            "global": 0.6478490052712124, 
+            "species": "Trichoderma||Fusarium"
+        }, 
+        {
+            "filtered": 0.4558823529411764, 
+            "global": 0.36422377146743745, 
+            "species": "Aoryzae||Fusarium"
+        }, 
+        {
+            "filtered": 0.7352941176470589, 
+            "global": 0.6201326305050161, 
+            "species": "Paracoccidioides||Fusarium"
+        }, 
+        {
+            "filtered": 0.9411764705882353, 
+            "global": 0.805135181091651, 
+            "species": "Cordyceps||Fusarium"
+        }, 
+        {
+            "filtered": 1.0, 
+            "global": 0.9328345519469478, 
+            "species": "Foxysporum||Fusarium"
+        }, 
+        {
+            "filtered": 0.3970588235294117, 
+            "global": 0.4951538853936406, 
+            "species": "Phaeosparia||Fusarium"
+        }, 
+        {
+            "filtered": 0.8088235294117647, 
+            "global": 0.6878081958850536, 
+            "species": "Trychophyton||Fusarium"
+        }, 
+        {
+            "filtered": 0.6911764705882353, 
+            "global": 0.612310831491243, 
+            "species": "Trichoderma||Aniger"
+        }, 
+        {
+            "filtered": 0.36764705882352944, 
+            "global": 0.4274783200136032, 
+            "species": "Aoryzae||Aniger"
+        }, 
+        {
+            "filtered": 0.6911764705882353, 
+            "global": 0.5844244176160517, 
+            "species": "Paracoccidioides||Aniger"
+        }, 
+        {
+            "filtered": 0.7058823529411765, 
+            "global": 0.5944567250467607, 
+            "species": "Cordyceps||Aniger"
+        }, 
+        {
+            "filtered": 0.7352941176470589, 
+            "global": 0.5964971943547016, 
+            "species": "Foxysporum||Aniger"
+        }, 
+        {
+            "filtered": 0.47058823529411764, 
+            "global": 0.5834041829620813, 
+            "species": "Phaeosparia||Aniger"
+        }, 
+        {
+            "filtered": 0.6911764705882353, 
+            "global": 0.649379357252168, 
+            "species": "Trychophyton||Aniger"
+        }, 
+        {
+            "filtered": 0.3529411764705883, 
+            "global": 0.4109845264410814, 
+            "species": "Aoryzae||Trichoderma"
+        }, 
+        {
+            "filtered": 0.5294117647058824, 
+            "global": 0.4563849685427648, 
+            "species": "Paracoccidioides||Trichoderma"
+        }, 
+        {
+            "filtered": 0.75, 
+            "global": 0.6400272062574393, 
+            "species": "Cordyceps||Trichoderma"
+        }, 
+        {
+            "filtered": 0.7647058823529411, 
+            "global": 0.6366264240775379, 
+            "species": "Foxysporum||Trichoderma"
+        }, 
+        {
+            "filtered": 0.5, 
+            "global": 0.5774528141472539, 
+            "species": "Phaeosparia||Trichoderma"
+        }, 
+        {
+            "filtered": 0.5882352941176471, 
+            "global": 0.5289916680836593, 
+            "species": "Trychophyton||Trichoderma"
+        }, 
+        {
+            "filtered": 0.4852941176470589, 
+            "global": 0.3671144363203537, 
+            "species": "Paracoccidioides||Aoryzae"
+        }, 
+        {
+            "filtered": 0.4411764705882353, 
+            "global": 0.36847474919231415, 
+            "species": "Cordyceps||Aoryzae"
+        }, 
+        {
+            "filtered": 0.4558823529411764, 
+            "global": 0.3632035368134672, 
+            "species": "Foxysporum||Aoryzae"
+        }, 
+        {
+            "filtered": 0.27941176470588236, 
+            "global": 0.4373405883353172, 
+            "species": "Phaeosparia||Aoryzae"
+        }, 
+        {
+            "filtered": 0.4558823529411764, 
+            "global": 0.40095221901037237, 
+            "species": "Trychophyton||Aoryzae"
+        }, 
+        {
+            "filtered": 0.7205882352941176, 
+            "global": 0.6145213399081789, 
+            "species": "Cordyceps||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.7352941176470589, 
+            "global": 0.6131610270362183, 
+            "species": "Foxysporum||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.3529411764705883, 
+            "global": 0.43189933684747495, 
+            "species": "Phaeosparia||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.7352941176470589, 
+            "global": 0.6784560448903247, 
+            "species": "Trychophyton||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.9411764705882353, 
+            "global": 0.8029246726747152, 
+            "species": "Foxysporum||Cordyceps"
+        }, 
+        {
+            "filtered": 0.36764705882352944, 
+            "global": 0.4885223601428328, 
+            "species": "Phaeosparia||Cordyceps"
+        }, 
+        {
+            "filtered": 0.7647058823529411, 
+            "global": 0.6855976874681177, 
+            "species": "Trychophyton||Cordyceps"
+        }, 
+        {
+            "filtered": 0.3970588235294117, 
+            "global": 0.4905628294507737, 
+            "species": "Phaeosparia||Foxysporum"
+        }, 
+        {
+            "filtered": 0.8088235294117647, 
+            "global": 0.6852576092501276, 
+            "species": "Trychophyton||Foxysporum"
+        }, 
+        {
+            "filtered": 0.4117647058823529, 
+            "global": 0.49328345519469474, 
+            "species": "Trychophyton||Phaeosparia"
+        }
+    ], 
+    "Met": [
+        {
+            "filtered": 0.9866666666666667, 
+            "global": 0.9154905628294507, 
+            "species": "Fusarium||Fsolani"
+        }, 
+        {
+            "filtered": 0.72, 
+            "global": 0.6150314572351641, 
+            "species": "Aniger||Fsolani"
+        }, 
+        {
+            "filtered": 0.68, 
+            "global": 0.6607719775548376, 
+            "species": "Trichoderma||Fsolani"
+        }, 
+        {
+            "filtered": 0.4, 
+            "global": 0.36915490562829456, 
+            "species": "Aoryzae||Fsolani"
+        }, 
+        {
+            "filtered": 0.6933333333333334, 
+            "global": 0.6169018874341099, 
+            "species": "Paracoccidioides||Fsolani"
+        }, 
+        {
+            "filtered": 0.9466666666666667, 
+            "global": 0.804795102873661, 
+            "species": "Cordyceps||Fsolani"
+        }, 
+        {
+            "filtered": 0.9866666666666667, 
+            "global": 0.8933854786600918, 
+            "species": "Foxysporum||Fsolani"
+        }, 
+        {
+            "filtered": 0.42666666666666675, 
+            "global": 0.5029756844074137, 
+            "species": "Phaeosparia||Fsolani"
+        }, 
+        {
+            "filtered": 0.8133333333333334, 
+            "global": 0.683897296378167, 
+            "species": "Trychophyton||Fsolani"
+        }, 
+        {
+            "filtered": 0.7066666666666667, 
+            "global": 0.602618602278524, 
+            "species": "Aniger||Fusarium"
+        }, 
+        {
+            "filtered": 0.68, 
+            "global": 0.6478490052712124, 
+            "species": "Trichoderma||Fusarium"
+        }, 
+        {
+            "filtered": 0.41333333333333333, 
+            "global": 0.36422377146743745, 
+            "species": "Aoryzae||Fusarium"
+        }, 
+        {
+            "filtered": 0.68, 
+            "global": 0.6201326305050161, 
+            "species": "Paracoccidioides||Fusarium"
+        }, 
+        {
+            "filtered": 0.96, 
+            "global": 0.805135181091651, 
+            "species": "Cordyceps||Fusarium"
+        }, 
+        {
+            "filtered": 0.9733333333333334, 
+            "global": 0.9328345519469478, 
+            "species": "Foxysporum||Fusarium"
+        }, 
+        {
+            "filtered": 0.41333333333333333, 
+            "global": 0.4951538853936406, 
+            "species": "Phaeosparia||Fusarium"
+        }, 
+        {
+            "filtered": 0.8, 
+            "global": 0.6878081958850536, 
+            "species": "Trychophyton||Fusarium"
+        }, 
+        {
+            "filtered": 0.68, 
+            "global": 0.612310831491243, 
+            "species": "Trichoderma||Aniger"
+        }, 
+        {
+            "filtered": 0.30666666666666664, 
+            "global": 0.4274783200136032, 
+            "species": "Aoryzae||Aniger"
+        }, 
+        {
+            "filtered": 0.6133333333333333, 
+            "global": 0.5844244176160517, 
+            "species": "Paracoccidioides||Aniger"
+        }, 
+        {
+            "filtered": 0.6666666666666666, 
+            "global": 0.5944567250467607, 
+            "species": "Cordyceps||Aniger"
+        }, 
+        {
+            "filtered": 0.7066666666666667, 
+            "global": 0.5964971943547016, 
+            "species": "Foxysporum||Aniger"
+        }, 
+        {
+            "filtered": 0.52, 
+            "global": 0.5834041829620813, 
+            "species": "Phaeosparia||Aniger"
+        }, 
+        {
+            "filtered": 0.7733333333333333, 
+            "global": 0.649379357252168, 
+            "species": "Trychophyton||Aniger"
+        }, 
+        {
+            "filtered": 0.3466666666666667, 
+            "global": 0.4109845264410814, 
+            "species": "Aoryzae||Trichoderma"
+        }, 
+        {
+            "filtered": 0.43999999999999995, 
+            "global": 0.4563849685427648, 
+            "species": "Paracoccidioides||Trichoderma"
+        }, 
+        {
+            "filtered": 0.6933333333333334, 
+            "global": 0.6400272062574393, 
+            "species": "Cordyceps||Trichoderma"
+        }, 
+        {
+            "filtered": 0.68, 
+            "global": 0.6366264240775379, 
+            "species": "Foxysporum||Trichoderma"
+        }, 
+        {
+            "filtered": 0.5466666666666666, 
+            "global": 0.5774528141472539, 
+            "species": "Phaeosparia||Trichoderma"
+        }, 
+        {
+            "filtered": 0.5333333333333333, 
+            "global": 0.5289916680836593, 
+            "species": "Trychophyton||Trichoderma"
+        }, 
+        {
+            "filtered": 0.4, 
+            "global": 0.3671144363203537, 
+            "species": "Paracoccidioides||Aoryzae"
+        }, 
+        {
+            "filtered": 0.3866666666666667, 
+            "global": 0.36847474919231415, 
+            "species": "Cordyceps||Aoryzae"
+        }, 
+        {
+            "filtered": 0.4, 
+            "global": 0.3632035368134672, 
+            "species": "Foxysporum||Aoryzae"
+        }, 
+        {
+            "filtered": 0.3733333333333333, 
+            "global": 0.4373405883353172, 
+            "species": "Phaeosparia||Aoryzae"
+        }, 
+        {
+            "filtered": 0.42666666666666675, 
+            "global": 0.40095221901037237, 
+            "species": "Trychophyton||Aoryzae"
+        }, 
+        {
+            "filtered": 0.6666666666666666, 
+            "global": 0.6145213399081789, 
+            "species": "Cordyceps||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.68, 
+            "global": 0.6131610270362183, 
+            "species": "Foxysporum||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.30666666666666664, 
+            "global": 0.43189933684747495, 
+            "species": "Phaeosparia||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.76, 
+            "global": 0.6784560448903247, 
+            "species": "Trychophyton||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.9466666666666667, 
+            "global": 0.8029246726747152, 
+            "species": "Foxysporum||Cordyceps"
+        }, 
+        {
+            "filtered": 0.3866666666666667, 
+            "global": 0.4885223601428328, 
+            "species": "Phaeosparia||Cordyceps"
+        }, 
+        {
+            "filtered": 0.76, 
+            "global": 0.6855976874681177, 
+            "species": "Trychophyton||Cordyceps"
+        }, 
+        {
+            "filtered": 0.41333333333333333, 
+            "global": 0.4905628294507737, 
+            "species": "Phaeosparia||Foxysporum"
+        }, 
+        {
+            "filtered": 0.8, 
+            "global": 0.6852576092501276, 
+            "species": "Trychophyton||Foxysporum"
+        }, 
+        {
+            "filtered": 0.42666666666666675, 
+            "global": 0.49328345519469474, 
+            "species": "Trychophyton||Phaeosparia"
+        }
+    ], 
+    "Val": [
+        {
+            "filtered": 0.9893617021276596, 
+            "global": 0.9154905628294507, 
+            "species": "Fusarium||Fsolani"
+        }, 
+        {
+            "filtered": 0.6648936170212766, 
+            "global": 0.6150314572351641, 
+            "species": "Aniger||Fsolani"
+        }, 
+        {
+            "filtered": 0.6542553191489362, 
+            "global": 0.6607719775548376, 
+            "species": "Trichoderma||Fsolani"
+        }, 
+        {
+            "filtered": 0.36170212765957444, 
+            "global": 0.36915490562829456, 
+            "species": "Aoryzae||Fsolani"
+        }, 
+        {
+            "filtered": 0.5159574468085106, 
+            "global": 0.6169018874341099, 
+            "species": "Paracoccidioides||Fsolani"
+        }, 
+        {
+            "filtered": 0.851063829787234, 
+            "global": 0.804795102873661, 
+            "species": "Cordyceps||Fsolani"
+        }, 
+        {
+            "filtered": 0.9840425531914894, 
+            "global": 0.8933854786600918, 
+            "species": "Foxysporum||Fsolani"
+        }, 
+        {
+            "filtered": 0.4148936170212766, 
+            "global": 0.5029756844074137, 
+            "species": "Phaeosparia||Fsolani"
+        }, 
+        {
+            "filtered": 0.6648936170212766, 
+            "global": 0.683897296378167, 
+            "species": "Trychophyton||Fsolani"
+        }, 
+        {
+            "filtered": 0.6595744680851063, 
+            "global": 0.602618602278524, 
+            "species": "Aniger||Fusarium"
+        }, 
+        {
+            "filtered": 0.6595744680851063, 
+            "global": 0.6478490052712124, 
+            "species": "Trichoderma||Fusarium"
+        }, 
+        {
+            "filtered": 0.3563829787234043, 
+            "global": 0.36422377146743745, 
+            "species": "Aoryzae||Fusarium"
+        }, 
+        {
+            "filtered": 0.5053191489361702, 
+            "global": 0.6201326305050161, 
+            "species": "Paracoccidioides||Fusarium"
+        }, 
+        {
+            "filtered": 0.8617021276595744, 
+            "global": 0.805135181091651, 
+            "species": "Cordyceps||Fusarium"
+        }, 
+        {
+            "filtered": 0.9840425531914894, 
+            "global": 0.9328345519469478, 
+            "species": "Foxysporum||Fusarium"
+        }, 
+        {
+            "filtered": 0.4148936170212766, 
+            "global": 0.4951538853936406, 
+            "species": "Phaeosparia||Fusarium"
+        }, 
+        {
+            "filtered": 0.6648936170212766, 
+            "global": 0.6878081958850536, 
+            "species": "Trychophyton||Fusarium"
+        }, 
+        {
+            "filtered": 0.5638297872340425, 
+            "global": 0.612310831491243, 
+            "species": "Trichoderma||Aniger"
+        }, 
+        {
+            "filtered": 0.37234042553191493, 
+            "global": 0.4274783200136032, 
+            "species": "Aoryzae||Aniger"
+        }, 
+        {
+            "filtered": 0.5106382978723404, 
+            "global": 0.5844244176160517, 
+            "species": "Paracoccidioides||Aniger"
+        }, 
+        {
+            "filtered": 0.5851063829787234, 
+            "global": 0.5944567250467607, 
+            "species": "Cordyceps||Aniger"
+        }, 
+        {
+            "filtered": 0.648936170212766, 
+            "global": 0.5964971943547016, 
+            "species": "Foxysporum||Aniger"
+        }, 
+        {
+            "filtered": 0.44680851063829785, 
+            "global": 0.5834041829620813, 
+            "species": "Phaeosparia||Aniger"
+        }, 
+        {
+            "filtered": 0.648936170212766, 
+            "global": 0.649379357252168, 
+            "species": "Trychophyton||Aniger"
+        }, 
+        {
+            "filtered": 0.35106382978723405, 
+            "global": 0.4109845264410814, 
+            "species": "Aoryzae||Trichoderma"
+        }, 
+        {
+            "filtered": 0.37765957446808507, 
+            "global": 0.4563849685427648, 
+            "species": "Paracoccidioides||Trichoderma"
+        }, 
+        {
+            "filtered": 0.6702127659574468, 
+            "global": 0.6400272062574393, 
+            "species": "Cordyceps||Trichoderma"
+        }, 
+        {
+            "filtered": 0.6542553191489362, 
+            "global": 0.6366264240775379, 
+            "species": "Foxysporum||Trichoderma"
+        }, 
+        {
+            "filtered": 0.44680851063829785, 
+            "global": 0.5774528141472539, 
+            "species": "Phaeosparia||Trichoderma"
+        }, 
+        {
+            "filtered": 0.46808510638297873, 
+            "global": 0.5289916680836593, 
+            "species": "Trychophyton||Trichoderma"
+        }, 
+        {
+            "filtered": 0.30319148936170215, 
+            "global": 0.3671144363203537, 
+            "species": "Paracoccidioides||Aoryzae"
+        }, 
+        {
+            "filtered": 0.31382978723404253, 
+            "global": 0.36847474919231415, 
+            "species": "Cordyceps||Aoryzae"
+        }, 
+        {
+            "filtered": 0.36170212765957444, 
+            "global": 0.3632035368134672, 
+            "species": "Foxysporum||Aoryzae"
+        }, 
+        {
+            "filtered": 0.25, 
+            "global": 0.4373405883353172, 
+            "species": "Phaeosparia||Aoryzae"
+        }, 
+        {
+            "filtered": 0.35106382978723405, 
+            "global": 0.40095221901037237, 
+            "species": "Trychophyton||Aoryzae"
+        }, 
+        {
+            "filtered": 0.5159574468085106, 
+            "global": 0.6145213399081789, 
+            "species": "Cordyceps||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.5053191489361702, 
+            "global": 0.6131610270362183, 
+            "species": "Foxysporum||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.2978723404255319, 
+            "global": 0.43189933684747495, 
+            "species": "Phaeosparia||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.6223404255319149, 
+            "global": 0.6784560448903247, 
+            "species": "Trychophyton||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.851063829787234, 
+            "global": 0.8029246726747152, 
+            "species": "Foxysporum||Cordyceps"
+        }, 
+        {
+            "filtered": 0.37765957446808507, 
+            "global": 0.4885223601428328, 
+            "species": "Phaeosparia||Cordyceps"
+        }, 
+        {
+            "filtered": 0.6436170212765957, 
+            "global": 0.6855976874681177, 
+            "species": "Trychophyton||Cordyceps"
+        }, 
+        {
+            "filtered": 0.4042553191489362, 
+            "global": 0.4905628294507737, 
+            "species": "Phaeosparia||Foxysporum"
+        }, 
+        {
+            "filtered": 0.6702127659574468, 
+            "global": 0.6852576092501276, 
+            "species": "Trychophyton||Foxysporum"
+        }, 
+        {
+            "filtered": 0.38829787234042556, 
+            "global": 0.49328345519469474, 
+            "species": "Trychophyton||Phaeosparia"
+        }
+    ], 
+    "Glu": [
+        {
+            "filtered": 0.9885057471264368, 
+            "global": 0.9154905628294507, 
+            "species": "Fusarium||Fsolani"
+        }, 
+        {
+            "filtered": 0.7816091954022989, 
+            "global": 0.6150314572351641, 
+            "species": "Aniger||Fsolani"
+        }, 
+        {
+            "filtered": 0.735632183908046, 
+            "global": 0.6607719775548376, 
+            "species": "Trichoderma||Fsolani"
+        }, 
+        {
+            "filtered": 0.4367816091954023, 
+            "global": 0.36915490562829456, 
+            "species": "Aoryzae||Fsolani"
+        }, 
+        {
+            "filtered": 0.8045977011494253, 
+            "global": 0.6169018874341099, 
+            "species": "Paracoccidioides||Fsolani"
+        }, 
+        {
+            "filtered": 0.9770114942528736, 
+            "global": 0.804795102873661, 
+            "species": "Cordyceps||Fsolani"
+        }, 
+        {
+            "filtered": 0.9885057471264368, 
+            "global": 0.8933854786600918, 
+            "species": "Foxysporum||Fsolani"
+        }, 
+        {
+            "filtered": 0.49425287356321834, 
+            "global": 0.5029756844074137, 
+            "species": "Phaeosparia||Fsolani"
+        }, 
+        {
+            "filtered": 0.7931034482758621, 
+            "global": 0.683897296378167, 
+            "species": "Trychophyton||Fsolani"
+        }, 
+        {
+            "filtered": 0.7701149425287356, 
+            "global": 0.602618602278524, 
+            "species": "Aniger||Fusarium"
+        }, 
+        {
+            "filtered": 0.7241379310344828, 
+            "global": 0.6478490052712124, 
+            "species": "Trichoderma||Fusarium"
+        }, 
+        {
+            "filtered": 0.4367816091954023, 
+            "global": 0.36422377146743745, 
+            "species": "Aoryzae||Fusarium"
+        }, 
+        {
+            "filtered": 0.8045977011494253, 
+            "global": 0.6201326305050161, 
+            "species": "Paracoccidioides||Fusarium"
+        }, 
+        {
+            "filtered": 0.9655172413793104, 
+            "global": 0.805135181091651, 
+            "species": "Cordyceps||Fusarium"
+        }, 
+        {
+            "filtered": 1.0, 
+            "global": 0.9328345519469478, 
+            "species": "Foxysporum||Fusarium"
+        }, 
+        {
+            "filtered": 0.48275862068965525, 
+            "global": 0.4951538853936406, 
+            "species": "Phaeosparia||Fusarium"
+        }, 
+        {
+            "filtered": 0.7931034482758621, 
+            "global": 0.6878081958850536, 
+            "species": "Trychophyton||Fusarium"
+        }, 
+        {
+            "filtered": 0.6206896551724138, 
+            "global": 0.612310831491243, 
+            "species": "Trichoderma||Aniger"
+        }, 
+        {
+            "filtered": 0.3793103448275862, 
+            "global": 0.4274783200136032, 
+            "species": "Aoryzae||Aniger"
+        }, 
+        {
+            "filtered": 0.7471264367816092, 
+            "global": 0.5844244176160517, 
+            "species": "Paracoccidioides||Aniger"
+        }, 
+        {
+            "filtered": 0.7701149425287356, 
+            "global": 0.5944567250467607, 
+            "species": "Cordyceps||Aniger"
+        }, 
+        {
+            "filtered": 0.7701149425287356, 
+            "global": 0.5964971943547016, 
+            "species": "Foxysporum||Aniger"
+        }, 
+        {
+            "filtered": 0.5057471264367817, 
+            "global": 0.5834041829620813, 
+            "species": "Phaeosparia||Aniger"
+        }, 
+        {
+            "filtered": 0.735632183908046, 
+            "global": 0.649379357252168, 
+            "species": "Trychophyton||Aniger"
+        }, 
+        {
+            "filtered": 0.49425287356321834, 
+            "global": 0.4109845264410814, 
+            "species": "Aoryzae||Trichoderma"
+        }, 
+        {
+            "filtered": 0.6091954022988506, 
+            "global": 0.4563849685427648, 
+            "species": "Paracoccidioides||Trichoderma"
+        }, 
+        {
+            "filtered": 0.735632183908046, 
+            "global": 0.6400272062574393, 
+            "species": "Cordyceps||Trichoderma"
+        }, 
+        {
+            "filtered": 0.7241379310344828, 
+            "global": 0.6366264240775379, 
+            "species": "Foxysporum||Trichoderma"
+        }, 
+        {
+            "filtered": 0.5632183908045977, 
+            "global": 0.5774528141472539, 
+            "species": "Phaeosparia||Trichoderma"
+        }, 
+        {
+            "filtered": 0.5632183908045977, 
+            "global": 0.5289916680836593, 
+            "species": "Trychophyton||Trichoderma"
+        }, 
+        {
+            "filtered": 0.47126436781609193, 
+            "global": 0.3671144363203537, 
+            "species": "Paracoccidioides||Aoryzae"
+        }, 
+        {
+            "filtered": 0.4252873563218391, 
+            "global": 0.36847474919231415, 
+            "species": "Cordyceps||Aoryzae"
+        }, 
+        {
+            "filtered": 0.4367816091954023, 
+            "global": 0.3632035368134672, 
+            "species": "Foxysporum||Aoryzae"
+        }, 
+        {
+            "filtered": 0.4252873563218391, 
+            "global": 0.4373405883353172, 
+            "species": "Phaeosparia||Aoryzae"
+        }, 
+        {
+            "filtered": 0.4482758620689655, 
+            "global": 0.40095221901037237, 
+            "species": "Trychophyton||Aoryzae"
+        }, 
+        {
+            "filtered": 0.8045977011494253, 
+            "global": 0.6145213399081789, 
+            "species": "Cordyceps||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.8045977011494253, 
+            "global": 0.6131610270362183, 
+            "species": "Foxysporum||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.45977011494252873, 
+            "global": 0.43189933684747495, 
+            "species": "Phaeosparia||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.8045977011494253, 
+            "global": 0.6784560448903247, 
+            "species": "Trychophyton||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.9655172413793104, 
+            "global": 0.8029246726747152, 
+            "species": "Foxysporum||Cordyceps"
+        }, 
+        {
+            "filtered": 0.48275862068965525, 
+            "global": 0.4885223601428328, 
+            "species": "Phaeosparia||Cordyceps"
+        }, 
+        {
+            "filtered": 0.7816091954022989, 
+            "global": 0.6855976874681177, 
+            "species": "Trychophyton||Cordyceps"
+        }, 
+        {
+            "filtered": 0.48275862068965525, 
+            "global": 0.4905628294507737, 
+            "species": "Phaeosparia||Foxysporum"
+        }, 
+        {
+            "filtered": 0.7931034482758621, 
+            "global": 0.6852576092501276, 
+            "species": "Trychophyton||Foxysporum"
+        }, 
+        {
+            "filtered": 0.47126436781609193, 
+            "global": 0.49328345519469474, 
+            "species": "Trychophyton||Phaeosparia"
+        }
+    ], 
+    "Tyr": [
+        {
+            "filtered": 0.9939393939393939, 
+            "global": 0.9154905628294507, 
+            "species": "Fusarium||Fsolani"
+        }, 
+        {
+            "filtered": 0.7575757575757576, 
+            "global": 0.6150314572351641, 
+            "species": "Aniger||Fsolani"
+        }, 
+        {
+            "filtered": 0.8, 
+            "global": 0.6607719775548376, 
+            "species": "Trichoderma||Fsolani"
+        }, 
+        {
+            "filtered": 0.35757575757575766, 
+            "global": 0.36915490562829456, 
+            "species": "Aoryzae||Fsolani"
+        }, 
+        {
+            "filtered": 0.7696969696969697, 
+            "global": 0.6169018874341099, 
+            "species": "Paracoccidioides||Fsolani"
+        }, 
+        {
+            "filtered": 0.9454545454545454, 
+            "global": 0.804795102873661, 
+            "species": "Cordyceps||Fsolani"
+        }, 
+        {
+            "filtered": 0.9939393939393939, 
+            "global": 0.8933854786600918, 
+            "species": "Foxysporum||Fsolani"
+        }, 
+        {
+            "filtered": 0.509090909090909, 
+            "global": 0.5029756844074137, 
+            "species": "Phaeosparia||Fsolani"
+        }, 
+        {
+            "filtered": 0.8, 
+            "global": 0.683897296378167, 
+            "species": "Trychophyton||Fsolani"
+        }, 
+        {
+            "filtered": 0.7575757575757576, 
+            "global": 0.602618602278524, 
+            "species": "Aniger||Fusarium"
+        }, 
+        {
+            "filtered": 0.806060606060606, 
+            "global": 0.6478490052712124, 
+            "species": "Trichoderma||Fusarium"
+        }, 
+        {
+            "filtered": 0.35757575757575766, 
+            "global": 0.36422377146743745, 
+            "species": "Aoryzae||Fusarium"
+        }, 
+        {
+            "filtered": 0.7696969696969697, 
+            "global": 0.6201326305050161, 
+            "species": "Paracoccidioides||Fusarium"
+        }, 
+        {
+            "filtered": 0.9515151515151515, 
+            "global": 0.805135181091651, 
+            "species": "Cordyceps||Fusarium"
+        }, 
+        {
+            "filtered": 1.0, 
+            "global": 0.9328345519469478, 
+            "species": "Foxysporum||Fusarium"
+        }, 
+        {
+            "filtered": 0.5151515151515151, 
+            "global": 0.4951538853936406, 
+            "species": "Phaeosparia||Fusarium"
+        }, 
+        {
+            "filtered": 0.8, 
+            "global": 0.6878081958850536, 
+            "species": "Trychophyton||Fusarium"
+        }, 
+        {
+            "filtered": 0.6848484848484848, 
+            "global": 0.612310831491243, 
+            "species": "Trichoderma||Aniger"
+        }, 
+        {
+            "filtered": 0.36969696969696964, 
+            "global": 0.4274783200136032, 
+            "species": "Aoryzae||Aniger"
+        }, 
+        {
+            "filtered": 0.7515151515151515, 
+            "global": 0.5844244176160517, 
+            "species": "Paracoccidioides||Aniger"
+        }, 
+        {
+            "filtered": 0.7393939393939394, 
+            "global": 0.5944567250467607, 
+            "species": "Cordyceps||Aniger"
+        }, 
+        {
+            "filtered": 0.7575757575757576, 
+            "global": 0.5964971943547016, 
+            "species": "Foxysporum||Aniger"
+        }, 
+        {
+            "filtered": 0.503030303030303, 
+            "global": 0.5834041829620813, 
+            "species": "Phaeosparia||Aniger"
+        }, 
+        {
+            "filtered": 0.7757575757575758, 
+            "global": 0.649379357252168, 
+            "species": "Trychophyton||Aniger"
+        }, 
+        {
+            "filtered": 0.4121212121212121, 
+            "global": 0.4109845264410814, 
+            "species": "Aoryzae||Trichoderma"
+        }, 
+        {
+            "filtered": 0.6181818181818182, 
+            "global": 0.4563849685427648, 
+            "species": "Paracoccidioides||Trichoderma"
+        }, 
+        {
+            "filtered": 0.793939393939394, 
+            "global": 0.6400272062574393, 
+            "species": "Cordyceps||Trichoderma"
+        }, 
+        {
+            "filtered": 0.806060606060606, 
+            "global": 0.6366264240775379, 
+            "species": "Foxysporum||Trichoderma"
+        }, 
+        {
+            "filtered": 0.5393939393939394, 
+            "global": 0.5774528141472539, 
+            "species": "Phaeosparia||Trichoderma"
+        }, 
+        {
+            "filtered": 0.6363636363636364, 
+            "global": 0.5289916680836593, 
+            "species": "Trychophyton||Trichoderma"
+        }, 
+        {
+            "filtered": 0.406060606060606, 
+            "global": 0.3671144363203537, 
+            "species": "Paracoccidioides||Aoryzae"
+        }, 
+        {
+            "filtered": 0.34545454545454546, 
+            "global": 0.36847474919231415, 
+            "species": "Cordyceps||Aoryzae"
+        }, 
+        {
+            "filtered": 0.35757575757575766, 
+            "global": 0.3632035368134672, 
+            "species": "Foxysporum||Aoryzae"
+        }, 
+        {
+            "filtered": 0.36969696969696964, 
+            "global": 0.4373405883353172, 
+            "species": "Phaeosparia||Aoryzae"
+        }, 
+        {
+            "filtered": 0.36969696969696964, 
+            "global": 0.40095221901037237, 
+            "species": "Trychophyton||Aoryzae"
+        }, 
+        {
+            "filtered": 0.7454545454545455, 
+            "global": 0.6145213399081789, 
+            "species": "Cordyceps||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.7696969696969697, 
+            "global": 0.6131610270362183, 
+            "species": "Foxysporum||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.4121212121212121, 
+            "global": 0.43189933684747495, 
+            "species": "Phaeosparia||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.793939393939394, 
+            "global": 0.6784560448903247, 
+            "species": "Trychophyton||Paracoccidioides"
+        }, 
+        {
+            "filtered": 0.9515151515151515, 
+            "global": 0.8029246726747152, 
+            "species": "Foxysporum||Cordyceps"
+        }, 
+        {
+            "filtered": 0.49090909090909096, 
+            "global": 0.4885223601428328, 
+            "species": "Phaeosparia||Cordyceps"
+        }, 
+        {
+            "filtered": 0.7757575757575758, 
+            "global": 0.6855976874681177, 
+            "species": "Trychophyton||Cordyceps"
+        }, 
+        {
+            "filtered": 0.5151515151515151, 
+            "global": 0.4905628294507737, 
+            "species": "Phaeosparia||Foxysporum"
+        }, 
+        {
+            "filtered": 0.8, 
+            "global": 0.6852576092501276, 
+            "species": "Trychophyton||Foxysporum"
+        }, 
+        {
+            "filtered": 0.4363636363636363, 
+            "global": 0.49328345519469474, 
+            "species": "Trychophyton||Phaeosparia"
+        }
+    ]
+}

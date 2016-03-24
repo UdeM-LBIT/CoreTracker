@@ -12,9 +12,9 @@ from math import log10
 from Bio import SeqIO
 from ete3 import Tree
 
-from CoreTracker.coreutils import *
-from CoreTracker.classifier import *
-from CoreTracker.settings import *
+from coretracker.coreutils import *
+from coretracker.classifier import *
+from coretracker.settings import *
 
 ENABLE_PAR = True
 CPU_COUNT = 0
@@ -33,7 +33,7 @@ __version__ = "1.2"
 __email__ = "fmr.noutahi@umontreal.ca"
 __license__ = "The MIT License (MIT)"
 
-MODELPATH = 'CoreTracker/classifier/model/classifier.plk'
+MODELPATH = 'coretracker/classifier/model/classifier.plk'
 etiquette = ["fitch", "suspected", "Fisher pval", "Gene frac",
                     "N. rea", "N. used", "Cod. count", "Sub. count",
                     "G. len", "codon_lik", "N. mixte" ,"id"] #, 'total_aa']
@@ -54,6 +54,9 @@ def set_coretracker(args, settings):
         logging.basicConfig(level=logging.DEBUG)
 
     if args.outdir:
+        if not os.path.exists(args.outdir):
+            os.makedirs(args.outdir)
+            # let original error management
         settings.OUTDIR = args.outdir
 
     msaprg = progcmd(args.align)
