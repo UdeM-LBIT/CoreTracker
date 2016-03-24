@@ -38,6 +38,7 @@ etiquette = ["fitch", "suspected", "Fisher pval", "Gene frac",
                     "N. rea", "N. used", "Cod. count", "Sub. count",
                     "G. len", "codon_lik", "N. mixte" ,"id"] #, 'total_aa']
 selected_feats = [2,3,4,5,6,7,8,9,11]
+selected_et = [etiquette[i] for i in selected_feats]
 
 def testing_a_lot(args, settings):
     t = random.randint(30, 90)
@@ -110,7 +111,7 @@ def compile_result(x, clf, cod_align):
     pred_prob = clf.predict_proba(X_data)
     pred =  clf.predict(X_data)
     sppval, outdir = utils.get_report(fitch, data, reafinder, cod_align, (X_data, X_labels, pred_prob, pred))
-    utils.print_data_to_txt(os.path.join(outdir,"data.txt"), etiquette, X_data, X_labels, pred, sppval, fitch.dest_aa)
+    utils.print_data_to_txt(os.path.join(outdir, fitch.ori_aa+"_to_"+fitch.dest_aa+"_data.txt"), selected_et, X_data, X_labels, pred, sppval, fitch.dest_aa)
 
 
 if __name__ == '__main__':

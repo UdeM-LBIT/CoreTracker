@@ -1891,7 +1891,7 @@ def get_report(fitchtree, gdata, reafinder, codon_align, prediction, output="", 
         glob_purge.append(output)
 
         # get report output
-        rep_out = os.path.join(OUTDIR, "Report")
+        rep_out = os.path.join(OUTDIR, "Report_"+fitchtree.ori_aa + "_to_" + fitchtree.dest_aa)
         # glob_purge.append(rep_out)
         pdf_format_data(fitchtree.ori_aa1, fitchtree.dest_aa1, gdata, prediction,
                                         'filtered', rep_out+".pdf")
