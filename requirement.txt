@@ -2,7 +2,7 @@ biopython==1.65
 lxml
 ete3
 matplotlib==1.5.1
-numpy>=1.9.1
+numpy>=1.8.1
 pandas>=0.16.1
 scikit-learn==0.17
 scipy>=0.14.0

@@ -25,6 +25,11 @@ class CoreFile:
 
     def __init__(self, infile, alphabet=generic_protein):
         self.infile = infile
+        if isinstance(alphabet, basestring):
+            if alphabet.startswith('nuc'):
+                self.alphabet = generic_nucleotide
+            else:
+                self.alphabet = generic_protein
         self.alphabet = alphabet
         self.sequences = self.parse_corefile(infile)
 

@@ -117,7 +117,7 @@ if __name__ == '__main__':
 
     # argument parser
     parser = argparse.ArgumentParser(
-        description='CoreTracker, A codon reassignment tracker newick tree format to mafft format')
+        description='CoreTracker, A codon reassignment tracker')
 
     parser.add_argument(
         '--wdir', '--outdir', dest="outdir", default="output", help="Working directory")
