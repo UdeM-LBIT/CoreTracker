@@ -60,7 +60,8 @@ docs/_build/
 target/
 # results
 tmp/*
-test/*
+input/test/*
+out/test/*
 
 
 # discard images

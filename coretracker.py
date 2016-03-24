@@ -176,13 +176,24 @@ if __name__ == '__main__':
     parser.add_argument('--hmmdir', dest='hmmdir',
                         help="Link a directory with hmm files for alignment. Each hmmfile should be named in the following format : genename.hmm")
 
+    parser.add_argument('--params', dest='params',
+                        help="Use A parameter file to load parameters. If a parameter is not set, the default will be used")
+
     parser.add_argument('--parallel', dest='parallel', nargs='?', const=CPU_COUNT, type=int, default=0,
                     help="Use Parallelization during execution for each reassignment. This does not guarantee an increase in speed. CPU count will be used if no argument is provided")
 
     args = parser.parse_args()
     setting = Settings()
+    paramfile = args.params
+    ad_params = {}
+    try:
+        ad_params = yaml.load(paramfile)
+    except:
+        pass
+
     setting.set(OUTDIR=args.outdir)
     setting.update_params(SUBMAT=args.submat)
+    setting.fill(ad_params)
     parallel = args.parallel
     reafinder, clf = set_coretracker(args, setting)
     codon_align, fcodon_align = reafinder.seqset.get_codon_alignment()

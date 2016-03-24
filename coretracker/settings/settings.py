@@ -71,7 +71,10 @@ class Settings():
         self.SUBMAT = getattr(MatrixInfo, 'blosum62')
 
     def fill(self, params):
-        self.__dict__.update(params.__dict__)
+        if isinstance(params, dict):
+            self.__dict__.update(params)
+        else:
+            self.__dict__.update(params.__dict__)
 
     def update_params(self, **kwargs):
         for k, v in kwargs.items():
