@@ -14,8 +14,7 @@ from sklearn.cross_validation import train_test_split
 from sklearn.decomposition import PCA
 from sklearn.ensemble import ExtraTreesClassifier, RandomForestClassifier
 from sklearn.externals import joblib
-from sklearn.feature_selection import (RFE, SelectFromModel, SelectKBest,
-                                       f_classif)
+from sklearn.feature_selection import SelectKBest, f_classif
 from sklearn.linear_model import LassoCV, LogisticRegression
 from sklearn.metrics import (average_precision_score, brier_score_loss,
                              f1_score, precision_recall_curve, precision_score,
