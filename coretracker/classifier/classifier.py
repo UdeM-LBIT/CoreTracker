@@ -10,7 +10,6 @@ import numpy as np
 from Bio.Data import CodonTable
 from scipy import misc
 from sklearn import cross_validation, feature_selection, preprocessing, svm
-from sklearn.calibration import CalibratedClassifierCV, calibration_curve
 from sklearn.cross_validation import train_test_split
 from sklearn.decomposition import PCA
 from sklearn.ensemble import ExtraTreesClassifier, RandomForestClassifier
@@ -181,56 +180,6 @@ class Classifier(object):
         print("\tRecall: %1.3f" % recall_score(y_test, y_pred))
         print("\tF1: %1.3f" % f1_score(y_test, y_pred))
         print("\tROC AUC score: %1.3f\n" % roc_auc_score(y_test, prob_pos))
-
-    def plot_calibration_curve(self, X_test, y_test, caltype="isotonic", outfile=None):
-        """Plot calibration curve"""
-        name = self.method
-        if self.trained:
-            calib = CalibratedClassifierCV(self.clf, cv=2, method=caltype)
-            calib.fit(self.X, self.y)
-            lr = LogisticRegression(C=1., solver='lbfgs')
-            lr.fit(self.X, self.y)
-            fig = plt.figure(0, figsize=(10, 10))
-            ax1 = plt.subplot2grid((3, 1), (0, 0), rowspan=2)
-            ax2 = plt.subplot2grid((3, 1), (2, 0))
-
-            ax1.plot([0, 1], [0, 1], "k:", label="Perfectly calibrated")
-            for clf, name in [(lr, 'Logistic'), (self.clf, name),
-                              (calib, name + ' + ' + caltype)]:
-                y_pred = clf.predict(X_test)
-                if hasattr(clf, "predict_proba"):
-                    prob_pos = clf.predict_proba(X_test)[:, 1]
-                else:  # use decision function
-                    prob_pos = clf.decision_function(X_test)
-                    prob_pos = \
-                        (prob_pos - prob_pos.min()) / \
-                        (prob_pos.max() - prob_pos.min())
-
-                clf_score = brier_score_loss(y_test, prob_pos)
-                fraction_of_positives, mean_predicted_value = \
-                    calibration_curve(y_test, prob_pos, n_bins=10)
-
-                ax1.plot(mean_predicted_value, fraction_of_positives, "s-",
-                         label="%s (%1.3f)" % (name, clf_score))
-
-                ax2.hist(prob_pos, range=(0, 1), bins=10, label=name,
-                         histtype="step", lw=2)
-
-            ax1.set_ylabel("Fraction of positives")
-            ax1.set_ylim([-0.05, 1.05])
-            ax1.legend(loc="lower right")
-            ax1.set_title('Calibration plots  (reliability curve)')
-
-            ax2.set_xlabel("Mean predicted value")
-            ax2.set_ylabel("Count")
-            ax2.legend(loc="upper center", ncol=2)
-            plt.tight_layout()
-            if outfile == None:
-                outfile = "calibration_curve_" + name + ".png"
-            plt.savefig(outfile)
-        else:
-            raise ValueError("Classifier is not trained")
-
 
 def read_from_json(data, labels=None, use_global=True, use_pvalue=True):
     """Parse X array from data"""
