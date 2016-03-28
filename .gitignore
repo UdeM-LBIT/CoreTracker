@@ -69,3 +69,7 @@ out/test/*
 *.svg
 *.jpg
 *.pdf
+
+coretracker.py
+translate.py
+fusion.py

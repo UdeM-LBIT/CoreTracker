@@ -47,13 +47,12 @@ def setup_package():
         keywords="bioinformatics codon reassignment tracker",
 
         long_description=(README + '\n'),
-        license='MIT',
+        license='GPL',
         classifiers=[
-            'Development Status :: 5 - Production/Stable',
+            'Development Status :: 4 - Beta',
             'Environment :: Console',
             'Natural Language :: English',
             'Intended Audience :: Developers',
-            'Intended Audience :: Education',
             'Intended Audience :: Science/Research',
             'License :: OSI Approved :: GNU General Public License (GPL)',
             'Operating System :: POSIX',
@@ -71,7 +70,7 @@ def setup_package():
             'matplotlib',
             'WeasyPrint',
             'PyYAML',
-            'PyQt4',
+            #'PyQt4',
         ],
         ext_modules = fortran_extnsion
     )

@@ -1,4 +1,18 @@
 #!/usr/bin/env python
+
+# CoreTracker Copyright (C) 2016  Emmanuel Noutahi
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 import argparse
 import glob
 import logging
@@ -16,6 +30,7 @@ from ete3 import Tree
 from coretracker.coreutils import *
 from coretracker.classifier import *
 from coretracker.settings import *
+from coretracker import  __version__, __author__, date
 
 ENABLE_PAR = True
 CPU_COUNT = 0
@@ -33,11 +48,6 @@ try:
     from yaml import CLoader as Loader
 except ImportError:
     from yaml import Loader
-
-__author__ = "Emmanuel Noutahi"
-__version__ = "1.2"
-__email__ = "fmr.noutahi@umontreal.ca"
-__license__ = "The MIT License (MIT)"
 
 MODELPATH = 'coretracker/classifier/model/classifier.plk'
 etiquette = ["fitch", "suspected", "Fisher pval", "Gene frac",
@@ -187,6 +197,8 @@ if __name__ == '__main__':
 
     parser.add_argument('--parallel', dest='parallel', nargs='?', const=CPU_COUNT, type=int, default=0,
                     help="Use Parallelization during execution for each reassignment. This does not guarantee an increase in speed. CPU count will be used if no argument is provided")
+
+    print("CoreTracker v:%s Copyright (C) %s %s"%(__version__, date, __author__))
 
     args = parser.parse_args()
     setting = Settings()
