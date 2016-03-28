@@ -1,0 +1,4508 @@
+{
+    "Gly": [
+        {
+            "filtered": 0.6304347826086957, 
+            "global": 0.4292988640814728, 
+            "species": "Schistosoma||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.6413043478260869, 
+            "global": 0.4782608695652174, 
+            "species": "Fasciola||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.9565217391304348, 
+            "global": 0.8131609870740305, 
+            "species": "Patiria||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.8913043478260869, 
+            "global": 0.681551116333725, 
+            "species": "Lumbricus||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.48913043478260865, 
+            "global": 0.6118292205248727, 
+            "species": "Halocynthia||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.9021739130434783, 
+            "global": 0.6807677242459851, 
+            "species": "Limulus||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.75, 
+            "global": 0.5793184488836662, 
+            "species": "Caenorhabditis||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.9565217391304348, 
+            "global": 0.6662749706227967, 
+            "species": "Axinella||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.9347826086956522, 
+            "global": 0.6603995299647474, 
+            "species": "Terebratulina||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.2717391304347826, 
+            "global": 0.43321582452017227, 
+            "species": "Bfloridae||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.9456521739130435, 
+            "global": 0.6878182530356444, 
+            "species": "Katharina||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.967391304347826, 
+            "global": 0.6705836271053662, 
+            "species": "Geodia||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.9456521739130435, 
+            "global": 0.6431649040344692, 
+            "species": "Metridium||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.9456521739130435, 
+            "global": 0.6298472385428907, 
+            "species": "Acropora||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.6956521739130435, 
+            "global": 0.4222483352918136, 
+            "species": "Trichinella||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.9456521739130435, 
+            "global": 0.7497062279670975, 
+            "species": "Balanoglossus||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.9456521739130435, 
+            "global": 0.6823345084214649, 
+            "species": "Drosophila||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.8913043478260869, 
+            "global": 0.6627497062279671, 
+            "species": "Myxine||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.17391304347826086, 
+            "global": 0.5703094398746573, 
+            "species": "Ciona||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.9347826086956522, 
+            "global": 0.690951821386604, 
+            "species": "Epigonichthys||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.9456521739130435, 
+            "global": 0.699177438307873, 
+            "species": "Daphnia||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.9347826086956522, 
+            "global": 0.6846846846846847, 
+            "species": "Homo||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.2717391304347826, 
+            "global": 0.4347826086956521, 
+            "species": "Blanceolatum||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.9347826086956522, 
+            "global": 0.7418723070896984, 
+            "species": "Saccoglossus||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.8043478260869565, 
+            "global": 0.6400313356835096, 
+            "species": "Fasciola||Schistosoma"
+        }, 
+        {
+            "filtered": 0.6086956521739131, 
+            "global": 0.4375244810027419, 
+            "species": "Patiria||Schistosoma"
+        }, 
+        {
+            "filtered": 0.6304347826086957, 
+            "global": 0.44888366627497067, 
+            "species": "Lumbricus||Schistosoma"
+        }, 
+        {
+            "filtered": 0.3695652173913043, 
+            "global": 0.46337641989815903, 
+            "species": "Halocynthia||Schistosoma"
+        }, 
+        {
+            "filtered": 0.6086956521739131, 
+            "global": 0.44065804935370156, 
+            "species": "Limulus||Schistosoma"
+        }, 
+        {
+            "filtered": 0.6086956521739131, 
+            "global": 0.4704269486878183, 
+            "species": "Caenorhabditis||Schistosoma"
+        }, 
+        {
+            "filtered": 0.6413043478260869, 
+            "global": 0.426556991774383, 
+            "species": "Axinella||Schistosoma"
+        }, 
+        {
+            "filtered": 0.6413043478260869, 
+            "global": 0.44457500979240105, 
+            "species": "Terebratulina||Schistosoma"
+        }, 
+        {
+            "filtered": 0.3152173913043479, 
+            "global": 0.3975714845280063, 
+            "species": "Bfloridae||Schistosoma"
+        }, 
+        {
+            "filtered": 0.6304347826086957, 
+            "global": 0.4500587544065805, 
+            "species": "Katharina||Schistosoma"
+        }, 
+        {
+            "filtered": 0.6413043478260869, 
+            "global": 0.43204073638856255, 
+            "species": "Geodia||Schistosoma"
+        }, 
+        {
+            "filtered": 0.6304347826086957, 
+            "global": 0.4175479827653741, 
+            "species": "Metridium||Schistosoma"
+        }, 
+        {
+            "filtered": 0.6195652173913043, 
+            "global": 0.4151978065021543, 
+            "species": "Acropora||Schistosoma"
+        }, 
+        {
+            "filtered": 0.5978260869565217, 
+            "global": 0.38464551508029765, 
+            "species": "Trichinella||Schistosoma"
+        }, 
+        {
+            "filtered": 0.6195652173913043, 
+            "global": 0.44849197023110066, 
+            "species": "Balanoglossus||Schistosoma"
+        }, 
+        {
+            "filtered": 0.6304347826086957, 
+            "global": 0.44379161770466125, 
+            "species": "Drosophila||Schistosoma"
+        }, 
+        {
+            "filtered": 0.6304347826086957, 
+            "global": 0.4422248335291814, 
+            "species": "Myxine||Schistosoma"
+        }, 
+        {
+            "filtered": 0.15217391304347827, 
+            "global": 0.4590677634155895, 
+            "species": "Ciona||Schistosoma"
+        }, 
+        {
+            "filtered": 0.6304347826086957, 
+            "global": 0.4339992166079123, 
+            "species": "Epigonichthys||Schistosoma"
+        }, 
+        {
+            "filtered": 0.6304347826086957, 
+            "global": 0.4461417939678809, 
+            "species": "Daphnia||Schistosoma"
+        }, 
+        {
+            "filtered": 0.6304347826086957, 
+            "global": 0.43987465726596153, 
+            "species": "Homo||Schistosoma"
+        }, 
+        {
+            "filtered": 0.3152173913043479, 
+            "global": 0.3971797884841364, 
+            "species": "Blanceolatum||Schistosoma"
+        }, 
+        {
+            "filtered": 0.6304347826086957, 
+            "global": 0.44810027418723064, 
+            "species": "Saccoglossus||Schistosoma"
+        }, 
+        {
+            "filtered": 0.6195652173913043, 
+            "global": 0.48021934978456715, 
+            "species": "Patiria||Fasciola"
+        }, 
+        {
+            "filtered": 0.6413043478260869, 
+            "global": 0.49236192714453586, 
+            "species": "Lumbricus||Fasciola"
+        }, 
+        {
+            "filtered": 0.3804347826086957, 
+            "global": 0.5119467293380336, 
+            "species": "Halocynthia||Fasciola"
+        }, 
+        {
+            "filtered": 0.6304347826086957, 
+            "global": 0.4853113983548767, 
+            "species": "Limulus||Fasciola"
+        }, 
+        {
+            "filtered": 0.5978260869565217, 
+            "global": 0.5025460242851547, 
+            "species": "Caenorhabditis||Fasciola"
+        }, 
+        {
+            "filtered": 0.6521739130434783, 
+            "global": 0.46846846846846846, 
+            "species": "Axinella||Fasciola"
+        }, 
+        {
+            "filtered": 0.6521739130434783, 
+            "global": 0.4904034469251861, 
+            "species": "Terebratulina||Fasciola"
+        }, 
+        {
+            "filtered": 0.28260869565217384, 
+            "global": 0.4292988640814728, 
+            "species": "Bfloridae||Fasciola"
+        }, 
+        {
+            "filtered": 0.6413043478260869, 
+            "global": 0.49197023110066596, 
+            "species": "Katharina||Fasciola"
+        }, 
+        {
+            "filtered": 0.6521739130434783, 
+            "global": 0.4751273012142577, 
+            "species": "Geodia||Fasciola"
+        }, 
+        {
+            "filtered": 0.6413043478260869, 
+            "global": 0.4739522130826479, 
+            "species": "Metridium||Fasciola"
+        }, 
+        {
+            "filtered": 0.6413043478260869, 
+            "global": 0.4653349001175089, 
+            "species": "Acropora||Fasciola"
+        }, 
+        {
+            "filtered": 0.6195652173913043, 
+            "global": 0.37602820211515864, 
+            "species": "Trichinella||Fasciola"
+        }, 
+        {
+            "filtered": 0.6304347826086957, 
+            "global": 0.4911868390129259, 
+            "species": "Balanoglossus||Fasciola"
+        }, 
+        {
+            "filtered": 0.6413043478260869, 
+            "global": 0.48726987857422643, 
+            "species": "Drosophila||Fasciola"
+        }, 
+        {
+            "filtered": 0.6630434782608695, 
+            "global": 0.48100274187230707, 
+            "species": "Myxine||Fasciola"
+        }, 
+        {
+            "filtered": 0.17391304347826086, 
+            "global": 0.4782608695652174, 
+            "species": "Ciona||Fasciola"
+        }, 
+        {
+            "filtered": 0.6304347826086957, 
+            "global": 0.48374461417939685, 
+            "species": "Epigonichthys||Fasciola"
+        }, 
+        {
+            "filtered": 0.6413043478260869, 
+            "global": 0.48805327066196624, 
+            "species": "Daphnia||Fasciola"
+        }, 
+        {
+            "filtered": 0.6521739130434783, 
+            "global": 0.481394437916177, 
+            "species": "Homo||Fasciola"
+        }, 
+        {
+            "filtered": 0.28260869565217384, 
+            "global": 0.42890716803760287, 
+            "species": "Blanceolatum||Fasciola"
+        }, 
+        {
+            "filtered": 0.6413043478260869, 
+            "global": 0.4935370152761457, 
+            "species": "Saccoglossus||Fasciola"
+        }, 
+        {
+            "filtered": 0.9021739130434783, 
+            "global": 0.6807677242459851, 
+            "species": "Lumbricus||Patiria"
+        }, 
+        {
+            "filtered": 0.4782608695652174, 
+            "global": 0.609087348217783, 
+            "species": "Halocynthia||Patiria"
+        }, 
+        {
+            "filtered": 0.9130434782608695, 
+            "global": 0.6976106541323933, 
+            "species": "Limulus||Patiria"
+        }, 
+        {
+            "filtered": 0.7391304347826086, 
+            "global": 0.5757931844888367, 
+            "species": "Caenorhabditis||Patiria"
+        }, 
+        {
+            "filtered": 0.9456521739130435, 
+            "global": 0.6713670191931062, 
+            "species": "Axinella||Patiria"
+        }, 
+        {
+            "filtered": 0.9239130434782609, 
+            "global": 0.6674500587544065, 
+            "species": "Terebratulina||Patiria"
+        }, 
+        {
+            "filtered": 0.2717391304347826, 
+            "global": 0.4430082256169212, 
+            "species": "Bfloridae||Patiria"
+        }, 
+        {
+            "filtered": 0.9565217391304348, 
+            "global": 0.6956521739130435, 
+            "species": "Katharina||Patiria"
+        }, 
+        {
+            "filtered": 0.9565217391304348, 
+            "global": 0.6788092440266353, 
+            "species": "Geodia||Patiria"
+        }, 
+        {
+            "filtered": 0.9565217391304348, 
+            "global": 0.6513905209557384, 
+            "species": "Metridium||Patiria"
+        }, 
+        {
+            "filtered": 0.9565217391304348, 
+            "global": 0.6337641989815903, 
+            "species": "Acropora||Patiria"
+        }, 
+        {
+            "filtered": 0.6739130434782609, 
+            "global": 0.43282412847630236, 
+            "species": "Trichinella||Patiria"
+        }, 
+        {
+            "filtered": 0.9565217391304348, 
+            "global": 0.7594986290638465, 
+            "species": "Balanoglossus||Patiria"
+        }, 
+        {
+            "filtered": 0.9456521739130435, 
+            "global": 0.6936936936936937, 
+            "species": "Drosophila||Patiria"
+        }, 
+        {
+            "filtered": 0.8804347826086957, 
+            "global": 0.6654915785350568, 
+            "species": "Myxine||Patiria"
+        }, 
+        {
+            "filtered": 0.17391304347826086, 
+            "global": 0.5793184488836662, 
+            "species": "Ciona||Patiria"
+        }, 
+        {
+            "filtered": 0.9456521739130435, 
+            "global": 0.6936936936936937, 
+            "species": "Epigonichthys||Patiria"
+        }, 
+        {
+            "filtered": 0.9565217391304348, 
+            "global": 0.6987857422640031, 
+            "species": "Daphnia||Patiria"
+        }, 
+        {
+            "filtered": 0.9456521739130435, 
+            "global": 0.6866431649040344, 
+            "species": "Homo||Patiria"
+        }, 
+        {
+            "filtered": 0.2717391304347826, 
+            "global": 0.44065804935370156, 
+            "species": "Blanceolatum||Patiria"
+        }, 
+        {
+            "filtered": 0.9456521739130435, 
+            "global": 0.7442224833529182, 
+            "species": "Saccoglossus||Patiria"
+        }, 
+        {
+            "filtered": 0.4782608695652174, 
+            "global": 0.6255385820603212, 
+            "species": "Halocynthia||Lumbricus"
+        }, 
+        {
+            "filtered": 0.9130434782608695, 
+            "global": 0.6854680767724246, 
+            "species": "Limulus||Lumbricus"
+        }, 
+        {
+            "filtered": 0.7391304347826086, 
+            "global": 0.6036036036036037, 
+            "species": "Caenorhabditis||Lumbricus"
+        }, 
+        {
+            "filtered": 0.9130434782608695, 
+            "global": 0.6533490011750881, 
+            "species": "Axinella||Lumbricus"
+        }, 
+        {
+            "filtered": 0.9021739130434783, 
+            "global": 0.7164120642381512, 
+            "species": "Terebratulina||Lumbricus"
+        }, 
+        {
+            "filtered": 0.2717391304347826, 
+            "global": 0.42420681551116335, 
+            "species": "Bfloridae||Lumbricus"
+        }, 
+        {
+            "filtered": 0.9456521739130435, 
+            "global": 0.7309048178613397, 
+            "species": "Katharina||Lumbricus"
+        }, 
+        {
+            "filtered": 0.9239130434782609, 
+            "global": 0.6396396396396397, 
+            "species": "Geodia||Lumbricus"
+        }, 
+        {
+            "filtered": 0.9239130434782609, 
+            "global": 0.6130043086564826, 
+            "species": "Metridium||Lumbricus"
+        }, 
+        {
+            "filtered": 0.9239130434782609, 
+            "global": 0.599294947121034, 
+            "species": "Acropora||Lumbricus"
+        }, 
+        {
+            "filtered": 0.6956521739130435, 
+            "global": 0.44418331374853115, 
+            "species": "Trichinella||Lumbricus"
+        }, 
+        {
+            "filtered": 0.9239130434782609, 
+            "global": 0.709361535448492, 
+            "species": "Balanoglossus||Lumbricus"
+        }, 
+        {
+            "filtered": 0.9130434782608695, 
+            "global": 0.6933019976498237, 
+            "species": "Drosophila||Lumbricus"
+        }, 
+        {
+            "filtered": 0.8586956521739131, 
+            "global": 0.672933803368586, 
+            "species": "Myxine||Lumbricus"
+        }, 
+        {
+            "filtered": 0.17391304347826086, 
+            "global": 0.5840188014101058, 
+            "species": "Ciona||Lumbricus"
+        }, 
+        {
+            "filtered": 0.9130434782608695, 
+            "global": 0.6666666666666666, 
+            "species": "Epigonichthys||Lumbricus"
+        }, 
+        {
+            "filtered": 0.9347826086956522, 
+            "global": 0.6933019976498237, 
+            "species": "Daphnia||Lumbricus"
+        }, 
+        {
+            "filtered": 0.9130434782608695, 
+            "global": 0.6933019976498237, 
+            "species": "Homo||Lumbricus"
+        }, 
+        {
+            "filtered": 0.2717391304347826, 
+            "global": 0.4296905601253427, 
+            "species": "Blanceolatum||Lumbricus"
+        }, 
+        {
+            "filtered": 0.9239130434782609, 
+            "global": 0.7034860947904427, 
+            "species": "Saccoglossus||Lumbricus"
+        }, 
+        {
+            "filtered": 0.48913043478260865, 
+            "global": 0.6047786917352135, 
+            "species": "Limulus||Halocynthia"
+        }, 
+        {
+            "filtered": 0.4565217391304348, 
+            "global": 0.5949862906384645, 
+            "species": "Caenorhabditis||Halocynthia"
+        }, 
+        {
+            "filtered": 0.5108695652173914, 
+            "global": 0.5957696827262045, 
+            "species": "Axinella||Halocynthia"
+        }, 
+        {
+            "filtered": 0.48913043478260865, 
+            "global": 0.6196631414022719, 
+            "species": "Terebratulina||Halocynthia"
+        }, 
+        {
+            "filtered": 0.14130434782608692, 
+            "global": 0.4144144144144144, 
+            "species": "Bfloridae||Halocynthia"
+        }, 
+        {
+            "filtered": 0.5, 
+            "global": 0.627888758323541, 
+            "species": "Katharina||Halocynthia"
+        }, 
+        {
+            "filtered": 0.5108695652173914, 
+            "global": 0.5910693301997649, 
+            "species": "Geodia||Halocynthia"
+        }, 
+        {
+            "filtered": 0.5108695652173914, 
+            "global": 0.5781433607520564, 
+            "species": "Metridium||Halocynthia"
+        }, 
+        {
+            "filtered": 0.5, 
+            "global": 0.5750097924010967, 
+            "species": "Acropora||Halocynthia"
+        }, 
+        {
+            "filtered": 0.3586956521739131, 
+            "global": 0.4375244810027419, 
+            "species": "Trichinella||Halocynthia"
+        }, 
+        {
+            "filtered": 0.5, 
+            "global": 0.6321974148061105, 
+            "species": "Balanoglossus||Halocynthia"
+        }, 
+        {
+            "filtered": 0.5108695652173914, 
+            "global": 0.618096357226792, 
+            "species": "Drosophila||Halocynthia"
+        }, 
+        {
+            "filtered": 0.48913043478260865, 
+            "global": 0.6259302781041911, 
+            "species": "Myxine||Halocynthia"
+        }, 
+        {
+            "filtered": 0.3804347826086957, 
+            "global": 0.6447316882099491, 
+            "species": "Ciona||Halocynthia"
+        }, 
+        {
+            "filtered": 0.5, 
+            "global": 0.6153544849197023, 
+            "species": "Epigonichthys||Halocynthia"
+        }, 
+        {
+            "filtered": 0.5, 
+            "global": 0.6224050137093615, 
+            "species": "Daphnia||Halocynthia"
+        }, 
+        {
+            "filtered": 0.5217391304347826, 
+            "global": 0.6321974148061105, 
+            "species": "Homo||Halocynthia"
+        }, 
+        {
+            "filtered": 0.14130434782608692, 
+            "global": 0.41284763023893456, 
+            "species": "Blanceolatum||Halocynthia"
+        }, 
+        {
+            "filtered": 0.5108695652173914, 
+            "global": 0.6282804543674109, 
+            "species": "Saccoglossus||Halocynthia"
+        }, 
+        {
+            "filtered": 0.7282608695652174, 
+            "global": 0.5879357618488054, 
+            "species": "Caenorhabditis||Limulus"
+        }, 
+        {
+            "filtered": 0.9239130434782609, 
+            "global": 0.6439482961222092, 
+            "species": "Axinella||Limulus"
+        }, 
+        {
+            "filtered": 0.9021739130434783, 
+            "global": 0.6678417547982766, 
+            "species": "Terebratulina||Limulus"
+        }, 
+        {
+            "filtered": 0.2717391304347826, 
+            "global": 0.4379161770466118, 
+            "species": "Bfloridae||Limulus"
+        }, 
+        {
+            "filtered": 0.9347826086956522, 
+            "global": 0.6882099490795143, 
+            "species": "Katharina||Limulus"
+        }, 
+        {
+            "filtered": 0.9347826086956522, 
+            "global": 0.6376811594202898, 
+            "species": "Geodia||Limulus"
+        }, 
+        {
+            "filtered": 0.9347826086956522, 
+            "global": 0.6498237367802585, 
+            "species": "Metridium||Limulus"
+        }, 
+        {
+            "filtered": 0.9347826086956522, 
+            "global": 0.6400313356835096, 
+            "species": "Acropora||Limulus"
+        }, 
+        {
+            "filtered": 0.6739130434782609, 
+            "global": 0.42381511946729344, 
+            "species": "Trichinella||Limulus"
+        }, 
+        {
+            "filtered": 0.9347826086956522, 
+            "global": 0.6960438699569135, 
+            "species": "Balanoglossus||Limulus"
+        }, 
+        {
+            "filtered": 0.9347826086956522, 
+            "global": 0.7696827262044653, 
+            "species": "Drosophila||Limulus"
+        }, 
+        {
+            "filtered": 0.8695652173913043, 
+            "global": 0.672933803368586, 
+            "species": "Myxine||Limulus"
+        }, 
+        {
+            "filtered": 0.17391304347826086, 
+            "global": 0.5714845280062671, 
+            "species": "Ciona||Limulus"
+        }, 
+        {
+            "filtered": 0.9456521739130435, 
+            "global": 0.6803760282021152, 
+            "species": "Epigonichthys||Limulus"
+        }, 
+        {
+            "filtered": 0.9347826086956522, 
+            "global": 0.754014884449667, 
+            "species": "Daphnia||Limulus"
+        }, 
+        {
+            "filtered": 0.9239130434782609, 
+            "global": 0.6983940462201331, 
+            "species": "Homo||Limulus"
+        }, 
+        {
+            "filtered": 0.2717391304347826, 
+            "global": 0.44065804935370156, 
+            "species": "Blanceolatum||Limulus"
+        }, 
+        {
+            "filtered": 0.9456521739130435, 
+            "global": 0.6901684292988641, 
+            "species": "Saccoglossus||Limulus"
+        }, 
+        {
+            "filtered": 0.782608695652174, 
+            "global": 0.563258911084998, 
+            "species": "Axinella||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.7717391304347826, 
+            "global": 0.5910693301997649, 
+            "species": "Terebratulina||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.19565217391304346, 
+            "global": 0.39992166079122593, 
+            "species": "Bfloridae||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.75, 
+            "global": 0.599686643164904, 
+            "species": "Katharina||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.7717391304347826, 
+            "global": 0.5671758715236976, 
+            "species": "Geodia||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.7608695652173914, 
+            "global": 0.5515080297688993, 
+            "species": "Metridium||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.75, 
+            "global": 0.5518997258127692, 
+            "species": "Acropora||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.6630434782608695, 
+            "global": 0.45201723462593035, 
+            "species": "Trichinella||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.7717391304347826, 
+            "global": 0.6071288679984332, 
+            "species": "Balanoglossus||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.75, 
+            "global": 0.6012534273403839, 
+            "species": "Drosophila||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.7608695652173914, 
+            "global": 0.590677634155895, 
+            "species": "Myxine||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.17391304347826086, 
+            "global": 0.564042303172738, 
+            "species": "Ciona||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.75, 
+            "global": 0.5742264003133568, 
+            "species": "Epigonichthys||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.7608695652173914, 
+            "global": 0.5989032510771641, 
+            "species": "Daphnia||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.75, 
+            "global": 0.5859772816294555, 
+            "species": "Homo||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.19565217391304346, 
+            "global": 0.40070505287896596, 
+            "species": "Blanceolatum||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.75, 
+            "global": 0.6008617312965139, 
+            "species": "Saccoglossus||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.9565217391304348, 
+            "global": 0.6537406972189581, 
+            "species": "Terebratulina||Axinella"
+        }, 
+        {
+            "filtered": 0.2717391304347826, 
+            "global": 0.40383862122992564, 
+            "species": "Bfloridae||Axinella"
+        }, 
+        {
+            "filtered": 0.967391304347826, 
+            "global": 0.6678417547982766, 
+            "species": "Katharina||Axinella"
+        }, 
+        {
+            "filtered": 0.9891304347826086, 
+            "global": 0.8041519780650216, 
+            "species": "Geodia||Axinella"
+        }, 
+        {
+            "filtered": 0.9782608695652174, 
+            "global": 0.7305131218174696, 
+            "species": "Metridium||Axinella"
+        }, 
+        {
+            "filtered": 0.967391304347826, 
+            "global": 0.7007442224833529, 
+            "species": "Acropora||Axinella"
+        }, 
+        {
+            "filtered": 0.6956521739130435, 
+            "global": 0.4140227183705445, 
+            "species": "Trichinella||Axinella"
+        }, 
+        {
+            "filtered": 0.967391304347826, 
+            "global": 0.6925186055620838, 
+            "species": "Balanoglossus||Axinella"
+        }, 
+        {
+            "filtered": 0.967391304347826, 
+            "global": 0.6486486486486487, 
+            "species": "Drosophila||Axinella"
+        }, 
+        {
+            "filtered": 0.9021739130434783, 
+            "global": 0.6427732079905993, 
+            "species": "Myxine||Axinella"
+        }, 
+        {
+            "filtered": 0.17391304347826086, 
+            "global": 0.5530748139443792, 
+            "species": "Ciona||Axinella"
+        }, 
+        {
+            "filtered": 0.9565217391304348, 
+            "global": 0.6517822169996083, 
+            "species": "Epigonichthys||Axinella"
+        }, 
+        {
+            "filtered": 0.967391304347826, 
+            "global": 0.6498237367802585, 
+            "species": "Daphnia||Axinella"
+        }, 
+        {
+            "filtered": 0.9565217391304348, 
+            "global": 0.6635330983157071, 
+            "species": "Homo||Axinella"
+        }, 
+        {
+            "filtered": 0.2717391304347826, 
+            "global": 0.40462201331766545, 
+            "species": "Blanceolatum||Axinella"
+        }, 
+        {
+            "filtered": 0.9565217391304348, 
+            "global": 0.6897767332549941, 
+            "species": "Saccoglossus||Axinella"
+        }, 
+        {
+            "filtered": 0.23913043478260865, 
+            "global": 0.41167254210732473, 
+            "species": "Bfloridae||Terebratulina"
+        }, 
+        {
+            "filtered": 0.9456521739130435, 
+            "global": 0.7215041128084606, 
+            "species": "Katharina||Terebratulina"
+        }, 
+        {
+            "filtered": 0.967391304347826, 
+            "global": 0.6396396396396397, 
+            "species": "Geodia||Terebratulina"
+        }, 
+        {
+            "filtered": 0.9456521739130435, 
+            "global": 0.6188797493145319, 
+            "species": "Metridium||Terebratulina"
+        }, 
+        {
+            "filtered": 0.9456521739130435, 
+            "global": 0.6039952996474736, 
+            "species": "Acropora||Terebratulina"
+        }, 
+        {
+            "filtered": 0.6847826086956522, 
+            "global": 0.44379161770466125, 
+            "species": "Trichinella||Terebratulina"
+        }, 
+        {
+            "filtered": 0.9456521739130435, 
+            "global": 0.6835095965530749, 
+            "species": "Balanoglossus||Terebratulina"
+        }, 
+        {
+            "filtered": 0.9456521739130435, 
+            "global": 0.6886016451233843, 
+            "species": "Drosophila||Terebratulina"
+        }, 
+        {
+            "filtered": 0.8804347826086957, 
+            "global": 0.672542107324716, 
+            "species": "Myxine||Terebratulina"
+        }, 
+        {
+            "filtered": 0.17391304347826086, 
+            "global": 0.5734430082256169, 
+            "species": "Ciona||Terebratulina"
+        }, 
+        {
+            "filtered": 0.9347826086956522, 
+            "global": 0.6521739130434783, 
+            "species": "Epigonichthys||Terebratulina"
+        }, 
+        {
+            "filtered": 0.9456521739130435, 
+            "global": 0.681942812377595, 
+            "species": "Daphnia||Terebratulina"
+        }, 
+        {
+            "filtered": 0.9347826086956522, 
+            "global": 0.6780258519388954, 
+            "species": "Homo||Terebratulina"
+        }, 
+        {
+            "filtered": 0.23913043478260865, 
+            "global": 0.41284763023893456, 
+            "species": "Blanceolatum||Terebratulina"
+        }, 
+        {
+            "filtered": 0.9347826086956522, 
+            "global": 0.6803760282021152, 
+            "species": "Saccoglossus||Terebratulina"
+        }, 
+        {
+            "filtered": 0.28260869565217384, 
+            "global": 0.4296905601253427, 
+            "species": "Katharina||Bfloridae"
+        }, 
+        {
+            "filtered": 0.2717391304347826, 
+            "global": 0.40893066980023507, 
+            "species": "Geodia||Bfloridae"
+        }, 
+        {
+            "filtered": 0.28260869565217384, 
+            "global": 0.43243243243243246, 
+            "species": "Metridium||Bfloridae"
+        }, 
+        {
+            "filtered": 0.2717391304347826, 
+            "global": 0.4292988640814728, 
+            "species": "Acropora||Bfloridae"
+        }, 
+        {
+            "filtered": 0.1847826086956521, 
+            "global": 0.2710536623580102, 
+            "species": "Trichinella||Bfloridae"
+        }, 
+        {
+            "filtered": 0.28260869565217384, 
+            "global": 0.45632589110849975, 
+            "species": "Balanoglossus||Bfloridae"
+        }, 
+        {
+            "filtered": 0.2717391304347826, 
+            "global": 0.4551508029768899, 
+            "species": "Drosophila||Bfloridae"
+        }, 
+        {
+            "filtered": 0.25, 
+            "global": 0.42146494320407357, 
+            "species": "Myxine||Bfloridae"
+        }, 
+        {
+            "filtered": 0.07608695652173914, 
+            "global": 0.4054054054054055, 
+            "species": "Ciona||Bfloridae"
+        }, 
+        {
+            "filtered": 0.2934782608695652, 
+            "global": 0.5471993732863298, 
+            "species": "Epigonichthys||Bfloridae"
+        }, 
+        {
+            "filtered": 0.28260869565217384, 
+            "global": 0.4512338425381903, 
+            "species": "Daphnia||Bfloridae"
+        }, 
+        {
+            "filtered": 0.28260869565217384, 
+            "global": 0.4386995691343518, 
+            "species": "Homo||Bfloridae"
+        }, 
+        {
+            "filtered": 1.0, 
+            "global": 0.9522130826478653, 
+            "species": "Blanceolatum||Bfloridae"
+        }, 
+        {
+            "filtered": 0.28260869565217384, 
+            "global": 0.44339992166079123, 
+            "species": "Saccoglossus||Bfloridae"
+        }, 
+        {
+            "filtered": 0.9782608695652174, 
+            "global": 0.6509988249118684, 
+            "species": "Geodia||Katharina"
+        }, 
+        {
+            "filtered": 0.9782608695652174, 
+            "global": 0.6341558950254602, 
+            "species": "Metridium||Katharina"
+        }, 
+        {
+            "filtered": 0.9782608695652174, 
+            "global": 0.6212299255777517, 
+            "species": "Acropora||Katharina"
+        }, 
+        {
+            "filtered": 0.7065217391304348, 
+            "global": 0.4418331374853114, 
+            "species": "Trichinella||Katharina"
+        }, 
+        {
+            "filtered": 0.9782608695652174, 
+            "global": 0.7097532314923619, 
+            "species": "Balanoglossus||Katharina"
+        }, 
+        {
+            "filtered": 0.967391304347826, 
+            "global": 0.7152369761065414, 
+            "species": "Drosophila||Katharina"
+        }, 
+        {
+            "filtered": 0.8913043478260869, 
+            "global": 0.6717587152369761, 
+            "species": "Myxine||Katharina"
+        }, 
+        {
+            "filtered": 0.16304347826086962, 
+            "global": 0.5824520172346259, 
+            "species": "Ciona||Katharina"
+        }, 
+        {
+            "filtered": 0.967391304347826, 
+            "global": 0.6854680767724246, 
+            "species": "Epigonichthys||Katharina"
+        }, 
+        {
+            "filtered": 0.9782608695652174, 
+            "global": 0.7042694868781826, 
+            "species": "Daphnia||Katharina"
+        }, 
+        {
+            "filtered": 0.967391304347826, 
+            "global": 0.6839012925969448, 
+            "species": "Homo||Katharina"
+        }, 
+        {
+            "filtered": 0.28260869565217384, 
+            "global": 0.4304739522130827, 
+            "species": "Blanceolatum||Katharina"
+        }, 
+        {
+            "filtered": 0.967391304347826, 
+            "global": 0.7030943987465726, 
+            "species": "Saccoglossus||Katharina"
+        }, 
+        {
+            "filtered": 0.9782608695652174, 
+            "global": 0.7328632980806894, 
+            "species": "Metridium||Geodia"
+        }, 
+        {
+            "filtered": 0.9782608695652174, 
+            "global": 0.6980023501762632, 
+            "species": "Acropora||Geodia"
+        }, 
+        {
+            "filtered": 0.7065217391304348, 
+            "global": 0.41676459067763416, 
+            "species": "Trichinella||Geodia"
+        }, 
+        {
+            "filtered": 0.9782608695652174, 
+            "global": 0.681942812377595, 
+            "species": "Balanoglossus||Geodia"
+        }, 
+        {
+            "filtered": 0.9782608695652174, 
+            "global": 0.6396396396396397, 
+            "species": "Drosophila||Geodia"
+        }, 
+        {
+            "filtered": 0.9130434782608695, 
+            "global": 0.6298472385428907, 
+            "species": "Myxine||Geodia"
+        }, 
+        {
+            "filtered": 0.17391304347826086, 
+            "global": 0.5534665099882491, 
+            "species": "Ciona||Geodia"
+        }, 
+        {
+            "filtered": 0.967391304347826, 
+            "global": 0.6443399921660791, 
+            "species": "Epigonichthys||Geodia"
+        }, 
+        {
+            "filtered": 0.9782608695652174, 
+            "global": 0.6490403446925186, 
+            "species": "Daphnia||Geodia"
+        }, 
+        {
+            "filtered": 0.967391304347826, 
+            "global": 0.6490403446925186, 
+            "species": "Homo||Geodia"
+        }, 
+        {
+            "filtered": 0.2717391304347826, 
+            "global": 0.4108891500195848, 
+            "species": "Blanceolatum||Geodia"
+        }, 
+        {
+            "filtered": 0.967391304347826, 
+            "global": 0.6784175479827653, 
+            "species": "Saccoglossus||Geodia"
+        }, 
+        {
+            "filtered": 0.9782608695652174, 
+            "global": 0.8194281237759499, 
+            "species": "Acropora||Metridium"
+        }, 
+        {
+            "filtered": 0.6847826086956522, 
+            "global": 0.3858206032119076, 
+            "species": "Trichinella||Metridium"
+        }, 
+        {
+            "filtered": 0.9782608695652174, 
+            "global": 0.6529573051312182, 
+            "species": "Balanoglossus||Metridium"
+        }, 
+        {
+            "filtered": 0.967391304347826, 
+            "global": 0.6529573051312182, 
+            "species": "Drosophila||Metridium"
+        }, 
+        {
+            "filtered": 0.8913043478260869, 
+            "global": 0.6008617312965139, 
+            "species": "Myxine||Metridium"
+        }, 
+        {
+            "filtered": 0.17391304347826086, 
+            "global": 0.5346650998824912, 
+            "species": "Ciona||Metridium"
+        }, 
+        {
+            "filtered": 0.967391304347826, 
+            "global": 0.6752839796318058, 
+            "species": "Epigonichthys||Metridium"
+        }, 
+        {
+            "filtered": 0.9782608695652174, 
+            "global": 0.6462984723854289, 
+            "species": "Daphnia||Metridium"
+        }, 
+        {
+            "filtered": 0.967391304347826, 
+            "global": 0.6325891108499804, 
+            "species": "Homo||Metridium"
+        }, 
+        {
+            "filtered": 0.28260869565217384, 
+            "global": 0.43243243243243246, 
+            "species": "Blanceolatum||Metridium"
+        }, 
+        {
+            "filtered": 0.967391304347826, 
+            "global": 0.6533490011750881, 
+            "species": "Saccoglossus||Metridium"
+        }, 
+        {
+            "filtered": 0.6847826086956522, 
+            "global": 0.3795534665099882, 
+            "species": "Trichinella||Acropora"
+        }, 
+        {
+            "filtered": 0.9782608695652174, 
+            "global": 0.63650607128868, 
+            "species": "Balanoglossus||Acropora"
+        }, 
+        {
+            "filtered": 0.967391304347826, 
+            "global": 0.63572267920094, 
+            "species": "Drosophila||Acropora"
+        }, 
+        {
+            "filtered": 0.8913043478260869, 
+            "global": 0.5898942420681551, 
+            "species": "Myxine||Acropora"
+        }, 
+        {
+            "filtered": 0.17391304347826086, 
+            "global": 0.5287896592244419, 
+            "species": "Ciona||Acropora"
+        }, 
+        {
+            "filtered": 0.967391304347826, 
+            "global": 0.6709753231492362, 
+            "species": "Epigonichthys||Acropora"
+        }, 
+        {
+            "filtered": 0.9782608695652174, 
+            "global": 0.6345475910693302, 
+            "species": "Daphnia||Acropora"
+        }, 
+        {
+            "filtered": 0.967391304347826, 
+            "global": 0.6188797493145319, 
+            "species": "Homo||Acropora"
+        }, 
+        {
+            "filtered": 0.2717391304347826, 
+            "global": 0.4300822561692127, 
+            "species": "Blanceolatum||Acropora"
+        }, 
+        {
+            "filtered": 0.967391304347826, 
+            "global": 0.6353309831570702, 
+            "species": "Saccoglossus||Acropora"
+        }, 
+        {
+            "filtered": 0.7065217391304348, 
+            "global": 0.4351743047395221, 
+            "species": "Balanoglossus||Trichinella"
+        }, 
+        {
+            "filtered": 0.6956521739130435, 
+            "global": 0.4422248335291814, 
+            "species": "Drosophila||Trichinella"
+        }, 
+        {
+            "filtered": 0.6847826086956522, 
+            "global": 0.4343909126517822, 
+            "species": "Myxine||Trichinella"
+        }, 
+        {
+            "filtered": 0.21739130434782605, 
+            "global": 0.4465334900117508, 
+            "species": "Ciona||Trichinella"
+        }, 
+        {
+            "filtered": 0.6847826086956522, 
+            "global": 0.41676459067763416, 
+            "species": "Epigonichthys||Trichinella"
+        }, 
+        {
+            "filtered": 0.6956521739130435, 
+            "global": 0.43204073638856255, 
+            "species": "Daphnia||Trichinella"
+        }, 
+        {
+            "filtered": 0.6847826086956522, 
+            "global": 0.43595769682726204, 
+            "species": "Homo||Trichinella"
+        }, 
+        {
+            "filtered": 0.1847826086956521, 
+            "global": 0.26987857422640027, 
+            "species": "Blanceolatum||Trichinella"
+        }, 
+        {
+            "filtered": 0.6956521739130435, 
+            "global": 0.43556600078339214, 
+            "species": "Saccoglossus||Trichinella"
+        }, 
+        {
+            "filtered": 0.967391304347826, 
+            "global": 0.7117117117117117, 
+            "species": "Drosophila||Balanoglossus"
+        }, 
+        {
+            "filtered": 0.8913043478260869, 
+            "global": 0.691343517430474, 
+            "species": "Myxine||Balanoglossus"
+        }, 
+        {
+            "filtered": 0.17391304347826086, 
+            "global": 0.5871523697610654, 
+            "species": "Ciona||Balanoglossus"
+        }, 
+        {
+            "filtered": 0.967391304347826, 
+            "global": 0.7152369761065414, 
+            "species": "Epigonichthys||Balanoglossus"
+        }, 
+        {
+            "filtered": 0.9782608695652174, 
+            "global": 0.7097532314923619, 
+            "species": "Daphnia||Balanoglossus"
+        }, 
+        {
+            "filtered": 0.967391304347826, 
+            "global": 0.7226792009400705, 
+            "species": "Homo||Balanoglossus"
+        }, 
+        {
+            "filtered": 0.28260869565217384, 
+            "global": 0.45593419506462984, 
+            "species": "Blanceolatum||Balanoglossus"
+        }, 
+        {
+            "filtered": 0.967391304347826, 
+            "global": 0.8331374853113983, 
+            "species": "Saccoglossus||Balanoglossus"
+        }, 
+        {
+            "filtered": 0.8913043478260869, 
+            "global": 0.6713670191931062, 
+            "species": "Myxine||Drosophila"
+        }, 
+        {
+            "filtered": 0.17391304347826086, 
+            "global": 0.5804935370152762, 
+            "species": "Ciona||Drosophila"
+        }, 
+        {
+            "filtered": 0.9565217391304348, 
+            "global": 0.7023110066588327, 
+            "species": "Epigonichthys||Drosophila"
+        }, 
+        {
+            "filtered": 0.967391304347826, 
+            "global": 0.7712495103799452, 
+            "species": "Daphnia||Drosophila"
+        }, 
+        {
+            "filtered": 0.9565217391304348, 
+            "global": 0.6936936936936937, 
+            "species": "Homo||Drosophila"
+        }, 
+        {
+            "filtered": 0.2717391304347826, 
+            "global": 0.45280062671367016, 
+            "species": "Blanceolatum||Drosophila"
+        }, 
+        {
+            "filtered": 0.967391304347826, 
+            "global": 0.7046611829220525, 
+            "species": "Saccoglossus||Drosophila"
+        }, 
+        {
+            "filtered": 0.19565217391304346, 
+            "global": 0.5918527222875049, 
+            "species": "Ciona||Myxine"
+        }, 
+        {
+            "filtered": 0.8913043478260869, 
+            "global": 0.6701919310614963, 
+            "species": "Epigonichthys||Myxine"
+        }, 
+        {
+            "filtered": 0.8913043478260869, 
+            "global": 0.6701919310614963, 
+            "species": "Daphnia||Myxine"
+        }, 
+        {
+            "filtered": 0.9130434782608695, 
+            "global": 0.7187622405013709, 
+            "species": "Homo||Myxine"
+        }, 
+        {
+            "filtered": 0.25, 
+            "global": 0.4218566392479436, 
+            "species": "Blanceolatum||Myxine"
+        }, 
+        {
+            "filtered": 0.8913043478260869, 
+            "global": 0.6854680767724246, 
+            "species": "Saccoglossus||Myxine"
+        }, 
+        {
+            "filtered": 0.17391304347826086, 
+            "global": 0.5773599686643165, 
+            "species": "Epigonichthys||Ciona"
+        }, 
+        {
+            "filtered": 0.17391304347826086, 
+            "global": 0.5797101449275363, 
+            "species": "Daphnia||Ciona"
+        }, 
+        {
+            "filtered": 0.1847826086956521, 
+            "global": 0.5801018409714062, 
+            "species": "Homo||Ciona"
+        }, 
+        {
+            "filtered": 0.07608695652173914, 
+            "global": 0.40383862122992564, 
+            "species": "Blanceolatum||Ciona"
+        }, 
+        {
+            "filtered": 0.17391304347826086, 
+            "global": 0.582060321190756, 
+            "species": "Saccoglossus||Ciona"
+        }, 
+        {
+            "filtered": 0.967391304347826, 
+            "global": 0.6944770857814336, 
+            "species": "Daphnia||Epigonichthys"
+        }, 
+        {
+            "filtered": 0.967391304347826, 
+            "global": 0.6866431649040344, 
+            "species": "Homo||Epigonichthys"
+        }, 
+        {
+            "filtered": 0.2934782608695652, 
+            "global": 0.5471993732863298, 
+            "species": "Blanceolatum||Epigonichthys"
+        }, 
+        {
+            "filtered": 0.9565217391304348, 
+            "global": 0.7027027027027027, 
+            "species": "Saccoglossus||Epigonichthys"
+        }, 
+        {
+            "filtered": 0.967391304347826, 
+            "global": 0.6846846846846847, 
+            "species": "Homo||Daphnia"
+        }, 
+        {
+            "filtered": 0.28260869565217384, 
+            "global": 0.4496670583627105, 
+            "species": "Blanceolatum||Daphnia"
+        }, 
+        {
+            "filtered": 0.967391304347826, 
+            "global": 0.6983940462201331, 
+            "species": "Saccoglossus||Daphnia"
+        }, 
+        {
+            "filtered": 0.28260869565217384, 
+            "global": 0.4426165295730513, 
+            "species": "Blanceolatum||Homo"
+        }, 
+        {
+            "filtered": 0.9565217391304348, 
+            "global": 0.7211124167645907, 
+            "species": "Saccoglossus||Homo"
+        }, 
+        {
+            "filtered": 0.28260869565217384, 
+            "global": 0.4465334900117508, 
+            "species": "Saccoglossus||Blanceolatum"
+        }
+    ], 
+    "Ser": [
+        {
+            "filtered": 0.43137254901960786, 
+            "global": 0.4292988640814728, 
+            "species": "Schistosoma||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.392156862745098, 
+            "global": 0.4782608695652174, 
+            "species": "Fasciola||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.8235294117647058, 
+            "global": 0.8131609870740305, 
+            "species": "Patiria||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.7647058823529411, 
+            "global": 0.681551116333725, 
+            "species": "Lumbricus||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.6078431372549019, 
+            "global": 0.6118292205248727, 
+            "species": "Halocynthia||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.7450980392156863, 
+            "global": 0.6807677242459851, 
+            "species": "Limulus||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.43137254901960786, 
+            "global": 0.5793184488836662, 
+            "species": "Caenorhabditis||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.6862745098039216, 
+            "global": 0.6662749706227967, 
+            "species": "Axinella||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.6666666666666666, 
+            "global": 0.6603995299647474, 
+            "species": "Terebratulina||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.196078431372549, 
+            "global": 0.43321582452017227, 
+            "species": "Bfloridae||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.803921568627451, 
+            "global": 0.6878182530356444, 
+            "species": "Katharina||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.7058823529411765, 
+            "global": 0.6705836271053662, 
+            "species": "Geodia||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.6666666666666666, 
+            "global": 0.6431649040344692, 
+            "species": "Metridium||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.6666666666666666, 
+            "global": 0.6298472385428907, 
+            "species": "Acropora||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.5098039215686274, 
+            "global": 0.4222483352918136, 
+            "species": "Trichinella||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.7450980392156863, 
+            "global": 0.7497062279670975, 
+            "species": "Balanoglossus||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.7450980392156863, 
+            "global": 0.6823345084214649, 
+            "species": "Drosophila||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.7254901960784313, 
+            "global": 0.6627497062279671, 
+            "species": "Myxine||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.6666666666666666, 
+            "global": 0.5703094398746573, 
+            "species": "Ciona||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.7647058823529411, 
+            "global": 0.690951821386604, 
+            "species": "Epigonichthys||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.6862745098039216, 
+            "global": 0.699177438307873, 
+            "species": "Daphnia||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.7450980392156863, 
+            "global": 0.6846846846846847, 
+            "species": "Homo||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.196078431372549, 
+            "global": 0.4347826086956521, 
+            "species": "Blanceolatum||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.7450980392156863, 
+            "global": 0.7418723070896984, 
+            "species": "Saccoglossus||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.6078431372549019, 
+            "global": 0.6400313356835096, 
+            "species": "Fasciola||Schistosoma"
+        }, 
+        {
+            "filtered": 0.47058823529411764, 
+            "global": 0.4375244810027419, 
+            "species": "Patiria||Schistosoma"
+        }, 
+        {
+            "filtered": 0.4117647058823529, 
+            "global": 0.44888366627497067, 
+            "species": "Lumbricus||Schistosoma"
+        }, 
+        {
+            "filtered": 0.392156862745098, 
+            "global": 0.46337641989815903, 
+            "species": "Halocynthia||Schistosoma"
+        }, 
+        {
+            "filtered": 0.43137254901960786, 
+            "global": 0.44065804935370156, 
+            "species": "Limulus||Schistosoma"
+        }, 
+        {
+            "filtered": 0.2549019607843137, 
+            "global": 0.4704269486878183, 
+            "species": "Caenorhabditis||Schistosoma"
+        }, 
+        {
+            "filtered": 0.4117647058823529, 
+            "global": 0.426556991774383, 
+            "species": "Axinella||Schistosoma"
+        }, 
+        {
+            "filtered": 0.392156862745098, 
+            "global": 0.44457500979240105, 
+            "species": "Terebratulina||Schistosoma"
+        }, 
+        {
+            "filtered": 0.196078431372549, 
+            "global": 0.3975714845280063, 
+            "species": "Bfloridae||Schistosoma"
+        }, 
+        {
+            "filtered": 0.37254901960784315, 
+            "global": 0.4500587544065805, 
+            "species": "Katharina||Schistosoma"
+        }, 
+        {
+            "filtered": 0.43137254901960786, 
+            "global": 0.43204073638856255, 
+            "species": "Geodia||Schistosoma"
+        }, 
+        {
+            "filtered": 0.43137254901960786, 
+            "global": 0.4175479827653741, 
+            "species": "Metridium||Schistosoma"
+        }, 
+        {
+            "filtered": 0.43137254901960786, 
+            "global": 0.4151978065021543, 
+            "species": "Acropora||Schistosoma"
+        }, 
+        {
+            "filtered": 0.3137254901960784, 
+            "global": 0.38464551508029765, 
+            "species": "Trichinella||Schistosoma"
+        }, 
+        {
+            "filtered": 0.4509803921568627, 
+            "global": 0.44849197023110066, 
+            "species": "Balanoglossus||Schistosoma"
+        }, 
+        {
+            "filtered": 0.4509803921568627, 
+            "global": 0.44379161770466125, 
+            "species": "Drosophila||Schistosoma"
+        }, 
+        {
+            "filtered": 0.392156862745098, 
+            "global": 0.4422248335291814, 
+            "species": "Myxine||Schistosoma"
+        }, 
+        {
+            "filtered": 0.43137254901960786, 
+            "global": 0.4590677634155895, 
+            "species": "Ciona||Schistosoma"
+        }, 
+        {
+            "filtered": 0.4117647058823529, 
+            "global": 0.4339992166079123, 
+            "species": "Epigonichthys||Schistosoma"
+        }, 
+        {
+            "filtered": 0.47058823529411764, 
+            "global": 0.4461417939678809, 
+            "species": "Daphnia||Schistosoma"
+        }, 
+        {
+            "filtered": 0.4117647058823529, 
+            "global": 0.43987465726596153, 
+            "species": "Homo||Schistosoma"
+        }, 
+        {
+            "filtered": 0.196078431372549, 
+            "global": 0.3971797884841364, 
+            "species": "Blanceolatum||Schistosoma"
+        }, 
+        {
+            "filtered": 0.43137254901960786, 
+            "global": 0.44810027418723064, 
+            "species": "Saccoglossus||Schistosoma"
+        }, 
+        {
+            "filtered": 0.4509803921568627, 
+            "global": 0.48021934978456715, 
+            "species": "Patiria||Fasciola"
+        }, 
+        {
+            "filtered": 0.37254901960784315, 
+            "global": 0.49236192714453586, 
+            "species": "Lumbricus||Fasciola"
+        }, 
+        {
+            "filtered": 0.43137254901960786, 
+            "global": 0.5119467293380336, 
+            "species": "Halocynthia||Fasciola"
+        }, 
+        {
+            "filtered": 0.43137254901960786, 
+            "global": 0.4853113983548767, 
+            "species": "Limulus||Fasciola"
+        }, 
+        {
+            "filtered": 0.196078431372549, 
+            "global": 0.5025460242851547, 
+            "species": "Caenorhabditis||Fasciola"
+        }, 
+        {
+            "filtered": 0.4117647058823529, 
+            "global": 0.46846846846846846, 
+            "species": "Axinella||Fasciola"
+        }, 
+        {
+            "filtered": 0.392156862745098, 
+            "global": 0.4904034469251861, 
+            "species": "Terebratulina||Fasciola"
+        }, 
+        {
+            "filtered": 0.23529411764705888, 
+            "global": 0.4292988640814728, 
+            "species": "Bfloridae||Fasciola"
+        }, 
+        {
+            "filtered": 0.4117647058823529, 
+            "global": 0.49197023110066596, 
+            "species": "Katharina||Fasciola"
+        }, 
+        {
+            "filtered": 0.47058823529411764, 
+            "global": 0.4751273012142577, 
+            "species": "Geodia||Fasciola"
+        }, 
+        {
+            "filtered": 0.5098039215686274, 
+            "global": 0.4739522130826479, 
+            "species": "Metridium||Fasciola"
+        }, 
+        {
+            "filtered": 0.47058823529411764, 
+            "global": 0.4653349001175089, 
+            "species": "Acropora||Fasciola"
+        }, 
+        {
+            "filtered": 0.3529411764705883, 
+            "global": 0.37602820211515864, 
+            "species": "Trichinella||Fasciola"
+        }, 
+        {
+            "filtered": 0.47058823529411764, 
+            "global": 0.4911868390129259, 
+            "species": "Balanoglossus||Fasciola"
+        }, 
+        {
+            "filtered": 0.43137254901960786, 
+            "global": 0.48726987857422643, 
+            "species": "Drosophila||Fasciola"
+        }, 
+        {
+            "filtered": 0.43137254901960786, 
+            "global": 0.48100274187230707, 
+            "species": "Myxine||Fasciola"
+        }, 
+        {
+            "filtered": 0.43137254901960786, 
+            "global": 0.4782608695652174, 
+            "species": "Ciona||Fasciola"
+        }, 
+        {
+            "filtered": 0.4509803921568627, 
+            "global": 0.48374461417939685, 
+            "species": "Epigonichthys||Fasciola"
+        }, 
+        {
+            "filtered": 0.4901960784313726, 
+            "global": 0.48805327066196624, 
+            "species": "Daphnia||Fasciola"
+        }, 
+        {
+            "filtered": 0.4509803921568627, 
+            "global": 0.481394437916177, 
+            "species": "Homo||Fasciola"
+        }, 
+        {
+            "filtered": 0.23529411764705888, 
+            "global": 0.42890716803760287, 
+            "species": "Blanceolatum||Fasciola"
+        }, 
+        {
+            "filtered": 0.4901960784313726, 
+            "global": 0.4935370152761457, 
+            "species": "Saccoglossus||Fasciola"
+        }, 
+        {
+            "filtered": 0.7843137254901961, 
+            "global": 0.6807677242459851, 
+            "species": "Lumbricus||Patiria"
+        }, 
+        {
+            "filtered": 0.7450980392156863, 
+            "global": 0.609087348217783, 
+            "species": "Halocynthia||Patiria"
+        }, 
+        {
+            "filtered": 0.7647058823529411, 
+            "global": 0.6976106541323933, 
+            "species": "Limulus||Patiria"
+        }, 
+        {
+            "filtered": 0.392156862745098, 
+            "global": 0.5757931844888367, 
+            "species": "Caenorhabditis||Patiria"
+        }, 
+        {
+            "filtered": 0.7647058823529411, 
+            "global": 0.6713670191931062, 
+            "species": "Axinella||Patiria"
+        }, 
+        {
+            "filtered": 0.6862745098039216, 
+            "global": 0.6674500587544065, 
+            "species": "Terebratulina||Patiria"
+        }, 
+        {
+            "filtered": 0.2549019607843137, 
+            "global": 0.4430082256169212, 
+            "species": "Bfloridae||Patiria"
+        }, 
+        {
+            "filtered": 0.7843137254901961, 
+            "global": 0.6956521739130435, 
+            "species": "Katharina||Patiria"
+        }, 
+        {
+            "filtered": 0.8431372549019608, 
+            "global": 0.6788092440266353, 
+            "species": "Geodia||Patiria"
+        }, 
+        {
+            "filtered": 0.803921568627451, 
+            "global": 0.6513905209557384, 
+            "species": "Metridium||Patiria"
+        }, 
+        {
+            "filtered": 0.7647058823529411, 
+            "global": 0.6337641989815903, 
+            "species": "Acropora||Patiria"
+        }, 
+        {
+            "filtered": 0.5294117647058824, 
+            "global": 0.43282412847630236, 
+            "species": "Trichinella||Patiria"
+        }, 
+        {
+            "filtered": 0.8823529411764706, 
+            "global": 0.7594986290638465, 
+            "species": "Balanoglossus||Patiria"
+        }, 
+        {
+            "filtered": 0.7843137254901961, 
+            "global": 0.6936936936936937, 
+            "species": "Drosophila||Patiria"
+        }, 
+        {
+            "filtered": 0.8627450980392157, 
+            "global": 0.6654915785350568, 
+            "species": "Myxine||Patiria"
+        }, 
+        {
+            "filtered": 0.7254901960784313, 
+            "global": 0.5793184488836662, 
+            "species": "Ciona||Patiria"
+        }, 
+        {
+            "filtered": 0.8627450980392157, 
+            "global": 0.6936936936936937, 
+            "species": "Epigonichthys||Patiria"
+        }, 
+        {
+            "filtered": 0.7450980392156863, 
+            "global": 0.6987857422640031, 
+            "species": "Daphnia||Patiria"
+        }, 
+        {
+            "filtered": 0.8823529411764706, 
+            "global": 0.6866431649040344, 
+            "species": "Homo||Patiria"
+        }, 
+        {
+            "filtered": 0.2549019607843137, 
+            "global": 0.44065804935370156, 
+            "species": "Blanceolatum||Patiria"
+        }, 
+        {
+            "filtered": 0.8823529411764706, 
+            "global": 0.7442224833529182, 
+            "species": "Saccoglossus||Patiria"
+        }, 
+        {
+            "filtered": 0.5882352941176471, 
+            "global": 0.6255385820603212, 
+            "species": "Halocynthia||Lumbricus"
+        }, 
+        {
+            "filtered": 0.7450980392156863, 
+            "global": 0.6854680767724246, 
+            "species": "Limulus||Lumbricus"
+        }, 
+        {
+            "filtered": 0.392156862745098, 
+            "global": 0.6036036036036037, 
+            "species": "Caenorhabditis||Lumbricus"
+        }, 
+        {
+            "filtered": 0.6470588235294118, 
+            "global": 0.6533490011750881, 
+            "species": "Axinella||Lumbricus"
+        }, 
+        {
+            "filtered": 0.803921568627451, 
+            "global": 0.7164120642381512, 
+            "species": "Terebratulina||Lumbricus"
+        }, 
+        {
+            "filtered": 0.1568627450980392, 
+            "global": 0.42420681551116335, 
+            "species": "Bfloridae||Lumbricus"
+        }, 
+        {
+            "filtered": 0.803921568627451, 
+            "global": 0.7309048178613397, 
+            "species": "Katharina||Lumbricus"
+        }, 
+        {
+            "filtered": 0.6666666666666666, 
+            "global": 0.6396396396396397, 
+            "species": "Geodia||Lumbricus"
+        }, 
+        {
+            "filtered": 0.6274509803921569, 
+            "global": 0.6130043086564826, 
+            "species": "Metridium||Lumbricus"
+        }, 
+        {
+            "filtered": 0.6078431372549019, 
+            "global": 0.599294947121034, 
+            "species": "Acropora||Lumbricus"
+        }, 
+        {
+            "filtered": 0.47058823529411764, 
+            "global": 0.44418331374853115, 
+            "species": "Trichinella||Lumbricus"
+        }, 
+        {
+            "filtered": 0.7450980392156863, 
+            "global": 0.709361535448492, 
+            "species": "Balanoglossus||Lumbricus"
+        }, 
+        {
+            "filtered": 0.7647058823529411, 
+            "global": 0.6933019976498237, 
+            "species": "Drosophila||Lumbricus"
+        }, 
+        {
+            "filtered": 0.6862745098039216, 
+            "global": 0.672933803368586, 
+            "species": "Myxine||Lumbricus"
+        }, 
+        {
+            "filtered": 0.5490196078431373, 
+            "global": 0.5840188014101058, 
+            "species": "Ciona||Lumbricus"
+        }, 
+        {
+            "filtered": 0.6862745098039216, 
+            "global": 0.6666666666666666, 
+            "species": "Epigonichthys||Lumbricus"
+        }, 
+        {
+            "filtered": 0.7647058823529411, 
+            "global": 0.6933019976498237, 
+            "species": "Daphnia||Lumbricus"
+        }, 
+        {
+            "filtered": 0.7450980392156863, 
+            "global": 0.6933019976498237, 
+            "species": "Homo||Lumbricus"
+        }, 
+        {
+            "filtered": 0.1568627450980392, 
+            "global": 0.4296905601253427, 
+            "species": "Blanceolatum||Lumbricus"
+        }, 
+        {
+            "filtered": 0.7058823529411765, 
+            "global": 0.7034860947904427, 
+            "species": "Saccoglossus||Lumbricus"
+        }, 
+        {
+            "filtered": 0.6862745098039216, 
+            "global": 0.6047786917352135, 
+            "species": "Limulus||Halocynthia"
+        }, 
+        {
+            "filtered": 0.3137254901960784, 
+            "global": 0.5949862906384645, 
+            "species": "Caenorhabditis||Halocynthia"
+        }, 
+        {
+            "filtered": 0.7058823529411765, 
+            "global": 0.5957696827262045, 
+            "species": "Axinella||Halocynthia"
+        }, 
+        {
+            "filtered": 0.6862745098039216, 
+            "global": 0.6196631414022719, 
+            "species": "Terebratulina||Halocynthia"
+        }, 
+        {
+            "filtered": 0.196078431372549, 
+            "global": 0.4144144144144144, 
+            "species": "Bfloridae||Halocynthia"
+        }, 
+        {
+            "filtered": 0.7058823529411765, 
+            "global": 0.627888758323541, 
+            "species": "Katharina||Halocynthia"
+        }, 
+        {
+            "filtered": 0.803921568627451, 
+            "global": 0.5910693301997649, 
+            "species": "Geodia||Halocynthia"
+        }, 
+        {
+            "filtered": 0.8235294117647058, 
+            "global": 0.5781433607520564, 
+            "species": "Metridium||Halocynthia"
+        }, 
+        {
+            "filtered": 0.803921568627451, 
+            "global": 0.5750097924010967, 
+            "species": "Acropora||Halocynthia"
+        }, 
+        {
+            "filtered": 0.5686274509803921, 
+            "global": 0.4375244810027419, 
+            "species": "Trichinella||Halocynthia"
+        }, 
+        {
+            "filtered": 0.7843137254901961, 
+            "global": 0.6321974148061105, 
+            "species": "Balanoglossus||Halocynthia"
+        }, 
+        {
+            "filtered": 0.6862745098039216, 
+            "global": 0.618096357226792, 
+            "species": "Drosophila||Halocynthia"
+        }, 
+        {
+            "filtered": 0.803921568627451, 
+            "global": 0.6259302781041911, 
+            "species": "Myxine||Halocynthia"
+        }, 
+        {
+            "filtered": 0.803921568627451, 
+            "global": 0.6447316882099491, 
+            "species": "Ciona||Halocynthia"
+        }, 
+        {
+            "filtered": 0.803921568627451, 
+            "global": 0.6153544849197023, 
+            "species": "Epigonichthys||Halocynthia"
+        }, 
+        {
+            "filtered": 0.6666666666666666, 
+            "global": 0.6224050137093615, 
+            "species": "Daphnia||Halocynthia"
+        }, 
+        {
+            "filtered": 0.7647058823529411, 
+            "global": 0.6321974148061105, 
+            "species": "Homo||Halocynthia"
+        }, 
+        {
+            "filtered": 0.196078431372549, 
+            "global": 0.41284763023893456, 
+            "species": "Blanceolatum||Halocynthia"
+        }, 
+        {
+            "filtered": 0.8235294117647058, 
+            "global": 0.6282804543674109, 
+            "species": "Saccoglossus||Halocynthia"
+        }, 
+        {
+            "filtered": 0.3529411764705883, 
+            "global": 0.5879357618488054, 
+            "species": "Caenorhabditis||Limulus"
+        }, 
+        {
+            "filtered": 0.7450980392156863, 
+            "global": 0.6439482961222092, 
+            "species": "Axinella||Limulus"
+        }, 
+        {
+            "filtered": 0.7254901960784313, 
+            "global": 0.6678417547982766, 
+            "species": "Terebratulina||Limulus"
+        }, 
+        {
+            "filtered": 0.21568627450980393, 
+            "global": 0.4379161770466118, 
+            "species": "Bfloridae||Limulus"
+        }, 
+        {
+            "filtered": 0.8235294117647058, 
+            "global": 0.6882099490795143, 
+            "species": "Katharina||Limulus"
+        }, 
+        {
+            "filtered": 0.803921568627451, 
+            "global": 0.6376811594202898, 
+            "species": "Geodia||Limulus"
+        }, 
+        {
+            "filtered": 0.7254901960784313, 
+            "global": 0.6498237367802585, 
+            "species": "Metridium||Limulus"
+        }, 
+        {
+            "filtered": 0.6862745098039216, 
+            "global": 0.6400313356835096, 
+            "species": "Acropora||Limulus"
+        }, 
+        {
+            "filtered": 0.4901960784313726, 
+            "global": 0.42381511946729344, 
+            "species": "Trichinella||Limulus"
+        }, 
+        {
+            "filtered": 0.8235294117647058, 
+            "global": 0.6960438699569135, 
+            "species": "Balanoglossus||Limulus"
+        }, 
+        {
+            "filtered": 0.7058823529411765, 
+            "global": 0.7696827262044653, 
+            "species": "Drosophila||Limulus"
+        }, 
+        {
+            "filtered": 0.7647058823529411, 
+            "global": 0.672933803368586, 
+            "species": "Myxine||Limulus"
+        }, 
+        {
+            "filtered": 0.6274509803921569, 
+            "global": 0.5714845280062671, 
+            "species": "Ciona||Limulus"
+        }, 
+        {
+            "filtered": 0.7843137254901961, 
+            "global": 0.6803760282021152, 
+            "species": "Epigonichthys||Limulus"
+        }, 
+        {
+            "filtered": 0.7843137254901961, 
+            "global": 0.754014884449667, 
+            "species": "Daphnia||Limulus"
+        }, 
+        {
+            "filtered": 0.7843137254901961, 
+            "global": 0.6983940462201331, 
+            "species": "Homo||Limulus"
+        }, 
+        {
+            "filtered": 0.21568627450980393, 
+            "global": 0.44065804935370156, 
+            "species": "Blanceolatum||Limulus"
+        }, 
+        {
+            "filtered": 0.7647058823529411, 
+            "global": 0.6901684292988641, 
+            "species": "Saccoglossus||Limulus"
+        }, 
+        {
+            "filtered": 0.2941176470588236, 
+            "global": 0.563258911084998, 
+            "species": "Axinella||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.3529411764705883, 
+            "global": 0.5910693301997649, 
+            "species": "Terebratulina||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.07843137254901955, 
+            "global": 0.39992166079122593, 
+            "species": "Bfloridae||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.37254901960784315, 
+            "global": 0.599686643164904, 
+            "species": "Katharina||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.3529411764705883, 
+            "global": 0.5671758715236976, 
+            "species": "Geodia||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.3137254901960784, 
+            "global": 0.5515080297688993, 
+            "species": "Metridium||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.2941176470588236, 
+            "global": 0.5518997258127692, 
+            "species": "Acropora||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.3529411764705883, 
+            "global": 0.45201723462593035, 
+            "species": "Trichinella||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.3529411764705883, 
+            "global": 0.6071288679984332, 
+            "species": "Balanoglossus||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.2941176470588236, 
+            "global": 0.6012534273403839, 
+            "species": "Drosophila||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.4117647058823529, 
+            "global": 0.590677634155895, 
+            "species": "Myxine||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.37254901960784315, 
+            "global": 0.564042303172738, 
+            "species": "Ciona||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.392156862745098, 
+            "global": 0.5742264003133568, 
+            "species": "Epigonichthys||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.3529411764705883, 
+            "global": 0.5989032510771641, 
+            "species": "Daphnia||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.37254901960784315, 
+            "global": 0.5859772816294555, 
+            "species": "Homo||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.07843137254901955, 
+            "global": 0.40070505287896596, 
+            "species": "Blanceolatum||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.33333333333333326, 
+            "global": 0.6008617312965139, 
+            "species": "Saccoglossus||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.6666666666666666, 
+            "global": 0.6537406972189581, 
+            "species": "Terebratulina||Axinella"
+        }, 
+        {
+            "filtered": 0.17647058823529416, 
+            "global": 0.40383862122992564, 
+            "species": "Bfloridae||Axinella"
+        }, 
+        {
+            "filtered": 0.7254901960784313, 
+            "global": 0.6678417547982766, 
+            "species": "Katharina||Axinella"
+        }, 
+        {
+            "filtered": 0.8823529411764706, 
+            "global": 0.8041519780650216, 
+            "species": "Geodia||Axinella"
+        }, 
+        {
+            "filtered": 0.8235294117647058, 
+            "global": 0.7305131218174696, 
+            "species": "Metridium||Axinella"
+        }, 
+        {
+            "filtered": 0.8431372549019608, 
+            "global": 0.7007442224833529, 
+            "species": "Acropora||Axinella"
+        }, 
+        {
+            "filtered": 0.4901960784313726, 
+            "global": 0.4140227183705445, 
+            "species": "Trichinella||Axinella"
+        }, 
+        {
+            "filtered": 0.8627450980392157, 
+            "global": 0.6925186055620838, 
+            "species": "Balanoglossus||Axinella"
+        }, 
+        {
+            "filtered": 0.6666666666666666, 
+            "global": 0.6486486486486487, 
+            "species": "Drosophila||Axinella"
+        }, 
+        {
+            "filtered": 0.803921568627451, 
+            "global": 0.6427732079905993, 
+            "species": "Myxine||Axinella"
+        }, 
+        {
+            "filtered": 0.6862745098039216, 
+            "global": 0.5530748139443792, 
+            "species": "Ciona||Axinella"
+        }, 
+        {
+            "filtered": 0.8431372549019608, 
+            "global": 0.6517822169996083, 
+            "species": "Epigonichthys||Axinella"
+        }, 
+        {
+            "filtered": 0.6862745098039216, 
+            "global": 0.6498237367802585, 
+            "species": "Daphnia||Axinella"
+        }, 
+        {
+            "filtered": 0.8627450980392157, 
+            "global": 0.6635330983157071, 
+            "species": "Homo||Axinella"
+        }, 
+        {
+            "filtered": 0.17647058823529416, 
+            "global": 0.40462201331766545, 
+            "species": "Blanceolatum||Axinella"
+        }, 
+        {
+            "filtered": 0.803921568627451, 
+            "global": 0.6897767332549941, 
+            "species": "Saccoglossus||Axinella"
+        }, 
+        {
+            "filtered": 0.1568627450980392, 
+            "global": 0.41167254210732473, 
+            "species": "Bfloridae||Terebratulina"
+        }, 
+        {
+            "filtered": 0.7843137254901961, 
+            "global": 0.7215041128084606, 
+            "species": "Katharina||Terebratulina"
+        }, 
+        {
+            "filtered": 0.7254901960784313, 
+            "global": 0.6396396396396397, 
+            "species": "Geodia||Terebratulina"
+        }, 
+        {
+            "filtered": 0.6862745098039216, 
+            "global": 0.6188797493145319, 
+            "species": "Metridium||Terebratulina"
+        }, 
+        {
+            "filtered": 0.6666666666666666, 
+            "global": 0.6039952996474736, 
+            "species": "Acropora||Terebratulina"
+        }, 
+        {
+            "filtered": 0.5490196078431373, 
+            "global": 0.44379161770466125, 
+            "species": "Trichinella||Terebratulina"
+        }, 
+        {
+            "filtered": 0.7450980392156863, 
+            "global": 0.6835095965530749, 
+            "species": "Balanoglossus||Terebratulina"
+        }, 
+        {
+            "filtered": 0.7254901960784313, 
+            "global": 0.6886016451233843, 
+            "species": "Drosophila||Terebratulina"
+        }, 
+        {
+            "filtered": 0.6862745098039216, 
+            "global": 0.672542107324716, 
+            "species": "Myxine||Terebratulina"
+        }, 
+        {
+            "filtered": 0.5490196078431373, 
+            "global": 0.5734430082256169, 
+            "species": "Ciona||Terebratulina"
+        }, 
+        {
+            "filtered": 0.7058823529411765, 
+            "global": 0.6521739130434783, 
+            "species": "Epigonichthys||Terebratulina"
+        }, 
+        {
+            "filtered": 0.7843137254901961, 
+            "global": 0.681942812377595, 
+            "species": "Daphnia||Terebratulina"
+        }, 
+        {
+            "filtered": 0.7058823529411765, 
+            "global": 0.6780258519388954, 
+            "species": "Homo||Terebratulina"
+        }, 
+        {
+            "filtered": 0.1568627450980392, 
+            "global": 0.41284763023893456, 
+            "species": "Blanceolatum||Terebratulina"
+        }, 
+        {
+            "filtered": 0.7254901960784313, 
+            "global": 0.6803760282021152, 
+            "species": "Saccoglossus||Terebratulina"
+        }, 
+        {
+            "filtered": 0.196078431372549, 
+            "global": 0.4296905601253427, 
+            "species": "Katharina||Bfloridae"
+        }, 
+        {
+            "filtered": 0.23529411764705888, 
+            "global": 0.40893066980023507, 
+            "species": "Geodia||Bfloridae"
+        }, 
+        {
+            "filtered": 0.23529411764705888, 
+            "global": 0.43243243243243246, 
+            "species": "Metridium||Bfloridae"
+        }, 
+        {
+            "filtered": 0.196078431372549, 
+            "global": 0.4292988640814728, 
+            "species": "Acropora||Bfloridae"
+        }, 
+        {
+            "filtered": 0.1568627450980392, 
+            "global": 0.2710536623580102, 
+            "species": "Trichinella||Bfloridae"
+        }, 
+        {
+            "filtered": 0.2549019607843137, 
+            "global": 0.45632589110849975, 
+            "species": "Balanoglossus||Bfloridae"
+        }, 
+        {
+            "filtered": 0.1568627450980392, 
+            "global": 0.4551508029768899, 
+            "species": "Drosophila||Bfloridae"
+        }, 
+        {
+            "filtered": 0.23529411764705888, 
+            "global": 0.42146494320407357, 
+            "species": "Myxine||Bfloridae"
+        }, 
+        {
+            "filtered": 0.17647058823529416, 
+            "global": 0.4054054054054055, 
+            "species": "Ciona||Bfloridae"
+        }, 
+        {
+            "filtered": 0.27450980392156865, 
+            "global": 0.5471993732863298, 
+            "species": "Epigonichthys||Bfloridae"
+        }, 
+        {
+            "filtered": 0.21568627450980393, 
+            "global": 0.4512338425381903, 
+            "species": "Daphnia||Bfloridae"
+        }, 
+        {
+            "filtered": 0.2549019607843137, 
+            "global": 0.4386995691343518, 
+            "species": "Homo||Bfloridae"
+        }, 
+        {
+            "filtered": 1.0, 
+            "global": 0.9522130826478653, 
+            "species": "Blanceolatum||Bfloridae"
+        }, 
+        {
+            "filtered": 0.2549019607843137, 
+            "global": 0.44339992166079123, 
+            "species": "Saccoglossus||Bfloridae"
+        }, 
+        {
+            "filtered": 0.7450980392156863, 
+            "global": 0.6509988249118684, 
+            "species": "Geodia||Katharina"
+        }, 
+        {
+            "filtered": 0.7450980392156863, 
+            "global": 0.6341558950254602, 
+            "species": "Metridium||Katharina"
+        }, 
+        {
+            "filtered": 0.7254901960784313, 
+            "global": 0.6212299255777517, 
+            "species": "Acropora||Katharina"
+        }, 
+        {
+            "filtered": 0.5686274509803921, 
+            "global": 0.4418331374853114, 
+            "species": "Trichinella||Katharina"
+        }, 
+        {
+            "filtered": 0.8235294117647058, 
+            "global": 0.7097532314923619, 
+            "species": "Balanoglossus||Katharina"
+        }, 
+        {
+            "filtered": 0.803921568627451, 
+            "global": 0.7152369761065414, 
+            "species": "Drosophila||Katharina"
+        }, 
+        {
+            "filtered": 0.7647058823529411, 
+            "global": 0.6717587152369761, 
+            "species": "Myxine||Katharina"
+        }, 
+        {
+            "filtered": 0.6470588235294118, 
+            "global": 0.5824520172346259, 
+            "species": "Ciona||Katharina"
+        }, 
+        {
+            "filtered": 0.7647058823529411, 
+            "global": 0.6854680767724246, 
+            "species": "Epigonichthys||Katharina"
+        }, 
+        {
+            "filtered": 0.803921568627451, 
+            "global": 0.7042694868781826, 
+            "species": "Daphnia||Katharina"
+        }, 
+        {
+            "filtered": 0.8235294117647058, 
+            "global": 0.6839012925969448, 
+            "species": "Homo||Katharina"
+        }, 
+        {
+            "filtered": 0.196078431372549, 
+            "global": 0.4304739522130827, 
+            "species": "Blanceolatum||Katharina"
+        }, 
+        {
+            "filtered": 0.8235294117647058, 
+            "global": 0.7030943987465726, 
+            "species": "Saccoglossus||Katharina"
+        }, 
+        {
+            "filtered": 0.9019607843137255, 
+            "global": 0.7328632980806894, 
+            "species": "Metridium||Geodia"
+        }, 
+        {
+            "filtered": 0.8431372549019608, 
+            "global": 0.6980023501762632, 
+            "species": "Acropora||Geodia"
+        }, 
+        {
+            "filtered": 0.5294117647058824, 
+            "global": 0.41676459067763416, 
+            "species": "Trichinella||Geodia"
+        }, 
+        {
+            "filtered": 0.9019607843137255, 
+            "global": 0.681942812377595, 
+            "species": "Balanoglossus||Geodia"
+        }, 
+        {
+            "filtered": 0.7254901960784313, 
+            "global": 0.6396396396396397, 
+            "species": "Drosophila||Geodia"
+        }, 
+        {
+            "filtered": 0.9215686274509803, 
+            "global": 0.6298472385428907, 
+            "species": "Myxine||Geodia"
+        }, 
+        {
+            "filtered": 0.7450980392156863, 
+            "global": 0.5534665099882491, 
+            "species": "Ciona||Geodia"
+        }, 
+        {
+            "filtered": 0.9411764705882353, 
+            "global": 0.6443399921660791, 
+            "species": "Epigonichthys||Geodia"
+        }, 
+        {
+            "filtered": 0.7450980392156863, 
+            "global": 0.6490403446925186, 
+            "species": "Daphnia||Geodia"
+        }, 
+        {
+            "filtered": 0.9019607843137255, 
+            "global": 0.6490403446925186, 
+            "species": "Homo||Geodia"
+        }, 
+        {
+            "filtered": 0.23529411764705888, 
+            "global": 0.4108891500195848, 
+            "species": "Blanceolatum||Geodia"
+        }, 
+        {
+            "filtered": 0.8823529411764706, 
+            "global": 0.6784175479827653, 
+            "species": "Saccoglossus||Geodia"
+        }, 
+        {
+            "filtered": 0.9215686274509803, 
+            "global": 0.8194281237759499, 
+            "species": "Acropora||Metridium"
+        }, 
+        {
+            "filtered": 0.5294117647058824, 
+            "global": 0.3858206032119076, 
+            "species": "Trichinella||Metridium"
+        }, 
+        {
+            "filtered": 0.8627450980392157, 
+            "global": 0.6529573051312182, 
+            "species": "Balanoglossus||Metridium"
+        }, 
+        {
+            "filtered": 0.7254901960784313, 
+            "global": 0.6529573051312182, 
+            "species": "Drosophila||Metridium"
+        }, 
+        {
+            "filtered": 0.8431372549019608, 
+            "global": 0.6008617312965139, 
+            "species": "Myxine||Metridium"
+        }, 
+        {
+            "filtered": 0.7450980392156863, 
+            "global": 0.5346650998824912, 
+            "species": "Ciona||Metridium"
+        }, 
+        {
+            "filtered": 0.8627450980392157, 
+            "global": 0.6752839796318058, 
+            "species": "Epigonichthys||Metridium"
+        }, 
+        {
+            "filtered": 0.7450980392156863, 
+            "global": 0.6462984723854289, 
+            "species": "Daphnia||Metridium"
+        }, 
+        {
+            "filtered": 0.8627450980392157, 
+            "global": 0.6325891108499804, 
+            "species": "Homo||Metridium"
+        }, 
+        {
+            "filtered": 0.23529411764705888, 
+            "global": 0.43243243243243246, 
+            "species": "Blanceolatum||Metridium"
+        }, 
+        {
+            "filtered": 0.8823529411764706, 
+            "global": 0.6533490011750881, 
+            "species": "Saccoglossus||Metridium"
+        }, 
+        {
+            "filtered": 0.5098039215686274, 
+            "global": 0.3795534665099882, 
+            "species": "Trichinella||Acropora"
+        }, 
+        {
+            "filtered": 0.8235294117647058, 
+            "global": 0.63650607128868, 
+            "species": "Balanoglossus||Acropora"
+        }, 
+        {
+            "filtered": 0.7058823529411765, 
+            "global": 0.63572267920094, 
+            "species": "Drosophila||Acropora"
+        }, 
+        {
+            "filtered": 0.803921568627451, 
+            "global": 0.5898942420681551, 
+            "species": "Myxine||Acropora"
+        }, 
+        {
+            "filtered": 0.7254901960784313, 
+            "global": 0.5287896592244419, 
+            "species": "Ciona||Acropora"
+        }, 
+        {
+            "filtered": 0.8235294117647058, 
+            "global": 0.6709753231492362, 
+            "species": "Epigonichthys||Acropora"
+        }, 
+        {
+            "filtered": 0.7058823529411765, 
+            "global": 0.6345475910693302, 
+            "species": "Daphnia||Acropora"
+        }, 
+        {
+            "filtered": 0.8235294117647058, 
+            "global": 0.6188797493145319, 
+            "species": "Homo||Acropora"
+        }, 
+        {
+            "filtered": 0.196078431372549, 
+            "global": 0.4300822561692127, 
+            "species": "Blanceolatum||Acropora"
+        }, 
+        {
+            "filtered": 0.8431372549019608, 
+            "global": 0.6353309831570702, 
+            "species": "Saccoglossus||Acropora"
+        }, 
+        {
+            "filtered": 0.5294117647058824, 
+            "global": 0.4351743047395221, 
+            "species": "Balanoglossus||Trichinella"
+        }, 
+        {
+            "filtered": 0.5294117647058824, 
+            "global": 0.4422248335291814, 
+            "species": "Drosophila||Trichinella"
+        }, 
+        {
+            "filtered": 0.5686274509803921, 
+            "global": 0.4343909126517822, 
+            "species": "Myxine||Trichinella"
+        }, 
+        {
+            "filtered": 0.5098039215686274, 
+            "global": 0.4465334900117508, 
+            "species": "Ciona||Trichinella"
+        }, 
+        {
+            "filtered": 0.5490196078431373, 
+            "global": 0.41676459067763416, 
+            "species": "Epigonichthys||Trichinella"
+        }, 
+        {
+            "filtered": 0.5294117647058824, 
+            "global": 0.43204073638856255, 
+            "species": "Daphnia||Trichinella"
+        }, 
+        {
+            "filtered": 0.5490196078431373, 
+            "global": 0.43595769682726204, 
+            "species": "Homo||Trichinella"
+        }, 
+        {
+            "filtered": 0.1568627450980392, 
+            "global": 0.26987857422640027, 
+            "species": "Blanceolatum||Trichinella"
+        }, 
+        {
+            "filtered": 0.5686274509803921, 
+            "global": 0.43556600078339214, 
+            "species": "Saccoglossus||Trichinella"
+        }, 
+        {
+            "filtered": 0.7450980392156863, 
+            "global": 0.7117117117117117, 
+            "species": "Drosophila||Balanoglossus"
+        }, 
+        {
+            "filtered": 0.8823529411764706, 
+            "global": 0.691343517430474, 
+            "species": "Myxine||Balanoglossus"
+        }, 
+        {
+            "filtered": 0.7647058823529411, 
+            "global": 0.5871523697610654, 
+            "species": "Ciona||Balanoglossus"
+        }, 
+        {
+            "filtered": 0.9019607843137255, 
+            "global": 0.7152369761065414, 
+            "species": "Epigonichthys||Balanoglossus"
+        }, 
+        {
+            "filtered": 0.7647058823529411, 
+            "global": 0.7097532314923619, 
+            "species": "Daphnia||Balanoglossus"
+        }, 
+        {
+            "filtered": 0.9411764705882353, 
+            "global": 0.7226792009400705, 
+            "species": "Homo||Balanoglossus"
+        }, 
+        {
+            "filtered": 0.2549019607843137, 
+            "global": 0.45593419506462984, 
+            "species": "Blanceolatum||Balanoglossus"
+        }, 
+        {
+            "filtered": 0.9215686274509803, 
+            "global": 0.8331374853113983, 
+            "species": "Saccoglossus||Balanoglossus"
+        }, 
+        {
+            "filtered": 0.7058823529411765, 
+            "global": 0.6713670191931062, 
+            "species": "Myxine||Drosophila"
+        }, 
+        {
+            "filtered": 0.6470588235294118, 
+            "global": 0.5804935370152762, 
+            "species": "Ciona||Drosophila"
+        }, 
+        {
+            "filtered": 0.7254901960784313, 
+            "global": 0.7023110066588327, 
+            "species": "Epigonichthys||Drosophila"
+        }, 
+        {
+            "filtered": 0.7647058823529411, 
+            "global": 0.7712495103799452, 
+            "species": "Daphnia||Drosophila"
+        }, 
+        {
+            "filtered": 0.7254901960784313, 
+            "global": 0.6936936936936937, 
+            "species": "Homo||Drosophila"
+        }, 
+        {
+            "filtered": 0.1568627450980392, 
+            "global": 0.45280062671367016, 
+            "species": "Blanceolatum||Drosophila"
+        }, 
+        {
+            "filtered": 0.7843137254901961, 
+            "global": 0.7046611829220525, 
+            "species": "Saccoglossus||Drosophila"
+        }, 
+        {
+            "filtered": 0.7450980392156863, 
+            "global": 0.5918527222875049, 
+            "species": "Ciona||Myxine"
+        }, 
+        {
+            "filtered": 0.9411764705882353, 
+            "global": 0.6701919310614963, 
+            "species": "Epigonichthys||Myxine"
+        }, 
+        {
+            "filtered": 0.7058823529411765, 
+            "global": 0.6701919310614963, 
+            "species": "Daphnia||Myxine"
+        }, 
+        {
+            "filtered": 0.9411764705882353, 
+            "global": 0.7187622405013709, 
+            "species": "Homo||Myxine"
+        }, 
+        {
+            "filtered": 0.23529411764705888, 
+            "global": 0.4218566392479436, 
+            "species": "Blanceolatum||Myxine"
+        }, 
+        {
+            "filtered": 0.8823529411764706, 
+            "global": 0.6854680767724246, 
+            "species": "Saccoglossus||Myxine"
+        }, 
+        {
+            "filtered": 0.7450980392156863, 
+            "global": 0.5773599686643165, 
+            "species": "Epigonichthys||Ciona"
+        }, 
+        {
+            "filtered": 0.5882352941176471, 
+            "global": 0.5797101449275363, 
+            "species": "Daphnia||Ciona"
+        }, 
+        {
+            "filtered": 0.7450980392156863, 
+            "global": 0.5801018409714062, 
+            "species": "Homo||Ciona"
+        }, 
+        {
+            "filtered": 0.17647058823529416, 
+            "global": 0.40383862122992564, 
+            "species": "Blanceolatum||Ciona"
+        }, 
+        {
+            "filtered": 0.7647058823529411, 
+            "global": 0.582060321190756, 
+            "species": "Saccoglossus||Ciona"
+        }, 
+        {
+            "filtered": 0.7254901960784313, 
+            "global": 0.6944770857814336, 
+            "species": "Daphnia||Epigonichthys"
+        }, 
+        {
+            "filtered": 0.9215686274509803, 
+            "global": 0.6866431649040344, 
+            "species": "Homo||Epigonichthys"
+        }, 
+        {
+            "filtered": 0.27450980392156865, 
+            "global": 0.5471993732863298, 
+            "species": "Blanceolatum||Epigonichthys"
+        }, 
+        {
+            "filtered": 0.9019607843137255, 
+            "global": 0.7027027027027027, 
+            "species": "Saccoglossus||Epigonichthys"
+        }, 
+        {
+            "filtered": 0.7254901960784313, 
+            "global": 0.6846846846846847, 
+            "species": "Homo||Daphnia"
+        }, 
+        {
+            "filtered": 0.21568627450980393, 
+            "global": 0.4496670583627105, 
+            "species": "Blanceolatum||Daphnia"
+        }, 
+        {
+            "filtered": 0.7843137254901961, 
+            "global": 0.6983940462201331, 
+            "species": "Saccoglossus||Daphnia"
+        }, 
+        {
+            "filtered": 0.2549019607843137, 
+            "global": 0.4426165295730513, 
+            "species": "Blanceolatum||Homo"
+        }, 
+        {
+            "filtered": 0.9019607843137255, 
+            "global": 0.7211124167645907, 
+            "species": "Saccoglossus||Homo"
+        }, 
+        {
+            "filtered": 0.2549019607843137, 
+            "global": 0.4465334900117508, 
+            "species": "Saccoglossus||Blanceolatum"
+        }
+    ], 
+    "Arg": [
+        {
+            "filtered": 0.4642857142857143, 
+            "global": 0.4292988640814728, 
+            "species": "Schistosoma||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.4285714285714286, 
+            "global": 0.4782608695652174, 
+            "species": "Fasciola||Paracentrotus"
+        }, 
+        {
+            "filtered": 1.0, 
+            "global": 0.8131609870740305, 
+            "species": "Patiria||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.9285714285714286, 
+            "global": 0.681551116333725, 
+            "species": "Lumbricus||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.75, 
+            "global": 0.6118292205248727, 
+            "species": "Halocynthia||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.9642857142857143, 
+            "global": 0.6807677242459851, 
+            "species": "Limulus||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.5357142857142857, 
+            "global": 0.5793184488836662, 
+            "species": "Caenorhabditis||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.8571428571428571, 
+            "global": 0.6662749706227967, 
+            "species": "Axinella||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.9285714285714286, 
+            "global": 0.6603995299647474, 
+            "species": "Terebratulina||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.25, 
+            "global": 0.43321582452017227, 
+            "species": "Bfloridae||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.9285714285714286, 
+            "global": 0.6878182530356444, 
+            "species": "Katharina||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.8214285714285714, 
+            "global": 0.6705836271053662, 
+            "species": "Geodia||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.8928571428571429, 
+            "global": 0.6431649040344692, 
+            "species": "Metridium||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.7857142857142857, 
+            "global": 0.6298472385428907, 
+            "species": "Acropora||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.6428571428571429, 
+            "global": 0.4222483352918136, 
+            "species": "Trichinella||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.9642857142857143, 
+            "global": 0.7497062279670975, 
+            "species": "Balanoglossus||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.9285714285714286, 
+            "global": 0.6823345084214649, 
+            "species": "Drosophila||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.8214285714285714, 
+            "global": 0.6627497062279671, 
+            "species": "Myxine||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.7142857142857143, 
+            "global": 0.5703094398746573, 
+            "species": "Ciona||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.9642857142857143, 
+            "global": 0.690951821386604, 
+            "species": "Epigonichthys||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.9642857142857143, 
+            "global": 0.699177438307873, 
+            "species": "Daphnia||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.8928571428571429, 
+            "global": 0.6846846846846847, 
+            "species": "Homo||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.2142857142857143, 
+            "global": 0.4347826086956521, 
+            "species": "Blanceolatum||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.9642857142857143, 
+            "global": 0.7418723070896984, 
+            "species": "Saccoglossus||Paracentrotus"
+        }, 
+        {
+            "filtered": 0.6428571428571429, 
+            "global": 0.6400313356835096, 
+            "species": "Fasciola||Schistosoma"
+        }, 
+        {
+            "filtered": 0.4642857142857143, 
+            "global": 0.4375244810027419, 
+            "species": "Patiria||Schistosoma"
+        }, 
+        {
+            "filtered": 0.4642857142857143, 
+            "global": 0.44888366627497067, 
+            "species": "Lumbricus||Schistosoma"
+        }, 
+        {
+            "filtered": 0.5, 
+            "global": 0.46337641989815903, 
+            "species": "Halocynthia||Schistosoma"
+        }, 
+        {
+            "filtered": 0.5, 
+            "global": 0.44065804935370156, 
+            "species": "Limulus||Schistosoma"
+        }, 
+        {
+            "filtered": 0.3928571428571428, 
+            "global": 0.4704269486878183, 
+            "species": "Caenorhabditis||Schistosoma"
+        }, 
+        {
+            "filtered": 0.5, 
+            "global": 0.426556991774383, 
+            "species": "Axinella||Schistosoma"
+        }, 
+        {
+            "filtered": 0.4642857142857143, 
+            "global": 0.44457500979240105, 
+            "species": "Terebratulina||Schistosoma"
+        }, 
+        {
+            "filtered": 0.4642857142857143, 
+            "global": 0.3975714845280063, 
+            "species": "Bfloridae||Schistosoma"
+        }, 
+        {
+            "filtered": 0.4642857142857143, 
+            "global": 0.4500587544065805, 
+            "species": "Katharina||Schistosoma"
+        }, 
+        {
+            "filtered": 0.4642857142857143, 
+            "global": 0.43204073638856255, 
+            "species": "Geodia||Schistosoma"
+        }, 
+        {
+            "filtered": 0.5, 
+            "global": 0.4175479827653741, 
+            "species": "Metridium||Schistosoma"
+        }, 
+        {
+            "filtered": 0.5357142857142857, 
+            "global": 0.4151978065021543, 
+            "species": "Acropora||Schistosoma"
+        }, 
+        {
+            "filtered": 0.3928571428571428, 
+            "global": 0.38464551508029765, 
+            "species": "Trichinella||Schistosoma"
+        }, 
+        {
+            "filtered": 0.5, 
+            "global": 0.44849197023110066, 
+            "species": "Balanoglossus||Schistosoma"
+        }, 
+        {
+            "filtered": 0.5, 
+            "global": 0.44379161770466125, 
+            "species": "Drosophila||Schistosoma"
+        }, 
+        {
+            "filtered": 0.4285714285714286, 
+            "global": 0.4422248335291814, 
+            "species": "Myxine||Schistosoma"
+        }, 
+        {
+            "filtered": 0.4642857142857143, 
+            "global": 0.4590677634155895, 
+            "species": "Ciona||Schistosoma"
+        }, 
+        {
+            "filtered": 0.5, 
+            "global": 0.4339992166079123, 
+            "species": "Epigonichthys||Schistosoma"
+        }, 
+        {
+            "filtered": 0.5, 
+            "global": 0.4461417939678809, 
+            "species": "Daphnia||Schistosoma"
+        }, 
+        {
+            "filtered": 0.4285714285714286, 
+            "global": 0.43987465726596153, 
+            "species": "Homo||Schistosoma"
+        }, 
+        {
+            "filtered": 0.4285714285714286, 
+            "global": 0.3971797884841364, 
+            "species": "Blanceolatum||Schistosoma"
+        }, 
+        {
+            "filtered": 0.5, 
+            "global": 0.44810027418723064, 
+            "species": "Saccoglossus||Schistosoma"
+        }, 
+        {
+            "filtered": 0.4285714285714286, 
+            "global": 0.48021934978456715, 
+            "species": "Patiria||Fasciola"
+        }, 
+        {
+            "filtered": 0.4642857142857143, 
+            "global": 0.49236192714453586, 
+            "species": "Lumbricus||Fasciola"
+        }, 
+        {
+            "filtered": 0.4642857142857143, 
+            "global": 0.5119467293380336, 
+            "species": "Halocynthia||Fasciola"
+        }, 
+        {
+            "filtered": 0.4642857142857143, 
+            "global": 0.4853113983548767, 
+            "species": "Limulus||Fasciola"
+        }, 
+        {
+            "filtered": 0.3214285714285714, 
+            "global": 0.5025460242851547, 
+            "species": "Caenorhabditis||Fasciola"
+        }, 
+        {
+            "filtered": 0.4642857142857143, 
+            "global": 0.46846846846846846, 
+            "species": "Axinella||Fasciola"
+        }, 
+        {
+            "filtered": 0.4642857142857143, 
+            "global": 0.4904034469251861, 
+            "species": "Terebratulina||Fasciola"
+        }, 
+        {
+            "filtered": 0.3571428571428572, 
+            "global": 0.4292988640814728, 
+            "species": "Bfloridae||Fasciola"
+        }, 
+        {
+            "filtered": 0.4642857142857143, 
+            "global": 0.49197023110066596, 
+            "species": "Katharina||Fasciola"
+        }, 
+        {
+            "filtered": 0.4285714285714286, 
+            "global": 0.4751273012142577, 
+            "species": "Geodia||Fasciola"
+        }, 
+        {
+            "filtered": 0.4642857142857143, 
+            "global": 0.4739522130826479, 
+            "species": "Metridium||Fasciola"
+        }, 
+        {
+            "filtered": 0.4642857142857143, 
+            "global": 0.4653349001175089, 
+            "species": "Acropora||Fasciola"
+        }, 
+        {
+            "filtered": 0.3571428571428572, 
+            "global": 0.37602820211515864, 
+            "species": "Trichinella||Fasciola"
+        }, 
+        {
+            "filtered": 0.4285714285714286, 
+            "global": 0.4911868390129259, 
+            "species": "Balanoglossus||Fasciola"
+        }, 
+        {
+            "filtered": 0.4642857142857143, 
+            "global": 0.48726987857422643, 
+            "species": "Drosophila||Fasciola"
+        }, 
+        {
+            "filtered": 0.4285714285714286, 
+            "global": 0.48100274187230707, 
+            "species": "Myxine||Fasciola"
+        }, 
+        {
+            "filtered": 0.4285714285714286, 
+            "global": 0.4782608695652174, 
+            "species": "Ciona||Fasciola"
+        }, 
+        {
+            "filtered": 0.4642857142857143, 
+            "global": 0.48374461417939685, 
+            "species": "Epigonichthys||Fasciola"
+        }, 
+        {
+            "filtered": 0.4642857142857143, 
+            "global": 0.48805327066196624, 
+            "species": "Daphnia||Fasciola"
+        }, 
+        {
+            "filtered": 0.3928571428571428, 
+            "global": 0.481394437916177, 
+            "species": "Homo||Fasciola"
+        }, 
+        {
+            "filtered": 0.3214285714285714, 
+            "global": 0.42890716803760287, 
+            "species": "Blanceolatum||Fasciola"
+        }, 
+        {
+            "filtered": 0.4285714285714286, 
+            "global": 0.4935370152761457, 
+            "species": "Saccoglossus||Fasciola"
+        }, 
+        {
+            "filtered": 0.9285714285714286, 
+            "global": 0.6807677242459851, 
+            "species": "Lumbricus||Patiria"
+        }, 
+        {
+            "filtered": 0.75, 
+            "global": 0.609087348217783, 
+            "species": "Halocynthia||Patiria"
+        }, 
+        {
+            "filtered": 0.9642857142857143, 
+            "global": 0.6976106541323933, 
+            "species": "Limulus||Patiria"
+        }, 
+        {
+            "filtered": 0.5357142857142857, 
+            "global": 0.5757931844888367, 
+            "species": "Caenorhabditis||Patiria"
+        }, 
+        {
+            "filtered": 0.8571428571428571, 
+            "global": 0.6713670191931062, 
+            "species": "Axinella||Patiria"
+        }, 
+        {
+            "filtered": 0.9285714285714286, 
+            "global": 0.6674500587544065, 
+            "species": "Terebratulina||Patiria"
+        }, 
+        {
+            "filtered": 0.25, 
+            "global": 0.4430082256169212, 
+            "species": "Bfloridae||Patiria"
+        }, 
+        {
+            "filtered": 0.9285714285714286, 
+            "global": 0.6956521739130435, 
+            "species": "Katharina||Patiria"
+        }, 
+        {
+            "filtered": 0.8214285714285714, 
+            "global": 0.6788092440266353, 
+            "species": "Geodia||Patiria"
+        }, 
+        {
+            "filtered": 0.8928571428571429, 
+            "global": 0.6513905209557384, 
+            "species": "Metridium||Patiria"
+        }, 
+        {
+            "filtered": 0.7857142857142857, 
+            "global": 0.6337641989815903, 
+            "species": "Acropora||Patiria"
+        }, 
+        {
+            "filtered": 0.6428571428571429, 
+            "global": 0.43282412847630236, 
+            "species": "Trichinella||Patiria"
+        }, 
+        {
+            "filtered": 0.9642857142857143, 
+            "global": 0.7594986290638465, 
+            "species": "Balanoglossus||Patiria"
+        }, 
+        {
+            "filtered": 0.9285714285714286, 
+            "global": 0.6936936936936937, 
+            "species": "Drosophila||Patiria"
+        }, 
+        {
+            "filtered": 0.8214285714285714, 
+            "global": 0.6654915785350568, 
+            "species": "Myxine||Patiria"
+        }, 
+        {
+            "filtered": 0.7142857142857143, 
+            "global": 0.5793184488836662, 
+            "species": "Ciona||Patiria"
+        }, 
+        {
+            "filtered": 0.9642857142857143, 
+            "global": 0.6936936936936937, 
+            "species": "Epigonichthys||Patiria"
+        }, 
+        {
+            "filtered": 0.9642857142857143, 
+            "global": 0.6987857422640031, 
+            "species": "Daphnia||Patiria"
+        }, 
+        {
+            "filtered": 0.8928571428571429, 
+            "global": 0.6866431649040344, 
+            "species": "Homo||Patiria"
+        }, 
+        {
+            "filtered": 0.2142857142857143, 
+            "global": 0.44065804935370156, 
+            "species": "Blanceolatum||Patiria"
+        }, 
+        {
+            "filtered": 0.9642857142857143, 
+            "global": 0.7442224833529182, 
+            "species": "Saccoglossus||Patiria"
+        }, 
+        {
+            "filtered": 0.75, 
+            "global": 0.6255385820603212, 
+            "species": "Halocynthia||Lumbricus"
+        }, 
+        {
+            "filtered": 0.9642857142857143, 
+            "global": 0.6854680767724246, 
+            "species": "Limulus||Lumbricus"
+        }, 
+        {
+            "filtered": 0.5714285714285714, 
+            "global": 0.6036036036036037, 
+            "species": "Caenorhabditis||Lumbricus"
+        }, 
+        {
+            "filtered": 0.8571428571428571, 
+            "global": 0.6533490011750881, 
+            "species": "Axinella||Lumbricus"
+        }, 
+        {
+            "filtered": 0.9642857142857143, 
+            "global": 0.7164120642381512, 
+            "species": "Terebratulina||Lumbricus"
+        }, 
+        {
+            "filtered": 0.2857142857142857, 
+            "global": 0.42420681551116335, 
+            "species": "Bfloridae||Lumbricus"
+        }, 
+        {
+            "filtered": 0.9642857142857143, 
+            "global": 0.7309048178613397, 
+            "species": "Katharina||Lumbricus"
+        }, 
+        {
+            "filtered": 0.7857142857142857, 
+            "global": 0.6396396396396397, 
+            "species": "Geodia||Lumbricus"
+        }, 
+        {
+            "filtered": 0.8928571428571429, 
+            "global": 0.6130043086564826, 
+            "species": "Metridium||Lumbricus"
+        }, 
+        {
+            "filtered": 0.7857142857142857, 
+            "global": 0.599294947121034, 
+            "species": "Acropora||Lumbricus"
+        }, 
+        {
+            "filtered": 0.6428571428571429, 
+            "global": 0.44418331374853115, 
+            "species": "Trichinella||Lumbricus"
+        }, 
+        {
+            "filtered": 0.8928571428571429, 
+            "global": 0.709361535448492, 
+            "species": "Balanoglossus||Lumbricus"
+        }, 
+        {
+            "filtered": 0.9285714285714286, 
+            "global": 0.6933019976498237, 
+            "species": "Drosophila||Lumbricus"
+        }, 
+        {
+            "filtered": 0.8571428571428571, 
+            "global": 0.672933803368586, 
+            "species": "Myxine||Lumbricus"
+        }, 
+        {
+            "filtered": 0.7857142857142857, 
+            "global": 0.5840188014101058, 
+            "species": "Ciona||Lumbricus"
+        }, 
+        {
+            "filtered": 0.9642857142857143, 
+            "global": 0.6666666666666666, 
+            "species": "Epigonichthys||Lumbricus"
+        }, 
+        {
+            "filtered": 0.9642857142857143, 
+            "global": 0.6933019976498237, 
+            "species": "Daphnia||Lumbricus"
+        }, 
+        {
+            "filtered": 0.8214285714285714, 
+            "global": 0.6933019976498237, 
+            "species": "Homo||Lumbricus"
+        }, 
+        {
+            "filtered": 0.25, 
+            "global": 0.4296905601253427, 
+            "species": "Blanceolatum||Lumbricus"
+        }, 
+        {
+            "filtered": 0.8928571428571429, 
+            "global": 0.7034860947904427, 
+            "species": "Saccoglossus||Lumbricus"
+        }, 
+        {
+            "filtered": 0.7857142857142857, 
+            "global": 0.6047786917352135, 
+            "species": "Limulus||Halocynthia"
+        }, 
+        {
+            "filtered": 0.5, 
+            "global": 0.5949862906384645, 
+            "species": "Caenorhabditis||Halocynthia"
+        }, 
+        {
+            "filtered": 0.7857142857142857, 
+            "global": 0.5957696827262045, 
+            "species": "Axinella||Halocynthia"
+        }, 
+        {
+            "filtered": 0.75, 
+            "global": 0.6196631414022719, 
+            "species": "Terebratulina||Halocynthia"
+        }, 
+        {
+            "filtered": 0.25, 
+            "global": 0.4144144144144144, 
+            "species": "Bfloridae||Halocynthia"
+        }, 
+        {
+            "filtered": 0.75, 
+            "global": 0.627888758323541, 
+            "species": "Katharina||Halocynthia"
+        }, 
+        {
+            "filtered": 0.7142857142857143, 
+            "global": 0.5910693301997649, 
+            "species": "Geodia||Halocynthia"
+        }, 
+        {
+            "filtered": 0.75, 
+            "global": 0.5781433607520564, 
+            "species": "Metridium||Halocynthia"
+        }, 
+        {
+            "filtered": 0.6785714285714286, 
+            "global": 0.5750097924010967, 
+            "species": "Acropora||Halocynthia"
+        }, 
+        {
+            "filtered": 0.5714285714285714, 
+            "global": 0.4375244810027419, 
+            "species": "Trichinella||Halocynthia"
+        }, 
+        {
+            "filtered": 0.7142857142857143, 
+            "global": 0.6321974148061105, 
+            "species": "Balanoglossus||Halocynthia"
+        }, 
+        {
+            "filtered": 0.75, 
+            "global": 0.618096357226792, 
+            "species": "Drosophila||Halocynthia"
+        }, 
+        {
+            "filtered": 0.7857142857142857, 
+            "global": 0.6259302781041911, 
+            "species": "Myxine||Halocynthia"
+        }, 
+        {
+            "filtered": 0.75, 
+            "global": 0.6447316882099491, 
+            "species": "Ciona||Halocynthia"
+        }, 
+        {
+            "filtered": 0.7857142857142857, 
+            "global": 0.6153544849197023, 
+            "species": "Epigonichthys||Halocynthia"
+        }, 
+        {
+            "filtered": 0.7857142857142857, 
+            "global": 0.6224050137093615, 
+            "species": "Daphnia||Halocynthia"
+        }, 
+        {
+            "filtered": 0.75, 
+            "global": 0.6321974148061105, 
+            "species": "Homo||Halocynthia"
+        }, 
+        {
+            "filtered": 0.2142857142857143, 
+            "global": 0.41284763023893456, 
+            "species": "Blanceolatum||Halocynthia"
+        }, 
+        {
+            "filtered": 0.7142857142857143, 
+            "global": 0.6282804543674109, 
+            "species": "Saccoglossus||Halocynthia"
+        }, 
+        {
+            "filtered": 0.5714285714285714, 
+            "global": 0.5879357618488054, 
+            "species": "Caenorhabditis||Limulus"
+        }, 
+        {
+            "filtered": 0.8928571428571429, 
+            "global": 0.6439482961222092, 
+            "species": "Axinella||Limulus"
+        }, 
+        {
+            "filtered": 0.9642857142857143, 
+            "global": 0.6678417547982766, 
+            "species": "Terebratulina||Limulus"
+        }, 
+        {
+            "filtered": 0.2857142857142857, 
+            "global": 0.4379161770466118, 
+            "species": "Bfloridae||Limulus"
+        }, 
+        {
+            "filtered": 0.9642857142857143, 
+            "global": 0.6882099490795143, 
+            "species": "Katharina||Limulus"
+        }, 
+        {
+            "filtered": 0.8214285714285714, 
+            "global": 0.6376811594202898, 
+            "species": "Geodia||Limulus"
+        }, 
+        {
+            "filtered": 0.9285714285714286, 
+            "global": 0.6498237367802585, 
+            "species": "Metridium||Limulus"
+        }, 
+        {
+            "filtered": 0.8214285714285714, 
+            "global": 0.6400313356835096, 
+            "species": "Acropora||Limulus"
+        }, 
+        {
+            "filtered": 0.6428571428571429, 
+            "global": 0.42381511946729344, 
+            "species": "Trichinella||Limulus"
+        }, 
+        {
+            "filtered": 0.9285714285714286, 
+            "global": 0.6960438699569135, 
+            "species": "Balanoglossus||Limulus"
+        }, 
+        {
+            "filtered": 0.9642857142857143, 
+            "global": 0.7696827262044653, 
+            "species": "Drosophila||Limulus"
+        }, 
+        {
+            "filtered": 0.8571428571428571, 
+            "global": 0.672933803368586, 
+            "species": "Myxine||Limulus"
+        }, 
+        {
+            "filtered": 0.75, 
+            "global": 0.5714845280062671, 
+            "species": "Ciona||Limulus"
+        }, 
+        {
+            "filtered": 1.0, 
+            "global": 0.6803760282021152, 
+            "species": "Epigonichthys||Limulus"
+        }, 
+        {
+            "filtered": 1.0, 
+            "global": 0.754014884449667, 
+            "species": "Daphnia||Limulus"
+        }, 
+        {
+            "filtered": 0.8571428571428571, 
+            "global": 0.6983940462201331, 
+            "species": "Homo||Limulus"
+        }, 
+        {
+            "filtered": 0.25, 
+            "global": 0.44065804935370156, 
+            "species": "Blanceolatum||Limulus"
+        }, 
+        {
+            "filtered": 0.9285714285714286, 
+            "global": 0.6901684292988641, 
+            "species": "Saccoglossus||Limulus"
+        }, 
+        {
+            "filtered": 0.5357142857142857, 
+            "global": 0.563258911084998, 
+            "species": "Axinella||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.5714285714285714, 
+            "global": 0.5910693301997649, 
+            "species": "Terebratulina||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.1785714285714286, 
+            "global": 0.39992166079122593, 
+            "species": "Bfloridae||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.5714285714285714, 
+            "global": 0.599686643164904, 
+            "species": "Katharina||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.5, 
+            "global": 0.5671758715236976, 
+            "species": "Geodia||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.5714285714285714, 
+            "global": 0.5515080297688993, 
+            "species": "Metridium||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.5714285714285714, 
+            "global": 0.5518997258127692, 
+            "species": "Acropora||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.5714285714285714, 
+            "global": 0.45201723462593035, 
+            "species": "Trichinella||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.5, 
+            "global": 0.6071288679984332, 
+            "species": "Balanoglossus||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.5714285714285714, 
+            "global": 0.6012534273403839, 
+            "species": "Drosophila||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.5357142857142857, 
+            "global": 0.590677634155895, 
+            "species": "Myxine||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.4642857142857143, 
+            "global": 0.564042303172738, 
+            "species": "Ciona||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.5714285714285714, 
+            "global": 0.5742264003133568, 
+            "species": "Epigonichthys||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.5714285714285714, 
+            "global": 0.5989032510771641, 
+            "species": "Daphnia||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.4642857142857143, 
+            "global": 0.5859772816294555, 
+            "species": "Homo||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.1428571428571428, 
+            "global": 0.40070505287896596, 
+            "species": "Blanceolatum||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.5, 
+            "global": 0.6008617312965139, 
+            "species": "Saccoglossus||Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.8571428571428571, 
+            "global": 0.6537406972189581, 
+            "species": "Terebratulina||Axinella"
+        }, 
+        {
+            "filtered": 0.2857142857142857, 
+            "global": 0.40383862122992564, 
+            "species": "Bfloridae||Axinella"
+        }, 
+        {
+            "filtered": 0.8571428571428571, 
+            "global": 0.6678417547982766, 
+            "species": "Katharina||Axinella"
+        }, 
+        {
+            "filtered": 0.8928571428571429, 
+            "global": 0.8041519780650216, 
+            "species": "Geodia||Axinella"
+        }, 
+        {
+            "filtered": 0.9285714285714286, 
+            "global": 0.7305131218174696, 
+            "species": "Metridium||Axinella"
+        }, 
+        {
+            "filtered": 0.8571428571428571, 
+            "global": 0.7007442224833529, 
+            "species": "Acropora||Axinella"
+        }, 
+        {
+            "filtered": 0.6428571428571429, 
+            "global": 0.4140227183705445, 
+            "species": "Trichinella||Axinella"
+        }, 
+        {
+            "filtered": 0.8571428571428571, 
+            "global": 0.6925186055620838, 
+            "species": "Balanoglossus||Axinella"
+        }, 
+        {
+            "filtered": 0.8571428571428571, 
+            "global": 0.6486486486486487, 
+            "species": "Drosophila||Axinella"
+        }, 
+        {
+            "filtered": 0.8214285714285714, 
+            "global": 0.6427732079905993, 
+            "species": "Myxine||Axinella"
+        }, 
+        {
+            "filtered": 0.7142857142857143, 
+            "global": 0.5530748139443792, 
+            "species": "Ciona||Axinella"
+        }, 
+        {
+            "filtered": 0.8928571428571429, 
+            "global": 0.6517822169996083, 
+            "species": "Epigonichthys||Axinella"
+        }, 
+        {
+            "filtered": 0.8928571428571429, 
+            "global": 0.6498237367802585, 
+            "species": "Daphnia||Axinella"
+        }, 
+        {
+            "filtered": 0.7857142857142857, 
+            "global": 0.6635330983157071, 
+            "species": "Homo||Axinella"
+        }, 
+        {
+            "filtered": 0.25, 
+            "global": 0.40462201331766545, 
+            "species": "Blanceolatum||Axinella"
+        }, 
+        {
+            "filtered": 0.8571428571428571, 
+            "global": 0.6897767332549941, 
+            "species": "Saccoglossus||Axinella"
+        }, 
+        {
+            "filtered": 0.2857142857142857, 
+            "global": 0.41167254210732473, 
+            "species": "Bfloridae||Terebratulina"
+        }, 
+        {
+            "filtered": 0.9642857142857143, 
+            "global": 0.7215041128084606, 
+            "species": "Katharina||Terebratulina"
+        }, 
+        {
+            "filtered": 0.7857142857142857, 
+            "global": 0.6396396396396397, 
+            "species": "Geodia||Terebratulina"
+        }, 
+        {
+            "filtered": 0.8928571428571429, 
+            "global": 0.6188797493145319, 
+            "species": "Metridium||Terebratulina"
+        }, 
+        {
+            "filtered": 0.7857142857142857, 
+            "global": 0.6039952996474736, 
+            "species": "Acropora||Terebratulina"
+        }, 
+        {
+            "filtered": 0.6428571428571429, 
+            "global": 0.44379161770466125, 
+            "species": "Trichinella||Terebratulina"
+        }, 
+        {
+            "filtered": 0.8928571428571429, 
+            "global": 0.6835095965530749, 
+            "species": "Balanoglossus||Terebratulina"
+        }, 
+        {
+            "filtered": 0.9285714285714286, 
+            "global": 0.6886016451233843, 
+            "species": "Drosophila||Terebratulina"
+        }, 
+        {
+            "filtered": 0.8571428571428571, 
+            "global": 0.672542107324716, 
+            "species": "Myxine||Terebratulina"
+        }, 
+        {
+            "filtered": 0.75, 
+            "global": 0.5734430082256169, 
+            "species": "Ciona||Terebratulina"
+        }, 
+        {
+            "filtered": 0.9642857142857143, 
+            "global": 0.6521739130434783, 
+            "species": "Epigonichthys||Terebratulina"
+        }, 
+        {
+            "filtered": 0.9642857142857143, 
+            "global": 0.681942812377595, 
+            "species": "Daphnia||Terebratulina"
+        }, 
+        {
+            "filtered": 0.8214285714285714, 
+            "global": 0.6780258519388954, 
+            "species": "Homo||Terebratulina"
+        }, 
+        {
+            "filtered": 0.25, 
+            "global": 0.41284763023893456, 
+            "species": "Blanceolatum||Terebratulina"
+        }, 
+        {
+            "filtered": 0.8928571428571429, 
+            "global": 0.6803760282021152, 
+            "species": "Saccoglossus||Terebratulina"
+        }, 
+        {
+            "filtered": 0.2857142857142857, 
+            "global": 0.4296905601253427, 
+            "species": "Katharina||Bfloridae"
+        }, 
+        {
+            "filtered": 0.2142857142857143, 
+            "global": 0.40893066980023507, 
+            "species": "Geodia||Bfloridae"
+        }, 
+        {
+            "filtered": 0.2857142857142857, 
+            "global": 0.43243243243243246, 
+            "species": "Metridium||Bfloridae"
+        }, 
+        {
+            "filtered": 0.25, 
+            "global": 0.4292988640814728, 
+            "species": "Acropora||Bfloridae"
+        }, 
+        {
+            "filtered": 0.1428571428571428, 
+            "global": 0.2710536623580102, 
+            "species": "Trichinella||Bfloridae"
+        }, 
+        {
+            "filtered": 0.2857142857142857, 
+            "global": 0.45632589110849975, 
+            "species": "Balanoglossus||Bfloridae"
+        }, 
+        {
+            "filtered": 0.2857142857142857, 
+            "global": 0.4551508029768899, 
+            "species": "Drosophila||Bfloridae"
+        }, 
+        {
+            "filtered": 0.2857142857142857, 
+            "global": 0.42146494320407357, 
+            "species": "Myxine||Bfloridae"
+        }, 
+        {
+            "filtered": 0.2857142857142857, 
+            "global": 0.4054054054054055, 
+            "species": "Ciona||Bfloridae"
+        }, 
+        {
+            "filtered": 0.2857142857142857, 
+            "global": 0.5471993732863298, 
+            "species": "Epigonichthys||Bfloridae"
+        }, 
+        {
+            "filtered": 0.2857142857142857, 
+            "global": 0.4512338425381903, 
+            "species": "Daphnia||Bfloridae"
+        }, 
+        {
+            "filtered": 0.25, 
+            "global": 0.4386995691343518, 
+            "species": "Homo||Bfloridae"
+        }, 
+        {
+            "filtered": 0.9642857142857143, 
+            "global": 0.9522130826478653, 
+            "species": "Blanceolatum||Bfloridae"
+        }, 
+        {
+            "filtered": 0.2857142857142857, 
+            "global": 0.44339992166079123, 
+            "species": "Saccoglossus||Bfloridae"
+        }, 
+        {
+            "filtered": 0.7857142857142857, 
+            "global": 0.6509988249118684, 
+            "species": "Geodia||Katharina"
+        }, 
+        {
+            "filtered": 0.8928571428571429, 
+            "global": 0.6341558950254602, 
+            "species": "Metridium||Katharina"
+        }, 
+        {
+            "filtered": 0.7857142857142857, 
+            "global": 0.6212299255777517, 
+            "species": "Acropora||Katharina"
+        }, 
+        {
+            "filtered": 0.6428571428571429, 
+            "global": 0.4418331374853114, 
+            "species": "Trichinella||Katharina"
+        }, 
+        {
+            "filtered": 0.8928571428571429, 
+            "global": 0.7097532314923619, 
+            "species": "Balanoglossus||Katharina"
+        }, 
+        {
+            "filtered": 0.9285714285714286, 
+            "global": 0.7152369761065414, 
+            "species": "Drosophila||Katharina"
+        }, 
+        {
+            "filtered": 0.8571428571428571, 
+            "global": 0.6717587152369761, 
+            "species": "Myxine||Katharina"
+        }, 
+        {
+            "filtered": 0.75, 
+            "global": 0.5824520172346259, 
+            "species": "Ciona||Katharina"
+        }, 
+        {
+            "filtered": 0.9642857142857143, 
+            "global": 0.6854680767724246, 
+            "species": "Epigonichthys||Katharina"
+        }, 
+        {
+            "filtered": 0.9642857142857143, 
+            "global": 0.7042694868781826, 
+            "species": "Daphnia||Katharina"
+        }, 
+        {
+            "filtered": 0.8214285714285714, 
+            "global": 0.6839012925969448, 
+            "species": "Homo||Katharina"
+        }, 
+        {
+            "filtered": 0.25, 
+            "global": 0.4304739522130827, 
+            "species": "Blanceolatum||Katharina"
+        }, 
+        {
+            "filtered": 0.8928571428571429, 
+            "global": 0.7030943987465726, 
+            "species": "Saccoglossus||Katharina"
+        }, 
+        {
+            "filtered": 0.8928571428571429, 
+            "global": 0.7328632980806894, 
+            "species": "Metridium||Geodia"
+        }, 
+        {
+            "filtered": 0.7857142857142857, 
+            "global": 0.6980023501762632, 
+            "species": "Acropora||Geodia"
+        }, 
+        {
+            "filtered": 0.6071428571428571, 
+            "global": 0.41676459067763416, 
+            "species": "Trichinella||Geodia"
+        }, 
+        {
+            "filtered": 0.8214285714285714, 
+            "global": 0.681942812377595, 
+            "species": "Balanoglossus||Geodia"
+        }, 
+        {
+            "filtered": 0.7857142857142857, 
+            "global": 0.6396396396396397, 
+            "species": "Drosophila||Geodia"
+        }, 
+        {
+            "filtered": 0.75, 
+            "global": 0.6298472385428907, 
+            "species": "Myxine||Geodia"
+        }, 
+        {
+            "filtered": 0.6428571428571429, 
+            "global": 0.5534665099882491, 
+            "species": "Ciona||Geodia"
+        }, 
+        {
+            "filtered": 0.8214285714285714, 
+            "global": 0.6443399921660791, 
+            "species": "Epigonichthys||Geodia"
+        }, 
+        {
+            "filtered": 0.8214285714285714, 
+            "global": 0.6490403446925186, 
+            "species": "Daphnia||Geodia"
+        }, 
+        {
+            "filtered": 0.75, 
+            "global": 0.6490403446925186, 
+            "species": "Homo||Geodia"
+        }, 
+        {
+            "filtered": 0.1785714285714286, 
+            "global": 0.4108891500195848, 
+            "species": "Blanceolatum||Geodia"
+        }, 
+        {
+            "filtered": 0.8214285714285714, 
+            "global": 0.6784175479827653, 
+            "species": "Saccoglossus||Geodia"
+        }, 
+        {
+            "filtered": 0.8571428571428571, 
+            "global": 0.8194281237759499, 
+            "species": "Acropora||Metridium"
+        }, 
+        {
+            "filtered": 0.6428571428571429, 
+            "global": 0.3858206032119076, 
+            "species": "Trichinella||Metridium"
+        }, 
+        {
+            "filtered": 0.8928571428571429, 
+            "global": 0.6529573051312182, 
+            "species": "Balanoglossus||Metridium"
+        }, 
+        {
+            "filtered": 0.8928571428571429, 
+            "global": 0.6529573051312182, 
+            "species": "Drosophila||Metridium"
+        }, 
+        {
+            "filtered": 0.7857142857142857, 
+            "global": 0.6008617312965139, 
+            "species": "Myxine||Metridium"
+        }, 
+        {
+            "filtered": 0.7142857142857143, 
+            "global": 0.5346650998824912, 
+            "species": "Ciona||Metridium"
+        }, 
+        {
+            "filtered": 0.9285714285714286, 
+            "global": 0.6752839796318058, 
+            "species": "Epigonichthys||Metridium"
+        }, 
+        {
+            "filtered": 0.9285714285714286, 
+            "global": 0.6462984723854289, 
+            "species": "Daphnia||Metridium"
+        }, 
+        {
+            "filtered": 0.7857142857142857, 
+            "global": 0.6325891108499804, 
+            "species": "Homo||Metridium"
+        }, 
+        {
+            "filtered": 0.25, 
+            "global": 0.43243243243243246, 
+            "species": "Blanceolatum||Metridium"
+        }, 
+        {
+            "filtered": 0.8928571428571429, 
+            "global": 0.6533490011750881, 
+            "species": "Saccoglossus||Metridium"
+        }, 
+        {
+            "filtered": 0.5357142857142857, 
+            "global": 0.3795534665099882, 
+            "species": "Trichinella||Acropora"
+        }, 
+        {
+            "filtered": 0.7857142857142857, 
+            "global": 0.63650607128868, 
+            "species": "Balanoglossus||Acropora"
+        }, 
+        {
+            "filtered": 0.7857142857142857, 
+            "global": 0.63572267920094, 
+            "species": "Drosophila||Acropora"
+        }, 
+        {
+            "filtered": 0.7142857142857143, 
+            "global": 0.5898942420681551, 
+            "species": "Myxine||Acropora"
+        }, 
+        {
+            "filtered": 0.6428571428571429, 
+            "global": 0.5287896592244419, 
+            "species": "Ciona||Acropora"
+        }, 
+        {
+            "filtered": 0.8214285714285714, 
+            "global": 0.6709753231492362, 
+            "species": "Epigonichthys||Acropora"
+        }, 
+        {
+            "filtered": 0.8214285714285714, 
+            "global": 0.6345475910693302, 
+            "species": "Daphnia||Acropora"
+        }, 
+        {
+            "filtered": 0.7142857142857143, 
+            "global": 0.6188797493145319, 
+            "species": "Homo||Acropora"
+        }, 
+        {
+            "filtered": 0.2142857142857143, 
+            "global": 0.4300822561692127, 
+            "species": "Blanceolatum||Acropora"
+        }, 
+        {
+            "filtered": 0.7857142857142857, 
+            "global": 0.6353309831570702, 
+            "species": "Saccoglossus||Acropora"
+        }, 
+        {
+            "filtered": 0.6071428571428571, 
+            "global": 0.4351743047395221, 
+            "species": "Balanoglossus||Trichinella"
+        }, 
+        {
+            "filtered": 0.6428571428571429, 
+            "global": 0.4422248335291814, 
+            "species": "Drosophila||Trichinella"
+        }, 
+        {
+            "filtered": 0.6071428571428571, 
+            "global": 0.4343909126517822, 
+            "species": "Myxine||Trichinella"
+        }, 
+        {
+            "filtered": 0.5714285714285714, 
+            "global": 0.4465334900117508, 
+            "species": "Ciona||Trichinella"
+        }, 
+        {
+            "filtered": 0.6428571428571429, 
+            "global": 0.41676459067763416, 
+            "species": "Epigonichthys||Trichinella"
+        }, 
+        {
+            "filtered": 0.6428571428571429, 
+            "global": 0.43204073638856255, 
+            "species": "Daphnia||Trichinella"
+        }, 
+        {
+            "filtered": 0.5714285714285714, 
+            "global": 0.43595769682726204, 
+            "species": "Homo||Trichinella"
+        }, 
+        {
+            "filtered": 0.1071428571428571, 
+            "global": 0.26987857422640027, 
+            "species": "Blanceolatum||Trichinella"
+        }, 
+        {
+            "filtered": 0.6071428571428571, 
+            "global": 0.43556600078339214, 
+            "species": "Saccoglossus||Trichinella"
+        }, 
+        {
+            "filtered": 0.8928571428571429, 
+            "global": 0.7117117117117117, 
+            "species": "Drosophila||Balanoglossus"
+        }, 
+        {
+            "filtered": 0.7857142857142857, 
+            "global": 0.691343517430474, 
+            "species": "Myxine||Balanoglossus"
+        }, 
+        {
+            "filtered": 0.6785714285714286, 
+            "global": 0.5871523697610654, 
+            "species": "Ciona||Balanoglossus"
+        }, 
+        {
+            "filtered": 0.9285714285714286, 
+            "global": 0.7152369761065414, 
+            "species": "Epigonichthys||Balanoglossus"
+        }, 
+        {
+            "filtered": 0.9285714285714286, 
+            "global": 0.7097532314923619, 
+            "species": "Daphnia||Balanoglossus"
+        }, 
+        {
+            "filtered": 0.8571428571428571, 
+            "global": 0.7226792009400705, 
+            "species": "Homo||Balanoglossus"
+        }, 
+        {
+            "filtered": 0.25, 
+            "global": 0.45593419506462984, 
+            "species": "Blanceolatum||Balanoglossus"
+        }, 
+        {
+            "filtered": 1.0, 
+            "global": 0.8331374853113983, 
+            "species": "Saccoglossus||Balanoglossus"
+        }, 
+        {
+            "filtered": 0.8214285714285714, 
+            "global": 0.6713670191931062, 
+            "species": "Myxine||Drosophila"
+        }, 
+        {
+            "filtered": 0.7142857142857143, 
+            "global": 0.5804935370152762, 
+            "species": "Ciona||Drosophila"
+        }, 
+        {
+            "filtered": 0.9642857142857143, 
+            "global": 0.7023110066588327, 
+            "species": "Epigonichthys||Drosophila"
+        }, 
+        {
+            "filtered": 0.9642857142857143, 
+            "global": 0.7712495103799452, 
+            "species": "Daphnia||Drosophila"
+        }, 
+        {
+            "filtered": 0.8214285714285714, 
+            "global": 0.6936936936936937, 
+            "species": "Homo||Drosophila"
+        }, 
+        {
+            "filtered": 0.25, 
+            "global": 0.45280062671367016, 
+            "species": "Blanceolatum||Drosophila"
+        }, 
+        {
+            "filtered": 0.8928571428571429, 
+            "global": 0.7046611829220525, 
+            "species": "Saccoglossus||Drosophila"
+        }, 
+        {
+            "filtered": 0.7857142857142857, 
+            "global": 0.5918527222875049, 
+            "species": "Ciona||Myxine"
+        }, 
+        {
+            "filtered": 0.8571428571428571, 
+            "global": 0.6701919310614963, 
+            "species": "Epigonichthys||Myxine"
+        }, 
+        {
+            "filtered": 0.8571428571428571, 
+            "global": 0.6701919310614963, 
+            "species": "Daphnia||Myxine"
+        }, 
+        {
+            "filtered": 0.8571428571428571, 
+            "global": 0.7187622405013709, 
+            "species": "Homo||Myxine"
+        }, 
+        {
+            "filtered": 0.25, 
+            "global": 0.4218566392479436, 
+            "species": "Blanceolatum||Myxine"
+        }, 
+        {
+            "filtered": 0.7857142857142857, 
+            "global": 0.6854680767724246, 
+            "species": "Saccoglossus||Myxine"
+        }, 
+        {
+            "filtered": 0.75, 
+            "global": 0.5773599686643165, 
+            "species": "Epigonichthys||Ciona"
+        }, 
+        {
+            "filtered": 0.75, 
+            "global": 0.5797101449275363, 
+            "species": "Daphnia||Ciona"
+        }, 
+        {
+            "filtered": 0.75, 
+            "global": 0.5801018409714062, 
+            "species": "Homo||Ciona"
+        }, 
+        {
+            "filtered": 0.25, 
+            "global": 0.40383862122992564, 
+            "species": "Blanceolatum||Ciona"
+        }, 
+        {
+            "filtered": 0.6785714285714286, 
+            "global": 0.582060321190756, 
+            "species": "Saccoglossus||Ciona"
+        }, 
+        {
+            "filtered": 1.0, 
+            "global": 0.6944770857814336, 
+            "species": "Daphnia||Epigonichthys"
+        }, 
+        {
+            "filtered": 0.8571428571428571, 
+            "global": 0.6866431649040344, 
+            "species": "Homo||Epigonichthys"
+        }, 
+        {
+            "filtered": 0.25, 
+            "global": 0.5471993732863298, 
+            "species": "Blanceolatum||Epigonichthys"
+        }, 
+        {
+            "filtered": 0.9285714285714286, 
+            "global": 0.7027027027027027, 
+            "species": "Saccoglossus||Epigonichthys"
+        }, 
+        {
+            "filtered": 0.8571428571428571, 
+            "global": 0.6846846846846847, 
+            "species": "Homo||Daphnia"
+        }, 
+        {
+            "filtered": 0.25, 
+            "global": 0.4496670583627105, 
+            "species": "Blanceolatum||Daphnia"
+        }, 
+        {
+            "filtered": 0.9285714285714286, 
+            "global": 0.6983940462201331, 
+            "species": "Saccoglossus||Daphnia"
+        }, 
+        {
+            "filtered": 0.2142857142857143, 
+            "global": 0.4426165295730513, 
+            "species": "Blanceolatum||Homo"
+        }, 
+        {
+            "filtered": 0.8571428571428571, 
+            "global": 0.7211124167645907, 
+            "species": "Saccoglossus||Homo"
+        }, 
+        {
+            "filtered": 0.25, 
+            "global": 0.4465334900117508, 
+            "species": "Saccoglossus||Blanceolatum"
+        }
+    ]
+}

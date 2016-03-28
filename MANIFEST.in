@@ -2,3 +2,4 @@ include *.md
 include *.txt
 include LICENSE
 recursive-include coretracker/classifier/model *
+global-exclude .git*
