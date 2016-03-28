@@ -14,13 +14,10 @@ from coretracker import __project__, __version__
 sys.path.insert(0, os.path.realpath(os.path.join(os.path.dirname(__file__), "python")))
 
 def configuration(top_path=None) :
-
     fisher_exact = Extension(name='coretracker.FisherExact.statlib.fexact', sources=[os.path.join(top_path, 'coretracker/FisherExact/statlib', 'FEXACT.F90')])
     asa159 = Extension(name='coretracker.FisherExact.statlib.asa159', sources=[os.path.join(top_path, 'coretracker/FisherExact/statlib', 'asa159.f90')])
     asa205 = Extension(name='coretracker.FisherExact.statlib.asa205', sources=[os.path.join(top_path, 'coretracker/FisherExact/statlib', 'asa205.f90')])
     return [fisher_exact, asa205, asa159]
-
-
 
 def setup_package():
     if os.path.exists('README.md'):
@@ -40,7 +37,7 @@ def setup_package():
         url='https://github.com/UdeM-LBIT/CoreTracker',
         author='Emmanuel Noutahi',
         author_email='fmr.noutahi@umontreal.ca',
-        scripts = ['bin/coretracker', 'bin/translate', 'bin/fusion'],
+        scripts = ['bin/coretracker', 'bin/coretranslate', 'bin/corefusion'],
 
         entry_points={'console_scripts': []},
 
