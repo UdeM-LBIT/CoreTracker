@@ -67,7 +67,6 @@ def setup_package():
             'matplotlib',
             'WeasyPrint',
             'PyYAML',
-            'PyQt4',
         ],
         ext_modules = fortran_extnsion
     )
