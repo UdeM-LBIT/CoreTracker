@@ -6,6 +6,7 @@ import itertools
 import json
 import logging
 import os
+import re
 import random
 import shutil
 import subprocess
@@ -67,6 +68,8 @@ aa_letters_1to3 = {
 AVAILABLE_MAT = MatrixInfo.available_matrices
 # define array to contains temp values
 glob_purge = []
+# hmm strange id
+hmmidpattern = re.compile("^\d+\|\w+")
 # define lowest pvalue
 eps = np.finfo(np.float).eps
 aa_letters_3to1 = dict((x[1], x[0]) for x in aa_letters_1to3.items())
@@ -205,7 +208,7 @@ class SequenceLoader:
                     adding = spec_dict[spec]
                     dna_adding = dna_spec_dict[spec]
                     # guess in this case there is a stop inside the dna
-                    if self.dnastop and len(adding.seq.ungap(missing))*3 +3 == len(dna_adding.seq):
+                    if self.dnastop and len(adding.seq.ungap(missing))*3 +3 == len(dna_adding.seq.ungap(missing)):
                         dna_adding = dna_adding[:-3]
 
                 try:
@@ -1413,7 +1416,7 @@ def executeCMD(cmd, prog):
         cmd, shell=True, stderr=subprocess.PIPE, stdout=subprocess.PIPE)
     out, err = p.communicate()
     if err:
-        Output.error(err)
+        logging.debug(err)
     if out:
         logging.debug("%s : \n----------------- %s" % (prog, out))
     return err
@@ -1515,6 +1518,13 @@ def remove_gap_position(alignfile, curformat):
     """Remove all gap position from a file and return a new file"""
     align = AlignIO.read(alignfile, curformat)
     align, positions = SequenceSet.clean_alignment(align, threshold=1)
+    for i in xrange(len(align)):
+        seqname = align._records[i].name
+        if hmmidpattern.match(seqname):
+            seqname = seqname.split('|')[1]
+            align._records[i].name = seqname
+            align._records[i].id = seqname
+
     fastafile = alignfile.split('.')[0] + ".fasta"
     AlignIO.write(align, open(fastafile, 'w'), 'fasta')
     return fastafile
