@@ -70,6 +70,4 @@ out/test/*
 *.jpg
 *.pdf
 
-coretracker.py
-translate.py
-fusion.py
+./*py
