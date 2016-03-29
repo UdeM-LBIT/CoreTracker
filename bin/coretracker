@@ -205,8 +205,9 @@ if __name__ == '__main__':
 
     paramfile = args.params
     ad_params = {}
-    with open(args.params) as f:
-        ad_params = load(f, Loader=Loader)
+    if paramfile :
+        with open(paramfile) as f:
+            ad_params = load(f, Loader=Loader)
 
     setting.set(OUTDIR=args.outdir)
     setting.fill(ad_params)
