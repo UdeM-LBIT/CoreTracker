@@ -84,7 +84,6 @@ class SequenceLoader:
         # try parsing the protein file as a corefile and if it failed
         # parse it as a fasta file
         self.infile = infile
-        self.dnastop = has_stop
         self.sequences = {}
         stop_removed = False
         self.dnasequences = {}
@@ -207,8 +206,8 @@ class SequenceLoader:
                 if(spec in self.common_spec_per_gene[gene]):
                     adding = spec_dict[spec]
                     dna_adding = dna_spec_dict[spec]
-                    # guess in this case there is a stop inside the dna
-                    if self.dnastop and len(adding.seq.ungap(missing))*3 +3 == len(dna_adding.seq.ungap(missing)):
+                    # guess in this case there is a stop at the end of the dna
+                    if len(adding.seq.ungap(missing))*3 +3 == len(dna_adding.seq.ungap(missing)):
                         dna_adding = dna_adding[:-3]
 
                 try:
@@ -781,13 +780,15 @@ class SequenceSet(object):
         # remove every dna sequence that are not cds
         # If you put stop codon in protein, it should be in nucleotide also
         c_genome = set([x for x in common_genome if (
-                len(self.dna_dict[x]) == len(self.prot_dict[x].seq.ungap('-')) * 3)])
+                len(self.dna_dict[x].seq.ungap('-')) == len(self.prot_dict[x].seq.ungap('-')) * 3)])
 
         #print [(x, len(self.dna_dict[x]), len(self.prot_dict[x].seq.ungap('-'))*3, len(self.dna_dict[x])==(len(self.prot_dict[x].seq.ungap('-'))+1)*3) for x in common_genome ]
         if not c_genome:
-            raise ValueError(
-                    'ID intersection for dna, prot and species tree is empty')
+            help1 = "1) Protein length do not match with dna and stop already checked! Look for mistranslation of Frame-shifting"
+            help2 = "2) Wrong tree or sequences name not matching!"
 
+            raise ValueError(
+                    'ID intersection for dna, prot and species tree is empty. Possible cause:\n%s\n%s\n'%(help1, help2))
         common_genome = c_genome
         if len(dna_set) != speclen or len(species_set) != speclen:
             logging.debug(
