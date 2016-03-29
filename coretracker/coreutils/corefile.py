@@ -27,9 +27,9 @@ class CoreFile:
         self.infile = infile
         if isinstance(alphabet, basestring):
             if alphabet.startswith('nuc'):
-                self.alphabet = generic_nucleotide
+                alphabet = generic_nucleotide
             else:
-                self.alphabet = generic_protein
+                alphabet = generic_protein
         self.alphabet = alphabet
         self.sequences = self.parse_corefile(infile)
 

@@ -1,0 +1,1550 @@
+{
+    "Schistosoma": [
+        {
+            "filtered": 0.4081196581196581, 
+            "global": 0.5762695407321099, 
+            "species": "Paracentrotus"
+        }
+    ], 
+    "Fasciola": [
+        {
+            "filtered": 0.4415954415954416, 
+            "global": 0.6030682590542771, 
+            "species": "Paracentrotus"
+        }, 
+        {
+            "filtered": 0.6296296296296297, 
+            "global": 0.7129818428973687, 
+            "species": "Schistosoma"
+        }
+    ], 
+    "Patiria": [
+        {
+            "filtered": 0.8931623931623932, 
+            "global": 0.7582289542674046, 
+            "species": "Paracentrotus"
+        }, 
+        {
+            "filtered": 0.4180911680911681, 
+            "global": 0.5736479269832022, 
+            "species": "Schistosoma"
+        }, 
+        {
+            "filtered": 0.448005698005698, 
+            "global": 0.5931643848917371, 
+            "species": "Fasciola"
+        }
+    ], 
+    "Lumbricus": [
+        {
+            "filtered": 0.7962962962962963, 
+            "global": 0.6816195747159919, 
+            "species": "Paracentrotus"
+        }, 
+        {
+            "filtered": 0.405982905982906, 
+            "global": 0.6064666472473056, 
+            "species": "Schistosoma"
+        }, 
+        {
+            "filtered": 0.44373219373219375, 
+            "global": 0.6232643946014176, 
+            "species": "Fasciola"
+        }, 
+        {
+            "filtered": 0.7970085470085471, 
+            "global": 0.6813282842994466, 
+            "species": "Patiria"
+        }
+    ], 
+    "Halocynthia": [
+        {
+            "filtered": 0.6089743589743589, 
+            "global": 0.6165647150208758, 
+            "species": "Paracentrotus"
+        }, 
+        {
+            "filtered": 0.420940170940171, 
+            "global": 0.6380231090397126, 
+            "species": "Schistosoma"
+        }, 
+        {
+            "filtered": 0.4337606837606838, 
+            "global": 0.6541411787552189, 
+            "species": "Fasciola"
+        }, 
+        {
+            "filtered": 0.6246438746438746, 
+            "global": 0.614719875716089, 
+            "species": "Patiria"
+        }, 
+        {
+            "filtered": 0.603988603988604, 
+            "global": 0.6447227886202543, 
+            "species": "Lumbricus"
+        }
+    ], 
+    "Limulus": [
+        {
+            "filtered": 0.8084045584045584, 
+            "global": 0.6989999029031945, 
+            "species": "Paracentrotus"
+        }, 
+        {
+            "filtered": 0.41310541310541304, 
+            "global": 0.5910282551704049, 
+            "species": "Schistosoma"
+        }, 
+        {
+            "filtered": 0.44373219373219375, 
+            "global": 0.6206427808525099, 
+            "species": "Fasciola"
+        }, 
+        {
+            "filtered": 0.8112535612535613, 
+            "global": 0.7125934556753083, 
+            "species": "Patiria"
+        }, 
+        {
+            "filtered": 0.8084045584045584, 
+            "global": 0.7333721720555394, 
+            "species": "Lumbricus"
+        }, 
+        {
+            "filtered": 0.6225071225071225, 
+            "global": 0.6296727837654141, 
+            "species": "Halocynthia"
+        }
+    ], 
+    "Caenorhabditis": [
+        {
+            "filtered": 0.5562678062678063, 
+            "global": 0.6143314884940285, 
+            "species": "Paracentrotus"
+        }, 
+        {
+            "filtered": 0.42806267806267806, 
+            "global": 0.6740460238858141, 
+            "species": "Schistosoma"
+        }, 
+        {
+            "filtered": 0.4173789173789173, 
+            "global": 0.6829789299932032, 
+            "species": "Fasciola"
+        }, 
+        {
+            "filtered": 0.5605413105413105, 
+            "global": 0.6096708418293039, 
+            "species": "Patiria"
+        }, 
+        {
+            "filtered": 0.5569800569800569, 
+            "global": 0.6444314982037092, 
+            "species": "Lumbricus"
+        }, 
+        {
+            "filtered": 0.5505698005698005, 
+            "global": 0.693659578599864, 
+            "species": "Halocynthia"
+        }, 
+        {
+            "filtered": 0.5804843304843305, 
+            "global": 0.6290902029323235, 
+            "species": "Limulus"
+        }
+    ], 
+    "Axinella": [
+        {
+            "filtered": 0.7913105413105413, 
+            "global": 0.6452082726478299, 
+            "species": "Paracentrotus"
+        }, 
+        {
+            "filtered": 0.40384615384615385, 
+            "global": 0.5611224390717545, 
+            "species": "Schistosoma"
+        }, 
+        {
+            "filtered": 0.44658119658119655, 
+            "global": 0.5869501893387707, 
+            "species": "Fasciola"
+        }, 
+        {
+            "filtered": 0.7913105413105413, 
+            "global": 0.6485095640353432, 
+            "species": "Patiria"
+        }, 
+        {
+            "filtered": 0.7713675213675214, 
+            "global": 0.6723953781920575, 
+            "species": "Lumbricus"
+        }, 
+        {
+            "filtered": 0.6075498575498576, 
+            "global": 0.6137489076609379, 
+            "species": "Halocynthia"
+        }, 
+        {
+            "filtered": 0.7834757834757835, 
+            "global": 0.6469560151471017, 
+            "species": "Limulus"
+        }, 
+        {
+            "filtered": 0.5462962962962963, 
+            "global": 0.6025827750267017, 
+            "species": "Caenorhabditis"
+        }
+    ], 
+    "Terebratulina": [
+        {
+            "filtered": 0.7542735042735043, 
+            "global": 0.6593844062530343, 
+            "species": "Paracentrotus"
+        }, 
+        {
+            "filtered": 0.41951566951566954, 
+            "global": 0.6144285852995437, 
+            "species": "Schistosoma"
+        }, 
+        {
+            "filtered": 0.46225071225071224, 
+            "global": 0.6320031070977765, 
+            "species": "Fasciola"
+        }, 
+        {
+            "filtered": 0.7642450142450142, 
+            "global": 0.6616176327798815, 
+            "species": "Patiria"
+        }, 
+        {
+            "filtered": 0.7898860398860399, 
+            "global": 0.7374502378871736, 
+            "species": "Lumbricus"
+        }, 
+        {
+            "filtered": 0.6239316239316239, 
+            "global": 0.6540440819497039, 
+            "species": "Halocynthia"
+        }, 
+        {
+            "filtered": 0.7962962962962963, 
+            "global": 0.6938537722108943, 
+            "species": "Limulus"
+        }, 
+        {
+            "filtered": 0.5712250712250713, 
+            "global": 0.6488979512574037, 
+            "species": "Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.7443019943019943, 
+            "global": 0.6743373143023594, 
+            "species": "Axinella"
+        }
+    ], 
+    "Bfloridae": [
+        {
+            "filtered": 0.43732193732193725, 
+            "global": 0.6480240800077678, 
+            "species": "Paracentrotus"
+        }, 
+        {
+            "filtered": 0.2685185185185186, 
+            "global": 0.5752985726769589, 
+            "species": "Schistosoma"
+        }, 
+        {
+            "filtered": 0.30270655270655267, 
+            "global": 0.602971162248762, 
+            "species": "Fasciola"
+        }, 
+        {
+            "filtered": 0.4487179487179487, 
+            "global": 0.6539469851441888, 
+            "species": "Patiria"
+        }, 
+        {
+            "filtered": 0.41595441595441596, 
+            "global": 0.6449169822312846, 
+            "species": "Lumbricus"
+        }, 
+        {
+            "filtered": 0.31267806267806275, 
+            "global": 0.583260510729197, 
+            "species": "Halocynthia"
+        }, 
+        {
+            "filtered": 0.43162393162393164, 
+            "global": 0.6538498883386736, 
+            "species": "Limulus"
+        }, 
+        {
+            "filtered": 0.27849002849002846, 
+            "global": 0.5868530925332557, 
+            "species": "Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.41239316239316237, 
+            "global": 0.59607728905719, 
+            "species": "Axinella"
+        }, 
+        {
+            "filtered": 0.39814814814814814, 
+            "global": 0.624623749878629, 
+            "species": "Terebratulina"
+        }
+    ], 
+    "Katharina": [
+        {
+            "filtered": 0.7970085470085471, 
+            "global": 0.6726866686086028, 
+            "species": "Paracentrotus"
+        }, 
+        {
+            "filtered": 0.41310541310541304, 
+            "global": 0.6056898728031848, 
+            "species": "Schistosoma"
+        }, 
+        {
+            "filtered": 0.4444444444444444, 
+            "global": 0.6198660064083892, 
+            "species": "Fasciola"
+        }, 
+        {
+            "filtered": 0.8012820512820513, 
+            "global": 0.6773473152733275, 
+            "species": "Patiria"
+        }, 
+        {
+            "filtered": 0.8198005698005698, 
+            "global": 0.7558986309350423, 
+            "species": "Lumbricus"
+        }, 
+        {
+            "filtered": 0.6153846153846154, 
+            "global": 0.6461792407029808, 
+            "species": "Halocynthia"
+        }, 
+        {
+            "filtered": 0.8162393162393162, 
+            "global": 0.7168657151179726, 
+            "species": "Limulus"
+        }, 
+        {
+            "filtered": 0.5598290598290598, 
+            "global": 0.6423924652878921, 
+            "species": "Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.782051282051282, 
+            "global": 0.6885134479075639, 
+            "species": "Axinella"
+        }, 
+        {
+            "filtered": 0.7948717948717948, 
+            "global": 0.7560928245460724, 
+            "species": "Terebratulina"
+        }, 
+        {
+            "filtered": 0.4237891737891738, 
+            "global": 0.6387998834838334, 
+            "species": "Bfloridae"
+        }
+    ], 
+    "Geodia": [
+        {
+            "filtered": 0.782051282051282, 
+            "global": 0.656180211671036, 
+            "species": "Paracentrotus"
+        }, 
+        {
+            "filtered": 0.40669515669515666, 
+            "global": 0.5791824448975629, 
+            "species": "Schistosoma"
+        }, 
+        {
+            "filtered": 0.45014245014245013, 
+            "global": 0.6053014855811244, 
+            "species": "Fasciola"
+        }, 
+        {
+            "filtered": 0.7806267806267806, 
+            "global": 0.6596756966695796, 
+            "species": "Patiria"
+        }, 
+        {
+            "filtered": 0.7549857549857549, 
+            "global": 0.6878337702689582, 
+            "species": "Lumbricus"
+        }, 
+        {
+            "filtered": 0.6011396011396012, 
+            "global": 0.6209340712690552, 
+            "species": "Halocynthia"
+        }, 
+        {
+            "filtered": 0.7642450142450142, 
+            "global": 0.6584134381978833, 
+            "species": "Limulus"
+        }, 
+        {
+            "filtered": 0.5462962962962963, 
+            "global": 0.6168560054374211, 
+            "species": "Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.9294871794871795, 
+            "global": 0.8204680066025828, 
+            "species": "Axinella"
+        }, 
+        {
+            "filtered": 0.7279202279202279, 
+            "global": 0.6887076415185941, 
+            "species": "Terebratulina"
+        }, 
+        {
+            "filtered": 0.40954415954415957, 
+            "global": 0.617729876687057, 
+            "species": "Bfloridae"
+        }, 
+        {
+            "filtered": 0.7649572649572649, 
+            "global": 0.6967666763763473, 
+            "species": "Katharina"
+        }
+    ], 
+    "Metridium": [
+        {
+            "filtered": 0.7941595441595442, 
+            "global": 0.6926886105447131, 
+            "species": "Paracentrotus"
+        }, 
+        {
+            "filtered": 0.4109686609686609, 
+            "global": 0.5623846975434508, 
+            "species": "Schistosoma"
+        }, 
+        {
+            "filtered": 0.4601139601139601, 
+            "global": 0.5924847072531314, 
+            "species": "Fasciola"
+        }, 
+        {
+            "filtered": 0.801994301994302, 
+            "global": 0.6658898922225459, 
+            "species": "Patiria"
+        }, 
+        {
+            "filtered": 0.7720797720797721, 
+            "global": 0.6440431109816487, 
+            "species": "Lumbricus"
+        }, 
+        {
+            "filtered": 0.6153846153846154, 
+            "global": 0.5953005146130692, 
+            "species": "Halocynthia"
+        }, 
+        {
+            "filtered": 0.7841880341880342, 
+            "global": 0.6657927954170307, 
+            "species": "Limulus"
+        }, 
+        {
+            "filtered": 0.5462962962962963, 
+            "global": 0.5928730944751918, 
+            "species": "Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.9052706552706553, 
+            "global": 0.6990969997087095, 
+            "species": "Axinella"
+        }, 
+        {
+            "filtered": 0.7464387464387464, 
+            "global": 0.633459559180503, 
+            "species": "Terebratulina"
+        }, 
+        {
+            "filtered": 0.4173789173789173, 
+            "global": 0.6254976211282649, 
+            "species": "Bfloridae"
+        }, 
+        {
+            "filtered": 0.7870370370370371, 
+            "global": 0.644334401398194, 
+            "species": "Katharina"
+        }, 
+        {
+            "filtered": 0.8896011396011396, 
+            "global": 0.7076415185940382, 
+            "species": "Geodia"
+        }
+    ], 
+    "Acropora": [
+        {
+            "filtered": 0.7799145299145299, 
+            "global": 0.6769589280512671, 
+            "species": "Paracentrotus"
+        }, 
+        {
+            "filtered": 0.4152421652421652, 
+            "global": 0.5884066414214972, 
+            "species": "Schistosoma"
+        }, 
+        {
+            "filtered": 0.44658119658119655, 
+            "global": 0.6172443926594815, 
+            "species": "Fasciola"
+        }, 
+        {
+            "filtered": 0.7849002849002849, 
+            "global": 0.656180211671036, 
+            "species": "Patiria"
+        }, 
+        {
+            "filtered": 0.7592592592592593, 
+            "global": 0.6464705311195261, 
+            "species": "Lumbricus"
+        }, 
+        {
+            "filtered": 0.6061253561253561, 
+            "global": 0.614719875716089, 
+            "species": "Halocynthia"
+        }, 
+        {
+            "filtered": 0.7628205128205128, 
+            "global": 0.6666666666666666, 
+            "species": "Limulus"
+        }, 
+        {
+            "filtered": 0.5462962962962963, 
+            "global": 0.6214195552966307, 
+            "species": "Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.8824786324786325, 
+            "global": 0.6804544130498107, 
+            "species": "Axinella"
+        }, 
+        {
+            "filtered": 0.7293447293447294, 
+            "global": 0.6366637537625012, 
+            "species": "Terebratulina"
+        }, 
+        {
+            "filtered": 0.4017094017094017, 
+            "global": 0.6209340712690552, 
+            "species": "Bfloridae"
+        }, 
+        {
+            "filtered": 0.7678062678062678, 
+            "global": 0.6458879502864355, 
+            "species": "Katharina"
+        }, 
+        {
+            "filtered": 0.8689458689458689, 
+            "global": 0.6865715117972618, 
+            "species": "Geodia"
+        }, 
+        {
+            "filtered": 0.9195156695156695, 
+            "global": 0.8137683270220409, 
+            "species": "Metridium"
+        }
+    ], 
+    "Trichinella": [
+        {
+            "filtered": 0.5121082621082621, 
+            "global": 0.590057287115254, 
+            "species": "Paracentrotus"
+        }, 
+        {
+            "filtered": 0.43732193732193725, 
+            "global": 0.6280221380716574, 
+            "species": "Schistosoma"
+        }, 
+        {
+            "filtered": 0.4024216524216524, 
+            "global": 0.6377318186231673, 
+            "species": "Fasciola"
+        }, 
+        {
+            "filtered": 0.5085470085470085, 
+            "global": 0.5807359937858044, 
+            "species": "Patiria"
+        }, 
+        {
+            "filtered": 0.5163817663817664, 
+            "global": 0.6144285852995437, 
+            "species": "Lumbricus"
+        }, 
+        {
+            "filtered": 0.48646723646723644, 
+            "global": 0.6377318186231673, 
+            "species": "Halocynthia"
+        }, 
+        {
+            "filtered": 0.5249287749287749, 
+            "global": 0.6084085833576075, 
+            "species": "Limulus"
+        }, 
+        {
+            "filtered": 0.5284900284900285, 
+            "global": 0.6550150500048548, 
+            "species": "Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.5220797720797721, 
+            "global": 0.5819982522575007, 
+            "species": "Axinella"
+        }, 
+        {
+            "filtered": 0.5242165242165242, 
+            "global": 0.6239440722400234, 
+            "species": "Terebratulina"
+        }, 
+        {
+            "filtered": 0.26353276353276356, 
+            "global": 0.5628701815710263, 
+            "species": "Bfloridae"
+        }, 
+        {
+            "filtered": 0.5235042735042735, 
+            "global": 0.6107389066899699, 
+            "species": "Katharina"
+        }, 
+        {
+            "filtered": 0.51994301994302, 
+            "global": 0.5896688998931935, 
+            "species": "Geodia"
+        }, 
+        {
+            "filtered": 0.5220797720797721, 
+            "global": 0.565491795319934, 
+            "species": "Metridium"
+        }, 
+        {
+            "filtered": 0.5106837606837606, 
+            "global": 0.5839401883678027, 
+            "species": "Acropora"
+        }
+    ], 
+    "Balanoglossus": [
+        {
+            "filtered": 0.8689458689458689, 
+            "global": 0.7604621807942519, 
+            "species": "Paracentrotus"
+        }, 
+        {
+            "filtered": 0.4152421652421652, 
+            "global": 0.5805418001747743, 
+            "species": "Schistosoma"
+        }, 
+        {
+            "filtered": 0.45512820512820507, 
+            "global": 0.6044276143314885, 
+            "species": "Fasciola"
+        }, 
+        {
+            "filtered": 0.8810541310541311, 
+            "global": 0.7346344305272356, 
+            "species": "Patiria"
+        }, 
+        {
+            "filtered": 0.8240740740740741, 
+            "global": 0.6830760267987184, 
+            "species": "Lumbricus"
+        }, 
+        {
+            "filtered": 0.6481481481481481, 
+            "global": 0.6205456840469948, 
+            "species": "Halocynthia"
+        }, 
+        {
+            "filtered": 0.8411680911680912, 
+            "global": 0.7013302262355569, 
+            "species": "Limulus"
+        }, 
+        {
+            "filtered": 0.5762108262108262, 
+            "global": 0.6170501990484513, 
+            "species": "Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.8254985754985755, 
+            "global": 0.6520050490338868, 
+            "species": "Axinella"
+        }, 
+        {
+            "filtered": 0.7955840455840456, 
+            "global": 0.660161180697155, 
+            "species": "Terebratulina"
+        }, 
+        {
+            "filtered": 0.47934472934472927, 
+            "global": 0.656180211671036, 
+            "species": "Bfloridae"
+        }, 
+        {
+            "filtered": 0.8383190883190883, 
+            "global": 0.6789008641615691, 
+            "species": "Katharina"
+        }, 
+        {
+            "filtered": 0.8098290598290598, 
+            "global": 0.6626856976405476, 
+            "species": "Geodia"
+        }, 
+        {
+            "filtered": 0.8262108262108262, 
+            "global": 0.7027866783182833, 
+            "species": "Metridium"
+        }, 
+        {
+            "filtered": 0.8112535612535613, 
+            "global": 0.6789979609670842, 
+            "species": "Acropora"
+        }, 
+        {
+            "filtered": 0.5235042735042735, 
+            "global": 0.5916108360034955, 
+            "species": "Trichinella"
+        }
+    ], 
+    "Drosophila": [
+        {
+            "filtered": 0.8048433048433048, 
+            "global": 0.7000679677638606, 
+            "species": "Paracentrotus"
+        }, 
+        {
+            "filtered": 0.41880341880341887, 
+            "global": 0.5883095446159822, 
+            "species": "Schistosoma"
+        }, 
+        {
+            "filtered": 0.45584045584045585, 
+            "global": 0.6121953587726964, 
+            "species": "Fasciola"
+        }, 
+        {
+            "filtered": 0.8126780626780626, 
+            "global": 0.7002621613748907, 
+            "species": "Patiria"
+        }, 
+        {
+            "filtered": 0.8112535612535613, 
+            "global": 0.7358966889989319, 
+            "species": "Lumbricus"
+        }, 
+        {
+            "filtered": 0.636039886039886, 
+            "global": 0.6238469754345082, 
+            "species": "Halocynthia"
+        }, 
+        {
+            "filtered": 0.8760683760683761, 
+            "global": 0.7832799300903001, 
+            "species": "Limulus"
+        }, 
+        {
+            "filtered": 0.5826210826210826, 
+            "global": 0.6213224584911157, 
+            "species": "Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.7770655270655271, 
+            "global": 0.6346247208466842, 
+            "species": "Axinella"
+        }, 
+        {
+            "filtered": 0.8133903133903134, 
+            "global": 0.6890960287406545, 
+            "species": "Terebratulina"
+        }, 
+        {
+            "filtered": 0.4301994301994302, 
+            "global": 0.6499660161180697, 
+            "species": "Bfloridae"
+        }, 
+        {
+            "filtered": 0.8311965811965812, 
+            "global": 0.7135644237304593, 
+            "species": "Katharina"
+        }, 
+        {
+            "filtered": 0.7556980056980057, 
+            "global": 0.6533644043110982, 
+            "species": "Geodia"
+        }, 
+        {
+            "filtered": 0.7863247863247863, 
+            "global": 0.6695795708321196, 
+            "species": "Metridium"
+        }, 
+        {
+            "filtered": 0.7685185185185185, 
+            "global": 0.670938926109331, 
+            "species": "Acropora"
+        }, 
+        {
+            "filtered": 0.5327635327635327, 
+            "global": 0.6004466453053695, 
+            "species": "Trichinella"
+        }, 
+        {
+            "filtered": 0.844017094017094, 
+            "global": 0.715215069424216, 
+            "species": "Balanoglossus"
+        }
+    ], 
+    "Myxine": [
+        {
+            "filtered": 0.7720797720797721, 
+            "global": 0.68482376929799, 
+            "species": "Paracentrotus"
+        }, 
+        {
+            "filtered": 0.41951566951566954, 
+            "global": 0.6096708418293039, 
+            "species": "Schistosoma"
+        }, 
+        {
+            "filtered": 0.4508547008547008, 
+            "global": 0.628604718904748, 
+            "species": "Fasciola"
+        }, 
+        {
+            "filtered": 0.7770655270655271, 
+            "global": 0.673851830274784, 
+            "species": "Patiria"
+        }, 
+        {
+            "filtered": 0.7556980056980057, 
+            "global": 0.6887076415185941, 
+            "species": "Lumbricus"
+        }, 
+        {
+            "filtered": 0.6246438746438746, 
+            "global": 0.6548208563938246, 
+            "species": "Halocynthia"
+        }, 
+        {
+            "filtered": 0.7792022792022792, 
+            "global": 0.6776386056898728, 
+            "species": "Limulus"
+        }, 
+        {
+            "filtered": 0.5776353276353277, 
+            "global": 0.6480240800077678, 
+            "species": "Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.7485754985754985, 
+            "global": 0.6595785998640644, 
+            "species": "Axinella"
+        }, 
+        {
+            "filtered": 0.7329059829059829, 
+            "global": 0.6676376347218177, 
+            "species": "Terebratulina"
+        }, 
+        {
+            "filtered": 0.4145299145299146, 
+            "global": 0.6181182639091174, 
+            "species": "Bfloridae"
+        }, 
+        {
+            "filtered": 0.7613960113960114, 
+            "global": 0.6780269929119332, 
+            "species": "Katharina"
+        }, 
+        {
+            "filtered": 0.7393162393162394, 
+            "global": 0.6624915040295174, 
+            "species": "Geodia"
+        }, 
+        {
+            "filtered": 0.7421652421652422, 
+            "global": 0.6400621419555297, 
+            "species": "Metridium"
+        }, 
+        {
+            "filtered": 0.7293447293447294, 
+            "global": 0.6477327895912225, 
+            "species": "Acropora"
+        }, 
+        {
+            "filtered": 0.5334757834757835, 
+            "global": 0.6160792309933003, 
+            "species": "Trichinella"
+        }, 
+        {
+            "filtered": 0.8069800569800569, 
+            "global": 0.6912321584619866, 
+            "species": "Balanoglossus"
+        }, 
+        {
+            "filtered": 0.7727920227920227, 
+            "global": 0.6684144091659384, 
+            "species": "Drosophila"
+        }
+    ], 
+    "Ciona": [
+        {
+            "filtered": 0.5868945868945868, 
+            "global": 0.6109331003010001, 
+            "species": "Paracentrotus"
+        }, 
+        {
+            "filtered": 0.40028490028490027, 
+            "global": 0.6458879502864355, 
+            "species": "Schistosoma"
+        }, 
+        {
+            "filtered": 0.4116809116809117, 
+            "global": 0.6587047286144286, 
+            "species": "Fasciola"
+        }, 
+        {
+            "filtered": 0.603988603988604, 
+            "global": 0.611806971550636, 
+            "species": "Patiria"
+        }, 
+        {
+            "filtered": 0.5897435897435898, 
+            "global": 0.6383143994562579, 
+            "species": "Lumbricus"
+        }, 
+        {
+            "filtered": 0.6908831908831908, 
+            "global": 0.7143411981745801, 
+            "species": "Halocynthia"
+        }, 
+        {
+            "filtered": 0.5968660968660968, 
+            "global": 0.6323914943198369, 
+            "species": "Limulus"
+        }, 
+        {
+            "filtered": 0.5377492877492878, 
+            "global": 0.6971550635984076, 
+            "species": "Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.5790598290598291, 
+            "global": 0.5965627730847655, 
+            "species": "Axinella"
+        }, 
+        {
+            "filtered": 0.5947293447293447, 
+            "global": 0.6422953684823769, 
+            "species": "Terebratulina"
+        }, 
+        {
+            "filtered": 0.2962962962962963, 
+            "global": 0.5781143800368967, 
+            "species": "Bfloridae"
+        }, 
+        {
+            "filtered": 0.5918803418803419, 
+            "global": 0.6353043984852899, 
+            "species": "Katharina"
+        }, 
+        {
+            "filtered": 0.5740740740740741, 
+            "global": 0.6123895523837266, 
+            "species": "Geodia"
+        }, 
+        {
+            "filtered": 0.5826210826210826, 
+            "global": 0.5887950286435576, 
+            "species": "Metridium"
+        }, 
+        {
+            "filtered": 0.5783475783475783, 
+            "global": 0.6149140693271191, 
+            "species": "Acropora"
+        }, 
+        {
+            "filtered": 0.4608262108262109, 
+            "global": 0.622681813768327, 
+            "species": "Trichinella"
+        }, 
+        {
+            "filtered": 0.6082621082621082, 
+            "global": 0.6137489076609379, 
+            "species": "Balanoglossus"
+        }, 
+        {
+            "filtered": 0.6004273504273504, 
+            "global": 0.6211282648800854, 
+            "species": "Drosophila"
+        }, 
+        {
+            "filtered": 0.6103988603988604, 
+            "global": 0.6533644043110982, 
+            "species": "Myxine"
+        }
+    ], 
+    "Saccoglossus": [
+        {
+            "filtered": 0.8596866096866097, 
+            "global": 0.7459947567725022, 
+            "species": "Paracentrotus"
+        }, 
+        {
+            "filtered": 0.4116809116809117, 
+            "global": 0.5856879308670745, 
+            "species": "Schistosoma"
+        }, 
+        {
+            "filtered": 0.45299145299145294, 
+            "global": 0.612777939605787, 
+            "species": "Fasciola"
+        }, 
+        {
+            "filtered": 0.8653846153846154, 
+            "global": 0.7215263617826974, 
+            "species": "Patiria"
+        }, 
+        {
+            "filtered": 0.8098290598290598, 
+            "global": 0.6918147392950772, 
+            "species": "Lumbricus"
+        }, 
+        {
+            "filtered": 0.6410256410256411, 
+            "global": 0.6270511700165065, 
+            "species": "Halocynthia"
+        }, 
+        {
+            "filtered": 0.8326210826210826, 
+            "global": 0.6984173220701039, 
+            "species": "Limulus"
+        }, 
+        {
+            "filtered": 0.5683760683760684, 
+            "global": 0.6259831051558403, 
+            "species": "Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.8162393162393162, 
+            "global": 0.6622973104184873, 
+            "species": "Axinella"
+        }, 
+        {
+            "filtered": 0.7863247863247863, 
+            "global": 0.6711331197203612, 
+            "species": "Terebratulina"
+        }, 
+        {
+            "filtered": 0.4608262108262109, 
+            "global": 0.6711331197203612, 
+            "species": "Bfloridae"
+        }, 
+        {
+            "filtered": 0.8311965811965812, 
+            "global": 0.6845324788814448, 
+            "species": "Katharina"
+        }, 
+        {
+            "filtered": 0.8027065527065527, 
+            "global": 0.672006990969997, 
+            "species": "Geodia"
+        }, 
+        {
+            "filtered": 0.8233618233618234, 
+            "global": 0.6939508690164093, 
+            "species": "Metridium"
+        }, 
+        {
+            "filtered": 0.8062678062678063, 
+            "global": 0.6722011845810273, 
+            "species": "Acropora"
+        }, 
+        {
+            "filtered": 0.5284900284900285, 
+            "global": 0.5997669676667637, 
+            "species": "Trichinella"
+        }, 
+        {
+            "filtered": 0.9351851851851852, 
+            "global": 0.8027963879988348, 
+            "species": "Balanoglossus"
+        }, 
+        {
+            "filtered": 0.8347578347578347, 
+            "global": 0.691620545684047, 
+            "species": "Drosophila"
+        }, 
+        {
+            "filtered": 0.7991452991452992, 
+            "global": 0.6880279638799883, 
+            "species": "Myxine"
+        }, 
+        {
+            "filtered": 0.6032763532763533, 
+            "global": 0.6220021361297213, 
+            "species": "Ciona"
+        }, 
+        {
+            "filtered": 0.8739316239316239, 
+            "global": 0.721137974560637, 
+            "species": "Epigonichthys"
+        }, 
+        {
+            "filtered": 0.8276353276353277, 
+            "global": 0.6913292552675017, 
+            "species": "Daphnia"
+        }, 
+        {
+            "filtered": 0.8454415954415955, 
+            "global": 0.7256044276143315, 
+            "species": "Homo"
+        }, 
+        {
+            "filtered": 0.44658119658119655, 
+            "global": 0.6577337605592776, 
+            "species": "Blanceolatum"
+        }
+    ], 
+    "Daphnia": [
+        {
+            "filtered": 0.8055555555555556, 
+            "global": 0.6789979609670842, 
+            "species": "Paracentrotus"
+        }, 
+        {
+            "filtered": 0.42165242165242167, 
+            "global": 0.6153024565491795, 
+            "species": "Schistosoma"
+        }, 
+        {
+            "filtered": 0.4608262108262109, 
+            "global": 0.6370521409845616, 
+            "species": "Fasciola"
+        }, 
+        {
+            "filtered": 0.8098290598290598, 
+            "global": 0.6819108651325372, 
+            "species": "Patiria"
+        }, 
+        {
+            "filtered": 0.8034188034188035, 
+            "global": 0.722108942615788, 
+            "species": "Lumbricus"
+        }, 
+        {
+            "filtered": 0.6303418803418803, 
+            "global": 0.6487037576463734, 
+            "species": "Halocynthia"
+        }, 
+        {
+            "filtered": 0.8475783475783476, 
+            "global": 0.7399747548305661, 
+            "species": "Limulus"
+        }, 
+        {
+            "filtered": 0.5797720797720798, 
+            "global": 0.646276337508496, 
+            "species": "Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.7784900284900285, 
+            "global": 0.6681231187493931, 
+            "species": "Axinella"
+        }, 
+        {
+            "filtered": 0.792022792022792, 
+            "global": 0.7075444217885232, 
+            "species": "Terebratulina"
+        }, 
+        {
+            "filtered": 0.41880341880341887, 
+            "global": 0.6296727837654141, 
+            "species": "Bfloridae"
+        }, 
+        {
+            "filtered": 0.8212250712250713, 
+            "global": 0.7245363627536654, 
+            "species": "Katharina"
+        }, 
+        {
+            "filtered": 0.7628205128205128, 
+            "global": 0.6722011845810273, 
+            "species": "Geodia"
+        }, 
+        {
+            "filtered": 0.7863247863247863, 
+            "global": 0.6487037576463734, 
+            "species": "Metridium"
+        }, 
+        {
+            "filtered": 0.7692307692307693, 
+            "global": 0.6495776288960093, 
+            "species": "Acropora"
+        }, 
+        {
+            "filtered": 0.5235042735042735, 
+            "global": 0.6229731041848723, 
+            "species": "Trichinella"
+        }, 
+        {
+            "filtered": 0.8404558404558404, 
+            "global": 0.6838528012428391, 
+            "species": "Balanoglossus"
+        }, 
+        {
+            "filtered": 0.8632478632478633, 
+            "global": 0.7382270123312943, 
+            "species": "Drosophila"
+        }, 
+        {
+            "filtered": 0.7635327635327636, 
+            "global": 0.6723953781920575, 
+            "species": "Myxine"
+        }, 
+        {
+            "filtered": 0.5997150997150997, 
+            "global": 0.6412273036217109, 
+            "species": "Ciona"
+        }, 
+        {
+            "filtered": 0.8304843304843305, 
+            "global": 0.6874453830468977, 
+            "species": "Epigonichthys"
+        }
+    ], 
+    "Homo": [
+        {
+            "filtered": 0.8098290598290598, 
+            "global": 0.7511408874648025, 
+            "species": "Paracentrotus"
+        }, 
+        {
+            "filtered": 0.4088319088319088, 
+            "global": 0.5757840567045345, 
+            "species": "Schistosoma"
+        }, 
+        {
+            "filtered": 0.4451566951566952, 
+            "global": 0.6026798718322167, 
+            "species": "Fasciola"
+        }, 
+        {
+            "filtered": 0.8190883190883191, 
+            "global": 0.7053111952616758, 
+            "species": "Patiria"
+        }, 
+        {
+            "filtered": 0.7934472934472935, 
+            "global": 0.6859889309641712, 
+            "species": "Lumbricus"
+        }, 
+        {
+            "filtered": 0.6232193732193733, 
+            "global": 0.6218079425186911, 
+            "species": "Halocynthia"
+        }, 
+        {
+            "filtered": 0.8269230769230769, 
+            "global": 0.7065734537333722, 
+            "species": "Limulus"
+        }, 
+        {
+            "filtered": 0.5591168091168092, 
+            "global": 0.6126808428002719, 
+            "species": "Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.7856125356125356, 
+            "global": 0.6486066608408584, 
+            "species": "Axinella"
+        }, 
+        {
+            "filtered": 0.7834757834757835, 
+            "global": 0.6640450529177591, 
+            "species": "Terebratulina"
+        }, 
+        {
+            "filtered": 0.45227920227920226, 
+            "global": 0.6541411787552189, 
+            "species": "Bfloridae"
+        }, 
+        {
+            "filtered": 0.8041310541310541, 
+            "global": 0.6784153801339936, 
+            "species": "Katharina"
+        }, 
+        {
+            "filtered": 0.7713675213675214, 
+            "global": 0.6563744052820663, 
+            "species": "Geodia"
+        }, 
+        {
+            "filtered": 0.7792022792022792, 
+            "global": 0.6949218370715603, 
+            "species": "Metridium"
+        }, 
+        {
+            "filtered": 0.7678062678062678, 
+            "global": 0.6713273133313914, 
+            "species": "Acropora"
+        }, 
+        {
+            "filtered": 0.5327635327635327, 
+            "global": 0.5921934168365861, 
+            "species": "Trichinella"
+        }, 
+        {
+            "filtered": 0.8532763532763533, 
+            "global": 0.7434702398291096, 
+            "species": "Balanoglossus"
+        }, 
+        {
+            "filtered": 0.8240740740740741, 
+            "global": 0.7144382949800951, 
+            "species": "Drosophila"
+        }, 
+        {
+            "filtered": 0.8169515669515669, 
+            "global": 0.6987086124866492, 
+            "species": "Myxine"
+        }, 
+        {
+            "filtered": 0.6089743589743589, 
+            "global": 0.6129721332168172, 
+            "species": "Ciona"
+        }, 
+        {
+            "filtered": 0.8525641025641025, 
+            "global": 0.7370618506651131, 
+            "species": "Epigonichthys"
+        }, 
+        {
+            "filtered": 0.7977207977207977, 
+            "global": 0.6797747354112049, 
+            "species": "Daphnia"
+        }
+    ], 
+    "Blanceolatum": [
+        {
+            "filtered": 0.42236467236467234, 
+            "global": 0.6979318380425285, 
+            "species": "Paracentrotus"
+        }, 
+        {
+            "filtered": 0.2656695156695157, 
+            "global": 0.5720943780949607, 
+            "species": "Schistosoma"
+        }, 
+        {
+            "filtered": 0.2962962962962963, 
+            "global": 0.5922905136421012, 
+            "species": "Fasciola"
+        }, 
+        {
+            "filtered": 0.43447293447293445, 
+            "global": 0.6519079522283717, 
+            "species": "Patiria"
+        }, 
+        {
+            "filtered": 0.4045584045584045, 
+            "global": 0.6230702009903875, 
+            "species": "Lumbricus"
+        }, 
+        {
+            "filtered": 0.30626780626780625, 
+            "global": 0.5810272842023497, 
+            "species": "Halocynthia"
+        }, 
+        {
+            "filtered": 0.4202279202279202, 
+            "global": 0.6479269832022526, 
+            "species": "Limulus"
+        }, 
+        {
+            "filtered": 0.27279202279202286, 
+            "global": 0.5854937372560443, 
+            "species": "Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.40384615384615385, 
+            "global": 0.5863676085056801, 
+            "species": "Axinella"
+        }, 
+        {
+            "filtered": 0.3903133903133903, 
+            "global": 0.6107389066899699, 
+            "species": "Terebratulina"
+        }, 
+        {
+            "filtered": 0.9693732193732194, 
+            "global": 0.8300805903485775, 
+            "species": "Bfloridae"
+        }, 
+        {
+            "filtered": 0.41381766381766383, 
+            "global": 0.6231672977959025, 
+            "species": "Katharina"
+        }, 
+        {
+            "filtered": 0.3995726495726496, 
+            "global": 0.5955918050296145, 
+            "species": "Geodia"
+        }, 
+        {
+            "filtered": 0.40740740740740744, 
+            "global": 0.637440528206622, 
+            "species": "Metridium"
+        }, 
+        {
+            "filtered": 0.3938746438746439, 
+            "global": 0.618797941547723, 
+            "species": "Acropora"
+        }, 
+        {
+            "filtered": 0.2556980056980057, 
+            "global": 0.5528692106029711, 
+            "species": "Trichinella"
+        }, 
+        {
+            "filtered": 0.4658119658119658, 
+            "global": 0.6649189241673948, 
+            "species": "Balanoglossus"
+        }, 
+        {
+            "filtered": 0.4202279202279202, 
+            "global": 0.6274395572385668, 
+            "species": "Drosophila"
+        }, 
+        {
+            "filtered": 0.40028490028490027, 
+            "global": 0.6178269734925721, 
+            "species": "Myxine"
+        }, 
+        {
+            "filtered": 0.2898860398860399, 
+            "global": 0.5765608311486552, 
+            "species": "Ciona"
+        }, 
+        {
+            "filtered": 0.49572649572649574, 
+            "global": 0.7295853966404505, 
+            "species": "Epigonichthys"
+        }, 
+        {
+            "filtered": 0.40954415954415957, 
+            "global": 0.622681813768327, 
+            "species": "Daphnia"
+        }, 
+        {
+            "filtered": 0.4430199430199431, 
+            "global": 0.6790950577725993, 
+            "species": "Homo"
+        }
+    ], 
+    "Epigonichthys": [
+        {
+            "filtered": 0.844017094017094, 
+            "global": 0.7327895912224488, 
+            "species": "Paracentrotus"
+        }, 
+        {
+            "filtered": 0.41239316239316237, 
+            "global": 0.5898630935042237, 
+            "species": "Schistosoma"
+        }, 
+        {
+            "filtered": 0.457977207977208, 
+            "global": 0.6091853578017283, 
+            "species": "Fasciola"
+        }, 
+        {
+            "filtered": 0.8497150997150997, 
+            "global": 0.7010389358190116, 
+            "species": "Patiria"
+        }, 
+        {
+            "filtered": 0.8084045584045584, 
+            "global": 0.711331197203612, 
+            "species": "Lumbricus"
+        }, 
+        {
+            "filtered": 0.646011396011396, 
+            "global": 0.6373434314011069, 
+            "species": "Halocynthia"
+        }, 
+        {
+            "filtered": 0.8333333333333334, 
+            "global": 0.6948247402660452, 
+            "species": "Limulus"
+        }, 
+        {
+            "filtered": 0.5676638176638177, 
+            "global": 0.6284105252937179, 
+            "species": "Caenorhabditis"
+        }, 
+        {
+            "filtered": 0.8126780626780626, 
+            "global": 0.671909894164482, 
+            "species": "Axinella"
+        }, 
+        {
+            "filtered": 0.7856125356125356, 
+            "global": 0.6850179629090203, 
+            "species": "Terebratulina"
+        }, 
+        {
+            "filtered": 0.5106837606837606, 
+            "global": 0.691620545684047, 
+            "species": "Bfloridae"
+        }, 
+        {
+            "filtered": 0.8297720797720798, 
+            "global": 0.7117195844256724, 
+            "species": "Katharina"
+        }, 
+        {
+            "filtered": 0.8048433048433048, 
+            "global": 0.6816195747159919, 
+            "species": "Geodia"
+        }, 
+        {
+            "filtered": 0.8155270655270656, 
+            "global": 0.6812311874939314, 
+            "species": "Metridium"
+        }, 
+        {
+            "filtered": 0.8027065527065527, 
+            "global": 0.6610350519467909, 
+            "species": "Acropora"
+        }, 
+        {
+            "filtered": 0.5277777777777778, 
+            "global": 0.5929701912807068, 
+            "species": "Trichinella"
+        }, 
+        {
+            "filtered": 0.8903133903133903, 
+            "global": 0.7283231381687543, 
+            "species": "Balanoglossus"
+        }, 
+        {
+            "filtered": 0.8418803418803419, 
+            "global": 0.6857947373531411, 
+            "species": "Drosophila"
+        }, 
+        {
+            "filtered": 0.8091168091168092, 
+            "global": 0.7099718419264006, 
+            "species": "Myxine"
+        }, 
+        {
+            "filtered": 0.6125356125356125, 
+            "global": 0.627633750849597, 
+            "species": "Ciona"
+        }
+    ]
+}
