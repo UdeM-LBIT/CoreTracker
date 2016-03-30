@@ -9,14 +9,14 @@
 from __future__ import division, absolute_import, print_function
 import os, sys
 from numpy.distutils.core  import Extension
-import setuptools
+from setuptools import find_packages
 from coretracker import __project__, __version__
 sys.path.insert(0, os.path.realpath(os.path.join(os.path.dirname(__file__), "python")))
 
 def configuration(top_path='') :
-    fexact = Extension(name='statlib.fexact', sources=[os.path.join(top_path, 'coretracker/FisherExact/statlib', 'FEXACT.F90')])
-    asa159 = Extension(name='statlib.asa159', sources=[os.path.join(top_path, 'coretracker/FisherExact/statlib', 'asa159.f90')])
-    asa205 = Extension(name='statlib.asa205', sources=[os.path.join(top_path, 'coretracker/FisherExact/statlib', 'asa205.f90')])
+    fexact = Extension(name='coretracker.FisherExact.statlib.fexact', sources=[os.path.join(top_path, 'coretracker/FisherExact/statlib', 'FEXACT.F90')])
+    asa159 = Extension(name='coretracker.FisherExact.statlib.asa159', sources=[os.path.join(top_path, 'coretracker/FisherExact/statlib', 'asa159.f90')])
+    asa205 = Extension(name='coretracker.FisherExact.statlib.asa205', sources=[os.path.join(top_path, 'coretracker/FisherExact/statlib', 'asa205.f90')])
     return [fexact, asa205, asa159]
 
 def setup_package():
@@ -38,7 +38,7 @@ def setup_package():
         author='Emmanuel Noutahi',
         author_email='fmr.noutahi@umontreal.ca',
         scripts = ['bin/coretracker', 'bin/coretranslate', 'bin/corefusion'],
-
+        packages=find_packages(),
         entry_points={'console_scripts': []},
 
         keywords="bioinformatics codon reassignment tracker",
