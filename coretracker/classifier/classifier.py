@@ -33,7 +33,7 @@ class Classifier(object):
     def __init__(self, method, classifier_spec={}, scale=False, n_estimators=1000):
         if method == 'rf':
             self.clf = RandomForestClassifier(
-                n_estimators=n_estimators, n_jobs=-1, max_leaf_nodes=100, **classifier_spec)
+                n_estimators=n_estimators, n_jobs=-1, max_leaf_nodes=1000, **classifier_spec)
         elif method == 'svc':
             self.clf = svm.SVC(probability=True, **classifier_spec)
         elif method == 'etc':
@@ -106,6 +106,8 @@ class Classifier(object):
 
             indices = np.argsort(importances)[::-1]
             n_feats = len(features_list)
+            np.savetxt(outfile+".txt", np.array([tree.feature_importances_ \
+                                    for tree in self.clf.estimators_]), delimiter=',', fmt='%1.3e')
             std = np.std(
                 [tree.feature_importances_ for tree in self.clf.estimators_], axis=0)
             plt.figure()
@@ -134,6 +136,7 @@ class Classifier(object):
             Y_train = Y
         self.train(X_train, Y_train)
         Y_predicted = self.predict(X_test)
+        self.get_stat(X_test, Y_test)
         return Y_predicted, self.get_score(X_test, Y_test)
 
     def plot_precision_recall(self, X_test, y_test, infos="", outfile="precision_recall.png"):
@@ -279,7 +282,7 @@ def read_from_json(data, labels=None, use_global=True, use_pvalue=True):
                                 # anything else will have a class of -1 to
                                 # mean unsure
     if labels:
-        assert (len(X) == len(Y)), "We should not have sdifferent length for data and for input"
+        assert (len(X) == len(Y)), "We should not have different length for data and for input"
     return np.array(X), np.asarray(X_label), np.array(Y)
 
 

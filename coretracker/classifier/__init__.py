@@ -12,4 +12,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 from classifier import Classifier, getDataFromFeatures, read_from_json
+import os
+this_dir, this_filename = os.path.split(__file__)
+MODELPATH = os.path.join(this_dir, "models", '%s/classifier.plk')
 __all__ = ['Classifier', 'getDataFromFeatures', 'read_from_json']

@@ -54,6 +54,9 @@ class Settings():
         # if global alignment should be used to find the suspected list
         self.USE_GLOBAL = kwargs.get(
             'USE_GLOBAL', parameters.USE_GLOBAL)
+        # hidden parameter for debug purpose
+        self.MODEL_TYPE = kwargs.get(
+                'MODEL_TYPE', 'old')
         # choose algorithm for computing the suspected species
         self.mode = kwargs.get('MODE', parameters.MODE)
         # choose matrix type to use, default is blosum62

@@ -29,6 +29,7 @@ from ete3 import Tree
 
 from coretracker.coreutils import *
 from coretracker.classifier import *
+from coretracker.classifier import MODELPATH
 from coretracker.settings import *
 from coretracker import  __version__, __author__, date
 
@@ -49,7 +50,6 @@ try:
 except ImportError:
     from yaml import Loader
 
-MODELPATH = 'coretracker/classifier/model/classifier.plk'
 etiquette = ["fitch", "suspected", "Fisher pval", "Gene frac",
                     "N. rea", "N. used", "Cod. count", "Sub. count",
                     "G. len", "codon_lik", "N. mixte" ,"id"] #, 'total_aa']
@@ -97,7 +97,7 @@ def set_coretracker(args, settings):
         except:
             pass
 
-    clf = Classifier.load_from_file(MODELPATH)
+    clf = Classifier.load_from_file(MODELPATH%settings.MODEL_TYPE)
 
     if clf is None or not clf.trained:
         raise ValueError("Classifier not found or not trained!")
