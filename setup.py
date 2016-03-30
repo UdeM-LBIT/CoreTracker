@@ -14,11 +14,10 @@ from coretracker import __project__, __version__
 sys.path.insert(0, os.path.realpath(os.path.join(os.path.dirname(__file__), "python")))
 
 def configuration(top_path='') :
-    statlib = Extension(name='coretracker.FisherExact.statlib',
-                    sources=[os.path.join('coretracker/FisherExact/statlib', 'FEXACT.F90'),
-                            os.path.join(top_path, 'coretracker/FisherExact/statlib', 'asa159.f90'),
-                            os.path.join(top_path, 'coretracker/FisherExact/statlib', 'asa205.f90')])
-    return [statlib]
+    fexact = Extension(name='statlib.fexact', sources=[os.path.join(top_path, 'coretracker/FisherExact/statlib', 'FEXACT.F90')])
+    asa159 = Extension(name='statlib.asa159', sources=[os.path.join(top_path, 'coretracker/FisherExact/statlib', 'asa159.f90')])
+    asa205 = Extension(name='statlib.asa205', sources=[os.path.join(top_path, 'coretracker/FisherExact/statlib', 'asa205.f90')])
+    return [fexact, asa205, asa159]
 
 def setup_package():
     if os.path.exists('README.md'):

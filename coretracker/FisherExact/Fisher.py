@@ -26,34 +26,34 @@ def fisher_exact(table, alternative="two-sided", hybrid=False, midP=False,
         Only used for non-simulated p-values larger than 2 x 2 table.
         You might want to increase this if the p-value failed!
     hybrid : bool
-        Only used for larger than 2 x 2 tables, in which cases it indicates 
-        whether the exact probabilities (default) or a hybrid approximation 
+        Only used for larger than 2 x 2 tables, in which cases it indicates
+        whether the exact probabilities (default) or a hybrid approximation
         thereof should be computed.
     midP : bool
         Use this to enable mid-P correction. Could lead to slow computation.
-        This is not applicable for simulation p-values. `alternative` cannot 
+        This is not applicable for simulation p-values. `alternative` cannot
         be used if you enable midpoint correction.
-    simulate_pval : bool 
+    simulate_pval : bool
         Indicate whether to compute p-values by Monte Carlo simulation,
          in larger than 2 x 2 tables.
     replicate : int
         An integer specifying the number of replicates used in the MonteCarlo
         test.
     workspace : int
-        An integer specifying the workspace size. Default value is 300. 
+        An integer specifying the workspace size. Default value is 300.
     attempt : int
-        Number of attempts to try, if the workspace size is not enough. 
-        On each attempt, the workspace size is doubled. 
+        Number of attempts to try, if the workspace size is not enough.
+        On each attempt, the workspace size is doubled.
     seed : int
         Random number to use as seed. If a seed isn't provided. 4 bytes will be
-        read from os.urandom. If this fail, getrandbits of the random module 
+        read from os.urandom. If this fail, getrandbits of the random module
         (with 32 random bits) will be used. In the particular case where both
         failed, the current time will be used
 
     Returns
     -------
     p_value : float
-        The probability of a more extreme table, where 'extreme' is in a 
+        The probability of a more extreme table, where 'extreme' is in a
         probabilistic sense.
 
     Notes
@@ -158,7 +158,7 @@ def _execute_fexact(nr, nc, c, nnr, expect, percnt, emin, workspace,
 
 
 def _fisher_sim(c, replicate, seed=None):
-    """Performs a simulation with `replicate` replicates in order to find an 
+    """Performs a simulation with `replicate` replicates in order to find an
     alternative contingency test with the same margin.
     Parameters
     ----------
@@ -218,7 +218,7 @@ def _midp(c):
     Parameters
     ----------
     c : array_like of ints
-        A m x n contingency table. Elements should be non-negative integers. 
+        A m x n contingency table. Elements should be non-negative integers.
     """
     sr, sc = c.sum(axis=1).astype('int32'), c.sum(axis=0).astype('int32')
     nr, nc = len(sr), len(sc)
