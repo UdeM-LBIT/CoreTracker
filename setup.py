@@ -18,7 +18,7 @@ def configuration(top_path='') :
                     sources=[os.path.join('coretracker/FisherExact/statlib', 'FEXACT.F90'),
                             os.path.join(top_path, 'coretracker/FisherExact/statlib', 'asa159.f90'),
                             os.path.join(top_path, 'coretracker/FisherExact/statlib', 'asa205.f90')])
-    return [fisher_exact, asa205, asa159]
+    return [statlib]
 
 def setup_package():
     if os.path.exists('README.md'):
