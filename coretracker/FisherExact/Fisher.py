@@ -149,7 +149,6 @@ def _execute_fexact(nr, nc, c, nnr, expect, percnt, emin, workspace,
             pval = f.fexact(nr, nc, c, nnr, expect, percnt, emin, workspace)
             success = True
         except Exception as e:
-            workspace = workspace*2
             logging.warning(
                 "Workspace : %d is not enough. You should increase it.")
     if midP:
