@@ -34,7 +34,7 @@ from Bio.SeqRecord import SeqRecord, _RestrictedDict
 from ete3 import Tree
 from scipy.cluster.vq import kmeans2
 
-from ..FisherExact import fisher_exact
+from coretracker.FisherExact import fisher_exact
 from Faces import LineFace, PPieChartFace, SequenceFace
 from corefile import CoreFile
 from output import Output
