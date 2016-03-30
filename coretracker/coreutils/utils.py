@@ -1546,7 +1546,7 @@ def independance_test(rea, ori, confd=0.05, tot_size=1):
             obs[i, 0] = rea.get(codon_list[i], 0)
             obs[i, 1] = ori.get(codon_list[i], 0)
 
-        pval = fisher_exact(obs, midP=True)
+        pval = fisher_exact(obs, midP=True, attempt=5)
         return pval <= confd, pval
 
     # strangely, codon is used only in rea column
