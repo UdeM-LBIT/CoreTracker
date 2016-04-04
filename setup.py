@@ -14,7 +14,13 @@ from coretracker import __project__, __version__
 sys.path.insert(0, os.path.realpath(os.path.join(os.path.dirname(__file__), "python")))
 
 def configuration(top_path='') :
-    fexact = Extension(name='coretracker.FisherExact.statlib.fexact', sources=[os.path.join(top_path, 'coretracker/FisherExact/statlib', 'FEXACT.F90')])
+    fexact_sources = [
+        'coretracker/FisherExact/statlib/fexact.pyf',
+        'coretracker/FisherExact/statlib/FEXACT.F90',
+        'coretracker/FisherExact/statlib/prterr.f'
+    ]
+
+    fexact = Extension(name='coretracker.FisherExact.statlib.fexact', sources=[os.path.join(top_path,x) for x in fexact_sources])
     asa159 = Extension(name='coretracker.FisherExact.statlib.asa159', sources=[os.path.join(top_path, 'coretracker/FisherExact/statlib', 'asa159.f90')])
     asa205 = Extension(name='coretracker.FisherExact.statlib.asa205', sources=[os.path.join(top_path, 'coretracker/FisherExact/statlib', 'asa205.f90')])
     return [fexact, asa205, asa159]

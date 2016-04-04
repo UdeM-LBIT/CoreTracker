@@ -1,6 +1,7 @@
 import scipy.stats as ss
 from scipy.special import gammaln as lgamma
-from statlib.fexact import fisher_exact as f
+import statlib.fexact as f
+from statlib.fexact import fisher_exact as f_exact
 from statlib.asa159 import rcont2
 from statlib.asa205 import enum as rcont
 import numpy as np
@@ -8,6 +9,11 @@ import logging
 import os
 import random
 
+class F2PYSTOP(Exception):
+    def __call__(self, status, mes=""):
+        raise self.__class__(mes)
+
+f.f2pystop = F2PYSTOP()
 
 def fisher_exact(table, alternative="two-sided", hybrid=False, midP=False,
                  simulate_pval=False, replicate=2000, workspace=300,
@@ -26,34 +32,34 @@ def fisher_exact(table, alternative="two-sided", hybrid=False, midP=False,
         Only used for non-simulated p-values larger than 2 x 2 table.
         You might want to increase this if the p-value failed!
     hybrid : bool
-        Only used for larger than 2 x 2 tables, in which cases it indicates
-        whether the exact probabilities (default) or a hybrid approximation
+        Only used for larger than 2 x 2 tables, in which cases it indicates 
+        whether the exact probabilities (default) or a hybrid approximation 
         thereof should be computed.
     midP : bool
         Use this to enable mid-P correction. Could lead to slow computation.
-        This is not applicable for simulation p-values. `alternative` cannot
+        This is not applicable for simulation p-values. `alternative` cannot 
         be used if you enable midpoint correction.
-    simulate_pval : bool
+    simulate_pval : bool 
         Indicate whether to compute p-values by Monte Carlo simulation,
          in larger than 2 x 2 tables.
     replicate : int
         An integer specifying the number of replicates used in the MonteCarlo
         test.
     workspace : int
-        An integer specifying the workspace size. Default value is 300.
+        An integer specifying the workspace size. Default value is 300. 
     attempt : int
-        Number of attempts to try, if the workspace size is not enough.
-        On each attempt, the workspace size is doubled.
+        Number of attempts to try, if the workspace size is not enough. 
+        On each attempt, the workspace size is doubled. 
     seed : int
         Random number to use as seed. If a seed isn't provided. 4 bytes will be
-        read from os.urandom. If this fail, getrandbits of the random module
+        read from os.urandom. If this fail, getrandbits of the random module 
         (with 32 random bits) will be used. In the particular case where both
         failed, the current time will be used
 
     Returns
     -------
     p_value : float
-        The probability of a more extreme table, where 'extreme' is in a
+        The probability of a more extreme table, where 'extreme' is in a 
         probabilistic sense.
 
     Notes
@@ -75,7 +81,7 @@ def fisher_exact(table, alternative="two-sided", hybrid=False, midP=False,
         sharks     1        5       2
     We use this table to find the p-value:
     >>> from Fisher import fisher_exact
-    >>> pvalue = stats.fisher_exact([[8, 2, 12], [1, 5, 2]])
+    >>> pvalue = fisher_exact([[8, 2, 12], [1, 5, 2]])
     >>> pvalue
     0.01183...
     """
@@ -140,17 +146,37 @@ def _execute_fexact(nr, nc, c, nnr, expect, percnt, emin, workspace,
                     attempt=2, midP=False):
     """Execute fexact using the fortran routine"""
 
-    pval = None
-    success = False
+    ## find required workspace 
+    #pval = None
+    #success = False
+    #ntot = np.sum(c)+1
+    #nco = max(nr, nc)
+    #nro = nr +nc - nco
+    #allocated = _iwork(0, ntot, 'double')
+    #allocated = _iwork(allocated, nco) *3 
+    #allocated = _iwork(allocated, nco) *2
+    #k =  nro + nco +1
+    #kk = k*nco
+    #allocated = _iwork(allocated, max(k*5 + (kk<<1), nco*7 + 800))
+    #allocated =  _iwork(allocated, max(nco+401, k))
+    #iwkmax = 2e+05
+    #numb = (18 + 10 * 30)
+    #ldk = (iwkmax - allocated) / numb -1
+    
     ntry = 0
+    error = None
+    wk = workspace
     while not (success or ntry >= attempt):
         ntry += 1
         try:
-            pval = f.fexact(nr, nc, c, nnr, expect, percnt, emin, workspace)
+            pval = f_exact.fexact(nr, nc, c, nnr, expect, percnt, emin, wk)
             success = True
-        except Exception as e:
+        except Exception as error:
             logging.warning(
                 "Workspace : %d is not enough. You should increase it.")
+        wk = wk << 1 #double workspace
+    if not success:
+        raise ValueError('Could not execute fexact, increase workspace')
     if midP:
         return pval[1] - pval[0] * 0.5
     else:
@@ -158,7 +184,7 @@ def _execute_fexact(nr, nc, c, nnr, expect, percnt, emin, workspace,
 
 
 def _fisher_sim(c, replicate, seed=None):
-    """Performs a simulation with `replicate` replicates in order to find an
+    """Performs a simulation with `replicate` replicates in order to find an 
     alternative contingency test with the same margin.
     Parameters
     ----------
@@ -213,12 +239,24 @@ def _fisher_sim(c, replicate, seed=None):
     return results
 
 
+def __iwork(allocated, number, itype='int'):
+    """Check if the allocated memory is enough"""
+    
+    i = allocated
+    if itype == 'double':
+        allocated += (number << 1)
+    else:
+        allocated += number
+
+    return allocated
+
+
 def _midp(c):
     """Performs Fisher's Exact test with midp correction
     Parameters
     ----------
     c : array_like of ints
-        A m x n contingency table. Elements should be non-negative integers.
+        A m x n contingency table. Elements should be non-negative integers. 
     """
     sr, sc = c.sum(axis=1).astype('int32'), c.sum(axis=0).astype('int32')
     nr, nc = len(sr), len(sc)
