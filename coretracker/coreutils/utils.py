@@ -1549,7 +1549,8 @@ def independance_test(rea, ori, confd=0.05, tot_size=1):
             pval = fisher_exact(obs, midP=True, attempt=3)
             # fallback to chi2 test if fisher is impossible
         except:
-            c, pval, dof, t =  ss.chi2_contingency(obs, corr)
+            logging.debug("Using ch2 instead of FISHEREXACT")
+            c, pval, dof, t =  ss.chi2_contingency(obs)
         return pval <= confd, pval
 
 
