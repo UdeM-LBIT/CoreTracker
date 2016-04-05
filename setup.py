@@ -44,6 +44,7 @@ def setup_package():
         maintainer='UdeM-LBIT',
         description="CoreTracker, A codon reassignment tracker",
         url='https://github.com/UdeM-LBIT/CoreTracker',
+        download_url = 'https://github.com/UdeM-LBIT/CoreTracker/tarball/1.0.1',
         author='Emmanuel Noutahi',
         author_email='fmr.noutahi@umontreal.ca',
         scripts = ['bin/coretracker', 'bin/coretranslate', 'bin/corefusion'],
@@ -62,7 +63,7 @@ def setup_package():
             'Intended Audience :: Science/Research',
             'License :: OSI Approved :: GNU General Public License (GPL)',
             'Operating System :: POSIX',
-            'Programming Language :: Python',
+            'Programming Language :: Python :: 2.7',
         ],
 
         setup_requires=['numpy'],
