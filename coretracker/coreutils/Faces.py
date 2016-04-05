@@ -322,3 +322,67 @@ class SequenceFace(faces.StaticItemFace):
                 text.setPos((width - txtw)/2, (self.row_h - txth)/2)
             seq_width += width
         self.width = seq_width
+
+
+
+class List90Face(faces.StaticItemFace):
+    """Static text Face object
+    :param l:        List of element to be drawn
+    :param fsize:    Font size, e.g. 10,12,6, (default=10)
+    :param fgcolor:  Foreground font color. RGB code or color name in :data:`SVG_COLORS`
+    :param bgcolor:  Background font color. RGB code or color name in :data:`SVG_COLORS`
+    """
+    def __init__(self, l, ftype="Courier", fstyle="normal", fsize=10,
+                 fgcolor="black", bgcolor="white", col_w=14.0):
+        self.liste = l
+        self.ftype = ftype
+        self.fgcolor = fgcolor
+        self.bgcolor = bgcolor
+        self.fsize = fsize
+        self.row_h = float(self.fsize + 1)
+        self.col_w = col_w
+        self.width = 0
+        self.rot = 90
+        self.fstyle = fstyle
+        self.coeff_h = max([len(str(x)) for x in self.liste])
+
+        super(List90Face, self).__init__(None)
+
+
+    def __repr__(self):
+        return "Text Face [%s] (%s)" %(self._text, hex(self.__hash__()))
+
+    def get_text(self):
+        return self._text
+
+    def update_items(self):
+        self.item = QGraphicsRectItem(0, 0, self.width, self.row_h*self.coeff_h)
+        seq_width = 0
+        nopen = QPen(Qt.NoPen)
+        self.item.setPen(nopen)
+        font = QFont(self.ftype, self.fsize)
+        if self.fstyle == "italic":
+            font.setStyle(QFont.StyleItalic)
+        elif self.fstyle == "oblique":
+            font.setStyle(QFont.StyleOblique)
+        rect_cls = QGraphicsRectItem
+        for i, val in enumerate(self.liste):
+            width =  self.col_w
+            height = self.row_h * len(str(val)) + 1
+            rectitem = rect_cls(0, 0, width, height, parent=self.item)
+            rectitem.setX(seq_width) # to give correct X to children item
+            rectitem.setBrush(QBrush(QColor(self.bgcolor)))
+            rectitem.setPen(nopen)
+
+            # write letter if enough space in height
+            if height >= self.fsize:
+                text = QGraphicsSimpleTextItem(str(val), parent=rectitem)
+                text.setFont(font)
+                text.setBrush(QBrush(QColor(self.fgcolor)))
+                # Center text according to rectitem size
+                txtw = text.boundingRect().width()
+                txth = text.boundingRect().height()
+                text.setRotation(self.rot)
+                text.setX(txth)
+            seq_width += width
+        self.width = seq_width

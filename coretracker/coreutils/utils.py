@@ -35,7 +35,7 @@ from ete3 import Tree
 from scipy.cluster.vq import kmeans2
 
 from coretracker.FisherExact import fisher_exact
-from Faces import LineFace, PPieChartFace, SequenceFace
+from Faces import LineFace, PPieChartFace, SequenceFace, List90Face
 from corefile import CoreFile
 from output import Output
 from pdfutils import *
@@ -1993,7 +1993,8 @@ def format_tree(tree, codon, cible, alignment, SP_score, ic_contents, pos=[],
             start = 0
             ind = 3
             for (l, name) in limiter:
-                ic_content = np.asarray(ic_contents)[pos[start:l]]
+                listdata = pos[start:l]
+                ic_content = np.asarray(ic_contents)[listdata]
                 #sp_score = np.asarray(SP_score)[pos]
                 footer_seq = SequenceFace("".join([gfunc(st) for st in start_holder[start:l]]), None, dtype, fsize=13)
                 start = l
@@ -2002,6 +2003,7 @@ def format_tree(tree, codon, cible, alignment, SP_score, ic_contents, pos=[],
                                          int(max(ic_content)+1)), fsize=10, col_width=14,
                                          header="IC", kind='bar')
                 ts.aligned_header.add_face(ic_plot, ind)
+                ts.aligned_foot.add_face(List90Face(listdata, fsize=10), ind)
                 ts.aligned_foot.add_face(footer_seq, ind)
                 ts.aligned_foot.add_face(TextFace(name), ind)
                 ind += 2
