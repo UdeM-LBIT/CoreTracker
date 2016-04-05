@@ -1,17 +1,17 @@
 #!/usr/bin/env python
 #
 # setup for CoreTracker library packages
-#
-# use the following to install:
-#   python setup.py build
-#   python setup.py install
-#
-from __future__ import division, absolute_import, print_function
-import os, sys
-from ez_setup import use_setuptools
-use_setuptools()
 
-from setuptools import find_packages
+from __future__ import absolute_import
+from __future__ import print_function
+import os, sys
+try:
+    from setuptools import find_packages
+except ImportError:
+    import ez_setup
+    ez_setup.use_setuptools()
+    from setuptools import find_packages
+
 from numpy.distutils.core  import Extension as Ext
 from numpy.distutils.core import setup
 
