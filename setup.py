@@ -8,6 +8,9 @@
 #
 from __future__ import division, absolute_import, print_function
 import os, sys
+from ez_setup import use_setuptools
+use_setuptools()
+
 from numpy.distutils.core  import Extension
 from setuptools import find_packages
 from coretracker import __project__, __version__
@@ -44,9 +47,9 @@ def setup_package():
         author='Emmanuel Noutahi',
         author_email='fmr.noutahi@umontreal.ca',
         scripts = ['bin/coretracker', 'bin/coretranslate', 'bin/corefusion'],
+        include_package_data = True,
         packages=find_packages(),
         entry_points={'console_scripts': []},
-
         keywords="bioinformatics codon reassignment tracker",
 
         long_description=(README + '\n'),
