@@ -7,6 +7,7 @@ import json
 import logging
 import os
 import re
+import traceback
 import random
 import shutil
 import subprocess
@@ -39,7 +40,22 @@ from Faces import LineFace, PPieChartFace, SequenceFace, List90Face
 from corefile import CoreFile
 from output import Output
 from pdfutils import *
-import matplotlib.pyplot as plt
+
+SEABORN = False
+try:
+    import matplotlib.pyplot as plt
+    vplot = plt.violinplot
+except ImportError as e:
+    print("Could not import matplotlib")
+    print(traceback.format_exc())
+except Exception, err :
+    print("Cannot use violinplot from matplotlib")
+    print(traceback.format_exc())
+    print("Trying to use seaborn for violinplot")
+    import seaborn as sns
+    sns.set(context="paper", palette="deep")
+    sns.set_style("whitegrid")
+    SEABORN = True
 
 __author__ = "Emmanuel Noutahi"
 __version__ = "1.01"
@@ -2045,26 +2061,36 @@ def identify_position_with_codon(fcodal, codon, spec_to_check):
 
 def violin_plot(vals, output, score, codon, cible, imformat="pdf"):
     """Return violin plot of SP score """
-
-    figure = plt.figure()
-    axes = figure.add_subplot(1,1,1)
-    data = vals.values()
+    keys = vals.keys()
+    data = [vals[k] for k in keys]
     pos = [y+1 for y in range(len(data))]
-    fig = plt.violinplot(data, pos, showmedians=True, showextrema=True)
-    for bod in fig['bodies']:
-        bod.set_facecolor('lightblue')
-        bod.set_edgecolor('darkblue')
-        bod.set_linewidth(2)
-    fig['cbars'].set_color('#555555')
-    fig['cmaxes'].set_color('#555555')
-    fig['cmedians'].set_color('#555555')
-    fig['cmins'].set_color('#555555')
-    axes.yaxis.grid(True)
-    axes.set_xticks(pos)
-    plt.setp(axes, xticks=pos, xticklabels=vals.keys())
+    title = 'p-values({} --> {}) : {:.2e}'.format(codon, cible, score)
     output = output+"."+imformat
-    axes.set_title('p-values({} --> {}) : {:.2e}'.format(codon, cible, score))
-    figure.savefig(output, format=imformat)
+
+    if not SEABORN:
+        figure = plt.figure()
+        axes = figure.add_subplot(1,1,1)
+        fig = plt.violinplot(data, pos, showmedians=True, showextrema=True)
+        for bod in fig['bodies']:
+            bod.set_facecolor('lightblue')
+            bod.set_edgecolor('darkblue')
+            bod.set_linewidth(2)
+        fig['cbars'].set_color('#555555')
+        fig['cmaxes'].set_color('#555555')
+        fig['cmedians'].set_color('#555555')
+        fig['cmins'].set_color('#555555')
+        axes.yaxis.grid(True)
+        axes.set_xticks(pos)
+        plt.setp(axes, xticks=pos, xticklabels=keys)
+        axes.set_title(title)
+        figure.savefig(output, format=imformat)
+    else:
+        ax = sns.violinplot(data=data)
+        ax.set_xticklabels(keys)
+        ax.set_title(title)
+        fig = ax.get_figure()
+        fig.savefig(output, format=imformat)
+
     logging.info('{} --> {}) : {:.2e}'.format(codon, cible, score))
     return output
 
