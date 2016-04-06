@@ -49,8 +49,11 @@ def setup_package():
         author='Emmanuel Noutahi',
         author_email='fmr.noutahi@umontreal.ca',
         scripts = ['bin/coretracker', 'bin/coretranslate', 'bin/corefusion'],
-        include_package_data = True,
         packages=find_packages(),
+        package_data = {
+            'coretracker.classifier': ['models/new/*', 'models/old/*'],
+            'coretracker.coreutils': ['templates/*'],
+        },
         entry_points={'console_scripts': []},
         keywords="bioinformatics codon reassignment tracker",
 
@@ -70,11 +73,11 @@ def setup_package():
         setup_requires=['numpy'],
         install_requires = [
             'ete3',
-            'numpy >= 1.8.1',
+            'numpy>= 1.8.1',
             'pandas',
             'scikit-learn',
-            'scipy',
-            'biopython',
+            'scipy>=0.16.1',
+            'biopython>=1.65',
             'matplotlib',
             'WeasyPrint',
             'PyYAML',
