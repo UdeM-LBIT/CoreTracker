@@ -281,7 +281,7 @@ class SequenceLoader:
 
     @classmethod
     def _refine(clc, alignment, timeout, outdir, hmmbuild="hmmbuild", hmmalign="hmmalign", eslalimanip="esl-alimanip",
-                eslalimask="esl-alimask", hmmfile=None, loop=10, minqual=8,  strategie="greater", clean=True):
+                eslalimask="esl-alimask", hmmfile=None, loop=10, minqual=8,  strategie="lesser", clean=True):
         """Align and refine at the same time with hmmalign and muscle"""
 
         success, not_found = check_binaries(
@@ -2225,20 +2225,23 @@ def pdf_format_data(ori_aa, dest_aa, gdata, prediction, dtype, output=""):
     return export_from_html(data_var, output)
 
 
-def print_data_to_txt(outputfile, header, X, X_label, Y, codon_data, cible):
+def print_data_to_txt(outputfile, header, X, X_label, Y, Y_pred, codon_data, cible, suptext=None):
     """Print result in a text file"""
     out = Output(file=outputfile)
     out.write("### Random Forest prediction\n")
     out.write("\t".join(["genome", "codon",
-                            "ori_aa", "rea_aa"] + header + ["prediction"]))
+                            "ori_aa", "rea_aa"] + header + ["prediction", "probability"]))
 
     total_elm = len(Y)
     for i in xrange(total_elm):
-        out.write("\n"+"\t".join(list(X_label[i]) + [str(x) for x in X[i]] + [str(Y[i])]))
+        out.write("\n"+"\t".join(list(X_label[i]) + [str(x) for x in X[i]] + [str(Y[i]), str(Y_pred[i])]))
 
-    out.write("\n\n### Alignment improvement:\n")
-    for (codon,score) in codon_data.items():
-        out.write("{}\t{}\t{:.2e}\n".format(codon, cible, score))
+    if codon_data:
+        out.write("\n\n### Alignment improvement:\n")
+        for (codon,score) in codon_data.items():
+            out.write("{}\t{}\t{:.2e}\n".format(codon, cible, score))
+    if suptext and isinstance(suptext, basestring):
+        out.write("\n\n{}\n".format(suptext))
     out.close()
 
 
