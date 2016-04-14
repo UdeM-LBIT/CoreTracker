@@ -70,4 +70,5 @@ data/*/test*
 *.jpg
 *.pdf
 
-./*py
+lscript/
+zip_resultat/
