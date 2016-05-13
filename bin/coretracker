@@ -28,6 +28,7 @@ from Bio import SeqIO
 from ete3 import Tree
 
 from coretracker.coreutils import *
+from coretracker.classifier.models import ModelType
 from coretracker.classifier import *
 from coretracker.classifier import MODELPATH
 from coretracker.settings import *
@@ -53,8 +54,6 @@ except ImportError:
 etiquette = ["fitch", "suspected", "Fisher pval", "Gene frac",
                     "N. rea", "N. used", "Cod. count", "Sub. count",
                     "G. len", "codon_lik", "N. mixte" ,"id"] #, 'total_aa']
-selected_feats = [2,3,4,5,6,7,8,9,11]
-selected_et = [etiquette[i] for i in selected_feats]
 
 def testing_a_lot(args, settings):
     t = random.randint(30, 90)
@@ -98,11 +97,7 @@ def set_coretracker(args, settings):
             pass
 
     clf = Classifier.load_from_file(MODELPATH%settings.MODEL_TYPE)
-    if settings.MODEL_TYPE == 'new':
-        global selected_et
-        global selected_feats
-        selected_feats = [0,2,3,4,5,6,7,8,9,11]
-        selected_et = [etiquette[i] for i in selected_feats]
+    model = ModelType(settings.MODEL_TYPE, etiquette)
 
 
     if clf is None or not clf.trained:
@@ -119,9 +114,9 @@ def set_coretracker(args, settings):
     reafinder = ReaGenomeFinder(setseq, settings)
     reafinder.get_genomes()
     reafinder.possible_aa_reassignation()
-    return reafinder, clf
+    return reafinder, clf, model
 
-def compile_result(x, clf, cod_align):
+def compile_result(x, clf, cod_align, model):
     """compile result from analysis"""
     reafinder, fitch, data = x
     s_complete_data = utils.makehash()
@@ -129,11 +124,11 @@ def compile_result(x, clf, cod_align):
     s_complete_data['genome'] = reafinder.reassignment_mapper['genome']
     X_data, X_labels, _ = read_from_json(s_complete_data, None, use_global=False)
     # extract usefull features
-    X_data, _ = getDataFromFeatures(X_data, etiquette, feats=selected_feats)
+    X_data, X_dataprint, selected_et =  model.format_data(X_data)
     pred_prob = clf.predict_proba(X_data)
     pred =  clf.predict(X_data)
     sppval, outdir = utils.get_report(fitch, data, reafinder, cod_align, (X_data, X_labels, pred_prob, pred))
-    utils.print_data_to_txt(os.path.join(outdir, fitch.ori_aa+"_to_"+fitch.dest_aa+"_data.txt"), selected_et, X_data, X_labels, pred, pred_prob, sppval, fitch.dest_aa)
+    utils.print_data_to_txt(os.path.join(outdir, fitch.ori_aa+"_to_"+fitch.dest_aa+"_data.txt"), selected_et, X_dataprint, X_labels, pred, pred_prob, sppval, fitch.dest_aa)
 
 
 if __name__ == '__main__':
@@ -219,20 +214,20 @@ if __name__ == '__main__':
     setting.fill(ad_params)
     setting.update_params(SUBMAT=args.submat)
     parallel = args.parallel
-    reafinder, clf = set_coretracker(args, setting)
+    reafinder, clf, model = set_coretracker(args, setting)
     codon_align, fcodon_align = reafinder.seqset.get_codon_alignment()
     cod_align = SeqIO.to_dict(fcodon_align)
     reafinder.set_rea_mapper()
 
     done = False
     if args.parallel>0 and ENABLE_PAR:
-        results = Parallel(n_jobs=args.parallel, verbose=2)(delayed(compile_result)(x, clf, cod_align) for x in reafinder.run_analysis(codon_align, fcodon_align))
+        results = Parallel(n_jobs=args.parallel, verbose=2)(delayed(compile_result)(x, clf, cod_align, model) for x in reafinder.run_analysis(codon_align, fcodon_align))
         done = True
     elif args.parallel>0:
         logging.warning("Joblib requirement not found! Disabling parallelization")
 
     if not done:
         for x in reafinder.run_analysis(codon_align, fcodon_align):
-            compile_result(x, clf, cod_align)
+            compile_result(x, clf, cod_align, model)
 
-    reafinder.save_all()
+    reafinder.save_all(True)

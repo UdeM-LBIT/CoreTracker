@@ -36,3 +36,6 @@ CONF: 0.05
 
 # Selection start codon range
 STARTDIST: 20
+
+# Learning model to use (this is the default)
+MODEL_TYPE: '3'

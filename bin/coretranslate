@@ -40,6 +40,7 @@ parser.add_argument('--filter', dest='filter', action='store_true',
 parser.add_argument('--hmmdir', dest='hmmdir',
                     help="Link a directory with hmm files for alignment. Each hmmfile should be named in the following format : genename.hmm")
 
+parser.add_argument('--count', '-c', dest="hcount", default=1, type=int, help="Number of loops for the hmm build and align")
 parser.add_argument('--verbose', '-v', dest='verbose', action='store_true',
                                         help="Print verbose (debug purpose)")
 
@@ -49,7 +50,8 @@ args = parser.parse_args()
 if args.verbose:
     logging.basicConfig(level=logging.DEBUG)
 
-utils.purge_directory(args.outdir)
+if not os.path.exists(args.outdir):
+    utils.purge_directory(args.outdir)
 
 core_inst = args.dnafile
 gcode = args.gcode
@@ -114,7 +116,7 @@ if not args.notrans:
         for (gene, seqs) in translated_prot.items():
             al = SequenceLoader._align(seqs, prog, None, 1.0, args.outdir)
             if args.refine:
-                al = SequenceLoader._refine(al, 9999, args.outdir, loop=10,
+                al = SequenceLoader._refine(al, 9999, args.outdir, loop=args.hcount,
                                       clean=args.noclean, hmmfile=hmmfiles.get(gene, None))
             alignment[gene] = al
 
