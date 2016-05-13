@@ -48,10 +48,10 @@ def setup_package():
         download_url = 'https://github.com/UdeM-LBIT/CoreTracker/tarball/1.0.1',
         author='Emmanuel Noutahi',
         author_email='fmr.noutahi@umontreal.ca',
-        scripts = ['bin/coretracker', 'bin/coretranslate', 'bin/corefusion'],
+        scripts = ['bin/coretracker', 'bin/coretranslate', 'bin/corefusion', 'bin/corextract'],
         packages=find_packages(),
         package_data = {
-            'coretracker.classifier': ['models/new/*', 'models/old/*'],
+            'coretracker.classifier': ['models/*/*'],
             'coretracker.coreutils': ['templates/*'],
         },
         entry_points={'console_scripts': []},

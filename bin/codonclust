@@ -1,0 +1,102 @@
+from sklearn.decomposition import PCA
+from sklearn.cluster import DBSCAN, MeanShift, estimate_bandwidth
+from json import JSONDecoder
+import numpy as np
+from sklearn import metrics
+import matplotlib.pyplot as plt
+import argparse, json
+from sklearn.preprocessing import StandardScaler
+import itertools
+
+codon_list = ["".join(i) for i in itertools.product('ATGC', repeat=3)]
+
+def parse_json_file(jfile):
+    with open(jfile) as INDATA:
+        data = json.load(INDATA)
+    return data
+
+
+def print_data_to_file(data, labels, outfile):
+    with open(outfile) as  OUT:
+        header = ['Species']+codon_list
+        OUT.write("\t".join(header)+"\n")
+        d =  data.shape[0]
+        for i in xrange(d):
+            line =  "\t".join([labels[i]]+ [str(int(x)) for x in data[i, :]])+"\n"
+            OUT.write(line)
+
+def get_representation(codons, scale=False, outputfile=None):
+    labels = list(codons.keys())
+    data = np.zeros((len(labels), 64), dtype=np.float)
+    for (i, spec) in enumerate(labels):
+        data[i, :] = [codons[spec].get(x,0) for x in codon_list]
+    # discard columns where we have zeros
+    if outputfile:
+        print_data_to_file(data, labels, outputfile)
+
+    cols = np.where(np.sum(data, axis=0)==0)[0]
+    print "The following codon are discarded : ", ",".join([codon_list[x] for x in cols])
+    data = np.delete(data, cols, axis=1)
+    data = data /np.sum(data, axis=0)
+    if scale:
+        data = StandardScaler().fit_transform(data)
+    return data, labels
+
+
+def doPCA(data, n=2):
+    pca = PCA(n_components=n)
+    return pca.fit_transform(data)
+
+
+def cluster(data, algo='MeanShift'):
+    if algo.upper() == 'DBSCAN':
+        algo = DBSCAN(min_samples=4)
+    else :
+        bandwidth = estimate_bandwidth(data, quantile=0.2)
+        algo = MeanShift(bandwidth=bandwidth, bin_seeding=True)
+    labels = algo.fit_predict(data)
+    n_clusters_ = len(set(labels)) - (1 if -1 in labels else 0)
+    print('Estimated number of clusters: %d' % n_clusters_)
+    #print("Silhouette Coefficient: %0.3f" % metrics.silhouette_score(data, labels))
+    return labels
+
+
+def plot_result(data, labels, output="output.png"):
+    clusterlab = cluster(data)
+    unique_labels = set(clusterlab)
+    colors = plt.cm.Spectral(np.linspace(0, 1, len(unique_labels)))
+    fig  = plt.figure()
+    plt.clf()
+    ax = fig.add_subplot(111)
+    plt.subplots_adjust(bottom = 0.1)
+    for k, col in zip(unique_labels, colors):
+        if k == -1:
+            # Black used for noise.
+            col = 'k'
+        class_member_mask = (clusterlab == k)
+        xy = data[class_member_mask]
+        ax.scatter(xy[:, 0], xy[:, 1], marker='o', c=col, s=500)
+    for l, x, y in zip(labels, data[:, 0], data[:, 1]):
+        ax.annotate( l, xy = (x, y), xytext=(-12, 15), textcoords = 'offset points', \
+                    clip_on=True,  multialignment='center', rasterized=True, \
+                    size='x-small', ha = 'right', va = 'center', arrowprops = dict(arrowstyle='->', connectionstyle="arc3"))
+    plt.title('PCA and Mean-Shift Clustering of genome according to codon usage')
+    plt.show()
+    #plt.savefig(output, bbox_inches='tight')
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='Plot codon or amino acid usage in genome')
+    parser.add_argument('--reafile', '-i', dest="reafile", help="Json rea file")
+    parser.add_argument('--outfile', '-o', dest="outfile", default="output", help="Outfile file")
+    parser.add_argument('--scale', action='store_true', dest="scale", help="Scale data")
+    parser.add_argument('--csv', action='store_true', dest="csv", help="Export codon count in csv format")
+
+    args =  parser.parse_args()
+    data = parse_json_file(args.reafile)
+    data, labels = get_representation(data['codons'], args.scale, (args.outfile if args.csv else None))
+    pca_data = doPCA(data)
+    outfile =  args.outfile
+    if '.' not in outfile:
+        outfile+=".svg"
+    plot_result(pca_data, labels, outfile)

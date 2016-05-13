@@ -257,7 +257,7 @@ def read_from_json(data, labels=None, use_global=True, use_pvalue=True):
                         codon, 0) * (1.0 / codon_count) if codon_count > 0 else 0
                     gene_frac = gene_count * \
                         (1.0 / total_gene_count) if total_gene_count > 0 else 0
-                    codon_id = codon_identifier[codon]
+                    codon_id = codon_identifier[codon.replace('U', 'T')]
                     genome_len = data["genome"][dtype][genome]
                     # only add codon that are reassigned else it does not
                     # make sense, right?
@@ -487,23 +487,32 @@ def split_zeros_pos(L, X, Y, split_size=300):
             yield (X[ch], L[ch], Y[ch])
 
 
-def get_test_from_dataset(L, X, Y, AA, tsize=0.3, rstate=0):
+def get_aa_cross_val(L, X, Y, AA, tsize=None, rstate=-1):
     """Get test data from dataset"""
     test_position = []
+    aa_y = np.zeros(Y.shape)
     for i in xrange(len(Y)):
         if L[i][-1] == AA:
+            aa_y[i] = 1
             test_position.append(i)
+
     if tsize:
         t_len = int(tsize * len(Y))
-        zero_pos = np.where(Y == 0)[0]
+        # positions that are 0 without being the one for AA
+        zero_pos = np.where(np.logical_and(Y == 0, aa_y ==0))[0]
+        clen = t_len - len(test_position)
+        if clen > 0:
+            random_zero_pos = np.random.choice(zero_pos, clen, replace=False)
+            test_position.extend(random_zero_pos)
 
-        test_len = len(test_position)
-        random_zero_pos = np.random.choice(zero_pos, t_len, replace=False)
-        test_position.extend(random_zero_pos)
 
     test_position = np.random.permutation(test_position)
     mask = np.ones(Y.shape, dtype=bool)
     mask[test_position] = False
-    return shuffle(X[mask], Y[mask], np.array(range(len(mask)))[mask], random_state=rstate),\
-        shuffle(X[~mask], Y[~mask], np.array(
-            range(len(mask)))[~mask], random_state=rstate)
+    train_position = np.array(range(len(mask)))[mask]
+
+    if rstate > 0:
+        return shuffle(train_position, random_state=rstate),shuffle(test_position, random_state=rstate)
+    # in this case, suppose we want only the train and test index
+    else:
+        return train_position, test_position

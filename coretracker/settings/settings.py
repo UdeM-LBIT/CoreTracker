@@ -56,7 +56,7 @@ class Settings():
             'USE_GLOBAL', parameters.USE_GLOBAL)
         # hidden parameter for debug purpose
         self.MODEL_TYPE = kwargs.get(
-                'MODEL_TYPE', 'old')
+                'MODEL_TYPE', '1')
         # choose algorithm for computing the suspected species
         self.mode = kwargs.get('MODE', parameters.MODE)
         # choose matrix type to use, default is blosum62
