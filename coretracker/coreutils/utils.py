@@ -984,7 +984,7 @@ class SequenceSet(object):
         self.filt_prot_align = current_alignment
         self.filt_position = tt_filter_position
 
-    def write_data(self, id_filtered=None, gap_filtered=None, ic_filtered=None, tree=None):
+    def write_data(self, ori_alignment=None, id_filtered=None, gap_filtered=None, ic_filtered=None, tree=None):
         """Save file depending on the file use as input"""
         if id_filtered:
             AlignIO.write(self._id_alignment, open(id_filtered, 'w'), 'fasta')
@@ -993,6 +993,8 @@ class SequenceSet(object):
                 gap_filtered, 'w'), 'fasta')
         if ic_filtered:
             AlignIO.write(self._ic_alignment, open(ic_filtered, 'w'), 'fasta')
+        if ori_alignment:
+            AlignIO.write(self.prot_align, open(ori_alignment, 'w'), 'fasta')
         if tree:
             self.phylotree.write(outfile=tree)
 
@@ -1310,6 +1312,16 @@ class ReaGenomeFinder:
                                 self.aa2aa_rea[aa] = defaultdict(set)
                                 self.aa2aa_rea[aa][cur_aa].add(spec)
 
+    def get_codon_usage(self):
+        """Get Codon usage from species"""
+        codons_align, _ = self.seqset.get_codon_alignment()
+        spec_data = {}
+        codons_align = SeqIO.to_dict(codons_align)
+        for (spec,codalign) in codons_align.items():
+            cseq = str(codalign.seq)
+            spec_data[spec] = Counter([cseq[x:x+3] for x in range(0, len(cseq), 3)])
+        return spec_data
+
     def save_json(self):
         """Save result into a json file"""
         with open(os.path.join(self.settings.OUTDIR, "aause.json"), "w") as outfile1:
@@ -1319,14 +1331,17 @@ class ReaGenomeFinder:
         with open(os.path.join(self.settings.OUTDIR, "reassignment.json"), "w") as outfile3:
             json.dump(self.reassignment_mapper, outfile3, indent=4)
 
-    def save_all(self):
+    def save_all(self, savecodon=False):
         """Save everything"""
+        if savecodon:
+            self.reassignment_mapper['codons'] = self.get_codon_usage()
         self.save_json()
         id_filtfile = os.path.join(self.settings.OUTDIR, "id_filt.fasta")
         ic_filtfile = os.path.join(self.settings.OUTDIR, "ic_filt.fasta")
         gap_filtfile = os.path.join(self.settings.OUTDIR, "gap_filt.fasta")
+        ori_al = os.path.join(self.settings.OUTDIR, "ori_alignment.fasta")
         newick = os.path.join(self.settings.OUTDIR, "tree.nwk")
-        self.seqset.write_data(
+        self.seqset.write_data(ori_alignment=ori_al,
             id_filtered=id_filtfile, gap_filtered=gap_filtfile, ic_filtered=ic_filtfile, tree=newick)
 
     def run_analysis(self, codon_align, fcodon_align):
@@ -2091,8 +2106,7 @@ def violin_plot(vals, output, score, codon, cible, imformat="pdf"):
         fig = ax.get_figure()
         fig.savefig(output, format=imformat)
 
-    logging.info('{} --> {}) : {:.2e}'.format(codon, cible, score))
-    return output
+    return output, (codon, cible, score)
 
 
 def codon_adjust_improve(fitchtree, reafinder, codon_align, codontable, prediction, outdir=""):
@@ -2157,9 +2171,11 @@ def codon_adjust_improve(fitchtree, reafinder, codon_align, codontable, predicti
 
             cod_ts.title.add_face(TextFace("Prediction validation for "+codon+" to "+fitchtree.dest_aa, fsize=14), column=0)
 
-            violinout = violin_plot({'Original':sp, 'Corrected':cor_sp},
+            violinout, viout = violin_plot({'Original':sp, 'Corrected':cor_sp},
                                     os.path.join(outdir, "%s_violin"%codon),
                                     score_improve, codon, fitchtree.dest_aa, imformat=settings.IMAGE_FORMAT)
+            if viout[-1] < reafinder.confd:
+                logging.info('{} --> {}) : {:.2e}'.format(viout))
 
             cod_out = os.path.join(outdir, "%s_codons.%s"%(codon, settings.IMAGE_FORMAT))
             ori_out = os.path.join(outdir, "%s_ori.%s"%(codon, settings.IMAGE_FORMAT))
@@ -2230,7 +2246,7 @@ def print_data_to_txt(outputfile, header, X, X_label, Y, Y_pred, codon_data, cib
     out = Output(file=outputfile)
     out.write("### Random Forest prediction\n")
     out.write("\t".join(["genome", "codon",
-                            "ori_aa", "rea_aa"] + header + ["prediction", "probability"]))
+                            "ori_aa", "rea_aa"] + list(header) + ["prediction", "probability"]))
 
     total_elm = len(Y)
     for i in xrange(total_elm):
@@ -2240,6 +2256,13 @@ def print_data_to_txt(outputfile, header, X, X_label, Y, Y_pred, codon_data, cib
         out.write("\n\n### Alignment improvement:\n")
         for (codon,score) in codon_data.items():
             out.write("{}\t{}\t{:.2e}\n".format(codon, cible, score))
+
+    tmp = Y_pred[Y>0, 1]
+    if len(tmp) > 0 :
+        prerange = (min(tmp), max(tmp))
+        write_d = "\n### Prediction Prob. range for Positive :[ %.3f - %.3f ]\n"%prerange
+        out.write("\n{}\n".format(write_d))
+
     if suptext and isinstance(suptext, basestring):
         out.write("\n\n{}\n".format(suptext))
     out.close()
