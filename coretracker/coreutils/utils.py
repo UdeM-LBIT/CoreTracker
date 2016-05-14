@@ -2175,7 +2175,7 @@ def codon_adjust_improve(fitchtree, reafinder, codon_align, codontable, predicti
                                     os.path.join(outdir, "%s_violin"%codon),
                                     score_improve, codon, fitchtree.dest_aa, imformat=settings.IMAGE_FORMAT)
             if viout[-1] < reafinder.confd:
-                logging.info('{} --> {}) : {:.2e}'.format(viout))
+                logging.info('{} --> {}) : {:.2e}'.format(*viout))
 
             cod_out = os.path.join(outdir, "%s_codons.%s"%(codon, settings.IMAGE_FORMAT))
             ori_out = os.path.join(outdir, "%s_ori.%s"%(codon, settings.IMAGE_FORMAT))
