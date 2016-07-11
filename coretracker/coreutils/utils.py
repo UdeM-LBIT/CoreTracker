@@ -196,9 +196,9 @@ class SequenceLoader:
         else:
             raise NotImplementedError("Others format are not yet supported")
 
-    def save_alignment(self, outfile):
+    def save_alignment(self, alignment, outfile, format='fasta'):
         """save alignment in a file """
-        AlignIO.write(self.alignment, open(outfile, 'w'), 'fasta')
+        AlignIO.write(alignment, open(outfile, 'w'), format)
 
     def concat(self, missing='-', alpha=generic_protein):
         """Concatenate alignment into one global alignment"""
@@ -759,11 +759,12 @@ class SequenceSet(object):
 
         self.prot_dict, self.dna_dict, self.gene_limits = coreinstance.concat()
         self.prot_align = MultipleSeqAlignment(self.prot_dict.values())
-        self.compute_current_mat()
-        self.core = coreinstance
+        self.seqload = coreinstance
         self.phylotree = phylotree
         self.common_genome = []
+        self.core = None
         self.restrict_to_common()
+        #self.compute_current_mat()
         self.codon_align()
 
     def compute_current_mat(self):
@@ -783,7 +784,7 @@ class SequenceSet(object):
         gene_in_spec = {}
         for spec in self.common_genome:
             gene_in_spec[spec] = np.sum(
-                [1 for gene, speclist in self.core.common_spec_per_gene.items() if spec in speclist])
+                [1 for gene, speclist in self.seqload.common_spec_per_gene.items() if spec in speclist])
         return gene_in_spec
 
     def restrict_to_common(self):
@@ -826,6 +827,7 @@ class SequenceSet(object):
 
         self.prot_align = MultipleSeqAlignment(
             self.prot_dict.values(), alphabet=alpha)
+        self.core = CoreFile.split_alignment(self.prot_align, self.gene_limits)
 
     @classmethod
     def copy_codon_record(clc, record, codontable, gap_char='-'):
@@ -984,17 +986,22 @@ class SequenceSet(object):
         self.filt_prot_align = current_alignment
         self.filt_position = tt_filter_position
 
+    def save_align(self, alignment, outfile, format='fasta'):
+        """save alignment in a file """
+        AlignIO.write(alignment, open(outfile, 'w'), format)
+
     def write_data(self, ori_alignment=None, id_filtered=None, gap_filtered=None, ic_filtered=None, tree=None):
         """Save file depending on the file use as input"""
         if id_filtered:
-            AlignIO.write(self._id_alignment, open(id_filtered, 'w'), 'fasta')
+            self.save_align(self._id_alignment, id_filtered)
         if gap_filtered:
-            AlignIO.write(self._gap_alignment, open(
-                gap_filtered, 'w'), 'fasta')
+            self.save_align(self._gap_alignment, gap_filtered)
         if ic_filtered:
-            AlignIO.write(self._ic_alignment, open(ic_filtered, 'w'), 'fasta')
+            self.save_align(self._ic_alignment, ic_filtered)
         if ori_alignment:
-            AlignIO.write(self.prot_align, open(ori_alignment, 'w'), 'fasta')
+            self.save_align(self.prot_align, ori_alignment)
+            ori_core =  ori_alignment.replace('fasta', 'core')
+            CoreFile.write_corefile(self.core, ori_core)
         if tree:
             self.phylotree.write(outfile=tree)
 
@@ -1102,6 +1109,31 @@ class ReaGenomeFinder:
         self.settings = settings
         self.interesting_case = []
         self.reassignment_mapper = makehash()
+
+    def update_reas(self, codon, cible_aa, speclist, codon_align, codonpos, filt_pos, genelim):
+        """Update the list of codons reassignment and position"""
+        rea_position_keeper = defaultdict(dict)
+        genelim = sorted(genelim, key=lambda x: x[2])
+        def _pos_in_gene(pos, glim=genelim, ind=0):
+            while pos > glim[ind][-1]:
+                ind += 1
+            gene, gpos = glim[ind][0], pos - glim[ind][1]
+            return ind, gene, gpos
+
+        for spec in speclist:
+            spec_dt = []
+            i = 0
+            for ps in codonpos:
+                if codon_align[spec].seq.get_codon(ps) == codon:
+                    i, gene, pos = _pos_in_gene(filt_pos[ps], ind=i)
+                    spec_dt.append((gene, pos))
+            rea_position_keeper[spec]["%s:%s"%(codon, cible_aa)] = spec_dt
+        return rea_position_keeper
+
+    def export_position(self, rea_position_keeper, outfile):
+        """Export reassignment position to a file"""
+        with open(outfile, 'w') as OUT:
+            json.dump(rea_position_keeper, OUT, indent=4)
 
     def compute_sequence_identity(self, matCalc=None):
         """Compute a distance matrix from the alignment"""
@@ -1254,11 +1286,13 @@ class ReaGenomeFinder:
 
     def get_aa_count_in_alignment(self):
         """Get the aa count for each aa in the alignment"""
-        aa_count = defaultdict(Counter)
+        self.aa_count_per_spec = defaultdict(Counter)
         f_prot_align = SeqIO.to_dict(self.seqset.filt_prot_align)
+        self.total_aa_count = Counter()
         for spec in f_prot_align:
-            aa_count[spec] = Counter(f_prot_align[spec])
-        return aa_count
+            self.aa_count_per_spec[spec] = Counter(f_prot_align[spec])
+            self.total_aa_count.update(self.aa_count_per_spec[spec])
+        return self.aa_count_per_spec
 
     def get_prob_thresh(self, c1, c2, l, prob):
         """Get virtual prob threshold. This is temp"""
@@ -1276,7 +1310,6 @@ class ReaGenomeFinder:
     def possible_aa_reassignation(self):
         """Find to which amino acid the reassignation are probable"""
         # TODO :  CHANGE THIS FUNCTION TO A MORE REALISTIC ONE
-
         aa_count_spec = self.get_aa_count_in_alignment()
         aa_count_cons = Counter(self.filtered_consensus)
         for aa, suspect in self.suspected_species.items():
@@ -1311,6 +1344,29 @@ class ReaGenomeFinder:
                             except KeyError:
                                 self.aa2aa_rea[aa] = defaultdict(set)
                                 self.aa2aa_rea[aa][cur_aa].add(spec)
+
+    def get_expected_prob_per_species(self, genome, aa1, aa2, use_cost=False, use_align=False, l=0.8):
+        """Get expected prob for binomial test"""
+        ncount = 0
+        if not use_align:
+            aa1F = self.aa_count_per_spec[genome][aa1]
+            aa2F = self.aa_count_per_spec[genome][aa2]
+            ncount =  sum(self.aa_count_per_spec[genome].values())
+        else:
+            aa1F = self.total_aa_count[aa1]
+            aa2F = self.total_aa_count[aa2]
+            ncount =  sum(self.total_aa_count.values())
+
+        exp_prob = aa1F*aa2F*2.0/(ncount**2)
+        if not use_cost:
+            return  exp_prob
+        else:
+            try:
+                cost = self.settings.SUBMAT[(aa1, aa2)]
+            except:
+                cost = self.settings.SUBMAT[(aa2, aa1)]
+            return exp_prob*np.exp(cost*l)
+
 
     def get_codon_usage(self):
         """Get Codon usage from species"""
@@ -1381,14 +1437,28 @@ class ReaGenomeFinder:
                         if self.global_consensus[pos] == aa1 and rec[pos] == aa2:
                             leaf.count += 1
 
-                    reacodon = fcodon_rea.get_reacodons(genome, aa2)
-                    usedcodon = fcodon_rea.get_usedcodons(genome, aa2)
-                    # if not self.settings.USE_GLOBAL:
-                    #    reacodon = fcodon_rea.get_reacodons(genome, aa2)
-                    #    usedcodon = fcodon_rea.get_usedcodons(genome, aa2)
+                    # filtered codon infos
+                    freacodon = fcodon_rea.get_reacodons(genome, aa2)
+                    fusedcodon = fcodon_rea.get_usedcodons(genome, aa2)
+                    fmixtecodon = fcodon_rea.get_mixtecodons(genome, aa2)
+                    # global codon infos
+                    greacodon = gcodon_rea.get_reacodons(genome, aa2)
+                    gusedcodon = gcodon_rea.get_usedcodons(genome, aa2)
+                    gmixtecodon = gcodon_rea.get_mixtecodons(genome, aa2)
 
+                    # settings parameters
+                    reacodon, usedcodon, mcodon = freacodon, fusedcodon, fmixtecodon
+                    if self.settings.USE_GLOBAL:
+                        reacodon, usedcodon, mcodon = greacodon, gusedcodon, gmixtecodon
+
+                    eprob = None
+                    if len(reacodon.values()) == 1 or len(usedcodon.values()) == 1:
+                        eprob = self.get_expected_prob_per_species(genome, aa2, aa1,
+                                    use_cost=True, use_align=True)
+                        print("%s | %s to %s : %f"%(genome, aa2, aa1, eprob))
+                        assert (eprob -1 < 0), "Strange value for eprob %f"%eprob
                     fisher_passed, pval = independance_test(
-                        reacodon, usedcodon, confd=self.confd, tot_size=len(slist))
+                        reacodon, usedcodon, confd=self.confd, expct_prob=eprob)
                     # print "%s\t%s\t%s ==> %s" %(aa2, aa1, genome,
                     # str(column_comparision) )
                     # if('lost' in leaf.features and fisher_passed and
@@ -1397,18 +1467,13 @@ class ReaGenomeFinder:
                         leaf.lost = False
 
                     gdata = {}
-                    greacodon = gcodon_rea.get_reacodons(genome, aa2)
-                    gusedcodon = gcodon_rea.get_usedcodons(genome, aa2)
-                    gmixtecodon = gcodon_rea.get_mixtecodons(genome, aa2)
                     g_rea_dist = gcodon_rea.get_rea_aa_codon_distribution(
                         genome, aa2)
                     g_total_rea_dist = gcodon_rea.get_total_rea_aa_codon_distribution(
                         genome, aa2)
                     gdata['global'] = {'rea_codon': greacodon, 'used_codon': gusedcodon, 'mixte_codon': gmixtecodon,
                                        'count': leaf.count, 'rea_distribution': g_rea_dist, 'total_rea_distribution': g_total_rea_dist}
-                    freacodon = fcodon_rea.get_reacodons(genome, aa2)
-                    fusedcodon = fcodon_rea.get_usedcodons(genome, aa2)
-                    fmixtecodon = fcodon_rea.get_mixtecodons(genome, aa2)
+
                     f_rea_dist = fcodon_rea.get_rea_aa_codon_distribution(
                         genome, aa2)
                     f_total_rea_dist = fcodon_rea.get_total_rea_aa_codon_distribution(
@@ -1562,7 +1627,7 @@ def remove_gap_position(alignfile, curformat):
     return fastafile
 
 
-def independance_test(rea, ori, confd=0.05, tot_size=1):
+def independance_test(rea, ori, confd=0.05, expct_prob=0.5):
     """Perform a Fisher's Exact test"""
     codon_list = set(rea.keys())
     codon_list.update(ori.keys())
@@ -1580,7 +1645,7 @@ def independance_test(rea, ori, confd=0.05, tot_size=1):
             pval = fisher_exact(obs, midP=True, attempt=3)
             # fallback to chi2 test if fisher is impossible
         except:
-            logging.debug("**Using ch2 instead of FISHEREXACT")
+            logging.debug("**Using chi2 instead of FISHEREXACT")
             c, pval, dof, t =  ss.chi2_contingency(obs)
         return pval <= confd, pval
 
@@ -1592,15 +1657,20 @@ def independance_test(rea, ori, confd=0.05, tot_size=1):
         return True, eps
     # codon is used in both column
     elif len(rea.values()) > 0 and len(ori.values()) > 0:
-        fpval = abs(rea.values()[0] - ori.values()[0]) / \
-            (rea.values()[0] + ori.values()[0])
-        return rea.values()[0] >= ori.values()[0], fpval / tot_size
-
+        #fpval = abs(rea.values()[0] - ori.values()[0]) / \
+            #(rea.values()[0] + ori.values()[0])
+        #return rea.values()[0] >= ori.values()[0], fpval / tot_size
+        n = rea.values()[0] + ori.values()[0] # ignoring mixcodon ??
+        pval = onevalbinomtest(rea.values()[0], n, expct_prob)
+        return pval<=confd, pval
     # In this case, the codon is neither in the rea column nor in the
-    # second column
+    # second column, strange result
     else:
         return False, 1
 
+def onevalbinomtest(obs, n, prob):
+    """Return a binomial test given success and prob"""
+    return ss.binom_test(obs, n, prob)
 
 def chi2_is_possible(obs):
     """Check if we can perfom chi2 instead of fisher exact test"""
@@ -1616,7 +1686,6 @@ def chi2_is_possible(obs):
         if count * 1.0 / size > 1 - limit:
             return False, True
     return True, count != 0
-
 
 @timeit
 def execute_alignment(cmdline, inp, out):
@@ -1947,8 +2016,8 @@ def get_report(fitchtree, gdata, reafinder, codon_align, prediction, output="", 
         # add the gap to codon_table
         table['---'] = '-'
         table['...'] = '.'
-        data_present, data_var = codon_adjust_improve(fitchtree, reafinder, codon_align, table, prediction, outdir=OUTDIR)
-        return data_var, OUTDIR
+        data_present, data_var, rkp = codon_adjust_improve(fitchtree, reafinder, codon_align, table, prediction, outdir=OUTDIR)
+        return data_var, OUTDIR, rkp
 
 def format_tree(tree, codon, cible, alignment, SP_score, ic_contents, pos=[],
                 limits=(None, None, None), dtype="aa", codontable={}, codon_col={}):
@@ -2125,6 +2194,7 @@ def codon_adjust_improve(fitchtree, reafinder, codon_align, codontable, predicti
     data_var = {}
     ori_al = None
     tree = fitchtree.tree
+    rea_pos_keeper = defaultdict(dict)
 
     def _limit_finder(codon_pos, gene_limit=genelimit, proche=settings.startdist):
         """ Return the gene for each position of codon pos"""
@@ -2155,12 +2225,19 @@ def codon_adjust_improve(fitchtree, reafinder, codon_align, codontable, predicti
         speclist = true_codon_set[codon]
         if len(speclist) > 0:
             #pos = identify_position_with_codon(codon_align, codon, speclist)
+            # check_gain is called only on filtered alignment
+            # maybe it's a better idea to call it on the original alignmnt
             score_improve, alsp, alic, als, pos = check_gain(codon, cible_aa, speclist, codontable,
                                                     codon_align, scoring_method=sc_meth,
                                                     alignment=ori_al, method=method)
             codon_pos = [filt_position[i] for i in pos]
             limits =  _limit_finder(codon_pos)
-
+            if settings.COMPUTE_POS:
+                # only compute this if asked
+                rea_pos = reafinder.update_reas(codon, cible_aa, speclist, codon_align, pos, filt_position, genelimit)
+                for cuspec, readt in rea_pos.items():
+                    for k in readt.keys():
+                        rea_pos_keeper[cuspec][k] = readt[k]
             sp, cor_sp = alsp
             ic, cor_ic = alic
             ori_al, new_al = als
@@ -2193,7 +2270,7 @@ def codon_adjust_improve(fitchtree, reafinder, codon_align, codontable, predicti
             glob_purge.append(violinout)
             outputs.append(True)
 
-    return len(outputs)>0, data_var
+    return len(outputs)>0, data_var, rea_pos_keeper
 
 
 def pdf_format_data(ori_aa, dest_aa, gdata, prediction, dtype, output=""):
@@ -2250,7 +2327,7 @@ def print_data_to_txt(outputfile, header, X, X_label, Y, Y_pred, codon_data, cib
 
     total_elm = len(Y)
     for i in xrange(total_elm):
-        out.write("\n"+"\t".join(list(X_label[i]) + [str(x) for x in X[i]] + [str(Y[i]), str(Y_pred[i])]))
+        out.write("\n"+"\t".join(list(X_label[i]) + [str(x) for x in X[i]] + [str(Y[i]), str(Y_pred[i][-1])]))
 
     if codon_data:
         out.write("\n\n### Alignment improvement:\n")

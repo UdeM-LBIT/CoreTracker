@@ -15,6 +15,7 @@
 
 from sklearn.decomposition import PCA
 from sklearn.cluster import DBSCAN, MeanShift, estimate_bandwidth
+from sklearn.neighbors import KernelDensity
 from json import JSONDecoder
 import numpy as np
 from sklearn import metrics
@@ -30,9 +31,13 @@ def parse_json_file(jfile):
         data = json.load(INDATA)
     return data
 
+def kernel_estimate(dtlen, labels):
+    kde = KernelDensity(kernel='gaussian').fit(dtlen)
 
 def print_data_to_file(data, labels, outfile):
-    with open(outfile) as  OUT:
+    out, fmt =  outfile.split('.')
+    outfile = out + ".txt"
+    with open(outfile, 'w') as  OUT:
         header = ['Species']+codon_list
         OUT.write("\t".join(header)+"\n")
         d =  data.shape[0]
@@ -52,10 +57,11 @@ def get_representation(codons, scale=False, outputfile=None):
     cols = np.where(np.sum(data, axis=0)==0)[0]
     print "The following codon are discarded : ", ",".join([codon_list[x] for x in cols])
     data = np.delete(data, cols, axis=1)
-    data = data /np.sum(data, axis=0)
+    data_len = np.sum(data, axis=0)
+    data = data /data_len
     if scale:
         data = StandardScaler().fit_transform(data)
-    return data, labels
+    return data, labels, data_len
 
 
 def doPCA(data, n=2):
@@ -63,11 +69,11 @@ def doPCA(data, n=2):
     return pca.fit_transform(data)
 
 
-def cluster(data, algo='MeanShift'):
+def cluster(data, algo='MeanShift', params={}):
     if algo.upper() == 'DBSCAN':
-        algo = DBSCAN(min_samples=4)
+        algo = DBSCAN(min_samples=4, **params)
     else :
-        bandwidth = estimate_bandwidth(data, quantile=0.2)
+        bandwidth = estimate_bandwidth(data, quantile=0.2, **params)
         algo = MeanShift(bandwidth=bandwidth, bin_seeding=True)
     labels = algo.fit_predict(data)
     n_clusters_ = len(set(labels)) - (1 if -1 in labels else 0)
@@ -96,8 +102,9 @@ def plot_result(data, labels, output="output.png"):
                     clip_on=True,  multialignment='center', rasterized=True, \
                     size='x-small', ha = 'right', va = 'center', arrowprops = dict(arrowstyle='->', connectionstyle="arc3"))
     plt.title('PCA and Mean-Shift Clustering of genome according to codon usage')
-    plt.show()
-    #plt.savefig(output, bbox_inches='tight')
+    #plt.show()
+    plt.savefig(output, bbox_inches='tight')
+
 
 
 if __name__ == '__main__':
@@ -109,9 +116,10 @@ if __name__ == '__main__':
 
     args =  parser.parse_args()
     data = parse_json_file(args.reafile)
-    data, labels = get_representation(data['codons'], args.scale, (args.outfile if args.csv else None))
+    data, labels, _ = get_representation(data['codons'], args.scale, (args.outfile if args.csv else None))
     pca_data = doPCA(data)
     outfile =  args.outfile
     if '.' not in outfile:
         outfile+=".svg"
     plot_result(pca_data, labels, outfile)
+    # TODO: gene length distribution outlier

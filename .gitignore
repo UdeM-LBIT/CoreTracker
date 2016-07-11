@@ -70,5 +70,8 @@ data/*/test*
 *.jpg
 *.pdf
 
+data/input
 lscript/
 zip_resultat/
+misc_data/
+param.yml

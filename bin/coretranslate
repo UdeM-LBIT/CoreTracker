@@ -96,12 +96,16 @@ if args.filter:
     for gene, seqs in tmp_core_inst.items():
         good_data = []
         disp_data = []
+        species_seen = []
         for seq in seqs:
+            if seq.name in species_seen:
+                raise ValueError("Species %s seen at least 2 times in gene %s. Please Correct"%(seq.name, gene))
             if len(seq.seq.ungap('-')) % 3 != 0:
                 disp_data.append((seq.name, len(seq)))
             else:
                 seq.seq = seq.seq.ungap('-')
                 good_data.append(seq)
+            species_seen.append(seq.name)
         total_gcount += 1
         if not disp_data:
             core_inst[gene] = good_data

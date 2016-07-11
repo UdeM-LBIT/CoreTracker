@@ -1,6 +1,9 @@
 from Bio.Alphabet import generic_nucleotide, generic_protein
+from Bio.Align import MultipleSeqAlignment as MSA
 from Bio.Seq import Seq
+from Bio import SeqIO
 from Bio.SeqRecord import SeqRecord
+from collections import defaultdict as ddict
 
 class CoreFile:
     """Core File format for sequence alignment.
@@ -124,3 +127,32 @@ class CoreFile:
     def items(self):
         """ iterate over the keys and values"""
         return self.sequences.items()
+
+    @classmethod
+    def split_alignment(clc, alignment, genelimit):
+        """Split a multiple sequence alignment into a dict of sequences"""
+        # genelimit convert:
+        sequences = {}
+        if isinstance(alignment, dict):
+            alignment = MSA(alignment.values())
+        exp_len = alignment.get_alignment_length()
+        for dt in genelimit:
+            gene, start, end = dt
+            sequences[gene] =  alignment[:,start:end]
+            exp_len -= sequences[gene].get_alignment_length()
+        if exp_len != 0:
+            raise ValueError("Could not split alignment, wrong gene delimiter")
+        return sequences
+
+
+    @classmethod
+    def flip_data(clc, indict):
+        """Change data structure for dict of genome to dict of genes"""
+        flip_dt = ddict()
+        for (genome, genedict) in indict.items():
+            for (gene, seq) in genedict.items():
+                try:
+                    flip_dt[gene][genome] += str(seq)
+                except:
+                    flip_dt[gene][genome] = str(seq)
+        return flip_dt

@@ -178,33 +178,37 @@ def extract_genome(speclist, genelist, records, revmtgenes):
     # fetch gene and protein from the database and add them to the list
 
     for (s_id, spec) in speclist:
-            specaff = spec.replace('.', '').replace('-', '_').replace(' ', '_')
-            curr_seq = records[s_id]
-            for f in curr_seq.features:
-                # this should filter hypothetical protein that we do not want
-                sgene = None
-                meet_condition = f.type.upper()=='CDS' and 'gene' in f.qualifiers.keys() and not motif_in_seq('orf', f.qualifiers['gene'], f.qualifiers['product'])
-                if meet_condition:
-                    sgene = f.qualifiers['gene'][0].lower()
-                    if(sgene in revmtgenes.keys()):
-                        sgene = revmtgenes[sgene].lower()
-                    if (sgene in genelist) or (not genelist):
-                        seq = None
-                        seq = f.extract(curr_seq.seq)
-                        if len(seq) % 3 != 0:
-                            #print("%s | %d"%(spec, len(seq)%3))
-                            logging.warn("Possible frame-shifting in the following genes : %s - %s | %d (%d)"%(sgene, spec, len(seq), len(seq)%3))
-                        elif 'N' in seq:
-                            logging.warn("Sequence with undefined nucleotide : %s - %s | %d (%d)"%(sgene, spec, len(seq)))
-                        try :
-                            #table = int(f.qualifiers['transl_table'][0])
-                            spec_code_map[spec] = table
-                        except:
-                            pass
-                        rec = SeqRecord(seq, id=specaff, name=specaff)
+        g_found_in_spc = {}
+        specaff = spec.replace('.', '').replace('-', '_').replace(' ', '_')
+        curr_seq = records[s_id]
+        for f in curr_seq.features:
+            # this should filter hypothetical protein that we do not want
+            sgene = None
+            meet_condition = f.type.upper()=='CDS' and 'gene' in f.qualifiers.keys() and not motif_in_seq('orf', f.qualifiers['gene'], f.qualifiers['product'])
+            if meet_condition:
+                sgene = f.qualifiers['gene'][0].lower()
+                if(sgene in revmtgenes.keys()):
+                    sgene = revmtgenes[sgene].lower()
+                if (sgene in genelist) or (not genelist):
+                    seq = None
+                    seq = f.extract(curr_seq.seq)
+                    if len(seq) % 3 != 0:
+                        #print("%s | %d"%(spec, len(seq)%3))
+                        logging.warn("Possible frame-shifting in the following genes : %s - %s | %d (%d)"%(sgene, spec, len(seq), len(seq)%3))
+                    elif 'N' in seq:
+                        logging.warn("Sequence with undefined nucleotide : %s - %s | %d (%d)"%(sgene, spec, len(seq)))
+                    try :
+                        #table = int(f.qualifiers['transl_table'][0])
+                        spec_code_map[spec] = table
+                    except:
+                        pass
+                    rec = SeqRecord(seq, id=specaff, name=specaff)
+                    if g_found_in_spc.get(sgene, 0) < 1:
+                        # this is to ensure that the same gene is not added multiple time
                         gene2spec[sgene].append(rec)
+                    g_found_in_spc[sgene] = 1
     return gene2spec, spec_code_map
-
+    
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Extract genome from genbank file into corefile format.")
 

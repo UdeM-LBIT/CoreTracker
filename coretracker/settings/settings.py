@@ -70,7 +70,7 @@ class Settings():
         self.conf = kwargs.get('CONF', parameters.CONF)
         self.startdist = kwargs.get('STARTDIST', parameters.STARTDIST)
         self.SHOW_ALL = False
-        # matrix used to compute score (close to likelihood score)
+        # matrix used to compute telford score 
         self.SUBMAT = getattr(MatrixInfo, 'blosum62')
 
     def fill(self, params):
