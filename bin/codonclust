@@ -23,8 +23,12 @@ import matplotlib.pyplot as plt
 import argparse, json
 from sklearn.preprocessing import StandardScaler
 import itertools
+from collections import defaultdict
+from Bio.Data import CodonTable
+import re
 
 codon_list = ["".join(i) for i in itertools.product('ATGC', repeat=3)]
+protein_letters = "ACDEFGHIKLMNPQRSTVWY"
 
 def parse_json_file(jfile):
     with open(jfile) as INDATA:
@@ -45,8 +49,10 @@ def print_data_to_file(data, labels, outfile):
             line =  "\t".join([labels[i]]+ [str(int(x)) for x in data[i, :]])+"\n"
             OUT.write(line)
 
-def get_representation(codons, scale=False, outputfile=None):
+def get_representation(codons, scale=False, outputfile=None, speclist=[]):
     labels = list(codons.keys())
+    if speclist :
+        labels = list(set(labels) & set(speclist))
     data = np.zeros((len(labels), 64), dtype=np.float)
     for (i, spec) in enumerate(labels):
         data[i, :] = [codons[spec].get(x,0) for x in codon_list]
@@ -105,6 +111,32 @@ def plot_result(data, labels, output="output.png"):
     #plt.show()
     plt.savefig(output, bbox_inches='tight')
 
+def plot_aa_usage(data, codontable, labels, outfile):
+
+    fig  = plt.figure()
+    plt.clf()
+    ax = fig.add_subplot(111)
+    colors = plt.cm.Dark2(np.linspace(0, 1, len(labels)))
+    x = range(1, len(protein_letters)+1)
+    for (i, spec) in enumerate(labels):
+        specdata = defaultdict(int)
+        spec_dt_count = 0
+        for (cod,l) in data[spec].items():
+            if cod != '---':
+                specdata[codontable.forward_table[cod].upper()] += l
+                spec_dt_count += l
+        y = [specdata.get(aa,0)*1.0/spec_dt_count for aa in protein_letters]
+
+        plt.plot(x, y, color=colors[i])
+
+    plt.xticks(x, protein_letters)
+    plt.subplots_adjust(bottom = 0.1)
+    plt.margins(0.2)
+    plt.xlabel('Amino acid')
+    plt.ylabel('frequency')
+    plt.title('A.A. frequency in each species')
+    plt.legend(labels, loc='center left', bbox_to_anchor=(1, 0.5), ncol=3, fancybox=True, shadow=True)
+    plt.savefig(outfile, bbox_inches='tight')
 
 
 if __name__ == '__main__':
@@ -112,14 +144,33 @@ if __name__ == '__main__':
     parser.add_argument('--reafile', '-i', dest="reafile", help="Json rea file")
     parser.add_argument('--outfile', '-o', dest="outfile", default="output", help="Outfile file")
     parser.add_argument('--scale', action='store_true', dest="scale", help="Scale data")
+    parser.add_argument('--plot_aa_usage' , action='store_true', dest="aausage", help="Plot aa usage (frequency)")
     parser.add_argument('--csv', action='store_true', dest="csv", help="Export codon count in csv format")
+    parser.add_argument('--speclist', '-s', dest="speclist", help="Only use the provided list of species")
+    parser.add_argument('--gcode', dest="defcode", default=4, help="Default genetic code to use")
 
     args =  parser.parse_args()
     data = parse_json_file(args.reafile)
-    data, labels, _ = get_representation(data['codons'], args.scale, (args.outfile if args.csv else None))
-    pca_data = doPCA(data)
-    outfile =  args.outfile
-    if '.' not in outfile:
-        outfile+=".svg"
-    plot_result(pca_data, labels, outfile)
-    # TODO: gene length distribution outlier
+    speclist = []
+    if args.speclist:
+        try :
+            for line in open(args.speclist):
+                line = line.strip()
+                if line and not line.startswith('#'):
+                    speclist.append(line)
+        except IOError:
+            speclist = re.split(';|,| |-',args.speclist)
+            speclist = [x.strip() for x in speclist]
+
+    dt, labels, _ = get_representation(data['codons'], args.scale, (args.outfile if args.csv else None), speclist)
+    pca_data = doPCA(dt)
+    outfile, fmt =  args.outfile,  'svg'
+    if '.' in outfile:
+        outfile, fmt =  args.outfile.split('.')
+    plot_result(pca_data, labels, outfile+"."+fmt)
+    if args.aausage:
+        codontable = CodonTable.unambiguous_dna_by_id[args.defcode]
+        outfile =  outfile+'_aa_usage'
+        plot_aa_usage(data['codons'], codontable, labels, outfile+"."+fmt)
+
+    # TODO: gene length distribution outlier and gene number ==> better in the web code

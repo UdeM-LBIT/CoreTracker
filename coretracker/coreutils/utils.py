@@ -1376,6 +1376,10 @@ class ReaGenomeFinder:
         for (spec,codalign) in codons_align.items():
             cseq = str(codalign.seq)
             spec_data[spec] = Counter([cseq[x:x+3] for x in range(0, len(cseq), 3)])
+        try:
+            del spec_data['---']
+        except:
+            pass
         return spec_data
 
     def save_json(self):
