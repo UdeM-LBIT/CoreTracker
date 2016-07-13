@@ -112,7 +112,7 @@ if args.filter:
             gcount += 1
             print("++> OK (%s)"%gene)
         else:
-            print("--> Fail (%s), %d specs have frame-shifting : \n\t(%s)"%(gene, len(disp_data), ", ".join(["%s: %d, %d"%(x) for x in disp_data])))
+            print("--> Fail (%s), %d specs have frame-shifting : \n\t(%s)"%(gene, len(disp_data), ", ".join(["%s: %d"%(x) for x in disp_data])))
 
     if not core_inst:
         sys.exit("After removing frameshifting, there isn't any remaining genes")
@@ -123,7 +123,7 @@ if args.filter:
     CoreFile.write_corefile(
         core_inst, os.path.join(args.outdir, "nuc.core"))
     # give time to read result
-    time.sleep(2)
+    time.sleep(1)
 
 # proceed to translation if  here
 
@@ -132,11 +132,13 @@ if not args.notrans:
     alignment = {}
     if align:
         for (gene, seqs) in translated_prot.items():
-            al = SequenceLoader._align(seqs, prog, None, 1.0, args.outdir)
-            if args.refine:
-                al = SequenceLoader._refine(al, 9999, args.outdir, loop=args.hcount,
+            print(gene)
+            if len(seqs) > 1:
+                al = SequenceLoader._align(seqs, prog, None, 1.0, args.outdir)
+                if args.refine:
+                    al = SequenceLoader._refine(al, 9999, args.outdir, loop=args.hcount,
                                       clean=args.noclean, hmmfile=hmmfiles.get(gene, None))
-            alignment[gene] = al
+                alignment[gene] = al
 
         CoreFile.write_corefile(alignment, os.path.join(
             args.outdir, "prot_aligned.core"))

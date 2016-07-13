@@ -244,13 +244,17 @@ class SequenceLoader:
         for gene in self.genes:
             # in order to have the best possible alignment, we are going to
             # keep the
-            al = self.__class__._align(
-                self.sequences[gene], msaprog, tree, scale, outdir, alpha)
-            if refine:
-                al = self.__class__._refine(
-                    al, 9999, outdir, settings.hmmbuild, settings.hmmalign, settings.eslalimanip,
-                    settings.eslalimask, loop=self.hmmloop, hmmfile=self.hmmdict.get(gene, None))
-            alignment[gene] = al
+            if len(self.sequences[gene]) > 1:
+                al = self.__class__._align(
+                    self.sequences[gene], msaprog, tree, scale, outdir, alpha)
+                if refine:
+                    al = self.__class__._refine(
+                        al, 9999, outdir, settings.hmmbuild, settings.hmmalign, settings.eslalimanip,
+                        settings.eslalimask, loop=self.hmmloop, hmmfile=self.hmmdict.get(gene, None))
+                alignment[gene] = al
+            else:
+                logging.debug('%s dropped because only %s has it'%(gene, self.sequences[gene][0].id))
+
         return alignment
 
     @classmethod
