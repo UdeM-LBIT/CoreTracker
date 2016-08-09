@@ -20,6 +20,7 @@ from json import JSONDecoder
 import numpy as np
 from sklearn import metrics
 import matplotlib.pyplot as plt
+import matplotlib.colors as mc
 import argparse, json
 from sklearn.preprocessing import StandardScaler
 import itertools
@@ -75,39 +76,44 @@ def doPCA(data, n=2):
     return pca.fit_transform(data)
 
 
-def cluster(data, algo='MeanShift', params={}):
+def cluster(data, algo, params={}):
+    
+    print_estimate = False
     if algo.upper() == 'DBSCAN':
         algo = DBSCAN(min_samples=4, **params)
     else :
-        bandwidth = estimate_bandwidth(data, quantile=0.2, **params)
+        print_estimate = True
+        bandwidth = estimate_bandwidth(data, **params)
         algo = MeanShift(bandwidth=bandwidth, bin_seeding=True)
     labels = algo.fit_predict(data)
     n_clusters_ = len(set(labels)) - (1 if -1 in labels else 0)
-    print('Estimated number of clusters: %d' % n_clusters_)
+    if print_estimate:
+        print('Estimated number of clusters: %d' % n_clusters_)
     #print("Silhouette Coefficient: %0.3f" % metrics.silhouette_score(data, labels))
     return labels
 
 
-def plot_result(data, labels, output="output.png"):
-    clusterlab = cluster(data)
+def plot_result(data, labels, output="output.png", algo='MeanShift', params={}):
+    clusterlab = cluster(data, algo, params=params)
     unique_labels = set(clusterlab)
     colors = plt.cm.Spectral(np.linspace(0, 1, len(unique_labels)))
     fig  = plt.figure()
     plt.clf()
     ax = fig.add_subplot(111)
+    ax.tick_params(axis='both', which='both', top='off', right='off')
     plt.subplots_adjust(bottom = 0.1)
     for k, col in zip(unique_labels, colors):
         if k == -1:
             # Black used for noise.
             col = 'k'
         class_member_mask = (clusterlab == k)
-        xy = data[class_member_mask]
-        ax.scatter(xy[:, 0], xy[:, 1], marker='o', c=col, s=500)
+        xy = data[class_member_mask, :2]
+        ax.scatter(xy[:, 0], xy[:, 1], marker='o', c=mc.rgb2hex(col), s=500)
     for l, x, y in zip(labels, data[:, 0], data[:, 1]):
         ax.annotate( l, xy = (x, y), xytext=(-12, 15), textcoords = 'offset points', \
                     clip_on=True,  multialignment='center', rasterized=True, \
                     size='x-small', ha = 'right', va = 'center', arrowprops = dict(arrowstyle='->', connectionstyle="arc3"))
-    plt.title('PCA and Mean-Shift Clustering of genome according to codon usage')
+    plt.title('PCA and %s Clustering of genome according to codon usage'%algo)
     #plt.show()
     plt.savefig(output, bbox_inches='tight')
 
@@ -148,6 +154,9 @@ if __name__ == '__main__':
     parser.add_argument('--csv', action='store_true', dest="csv", help="Export codon count in csv format")
     parser.add_argument('--speclist', '-s', dest="speclist", help="Only use the provided list of species")
     parser.add_argument('--gcode', dest="defcode", default=4, help="Default genetic code to use")
+    parser.add_argument('--pca_component', type=int, dest="pca", default=2, help="Number of component for pca")
+    parser.add_argument('--clustering_algo', '--algo', choices=('MeanShift', 'DBSCAN'), default='MeanShift',dest="algo", help="Clustering algorithm to use")
+    parser.add_argument('--bandwidth_quantile', dest="ebquant", type=float, default=0.3, help="Quantile value for bandwidth estimation")
 
     args =  parser.parse_args()
     data = parse_json_file(args.reafile)
@@ -163,11 +172,17 @@ if __name__ == '__main__':
             speclist = [x.strip() for x in speclist]
 
     dt, labels, _ = get_representation(data['codons'], args.scale, (args.outfile if args.csv else None), speclist)
-    pca_data = doPCA(dt)
+    pca_data = doPCA(dt, args.pca)
     outfile, fmt =  args.outfile,  'svg'
     if '.' in outfile:
         outfile, fmt =  args.outfile.split('.')
-    plot_result(pca_data, labels, outfile+"."+fmt)
+
+    if args.algo == 'DBSCAN':
+        params = {}
+    else:
+        params={'quantile':args.ebquant}
+    plot_result(pca_data, labels, outfile+"."+fmt, algo=args.algo, params=params)
+
     if args.aausage:
         codontable = CodonTable.unambiguous_dna_by_id[args.defcode]
         outfile =  outfile+'_aa_usage'

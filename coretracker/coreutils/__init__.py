@@ -13,19 +13,11 @@
 
 import warnings
 from corefile import CoreFile
-from collections import defaultdict
-from functools import partial
-
 warnings.filterwarnings("ignore")
-
 import utils
 from utils import SequenceLoader, SequenceSet, ReaGenomeFinder
-
-def makehash(depth, type):
-    if depth == 0:
-        return defaultdict(type)
-    else:
-        return defaultdict(partial(makehash, depth-1, type))
+import AncestralRecon
+import Faces
 
 __all__ = ['utils', 'SequenceLoader', 'SequenceSet', 'CoreFile',
-            'ReaGenomeFinder', 'makehash']
+            'ReaGenomeFinder', 'AncestralRecon', 'Faces']

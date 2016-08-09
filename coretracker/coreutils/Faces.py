@@ -295,11 +295,11 @@ class SequenceFace(faces.StaticItemFace):
 
 
     def update_items(self):
-        self.item = QGraphicsRectItem(0, 0, self.width, self.row_h)
+        rect_cls = QGraphicsRectItem
+        self.item = rect_cls(0, 0, self.width, self.row_h)
         seq_width = 0
         nopen = QPen(Qt.NoPen)
         font = QFont("Courier", self.fsize)
-        rect_cls = QGraphicsRectItem
         for i, letter in enumerate(self.seq):
             width = self.col_w
             for reg in self.special_col:
@@ -333,7 +333,7 @@ class List90Face(faces.StaticItemFace):
     :param bgcolor:  Background font color. RGB code or color name in :data:`SVG_COLORS`
     """
     def __init__(self, l, ftype="Courier", fstyle="normal", fsize=10,
-                 fgcolor="black", bgcolor="white", col_w=14.0):
+                 fgcolor="black", bgcolor="white", col_w=14.0, rotation=90):
         self.liste = l
         self.ftype = ftype
         self.fgcolor = fgcolor
@@ -342,7 +342,7 @@ class List90Face(faces.StaticItemFace):
         self.row_h = float(self.fsize + 1)
         self.col_w = col_w
         self.width = 0
-        self.rot = 90
+        self.rot = rotation
         self.fstyle = fstyle
         self.coeff_h = max([len(str(x)) for x in self.liste])
 
@@ -386,3 +386,90 @@ class List90Face(faces.StaticItemFace):
                 text.setX(txth)
             seq_width += width
         self.width = seq_width
+
+
+class ReaRectFace(faces.StaticItemFace):
+    """Create a list of rect face for each node
+    in order to plot reassignment in both extant and
+    ancestral sequence
+    """
+    def __init__(self, aalist, readict, is_leaf=True, spacer=1, height=13, \
+            ffamily='Courier', ncodons=None, fsize=10, col_w=None, margin_left=0):
+        self.readict = readict
+        if self.readict is None:
+            raise ValueError("Readict is required to not be empty")
+
+        faces.StaticItemFace.__init__(self, None)
+        self.spacer = spacer
+        self.h = height
+        self.maxcodon = ncodons
+        self.ffamily = ffamily
+        self.fsize = fsize
+        self.w = float(self.fsize + 1) if col_w is None else float(col_w)
+        self.w *= 3
+        self.width = 0
+        self.aa_list = sorted(aalist)
+        self.mgl = margin_left
+        self.is_leaf = is_leaf
+
+        def _init_colors(bgtype=True, fgcolor='#000000'):
+            color = {}
+            for aa in readict.keys():
+                c =  _aabgcolors[aa.upper()] if bgtype else fgcolor
+                color[aa.upper()] = QBrush(QColor(c))
+            return color
+        self.fgcolor = _init_colors(False)
+        self.bgcolor = _init_colors()
+
+    def update_items(self):
+        try:
+            max_codons =  math.ceil(max([len(x) for x in self.readict.values()])/2.0) *2
+        except:
+            max_codons = 1
+        if self.maxcodon :
+            max_codons = max(max_codons, self.maxcodon)
+
+
+        max_h = max_codons * (self.h + self.spacer)
+        rect_cls =  QGraphicsRectItem
+        self.item = rect_cls()
+        nopen = QPen(Qt.NoPen)
+        nobrush = QBrush(Qt.NoBrush)
+        width = self.mgl
+        font = QFont(self.ffamily, self.fsize)
+        for aa in self.aa_list:
+            codons =  self.readict.get(aa, [])
+            tot_codons = len(codons)
+            hpos = (self.h + self.spacer)*(max_codons - tot_codons)/2.0
+
+            for cod in codons:
+                rectitem = rect_cls(0, 0, self.w, self.h, parent=self.item)
+                rectitem.setX(width)
+                rectitem.setY(hpos)
+                rectitem.setBrush(self.bgcolor[aa])
+                rectitem.setPen(nopen)
+                hpos += (self.h + self.spacer)
+                # write letter if enough space
+                if self.w >= self.fsize:
+                    text = QGraphicsSimpleTextItem(cod, parent=rectitem)
+                    text.setFont(font)
+                    text.setBrush(self.fgcolor[aa])
+                    # Center text according to rectitem size
+                    txtw = text.boundingRect().width()
+                    txth = text.boundingRect().height()
+                    text.setPos((self.w - txtw)/2, (self.h - txth)/2)
+
+            # this only happen if codon reassignment not found for aa
+            # we do not need a spacer if it's an internal node (I hope)
+            if hpos == 0 and self.is_leaf:
+                rectitem = rect_cls(0, 0, self.w, self.h, parent=self.item)
+                rectitem.setX(width)
+                rectitem.setY(hpos)
+                rectitem.setBrush(nobrush)
+                rectitem.setPen(nopen)
+
+            width += self.w + self.spacer
+
+        self.width = width
+        self.item.setPen(nopen)
+        self.item.setRect(0, 0, self.width, max_h)

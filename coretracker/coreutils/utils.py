@@ -40,6 +40,7 @@ from Faces import LineFace, PPieChartFace, SequenceFace, List90Face
 from corefile import CoreFile
 from output import Output
 from pdfutils import *
+from AncestralRecon import SingleNaiveFitch
 
 SEABORN = False
 try:
@@ -515,26 +516,23 @@ class CodonReaData(object):
         if not isinstance(self.codon_alignment, dict):
             self.codon_alignment = SeqIO.to_dict(self.codon_alignment)
         self.consensus = consensus
-
-        self.reacodons = defaultdict(partial(defaultdict, Counter))
-        self.usedcodons = defaultdict(partial(defaultdict, Counter))
-        self.mixtecodon = defaultdict(partial(defaultdict, Counter))
+        #self.rea_codons = defaultdict(partial(defaultdict, Counter))
+        self.reacodons = makehash(1, Counter)
+        self.usedcodons = makehash(1, Counter)
+        self.mixtecodon = makehash(1, Counter)
         # find codon usage in the sequence
         self.settings = settings
         self.subsmat = settings.SUBMAT
         self.cons_for_lik = settings.USE_CONSENSUS_FOR_LIKELIHOOD
 
         # print len(codon_align_dict.values()[0])
-        self.specs_amino_count = defaultdict(
-            partial(defaultdict, Counter))  # this one is ok
+        self.specs_amino_count = makehash(1, Counter)# this one is ok
         self.positions = positions
         self.genelimit = genelimit
         self.t_genelimit = len(genelimit)
-        self.codons_distribution = defaultdict(
-            partial(defaultdict, partial(defaultdict, set)))
-        self.total_codons_distribution = defaultdict(
-            partial(defaultdict, partial(defaultdict, set)))
-        self.codon_map_in_genome = defaultdict(partial(defaultdict, Counter))
+        self.codons_distribution = makehash(2, set)
+        self.total_codons_distribution = makehash(2, set)
+        self.codon_map_in_genome = makehash(1, Counter)
 
         self._spec_codon_usage()
 
@@ -632,125 +630,6 @@ class CodonReaData(object):
     def get_total_rea_aa_codon_distribution(self, specie, aa):
         """Get total codon distribution"""
         return dict((k, list(v)) for k, v in self.total_codons_distribution[specie][aa].items())
-
-
-class NaiveFitch(object):
-    """A NaiveFitch algorithm for finding the most parcimonious solution"""
-
-    def __init__(self, tree, reassigned, ori_aa, dest_aa, dct, codon_rea=(None, None)):
-        self.id = {}
-        self.tree = tree
-        self.corr = {'0': ori_aa, '1': dest_aa}
-        self.codon_rea_global, self.codon_rea_filtered = codon_rea
-        colors = ['#a6cee3', '#1f78b4', '#b2df8a',
-                  '#33a02c', '#fb9a99', '#e31a1c', '#fdbf6f']
-        self.dct = dct
-        self.back_table = init_back_table(dct)
-        codon_list = self.back_table[aa_letters_3to1[ori_aa]]
-        self.colors = dict(zip(codon_list, colors))
-        for leaf in tree:
-            if leaf.name in reassigned:
-                leaf.add_features(reassigned={1})
-                leaf.add_features(rea=self.corr['1'])
-                leaf.add_features(state=dest_aa)
-            else:
-                leaf.add_features(reassigned={0})
-                leaf.add_features(rea=self.corr['0'])
-                leaf.add_features(state=ori_aa)
-
-        self.ori_aa = ori_aa
-        self.dest_aa = dest_aa
-        self.ori_aa1 = aa_letters_3to1[ori_aa]
-        self.dest_aa1 = aa_letters_3to1[dest_aa]
-        self.newick = tree.write(features=['name', 'dist', 'support', 'state'])
-        self._bottomup(self.tree)
-        self._topdown(self.tree)
-
-    def update_codon_data(codon_rea):
-        """Update codon reassignment data (global and filtered)
-        """
-        self.codon_rea_global, self.codon_rea_filtered = codon_rea
-
-    def write_tree(self, outfile):
-        """Export newick to  a file"""
-        with open(outfile, 'w') as OUT:
-            OUT.write(self.newick)
-
-    def is_valid(self, thresh=1):
-        """Naive function to test whether or not if the current reassignment is valid"""
-        tmptree = self.tree.copy()
-
-        for l in tmptree.traverse():
-            if not l.is_leaf():
-                l.del_feature('reassigned')
-                l.del_feature('rea')
-            elif (l.lost and l.state == self.dest_aa) or l.count < thresh:
-                l.add_features(reassigned={0})
-                l.add_features(rea=self.corr['0'])
-                l.add_features(state=self.ori_aa)
-            elif not l.lost and l.state == self.ori_aa and l.count >= thresh:
-                l.add_features(reassigned={1})
-                l.add_features(rea=self.corr['1'])
-                l.add_features(state=self.dest_aa)
-        for node in tmptree:
-            if node.rea == self.dest_aa:
-                return True
-        return False
-
-    def _bottomup(self, tree):
-        """Fitch algorithm part 1 : bottom up"""
-        for node in tree.traverse('postorder'):
-            if not node.is_leaf():
-                intersect = []
-                union = set()
-                for c in node.get_children():
-                    union = union | c.reassigned
-                    intersect.append(c.reassigned)
-                intersect = set.intersection(*intersect)
-                if(intersect):
-                    node.add_features(reassigned=intersect)
-                else:
-                    node.add_features(reassigned=union)
-
-                node.add_features(
-                    rea="/".join([self.corr[str(r)] for r in node.reassigned]))
-
-    def _topdown(self, tree):
-        """Fitch algorithm part 2 : top down"""
-        # Since it's not need, just pass
-        pass
-
-    def is_reassigned(cls, node, strict=True):
-        """ return True if a node has undergoned reassignment """
-        if "reassigned" in node.features and (node.reassigned == {1} or (not strict and 1 in node.reassigned)):
-            return True
-        return False
-
-    def get_species_list(self, limit_to_suspected=False):
-        """Get the current species list for this tree"""
-        slist = set()
-        if limit_to_suspected:
-            for node in self.tree.traverse():
-                if 'reassigned' in node.features and node.reassigned == {1}:
-                    slist.update(node.get_leaf_names())
-        else:
-            slist = set(self.tree.get_tree_root().get_leaf_names())
-        return slist
-
-    def get_distance_to_rea_node(self, node):
-        """Get the distance of node to the closest reassigned lca"""
-        cur_node = node
-        if isinstance(node, str):
-            cur_node = self.tree & node
-        dist = 0
-        while cur_node != None and not self.is_reassigned(cur_node, strict=False):
-            dist += 1
-            cur_node = cur_node.up
-        return dist
-
-    def has_codon_data(self):
-        # base codon_data on filtered position only
-        return self.codon_rea_filtered != None
 
 
 class SequenceSet(object):
@@ -1184,7 +1063,7 @@ class ReaGenomeFinder:
 
         self.aa_sim_json = defaultdict(list)
         aa2suspect = defaultdict(Counter)
-        aa2suspect_dist = defaultdict(partial(defaultdict, list))
+        aa2suspect_dist = makehash(1, list)
         for (j, i) in itertools.combinations(xrange(number_seq), r=2):
             gpaired = abs(
                 use_similarity - self.global_paired_distance[self.seq_names[i], self.seq_names[j]])
@@ -1422,7 +1301,7 @@ class ReaGenomeFinder:
                 # logging.debug("%s to %s" % (aa2, aa1))
                 counts = []
                 t = self.seqset.phylotree.copy("newick")
-                fitch = NaiveFitch(t, species, aa_letters_1to3[aa2], aa_letters_1to3[
+                fitch = SingleNaiveFitch(t, species, aa_letters_1to3[aa2], aa_letters_1to3[
                                    aa1], self.seqset.codontable, (gcodon_rea, fcodon_rea))
                 slist = fitch.get_species_list(
                     self.settings.LIMIT_TO_SUSPECTED_SPECIES)
@@ -1463,7 +1342,7 @@ class ReaGenomeFinder:
                     if len(reacodon.values()) == 1 or len(usedcodon.values()) == 1:
                         eprob = self.get_expected_prob_per_species(genome, aa2, aa1,
                                     use_cost=True, use_align=True)
-                        print("%s | %s to %s : %f"%(genome, aa2, aa1, eprob))
+                        #print("%s | %s to %s : %f"%(genome, aa2, aa1, eprob))
                         assert (eprob -1 < 0), "Strange value for eprob %f"%eprob
                     fisher_passed, pval = independance_test(
                         reacodon, usedcodon, confd=self.confd, expct_prob=eprob)
@@ -2353,6 +2232,11 @@ def print_data_to_txt(outputfile, header, X, X_label, Y, Y_pred, codon_data, cib
     out.close()
 
 
-def makehash():
+def makehash(depth=None, type=None):
     """Utility method to make a multilevel dict"""
-    return defaultdict(makehash)
+    if (depth,type) == (None, None):
+        return defaultdict(makehash)
+    elif depth == 0:
+        return defaultdict(type)
+    else:
+        return defaultdict(partial(makehash, depth-1, type))

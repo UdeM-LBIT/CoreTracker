@@ -132,7 +132,6 @@ if not args.notrans:
     alignment = {}
     if align:
         for (gene, seqs) in translated_prot.items():
-            print(gene)
             if len(seqs) > 1:
                 al = SequenceLoader._align(seqs, prog, None, 1.0, args.outdir)
                 if args.refine:
