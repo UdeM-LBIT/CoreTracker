@@ -4,7 +4,9 @@
 
 from __future__ import absolute_import
 from __future__ import print_function
+import glob
 import os, sys
+from distutils import spawn
 try:
     from setuptools import find_packages
 except ImportError:
@@ -42,13 +44,13 @@ def setup_package():
     setup(
         name=__project__,
         version=__version__,
-        maintainer='UdeM-LBIT',
+        maintainer='Emmanuel Noutahi',
         description="CoreTracker, A codon reassignment tracker",
         url='https://github.com/UdeM-LBIT/CoreTracker',
         download_url = 'https://github.com/UdeM-LBIT/CoreTracker/tarball/1.0.1',
         author='Emmanuel Noutahi',
         author_email='fmr.noutahi@umontreal.ca',
-        scripts = ['bin/coretracker', 'bin/coretranslate', 'bin/corefusion', 'bin/corextract', 'bin/codonclust'],
+        scripts = glob.glob('bin/*'),
         packages=find_packages(),
         package_data = {
             'coretracker.classifier': ['models/*/*'],
@@ -81,9 +83,42 @@ def setup_package():
             'matplotlib',
             'WeasyPrint',
             'PyYAML',
+            'PyQt4',
         ],
         ext_modules = fortran_extnsion
     )
 
+
+def binaries_checker():
+	"""Check if some of the required binaries (alignment) are installed"""
+	alignment = ['muscle', 'mafft']
+	hmm = ['hmmbuild', 'hmmalign', 'esl-alimanip', 'esl-alimask']
+	total = [alignment, hmm]
+	nfound = []
+	for bintype in total:
+		for exe in bintype:
+			found = spawn.find_executable(exe)
+			if not found:
+				nfound.append(exe)
+
+	if nfound:
+		print("Some binaries where not found : \n-%s"%"\n-".join(nfound))
+		answer = 'n'
+		try:
+			answer = raw_input("Do you want to still continue the installation (y/n) ? ")
+		except:
+			answer = input("Do you want to still continue the installation (y/n) ? ")
+
+		return answer.lower().startswith('y')
+
+	return True		
+
+
+
 if __name__ == '__main__':
-    setup_package()
+	
+	cn_continue = binaries_checker()
+	if not cn_continue:
+		sys.exit(0)
+	
+	setup_package()

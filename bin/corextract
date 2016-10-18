@@ -21,8 +21,10 @@ from collections import defaultdict
 import sqlite3
 import argparse
 from Bio import SeqIO, Entrez
+from Bio.Data import  CodonTable
 import os, re
 import logging
+import operator
 
 def regexp(expr, item):
     """Regexp for search in sqlite database"""
@@ -167,10 +169,54 @@ def check_specie_list(specielist, namedb, taxid=False, clade=False, complete=Tru
     return curated_spec_list
 
 
-def extract_genome(speclist, genelist, records, revmtgenes):
+def get_poss_event_diff(gene, prot, features, gcode=1):
+	"""Get correct rna data, based on difference 
+	between gene and prot and use features to confirm"""
+
+	codontable = CodonTable.unambiguous_dna_by_id[gcode]
+	ct_dict = codontable.forward_table
+
+	def get_possible_start(gene, potent_prot):
+		# this piece of code find the best start in the gene
+		# according to the template prot
+		# the gene is expected to be a cds but frameshifting is accepted
+		# but not in the first 5 aas
+		# check sequence similarity for those 5 first aa
+		# until we have a decent match
+		
+		max_n =  max(len(gene)/3, 5)
+		# check start from 10 first position
+		bestmatch =  (0, 0)
+		for pos in xrange(10):
+			matcher = sum([ct_dict[gene[pos+i*3:pos+(i+1)*3].upper()] == potent_prot[i] for i in xrange(max_aa)])
+			if matcher == max_x:
+				bestmatch = (pos, matcher)
+				break
+			else: 
+				bestmatch = max(bestmatch, (pos, matcher), key=operator.itemgetter(1))
+
+		return bestmatch[0]
+
+
+	best_starting_pos = 0
+	if prot:
+		best_starting_pos = get_possible_start(gene, prot)
+
+
+
+	try:
+		potential_prot = gene.translate(gcode)
+
+	except:
+
+
+
+
+def extract_genome(speclist, genelist, records, revmtgenes, getprot=False):
     """Extract genome content based on a list of species """
     spec_code_map = {}
     gene2spec = defaultdict(list)
+    prot2spec = defaultdict(list)
     def motif_in_seq(motif, slist, product):
         return sum([1 for x in slist if (motif in x.lower()) ]) > 0 and \
                             'hypothetical' in  " ".join(product).lower()
@@ -181,7 +227,7 @@ def extract_genome(speclist, genelist, records, revmtgenes):
         g_found_in_spc = {}
         specaff = spec.replace('.', '').replace('-', '_').replace(' ', '_')
         curr_seq = records[s_id]
-        for f in curr_seq.features:
+        for pos, f in enumerate(curr_seq.features):
             # this should filter hypothetical protein that we do not want
             sgene = None
             meet_condition = f.type.upper()=='CDS' and 'gene' in f.qualifiers.keys() and not motif_in_seq('orf', f.qualifiers['gene'], f.qualifiers['product'])
@@ -277,8 +323,10 @@ if __name__ == '__main__':
                 for line in Glist:
                     if not line.startswith('#'):
                         genelist.append(line.strip())
-        gene2spec, spec_code = extract_genome(speclist, genelist, records, revmtgenes)
+        gene2spec, prot2spec, spec_code = extract_genome(speclist, genelist, records, revmtgenes)
         CoreFile.write_corefile(gene2spec, args.output)
+		CoreFile.write_corefile(prot2spec, args.output+"_prot")
+
         for spec, code in spec_code:
             print("%s ==> %s"%(spec, str(code)))
         for g, spec in gene2spec.items():

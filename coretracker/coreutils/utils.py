@@ -842,9 +842,9 @@ class SequenceSet(object):
         if(ic_thresh):
             align_info = AlignInfo.SummaryInfo(current_alignment)
             ic_content = align_info.information_content()
-            max_val = max(align_info.ic_vector.values()) * \
+            max_val = max(align_info.ic_vector) * \
                 ((abs(ic_thresh) <= 1 or 0.01) * abs(ic_thresh))
-            ic_pos = (np.asarray(align_info.ic_vector.values())
+            ic_pos = (np.asarray(align_info.ic_vector)
                       >= max_val).nonzero()
             logging.debug(
                 "Filtering with ic_content, vector to discard is %s" % str(ic_pos[0]))
@@ -1583,6 +1583,8 @@ def execute_alignment(cmdline, inp, out):
         cmdline += " -in %s -out %s" % (inp, out)
     elif 'mafft' in cmdline:
         cmdline += " %s > %s" % (inp, out)
+    else:
+        raise ValueError("Cannot execute %s. Programme not expected. You can provide your own alignment instead.")
 
     executeCMD(cmdline, prog)
 
@@ -1675,10 +1677,10 @@ def check_gain(codon, cible_aa, speclist, codontable, codon_alignment,
 
     align_info = AlignInfo.SummaryInfo(MultipleSeqAlignment(cor_alignment.values()))
     align_info.information_content()
-    cor_ic_cont = align_info.ic_vector.values()
+    cor_ic_cont = align_info.ic_vector
     align_info = AlignInfo.SummaryInfo(MultipleSeqAlignment(alignment.values()))
     align_info.information_content()
-    ic_cont = align_info.ic_vector.values()
+    ic_cont = align_info.ic_vector
 
     return score_improve, (al_sp, cor_al_sp), (ic_cont, cor_ic_cont), (alignment, cor_alignment), position
 
