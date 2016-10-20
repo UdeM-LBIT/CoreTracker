@@ -1,6 +1,7 @@
 import parameters
 import Bio.SubsMat.MatrixInfo as MatrixInfo
 
+
 class Settings():
     """Contains global settings for the current run of CoReTracker"""
 
@@ -56,7 +57,7 @@ class Settings():
             'USE_GLOBAL', parameters.USE_GLOBAL)
         # hidden parameter for debug purpose
         self.MODEL_TYPE = kwargs.get(
-                'MODEL_TYPE', '1')
+            'MODEL_TYPE', '1')
         # choose algorithm for computing the suspected species
         self.mode = kwargs.get('MODE', parameters.MODE)
         # choose matrix type to use, default is blosum62
@@ -70,7 +71,7 @@ class Settings():
         self.conf = kwargs.get('CONF', parameters.CONF)
         self.startdist = kwargs.get('STARTDIST', parameters.STARTDIST)
         self.SHOW_ALL = False
-        # matrix used to compute telford score 
+        # matrix used to compute telford score
         self.SUBMAT = getattr(MatrixInfo, 'blosum62')
 
     def fill(self, params):

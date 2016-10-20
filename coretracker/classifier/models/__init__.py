@@ -13,15 +13,17 @@
 
 import numpy as np
 
+
 class ModelType(object):
     """Representation of each classification model"""
-    mod1 = [2,3,4,5,6,7,8,9,11]
-    mod2 = [0,2,3,4,5,6,7,8,9,11]
-    mod3 = [0,2,3,4,5,6,7,8,9,11]
-    oneencoded_models  = ['3']
-    default_sfeat = {'1':mod1, '2':mod2, '3':mod3}
+    mod1 = [2, 3, 4, 5, 6, 7, 8, 9, 11]
+    mod2 = [0, 2, 3, 4, 5, 6, 7, 8, 9, 11]
+    mod3 = [0, 2, 3, 4, 5, 6, 7, 8, 9, 11]
+    oneencoded_models = ['3']
+    default_sfeat = {'1': mod1, '2': mod2, '3': mod3}
+
     def __init__(self, m, etiquette, sfeat=[], encode=False):
-        if m not in  self.default_sfeat.keys():
+        if m not in self.default_sfeat.keys():
             raise ValueError('Selected model do not exist')
         self.model = str(m)
         self.etiquette = etiquette
@@ -39,8 +41,8 @@ class ModelType(object):
     def format_data(self, data):
         """Format data into training and printing data"""
         training_data, selected_et = self.get_data_from_feature(data, self.etiquette, self.sfeat)
-        if self.encode :
-            training_data =  self._idonehotencode(training_data)
+        if self.encode:
+            training_data = self._idonehotencode(training_data)
         printing_data = data[:, self.sfeat]
         return training_data, printing_data, selected_et
 
@@ -51,7 +53,7 @@ class ModelType(object):
         enc = np.zeros((rlen, totsize))
         ind = np.ravel_multi_index([np.arange(rlen), last_row], (rlen, totsize))
         enc.flat[ind] = 1
-        return np.column_stack((data[:,:-1], enc))
+        return np.column_stack((data[:, :-1], enc))
         return data
 
     @staticmethod

@@ -1,5 +1,6 @@
 import sys
 
+
 class Output(object):
     """A simple Class to output results, either in a file or to stdout"""
 

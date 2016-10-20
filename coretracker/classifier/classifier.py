@@ -106,8 +106,8 @@ class Classifier(object):
 
             indices = np.argsort(importances)[::-1]
             n_feats = len(features_list)
-            np.savetxt(outfile+".txt", np.array([tree.feature_importances_ \
-                                    for tree in self.clf.estimators_]), delimiter=',', fmt='%1.3e')
+            np.savetxt(outfile + ".txt", np.array([tree.feature_importances_
+                                                   for tree in self.clf.estimators_]), delimiter=',', fmt='%1.3e')
             std = np.std(
                 [tree.feature_importances_ for tree in self.clf.estimators_], axis=0)
             plt.figure()
@@ -182,6 +182,7 @@ class Classifier(object):
         print("\tRecall: %1.3f" % recall_score(y_test, y_pred))
         print("\tF1: %1.3f" % f1_score(y_test, y_pred))
         print("\tROC AUC score: %1.3f\n" % roc_auc_score(y_test, prob_pos))
+
 
 def read_from_json(data, labels=None, use_global=True, use_pvalue=True):
     """Parse X array from data"""
@@ -499,12 +500,11 @@ def get_aa_cross_val(L, X, Y, AA, tsize=None, rstate=-1):
     if tsize:
         t_len = int(tsize * len(Y))
         # positions that are 0 without being the one for AA
-        zero_pos = np.where(np.logical_and(Y == 0, aa_y ==0))[0]
+        zero_pos = np.where(np.logical_and(Y == 0, aa_y == 0))[0]
         clen = t_len - len(test_position)
         if clen > 0:
             random_zero_pos = np.random.choice(zero_pos, clen, replace=False)
             test_position.extend(random_zero_pos)
-
 
     test_position = np.random.permutation(test_position)
     mask = np.ones(Y.shape, dtype=bool)
@@ -512,7 +512,7 @@ def get_aa_cross_val(L, X, Y, AA, tsize=None, rstate=-1):
     train_position = np.array(range(len(mask)))[mask]
 
     if rstate > 0:
-        return shuffle(train_position, random_state=rstate),shuffle(test_position, random_state=rstate)
+        return shuffle(train_position, random_state=rstate), shuffle(test_position, random_state=rstate)
     # in this case, suppose we want only the train and test index
     else:
         return train_position, test_position

@@ -1,11 +1,12 @@
 from output import Output
 
+
 class BasicTemplate(object):
     """Really basic templating system
     This is just to prevent too much dependency when installing
     """
 
-    def  __init__ (self, template):
+    def __init__(self, template):
         self.template = ""
         self._get_template(template)
 

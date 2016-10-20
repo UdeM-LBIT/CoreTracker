@@ -20,4 +20,4 @@ import AncestralRecon
 import Faces
 
 __all__ = ['utils', 'SequenceLoader', 'SequenceSet', 'CoreFile',
-            'ReaGenomeFinder', 'AncestralRecon', 'Faces']
+           'ReaGenomeFinder', 'AncestralRecon', 'Faces']

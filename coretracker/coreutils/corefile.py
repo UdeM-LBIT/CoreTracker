@@ -5,6 +5,7 @@ from Bio import SeqIO
 from Bio.SeqRecord import SeqRecord
 from collections import defaultdict as ddict
 
+
 class CoreFile:
     """Core File format for sequence alignment.
     This class enable parsing of CoreFile formats
@@ -100,7 +101,6 @@ class CoreFile:
                 return
         assert False, "We should return before this point"
 
-
     def write(self, outfile, sequences=None):
         """Save sequences into a file"""
         if sequences is None:
@@ -138,12 +138,11 @@ class CoreFile:
         exp_len = alignment.get_alignment_length()
         for dt in genelimit:
             gene, start, end = dt
-            sequences[gene] =  alignment[:,start:end]
+            sequences[gene] = alignment[:, start:end]
             exp_len -= sequences[gene].get_alignment_length()
         if exp_len != 0:
             raise ValueError("Could not split alignment, wrong gene delimiter")
         return sequences
-
 
     @classmethod
     def flip_data(clc, indict):

@@ -32,7 +32,7 @@ from coretracker.classifier.models import ModelType
 from coretracker.classifier import *
 from coretracker.classifier import MODELPATH
 from coretracker.settings import *
-from coretracker import  __version__, __author__, date
+from coretracker import __version__, __author__, date
 
 ENABLE_PAR = True
 CPU_COUNT = 0
@@ -52,14 +52,16 @@ except ImportError:
     from yaml import Loader
 
 etiquette = ["fitch", "suspected", "Fisher pval", "Gene frac",
-                    "N. rea", "N. used", "Cod. count", "Sub. count",
-                    "G. len", "codon_lik", "N. mixte" ,"id"] #, 'total_aa']
+             "N. rea", "N. used", "Cod. count", "Sub. count",
+             "G. len", "codon_lik", "N. mixte", "id"]  # , 'total_aa']
+
 
 def testing_a_lot(args, settings):
     t = random.randint(30, 90)
     time.sleep(t)
     return [settings.EXCLUDE_AA, settings.AA_MAJORITY_THRESH, settings.FREQUENCY_THRESHOLD,
             settings.GENETIC_CODE, settings.COUNT_THRESHOLD, settings.LIMIT_TO_SUSPECTED_SPECIES]
+
 
 def set_coretracker(args, settings):
     """Set all data for coretracker from the argument list"""
@@ -96,15 +98,14 @@ def set_coretracker(args, settings):
         except:
             pass
 
-    clf = Classifier.load_from_file(MODELPATH%settings.MODEL_TYPE)
+    clf = Classifier.load_from_file(MODELPATH % settings.MODEL_TYPE)
     model = ModelType(settings.MODEL_TYPE, etiquette)
-
 
     if clf is None or not clf.trained:
         raise ValueError("Classifier not found or not trained!")
 
     seqloader = SequenceLoader(input_alignment, args.dnaseq, settings, args.gapfilter, has_stop=args.hasstop,
-                    use_tree=args.usetree, refine_alignment=args.refine, msaprog=msaprg,  hmmdict=hmmfiles)
+                               use_tree=args.usetree, refine_alignment=args.refine, msaprog=msaprg,  hmmdict=hmmfiles)
 
     # create sequence set
     setseq = SequenceSet(seqloader, specietree, settings.GENETIC_CODE)
@@ -116,6 +117,7 @@ def set_coretracker(args, settings):
     reafinder.possible_aa_reassignation()
     return reafinder, clf, model
 
+
 def compile_result(x, clf, cod_align, model):
     """compile result from analysis"""
     reafinder, fitch, data = x
@@ -124,11 +126,13 @@ def compile_result(x, clf, cod_align, model):
     s_complete_data['genome'] = reafinder.reassignment_mapper['genome']
     X_data, X_labels, _ = read_from_json(s_complete_data, None, use_global=False)
     # extract usefull features
-    X_data, X_dataprint, selected_et =  model.format_data(X_data)
+    X_data, X_dataprint, selected_et = model.format_data(X_data)
     pred_prob = clf.predict_proba(X_data)
-    pred =  clf.predict(X_data)
-    sppval, outdir, rkp = utils.get_report(fitch, data, reafinder, cod_align, (X_data, X_labels, pred_prob, pred))
-    utils.print_data_to_txt(os.path.join(outdir, fitch.ori_aa+"_to_"+fitch.dest_aa+"_data.txt"), selected_et, X_dataprint, X_labels, pred, pred_prob, sppval, fitch.dest_aa)
+    pred = clf.predict(X_data)
+    sppval, outdir, rkp = utils.get_report(
+        fitch, data, reafinder, cod_align, (X_data, X_labels, pred_prob, pred))
+    utils.print_data_to_txt(os.path.join(outdir, fitch.ori_aa + "_to_" + fitch.dest_aa + "_data.txt"),
+                            selected_et, X_dataprint, X_labels, pred, pred_prob, sppval, fitch.dest_aa)
     return rkp
 
 if __name__ == '__main__':
@@ -187,8 +191,8 @@ if __name__ == '__main__':
     parser.add_argument('--use_tree', dest='usetree', action="store_true",
                         help="This is helpfull only if the mafft alignment is selected. Perform multiple alignment, using species tree as guide tree.")
 
-    parser.add_argument('--expos','--export_position', dest='expos', action="store_true",
-                    help="Export a json file with the position of each reassignment in the corresponding genome.")
+    parser.add_argument('--expos', '--export_position', dest='expos', action="store_true",
+                        help="Export a json file with the position of each reassignment in the corresponding genome.")
 
     parser.add_argument('--submat', dest='submat', choices=utils.AVAILABLE_MAT, default="blosum62",
                         help="Choose a substitution matrix to compute codon alignment to amino acid likelihood, Default value is blosum62")
@@ -200,16 +204,16 @@ if __name__ == '__main__':
                         help="Use A parameter file to load parameters. If a parameter is not set, the default will be used")
 
     parser.add_argument('--parallel', dest='parallel', nargs='?', const=CPU_COUNT, type=int, default=0,
-                    help="Use Parallelization during execution for each reassignment. This does not guarantee an increase in speed. CPU count will be used if no argument is provided")
+                        help="Use Parallelization during execution for each reassignment. This does not guarantee an increase in speed. CPU count will be used if no argument is provided")
 
-    print("CoreTracker v:%s Copyright (C) %s %s"%(__version__, date, __author__))
+    print("CoreTracker v:%s Copyright (C) %s %s" % (__version__, date, __author__))
 
     args = parser.parse_args()
     setting = Settings()
 
     paramfile = args.params
     ad_params = {}
-    if paramfile :
+    if paramfile:
         with open(paramfile) as f:
             ad_params = load(f, Loader=Loader)
 
@@ -226,10 +230,11 @@ if __name__ == '__main__':
 
     done = False
     results = []
-    if args.parallel>0 and ENABLE_PAR:
-        results = Parallel(n_jobs=args.parallel, verbose=2)(delayed(compile_result)(x, clf, cod_align, model) for x in reafinder.run_analysis(codon_align, fcodon_align))
+    if args.parallel > 0 and ENABLE_PAR:
+        results = Parallel(n_jobs=args.parallel, verbose=2)(delayed(compile_result)(
+            x, clf, cod_align, model) for x in reafinder.run_analysis(codon_align, fcodon_align))
         done = True
-    elif args.parallel>0:
+    elif args.parallel > 0:
         logging.warning("Joblib requirement not found! Disabling parallelization")
 
     if not done:
@@ -242,7 +247,7 @@ if __name__ == '__main__':
             for cuspec, readt in r.items():
                 for k in readt.keys():
                     rea_pos_keeper[cuspec][k] = readt[k]
-        exp_outfile = outfile=os.path.join(reafinder.settings.OUTDIR, "positions.json" )
+        exp_outfile = outfile = os.path.join(reafinder.settings.OUTDIR, "positions.json")
         reafinder.export_position(rea_pos_keeper, exp_outfile)
 
     reafinder.save_all(True)

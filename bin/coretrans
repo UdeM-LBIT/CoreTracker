@@ -47,16 +47,17 @@ parser.add_argument('--noclean', dest='noclean', action='store_false',
                     help="Whether we should clean unnecessary file or not")
 
 parser.add_argument('--notrans', dest='notrans', action='store_true',
-                        help="Whether we should attempt to translate or not. This overrule --align")
+                    help="Whether we should attempt to translate or not. This overrule --align")
 
 parser.add_argument('--filter', dest='filter', action='store_true',
-                                        help="Filter nuc sequences to remove gene where frame-shifting occur")
+                    help="Filter nuc sequences to remove gene where frame-shifting occur")
 parser.add_argument('--hmmdir', dest='hmmdir',
                     help="Link a directory with hmm files for alignment. Each hmmfile should be named in the following format : genename.hmm")
 
-parser.add_argument('--count', '-c', dest="hcount", default=1, type=int, help="Number of loops for the hmm build and align")
+parser.add_argument('--count', '-c', dest="hcount", default=1, type=int,
+                    help="Number of loops for the hmm build and align")
 parser.add_argument('--verbose', '-v', dest='verbose', action='store_true',
-                                        help="Print verbose (debug purpose)")
+                    help="Print verbose (debug purpose)")
 
 
 args = parser.parse_args()
@@ -99,7 +100,8 @@ if args.filter:
         species_seen = []
         for seq in seqs:
             if seq.name in species_seen:
-                raise ValueError("Species %s seen at least 2 times in gene %s. Please Correct"%(seq.name, gene))
+                raise ValueError(
+                    "Species %s seen at least 2 times in gene %s. Please Correct" % (seq.name, gene))
             if len(seq.seq.ungap('-')) % 3 != 0:
                 disp_data.append((seq.name, len(seq)))
             else:
@@ -110,14 +112,15 @@ if args.filter:
         if not disp_data:
             core_inst[gene] = good_data
             gcount += 1
-            print("++> OK (%s)"%gene)
+            print("++> OK (%s)" % gene)
         else:
-            print("--> Fail (%s), %d specs have frame-shifting : \n\t(%s)"%(gene, len(disp_data), ", ".join(["%s: %d"%(x) for x in disp_data])))
+            print("--> Fail (%s), %d specs have frame-shifting : \n\t(%s)" %
+                  (gene, len(disp_data), ", ".join(["%s: %d" % (x) for x in disp_data])))
 
     if not core_inst:
         sys.exit("After removing frameshifting, there isn't any remaining genes")
 
-    print("======== Total of %d / %d genes rescued ========"%(gcount, total_gcount))
+    print("======== Total of %d / %d genes rescued ========" % (gcount, total_gcount))
 
     # save new sequence file for coretracker later
     CoreFile.write_corefile(
@@ -136,7 +139,7 @@ if not args.notrans:
                 al = SequenceLoader._align(seqs, prog, None, 1.0, args.outdir)
                 if args.refine:
                     al = SequenceLoader._refine(al, 9999, args.outdir, loop=args.hcount,
-                                      clean=args.noclean, hmmfile=hmmfiles.get(gene, None))
+                                                clean=args.noclean, hmmfile=hmmfiles.get(gene, None))
                 alignment[gene] = al
 
         CoreFile.write_corefile(alignment, os.path.join(

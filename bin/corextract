@@ -21,15 +21,18 @@ from collections import defaultdict
 import sqlite3
 import argparse
 from Bio import SeqIO, Entrez
-from Bio.Data import  CodonTable
-import os, re
+from Bio.Data import CodonTable
+import os
+import re
 import logging
 import operator
+
 
 def regexp(expr, item):
     """Regexp for search in sqlite database"""
     reg = re.compile(expr)
     return reg.search(item) is not None
+
 
 def taxonIDLookup(taxonID):
     """Lookup a taxon ID (an integer) in the NCBI taxonomy.
@@ -61,6 +64,7 @@ def taxonIDLookup(taxonID):
     mitoCode = resultsDownload[0]['MitoGeneticCode']['MGCName']
     return (scientificName, lineage, taxId, mitoCode)
 
+
 def commonLookup(spName):
     """Lookup a species according to its common (English?) name.
     Return first taxid (could be the wrong one)
@@ -78,17 +82,18 @@ def commonLookup(spName):
                 finished += 1
                 time.sleep(2)
             elif finished == maxCheck:
-                print( "!!!!!!Unreachable. Returning nothing.")
+                print("!!!!!!Unreachable. Returning nothing.")
                 return None
             else:
                 finished += 1
                 time.sleep(2)
     if resultsSearch['IdList']:
-        taxid =  resultsSearch['IdList'][0]
+        taxid = resultsSearch['IdList'][0]
         sciname = taxonIDLookup(taxid)
         if sciname:
             return (taxid, sciname)
     return None
+
 
 def cladeSpecies(cladeName):
     """Finds information about a clade.
@@ -103,7 +108,7 @@ def cladeSpecies(cladeName):
             finished = maxCheck + 1
         except:
             if finished == 0:
-                print("!!!Server error checking" + cladeName+ " - retrying...")
+                print("!!!Server error checking" + cladeName + " - retrying...")
                 finished += 1
                 time.sleep(2)
             elif finished == maxCheck:
@@ -119,6 +124,7 @@ def cladeSpecies(cladeName):
                 output.append(taxid, sciname)
     return output
 
+
 def isInt(value):
     """ Verify if a string
     can be casted to an int"""
@@ -127,6 +133,7 @@ def isInt(value):
         return True
     except ValueError:
         return False
+
 
 def db_lookup(dbname, speclist, complete=True):
     result = []
@@ -140,6 +147,7 @@ def db_lookup(dbname, speclist, complete=True):
         for row in cursor:
             result.append((row[0], row[1]))
     return result
+
 
 def check_specie_list(specielist, namedb, taxid=False, clade=False, complete=True):
     """ Verify and return the true name
@@ -155,7 +163,7 @@ def check_specie_list(specielist, namedb, taxid=False, clade=False, complete=Tru
                 sciename = taxonIDLookup(spec)[0]
                 if sciename:
                     curated_spec_list.append((spec, sciename))
-            else :
+            else:
                 # try common lookup
                 spechecked = commonLookup(spec)
                 if not spechecked and clade:
@@ -170,46 +178,42 @@ def check_specie_list(specielist, namedb, taxid=False, clade=False, complete=Tru
 
 
 def get_poss_event_diff(gene, prot, features, gcode=1):
-	"""Get correct rna data, based on difference 
-	between gene and prot and use features to confirm"""
+    """Get correct rna data, based on difference 
+    between gene and prot and use features to confirm"""
 
-	codontable = CodonTable.unambiguous_dna_by_id[gcode]
-	ct_dict = codontable.forward_table
+    codontable = CodonTable.unambiguous_dna_by_id[gcode]
+    ct_dict = codontable.forward_table
 
-	def get_possible_start(gene, potent_prot):
-		# this piece of code find the best start in the gene
-		# according to the template prot
-		# the gene is expected to be a cds but frameshifting is accepted
-		# but not in the first 5 aas
-		# check sequence similarity for those 5 first aa
-		# until we have a decent match
-		
-		max_n =  max(len(gene)/3, 5)
-		# check start from 10 first position
-		bestmatch =  (0, 0)
-		for pos in xrange(10):
-			matcher = sum([ct_dict[gene[pos+i*3:pos+(i+1)*3].upper()] == potent_prot[i] for i in xrange(max_aa)])
-			if matcher == max_x:
-				bestmatch = (pos, matcher)
-				break
-			else: 
-				bestmatch = max(bestmatch, (pos, matcher), key=operator.itemgetter(1))
+    def get_possible_start(gene, potent_prot):
+                # this piece of code find the best start in the gene
+                # according to the template prot
+                # the gene is expected to be a cds but frameshifting is accepted
+                # but not in the first 5 aas
+                # check sequence similarity for those 5 first aa
+                # until we have a decent match
 
-		return bestmatch[0]
+        max_n = max(len(gene) / 3, 5)
+        # check start from 10 first position
+        bestmatch = (0, 0)
+        for pos in xrange(10):
+            matcher = sum([ct_dict[gene[pos + i * 3:pos + (i + 1) * 3].upper()]
+                           == potent_prot[i] for i in xrange(max_aa)])
+            if matcher == max_x:
+                bestmatch = (pos, matcher)
+                break
+            else:
+                bestmatch = max(bestmatch, (pos, matcher), key=operator.itemgetter(1))
 
+        return bestmatch[0]
 
-	best_starting_pos = 0
-	if prot:
-		best_starting_pos = get_possible_start(gene, prot)
+    best_starting_pos = 0
+    if prot:
+        best_starting_pos = get_possible_start(gene, prot)
 
+    try:
+        potential_prot = gene.translate(gcode)
 
-
-	try:
-		potential_prot = gene.translate(gcode)
-
-	except:
-
-
+    except:
 
 
 def extract_genome(speclist, genelist, records, revmtgenes, getprot=False):
@@ -217,9 +221,10 @@ def extract_genome(speclist, genelist, records, revmtgenes, getprot=False):
     spec_code_map = {}
     gene2spec = defaultdict(list)
     prot2spec = defaultdict(list)
+
     def motif_in_seq(motif, slist, product):
         return sum([1 for x in slist if (motif in x.lower()) ]) > 0 and \
-                            'hypothetical' in  " ".join(product).lower()
+            'hypothetical' in " ".join(product).lower()
 
     # fetch gene and protein from the database and add them to the list
 
@@ -230,7 +235,8 @@ def extract_genome(speclist, genelist, records, revmtgenes, getprot=False):
         for pos, f in enumerate(curr_seq.features):
             # this should filter hypothetical protein that we do not want
             sgene = None
-            meet_condition = f.type.upper()=='CDS' and 'gene' in f.qualifiers.keys() and not motif_in_seq('orf', f.qualifiers['gene'], f.qualifiers['product'])
+            meet_condition = f.type.upper() == 'CDS' and 'gene' in f.qualifiers.keys(
+            ) and not motif_in_seq('orf', f.qualifiers['gene'], f.qualifiers['product'])
             if meet_condition:
                 sgene = f.qualifiers['gene'][0].lower()
                 if(sgene in revmtgenes.keys()):
@@ -240,10 +246,12 @@ def extract_genome(speclist, genelist, records, revmtgenes, getprot=False):
                     seq = f.extract(curr_seq.seq)
                     if len(seq) % 3 != 0:
                         #print("%s | %d"%(spec, len(seq)%3))
-                        logging.warn("Possible frame-shifting in the following genes : %s - %s | %d (%d)"%(sgene, spec, len(seq), len(seq)%3))
+                        logging.warn("Possible frame-shifting in the following genes : %s - %s | %d (%d)" %
+                                     (sgene, spec, len(seq), len(seq) % 3))
                     elif 'N' in seq:
-                        logging.warn("Sequence with undefined nucleotide : %s - %s | %d (%d)"%(sgene, spec, len(seq)))
-                    try :
+                        logging.warn("Sequence with undefined nucleotide : %s - %s | %d (%d)" %
+                                     (sgene, spec, len(seq)))
+                    try:
                         #table = int(f.qualifiers['transl_table'][0])
                         spec_code_map[spec] = table
                     except:
@@ -254,26 +262,39 @@ def extract_genome(speclist, genelist, records, revmtgenes, getprot=False):
                         gene2spec[sgene].append(rec)
                     g_found_in_spc[sgene] = 1
     return gene2spec, spec_code_map
-    
+
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="Extract genome from genbank file into corefile format.")
+    parser = argparse.ArgumentParser(
+        description="Extract genome from genbank file into corefile format.")
 
     sub_parser = parser.add_subparsers(help="Commands", dest='command')
     build_parser = sub_parser.add_parser('build', help="Build database for fast species searching")
-    build_parser.add_argument("--namedb", '-db', dest='database', help="Temporary database for fast name searching. Only sqlite database supported")
-    build_parser.add_argument("--indexdb", '-ib', dest='indexdb', required=True, help="Index filename")
-    build_parser.add_argument("--genbank", "-G", required=True, dest='genbank', help="Your genbank file")
+    build_parser.add_argument("--namedb", '-db', dest='database',
+                              help="Temporary database for fast name searching. Only sqlite database supported")
+    build_parser.add_argument("--indexdb", '-ib', dest='indexdb',
+                              required=True, help="Index filename")
+    build_parser.add_argument("--genbank", "-G", required=True,
+                              dest='genbank', help="Your genbank file")
 
     extract_parser = sub_parser.add_parser('extract', help="Extract genome from your data")
-    extract_parser.add_argument("--genbank", "-G", required=True, dest='genbank', help="Your genbank file")
-    extract_parser.add_argument("--indexdb", '-ib', dest='indexdb', required=True, help="Index filename")
-    extract_parser.add_argument("--namedb", '-db', dest='database', help="Use build to build a temporary database for fast name searching. Http request will be done if this is not provided")
-    extract_parser.add_argument("--taxid",  dest='taxid', action='store_true', help="Taxid instead of common name is provided")
-    extract_parser.add_argument("--complete",  dest='complete', action='store_true', help="Complete genome only")
-    extract_parser.add_argument("--clade",  dest='clade', action='store_true', help="Use this to look for clade name if some of your specs are clades instead")
-    extract_parser.add_argument("--genelist", dest='genelist', help="List of genes. If not provided, all coding sequences in the mapping file will be exported")
-    extract_parser.add_argument("--speclist", dest='speclist', required=True, help="A file containing a list of species or a specie name")
-    extract_parser.add_argument("--outfile", '-o', dest='output', default='output.core', help="Output file name")
+    extract_parser.add_argument("--genbank", "-G", required=True,
+                                dest='genbank', help="Your genbank file")
+    extract_parser.add_argument("--indexdb", '-ib', dest='indexdb',
+                                required=True, help="Index filename")
+    extract_parser.add_argument("--namedb", '-db', dest='database',
+                                help="Use build to build a temporary database for fast name searching. Http request will be done if this is not provided")
+    extract_parser.add_argument("--taxid",  dest='taxid', action='store_true',
+                                help="Taxid instead of common name is provided")
+    extract_parser.add_argument("--complete",  dest='complete',
+                                action='store_true', help="Complete genome only")
+    extract_parser.add_argument("--clade",  dest='clade', action='store_true',
+                                help="Use this to look for clade name if some of your specs are clades instead")
+    extract_parser.add_argument("--genelist", dest='genelist',
+                                help="List of genes. If not provided, all coding sequences in the mapping file will be exported")
+    extract_parser.add_argument("--speclist", dest='speclist', required=True,
+                                help="A file containing a list of species or a specie name")
+    extract_parser.add_argument("--outfile", '-o', dest='output',
+                                default='output.core', help="Output file name")
 
     args = parser.parse_args()
     if args.command == 'build':
@@ -300,15 +321,15 @@ if __name__ == '__main__':
                     annot = rec.annotations
                     desc = rec.description
                     conn.execute("insert into genbank (accession, seqid, gi, complete_genome, \
-                        source, organism, lineage) values (?, ?, ?, ?, ?, ?, ?)", [rec.name, rec.id, annot['gi'], \
-                        ('complete genome' in desc),annot['source'], annot['organism'], ">".join(annot['taxonomy'])])
+                        source, organism, lineage) values (?, ?, ?, ?, ?, ?, ?)", [rec.name, rec.id, annot['gi'],
+                                                                                   ('complete genome' in desc), annot['source'], annot['organism'], ">".join(annot['taxonomy'])])
                 conn.commit()
-                print("%s elements inserted in %s"%(conn.total_changes, args.database))
+                print("%s elements inserted in %s" % (conn.total_changes, args.database))
     else:
         # we are actually trying to extract a genome from a list of spec
         records = SeqIO.index_db(args.indexdb, args.genbank, format="genbank")
         speclist = []
-        try :
+        try:
             for line in open(args.speclist):
                 line = line.strip()
                 if line and not line.startswith('#'):
@@ -316,7 +337,8 @@ if __name__ == '__main__':
         except IOError:
             speclist.append(args.speclist)
 
-        speclist = check_specie_list(set(speclist), args.database, args.taxid, args.clade, args.complete)
+        speclist = check_specie_list(set(speclist), args.database,
+                                     args.taxid, args.clade, args.complete)
         genelist = []
         if args.genelist:
             with open(args.genelist) as Glist:
@@ -325,9 +347,9 @@ if __name__ == '__main__':
                         genelist.append(line.strip())
         gene2spec, prot2spec, spec_code = extract_genome(speclist, genelist, records, revmtgenes)
         CoreFile.write_corefile(gene2spec, args.output)
-		CoreFile.write_corefile(prot2spec, args.output+"_prot")
+            CoreFile.write_corefile(prot2spec, args.output + "_prot")
 
         for spec, code in spec_code:
-            print("%s ==> %s"%(spec, str(code)))
+            print("%s ==> %s" % (spec, str(code)))
         for g, spec in gene2spec.items():
-            print("%s ==> %d specs"%(g, len(spec)))
+            print("%s ==> %d specs" % (g, len(spec)))

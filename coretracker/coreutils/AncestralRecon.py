@@ -3,18 +3,22 @@ import utils
 from collections import defaultdict, Counter
 import numpy as np
 import operator
+from letterconfig import *
 
+def init_back_table(dct):
+    """Get back table for the current genetic code"""
+    back_table = defaultdict(list)
+    for aa, codon in zip(dct.forward_table.values(), dct.forward_table.keys()):
+        back_table[aa].append(codon)
+    return back_table
 
-def unique(l):
-    """Return a list of unique element in l"""
-    return list(set(l))
 
 class AbsAncest:
     __metaclass__ = ABCMeta
 
     def __init__(self, tree, nodestates):
         self.tree = tree
-        self.nodestates =  nodestates
+        self.nodestates = nodestates
         self._set_tree()
 
     def _set_tree(self):
@@ -34,18 +38,16 @@ class AbsAncest:
     def label_internal(self, state_mat, **kwargs):
         pass
 
-
     def mat_to_dict(self, charlist, ignore_this={}):
         """Return a dict from the mat"""
         mat_val = utils.makehash(1, list)
         for node in self.tree.traverse():
             for i, val in enumerate(charlist):
                 for st in self.state_mat[i, node.ind]:
-                    ignore_corr =  (ignore_this.get(val, "") == st)
+                    ignore_corr = (ignore_this.get(val, "") == st)
                     if not ignore_corr:
                         mat_val[node.name][st].append(val)
         return mat_val
-
 
     @classmethod
     def flip_rea_forward(clc, nodestates):
@@ -63,10 +65,10 @@ class AbsAncest:
     @classmethod
     def make_codonrea_matrice(clc, tree, nodestates, alphmap={}):
         new_dict, codon_map = clc.flip_rea_forward(nodestates)
-        codon_list =  sorted(codon_map.keys())
+        codon_list = sorted(codon_map.keys())
         # each entry will be a set
         # hmm not the best way, but hey I'm out of time
-        tree_err =  "Tree should be root and have total node count as feature"
+        tree_err = "Tree should be root and have total node count as feature"
         assert tree.is_root() and 'node_count' in tree.features, tree_err
         state_mat = np.zeros((len(codon_list), tree.node_count), dtype='object')
         state_mat.fill(set([]))
@@ -74,11 +76,12 @@ class AbsAncest:
         for leaf in tree:
             leaf_state = new_dict[leaf.name]
             for (icod, state) in [(icod, set(leaf_state.get(cod, alphmap[cod]))) for icod, cod in enumerate(codon_list)]:
-                state_mat[icod, leaf.ind] =  state
+                state_mat[icod, leaf.ind] = state
         return state_mat, codon_map, codon_list
 
 
 class LKLBasedAns(AbsAncest):
+
     class MLtype(object):
         marginal = 'margin'
         join = 'join'
@@ -106,7 +109,9 @@ class LKLBasedAns(AbsAncest):
         print('join')
         pass
 
+
 class DolloParsimony(AbsAncest):
+
     def __init__(self, tree, nodestates, binary_mode=False, enforce_order=False, sort_by_size=False):
         super(DolloParsimony, self).__init__(tree, nodestates)
         self.binary_mode = binary_mode
@@ -118,13 +123,12 @@ class DolloParsimony(AbsAncest):
         if not self.binary_mode and None in (header_list, header_map):
             raise ValueError("header_list and header_map are needed in non binary_mode")
 
-        self.state_mat =  state_mat
+        self.state_mat = state_mat
         self.header_list = header_list
         self.header_map = header_map
         self.null_map = null_map
         self._build_internal_label()
         return self.state_mat
-
 
     def __const_term_state(self, term_list, smat, char_states, nullstate):
         is_valid_for_c = {}
@@ -140,14 +144,15 @@ class DolloParsimony(AbsAncest):
 
         # sort, whether by total number
         if self.enforce_order:
-            return [(x,is_valid_for_c[x]) for x in char_states if x in is_valid_for_c.keys()]
+            return [(x, is_valid_for_c[x]) for x in char_states if x in is_valid_for_c.keys()]
         if self.sort_by_size:
-            possible_order = sorted([(x, np.count_nonzero(y)) for x, y in is_valid_for_c.items()], key=operator.itemgetter(1), reverse=True)
+            possible_order = sorted([(x, np.count_nonzero(y)) for x, y in is_valid_for_c.items(
+            )], key=operator.itemgetter(1), reverse=True)
         else:
             # here we sort by subtree weight, ignoring excluded subgroup
-            possible_order =  sorted([(x, y[-1]) for x, y in is_valid_for_c.items()], key=operator.itemgetter(1), reverse=True)
+            possible_order = sorted([(x, y[-1]) for x, y in is_valid_for_c.items()],
+                                    key=operator.itemgetter(1), reverse=True)
         return possible_order
-
 
     def _build_internal_label(self):
         """Build internal state for dollo model
@@ -155,7 +160,7 @@ class DolloParsimony(AbsAncest):
         """
 
         leaves_list_ind = set([l.ind for l in self.tree])
-        get_poss_states = (lambda x: [0,1]) if self.binary_mode else (lambda x: x[1][x[0]])
+        get_poss_states = (lambda x: [0, 1]) if self.binary_mode else (lambda x: x[1][x[0]])
 
         def get_excluded_node_set(node):
             """ this function serve to get T-A according to Farris
@@ -164,30 +169,32 @@ class DolloParsimony(AbsAncest):
 
         nullstate = 0
         for char_i, cur_char in enumerate(self.header_list):
-            char_states =  get_poss_states((cur_char, self.header_map))
+            char_states = get_poss_states((cur_char, self.header_map))
             if not self.binary_mode:
                 nullstate = self.null_map[cur_char]
             for node in self.tree.traverse("postorder"):
                 # dollo look only at internal nodes
                 if not node.is_leaf():
-                    group_list =  [[n.ind for n in child] for child in node.get_children()]
+                    group_list = [[n.ind for n in child] for child in node.get_children()]
                     group_list.append(get_excluded_node_set(node))
-                    pos_state = self.__const_term_state(group_list, self.state_mat[char_i, :], char_states, nullstate)
+                    pos_state = self.__const_term_state(group_list, self.state_mat[
+                                                        char_i, :], char_states, nullstate)
                     # choose first state directly
                     # modify this to consider all potential solutions
                     chosen_state = {nullstate}
                     if pos_state:
                         chosen_state = {pos_state[0][0]}
-                    #print chosen_state, node.name, node.ind, char_i, cur_char
+                    # print chosen_state, node.name, node.ind, char_i, cur_char
                     self.state_mat[char_i, node.ind] = chosen_state
 
 
 class FitchBased(AbsAncest):
+
     def __init__(self, tree, nodestates):
         super(FitchBased, self).__init__(tree, nodestates)
 
     def label_internal(self, state_mat, header_list=None, **kwargs):
-        self.state_mat, self.header_list =  state_mat, header_list
+        self.state_mat, self.header_list = state_mat, header_list
         #self.state_mat, self.codon_list = self.make_codonrea_matrice(self.tree, self.nodestates, self.alphmap)
         self._bottomup()
         self._updown()
@@ -200,20 +207,22 @@ class FitchBased(AbsAncest):
                     # case previously resolved
                     pass
                 else:
-                    intersect = set.intersection(*(self.state_mat[i, child.ind] for child in node.get_children()))
-                    union = set.union(*(self.state_mat[i, child.ind] for child in node.get_children()))
+                    intersect = set.intersection(
+                        *(self.state_mat[i, child.ind] for child in node.get_children()))
+                    union = set.union(*(self.state_mat[i, child.ind]
+                                        for child in node.get_children()))
                     if intersect:
                         self.state_mat[i, node.ind] = intersect
                     else:
                         self.state_mat[i, node.ind] = union
-
 
     def _get_node_optimal_state(self, node, ichar):
         accepted_state = self.state_mat[ichar, node.ind]
         char_score = {}
         for c in accepted_state:
             in_subtree = sum([(1 if c in self.state_mat[ichar, n.ind] else 0) for n in node])
-            out_subtree = sum([(1 if c in self.state_mat[ichar, n.ind] else 0) for n in node.get_tree_root() if n not in node])
+            out_subtree = sum([(1 if c in self.state_mat[ichar, n.ind] else 0)
+                               for n in node.get_tree_root() if n not in node])
             char_score[c] = in_subtree - out_subtree
         return {Counter(char_score).most_common()[0][0]}
 

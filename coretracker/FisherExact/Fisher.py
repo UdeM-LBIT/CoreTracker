@@ -9,11 +9,14 @@ import logging
 import os
 import random
 
+
 class F2PYSTOP(Exception):
+
     def __call__(self, status, mes=""):
         raise self.__class__(mes)
 
 f.f2pystop = F2PYSTOP()
+
 
 def fisher_exact(table, alternative="two-sided", hybrid=False, midP=False,
                  simulate_pval=False, replicate=2000, workspace=300,
@@ -146,7 +149,7 @@ def _execute_fexact(nr, nc, c, nnr, expect, percnt, emin, workspace,
                     attempt=2, midP=False):
     """Execute fexact using the fortran routine"""
 
-    ## find required workspace
+    # find required workspace
     #pval = None
     #success = False
     #ntot = np.sum(c)+1
@@ -175,7 +178,7 @@ def _execute_fexact(nr, nc, c, nnr, expect, percnt, emin, workspace,
         except Exception as e:
             logging.warning(
                 "Workspace is not enough. You should increase it.")
-        wk = wk << 1 #double workspace
+        wk = wk << 1  # double workspace
     if not success:
         raise ValueError('Could not execute fexact, increase workspace')
     if midP:
