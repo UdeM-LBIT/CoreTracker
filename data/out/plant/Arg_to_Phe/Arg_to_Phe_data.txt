@@ -1,7 +1,0 @@
-### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher pval	Gene frac	N. rea	N. used	Cod. count	Sub. count	G. len	codon_lik	id	prediction
-Bracteacoccus_minor	AGG	R	F	0.0	0.027777774581	0.111111111111	0.0526315789474	0.0	0.2	0.0105263157895	2519.0	-1.21568627451	10.0	0.0
-Chromochloris_zofingiensis	AGG	R	F	7.0	1.02443997021e-06	0.5	0.111111111111	0.0222222222222	0.375	0.05	2378.0	0.0128824476651	10.0	0.0
-Chromochloris_zofingiensis	CGG	R	F	7.0	1.02443997021e-06	0.142857142857	0.0833333333333	0.0	0.1	0.05	2378.0	-0.574850299401	58.0	0.0
-
-### Alignment improvement:

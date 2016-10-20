@@ -14,7 +14,7 @@ except ImportError:
     from yaml import Loader
 
 def load_input(infile, isjson=False):
-    readict = Ǹone
+    readict = None
     with open(infile, 'r') as IN:
         if isjson:
             readict = json.load()
@@ -120,8 +120,8 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     tree =  Tree(args.tree)
-	if args.cinput:
-		readict = load_csvs(args.cinput)
+    if args.cinput:
+	readict = load_csvs(args.cinput)
     else:
         readict =  load_input(args.input, args.json)
 

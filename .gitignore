@@ -61,8 +61,6 @@ target/
 # results
 tmp/*
 
-data/*/test*
-
 
 # discard images
 *.png
@@ -70,8 +68,8 @@ data/*/test*
 *.jpg
 *.pdf
 
-data/input
+data/*
 lscript/
 zip_resultat/
 misc_data/
-param.yml
+coretracker/classifier/model_old/

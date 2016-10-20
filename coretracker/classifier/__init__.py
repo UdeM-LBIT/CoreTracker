@@ -14,5 +14,5 @@
 from classifier import Classifier, getDataFromFeatures, read_from_json
 import os
 this_dir, this_filename = os.path.split(__file__)
-MODELPATH = os.path.join(this_dir, "models", '%s/classifier.plk')
+MODELPATH = os.path.join(this_dir, "models", '%s/classifier.pkl.z')
 __all__ = ['Classifier', 'getDataFromFeatures', 'read_from_json']
