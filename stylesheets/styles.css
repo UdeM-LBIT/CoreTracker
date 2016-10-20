@@ -108,7 +108,7 @@ a:hover small {
 }
 
 .wrapper {
-  width:860px;
+  width:900px;
   margin:0 auto;
 }
 
@@ -158,10 +158,37 @@ img {
 }
 
 header {
-  width:270px;
+  width:250px;
   float:left;
   position:fixed;
   -webkit-font-smoothing:subpixel-antialiased;
+}
+
+header .index ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+}
+
+header .index li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+header .index li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+header .index .active {
+    border-left: 2px solid black ;
+    background-color: #333333;
+    color: #ecf0f1;
 }
 
 header ul {
@@ -171,7 +198,7 @@ header ul {
   background: #f4f4f4;
   border-radius:5px;
   border:1px solid #e0e0e0;
-  width:270px;
+  width:250px;
 }
 
 header li {
@@ -224,7 +251,7 @@ header ul a strong {
 }
 
 section {
-  width:500px;
+  width:575px;
   float:right;
   padding-bottom:50px;
 }
@@ -241,7 +268,7 @@ hr {
 }
 
 footer {
-  width:270px;
+  width:250px;
   float:left;
   position:fixed;
   bottom:50px;
