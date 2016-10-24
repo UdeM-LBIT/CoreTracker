@@ -5,6 +5,7 @@ import numpy as np
 import operator
 from letterconfig import *
 
+
 def init_back_table(dct):
     """Get back table for the current genetic code"""
     back_table = defaultdict(list)
@@ -70,7 +71,8 @@ class AbsAncest:
         # hmm not the best way, but hey I'm out of time
         tree_err = "Tree should be root and have total node count as feature"
         assert tree.is_root() and 'node_count' in tree.features, tree_err
-        state_mat = np.zeros((len(codon_list), tree.node_count), dtype='object')
+        state_mat = np.zeros(
+            (len(codon_list), tree.node_count), dtype='object')
         state_mat.fill(set([]))
         # looking only at leaf node
         for leaf in tree:
@@ -99,7 +101,8 @@ class LKLBasedAns(AbsAncest):
             return self._margin()
         else:
             return self._join()
-        raise NotImplemented("Likelihood based methods are not implemented yet")
+        raise NotImplemented(
+            "Likelihood based methods are not implemented yet")
 
     def _margin(self):
         print('margin')
@@ -121,7 +124,8 @@ class DolloParsimony(AbsAncest):
 
     def label_internal(self, state_mat, header_list=None, header_map=None, null_map=None, **kwargs):
         if not self.binary_mode and None in (header_list, header_map):
-            raise ValueError("header_list and header_map are needed in non binary_mode")
+            raise ValueError(
+                "header_list and header_map are needed in non binary_mode")
 
         self.state_mat = state_mat
         self.header_list = header_list
@@ -138,7 +142,8 @@ class DolloParsimony(AbsAncest):
         for c in char_states:
             # only consider positive state
             if c and c != nullstate:
-                tmp_c = [sum([1 for x in smat[nlist] if c in x]) for nlist in term_list]
+                tmp_c = [sum([1 for x in smat[nlist] if c in x])
+                         for nlist in term_list]
                 if len([x for x in tmp_c if x > 0]) >= 2:
                     is_valid_for_c[c] = tmp_c
 
@@ -160,7 +165,8 @@ class DolloParsimony(AbsAncest):
         """
 
         leaves_list_ind = set([l.ind for l in self.tree])
-        get_poss_states = (lambda x: [0, 1]) if self.binary_mode else (lambda x: x[1][x[0]])
+        get_poss_states = (lambda x: [0, 1]) if self.binary_mode else (
+            lambda x: x[1][x[0]])
 
         def get_excluded_node_set(node):
             """ this function serve to get T-A according to Farris
@@ -175,7 +181,8 @@ class DolloParsimony(AbsAncest):
             for node in self.tree.traverse("postorder"):
                 # dollo look only at internal nodes
                 if not node.is_leaf():
-                    group_list = [[n.ind for n in child] for child in node.get_children()]
+                    group_list = [[n.ind for n in child]
+                                  for child in node.get_children()]
                     group_list.append(get_excluded_node_set(node))
                     pos_state = self.__const_term_state(group_list, self.state_mat[
                                                         char_i, :], char_states, nullstate)
@@ -195,7 +202,7 @@ class FitchBased(AbsAncest):
 
     def label_internal(self, state_mat, header_list=None, **kwargs):
         self.state_mat, self.header_list = state_mat, header_list
-        #self.state_mat, self.codon_list = self.make_codonrea_matrice(self.tree, self.nodestates, self.alphmap)
+        # self.state_mat, self.codon_list = self.make_codonrea_matrice(self.tree, self.nodestates, self.alphmap)
         self._bottomup()
         self._updown()
         return self.state_mat
@@ -220,7 +227,8 @@ class FitchBased(AbsAncest):
         accepted_state = self.state_mat[ichar, node.ind]
         char_score = {}
         for c in accepted_state:
-            in_subtree = sum([(1 if c in self.state_mat[ichar, n.ind] else 0) for n in node])
+            in_subtree = sum(
+                [(1 if c in self.state_mat[ichar, n.ind] else 0) for n in node])
             out_subtree = sum([(1 if c in self.state_mat[ichar, n.ind] else 0)
                                for n in node.get_tree_root() if n not in node])
             char_score[c] = in_subtree - out_subtree
@@ -238,7 +246,8 @@ class FitchBased(AbsAncest):
                 if parent_state.intersection(self.state_mat[ichar, node.ind]):
                     self.state_mat[ichar, node.ind] = parent_state
                 else:
-                    self.state_mat[ichar, node.ind] = self._get_node_optimal_state(node, ichar)
+                    self.state_mat[ichar, node.ind] = self._get_node_optimal_state(
+                        node, ichar)
 
 
 class SingleNaiveFitch(object):
@@ -350,11 +359,11 @@ class SingleNaiveFitch(object):
         if isinstance(node, str):
             cur_node = self.tree & node
         dist = 0
-        while cur_node != None and not self.is_reassigned(cur_node, strict=False):
+        while cur_node is not None and not self.is_reassigned(cur_node, strict=False):
             dist += 1
             cur_node = cur_node.up
         return dist
 
     def has_codon_data(self):
         # base codon_data on filtered position only
-        return self.codon_rea_filtered != None
+        return self.codon_rea_filtered is not None

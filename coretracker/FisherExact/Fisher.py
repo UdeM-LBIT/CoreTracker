@@ -150,21 +150,21 @@ def _execute_fexact(nr, nc, c, nnr, expect, percnt, emin, workspace,
     """Execute fexact using the fortran routine"""
 
     # find required workspace
-    #pval = None
-    #success = False
-    #ntot = np.sum(c)+1
-    #nco = max(nr, nc)
-    #nro = nr +nc - nco
-    #allocated = _iwork(0, ntot, 'double')
-    #allocated = _iwork(allocated, nco) *3
-    #allocated = _iwork(allocated, nco) *2
-    #k =  nro + nco +1
-    #kk = k*nco
-    #allocated = _iwork(allocated, max(k*5 + (kk<<1), nco*7 + 800))
-    #allocated =  _iwork(allocated, max(nco+401, k))
-    #iwkmax = 2e+05
-    #numb = (18 + 10 * 30)
-    #ldk = (iwkmax - allocated) / numb -1
+    # pval = None
+    # success = False
+    # ntot = np.sum(c)+1
+    # nco = max(nr, nc)
+    # nro = nr +nc - nco
+    # allocated = _iwork(0, ntot, 'double')
+    # allocated = _iwork(allocated, nco) *3
+    # allocated = _iwork(allocated, nco) *2
+    # k =  nro + nco +1
+    # kk = k*nco
+    # allocated = _iwork(allocated, max(k*5 + (kk<<1), nco*7 + 800))
+    # allocated =  _iwork(allocated, max(nco+401, k))
+    # iwkmax = 2e+05
+    # numb = (18 + 10 * 30)
+    # ldk = (iwkmax - allocated) / numb -1
     success = False
     ntry = 0
     wk = workspace

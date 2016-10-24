@@ -105,7 +105,7 @@ def set_coretracker(args, settings):
         raise ValueError("Classifier not found or not trained!")
 
     seqloader = SequenceLoader(input_alignment, args.dnaseq, settings, args.gapfilter, has_stop=args.hasstop,
-                               use_tree=args.usetree, refine_alignment=args.refine, msaprog=msaprg,  hmmdict=hmmfiles)
+                               use_tree=args.usetree, refine_alignment=args.refine, msaprog=msaprg, hmmdict=hmmfiles)
 
     # create sequence set
     setseq = SequenceSet(seqloader, specietree, settings.GENETIC_CODE)
@@ -124,7 +124,8 @@ def compile_result(x, clf, cod_align, model):
     s_complete_data = utils.makehash()
     s_complete_data['aa'][fitch.ori_aa1][fitch.dest_aa1] = data
     s_complete_data['genome'] = reafinder.reassignment_mapper['genome']
-    X_data, X_labels, _ = read_from_json(s_complete_data, None, use_global=False)
+    X_data, X_labels, _ = read_from_json(
+        s_complete_data, None, use_global=False)
     # extract usefull features
     X_data, X_dataprint, selected_et = model.format_data(X_data)
     pred_prob = clf.predict_proba(X_data)
@@ -146,7 +147,7 @@ if __name__ == '__main__':
 
     parser.add_argument('--version', action='version', version='%(prog)s 1.0')
 
-    parser.add_argument('--gapfilter', '--gap', type=float,  default=0.6, dest='gapfilter',
+    parser.add_argument('--gapfilter', '--gap', type=float, default=0.6, dest='gapfilter',
                         help="Remove position with gap from the alignment, using gapfilter as threshold. The absolute values are taken")
 
     parser.add_argument('--idfilter', '--id', type=float, default=0.8, dest='idfilter',
@@ -206,7 +207,8 @@ if __name__ == '__main__':
     parser.add_argument('--parallel', dest='parallel', nargs='?', const=CPU_COUNT, type=int, default=0,
                         help="Use Parallelization during execution for each reassignment. This does not guarantee an increase in speed. CPU count will be used if no argument is provided")
 
-    print("CoreTracker v:%s Copyright (C) %s %s" % (__version__, date, __author__))
+    print("CoreTracker v:%s Copyright (C) %s %s" %
+          (__version__, date, __author__))
 
     args = parser.parse_args()
     setting = Settings()
@@ -235,7 +237,8 @@ if __name__ == '__main__':
             x, clf, cod_align, model) for x in reafinder.run_analysis(codon_align, fcodon_align))
         done = True
     elif args.parallel > 0:
-        logging.warning("Joblib requirement not found! Disabling parallelization")
+        logging.warning(
+            "Joblib requirement not found! Disabling parallelization")
 
     if not done:
         for x in reafinder.run_analysis(codon_align, fcodon_align):
@@ -247,7 +250,8 @@ if __name__ == '__main__':
             for cuspec, readt in r.items():
                 for k in readt.keys():
                     rea_pos_keeper[cuspec][k] = readt[k]
-        exp_outfile = outfile = os.path.join(reafinder.settings.OUTDIR, "positions.json")
+        exp_outfile = outfile = os.path.join(
+            reafinder.settings.OUTDIR, "positions.json")
         reafinder.export_position(rea_pos_keeper, exp_outfile)
 
     reafinder.save_all(True)

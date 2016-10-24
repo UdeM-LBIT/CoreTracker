@@ -272,7 +272,7 @@ class SequenceLoader:
 
     @classmethod
     def _refine(clc, alignment, timeout, outdir, hmmbuild="hmmbuild", hmmalign="hmmalign", eslalimanip="esl-alimanip",
-                eslalimask="esl-alimask", hmmfile=None, loop=10, minqual=8,  strategie="lesser", clean=True):
+                eslalimask="esl-alimask", hmmfile=None, loop=10, minqual=8, strategie="lesser", clean=True):
         """Align and refine at the same time with hmmalign and muscle"""
 
         success, not_found = check_binaries(
@@ -334,7 +334,7 @@ class SequenceLoader:
                 " -o %s %s %s" % (outputFile, hmmfile, inputFile)
             executeCMD(alignline, 'hmmalign')
             # finding quality
-            quality.append(accessQuality(outputFile,  minqual, strategie))
+            quality.append(accessQuality(outputFile, minqual, strategie))
             inputFile = remove_gap_position(outputFile, 'stockholm')
             outlist.append(inputFile)
             # next input for hmm is current output
@@ -502,7 +502,7 @@ class CodonReaData(object):
         if not isinstance(self.codon_alignment, dict):
             self.codon_alignment = SeqIO.to_dict(self.codon_alignment)
         self.consensus = consensus
-        #self.rea_codons = defaultdict(partial(defaultdict, Counter))
+        # self.rea_codons = defaultdict(partial(defaultdict, Counter))
         self.reacodons = makehash(1, Counter)
         self.usedcodons = makehash(1, Counter)
         self.mixtecodon = makehash(1, Counter)
@@ -736,11 +736,11 @@ class SequenceSet(object):
             logging.debug("Total position lost due to undef codon : %d" %
                           len(undef_codon))
             undef_codon = sorted(list(undef_codon))
-            #R_aa_position = np.asarray(xrange(self.prot_align.get_alignment_length()))
-            #R_aa_position = np.setxor1d(tt_filter_position, np.asarray(undef_codon))
+            # R_aa_position = np.asarray(xrange(self.prot_align.get_alignment_length()))
+            # R_aa_position = np.setxor1d(tt_filter_position, np.asarray(undef_codon))
             for gene, seqrec in self.prot_dict.items():
                 seqrec.seq._data = seqrec.seq._data.replace('X', gap_char)
-                #self.prot_dict[gene] = seqrec
+                # self.prot_dict[gene] = seqrec
             self.prot_align = MultipleSeqAlignment(
                 self.prot_dict.values(), alphabet=alpha)
 
@@ -750,7 +750,7 @@ class SequenceSet(object):
                 self.dna_dict[k] = SeqRecord(
                     codseqrec.seq.toSeq().ungap(gap_char), id=k, name=k)
 
-        #self.codon_alignment = codonalign.build(self.prot_align, self.dna_dict, codon_table=self.codontable)
+        # self.codon_alignment = codonalign.build(self.prot_align, self.dna_dict, codon_table=self.codontable)
 
     def _get_codon_record(self, dnarec, protrec, codontable, alphabet, gap_char='-'):
         """Get a codon seq record from dna and prot seqrecord"""
@@ -833,8 +833,7 @@ class SequenceSet(object):
             ic_content = align_info.information_content()
             max_val = max(align_info.ic_vector) * \
                 ((abs(ic_thresh) <= 1 or 0.01) * abs(ic_thresh))
-            ic_pos = (np.asarray(align_info.ic_vector)
-                      >= max_val).nonzero()
+            ic_pos = (np.asarray(align_info.ic_vector) >= max_val).nonzero()
             logging.debug(
                 "Filtering with ic_content, vector to discard is %s" % str(ic_pos[0]))
             # ic_pos here is a tuple, so we should access the first element
@@ -1021,7 +1020,7 @@ class ReaGenomeFinder:
         """ Get suspected genomes """
         matCalc = DistanceCalculator(self.method)
         self.compute_sequence_identity(matCalc)
-        #logging.debug("Distance matrix : ")
+        # logging.debug("Distance matrix : ")
         # logging.debug(self.filtered_paired_distance)
         self.filtered_consensus = self.seqset.get_consensus(
             self.seqset.filt_prot_align, self.settings.AA_MAJORITY_THRESH)
@@ -1036,7 +1035,6 @@ class ReaGenomeFinder:
 
         self.seqset.aa_filt_prot_align = {}
         self.aa_paired_distance = {}
-        #
         for aa in self.settings.AA_LETTERS:
             cons_array = self.seqset.get_aa_filtered_alignment(
                 self.filtered_consensus, aa)
@@ -1090,7 +1088,7 @@ class ReaGenomeFinder:
         logging.debug('The list of suspected species per amino acid is:')
         logging.debug(self.suspected_species)
 
-    def get_suspect_by_count(self,  aa2suspect, seq_num):
+    def get_suspect_by_count(self, aa2suspect, seq_num):
         """Find suspected species by simple counting"""
         for aa in aa2suspect.keys():
             tmp_list = aa2suspect[aa].most_common()
@@ -1336,7 +1334,7 @@ class ReaGenomeFinder:
                     if len(reacodon.values()) == 1 or len(usedcodon.values()) == 1:
                         eprob = self.get_expected_prob_per_species(genome, aa2, aa1,
                                                                    use_cost=True, use_align=True)
-                        #print("%s | %s to %s : %f"%(genome, aa2, aa1, eprob))
+                        # print("%s | %s to %s : %f"%(genome, aa2, aa1, eprob))
                         assert (
                             eprob - 1 < 0), "Strange value for eprob %f" % eprob
                     fisher_passed, pval = independance_test(
@@ -1406,9 +1404,9 @@ def convert_tree_to_mafft(tree, seq_order, output, scale, dist_thresh=1e-10):
             left_branch_leaf = left_branch.get_leaf_names()
             right_branch_leaf = right_branch.get_leaf_names()
             seqnames = [min(map(lambda x: seq_order.index(x), left_branch_leaf)) +
-                        1,  min(map(lambda x: seq_order.index(x), right_branch_leaf)) + 1, ]
-            #seqnames = [seq_order.index(left_branch_leaf.name)+1, seq_order.index(right_branch_leaf.name)+1]
-            #seqnames = [left_branch_leaf.name, right_branch_leaf.name]
+                        1, min(map(lambda x: seq_order.index(x), right_branch_leaf)) + 1, ]
+            # seqnames = [seq_order.index(left_branch_leaf.name)+1, seq_order.index(right_branch_leaf.name)+1]
+            # seqnames = [left_branch_leaf.name, right_branch_leaf.name]
             branchlens = [
                 left_branch.dist * scale, right_branch.dist * scale]
 
@@ -1531,7 +1529,7 @@ def independance_test(rea, ori, confd=0.05, expct_prob=0.5):
     # codon is used in both column
     elif len(rea.values()) > 0 and len(ori.values()) > 0:
         # fpval = abs(rea.values()[0] - ori.values()[0]) / \
-            #(rea.values()[0] + ori.values()[0])
+            # (rea.values()[0] + ori.values()[0])
         # return rea.values()[0] >= ori.values()[0], fpval / tot_size
         n = rea.values()[0] + ori.values()[0]  # ignoring mixcodon ??
         pval = onevalbinomtest(rea.values()[0], n, expct_prob)
@@ -1579,7 +1577,7 @@ def execute_alignment(cmdline, inp, out):
     executeCMD(cmdline, prog)
 
 
-def compute_SP_per_col(al1, al2, columns, nspec,  scoring_matrix):
+def compute_SP_per_col(al1, al2, columns, nspec, scoring_matrix):
     """Compute a SP score per column"""
     def scoring_function(aa1, aa2, scoring_matrix):
         if scoring_matrix == 'identity':
@@ -1626,7 +1624,7 @@ def check_align_upgrade(al1, al2, scoring_method, method="wilcoxon", column_list
 
 
 def check_gain(codon, cible_aa, speclist, codontable, codon_alignment,
-               scoring_method="identity", alignment=None,  method="wilcoxon"):
+               scoring_method="identity", alignment=None, method="wilcoxon"):
     """Check if there is an actuall gain in global sequence quality after applying reassignment"""
     if not isinstance(codon_alignment, dict):
         codon_alignment = SeqIO.to_dict(codon_alignment)
@@ -1821,7 +1819,7 @@ def get_report(fitchtree, gdata, reafinder, codon_align, prediction, output="", 
                     if(settings.SHOW_MIXTE_CODONS):
                         spec_mixtecodon_g = gdata[node.name][
                             'global']['mixte_codon']
-                        faces.add_face_to_node(PPieChartFace(spec_mixtecodon_g.values(), pie_size, pie_size,  show_label=show_n,
+                        faces.add_face_to_node(PPieChartFace(spec_mixtecodon_g.values(), pie_size, pie_size, show_label=show_n,
                                                              colors=[fitchtree.colors[k] for k in spec_mixtecodon_g.keys()]),
                                                node, column=next_column, position="aligned")
                         next_column += 1
@@ -2120,7 +2118,7 @@ def codon_adjust_improve(fitchtree, reafinder, codon_align, codontable, predicti
     for codon in true_codon_set.keys():
         speclist = true_codon_set[codon]
         if len(speclist) > 0:
-            #pos = identify_position_with_codon(codon_align, codon, speclist)
+            # pos = identify_position_with_codon(codon_align, codon, speclist)
             # check_gain is called only on filtered alignment
             # maybe it's a better idea to call it on the original alignmnt
             score_improve, alsp, alic, als, pos = check_gain(codon, cible_aa, speclist, codontable,
@@ -2204,7 +2202,6 @@ def pdf_format_data(ori_aa, dest_aa, gdata, prediction, dtype, output=""):
                 'Telford': gdata[g]['score'][dtype].get(codon, 0),
                 # position 1 is true prob
                 'Reassigned': pred[pos] == 1,
-                #'Delta Sim.' :
                 # position 1 is true prob
                 'Prob': pred_prob[pos, 1],
             }

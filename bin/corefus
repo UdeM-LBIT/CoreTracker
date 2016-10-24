@@ -22,9 +22,11 @@ import argparse
 parser = argparse.ArgumentParser(
     description='Fusion, merge 2 dataset for CoreTracker')
 
-parser.add_argument('--out', dest="output", default="merged", help="Merged output file")
+parser.add_argument('--out', dest="output",
+                    default="merged", help="Merged output file")
 parser.add_argument('--trees', nargs=2, dest='trees', help="list of trees")
-parser.add_argument('--nucs', required=True, nargs=2, dest='nucs', help="list of nuc files")
+parser.add_argument('--nucs', required=True, nargs=2,
+                    dest='nucs', help="list of nuc files")
 
 args = parser.parse_args()
 nuc = CoreFile(args.nucs[0], alphabet="nuc").get_sequences()

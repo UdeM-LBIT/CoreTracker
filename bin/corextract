@@ -41,7 +41,8 @@ def taxonIDLookup(taxonID):
     finished = 0
     while finished <= maxCheck:
         try:
-            handleDownload = Entrez.efetch(db="taxonomy", id=taxonID, retmode="xml")
+            handleDownload = Entrez.efetch(
+                db="taxonomy", id=taxonID, retmode="xml")
             resultsDownload = Entrez.read(handleDownload)
             handleDownload.close()
             finished = maxCheck + 1
@@ -108,11 +109,12 @@ def cladeSpecies(cladeName):
             finished = maxCheck + 1
         except:
             if finished == 0:
-                print("!!!Server error checking" + cladeName + " - retrying...")
+                print("!!!Server error checking" +
+                      cladeName + " - retrying...")
                 finished += 1
                 time.sleep(2)
             elif finished == maxCheck:
-                print ("!!!!!!Unreachable. Returning nothing.")
+                print("!!!!!!Unreachable. Returning nothing.")
                 return()
             else:
                 finished += 1
@@ -202,7 +204,8 @@ def get_poss_event_diff(gene, prot, features, gcode=1):
                 bestmatch = (pos, matcher)
                 break
             else:
-                bestmatch = max(bestmatch, (pos, matcher), key=operator.itemgetter(1))
+                bestmatch = max(bestmatch, (pos, matcher),
+                                key=operator.itemgetter(1))
 
         return bestmatch[0]
 
@@ -258,7 +261,8 @@ def extract_genome(speclist, genelist, records, revmtgenes, getprot=False):
                         pass
                     rec = SeqRecord(seq, id=specaff, name=specaff)
                     if g_found_in_spc.get(sgene, 0) < 1:
-                        # this is to ensure that the same gene is not added multiple time
+                        # this is to ensure that the same gene is not added
+                        # multiple time
                         gene2spec[sgene].append(rec)
                     g_found_in_spc[sgene] = 1
     return gene2spec, spec_code_map
@@ -268,7 +272,8 @@ if __name__ == '__main__':
         description="Extract genome from genbank file into corefile format.")
 
     sub_parser = parser.add_subparsers(help="Commands", dest='command')
-    build_parser = sub_parser.add_parser('build', help="Build database for fast species searching")
+    build_parser = sub_parser.add_parser(
+        'build', help="Build database for fast species searching")
     build_parser.add_argument("--namedb", '-db', dest='database',
                               help="Temporary database for fast name searching. Only sqlite database supported")
     build_parser.add_argument("--indexdb", '-ib', dest='indexdb',
@@ -276,18 +281,19 @@ if __name__ == '__main__':
     build_parser.add_argument("--genbank", "-G", required=True,
                               dest='genbank', help="Your genbank file")
 
-    extract_parser = sub_parser.add_parser('extract', help="Extract genome from your data")
+    extract_parser = sub_parser.add_parser(
+        'extract', help="Extract genome from your data")
     extract_parser.add_argument("--genbank", "-G", required=True,
                                 dest='genbank', help="Your genbank file")
     extract_parser.add_argument("--indexdb", '-ib', dest='indexdb',
                                 required=True, help="Index filename")
     extract_parser.add_argument("--namedb", '-db', dest='database',
                                 help="Use build to build a temporary database for fast name searching. Http request will be done if this is not provided")
-    extract_parser.add_argument("--taxid",  dest='taxid', action='store_true',
+    extract_parser.add_argument("--taxid", dest='taxid', action='store_true',
                                 help="Taxid instead of common name is provided")
-    extract_parser.add_argument("--complete",  dest='complete',
+    extract_parser.add_argument("--complete", dest='complete',
                                 action='store_true', help="Complete genome only")
-    extract_parser.add_argument("--clade",  dest='clade', action='store_true',
+    extract_parser.add_argument("--clade", dest='clade', action='store_true',
                                 help="Use this to look for clade name if some of your specs are clades instead")
     extract_parser.add_argument("--genelist", dest='genelist',
                                 help="List of genes. If not provided, all coding sequences in the mapping file will be exported")
@@ -324,7 +330,8 @@ if __name__ == '__main__':
                         source, organism, lineage) values (?, ?, ?, ?, ?, ?, ?)", [rec.name, rec.id, annot['gi'],
                                                                                    ('complete genome' in desc), annot['source'], annot['organism'], ">".join(annot['taxonomy'])])
                 conn.commit()
-                print("%s elements inserted in %s" % (conn.total_changes, args.database))
+                print("%s elements inserted in %s" %
+                      (conn.total_changes, args.database))
     else:
         # we are actually trying to extract a genome from a list of spec
         records = SeqIO.index_db(args.indexdb, args.genbank, format="genbank")
@@ -345,7 +352,8 @@ if __name__ == '__main__':
                 for line in Glist:
                     if not line.startswith('#'):
                         genelist.append(line.strip())
-        gene2spec, prot2spec, spec_code = extract_genome(speclist, genelist, records, revmtgenes)
+        gene2spec, prot2spec, spec_code = extract_genome(
+            speclist, genelist, records, revmtgenes)
         CoreFile.write_corefile(gene2spec, args.output)
             CoreFile.write_corefile(prot2spec, args.output + "_prot")
 

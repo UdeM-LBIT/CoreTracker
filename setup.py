@@ -5,7 +5,8 @@
 from __future__ import absolute_import
 from __future__ import print_function
 import glob
-import os, sys
+import os
+import sys
 from distutils import spawn
 try:
     from setuptools import find_packages
@@ -14,30 +15,35 @@ except ImportError:
     ez_setup.use_setuptools()
     from setuptools import find_packages
 
-from numpy.distutils.core  import Extension as Ext
+from numpy.distutils.core import Extension as Ext
 from numpy.distutils.core import setup
 
 from coretracker import __project__, __version__
 sys.path.insert(0, os.path.realpath(os.path.join(os.path.dirname(__file__), "python")))
 
-def configuration(top_path='') :
+
+def configuration(top_path=''):
     fexact_sources = [
         'coretracker/FisherExact/statlib/fexact.pyf',
         'coretracker/FisherExact/statlib/FEXACT.F90',
         'coretracker/FisherExact/statlib/prterr.f'
     ]
 
-    fexact = Ext(name='coretracker.FisherExact.statlib.fexact', sources=[os.path.join(top_path,x) for x in fexact_sources])
-    asa159 = Ext(name='coretracker.FisherExact.statlib.asa159', sources=[os.path.join(top_path, 'coretracker/FisherExact/statlib', 'asa159.f90')])
-    asa205 = Ext(name='coretracker.FisherExact.statlib.asa205', sources=[os.path.join(top_path, 'coretracker/FisherExact/statlib', 'asa205.f90')])
+    fexact = Ext(name='coretracker.FisherExact.statlib.fexact', sources=[
+                 os.path.join(top_path, x) for x in fexact_sources])
+    asa159 = Ext(name='coretracker.FisherExact.statlib.asa159', sources=[
+                 os.path.join(top_path, 'coretracker/FisherExact/statlib', 'asa159.f90')])
+    asa205 = Ext(name='coretracker.FisherExact.statlib.asa205', sources=[
+                 os.path.join(top_path, 'coretracker/FisherExact/statlib', 'asa205.f90')])
     return [fexact, asa205, asa159]
+
 
 def setup_package():
     if os.path.exists('README.md'):
         README = open('README.md').read()
     else:
         README = ""  # a placeholder, readme is generated on release
-    print("\nVersion : %s\n"%__version__)
+    print("\nVersion : %s\n" % __version__)
 
     fortran_extnsion = configuration()
 
@@ -47,12 +53,12 @@ def setup_package():
         maintainer='Emmanuel Noutahi',
         description="CoreTracker, A codon reassignment tracker",
         url='https://github.com/UdeM-LBIT/CoreTracker',
-        download_url = 'https://github.com/UdeM-LBIT/CoreTracker/tarball/1.0.1',
+        download_url='https://github.com/UdeM-LBIT/CoreTracker/tarball/1.0.1',
         author='Emmanuel Noutahi',
         author_email='fmr.noutahi@umontreal.ca',
-        scripts = glob.glob('bin/*'),
+        scripts=glob.glob('bin/*'),
         packages=find_packages(),
-        package_data = {
+        package_data={
             'coretracker.classifier': ['models/*/*'],
             'coretracker.coreutils': ['templates/*'],
         },
@@ -73,7 +79,7 @@ def setup_package():
         ],
 
         setup_requires=['numpy'],
-        install_requires = [
+        install_requires=[
             'ete3',
             'numpy>= 1.8.1',
             'pandas',
@@ -85,40 +91,39 @@ def setup_package():
             'PyYAML',
             'PyQt4',
         ],
-        ext_modules = fortran_extnsion
+        ext_modules=fortran_extnsion
     )
 
 
 def binaries_checker():
-	"""Check if some of the required binaries (alignment) are installed"""
-	alignment = ['muscle', 'mafft']
-	hmm = ['hmmbuild', 'hmmalign', 'esl-alimanip', 'esl-alimask']
-	total = [alignment, hmm]
-	nfound = []
-	for bintype in total:
-		for exe in bintype:
-			found = spawn.find_executable(exe)
-			if not found:
-				nfound.append(exe)
+    """Check if some of the required binaries (alignment) are installed"""
+    alignment = ['muscle', 'mafft']
+    hmm = ['hmmbuild', 'hmmalign', 'esl-alimanip', 'esl-alimask']
+    total = [alignment, hmm]
+    nfound = []
+    for bintype in total:
+        for exe in bintype:
+            found = spawn.find_executable(exe)
+            if not found:
+                nfound.append(exe)
 
-	if nfound:
-		print("Some binaries where not found : \n-%s"%"\n-".join(nfound))
-		answer = 'n'
-		try:
-			answer = raw_input("Do you want to still continue the installation (y/n) ? ")
-		except:
-			answer = input("Do you want to still continue the installation (y/n) ? ")
+    if nfound:
+        print("Some binaries where not found : \n-%s" % "\n-".join(nfound))
+        answer = 'n'
+        try:
+            answer = raw_input("Do you want to still continue the installation (y/n) ? ")
+        except:
+            answer = input("Do you want to still continue the installation (y/n) ? ")
 
-		return answer.lower().startswith('y')
+        return answer.lower().startswith('y')
 
-	return True		
-
+    return True
 
 
 if __name__ == '__main__':
-	
-	cn_continue = binaries_checker()
-	if not cn_continue:
-		sys.exit(0)
-	
-	setup_package()
+
+    cn_continue = binaries_checker()
+    if not cn_continue:
+        sys.exit(0)
+
+    setup_package()

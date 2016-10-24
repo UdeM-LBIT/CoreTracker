@@ -35,10 +35,12 @@ class CodonTransition(object):
         self.table = table
 
     def iter_possible_transition(self):
-        expc_trans = [i for i, x in enumerate(self.codon) if self.subsrea.is_edited(x)]
+        expc_trans = [i for i, x in enumerate(
+            self.codon) if self.subsrea.is_edited(x)]
         pstates = [0, 1]
         for state in itertools.product([0, 1], repeat=len(expc_trans)):
-            state = map(lambda x: state[x] * expc_trans[x], range(len(expc_trans)))
+            state = map(lambda x: state[x] *
+                        expc_trans[x], range(len(expc_trans)))
             codon = self.codon[:]
             changed = False
             for pos in state:
@@ -88,7 +90,7 @@ class SubsReaType(object):
 class RNAediting (object):
     """Attempt to check edition with a simple algorithm"""
 
-    def __init__(self, codonalign, aalign, gcode=1, reatype=('C', 'U'),  radius=None):
+    def __init__(self, codonalign, aalign, gcode=1, reatype=('C', 'U'), radius=None):
         # radius expected value is 9
         self.codontable = CodonTable.unambiguous_dna_by_id[gcode]
         self.codonalign = codonalign

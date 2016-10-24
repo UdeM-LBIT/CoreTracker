@@ -40,7 +40,8 @@ parser.add_argument('--prog', default="mafft", dest='prog', choices=[
                     'mafft', 'muscle'], help="Genetic code to use for translation. Default value is 1")
 parser.add_argument('--align', dest='align', action='store_true',
                     help="Whether we should align or not")
-parser.add_argument('--gapchar', dest='gapchar', default='-', help="Set default gap char")
+parser.add_argument('--gapchar', dest='gapchar',
+                    default='-', help="Set default gap char")
 parser.add_argument('--refine', dest='refine', action='store_true',
                     help="Whether we should refine the alignment with hmm")
 parser.add_argument('--noclean', dest='noclean', action='store_false',
@@ -120,7 +121,8 @@ if args.filter:
     if not core_inst:
         sys.exit("After removing frameshifting, there isn't any remaining genes")
 
-    print("======== Total of %d / %d genes rescued ========" % (gcount, total_gcount))
+    print("======== Total of %d / %d genes rescued ========" %
+          (gcount, total_gcount))
 
     # save new sequence file for coretracker later
     CoreFile.write_corefile(

@@ -4,7 +4,7 @@ from PyQt4.QtGui import (QGraphicsRectItem, QGraphicsLineItem,
                          QFont, QPixmap, QFontMetrics, QPainter,
                          QGraphicsSimpleTextItem, QGraphicsTextItem, QGraphicsItem)
 
-from PyQt4.QtCore import Qt,  QPointF, QRect, QRectF
+from PyQt4.QtCore import Qt, QPointF, QRect, QRectF
 from ete3 import faces
 from ete3.treeview.main import *
 import math
@@ -186,7 +186,8 @@ class _PieChartItem(QGraphicsRectItem):
             painter.setBrush(QBrush(QColor(col)))
             angle_span = (p / 100.) * a
             painter.drawPie(self.rect(), angle_start, angle_span)
-            current_angle = ((angle_start + angle_span / 2.) / 16.) * (math.pi / 180.)
+            current_angle = ((angle_start + angle_span / 2.) /
+                             16.) * (math.pi / 180.)
             angle_start += angle_span
 
 
@@ -275,7 +276,8 @@ class SequenceFace(faces.StaticItemFace):
             if not fg_colors:
                 fg_colors = _get_codon_fgcolors(codontable, cible_aa)
             if not bg_colors:
-                bg_colors = _get_codon_bgcolors(codontable, cible_aa, spec_codon_col)
+                bg_colors = _get_codon_bgcolors(
+                    codontable, cible_aa, spec_codon_col)
 
         else:
             if not fg_colors:
@@ -359,7 +361,8 @@ class List90Face(faces.StaticItemFace):
         return self._text
 
     def update_items(self):
-        self.item = QGraphicsRectItem(0, 0, self.width, self.row_h * self.coeff_h)
+        self.item = QGraphicsRectItem(
+            0, 0, self.width, self.row_h * self.coeff_h)
         seq_width = 0
         nopen = QPen(Qt.NoPen)
         self.item.setPen(nopen)
@@ -427,7 +430,8 @@ class ReaRectFace(faces.StaticItemFace):
 
     def update_items(self):
         try:
-            max_codons = math.ceil(max([len(x) for x in self.readict.values()]) / 2.0) * 2
+            max_codons = math.ceil(
+                max([len(x) for x in self.readict.values()]) / 2.0) * 2
         except:
             max_codons = 1
         if self.maxcodon:
