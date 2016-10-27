@@ -20,7 +20,7 @@ before_install:
 install: 
   - conda env create -f conda.yml
   - source activate crt
-  - pip install -r requirements.txt
+  - pip install -r requirement.txt
   - python setup.py install
 # command to run tests
 script: 
