@@ -5,22 +5,26 @@ notifications:
   email: false
 # command to install dependencies
 before_install:
-  - sudo apt-get update
+  - sudo apt-get update -qq
   - wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -O miniconda.sh
   - chmod +x miniconda.sh
   - bash miniconda.sh -b -p $HOME/miniconda
   - export PATH="$HOME/miniconda/bin:$PATH"
   - hash -r
   - conda config --set always_yes yes --set changeps1 no
+  - conda config --add channels r
+  - conda config --add channels bioconda
   - conda update -q conda
   - conda info -a
+  - conda install hmmer muscle mafft
+  - conda install -c anaconda pyqt=4
   - sudo rm -rf /dev/shm
   - sudo ln -s /run/shm /dev/shm
 
 install: 
   - conda env create -f conda.yml
   - source activate crt
-  - pip install -r requirements.txt
+  - pip install -r requirement.txt
   - python setup.py install
 # command to run tests
 script: 

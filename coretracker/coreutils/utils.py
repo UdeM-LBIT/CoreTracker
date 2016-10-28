@@ -169,8 +169,8 @@ class SequenceLoader:
                 'Sequence is already aligned but refine was requested')
             for g in self.genes:
                 alignment[g] = self.__class__._refine(alignment[g], 9999, settings.OUTDIR,
-                                                      settings.hmmbuild, settings.hmmalign, settings.eslalimanip,
-                                                      settings.eslalimask, loop=self.hmmloop, hmmfile=self.hmmdict.get(g, None))
+                                                      settings.hmmbuild, settings.hmmalign,
+                                                      loop=self.hmmloop, hmmfile=self.hmmdict.get(g, None))
         self.alignment = alignment
         logging.debug('Sequence alignment done')
 
@@ -235,8 +235,8 @@ class SequenceLoader:
                     self.sequences[gene], msaprog, tree, scale, outdir, alpha)
                 if refine:
                     al = self.__class__._refine(
-                        al, 9999, outdir, settings.hmmbuild, settings.hmmalign, settings.eslalimanip,
-                        settings.eslalimask, loop=self.hmmloop, hmmfile=self.hmmdict.get(gene, None))
+                        al, 9999, outdir, settings.hmmbuild, settings.hmmalign,
+                        loop=self.hmmloop, hmmfile=self.hmmdict.get(gene, None))
                 alignment[gene] = al
             else:
                 logging.debug('%s dropped because only %s has it' %
@@ -271,12 +271,11 @@ class SequenceLoader:
         return msa
 
     @classmethod
-    def _refine(clc, alignment, timeout, outdir, hmmbuild="hmmbuild", hmmalign="hmmalign", eslalimanip="esl-alimanip",
-                eslalimask="esl-alimask", hmmfile=None, loop=10, minqual=8, strategie="lesser", clean=True):
+    def _refine(clc, alignment, timeout, outdir, hmmbuild="hmmbuild", hmmalign="hmmalign",
+                hmmfile=None, loop=10, minqual=8, strategie="lesser", clean=True):
         """Align and refine at the same time with hmmalign and muscle"""
 
-        success, not_found = check_binaries(
-            hmmbuild, hmmalign, eslalimask, eslalimanip)
+        success, not_found = check_binaries(hmmbuild, hmmalign)
         if not success:
             raise RuntimeError(
                 "Could not refine alignment, Executable not found: %s!!!" % (not_found))

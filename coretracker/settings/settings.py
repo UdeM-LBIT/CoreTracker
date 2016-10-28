@@ -64,8 +64,10 @@ class Settings():
         self.method = kwargs.get('MATRIX', parameters.MATRIX)
         # The following are the binaries setting for HMMER package
         self.hmmbuild = kwargs.get('hmmbuild', 'hmmbuild')
-        self.eslalimask = kwargs.get('eslalimask', 'esl-alimask')
-        self.eslalimanip = kwargs.get('eslalimanip', 'esl-alimanip')
+        # self.eslalimask = kwargs.get('eslalimask', 'esl-alimask')
+        # self.eslalimanip = kwargs.get('eslalimanip', 'esl-alimanip')
+        # this can be used next version for a better filtering
+        # not need right now
         self.hmmalign = kwargs.get('hmmalign', 'hmmalign')
         # alpha to use , default is 0.05
         self.conf = kwargs.get('CONF', parameters.CONF)
@@ -73,6 +75,10 @@ class Settings():
         self.SHOW_ALL = False
         # matrix used to compute telford score
         self.SUBMAT = getattr(MatrixInfo, 'blosum62')
+
+    def get_external_binaries(self):
+        ext = [self.hmmbuild, self.hmmalign]
+        return ext
 
     def fill(self, params):
         if isinstance(params, dict):
