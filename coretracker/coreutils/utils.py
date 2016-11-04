@@ -1270,7 +1270,8 @@ class ReaGenomeFinder:
         if savecodon:
             self.reassignment_mapper['codons'] = self.get_codon_usage()
         self.save_json()
-        id_filtfile = os.path.join(self.settings.OUTDIR, "id_filt.fasta")
+        id_filtfile = os.path.join(
+            self.settings.OUTDIR, "filt_alignment.fasta")
         ic_filtfile = os.path.join(self.settings.OUTDIR, "ic_filt.fasta")
         gap_filtfile = os.path.join(self.settings.OUTDIR, "gap_filt.fasta")
         ori_al = os.path.join(self.settings.OUTDIR, "ori_alignment.fasta")
@@ -1622,11 +1623,30 @@ def check_align_upgrade(al1, al2, scoring_method, method="wilcoxon", column_list
     return pval, al1_sim, al2_sim
 
 
-def check_gain(codon, cible_aa, speclist, codontable, codon_alignment,
-               scoring_method="identity", alignment=None, method="wilcoxon"):
+def compute_ic_content(alignment):
+    if isinstance(alignment, MultipleSeqAlignment):
+        align_info = AlignInfo.SummaryInfo(alignment)
+    else:
+        align_info = AlignInfo.SummaryInfo(
+            MultipleSeqAlignment(alignment.values()))
+    align_info.information_content()
+    return align_info.ic_vector
+
+
+def check_gain(codon, cible_aa, speclist, tree, codontable, codon_alignment,
+               scoring_method="identity", alignment=None, ic_cont=None, method="wilcoxon", spec_filter=True):
     """Check if there is an actuall gain in global sequence quality after applying reassignment"""
     if not isinstance(codon_alignment, dict):
         codon_alignment = SeqIO.to_dict(codon_alignment)
+
+    def extract_alignment(codon_alignment, alignment, not_wanted_species):
+        new_cod_alignment = []
+        new_alignment = []
+        for spec, nucseq in codon_alignment.items():
+            if spec not in not_wanted_species:
+                new_cod_alignment.append(nucseq)
+                new_alignment.append(alignment[spec])
+        return new_cod_alignment, new_alignment
 
     def translate(codon_alignment, codontable, changes=None):
         if changes is None:
@@ -1655,6 +1675,35 @@ def check_gain(codon, cible_aa, speclist, codontable, codon_alignment,
     if not alignment:
         alignment, _ = translate(codon_alignment, codontable)
 
+    if spec_filter:
+        fcod_aln, f_aln = extract_alignment(
+            codon_alignment, alignment, speclist)
+        fake_rea = set([])
+        for spec in speclist:
+            # not just spec but
+            # either we get all sister here
+            # or all node under the same predicted reassignment
+            # which could take too long
+            spec_sis = [x.name for x in (tree & spec).up]
+            cur_recs = []
+            codchange = {}
+            for x in spec_sis:
+                cur_recs.append(codon_alignment[x])
+                if x in speclist:
+                    codchange[x] = (codon, cible_aa)
+            corf_aln, pos = translate(SeqIO.to_dict(fcod_aln + cur_recs),
+                                      codontable, codchange)
+            cur_recs_al = [alignment[x] for x in (tree & spec).up]
+            spec_ic = compute_ic_content(
+                MultipleSeqAlignment(f_aln + cur_recs_al))
+            spec_cor_ic = compute_ic_content(corf_aln)
+            # logging.debug("%s: (%s to %s) : %f, %f"%(spec, codon, cible_aa, sum(spec_cor_ic), sum(spec_ic)))
+            if sum(spec_cor_ic) < sum(spec_ic):
+                fake_rea.add(spec)
+        speclist = list(set(speclist) - fake_rea)
+        if not speclist:
+            return None, None, None, None, None, []
+
     changes = {}
     for spec in speclist:
         changes[spec] = (codon, cible_aa)
@@ -1663,16 +1712,11 @@ def check_gain(codon, cible_aa, speclist, codontable, codon_alignment,
     score_improve, cor_al_sp, al_sp = check_align_upgrade(
         cor_alignment, alignment, scoring_method, method, position)
 
-    align_info = AlignInfo.SummaryInfo(
-        MultipleSeqAlignment(cor_alignment.values()))
-    align_info.information_content()
-    cor_ic_cont = align_info.ic_vector
-    align_info = AlignInfo.SummaryInfo(
-        MultipleSeqAlignment(alignment.values()))
-    align_info.information_content()
-    ic_cont = align_info.ic_vector
+    cor_ic_cont = compute_ic_content(cor_alignment)
+    if not ic_cont:
+        ic_cont = compute_ic_content(alignment)
 
-    return score_improve, (al_sp, cor_al_sp), (ic_cont, cor_ic_cont), (alignment, cor_alignment), position
+    return score_improve, (al_sp, cor_al_sp), (ic_cont, cor_ic_cont), (alignment, cor_alignment), position, speclist
 
 
 def get_rea_genome_list(xlabel, y):
@@ -1887,27 +1931,30 @@ def get_report(fitchtree, gdata, reafinder, codon_align, prediction, output="", 
         fitchtree.tree.render(output, dpi=800, tree_style=ts)
         glob_purge.append(output)
 
+        rkp, data_var, codvalid = None, None, {}
+        if settings.VALIDATION:
+            # now get sequence retranslation improvement
+            table = fitchtree.dct.forward_table
+            # add the gap to codon_table
+            table['---'] = '-'
+            table['...'] = '.'
+            data_present, data_var, rkp, codvalid = codon_adjust_improve(
+                fitchtree, reafinder, codon_align, table, prediction, outdir=OUTDIR)
+
         # get report output
         rep_out = os.path.join(OUTDIR, "Report_" +
                                fitchtree.ori_aa + "_to_" + fitchtree.dest_aa)
         # glob_purge.append(rep_out)
         pdf_format_data(fitchtree.ori_aa1, fitchtree.dest_aa1, gdata, prediction,
-                        'filtered', rep_out + ".pdf")
-        # now get sequence retranslation improvement
-        table = fitchtree.dct.forward_table
-        # add the gap to codon_table
-        table['---'] = '-'
-        table['...'] = '.'
-        data_present, data_var, rkp = codon_adjust_improve(
-            fitchtree, reafinder, codon_align, table, prediction, outdir=OUTDIR)
-        return data_var, OUTDIR, rkp
+                        codvalid, 'filtered', rep_out + ".pdf")
+
+        return data_var, OUTDIR, rkp, codvalid
 
 
 def format_tree(tree, codon, cible, alignment, SP_score, ic_contents, pos=[],
-                limits=(None, None, None), dtype="aa", codontable={}, codon_col={}):
+                limits=(None, None, None), dtype="aa", codontable={}, codon_col={}, colors=None):
     """Format the rendering of tree data for alignment"""
     t = tree.copy('newick')
-    s = 0
 
     gpos, limiter, start_holder = limits
 
@@ -1926,11 +1973,8 @@ def format_tree(tree, codon, cible, alignment, SP_score, ic_contents, pos=[],
 
     for node in t:
         node_seq = alignment[node.name].seq.tostring()
-        if pos and dtype == "aa":
-            node_seq = _get_genes(node_seq)
-            s = len(node_seq)
-        elif pos and dtype == "codon":
-            node_seq = _get_genes(node_seq, 3)
+        if pos:
+            node_seq = _get_genes(node_seq, 2 * (dtype == "codon") + 1)
         node.add_feature('sequence', node_seq)
 
     ts = TreeStyle()
@@ -1953,7 +1997,7 @@ def format_tree(tree, codon, cible, alignment, SP_score, ic_contents, pos=[],
         node.img_style = ns
         if node.is_leaf():
             faces.add_face_to_node(
-                AttrFace('name', fsize=14), node, 0, position="aligned")
+                AttrFace('name', fsize=14, fgcolor=colors.get(node.name, 'black')), node, 0, position="aligned")
             if hasattr(node, "sequence"):
                 ind = 0
                 for (k, name) in limiter:
@@ -2010,7 +2054,7 @@ def format_tree(tree, codon, cible, alignment, SP_score, ic_contents, pos=[],
         lprev = 0
         for (l, name) in limiter:
             ts.aligned_foot.add_face(faces.RectFace(
-                14 * (l - lprev) * 3, 14, '#fefefe', 'white'), ind + 1)
+                14 * (l - lprev) * 3, 14, '#ffffff', 'white'), ind + 1)
             ts.aligned_foot.add_face(TextFace(' ', fsize=14), ind)
             ts.aligned_foot.add_face(TextFace(name, fsize=14), ind + 1)
             lprev = l
@@ -2086,32 +2130,37 @@ def codon_adjust_improve(fitchtree, reafinder, codon_align, codontable, predicti
     violinout = None
     data_var = {}
     ori_al = None
+    ic = None
     tree = fitchtree.tree
     rea_pos_keeper = defaultdict(dict)
+    codvalid = {}
 
     def _limit_finder(codon_pos, gene_limit=genelimit, proche=settings.startdist):
         """ Return the gene for each position of codon pos"""
         gene_pos = []
         gene_break = []
         gll = len(gene_limit)
-        entering, start = 0, 0
-        brokn = False
+        start = 0
         close_to_start = []
         for i in range(len(codon_pos)):
-            while codon_pos[i] > gene_limit[start][2] and start < gll:
+            brokn = False
+            entering = start
+            while codon_pos[i] >= gene_limit[start][2] and start < gll:
                 start += 1
                 brokn = True
             if brokn and i > 0:
                 gene_break.append((i, gene_limit[entering][0]))
-                entering = start
             if codon_pos[i] - gene_limit[start][1] <= proche:
                 close_to_start.append(1)
             else:
                 close_to_start.append(0)
-            brokn = False
             gene_pos.append(gene_limit[start][0])
 
         gene_break.append((len(codon_pos), gene_limit[start][0]))
+        # logging.debug("Current codon pos: %s"%" ".join([str(x) for x in codon_pos]))
+        # logging.debug("Gene break : %s"%" ".join([str(x) for x in gene_break]))
+        # logging.debug("Gene pos : %s"%" ".join([str(x) for x in gene_pos]))
+
         return gene_pos, gene_break, close_to_start
 
     for codon in true_codon_set.keys():
@@ -2120,9 +2169,13 @@ def codon_adjust_improve(fitchtree, reafinder, codon_align, codontable, predicti
             # pos = identify_position_with_codon(codon_align, codon, speclist)
             # check_gain is called only on filtered alignment
             # maybe it's a better idea to call it on the original alignmnt
-            score_improve, alsp, alic, als, pos = check_gain(codon, cible_aa, speclist, codontable,
-                                                             codon_align, scoring_method=sc_meth,
-                                                             alignment=ori_al, method=method)
+            score_improve, alsp, alic, als, pos, speclist = check_gain(codon, cible_aa, speclist, tree, codontable,
+                                                                       codon_align, scoring_method=sc_meth,
+                                                                       alignment=ori_al, ic_cont=ic, method=method)
+            if not speclist:
+                # this mean that all predictions were probably fake
+                continue
+
             codon_pos = [filt_position[i] for i in pos]
             limits = _limit_finder(codon_pos)
             if settings.COMPUTE_POS:
@@ -2135,12 +2188,13 @@ def codon_adjust_improve(fitchtree, reafinder, codon_align, codontable, predicti
             sp, cor_sp = alsp
             ic, cor_ic = alic
             ori_al, new_al = als
+            codvalid[codon] = dict((x, 'crimson') for x in speclist)
             ori_t, ori_ts = format_tree(
-                tree, codon, cible_aa, ori_al, sp, ic, pos, limits)
+                tree, codon, cible_aa, ori_al, sp, ic, pos, limits, colors=codvalid[codon])
             rea_t, rea_ts = format_tree(
-                tree, codon, cible_aa, new_al, cor_sp, cor_ic, pos, limits)
+                tree, codon, cible_aa, new_al, cor_sp, cor_ic, pos, limits, colors=codvalid[codon])
             cod_t, cod_ts = format_tree(tree, codon, cible_aa, codon_align, None, None, pos, limits,
-                                        codontable=codontable, dtype="codon", codon_col=fitchtree.colors)
+                                        codontable=codontable, dtype="codon", codon_col=fitchtree.colors, colors=codvalid[codon])
 
             cod_ts.title.add_face(TextFace(
                 "Prediction validation for " + codon + " to " + fitchtree.dest_aa, fsize=14), column=0)
@@ -2171,10 +2225,10 @@ def codon_adjust_improve(fitchtree, reafinder, codon_align, codontable, predicti
             glob_purge.append(violinout)
             outputs.append(True)
 
-    return len(outputs) > 0, data_var, rea_pos_keeper
+    return len(outputs) > 0, data_var, rea_pos_keeper, codvalid
 
 
-def pdf_format_data(ori_aa, dest_aa, gdata, prediction, dtype, output=""):
+def pdf_format_data(ori_aa, dest_aa, gdata, prediction, codvalid, dtype, output=""):
     """Render supplemental data into a pdf"""
     X_data, X_labels, pred_prob, pred = prediction
     codon_set = get_codon_set_and_genome(pred, X_labels)
@@ -2204,7 +2258,10 @@ def pdf_format_data(ori_aa, dest_aa, gdata, prediction, dtype, output=""):
                 # position 1 is true prob
                 'Prob': pred_prob[pos, 1],
             }
-
+            if codvalid.get(codon, None):
+                dt_by_att['Val'] = bool(codvalid[codon].get(g, ''))
+            else:
+                dt_by_att['Val'] = False
             pd_data[g][codon] = dt_by_att
 
     frames = []
@@ -2220,24 +2277,33 @@ def pdf_format_data(ori_aa, dest_aa, gdata, prediction, dtype, output=""):
     return export_from_html(data_var, output)
 
 
-def print_data_to_txt(outputfile, header, X, X_label, Y, Y_pred, codon_data, cible, suptext=None):
+def print_data_to_txt(outputfile, header, X, X_label, Y, Y_prob, codon_data, cible, suptext=None, valid={}):
     """Print result in a text file"""
     out = Output(file=outputfile)
     out.write("### Random Forest prediction\n")
     out.write("\t".join(["genome", "codon",
-                         "ori_aa", "rea_aa"] + list(header) + ["prediction", "probability"]))
+                         "ori_aa", "rea_aa"] + list(header) + ["prediction", "probability"] +
+                        (["validation"] if valid else [])))
 
     total_elm = len(Y)
     for i in xrange(total_elm):
+        end_data = [str(Y[i]), str(Y_prob[i][-1])]
+        if valid:
+            try:
+                tmp_val = str(
+                    bool(valid[X_label[i, 1]].get(X_label[i, 0], '')) * 1)
+            except:
+                tmp_val = '0'
+            end_data.append(tmp_val)
         out.write("\n" + "\t".join(list(X_label[i]) + [str(x)
-                                                       for x in X[i]] + [str(Y[i]), str(Y_pred[i][-1])]))
+                                                       for x in X[i]] + end_data))
 
     if codon_data:
         out.write("\n\n### Alignment improvement:\n")
         for (codon, score) in codon_data.items():
             out.write("{}\t{}\t{:.2e}\n".format(codon, cible, score))
 
-    tmp = Y_pred[Y > 0, 1]
+    tmp = Y_prob[Y > 0, 1]
     if len(tmp) > 0:
         prerange = (min(tmp), max(tmp))
         write_d = "\n### Prediction Prob. range for Positive :[ %.3f - %.3f ]\n" % prerange

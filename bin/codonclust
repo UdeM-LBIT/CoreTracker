@@ -44,7 +44,7 @@ def kernel_estimate(dtlen, labels):
 
 
 def print_data_to_file(data, labels, outfile):
-    out, fmt = outfile.split('.')
+    out = outfile.split('.')[0]
     outfile = out + ".txt"
     with open(outfile, 'w') as OUT:
         header = ['Species'] + codon_list

@@ -73,6 +73,8 @@ class Settings():
         self.conf = kwargs.get('CONF', parameters.CONF)
         self.startdist = kwargs.get('STARTDIST', parameters.STARTDIST)
         self.SHOW_ALL = False
+        self.VALIDATION = True
+        self.COMPUTE_POS = False
         # matrix used to compute telford score
         self.SUBMAT = getattr(MatrixInfo, 'blosum62')
 

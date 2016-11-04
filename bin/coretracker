@@ -130,10 +130,10 @@ def compile_result(x, clf, cod_align, model):
     X_data, X_dataprint, selected_et = model.format_data(X_data)
     pred_prob = clf.predict_proba(X_data)
     pred = clf.predict(X_data)
-    sppval, outdir, rkp = utils.get_report(
+    sppval, outdir, rkp, codvalid = utils.get_report(
         fitch, data, reafinder, cod_align, (X_data, X_labels, pred_prob, pred))
     utils.print_data_to_txt(os.path.join(outdir, fitch.ori_aa + "_to_" + fitch.dest_aa + "_data.txt"),
-                            selected_et, X_dataprint, X_labels, pred, pred_prob, sppval, fitch.dest_aa)
+                            selected_et, X_dataprint, X_labels, pred, pred_prob, sppval, fitch.dest_aa, valid=codvalid)
     return rkp
 
 if __name__ == '__main__':
@@ -186,6 +186,9 @@ if __name__ == '__main__':
     parser.add_argument('--norefine', dest='refine', action='store_false',
                         help="Do not refine the alignment. By default the alignment will be refined. This option should never be used if you have made your own multiple alignment and concatenate it. Else you will have absurd alignment (TO FIX)")
 
+    parser.add_argument('--novalid', dest='valid', action='store_false',
+                        help="Do not validate prediction by retranslating and checking alignment improvement")
+
     parser.add_argument('--align', dest='align', choices=[
                         'muscle', 'mafft'], default="muscle", help="Choose a program to align your sequences")
 
@@ -220,10 +223,10 @@ if __name__ == '__main__':
             ad_params = load(f, Loader=Loader)
 
     # setting.set(OUTDIR=args.outdir)  # this does nothing
-    # added for position computation
-    setting.COMPUTE_POS = args.expos
     setting.fill(ad_params)
     setting.update_params(SUBMAT=args.submat)
+    setting.update_params(COMPUTE_POS=args.expos)
+    setting.update_params(VALIDATION=args.valid)
     parallel = args.parallel
     reafinder, clf, model = set_coretracker(args, setting)
     codon_align, fcodon_align = reafinder.seqset.get_codon_alignment()
@@ -244,14 +247,13 @@ if __name__ == '__main__':
         for x in reafinder.run_analysis(codon_align, fcodon_align):
             results.append(compile_result(x, clf, cod_align, model))
 
-    if args.expos and results:
+    if args.valid and args.expos and results:
         rea_pos_keeper = ddict(dict)
         for r in results:
             for cuspec, readt in r.items():
                 for k in readt.keys():
                     rea_pos_keeper[cuspec][k] = readt[k]
-        exp_outfile = outfile = os.path.join(
-            reafinder.settings.OUTDIR, "positions.json")
+        exp_outfile = os.path.join(reafinder.settings.OUTDIR, "positions.json")
         reafinder.export_position(rea_pos_keeper, exp_outfile)
 
     reafinder.save_all(True)
