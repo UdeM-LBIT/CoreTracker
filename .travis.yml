@@ -14,7 +14,6 @@ before_install:
   - conda config --set always_yes yes --set changeps1 no
   - conda config --add channels r
   - conda config --add channels bioconda
-  - conda update -q conda
   - conda info -a
   - conda install hmmer muscle mafft
   - conda install -c anaconda pyqt=4
