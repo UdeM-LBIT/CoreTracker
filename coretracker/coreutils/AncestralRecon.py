@@ -250,10 +250,10 @@ class FitchBased(AbsAncest):
                         node, ichar)
 
 
-class SingleNaiveFitch(object):
+class SingleNaiveRec(object):
     """A NaiveFitch algorithm for finding the most parcimonious solution"""
 
-    def __init__(self, tree, reassigned, ori_aa, dest_aa, dct, codon_rea=(None, None)):
+    def __init__(self, tree, reassigned, ori_aa, dest_aa, dct, codon_rea=(None, None), mode="fitch"):
         self.id = {}
         self.tree = tree
         self.corr = {'0': ori_aa, '1': dest_aa}
@@ -279,6 +279,7 @@ class SingleNaiveFitch(object):
         self.ori_aa1 = aa_letters_3to1[ori_aa]
         self.dest_aa1 = aa_letters_3to1[dest_aa]
         self.newick = tree.write(features=['name', 'dist', 'support', 'state'])
+        self.mode = mode
         self._bottomup(self.tree)
         self._topdown(self.tree)
 
@@ -313,7 +314,8 @@ class SingleNaiveFitch(object):
                 return True
         return False
 
-    def _bottomup(self, tree):
+    @classmethod
+    def _fitch(clc, tree, corr):
         """Fitch algorithm part 1 : bottom up"""
         for node in tree.traverse('postorder'):
             if not node.is_leaf():
@@ -329,7 +331,31 @@ class SingleNaiveFitch(object):
                     node.add_features(reassigned=union)
 
                 node.add_features(
-                    rea="/".join([self.corr[str(r)] for r in node.reassigned]))
+                    rea="/".join([corr[str(r)] for r in node.reassigned]))
+
+    @classmethod
+    def _dollo(clc, tree):
+        nodelist = tree.get_leaves()
+        for node in tree.traverse('postorder'):
+            if not node.is_leaf():
+                internal_grp = [max([next(iter(c.reassigned))
+                                     for c in n]) for n in node.get_children()]
+                if not node.is_root():
+                    internal_grp.append(max(
+                        [next(iter(c.reassigned)) for c in nodelist if c.name not in node.get_leaf_names()]))
+                if np.count_nonzero(internal_grp) >= 2:
+                    node.add_features(reassigned={1})
+                else:
+                    node.add_features(reassigned={0})
+
+    def _bottomup(self, tree):
+        if self.mode == "fitch":
+            self._fitch(tree, self.corr)
+        elif self.mode == "dollo":
+            self._dollo(tree)
+        else:
+            raise NotImplementedError(
+                "The method %s you asked for is not implemented" % self.mode)
 
     def _topdown(self, tree):
         """Fitch algorithm part 2 : top down"""

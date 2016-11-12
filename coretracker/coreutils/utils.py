@@ -40,7 +40,7 @@ from Faces import LineFace, PPieChartFace, SequenceFace, List90Face
 from corefile import CoreFile
 from output import Output
 from pdfutils import *
-from AncestralRecon import SingleNaiveFitch, init_back_table
+from AncestralRecon import SingleNaiveRec, init_back_table
 from letterconfig import *
 
 SEABORN = False
@@ -1293,7 +1293,7 @@ class ReaGenomeFinder:
                 # logging.debug("%s to %s" % (aa2, aa1))
                 counts = []
                 t = self.seqset.phylotree.copy("newick")
-                fitch = SingleNaiveFitch(t, species, aa_letters_1to3[aa2], aa_letters_1to3[
+                fitch = SingleNaiveRec(t, species, aa_letters_1to3[aa2], aa_letters_1to3[
                     aa1], self.seqset.codontable, (gcodon_rea, fcodon_rea))
                 slist = fitch.get_species_list(
                     self.settings.LIMIT_TO_SUSPECTED_SPECIES)
@@ -1676,6 +1676,7 @@ def check_gain(codon, cible_aa, speclist, tree, codontable, codon_alignment,
         alignment, _ = translate(codon_alignment, codontable)
 
     if spec_filter:
+        SingleNaiveRec._dollo(tree)
         fcod_aln, f_aln = extract_alignment(
             codon_alignment, alignment, speclist)
         fake_rea = set([])
@@ -1684,22 +1685,32 @@ def check_gain(codon, cible_aa, speclist, tree, codontable, codon_alignment,
             # either we get all sister here
             # or all node under the same predicted reassignment
             # which could take too long
-            spec_sis = [x.name for x in (tree & spec).up]
+            cur_par = (tree & spec).up
+            while cur_par.up != None and cur_par.reassigned != {1}:
+                cur_par = cur_par.up
+            spec_sis = [x.name for x in cur_par if x.name  in speclist]
             cur_recs = []
+            cur_recs_al = []
             codchange = {}
             for x in spec_sis:
                 cur_recs.append(codon_alignment[x])
-                if x in speclist:
-                    codchange[x] = (codon, cible_aa)
+                cur_recs_al.append(alignment[x])
+                codchange[x] = (codon, cible_aa)
             corf_aln, pos = translate(SeqIO.to_dict(fcod_aln + cur_recs),
                                       codontable, codchange)
-            cur_recs_al = [alignment[x] for x in (tree & spec).up]
-            spec_ic = compute_ic_content(
-                MultipleSeqAlignment(f_aln + cur_recs_al))
-            spec_cor_ic = compute_ic_content(corf_aln)
-            # logging.debug("%s: (%s to %s) : %f, %f"%(spec, codon, cible_aa, sum(spec_cor_ic), sum(spec_ic)))
-            if sum(spec_cor_ic) < sum(spec_ic):
+            f_aln_s = MultipleSeqAlignment(f_aln + cur_recs_al)
+            # spec_ic = compute_ic_content(f_aln_s)
+            # spec_cor_ic = compute_ic_content(corf_aln)
+            pval, cor_al_sp, al_sp = check_align_upgrade(
+                    corf_aln, SeqIO.to_dict(f_aln_s), scoring_method, method, pos)
+
+            # simple validation test here
+            validated = sum(cor_al_sp) > sum(al_sp)
+            logging.debug("Validation : %s | %s : (%s to %s) | (%f --> %f)"%(validated, spec, codon, cible_aa,  sum(cor_al_sp), sum(al_sp)))
+
+            if not validated :
                 fake_rea.add(spec)
+
         speclist = list(set(speclist) - fake_rea)
         if not speclist:
             return None, None, None, None, None, []
@@ -2131,7 +2142,7 @@ def codon_adjust_improve(fitchtree, reafinder, codon_align, codontable, predicti
     data_var = {}
     ori_al = None
     ic = None
-    tree = fitchtree.tree
+    tree = fitchtree.tree.copy("newick-extended")
     rea_pos_keeper = defaultdict(dict)
     codvalid = {}
 
