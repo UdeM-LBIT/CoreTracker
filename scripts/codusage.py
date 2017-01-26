@@ -22,6 +22,7 @@ import sys
 from yaml import load
 import traceback
 from collections import defaultdict as ddict
+from collections import Counter
 
 from math import log10
 from Bio import SeqIO
@@ -32,7 +33,7 @@ from coretracker.classifier.models import ModelType
 from coretracker.classifier import *
 from coretracker.classifier import MODELPATH
 from coretracker.settings import *
-from coretracker import __version__, __author__, date
+from coretracker import  __version__, __author__, date
 
 ENABLE_PAR = True
 CPU_COUNT = 0
@@ -52,16 +53,14 @@ except ImportError:
     from yaml import Loader
 
 etiquette = ["fitch", "suspected", "Fisher pval", "Gene frac",
-             "N. rea", "N. used", "Cod. count", "Sub. count",
-             "G. len", "codon_lik", "N. mixte", "id"]  # , 'total_aa']
-
+                    "N. rea", "N. used", "Cod. count", "Sub. count",
+                    "G. len", "codon_lik", "N. mixte" ,"id"] #, 'total_aa']
 
 def testing_a_lot(args, settings):
     t = random.randint(30, 90)
     time.sleep(t)
     return [settings.EXCLUDE_AA, settings.AA_MAJORITY_THRESH, settings.FREQUENCY_THRESHOLD,
             settings.GENETIC_CODE, settings.COUNT_THRESHOLD, settings.LIMIT_TO_SUSPECTED_SPECIES]
-
 
 def set_coretracker(args, settings):
     """Set all data for coretracker from the argument list"""
@@ -98,14 +97,15 @@ def set_coretracker(args, settings):
         except:
             pass
 
-    clf = Classifier.load_from_file(MODELPATH % settings.MODEL_TYPE)
+    clf = Classifier.load_from_file(MODELPATH%settings.MODEL_TYPE)
     model = ModelType(settings.MODEL_TYPE, etiquette)
+
 
     if clf is None or not clf.trained:
         raise ValueError("Classifier not found or not trained!")
 
     seqloader = SequenceLoader(input_alignment, args.dnaseq, settings, args.gapfilter, has_stop=args.hasstop,
-                               use_tree=args.usetree, refine_alignment=args.refine, msaprog=msaprg, hmmdict=hmmfiles)
+                    use_tree=args.usetree, refine_alignment=args.refine, msaprog=msaprg,  hmmdict=hmmfiles)
 
     # create sequence set
     setseq = SequenceSet(seqloader, specietree, settings.GENETIC_CODE)
@@ -117,24 +117,33 @@ def set_coretracker(args, settings):
     reafinder.possible_aa_reassignation()
     return reafinder, clf, model
 
-
 def compile_result(x, clf, cod_align, model):
     """compile result from analysis"""
     reafinder, fitch, data = x
     s_complete_data = utils.makehash()
     s_complete_data['aa'][fitch.ori_aa1][fitch.dest_aa1] = data
     s_complete_data['genome'] = reafinder.reassignment_mapper['genome']
-    X_data, X_labels, _ = read_from_json(
-        s_complete_data, None, use_global=False)
+    X_data, X_labels, _ = read_from_json(s_complete_data, None, use_global=False)
     # extract usefull features
-    X_data, X_dataprint, selected_et = model.format_data(X_data)
+    X_data, X_dataprint, selected_et =  model.format_data(X_data)
     pred_prob = clf.predict_proba(X_data)
-    pred = clf.predict(X_data)
-    sppval, outdir, rkp = utils.get_report(
-        fitch, data, reafinder, cod_align, (X_data, X_labels, pred_prob, pred))
-    utils.print_data_to_txt(os.path.join(outdir, fitch.ori_aa + "_to_" + fitch.dest_aa + "_data.txt"),
-                            selected_et, X_dataprint, X_labels, pred, pred_prob, sppval, fitch.dest_aa)
+    pred =  clf.predict(X_data)
+    sppval, outdir, rkp = utils.get_report(fitch, data, reafinder, cod_align, (X_data, X_labels, pred_prob, pred))
+    utils.print_data_to_txt(os.path.join(outdir, fitch.ori_aa+"_to_"+fitch.dest_aa+"_data.txt"), selected_et, X_dataprint, X_labels, pred, pred_prob, sppval, fitch.dest_aa)
     return rkp
+
+def codon_counter(codonseq, l):
+    codlist = [str(codonseq[i*3:(i+1)*3].seq) for i in range(l)]
+    return Counter(codlist)
+
+
+def filter_to_pos_with_aa(alignment, codonalign, X, codtable):
+    # identify position 
+    cons = SequenceSet.get_consensus(alignment, 0.5, ambiguous='X')
+    ind_array = [i for (i, aa) in enumerate(cons) if aa==X]
+    codon_al = SequenceSet.filter_align_position(codonalign, ind_array, codontable=codtable)
+    return SeqIO.to_dict(codon_al), codon_al.get_aln_length()
+
 
 if __name__ == '__main__':
 
@@ -147,7 +156,7 @@ if __name__ == '__main__':
 
     parser.add_argument('--version', action='version', version='%(prog)s 1.0')
 
-    parser.add_argument('--gapfilter', '--gap', type=float, default=0.6, dest='gapfilter',
+    parser.add_argument('--gapfilter', '--gap', type=float,  default=0.6, dest='gapfilter',
                         help="Remove position with gap from the alignment, using gapfilter as threshold. The absolute values are taken")
 
     parser.add_argument('--idfilter', '--id', type=float, default=0.8, dest='idfilter',
@@ -192,8 +201,12 @@ if __name__ == '__main__':
     parser.add_argument('--use_tree', dest='usetree', action="store_true",
                         help="This is helpfull only if the mafft alignment is selected. Perform multiple alignment, using species tree as guide tree.")
 
-    parser.add_argument('--expos', '--export_position', dest='expos', action="store_true",
-                        help="Export a json file with the position of each reassignment in the corresponding genome.")
+    parser.add_argument('--expos','--export_position', dest='expos', action="store_true",
+                    help="Export a json file with the position of each reassignment in the corresponding genome.")
+
+    parser.add_argument('--aalist', dest='aalist',
+                    help="List of aa to consider in order to find their codon usage in both conserved and not conserved position")
+
 
     parser.add_argument('--submat', dest='submat', choices=utils.AVAILABLE_MAT, default="blosum62",
                         help="Choose a substitution matrix to compute codon alignment to amino acid likelihood, Default value is blosum62")
@@ -205,17 +218,16 @@ if __name__ == '__main__':
                         help="Use A parameter file to load parameters. If a parameter is not set, the default will be used")
 
     parser.add_argument('--parallel', dest='parallel', nargs='?', const=CPU_COUNT, type=int, default=0,
-                        help="Use Parallelization during execution for each reassignment. This does not guarantee an increase in speed. CPU count will be used if no argument is provided")
+                    help="Use Parallelization during execution for each reassignment. This does not guarantee an increase in speed. CPU count will be used if no argument is provided")
 
-    print("CoreTracker v:%s Copyright (C) %s %s" %
-          (__version__, date, __author__))
+    print("CoreTracker v:%s Copyright (C) %s %s"%(__version__, date, __author__))
 
     args = parser.parse_args()
     setting = Settings()
 
     paramfile = args.params
     ad_params = {}
-    if paramfile:
+    if paramfile :
         with open(paramfile) as f:
             ad_params = load(f, Loader=Loader)
 
@@ -227,31 +239,29 @@ if __name__ == '__main__':
     parallel = args.parallel
     reafinder, clf, model = set_coretracker(args, setting)
     codon_align, fcodon_align = reafinder.seqset.get_codon_alignment()
-    cod_align = SeqIO.to_dict(fcodon_align)
-    reafinder.set_rea_mapper()
+    fcod_align = SeqIO.to_dict(fcodon_align)
+    cod_align = SeqIO.to_dict(codon_align)
+    cod_aa, codaalen = filter_to_pos_with_aa(reafinder.seqset.prot_align, codon_align, args.aalist, reafinder.seqset.codontable)
+    #reafinder.set_rea_mapper()
 
-    done = False
-    results = []
-    if args.parallel > 0 and ENABLE_PAR:
-        results = Parallel(n_jobs=args.parallel, verbose=2)(delayed(compile_result)(
-            x, clf, cod_align, model) for x in reafinder.run_analysis(codon_align, fcodon_align))
-        done = True
-    elif args.parallel > 0:
-        logging.warning(
-            "Joblib requirement not found! Disabling parallelization")
-
-    if not done:
-        for x in reafinder.run_analysis(codon_align, fcodon_align):
-            results.append(compile_result(x, clf, cod_align, model))
-
-    if args.expos and results:
+    if args.expos:
         rea_pos_keeper = ddict(dict)
-        for r in results:
-            for cuspec, readt in r.items():
-                for k in readt.keys():
-                    rea_pos_keeper[cuspec][k] = readt[k]
-        exp_outfile = outfile = os.path.join(
-            reafinder.settings.OUTDIR, "positions.json")
+        allen = fcodon_align.get_aln_length()
+        for spec, seq in fcod_align.items():
+            rea_pos_keeper[spec] = codon_counter(seq, allen)
+        exp_outfile = os.path.join(reafinder.settings.OUTDIR, "fpositions.json" )
         reafinder.export_position(rea_pos_keeper, exp_outfile)
 
-    reafinder.save_all(True)
+        rea_pos_keeper = ddict(dict)
+        allen = codon_align.get_aln_length()
+        for spec, seq in cod_align.items():
+            rea_pos_keeper[spec] = codon_counter(seq, allen)
+        exp_outfile = os.path.join(reafinder.settings.OUTDIR, "gpositions.json" )
+        reafinder.export_position(rea_pos_keeper, exp_outfile)
+
+        rea_pos_keeper = ddict(dict)
+        for spec, seq in cod_aa.items():
+            rea_pos_keeper[spec] = codon_counter(seq, codaalen)
+        exp_outfile = os.path.join(reafinder.settings.OUTDIR, "aapositions.json" )
+        reafinder.export_position(rea_pos_keeper, exp_outfile)
+

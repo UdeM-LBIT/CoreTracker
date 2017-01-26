@@ -13,7 +13,6 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from Bio import SeqIO
 from Bio.SeqRecord import SeqRecord
 from Bio.Seq import Seq
 from coretracker.coreutils import CoreFile
@@ -226,61 +225,25 @@ def get_poss_event_diff(gene, prot, features, gcode=1):
         pass
 
 
-def extract_genome(speclist, genelist, records, revmtgenes, getprot=False, gcode=1):
+def extract_gb(speclist, records, outdir, test=False):
     """Extract genome content based on a list of species """
-    spec_code_map = {}
-    gene2spec = defaultdict(list)
-    prot2spec = defaultdict(list)
-
-    def motif_in_seq(motif, slist, product):
-        return sum([1 for x in slist if (motif in x.lower()) ]) > 0 and \
-            'hypothetical' in " ".join(product).lower()
-
     # fetch gene and protein from the database and add them to the list
+    if outdir and not os.path.exists(outdir):
+            os.makedirs(outdir)
+
     for (s_id, spec) in speclist:
         g_found_in_spc = {}
         specaff = spec.replace('.', '').replace('-', '_').replace(' ', '_')
         curr_seq = records[s_id]
-        for pos, f in enumerate(curr_seq.features):
-            # this should filter hypothetical protein that we do not want
-            sgene = None
-            meet_condition = f.type.upper() == 'CDS' and 'gene' in f.qualifiers.keys(
-            ) and not motif_in_seq('orf', f.qualifiers['gene'], f.qualifiers['product'])
-            if meet_condition:
-                sgene = f.qualifiers['gene'][0].lower()
-                if(sgene in revmtgenes.keys()):
-                    sgene = revmtgenes[sgene].lower()
-                if (sgene in genelist) or (not genelist):
-                    seq = None
-                    seq = f.extract(curr_seq.seq)
-                    if len(seq) % 3 != 0:
-                        #print("%s | %d"%(spec, len(seq)%3))
-                        logging.warn("Possible frame-shifting in the following genes : %s - %s | %s ==> %d (%d)" %
-                                     (sgene, spec, s_id, len(seq), len(seq) % 3))
-                    elif 'N' in seq:
-                        logging.warn("Sequence with undefined nucleotide : %s - %s | %d" %
-                                     (sgene, spec, len(seq)))
-                    try:
-                        table = int(f.qualifiers['transl_table'][0])
-                        spec_code_map[spec] = table
-                    except:
-                        pass
-                    rec = SeqRecord(seq, id=specaff, name=specaff)
-                    protseq = Seq(f.qualifiers.get("translation", [])[0])
-                    if not protseq:
-                        protseq = seq.translate(table=spec_code_map.get(spec, gcode))
-                    protrec = SeqRecord(protseq, id=specaff, name=specaff)
-                    if g_found_in_spc.get(sgene, 0) < 1:
-                        # this is to ensure that the same gene is not added
-                        # multiple time
-                        gene2spec[sgene].append(rec)
-                        prot2spec[sgene].append(protrec)
-                    g_found_in_spc[sgene] = 1
-    return gene2spec, prot2spec, spec_code_map
+        if not test:
+            SeqIO.write(curr_seq, os.path.join(outdir, "%s.gbk"%specaff), 'genbank')
+        else:
+            print("==> %s, %s"%(s_id, spec))
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
-        description="Extract genome from genbank file into corefile format.")
+        description="Extract genome from genbank file into Genbank format.")
 
     sub_parser = parser.add_subparsers(help="Commands", dest='command')
     build_parser = sub_parser.add_parser(
@@ -312,8 +275,8 @@ if __name__ == '__main__':
                                 help="List of genes. If not provided, all coding sequences in the mapping file will be exported")
     extract_parser.add_argument("--speclist", dest='speclist', required=True,
                                 help="A file containing a list of species or a specie name")
-    extract_parser.add_argument("--outfile", '-o', dest='output',
-                                default='output.core', help="Output file name")
+    extract_parser.add_argument("--wdir", '-od', dest='outdir', default="", help="Working directory")
+    extract_parser.add_argument("--test", dest='test', action="store_true", help="Run test print only")
 
     args = parser.parse_args()
     if args.command == 'build':
@@ -365,14 +328,6 @@ if __name__ == '__main__':
                 for line in Glist:
                     if not line.startswith('#'):
                         genelist.append(line.strip().lower())
-        gene2spec, prot2spec, spec_code = extract_genome(
-            speclist, genelist, records, revmtgenes, gcode=args.gcode)
-        CoreFile.write_corefile(gene2spec, args.output)
-        CoreFile.write_corefile(prot2spec, args.output + "_prot")
-
-        print("\n---------------------\n+++ Genetic code : \n")
-        for spec, code in spec_code.items():
-            print("%s ==> %s" % (spec, str(code)))
-        print('\n---------------------\n+++ Number of genomes with genes : \n')
-        for g, spec in gene2spec.items():
-            print("%s ==> %d specs" % (g, len(spec)))
+        extract_gb(speclist, records, args.outdir, args.test)
+        
+        print('\n---------------------\n+++ Number of genomes saved : %d\n'%len(speclist))
