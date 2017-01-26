@@ -3070,7 +3070,7 @@ cox3	coiii
 cox2	coii
 cox1	coi
 cob	cob1|cytb
-oli1	atp9|oli3
+atp9	oli1|oli3
 cox1	oxi3
 atp8	aap1
 atp6	oli2|oli4|pho1

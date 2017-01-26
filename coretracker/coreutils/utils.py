@@ -783,7 +783,7 @@ class SequenceSet(object):
                         "You're obviously using the wrong genetic code or you have too much undefined codon coding for Amino acid")
                 codon_seq += next_codon
                 aa_num += 1
-        return SeqRecord(CodonSeq(codon_seq, alphabet, enable_undef=True), id=dnarec.id), x_undecoded
+        return SeqRecord(CodonSeq(codon_seq, alphabet, enable_undef=True), id=dnarec.id, name=dnarec.name), x_undecoded
 
     def filter_codon_alignment(self, codon_alignment=None, ind_array=None, get_dict=False, alphabet=default_codon_alphabet):
         """Return the codon aligment from a list of in array"""
