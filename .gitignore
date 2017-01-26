@@ -1,0 +1,8 @@
+coretracker/
+data/
+data.db
+examples/
+index.db
+misc_data/
+params.json
+scripts/
