@@ -3,65 +3,282 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Coretracker by UdeM-LBIT</title>
-
+    <title>CoRetracker by UdeM-LBIT</title>
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/github-light.css">
     <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Orbitron|Roboto" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+    $('.index li a').on('click', function(event) {
+    $(this).parent().find('a').removeClass('active');
+    $(this).addClass('active');
+    });
+    $(window).on('scroll', function() {
+    $('.section').each(function() {
+    if($(window).scrollTop() + 200>= $(this).offset().top) {
+    var id = $(this).attr('id');
+    $('.index li a').removeClass('active');
+    $('header .index li a[href=\\#'+ id +']').addClass('active');
+    }
+    });
+    });
+    </script>
   </head>
   <body>
     <div class="wrapper">
       <header>
-        <h1>Coretracker</h1>
-        <p>A codon reassignment tracker</p>
-
-        <p class="view"><a href="https://github.com/UdeM-LBIT/CoreTracker">View the Project on GitHub <small>UdeM-LBIT/CoreTracker</small></a></p>
-
-        <ul>
+        <h1>CoReTracker</h1>
+        <p class="subtitle">A Codon reassignment Tracker</p>
+        <p class="view"><a href="https://github.com/UdeM-LBIT/CoreTracker">UdeM-LBIT/CoreTracker</a></p>
+        <ul class="dl">
           <li><a href="https://github.com/UdeM-LBIT/CoreTracker/zipball/master">Download <strong>ZIP File</strong></a></li>
           <li><a href="https://github.com/UdeM-LBIT/CoreTracker/tarball/master">Download <strong>TAR Ball</strong></a></li>
           <li><a href="https://github.com/UdeM-LBIT/CoreTracker">View On <strong>GitHub</strong></a></li>
         </ul>
-      <div class="index">
-            <p><a href="#readme">> CoreTracker</a></p>
-            <p><a href="#install">> Installation</a></p>
-            <p><a href="#help">> Help</a></li>
-            <p><a href="#tuto">> Tutorial</a></p>
-        </div>
+        <ul class="index">
+          <li><a class="active" href="#readme">About</a></li>
+          <li><a href="#install">Installation</a></li>
+          <li><a href="#usage">Usage</a></li>
+          <li><a href="#tuto">Tutorial</a></li>
+          <li><a href="#help">Help</a></li>
+        </ul>
       </header>
       <section>
-        <h3>
-<a id="readme" class="anchor" href="#readme" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About CoreTracker</h3>
-<p>CoreTracker is a tool witten in python for the prediction of codon reassignment. CoreTracker detects evidences of codon reassignment from the protein repertoire of a set of genomes by successively applying different algorithms. It’s therefore a filtering approach that explore all possible reassignments in every genomes from the input set, and retain only the most promising one. Our method is the first approach for detecting codon reassignments, that accounts for the phylogenetic context of considered genomes.</p> 
-<p>CoreTracker requires as input a groups of orthologous genes (nucleotide and amino acid sequences) across the genomes of interest, the species phylogenetic tree and a preliminary genetic code. User can either provide their own protein alignment or use CoreTracker default alignment pipeline which consist of a preliminary alignment with mafft followed by a refinement with a hmm profile.</p>
-<p> A thorough description of CoreTracer pipeline can be found in our paper : </p><p><blockquote cite="">Calderon, E. Noutahi, M. Blanchette, N. El-Mabrouk and F. Lang, New sequence-based method to predict codon reassignments, applied to mitochondrial codon evolution. </blockquote></p>
+        <!-- About Coretracker section -->
+        <div class="section" id="readme">
+          <h2>
+          <a class="anchor" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About CoreTracker</h2><p>
+        CoreTracker is a tool witten in python for the prediction of codon reassignment. CoreTracker detects evidences of codon reassignment from the protein repertoire of a set of genomes by successively applying different algorithms. It’s therefore a filtering approach that explore all possible reassignments in every genomes from the input set, and retain only the most promising one. Our method is the first approach for detecting codon reassignments, that accounts for the phylogenetic context of considered genomes.</p>
+        <p>CoreTracker requires as input a groups of orthologous genes (nucleotide and amino acid sequences) across the genomes of interest, the species phylogenetic tree and a preliminary genetic code. User can either provide their own protein alignment or use CoreTracker default alignment pipeline which consist of a preliminary alignment with mafft followed by a refinement with a hmm profile.</p>
+        <p> A thorough description of CoreTracer pipeline can be found in our paper : </p><p><blockquote cite="">V. Calderon, E. Noutahi, M. Blanchette, N. El-Mabrouk and F. Lang, New sequence-based method to predict codon reassignments, applied to mitochondrial codon evolution. </blockquote></p>
+      </div>
 
-<h3>
-<a id="install" class="anchor" href="#install" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h3>
+      <!-- Install section -->
+      <div class="section" id="install">
+        <h2>
+        <a class="anchor" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+        <p>CoreTracker is only compatible with python 2.7 currently. You will find below, multiple ways to install CoreTracker. I recommend to install it through the conda way.</p>
+          <h4>Manually download from github</h4>
+          <h4>Install using pip</h4>
+          <h4>Install with a conda environment</h4>
+          <p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+          <p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+          <p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+          <p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+      </div>
 
-<p>We’ve crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.</p>
+<!-- Usage section -->
+<div class="section" id="usage">
+<h2><a class="anchor" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
 
-<h3>
-<a id="help" class="anchor" href="#help" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Help (command line option)</h3>
+<p>To invoke CoreTracker, just type <code>coretracker</code> in a terminal. Its command line options will be printed </p>
+<p>
+<code> coretracker [-h] [--wdir OUTDIR] [--version] [--gapfilter GAPFILTER]
+  [--idfilter IDFILTER] [--iccontent ICCONTENT]
+  [--verbose {0,1,2}] -t TREE [-s SCALE] --protseq SEQ
+  --dnaseq DNASEQ [--stopcodon] [--debug] [--rmconst]
+  [--showall] [--norefine] [--novalid]
+  [--align {muscle,mafft}] [--use_tree] [--expos]
+  [--submat SUBMAT] [--hmmdir HMMDIR] [--params PARAMS]
+  [--parallel [PARALLEL]]</code></p>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>Those options can be confusing for a new user, so here is a break down, depending on what you want to do. Please see the <a href="#tuto">tutoral section</a> for any issues not addressed here (dataset preparation, other tools, output interpretation)</p>
+<!-- BEGINNER -->
+<div class="content">
+        <pre class="headers">Beginner level</pre>
+<pre class="highlight">
+<span class="comment"># Vanilla mode</span>
+<code>coretracker -t "tree.nw" -p "protfile.core" -n "nucfile.core" </code>
 
-<h3>
-<a id="tuto" class="anchor" href="#tuto" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Complete Tutorial</h3>
+<span class="comment"># Specify output directory</span>
+<code>coretracker -t "tree.nw" -p "protfile.core" -n "nucfile.core" <b>--wdir "path/to/outdir"</b></code>
 
-<p>You can @mention a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<span class="comment"># Control sequence filtering</span>
+<code>coretracker -t "tree.nw" -p "protfile.core" -n "nucfile.core" <b>--gapfilter 0.3 --icfilter 0.3  --idfilter 0.6</b> --wdir "path/to/outdir"</code>
 
+<span class="comment"># Remove constant site from alignment</span>
+<code>coretracker -t "tree.nw" -p "protfile.core" -n "nucfile.core" --gapfilter 0.3 --icfilter 0.3  --idfilter 0.6 --wdir "path/to/outdir" <b>--rmconst</b></code>
+
+<span class="comment"># Specify verbose level </span>
+<code>coretracker -t "tree.nw" -p "protfile.core" -n "nucfile.core" --gapfilter 0.3 --icfilter 0.3  --idfilter 0.6 --wdir "path/to/outdir" <b>--verbose 2</b></code>
+</pre>
+</div>
+
+<!-- EXPERT -->
+<div class="content">
+    <pre class="headers">Expert level</pre>
+<pre class="highlight">
+<span class="comment"># Use parallel processing on 4 CPU</span>
+<code>coretracker -t "tree.nw" -p "protfile.core" -n "nucfile.core" --gapfilter 0.3 --icfilter 0.3  --idfilter 0.6 --wdir "path/to/outdir" <b>--parallel 4</b></code>
+
+<span class="comment"># Use mafft to perform alignment</span>
+<code>coretracker -t "tree.nw" -p "protfile.core" -n "nucfile.core" --gapfilter 0.3 --icfilter 0.3  --idfilter 0.6 --wdir "path/to/outdir" <b>--align mafft</b></code>
+
+<span class="comment"># Perform alignment according to input tree</span>
+<code>coretracker -t "tree.nw" -p "protfile.core" -n "nucfile.core" --gapfilter 0.3 --icfilter 0.3  --idfilter 0.6 --wdir "path/to/outdir" <b>--align mafft --use_tree --scale 1</b></code>
+
+<span class="comment"># Deactivate automatic  alignment refinement step based on HMM</span>
+<code>coretracker -t "tree.nw" -p "protfile.core" -n "nucfile.core" --gapfilter 0.3 --icfilter 0.3  --idfilter 0.6 --wdir "path/to/outdir" <b>--norefine</b></code>
+
+<span class="comment"># Specify a directory with HMM files for each gene</span>
+<code>coretracker -t "tree.nw" -p "protfile.core" -n "nucfile.core" --gapfilter 0.3 --icfilter 0.3  --idfilter 0.6 --wdir "path/to/outdir" <b>--hmmdir "path/to/hmmdir"</b></code>
+
+<span class="comment"># Try to remove '*' and stop codons from alignment</span>
+<code>coretracker -t "tree.nw" -p "protfile.core" -n "nucfile.core" --gapfilter 0.3 --icfilter 0.3  --idfilter 0.6 --wdir "path/to/outdir" <b>--stopcodon</b></code>
+</pre>
+</div>
+
+<!-- Wizard -->
+<div class="content">
+    <pre class="headers">Wizard level</pre>
+<pre class="highlight"><span class="comment"># Export a json file with postition of validated reassigned codon in each genome</span>
+<code>coretracker -t "tree.nw" -p "protfile.core" -n "nucfile.core" --gapfilter 0.3 --icfilter 0.3  --idfilter 0.6 --wdir "path/to/outdir" <b>--expos</b></code>
+
+<span class="comment"># Use `pam250` substitution matrix instead</span>
+<code>coretracker -t "tree.nw" -p "protfile.core" -n "nucfile.core" --gapfilter 0.3 --icfilter 0.3  --idfilter 0.6 --wdir "path/to/outdir" <b>--submat pam250</b></code>
+
+<span class="comment"># More control over parameters</span>
+<code>coretracker -t "tree.nw" -p "protfile.core" -n "nucfile.core" --gapfilter 0.3 --icfilter 0.3  --idfilter 0.6 --wdir "path/to/outdir" <b>---params param.yml</b></code>
+
+</pre>
+<p><strong>"param.yml"</strong> is a parameter file in <a href="http://www.yaml.org/start.html">YAML format</a> used to provide additional control over 
+CoreTracker's internal algorithm. An example of the content of such file is provided below.</p>
+<pre class="terminal"><span class="comment"># amino acid to exclude from the plot
+# this will speed up a lot the data generation
+# If you exclude an amino acid, there won't be a reassignment to that aa</span>
+EXCLUDE_AA: "CDEHLPTVWY"
+
+<span class="comment"># If you exclude a aa here, there won't be a reassignment from that aa</span>
+EXCLUDE_AA_FROM: "CDEHLPTVWY"
+
+<span class="comment"># Threshold require to determine if an aa is majoritary in a column</span>
+AA_MAJORITY_THRESH: 0.5
+
+<span class="comment"># Mode to compute suspected species
+# possible values : count, wilcoxon, mannwhitney, kmean, ttest
+# Keep this to wilcoxon</span>
+MODE: 'wilcoxon'
+
+<span class="comment"># Distance matrice:</span>
+MATRIX: 'identity'
+
+<span class="comment"># Codon to amino acid likelihood. 
+# Use either consensus or complete alignment for Telford score</span>
+USE_CONSENSUS_FOR_LIKELIHOOD: False
+
+<span class="comment"># Show codon in non conserved position for its amino acid on the output 'Codon_data' file</span>
+SHOW_MIXTE_CODONS: False
+
+<span class="comment"># Show Filtered codon data</span>
+SHOW_GLOBAL_CODON_DATA: False
+
+<span class="comment"># Add the total count in each pie chart in the codon detail figure</span>
+ADD_NUMBER_PIE: False
+
+<span class="comment"># alpha : rejection of the null hypothesis</span>
+CONF: 0.05
+
+<span class="comment"># Methionine start codon range from gene 5' end.</span>
+STARTDIST: 20
+
+<span class="comment"># Learning model to use (1-3)</span>
+MODEL_TYPE: '3'
+</pre>
+</div>
+</div>
+
+
+<!-- Tuto section -->
+<div class="section" id="tuto">
+  <h2>
+  <a class="anchor" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Complete Tutorial</h2>
+  <p>You can @mention a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+  <p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+  <p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+  <p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+</div>
+
+<!-- Help section -->
+<div class="section" id="help">
+  <h2>
+  <a class="anchor" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Help</h2>
+<div class="content">
+<p>The complete list of options available through <code>coretracker --help</code> is shown below</p>
+       <pre class="terminal">CoreTracker, A codon reassignment tracker
+    optional arguments:
+      -h, --help            show this help message and exit
+      --wdir OUTDIR, --outdir OUTDIR
+                            Working directory
+      --version             show program's version number and exit
+      --gapfilter GAPFILTER, --gap GAPFILTER
+                            Remove position with gap from the alignment, using
+                            gapfilter as threshold. The absolute values are taken
+      --idfilter IDFILTER, --id IDFILTER
+                            Conserve only position with at least idfilter residue
+                            identity
+      --iccontent ICCONTENT, --ic ICCONTENT
+                            Shannon entropy threshold (default : 0.5 ). This will
+                            be used to discard column where IC <
+                            max(IC_INFO_VECTOR)*(IC_INFO_THRESHOLD/ 100.0)))
+      --verbose {0,1,2}, -v {0,1,2}
+                            Verbosity level
+      -t TREE, --intree TREE
+                            Input specietree in newick format
+      -s SCALE, --scale SCALE
+                            Scale to compute the branch format
+      --protseq SEQ, --prot SEQ, -p SEQ
+                            Protein sequence input in fasta format
+      --dnaseq DNASEQ, --dna DNASEQ, -n DNASEQ
+                            Nucleotides sequences input in fasta format
+      --stopcodon           Whether or not stop are present in protein alignment
+                            and dna sequences.
+      --debug               Enable debug printing
+      --rmconst             Remove constant site from filtered alignment.
+      --showall             Save all result. Do not attempt to filter based on
+                            significance
+      --norefine            Do not refine the alignment. By default the alignment
+                            will be refined. This option should never be used if
+                            you have made your own multiple alignment and
+                            concatenate it. Else you will have absurd alignment
+                            (TO FIX)
+      --novalid             Do not validate prediction by retranslating and
+                            checking alignment improvement
+      --align {muscle,mafft}
+                            Choose a program to align your sequences
+      --use_tree            This is helpfull only if the mafft alignment is
+                            selected. Perform multiple alignment, using species
+                            tree as guide tree.
+      --expos, --export_position
+                            Export a json file with the position of each
+                            reassignment in the corresponding genome.
+      --submat SUBMAT       Choose a substitution matrix to compute codon
+                            alignment to amino acid likelihood, Default value is
+                            blosum62
+      --hmmdir HMMDIR       Link a directory with hmm files for alignment. Each
+                            hmmfile should be named in the following format :
+                            genename.hmm
+      --params PARAMS       Use A parameter file to load parameters. If a
+                            parameter is not set, the default will be used
+      --parallel [PARALLEL]
+                            Use Parallelization during execution for each
+                            reassignment. This does not guarantee an increase in
+                            speed. CPU count will be used if no argument is
+                            provided
+  </pre>
+ </div>
+ </div>
 
 </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/UdeM-LBIT">maclandrol@UdeM-LBIT</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Original Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
+<footer>
+<p>This project is maintained by <a href="https://github.com/UdeM-LBIT">maclandrol@UdeM-LBIT</a></p>
+<p><small>Hosted on GitHub Pages &mdash; Theme modified from <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+</footer>
+</div>
+<script src="javascripts/scale.fix.js"></script>
+
+</body>
 </html>
