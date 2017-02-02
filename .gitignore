@@ -2,7 +2,6 @@
 __pycache__/
 *.py[cod]
 # shell script
-*.sh
 
 # C extensions
 *.so
@@ -70,6 +69,8 @@ tmp/*
 
 data/*
 lscript/
+script/coretracker.py
+script/codeusage.py
 zip_resultat/
 misc_data/
 coretracker/classifier/model_old/
