@@ -1,0 +1,5 @@
+### Random Forest prediction
+genome	codon	ori_aa	rea_aa	fitch	Fisher pval	Gene frac	N. rea	N. used	Cod. count	Sub. count	G. len	codon_lik	id	prediction	probability
+Schistosoma	AGA	R	F	0.0	0.0374999956843	0.25	0.142857142857	0.0714285714286	0.35	0.05	920.0	-1.21515151515	8.0	0.0	0.169
+Fasciola	AGA	R	F	1.0	0.0357142733838	1.0	1.0	0.0	0.04	0.04	924.0	5.21739130435	8.0	0.0	0.496
+Ciona	AGA	R	F	0.0	0.0227272648806	0.2	0.0175438596491	0.0	0.575757575758	0.010101010101	979.0	-2.62330827068	8.0	0.0	0.171

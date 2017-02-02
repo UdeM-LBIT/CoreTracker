@@ -1,0 +1,4 @@
+### Random Forest prediction
+genome	codon	ori_aa	rea_aa	fitch	Fisher pval	Gene frac	N. rea	N. used	Cod. count	Sub. count	G. len	codon_lik	id	prediction	probability
+Caenorhabditis	TCT	S	K	0.0	0.774999922318	0.25	0.0555555555556	0.444444444444	0.486486486486	0.027027027027	969.0	-0.401442307692	29.0	0.0	0.013
+Katharina	TCT	S	K	0.0	0.639534759269	0.25	0.030303030303	0.909090909091	0.673469387755	0.0204081632653	987.0	0.0131406044678	29.0	0.0	0.005

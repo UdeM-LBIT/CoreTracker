@@ -1,0 +1,4 @@
+### Random Forest prediction
+genome	codon	ori_aa	rea_aa	fitch	Fisher pval	Gene frac	N. rea	N. used	Cod. count	Sub. count	G. len	codon_lik	id	prediction	probability
+Fasciola	TTT	F	N	0.0	0.522727272727	0.2	0.0119047619048	0.488095238095	0.965517241379	0.0114942528736	924.0	-2.45645645646	21.0	0.0	0.013
+Daphnia	TTC	F	N	0.0	0.168539325843	0.2	0.0333333333333	0.966666666667	0.31914893617	0.0106382978723	989.0	-2.73819742489	23.0	0.0	0.037
