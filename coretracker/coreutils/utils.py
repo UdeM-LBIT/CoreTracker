@@ -82,15 +82,16 @@ class SequenceLoader:
     """Load and format data for analysis"""
 
     def __init__(self, infile, dnafile, settings, gap_thresh, has_stop=True,
-                 use_tree=None, refine_alignment=True, seqformat="core", hmmloop=10, msaprog="muscle", hmmdict={}):
+                 use_tree=None, refine_alignment=True, seqformat="core", msaprog="muscle", hmmdict={}):
         # try parsing the protein file as a corefile and if it failed
         # parse it as a fasta file
+        prog = msaprog if msaprog else "muscle"
         self.infile = infile
         self.sequences = {}
         stop_removed = False
         self.dnasequences = {}
         self.hmmdict = hmmdict
-        self.hmmloop = 10
+        self.hmmloop = settings.HMMLOOP
         gap_thresh = (abs(gap_thresh) <= 1 or 0.01) * abs(gap_thresh)
         try:
             self.sequences = self.get_sequences(
@@ -158,10 +159,10 @@ class SequenceLoader:
         is_aligned, alignment = self._prot_is_aligned()
 
         # align sequences if it's not already done
-        if not is_aligned:
+        if not is_aligned or (is_aligned and msaprog):
+            logging.debug('Sequence alignment requested')
             alignment = self.align(
-                settings, refine=refine_alignment, tree=use_tree, msaprog=msaprog, scale=settings.scale)
-            logging.debug('Sequence is not aligned, align and refine it.')
+                settings, refine=refine_alignment, tree=use_tree, msaprog=prog, scale=settings.SCALE, is_aligned=is_aligned)
 
         # case where sequence is not aligned but refinement is required
         elif is_aligned and refine_alignment:
@@ -223,7 +224,7 @@ class SequenceLoader:
 
         return align_dict, dna_dict, genepos
 
-    def align(self, settings, msaprog, refine=True, tree=None, scale=1.0, alpha=generic_protein):
+    def align(self, settings, msaprog, refine=True, tree=None, scale=1.0, alpha=generic_protein, is_aligned=False):
         """Align sequences"""
         alignment = {}
         outdir = settings.OUTDIR
@@ -232,7 +233,7 @@ class SequenceLoader:
             # keep the
             if len(self.sequences[gene]) > 1:
                 al = self.__class__._align(
-                    self.sequences[gene], msaprog, tree, scale, outdir, alpha)
+                    self.sequences[gene], msaprog, tree, scale, outdir, alpha, is_aligned)
                 if refine:
                     al = self.__class__._refine(
                         al, 9999, outdir, settings.hmmbuild, settings.hmmalign,
@@ -245,21 +246,30 @@ class SequenceLoader:
         return alignment
 
     @classmethod
-    def _align(clc, msa, msaprog, tree, scale, outdir, alpha=generic_protein, is_aligned=False):
+    def _align(clc, msa, msaprog, tree, scale, outdir, alpha=generic_protein, is_aligned=False, gap_char='-'):
         """Align sequences using muscle of mafft"""
         tmpseq = os.path.join(outdir, "tmp_seq.fasta")
         align_seq = os.path.join(outdir, "tmp_msa.fasta")
         seqs = msa
         if is_aligned:
-            seqs = []
             for seqrec in msa:
-                seqs.append(seqrec.seq.ungap())
+                seqrec.seq = seqrec.seq.ungap(gap_char)
         SeqIO.write(seqs, open(tmpseq, 'w'), 'fasta')
 
         if tree and 'mafft' in msaprog:
             seq_order = [seqrec.id for seqrec in seqs]
             out = Output(file=os.path.join(outdir, "tmp_tree.mafft"))
-            convert_tree_to_mafft(Tree(tree), seq_order, out, scale)
+            tmpt = Tree(tree)
+            tmpt.prune(seq_order, preserve_branch_length=False)
+            # tmpt.resolve_polytomy(recursive=True)
+            is_multifurcated = False
+            for node in tmpt.traverse():
+                if len(node.children) > 2:
+                    is_multifurcated = True
+                    break
+            if is_multifurcated:
+                raise ValueError("Input tree should be rooted and binary for mafft to work.")
+            convert_tree_to_mafft(tmpt, seq_order, out, scale)
             out.close()
             msaprog += " --treein %s" % out.file
 
@@ -307,11 +317,17 @@ class SequenceLoader:
         bestiter = {}
         file_created = False
         inputFile = os.path.join(outdir, 'tmp_align.fasta')
+        ungapedInputFile = os.path.join(outdir, 'tmp_seq.fasta')
         if isinstance(alignment, MultipleSeqAlignment):
             file_created = True
             AlignIO.write(alignment, open(inputFile, 'w'), 'fasta')
         else:
             inputFile = alignment
+
+        ungapedseqrec = list(SeqIO.parse(inputFile, format="fasta"))
+        for srec in ungapedseqrec:
+            srec.seq._data =  srec.seq._data.replace('-', "").replace('.', "")
+        SeqIO.write(ungapedseqrec, ungapedInputFile, "fasta")
 
         logging.debug(
             '... trying to run hmmbuild and hmmalign ' + str(loop) + " times!")
@@ -319,23 +335,25 @@ class SequenceLoader:
         outlist = []
         for i in xrange(loop):
             outputFile = os.path.join(cur_dir[i], "alignment.sto")
+            tmphmmfile = os.path.join(cur_dir[i], "alignment.hmm")
             if hmmfile:
                 # in this case copy it to the current dir
-                tmpfile = os.path.join(cur_dir[i], "alignment.hmm")
-                shutil.copyfile(hmmfile, tmpfile)
-                hmmfile = tmpfile
+                shutil.copyfile(hmmfile, tmphmmfile)
             else:
-                hmmfile = os.path.join(cur_dir[i], "alignment.hmm")
-                buildline = hmmbuild + " --amino %s %s" % (hmmfile, inputFile)
+                buildline = hmmbuild + " -F --amino %s %s" % (tmphmmfile, inputFile)
                 executeCMD(buildline, 'hmmbuild')
             # will continue if not exception is found
             alignline = hmmalign + \
-                " -o %s %s %s" % (outputFile, hmmfile, inputFile)
+                " -q -o %s %s %s" % (outputFile, tmphmmfile, ungapedInputFile)
             executeCMD(alignline, 'hmmalign')
             # finding quality
             quality.append(accessQuality(outputFile, minqual, strategie))
-            inputFile = remove_gap_position(outputFile, 'stockholm')
+            inputFile = remove_gap_only_columns(outputFile, 'stockholm')
+            if i> 0 and improve_is_stagned(outlist[-1], inputFile, len(outlist)*1.0/loop):
+                logging.debug("Stopping hmm loop : no alignment improvement after %d/%d iteration"%(len(outlist), loop))
+                break
             outlist.append(inputFile)
+
             # next input for hmm is current output
 
         # find the iteration with the greatest number of aligned position
@@ -349,6 +367,7 @@ class SequenceLoader:
                 shutil.rmtree(d, ignore_errors=True)
             if file_created:
                 os.remove(os.path.join(outdir, 'tmp_align.fasta'))
+                os.remove(ungapedInputFile)
         return alignment
 
     def clean_stop(self, stop='*'):
@@ -510,7 +529,6 @@ class CodonReaData(object):
         self.subsmat = settings.SUBMAT
         self.cons_for_lik = settings.USE_CONSENSUS_FOR_LIKELIHOOD
 
-        # print len(codon_align_dict.values()[0])
         self.specs_amino_count = makehash(1, Counter)  # this one is ok
         self.positions = positions
         self.genelimit = genelimit
@@ -670,11 +688,10 @@ class SequenceSet(object):
         # print [(x, len(self.dna_dict[x]),
         # len(self.prot_dict[x].seq.ungap('-'))*3,
         # len(self.dna_dict[x])==(len(self.prot_dict[x].seq.ungap('-'))+1)*3)
-        # for x in common_genome ]
         if not c_genome:
             help1 = "1) Protein length do not match with dna and stop already checked! Look for mistranslation of Frame-shifting"
             help2 = "2) Wrong tree or sequences name not matching!"
-
+            # print [x +" "+ str(len(self.dna_dict[x].seq.ungap('-'))) +" "+str(len(self.prot_dict[x].seq.ungap('-')) * 3) for x in common_genome]
             raise ValueError(
                 'ID intersection for dna, prot and species tree is empty. Possible cause:\n%s\n%s\n' % (help1, help2))
         common_genome = c_genome
@@ -685,7 +702,7 @@ class SequenceSet(object):
         # prune tree to sequence list
         self.phylotree.prune(common_genome)
         self.common_genome = common_genome
-        logging.debug("List of common genome")
+        logging.debug("List of common genome :")
         logging.debug(common_genome)
         # return common_genome, dict((k, v) for k, v in dna_dict.items() if k
         # in common_genome), prot_dict
@@ -971,9 +988,7 @@ class ReaGenomeFinder:
 
     def __init__(self, seqset, settings):
         self.seqset = seqset
-        self.mode = getattr(settings, 'mode', "count")
-        self.method = getattr(settings, 'method', "identity")
-        self.confd = getattr(settings, 'conf', 0.05)
+        self.confd = getattr(settings, 'CONF', 0.05)
         self.suspected_species = defaultdict(dict)
         self.aa2aa_rea = defaultdict(dict)
         self.settings = settings
@@ -1009,7 +1024,7 @@ class ReaGenomeFinder:
     def compute_sequence_identity(self, matCalc=None):
         """Compute a distance matrix from the alignment"""
         if not matCalc:
-            matCalc = DistanceCalculator(self.method)
+            matCalc = DistanceCalculator(self.settings.MATRIX)
         self.global_paired_distance = matCalc.get_distance(
             self.seqset.prot_align)
         self.filtered_paired_distance = matCalc.get_distance(
@@ -1017,7 +1032,7 @@ class ReaGenomeFinder:
 
     def get_genomes(self, use_similarity=1):
         """ Get suspected genomes """
-        matCalc = DistanceCalculator(self.method)
+        matCalc = DistanceCalculator(self.settings.MATRIX)
         self.compute_sequence_identity(matCalc)
         # logging.debug("Distance matrix : ")
         # logging.debug(self.filtered_paired_distance)
@@ -1077,15 +1092,15 @@ class ReaGenomeFinder:
                 aa2suspect_dist[aa][self.seq_names[
                     j]].append([paired, aapaired])
 
-        if self.mode == 'count':
+        if self.settings.MODE == 'count':
             self.get_suspect_by_count(aa2suspect, number_seq)
-        elif self.mode in ['wilcoxon', 'mannwhitney', 'ttest']:
+        elif self.settings.MODE in ['wilcoxon', 'mannwhitney', 'ttest']:
             self.get_suspect_by_stat(
-                aa2suspect_dist, number_seq, use_similarity, test=self.mode, confd=self.confd)
+                aa2suspect_dist, number_seq, use_similarity, test=self.settings.MODE, confd=self.confd)
         else:
             self.get_suspect_by_clustering(aa2suspect_dist, number_seq)
-        logging.debug('The list of suspected species per amino acid is:')
-        logging.debug(self.suspected_species)
+        #logging.debug('The list of suspected species per amino acid is:')
+        #logging.debug(self.suspected_species)
 
     def get_suspect_by_count(self, aa2suspect, seq_num):
         """Find suspected species by simple counting"""
@@ -1116,7 +1131,7 @@ class ReaGenomeFinder:
             features = np.asarray(cluster_list.values())
             return kmeans2(features, 2, iter=100)
 
-        logging.debug('Clustering chosen, labels for each species')
+        logging.debug('Clustering chosen, labels for each species :')
         for aa in aa2suspect_dist.keys():
             aafilt2dict = self.seqset.aa_filt_prot_align[aa_letters_1to3[aa]]
             tmp_list = aa2suspect_dist[aa]
@@ -1295,9 +1310,7 @@ class ReaGenomeFinder:
                 t = self.seqset.phylotree.copy("newick")
                 fitch = SingleNaiveRec(t, species, aa_letters_1to3[aa2], aa_letters_1to3[
                     aa1], self.seqset.codontable, (gcodon_rea, fcodon_rea))
-                slist = fitch.get_species_list(
-                    self.settings.LIMIT_TO_SUSPECTED_SPECIES)
-
+                slist = fitch.get_species_list(self.settings.LIMIT_TO_SUSPECTED_SPECIES)
                 alldata = {}
                 for genome in slist:
                     rec = self.seqset.prot_dict[genome]
@@ -1338,7 +1351,7 @@ class ReaGenomeFinder:
                         assert (
                             eprob - 1 < 0), "Strange value for eprob %f" % eprob
                     fisher_passed, pval = independance_test(
-                        reacodon, usedcodon, confd=self.confd, expct_prob=eprob)
+                        reacodon, usedcodon, genome, confd=self.confd, expct_prob=eprob)
                     # print "%s\t%s\t%s ==> %s" %(aa2, aa1, genome,
                     # str(column_comparision) )
                     # if('lost' in leaf.features and fisher_passed and
@@ -1372,7 +1385,7 @@ class ReaGenomeFinder:
                         genome, aa2), 'filtered': fcodon_rea.get_aa_usage(genome, aa2)}
                     alldata[genome] = gdata
 
-                if(fitch.is_valid(self.settings.COUNT_THRESHOLD) or self.settings.showall):
+                if(fitch.is_valid(self.settings.COUNT_THRESHOLD) or self.settings.SHOW_ALL):
                     self.reassignment_mapper['aa'][aa2][aa1] = alldata
                     self.interesting_case.append("%s to %s" % (aa2, aa1))
                     yield (self, fitch, alldata)
@@ -1387,7 +1400,8 @@ def executeCMD(cmd, prog):
     if err:
         logging.debug(err)
     if out:
-        logging.debug("%s : \n----------------- %s" % (prog, out))
+        pass
+        #logging.debug("%s : \n----------------- %s" % (prog, out))
     return err
 
 
@@ -1400,7 +1414,7 @@ def convert_tree_to_mafft(tree, seq_order, output, scale, dist_thresh=1e-10):
             node.dist = 0.0
         if not node.is_leaf():
             left_branch = node.children[0]
-            right_branch = node.children[0]
+            right_branch = node.children[1]
             left_branch_leaf = left_branch.get_leaf_names()
             right_branch_leaf = right_branch.get_leaf_names()
             seqnames = [min(map(lambda x: seq_order.index(x), left_branch_leaf)) +
@@ -1409,7 +1423,6 @@ def convert_tree_to_mafft(tree, seq_order, output, scale, dist_thresh=1e-10):
             # seqnames = [left_branch_leaf.name, right_branch_leaf.name]
             branchlens = [
                 left_branch.dist * scale, right_branch.dist * scale]
-
             if seqnames[1] < seqnames[0]:
                 seqnames.reverse()
                 branchlens.reverse()
@@ -1483,7 +1496,17 @@ def isInt(value):
         return False
 
 
-def remove_gap_position(alignfile, curformat):
+def improve_is_stagned(alignfile1, alignfile2, prob=1):
+    """Check if alignment are identical"""
+    al1 = AlignIO.read(alignfile1, "fasta")
+    al1.sort()
+    al2 = AlignIO.read(alignfile2, "fasta")
+    al2.sort()
+    identical = (al1.format("fasta") == al2.format("fasta"))
+    rand = np.random.uniform()
+    return identical and (rand<=prob)
+
+def remove_gap_only_columns(alignfile, curformat):
     """Remove all gap position from a file and return a new file"""
     align = AlignIO.read(alignfile, curformat)
     align, positions = SequenceSet.clean_alignment(align, threshold=1)
@@ -1499,7 +1522,7 @@ def remove_gap_position(alignfile, curformat):
     return fastafile
 
 
-def independance_test(rea, ori, confd=0.05, expct_prob=0.5):
+def independance_test(rea, ori, genome, confd=0.05, expct_prob=0.5):
     """Perform a Fisher's Exact test"""
     codon_list = set(rea.keys())
     codon_list.update(ori.keys())
@@ -1517,7 +1540,7 @@ def independance_test(rea, ori, confd=0.05, expct_prob=0.5):
             pval = fisher_exact(obs, midP=True, attempt=3)
             # fallback to chi2 test if fisher is impossible
         except:
-            logging.debug("**Using chi2 instead of FISHEREXACT")
+            logging.debug("**warning: %s (%s, %s) using chi2 instead of FISHEREXACT"%(genome, ori, rea))
             c, pval, dof, t = ss.chi2_contingency(obs)
         return pval <= confd, pval
 
@@ -1957,7 +1980,7 @@ def get_report(fitchtree, gdata, reafinder, codon_align, prediction, output="", 
                                fitchtree.ori_aa + "_to_" + fitchtree.dest_aa)
         # glob_purge.append(rep_out)
         pdf_format_data(fitchtree.ori_aa1, fitchtree.dest_aa1, gdata, prediction,
-                        codvalid, 'filtered', rep_out + ".pdf")
+                        codvalid, 'filtered', rep_out + ".pdf", settings.VALIDATION)
 
         return data_var, OUTDIR, rkp, codvalid
 
@@ -2134,8 +2157,8 @@ def codon_adjust_improve(fitchtree, reafinder, codon_align, codontable, predicti
     settings = reafinder.settings
     genelimit = reafinder.seqset.gene_limits
     filt_position = reafinder.seqset.filt_position
-    sc_meth = settings.method
-    method = settings.mode if settings.mode in [
+    sc_meth = settings.MATRIX
+    method = settings.MODE if settings.MODE in [
         'wilcoxon', 'mannwhitney', 'ttest'] else 'wilcoxon'
     outputs = []
     violinout = None
@@ -2146,7 +2169,7 @@ def codon_adjust_improve(fitchtree, reafinder, codon_align, codontable, predicti
     rea_pos_keeper = defaultdict(dict)
     codvalid = {}
 
-    def _limit_finder(codon_pos, gene_limit=genelimit, proche=settings.startdist):
+    def _limit_finder(codon_pos, gene_limit=genelimit, proche=settings.STARTDIST):
         """ Return the gene for each position of codon pos"""
         gene_pos = []
         gene_break = []
@@ -2199,23 +2222,23 @@ def codon_adjust_improve(fitchtree, reafinder, codon_align, codontable, predicti
             sp, cor_sp = alsp
             ic, cor_ic = alic
             ori_al, new_al = als
-            codvalid[codon] = dict((x, 'crimson') for x in speclist)
+            violinout, viout = violin_plot({'Original': sp, 'Corrected': cor_sp},
+                                            os.path.join(outdir, "%s_violin" % codon),
+                                            score_improve, codon, fitchtree.dest_aa, imformat=settings.IMAGE_FORMAT)
+            tmpvalid = dict((x, 'crimson') for x in speclist)
             ori_t, ori_ts = format_tree(
-                tree, codon, cible_aa, ori_al, sp, ic, pos, limits, colors=codvalid[codon])
+                tree, codon, cible_aa, ori_al, sp, ic, pos, limits, colors=tmpvalid)
             rea_t, rea_ts = format_tree(
-                tree, codon, cible_aa, new_al, cor_sp, cor_ic, pos, limits, colors=codvalid[codon])
+                tree, codon, cible_aa, new_al, cor_sp, cor_ic, pos, limits, colors=tmpvalid)
             cod_t, cod_ts = format_tree(tree, codon, cible_aa, codon_align, None, None, pos, limits,
-                                        codontable=codontable, dtype="codon", codon_col=fitchtree.colors, colors=codvalid[codon])
+                                        codontable=codontable, dtype="codon", codon_col=fitchtree.colors, colors=tmpvalid)
 
             cod_ts.title.add_face(TextFace(
                 "Prediction validation for " + codon + " to " + fitchtree.dest_aa, fsize=14), column=0)
 
-            violinout, viout = violin_plot({'Original': sp, 'Corrected': cor_sp},
-                                           os.path.join(
-                                               outdir, "%s_violin" % codon),
-                                           score_improve, codon, fitchtree.dest_aa, imformat=settings.IMAGE_FORMAT)
-            if viout[-1] < reafinder.confd:
-                logging.info('{} --> {}) : {:.2e}'.format(*viout))
+            logging.debug('{} --> {} : {:.2e}'.format(*viout))
+
+            codvalid[codon] = (tmpvalid, viout[-1] < reafinder.confd)
 
             cod_out = os.path.join(outdir, "%s_codons.%s" %
                                    (codon, settings.IMAGE_FORMAT))
@@ -2239,7 +2262,7 @@ def codon_adjust_improve(fitchtree, reafinder, codon_align, codontable, predicti
     return len(outputs) > 0, data_var, rea_pos_keeper, codvalid
 
 
-def pdf_format_data(ori_aa, dest_aa, gdata, prediction, codvalid, dtype, output=""):
+def pdf_format_data(ori_aa, dest_aa, gdata, prediction, codvalid, dtype, output="", validate=True):
     """Render supplemental data into a pdf"""
     X_data, X_labels, pred_prob, pred = prediction
     codon_set = get_codon_set_and_genome(pred, X_labels)
@@ -2269,10 +2292,13 @@ def pdf_format_data(ori_aa, dest_aa, gdata, prediction, codvalid, dtype, output=
                 # position 1 is true prob
                 'Prob': pred_prob[pos, 1],
             }
-            if codvalid.get(codon, None):
-                dt_by_att['Val'] = bool(codvalid[codon].get(g, ''))
-            else:
-                dt_by_att['Val'] = False
+            if validate:
+                if codvalid.get(codon, None):
+                    dt_by_att['Clad. Val'] = bool(codvalid[codon][0].get(g, ''))
+                    dt_by_att['Trans. Val'] = codvalid[codon][1]
+                else:
+                    dt_by_att['Clad. Val'] = False
+                    dt_by_att['Trans. Val'] = False
             pd_data[g][codon] = dt_by_att
 
     frames = []
@@ -2294,17 +2320,19 @@ def print_data_to_txt(outputfile, header, X, X_label, Y, Y_prob, codon_data, cib
     out.write("### Random Forest prediction\n")
     out.write("\t".join(["genome", "codon",
                          "ori_aa", "rea_aa"] + list(header) + ["prediction", "probability"] +
-                        (["validation"] if valid else [])))
+                        (["clad_valid", "trans_valid"] if valid else [])))
 
     total_elm = len(Y)
     for i in xrange(total_elm):
         end_data = [str(Y[i]), str(Y_prob[i][-1])]
         if valid:
             try:
+                gtmp_val = str(valid[X_label[i, 1]][-1]*1)
                 tmp_val = str(
-                    bool(valid[X_label[i, 1]].get(X_label[i, 0], '')) * 1)
+                    bool(valid[X_label[i, 1]][0].get(X_label[i, 0], '')) * 1)
             except:
                 tmp_val = '0'
+                gtmp_val = '0'
             end_data.append(tmp_val)
         out.write("\n" + "\t".join(list(X_label[i]) + [str(x)
                                                        for x in X[i]] + end_data))

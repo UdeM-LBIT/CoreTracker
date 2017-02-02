@@ -296,19 +296,19 @@ class SingleNaiveRec(object):
     def is_valid(self, thresh=1):
         """Naive function to test whether or not if the current reassignment is valid"""
         tmptree = self.tree.copy()
-
         for l in tmptree.traverse():
             if not l.is_leaf():
                 l.del_feature('reassigned')
                 l.del_feature('rea')
-            elif (l.lost and l.state == self.dest_aa) or l.count < thresh:
+            elif (l.state == self.dest_aa and l.lost) or l.count < thresh:
                 l.add_features(reassigned={0})
                 l.add_features(rea=self.corr['0'])
                 l.add_features(state=self.ori_aa)
-            elif not l.lost and l.state == self.ori_aa and l.count >= thresh:
+            elif ('lost' in l.features and not l.lost) and l.state == self.ori_aa and l.count >= thresh:
                 l.add_features(reassigned={1})
                 l.add_features(rea=self.corr['1'])
                 l.add_features(state=self.dest_aa)
+        # At least one node with reassignment persist in the data
         for node in tmptree:
             if node.rea == self.dest_aa:
                 return True

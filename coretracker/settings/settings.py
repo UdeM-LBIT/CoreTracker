@@ -1,6 +1,7 @@
 import parameters
 import Bio.SubsMat.MatrixInfo as MatrixInfo
 
+AVAILABLE_MAT =  MatrixInfo.available_matrices + ['identity']
 
 class Settings():
     """Contains global settings for the current run of CoReTracker"""
@@ -22,8 +23,12 @@ class Settings():
             # Set min frequency per column to use an aa as the most predominant
             'AA_MAJORITY_THRESH', parameters.AA_MAJORITY_THRESH)
         # whether or not analysis should be restricted to suspected species
-        self.LIMIT_TO_SUSPECTED_SPECIES = kwargs.get(
+        self.LIMIT_TO_SUSPECTED_SPECIES = False
+        try :
+             self.LIMIT_TO_SUSPECTED_SPECIES = kwargs.get(
             'LIMIT_TO_SUSPECTED_SPECIES', parameters.LIMIT_TO_SUSPECTED_SPECIES)
+        except:
+            pass
         # old method of finding suspected species by count
         self.FREQUENCY_THRESHOLD = kwargs.get(
             'FREQUENCY_THRESHOLD', parameters.FREQUENCY_THRESHOLD)
@@ -40,9 +45,6 @@ class Settings():
         # whether or not filtered position should be shown
         self.SHOW_GLOBAL_CODON_DATA = kwargs.get(
             'SHOW_GLOBAL_CODON_DATA', parameters.SHOW_GLOBAL_CODON_DATA)
-        # output format. Should be pdf for the moment
-        self.IMAGE_FORMAT = kwargs.get(
-            'IMAGE_FORMAT', parameters.IMAGE_FORMAT)
         # Add a suffix to each leaf if colors is not available
         self.ADD_LABEL_TO_LEAF = kwargs.get(
             'ADD_LABEL_TO_LEAF', parameters.ADD_LABEL_TO_LEAF)
@@ -57,11 +59,28 @@ class Settings():
             'USE_GLOBAL', parameters.USE_GLOBAL)
         # hidden parameter for debug purpose
         self.MODEL_TYPE = kwargs.get(
-            'MODEL_TYPE', '1')
+            'MODEL_TYPE', parameters.MODEL_TYPE)
+        # hmm loop
+        self.HMMLOOP = kwargs.get(
+                'HMMLOOP', parameters.HMMLOOP)
         # choose algorithm for computing the suspected species
-        self.mode = kwargs.get('MODE', parameters.MODE)
-        # choose matrix type to use, default is blosum62
-        self.method = kwargs.get('MATRIX', parameters.MATRIX)
+        self.MODE = kwargs.get('MODE', parameters.MODE)
+
+        # choose matrix to compute substitution, default is blosum62
+        self.MATRIX = kwargs.get('MATRIX', parameters.MATRIX)
+        if self.MATRIX not in AVAILABLE_MAT:
+            self.MATRIX = "blosum62"
+        try :
+            self.SUBMAT = getattr(MatrixInfo, self.MATRIX)
+        except:
+            self.SUBMAT = getattr(MatrixInfo, "blosum62")
+
+        # alpha to use , default is 0.05
+        self.CONF = kwargs.get('CONF', parameters.CONF)
+        self.STARTDIST = kwargs.get('STARTDIST', parameters.STARTDIST)
+        self.SHOW_ALL = kwargs.get('SHOW_ALL', parameters.STARTDIST)
+        # output format. Should be pdf for the moment
+        self.IMAGE_FORMAT = "pdf"
         # The following are the binaries setting for HMMER package
         self.hmmbuild = kwargs.get('hmmbuild', 'hmmbuild')
         # self.eslalimask = kwargs.get('eslalimask', 'esl-alimask')
@@ -69,14 +88,9 @@ class Settings():
         # this can be used next version for a better filtering
         # not need right now
         self.hmmalign = kwargs.get('hmmalign', 'hmmalign')
-        # alpha to use , default is 0.05
-        self.conf = kwargs.get('CONF', parameters.CONF)
-        self.startdist = kwargs.get('STARTDIST', parameters.STARTDIST)
-        self.SHOW_ALL = False
+        # default values for supplemental data
         self.VALIDATION = True
         self.COMPUTE_POS = False
-        # matrix used to compute telford score
-        self.SUBMAT = getattr(MatrixInfo, 'blosum62')
 
     def get_external_binaries(self):
         ext = [self.hmmbuild, self.hmmalign]
@@ -90,7 +104,9 @@ class Settings():
 
     def update_params(self, **kwargs):
         for k, v in kwargs.items():
-            if k == 'SUBMAT':
-                self.__dict__[k] = getattr(MatrixInfo, v)
+            if k == 'MATRIX' and v in AVAILABLE_MAT:
+                self.__dict__[k] = v
+                if v != "identity":
+                    self.__dict__['MATRIX'] =  getattr(MatrixInfo, v)
             else:
                 self.__dict__[k] = v
