@@ -17,6 +17,7 @@ before_install:
   - conda info -a
   - conda install hmmer muscle mafft 
   - conda install -c anaconda pyqt=4 numpy=1.11.3
+  - conda install -c uvcdat gfortran=4.9.3
   - sudo rm -rf /dev/shm
   - sudo ln -s /run/shm /dev/shm
 
