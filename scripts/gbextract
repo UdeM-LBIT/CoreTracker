@@ -148,7 +148,7 @@ def db_lookup(dbname, speclist, complete=True):
             query += " AND complete_genome = 1"
         cursor = conn.execute(query, [holder])
         for row in cursor:
-            if row[1] not in specset :
+            if row[1] not in specset:
                 specset.add(row[1])
                 result.append((row[0], row[1]))
     return result
@@ -229,16 +229,17 @@ def extract_gb(speclist, records, outdir, test=False):
     """Extract genome content based on a list of species """
     # fetch gene and protein from the database and add them to the list
     if outdir and not os.path.exists(outdir):
-            os.makedirs(outdir)
+        os.makedirs(outdir)
 
     for (s_id, spec) in speclist:
         g_found_in_spc = {}
         specaff = spec.replace('.', '').replace('-', '_').replace(' ', '_')
         curr_seq = records[s_id]
         if not test:
-            SeqIO.write(curr_seq, os.path.join(outdir, "%s.gbk"%specaff), 'genbank')
+            SeqIO.write(curr_seq, os.path.join(
+                outdir, "%s.gbk" % specaff), 'genbank')
         else:
-            print("==> %s, %s"%(s_id, spec))
+            print("==> %s, %s" % (s_id, spec))
 
 
 if __name__ == '__main__':
@@ -275,8 +276,10 @@ if __name__ == '__main__':
                                 help="List of genes. If not provided, all coding sequences in the mapping file will be exported")
     extract_parser.add_argument("--speclist", dest='speclist', required=True,
                                 help="A file containing a list of species or a specie name")
-    extract_parser.add_argument("--wdir", '-od', dest='outdir', default="", help="Working directory")
-    extract_parser.add_argument("--test", dest='test', action="store_true", help="Run test print only")
+    extract_parser.add_argument(
+        "--wdir", '-od', dest='outdir', default="", help="Working directory")
+    extract_parser.add_argument(
+        "--test", dest='test', action="store_true", help="Run test print only")
 
     args = parser.parse_args()
     if args.command == 'build':
@@ -329,5 +332,6 @@ if __name__ == '__main__':
                     if not line.startswith('#'):
                         genelist.append(line.strip().lower())
         extract_gb(speclist, records, args.outdir, args.test)
-        
-        print('\n---------------------\n+++ Number of genomes saved : %d\n'%len(speclist))
+
+        print('\n---------------------\n+++ Number of genomes saved : %d\n' %
+              len(speclist))

@@ -21,49 +21,58 @@ import os
 import argparse
 warnings.filterwarnings("ignore")
 
+poss_format = ('fasta', 'nexus', 'stockholm', 'clustal')
+
 
 class SeqRep:
+
     def __init__(self, filelist, fmt):
         # in this case load it with SeqIO
         self.seqlist = ddict(list)
-        if fmt == 'fasta':
-            self._fasta_parser(filelist)
-        elif fmt == 'corefile':
+        if fmt == 'corefile':
             self._core_parser(filelist)
+        elif fmt in poss_format:
+            self._parser(filelist, fmt)
 
+    def export_as(self, outfmt, outdir, outfile="out.core", reverse=False):
 
-    def export_as(self, outfmt, outdir, outfile="out.core"):
-        
+        seqlist = self.seqlist
+
         if outdir and not os.path.exists(outdir):
             os.makedirs(outdir)
-        
+
         if outfmt == 'corefile':
-            CoreFile.write_corefile(self.seqlist, os.path.join(outdir, outfile))
+            CoreFile.write_corefile(
+                seqlist, os.path.join(outdir, outfile))
 
-        elif outfmt == 'fasta':
-            fastaseqs = self.__convert_to_fasta(self.seqlist)
-            for spec, recs in fastaseqs.items():
+        elif outfmt in poss_format:
+            if reverse:
+                seqlist = self.__convert_to(seqlist)
+            for spec, recs in seqlist.items():
                 if len(recs) > 0:
-                    SeqIO.write(recs, os.path.join(outdir, spec+".fasta"), 'fasta')
+                    try:
+                        SeqIO.write(recs, os.path.join(
+                            outdir, spec + "." + outfmt), outfmt)
+                    except ValueError:
+                        raise ValueError("Expect aligned sequences for "
+                                         "the following format: %s . Try with(out) --order_reverse" % ", ".join(poss_format))
 
-
-    def _fasta_parser(self, flist):
+    def _parser(self, flist, fmt):
         for f in flist:
             fname = os.path.basename(f).lower().split('.', 1)[0]
-
-            for seqrec in SeqIO.parse(f, 'fasta'):
+            for seqrec in SeqIO.parse(f, fmt):
                 geneid = seqrec.id.lower()
                 seqrec.id = fname
                 seqrec.name = fname
                 self.seqlist[geneid].append(seqrec)
-    
+
     def _core_parser(self, flist):
         if len(flist) != 1:
-            raise Exception("Only one corefile should be converted into fasta format")
+            raise Exception(
+                "Only one corefile should be converted into fasta format")
         self.seqlist = CoreFile(flist[0])
 
-
-    def __convert_to_fasta(self, indict):
+    def __convert_to(self, indict):
         """Convert a dict of species name to their content
         into CoreTracker format structure"""
         spec_genomes = ddict(list)
@@ -72,27 +81,35 @@ class SeqRep:
                 specname = seqrec.name
                 seqrec.id = gene
                 seqrec.name = gene
-                seqrec.description = "source="+seqrec.description            
+                seqrec.description = "source=" + seqrec.description
                 spec_genomes[specname].append(seqrec)
         return spec_genomes
 
 
 if __name__ == '__main__':
-    
-    fmt_choices = ('fasta', 'corefile')
+
+    fmt_choices = poss_format + ('corefile',)
     # argument parser
     parser = argparse.ArgumentParser(
-        description='Break a corefile into multiple fasta files or merge multiple fasta files into one corefile.')
+        description='Break a corefile into msa files or merge msa files into one corefile.')
 
-    parser.add_argument('--infmt', dest='infmt', required=True, choices=fmt_choices, help="Input format")
-    parser.add_argument('--outfmt', dest='outfmt', required=True,  choices=fmt_choices, default='outfmt', help="Output file format")
-    parser.add_argument('--outdir', dest="outdir", default="", help="Working directory")
-    parser.add_argument('--outfile', dest="outfile", help="OutFile name for corefile format file")
-    parser.add_argument('seqs', metavar='infile1', nargs='+', help='List of input files')
+    parser.add_argument('--infmt', dest='infmt', required=True,
+                        choices=fmt_choices, help="Input format")
+    parser.add_argument('--outfmt', dest='outfmt', required=True,
+                        choices=fmt_choices, default='outfmt', help="Output file format")
+    parser.add_argument('--outdir', dest="outdir",
+                        default="", help="Working directory")
+    parser.add_argument('--outfile', dest="outfile",
+                        help="OutFile name for corefile format file")
+    parser.add_argument('seqs', metavar='infile1',
+                        nargs='+', help='List of input files')
+    parser.add_argument('--order_reverse', dest='reverse',
+                        action='store_true', help="Reverse the name order while saving")
 
     options = parser.parse_args()
     if options.outfmt != 'corefile' and options.outfile:
         parser.error('--outfile can only be set when --outfmt=corefile')
 
     seqreader = SeqRep(options.seqs, options.infmt)
-    seqreader.export_as(options.outfmt, options.outdir, options.outfile)
+    seqreader.export_as(options.outfmt, options.outdir,
+                        options.outfile, options.reverse)

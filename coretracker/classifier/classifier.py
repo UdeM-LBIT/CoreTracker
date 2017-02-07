@@ -219,10 +219,10 @@ def read_from_json(data, labels=None, use_global=True, use_pvalue=True):
                 rea_codon = type_check['rea_codon']
                 mixte_codon = type_check['mixte_codon']
                 used_codon = type_check['used_codon']
-                #gene_in_genome = data['genes'][genome]
+                # gene_in_genome = data['genes'][genome]
                 was_lost = gdata['lost'][fisher_type]
                 total_aa = np.sum(codon_total.values())
-                #mixte_codon = type_check['mixte_codon']
+                # mixte_codon = type_check['mixte_codon']
                 subs_count = type_check['count']
                 for codon in codon_total.keys():
                     gene_count = 0
@@ -283,7 +283,8 @@ def read_from_json(data, labels=None, use_global=True, use_pvalue=True):
                                 # anything else will have a class of -1 to
                                 # mean unsure
     if labels:
-        assert (len(X) == len(Y)), "We should not have different length for data and for input"
+        assert (len(X) == len(
+            Y)), "We should not have different length for data and for input"
     return np.array(X), np.asarray(X_label), np.array(Y)
 
 

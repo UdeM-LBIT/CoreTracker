@@ -15,8 +15,8 @@ before_install:
   - conda config --add channels r
   - conda config --add channels bioconda
   - conda info -a
-  - conda install hmmer muscle mafft
-  - conda install -c anaconda pyqt=4
+  - conda install hmmer muscle mafft 
+  - conda install -c anaconda pyqt=4 numpy=1.11.3
   - sudo rm -rf /dev/shm
   - sudo ln -s /run/shm /dev/shm
 

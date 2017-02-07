@@ -1,7 +1,8 @@
 import parameters
 import Bio.SubsMat.MatrixInfo as MatrixInfo
 
-AVAILABLE_MAT =  MatrixInfo.available_matrices + ['identity']
+AVAILABLE_MAT = MatrixInfo.available_matrices + ['identity']
+
 
 class Settings():
     """Contains global settings for the current run of CoReTracker"""
@@ -24,9 +25,9 @@ class Settings():
             'AA_MAJORITY_THRESH', parameters.AA_MAJORITY_THRESH)
         # whether or not analysis should be restricted to suspected species
         self.LIMIT_TO_SUSPECTED_SPECIES = False
-        try :
-             self.LIMIT_TO_SUSPECTED_SPECIES = kwargs.get(
-            'LIMIT_TO_SUSPECTED_SPECIES', parameters.LIMIT_TO_SUSPECTED_SPECIES)
+        try:
+            self.LIMIT_TO_SUSPECTED_SPECIES = kwargs.get(
+                'LIMIT_TO_SUSPECTED_SPECIES', parameters.LIMIT_TO_SUSPECTED_SPECIES)
         except:
             pass
         # old method of finding suspected species by count
@@ -62,7 +63,7 @@ class Settings():
             'MODEL_TYPE', parameters.MODEL_TYPE)
         # hmm loop
         self.HMMLOOP = kwargs.get(
-                'HMMLOOP', parameters.HMMLOOP)
+            'HMMLOOP', parameters.HMMLOOP)
         # choose algorithm for computing the suspected species
         self.MODE = kwargs.get('MODE', parameters.MODE)
 
@@ -70,7 +71,7 @@ class Settings():
         self.MATRIX = kwargs.get('MATRIX', parameters.MATRIX)
         if self.MATRIX not in AVAILABLE_MAT:
             self.MATRIX = "blosum62"
-        try :
+        try:
             self.SUBMAT = getattr(MatrixInfo, self.MATRIX)
         except:
             self.SUBMAT = getattr(MatrixInfo, "blosum62")
@@ -107,6 +108,6 @@ class Settings():
             if k == 'MATRIX' and v in AVAILABLE_MAT:
                 self.__dict__[k] = v
                 if v != "identity":
-                    self.__dict__['MATRIX'] =  getattr(MatrixInfo, v)
+                    self.__dict__['MATRIX'] = getattr(MatrixInfo, v)
             else:
                 self.__dict__[k] = v

@@ -149,7 +149,7 @@ def db_lookup(dbname, speclist, complete=True):
             query += " AND complete_genome = 1"
         cursor = conn.execute(query, [holder])
         for row in cursor:
-            if row[1] not in specset :
+            if row[1] not in specset:
                 specset.add(row[1])
                 result.append((row[0], row[1]))
     return result
@@ -268,7 +268,8 @@ def extract_genome(speclist, genelist, records, revmtgenes, getprot=False, gcode
                     rec = SeqRecord(seq, id=specaff, name=specaff)
                     protseq = Seq(f.qualifiers.get("translation", [])[0])
                     if not protseq:
-                        protseq = seq.translate(table=spec_code_map.get(spec, gcode))
+                        protseq = seq.translate(
+                            table=spec_code_map.get(spec, gcode))
                     protrec = SeqRecord(protseq, id=specaff, name=specaff)
                     if g_found_in_spc.get(sgene, 0) < 1:
                         # this is to ensure that the same gene is not added

@@ -6,14 +6,13 @@ import itertools
 import json
 import logging
 import os
-import re
-import traceback
 import random
+import re
 import shutil
 import subprocess
 import sys
 import time
-import pandas as pd
+import traceback
 from collections import Counter, defaultdict
 from cStringIO import StringIO
 from distutils import spawn
@@ -21,6 +20,7 @@ from functools import partial
 
 import Bio.SubsMat.MatrixInfo as MatrixInfo
 import numpy as np
+import pandas as pd
 import scipy.stats as ss
 from Bio import AlignIO, Alphabet, SeqIO, SubsMat, codonalign
 from Bio.Align import AlignInfo, MultipleSeqAlignment
@@ -35,13 +35,13 @@ from Bio.SeqRecord import SeqRecord, _RestrictedDict
 from ete3 import Tree
 from scipy.cluster.vq import kmeans2
 
-from coretracker.FisherExact import fisher_exact
-from Faces import LineFace, PPieChartFace, SequenceFace, List90Face
+from AncestralRecon import SingleNaiveRec, init_back_table
 from corefile import CoreFile
+from coretracker.FisherExact import fisher_exact
+from Faces import LineFace, List90Face, PPieChartFace, SequenceFace
+from letterconfig import *
 from output import Output
 from pdfutils import *
-from AncestralRecon import SingleNaiveRec, init_back_table
-from letterconfig import *
 
 SEABORN = False
 try:
@@ -268,7 +268,8 @@ class SequenceLoader:
                     is_multifurcated = True
                     break
             if is_multifurcated:
-                raise ValueError("Input tree should be rooted and binary for mafft to work.")
+                raise ValueError(
+                    "Input tree should be rooted and binary for mafft to work.")
             convert_tree_to_mafft(tmpt, seq_order, out, scale)
             out.close()
             msaprog += " --treein %s" % out.file
@@ -326,7 +327,7 @@ class SequenceLoader:
 
         ungapedseqrec = list(SeqIO.parse(inputFile, format="fasta"))
         for srec in ungapedseqrec:
-            srec.seq._data =  srec.seq._data.replace('-', "").replace('.', "")
+            srec.seq._data = srec.seq._data.replace('-', "").replace('.', "")
         SeqIO.write(ungapedseqrec, ungapedInputFile, "fasta")
 
         logging.debug(
@@ -340,7 +341,8 @@ class SequenceLoader:
                 # in this case copy it to the current dir
                 shutil.copyfile(hmmfile, tmphmmfile)
             else:
-                buildline = hmmbuild + " -F --amino %s %s" % (tmphmmfile, inputFile)
+                buildline = hmmbuild + \
+                    " -F --amino %s %s" % (tmphmmfile, inputFile)
                 executeCMD(buildline, 'hmmbuild')
             # will continue if not exception is found
             alignline = hmmalign + \
@@ -349,8 +351,9 @@ class SequenceLoader:
             # finding quality
             quality.append(accessQuality(outputFile, minqual, strategie))
             inputFile = remove_gap_only_columns(outputFile, 'stockholm')
-            if i> 0 and improve_is_stagned(outlist[-1], inputFile, len(outlist)*1.0/loop):
-                logging.debug("Stopping hmm loop : no alignment improvement after %d/%d iteration"%(len(outlist), loop))
+            if i > 0 and improve_is_stagned(outlist[-1], inputFile, len(outlist) * 1.0 / loop):
+                logging.debug(
+                    "Stopping hmm loop : no alignment improvement after %d/%d iteration" % (len(outlist), loop))
                 break
             outlist.append(inputFile)
 
@@ -691,7 +694,9 @@ class SequenceSet(object):
         if not c_genome:
             help1 = "1) Protein length do not match with dna and stop already checked! Look for mistranslation of Frame-shifting"
             help2 = "2) Wrong tree or sequences name not matching!"
-            # print [x +" "+ str(len(self.dna_dict[x].seq.ungap('-'))) +" "+str(len(self.prot_dict[x].seq.ungap('-')) * 3) for x in common_genome]
+            # print [x +" "+ str(len(self.dna_dict[x].seq.ungap('-'))) +"
+            # "+str(len(self.prot_dict[x].seq.ungap('-')) * 3) for x in
+            # common_genome]
             raise ValueError(
                 'ID intersection for dna, prot and species tree is empty. Possible cause:\n%s\n%s\n' % (help1, help2))
         common_genome = c_genome
@@ -902,7 +907,7 @@ class SequenceSet(object):
             for seqrec in edited_alignment:
                 seq = Seq('', alphabet)
                 for i in index_array:
-                    # do not know why this raise an error on pyhton3
+                    # do not know why this raise an error on python3
                     seq += seqrec[int(i)]
                 seqrec.letter_annotations = _RestrictedDict(length=len(seq))
                 seqrec.seq = seq.upper()
@@ -918,11 +923,11 @@ class SequenceSet(object):
         return edited_alignment
 
     @classmethod
-    def clean_alignment(clc, alignment=None, characs=['-'], threshold=0.5):
+    def clean_alignment2(clc, alignment=None, characs=['-'], threshold=0.5):
         """Remove position of alignment which contain character from characs"""
         align_array = np.array([list(rec) for rec in alignment], dtype=str)
-        indel_array = np.where((np.mean(np.in1d(align_array,
-                                                characs).reshape(align_array.shape), axis=0) >= threshold) == False)[0].tolist()
+        indel_array = np.where(~(np.mean(np.in1d(align_array,
+                                                 characs).reshape(align_array.shape), axis=0) >= threshold))[0].tolist()
 
         return clc.filter_align_position(alignment, indel_array), indel_array
 
@@ -931,16 +936,10 @@ class SequenceSet(object):
         """Filter an alignment using threshold as the minimum aa identity per columns"""
         aligninfo = AlignInfo.SummaryInfo(alignment)
         # Smart move : Make a consensus sequence with threshold
-        # remove all gap position
-        consensus = aligninfo.gap_consensus(
-            threshold=threshold, ambiguous=ambiguous, consensus_alpha=alphabet)
+        # remove all ambiguous positions
+        consensus = clc.differed_consensus(aligninfo, threshold, remove_identity,
+                                           ambiguous, alphabet=generic_protein)
         cons_array = [i for i, c in enumerate(consensus) if c != ambiguous]
-
-        if(remove_identity):
-            matched_consensus = aligninfo.gap_consensus(
-                threshold=1, ambiguous=ambiguous, consensus_alpha=alphabet)
-            cons_array = [i for i, c in enumerate(
-                consensus) if c != ambiguous and matched_consensus[i] == ambiguous]
 
         return clc.filter_align_position(alignment, cons_array), cons_array
 
@@ -954,6 +953,37 @@ class SequenceSet(object):
                 if(character == seq2[i]):
                     identity += 1
         return identity * (99.0 * percent + 1.0) / len(seq1)
+
+    @classmethod
+    def differed_consensus(clc, aligninfo, threshold, remove_identity=False,
+                           ambiguous='X', alphabet=generic_protein):
+        """ Adapted from Biopython gap_consensus
+        """
+        consensus = ''
+
+        # find the length of the consensus we are creating
+        con_len = aligninfo.alignment.get_alignment_length()
+        max_size = len(aligninfo.alignment)
+
+        # go through each seq item
+        for n in range(con_len):
+            # keep track of the counts of the different atoms we get
+            # we suppose all seqs in the alignment have the same leng
+            atom_dict = Counter(aligninfo.alignment[:, n])
+            max_atom, count_atom = atom_dict.most_common(1)[0]
+
+            if remove_identity and count_atom == con_len:
+                consensus += ambiguous
+            elif (float(count_atom) / float(max_size)) >= threshold:
+                consensus += max_atom
+            else:
+                consensus += ambiguous
+
+        # we need to guess a consensus alphabet if one isn't specified
+        if alphabet is None:
+            alphabet = aligninfo._guess_consensus_alphabet(ambiguous)
+
+        return Seq(consensus, alphabet)
 
     @classmethod
     def get_consensus(clc, alignment, threshold, ambiguous='X', alphabet=generic_protein):
@@ -1099,8 +1129,8 @@ class ReaGenomeFinder:
                 aa2suspect_dist, number_seq, use_similarity, test=self.settings.MODE, confd=self.confd)
         else:
             self.get_suspect_by_clustering(aa2suspect_dist, number_seq)
-        #logging.debug('The list of suspected species per amino acid is:')
-        #logging.debug(self.suspected_species)
+        # logging.debug('The list of suspected species per amino acid is:')
+        # logging.debug(self.suspected_species)
 
     def get_suspect_by_count(self, aa2suspect, seq_num):
         """Find suspected species by simple counting"""
@@ -1310,7 +1340,8 @@ class ReaGenomeFinder:
                 t = self.seqset.phylotree.copy("newick")
                 fitch = SingleNaiveRec(t, species, aa_letters_1to3[aa2], aa_letters_1to3[
                     aa1], self.seqset.codontable, (gcodon_rea, fcodon_rea))
-                slist = fitch.get_species_list(self.settings.LIMIT_TO_SUSPECTED_SPECIES)
+                slist = fitch.get_species_list(
+                    self.settings.LIMIT_TO_SUSPECTED_SPECIES)
                 alldata = {}
                 for genome in slist:
                     rec = self.seqset.prot_dict[genome]
@@ -1401,7 +1432,7 @@ def executeCMD(cmd, prog):
         logging.debug(err)
     if out:
         pass
-        #logging.debug("%s : \n----------------- %s" % (prog, out))
+        # logging.debug("%s : \n----------------- %s" % (prog, out))
     return err
 
 
@@ -1504,7 +1535,8 @@ def improve_is_stagned(alignfile1, alignfile2, prob=1):
     al2.sort()
     identical = (al1.format("fasta") == al2.format("fasta"))
     rand = np.random.uniform()
-    return identical and (rand<=prob)
+    return identical and (rand <= prob)
+
 
 def remove_gap_only_columns(alignfile, curformat):
     """Remove all gap position from a file and return a new file"""
@@ -1540,7 +1572,8 @@ def independance_test(rea, ori, genome, confd=0.05, expct_prob=0.5):
             pval = fisher_exact(obs, midP=True, attempt=3)
             # fallback to chi2 test if fisher is impossible
         except:
-            logging.debug("**warning: %s (%s, %s) using chi2 instead of FISHEREXACT"%(genome, ori, rea))
+            logging.debug(
+                "**warning: %s (%s, %s) using chi2 instead of FISHEREXACT" % (genome, ori, rea))
             c, pval, dof, t = ss.chi2_contingency(obs)
         return pval <= confd, pval
 
@@ -1709,9 +1742,9 @@ def check_gain(codon, cible_aa, speclist, tree, codontable, codon_alignment,
             # or all node under the same predicted reassignment
             # which could take too long
             cur_par = (tree & spec).up
-            while cur_par.up != None and cur_par.reassigned != {1}:
+            while cur_par.up is not None and cur_par.reassigned != {1}:
                 cur_par = cur_par.up
-            spec_sis = [x.name for x in cur_par if x.name  in speclist]
+            spec_sis = [x.name for x in cur_par if x.name in speclist]
             cur_recs = []
             cur_recs_al = []
             codchange = {}
@@ -1725,13 +1758,14 @@ def check_gain(codon, cible_aa, speclist, tree, codontable, codon_alignment,
             # spec_ic = compute_ic_content(f_aln_s)
             # spec_cor_ic = compute_ic_content(corf_aln)
             pval, cor_al_sp, al_sp = check_align_upgrade(
-                    corf_aln, SeqIO.to_dict(f_aln_s), scoring_method, method, pos)
+                corf_aln, SeqIO.to_dict(f_aln_s), scoring_method, method, pos)
 
             # simple validation test here
             validated = sum(cor_al_sp) > sum(al_sp)
-            logging.debug("Validation : %s | %s : (%s to %s) | (%f --> %f)"%(validated, spec, codon, cible_aa,  sum(cor_al_sp), sum(al_sp)))
+            logging.debug("Validation : %s | %s : (%s to %s) | (%f --> %f)" %
+                          (validated, spec, codon, cible_aa, sum(cor_al_sp), sum(al_sp)))
 
-            if not validated :
+            if not validated:
                 fake_rea.add(spec)
 
         speclist = list(set(speclist) - fake_rea)
@@ -2062,7 +2096,7 @@ def format_tree(tree, codon, cible, alignment, SP_score, ic_contents, pos=[],
             for (l, name) in limiter:
                 listdata = pos[start:l]
                 ic_content = np.asarray(ic_contents)[listdata]
-                #sp_score = np.asarray(SP_score)[pos]
+                # sp_score = np.asarray(SP_score)[pos]
                 footer_seq = SequenceFace(
                     "".join([gfunc(st) for st in start_holder[start:l]]), None, dtype, fsize=13)
                 start = l
@@ -2223,8 +2257,9 @@ def codon_adjust_improve(fitchtree, reafinder, codon_align, codontable, predicti
             ic, cor_ic = alic
             ori_al, new_al = als
             violinout, viout = violin_plot({'Original': sp, 'Corrected': cor_sp},
-                                            os.path.join(outdir, "%s_violin" % codon),
-                                            score_improve, codon, fitchtree.dest_aa, imformat=settings.IMAGE_FORMAT)
+                                           os.path.join(
+                                               outdir, "%s_violin" % codon),
+                                           score_improve, codon, fitchtree.dest_aa, imformat=settings.IMAGE_FORMAT)
             tmpvalid = dict((x, 'crimson') for x in speclist)
             ori_t, ori_ts = format_tree(
                 tree, codon, cible_aa, ori_al, sp, ic, pos, limits, colors=tmpvalid)
@@ -2294,7 +2329,8 @@ def pdf_format_data(ori_aa, dest_aa, gdata, prediction, codvalid, dtype, output=
             }
             if validate:
                 if codvalid.get(codon, None):
-                    dt_by_att['Clad. Val'] = bool(codvalid[codon][0].get(g, ''))
+                    dt_by_att['Clad. Val'] = bool(
+                        codvalid[codon][0].get(g, ''))
                     dt_by_att['Trans. Val'] = codvalid[codon][1]
                 else:
                     dt_by_att['Clad. Val'] = False
@@ -2327,7 +2363,7 @@ def print_data_to_txt(outputfile, header, X, X_label, Y, Y_prob, codon_data, cib
         end_data = [str(Y[i]), str(Y_prob[i][-1])]
         if valid:
             try:
-                gtmp_val = str(valid[X_label[i, 1]][-1]*1)
+                gtmp_val = str(valid[X_label[i, 1]][-1] * 1)
                 tmp_val = str(
                     bool(valid[X_label[i, 1]][0].get(X_label[i, 0], '')) * 1)
             except:

@@ -19,20 +19,20 @@ import logging
 import os
 import random
 import sys
-from yaml import load
 import traceback
 from collections import defaultdict as ddict
-
 from math import log10
+
 from Bio import SeqIO
 from ete3 import Tree
+from yaml import load
 
-from coretracker.coreutils import *
-from coretracker.classifier.models import ModelType
+from coretracker import __author__, __version__, date
 from coretracker.classifier import *
 from coretracker.classifier import MODELPATH
+from coretracker.classifier.models import ModelType
+from coretracker.coreutils import *
 from coretracker.settings import *
-from coretracker import __version__, __author__, date
 
 ENABLE_PAR = True
 CPU_COUNT = 0
@@ -62,13 +62,16 @@ def testing_a_lot(args, settings):
     return [settings.EXCLUDE_AA, settings.AA_MAJORITY_THRESH, settings.FREQUENCY_THRESHOLD,
             settings.GENETIC_CODE, settings.COUNT_THRESHOLD, settings.LIMIT_TO_SUSPECTED_SPECIES]
 
+
 def AlignmentProgramType(program):
     # Raise a value error if not conform to expected programs
     tmp = program.strip().split()[0]
     if tmp not in ['muscle', 'mafft']:
-        raise argparse.ArgumentTypeError("Accepted alignment programs are mafft and muscle")
+        raise argparse.ArgumentTypeError(
+            "Accepted alignment programs are mafft and muscle")
     else:
         return program
+
 
 def set_coretracker(args, settings):
     """Set all data for coretracker from the argument list"""
