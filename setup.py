@@ -97,7 +97,7 @@ def setup_package():
 def binaries_checker():
     """Check if some of the required binaries (alignment) are installed"""
     alignment = ['muscle', 'mafft']
-    hmm = ['hmmbuild', 'hmmalign', 'esl-alimanip', 'esl-alimask']
+    hmm = ['hmmbuild', 'hmmalign']
     total = [alignment, hmm]
     nfound = []
     for bintype in total:
