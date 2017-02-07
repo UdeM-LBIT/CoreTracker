@@ -6,7 +6,7 @@ notifications:
 # command to install dependencies
 before_install:
   - sudo apt-get update -qq
-  - sudo apt-get install gcc gfortran
+  - sudo apt-get install -y gcc gfortran 
   - wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -O miniconda.sh
   - chmod +x miniconda.sh
   - bash miniconda.sh -b -p $HOME/miniconda
