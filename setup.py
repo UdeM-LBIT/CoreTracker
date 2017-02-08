@@ -82,11 +82,11 @@ def setup_package():
         install_requires=[
             'ete3',
             'numpy>= 1.8.1',
+            'scipy>=0.16.1',
             'pandas',
             'scikit-learn',
-            'scipy>=0.16.1',
-            'biopython>=1.65',
             'matplotlib',
+            'biopython>=1.65',
             'WeasyPrint',
             'PyYAML',
         ],
