@@ -53,7 +53,7 @@ def setup_package():
         maintainer='Emmanuel Noutahi',
         description="CoreTracker, A codon reassignment tracker",
         url='https://github.com/UdeM-LBIT/CoreTracker',
-        download_url='https://github.com/UdeM-LBIT/CoreTracker/archive/%s.tar.gz'%__version__,
+        download_url='https://github.com/UdeM-LBIT/CoreTracker/archive/%s.tar.gz' % __version__,
         author='Emmanuel Noutahi',
         author_email='fmr.noutahi@umontreal.ca',
         scripts=glob.glob('bin/*'),
