@@ -1,4 +1,3 @@
-
 from Bio.Seq import Seq
 import Bio.SeqIO as SeqIO
 from Bio.SeqRecord import SeqRecord
