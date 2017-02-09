@@ -6,14 +6,19 @@ explore all possible reassignments in every genomes from the input set, and reta
 
 # Installation
 
-Download the github project and install using pip. I recommend setting a virtual environment through `virtualenv` or `conda`.
+First install the system dependencies which include `gfortran`, `PyQt4` `muscle`, `mafft` and `hmmer`. `PyQt4` also require `Sip` and `qt`. It's easier to install those two using distribution specific packages. You can now download the github project and install using `python setup.py install` or pip (the package is also available on pypi). I recommend setting a virtual environment through `virtualenv`.
 
-To use `CoreTracker`, you should have `PyQt4` installed, which also require `Sip` and `qt`. It's easier to install those two using distribution specific packages.
+Alternatively, you can also install it with `conda`, which is the easiest way. 
 
-# Help
+
+# Basic Help
 After installation, run `coretracker -h` for help.
 
 An example of execution is :
 ``./coretracker.py -t speciestree.nw -p protein.ali -n nucsequences.core --gapfilter 0.4 --iccontent 0.3  --idfilter 0.5  --norefine --wdir outdir --params param.yml ``
 
 Additionnal parameters could be set using the ``--params`` option. See the provided template (param.yml).
+
+# Detailled information
+
+Detailles information about the package and tutorials are available here ==> [http://udem-lbit.github.io/CoreTracker/](http://udem-lbit.github.io/CoreTracker/)
