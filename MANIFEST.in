@@ -1,6 +1,9 @@
 include *.md
 include *.txt
 include LICENSE
+
 recursive-include coretracker/classifier/models *
 recursive-include coretracker/coreutils/templates *
-global-exclude .git*
+recursive-include coretracker/FisherExact/statlib *.f90 *.F90 *.py *.pyf
+
+global-exclude .gitignore
