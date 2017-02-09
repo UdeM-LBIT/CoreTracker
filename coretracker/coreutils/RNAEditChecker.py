@@ -153,3 +153,4 @@ class RNAediting (object):
         pass
 
     def _cu_subs_checking(self, codon1, amino2):
+        pass
