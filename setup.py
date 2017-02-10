@@ -81,10 +81,10 @@ def setup_package():
         setup_requires=['numpy'],
         install_requires=[
             'ete3',
-            'numpy>= 1.8.1',
+            'numpy>=1.8.1',
             'scipy>=0.16.1',
             'pandas',
-            'scikit-learn',
+            'scikit-learn==0.17',
             'matplotlib',
             'biopython>=1.65',
             'WeasyPrint',
