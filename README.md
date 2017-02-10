@@ -22,3 +22,11 @@ Additionnal parameters could be set using the ``--params`` option. See the provi
 # Detailled information
 
 Detailles information about the package and tutorials are available here ==> [http://udem-lbit.github.io/CoreTracker/](http://udem-lbit.github.io/CoreTracker/)
+
+# TODO
+
+    - consensus class to not ignore column with same aa frequency
+    - full integration of rna editing part in the software
+    - code quality improvement and cleaning classifier part 
+
+
