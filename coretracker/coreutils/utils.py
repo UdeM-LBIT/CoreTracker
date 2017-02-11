@@ -22,6 +22,8 @@ import Bio.SubsMat.MatrixInfo as MatrixInfo
 import numpy as np
 import pandas as pd
 import scipy.stats as ss
+import matplotlib.pyplot as plt
+
 from Bio import AlignIO, Alphabet, SeqIO, SubsMat, codonalign
 from Bio.Align import AlignInfo, MultipleSeqAlignment
 from Bio.Alphabet import IUPAC, generic_nucleotide, generic_protein
@@ -45,19 +47,13 @@ from pdfutils import *
 
 SEABORN = False
 try:
-    import matplotlib.pyplot as plt
-    vplot = plt.violinplot
-except ImportError as e:
-    print("Could not import matplotlib")
-    print(traceback.format_exc())
-except Exception, err:
-    print("Cannot use violinplot from matplotlib")
-    print(traceback.format_exc())
-    print("Trying to use seaborn for violinplot")
     import seaborn as sns
     sns.set(context="paper", palette="deep")
     sns.set_style("whitegrid")
     SEABORN = True
+except ImportError as e:
+    # quiet fallback to matplotlib
+    vplot = plt.violinplot
 
 # conditional import
 GRAPHICAL_ACCESS = True
@@ -840,11 +836,14 @@ class SequenceSet(object):
         self.position = np.asarray(
             xrange(current_alignment.get_alignment_length()))
 
+        logging.debug("Alignment length  %d" %
+                      current_alignment.get_alignment_length())
+
         if(gap_thresh):
             self._gap_alignment, self._gap_filtered_position = self.clean_alignment(
                 current_alignment, threshold=(abs(gap_thresh) <= 1 or 0.01) * abs(gap_thresh))
             current_alignment = self._gap_alignment
-            logging.debug("Alignment length after removing gaps : %d" %
+            logging.debug("Alignment length after filtering by gaps percent : %d" %
                           current_alignment.get_alignment_length())
             tt_filter_position = tt_filter_position[
                 self._gap_filtered_position]
@@ -854,9 +853,20 @@ class SequenceSet(object):
             ic_content = align_info.information_content()
             max_val = max(align_info.ic_vector) * \
                 ((abs(ic_thresh) <= 1 or 0.01) * abs(ic_thresh))
-            ic_pos = (np.asarray(align_info.ic_vector) >= max_val).nonzero()
+            ic_vector = align_info.ic_vector
+
+            # little hack for biopython < 1.69 and > 1.65
+            if isinstance(ic_vector, dict):
+                ic_vector = np.zeros(len(align_info.ic_vector))
+                for (ic_i, ic_v) in align_info.ic_vector.items():
+                    ic_vector[ic_i] = ic_v
+                max_val = max(ic_vector) * \
+                    ((abs(ic_thresh) <= 1 or 0.01) * abs(ic_thresh))
+
+            ic_pos = (np.asarray(ic_vector) >= max_val).nonzero()
+
             logging.debug(
-                "Filtering with ic_content, vector to discard is %s" % str(ic_pos[0]))
+                "Filtering with ic content, positions to discard is %s" % str(ic_pos[0]))
             # ic_pos here is a tuple, so we should access the first element
             self._ic_alignment = self.filter_align_position(
                 current_alignment, ic_pos[0])
@@ -864,7 +874,7 @@ class SequenceSet(object):
             current_alignment = self._ic_alignment
             tt_filter_position = tt_filter_position[
                 self._ic_filtered_positions]
-            logging.debug("Alignment length filtering with information content: %d" %
+            logging.debug("Alignment length after filtering with information content: %d" %
                           current_alignment.get_alignment_length())
 
         if(id_thresh):
@@ -923,7 +933,7 @@ class SequenceSet(object):
         return edited_alignment
 
     @classmethod
-    def clean_alignment2(clc, alignment=None, characs=['-'], threshold=0.5):
+    def clean_alignment(clc, alignment=None, characs=['-'], threshold=0.5):
         """Remove position of alignment which contain character from characs"""
         align_array = np.array([list(rec) for rec in alignment], dtype=str)
         indel_array = np.where(~(np.mean(np.in1d(align_array,
@@ -1686,7 +1696,13 @@ def compute_ic_content(alignment):
         align_info = AlignInfo.SummaryInfo(
             MultipleSeqAlignment(alignment.values()))
     align_info.information_content()
-    return align_info.ic_vector
+    ic_vector = align_info.ic_vector
+    # biopython wrong version hack
+    if isinstance(ic_vector, dict):
+        ic_vector = np.zeros(len(align_info.ic_vector))
+        for (ic_i, ic_v) in align_info.ic_vector.items():
+            ic_vector[ic_i] = ic_v
+    return ic_vector.tolist()
 
 
 def check_gain(codon, cible_aa, speclist, tree, codontable, codon_alignment,
