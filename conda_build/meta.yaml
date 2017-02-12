@@ -1,13 +1,12 @@
-{% set version = "1.1.3" %}
+{% set version = "1.1.5" %}
 
 package:
   name: coretracker
   version: "{{ version }}"
 
 source:
-  fn: CoreTracker-1.1.3.tar.gz
-  url: https://pypi.python.org/packages/5b/b3/00581ccc4bd0a1aaf428be1f4badde61f7ea4c09d24c9a1f2e21e9e60a09/CoreTracker-1.1.3.tar.gz
-  md5: 1535aadc401d7a99e89527656977226a
+  git-url: https://github.com/UdeM-LBIT/CoreTracker.git
+  git_rev: "{{ version }}"
 
 build:
   binary_relocation: True
@@ -19,7 +18,7 @@ requirements:
   build:
     - python
     - setuptools
-    - numpy >=1.8.1
+    - numpy >=1.8.2
     - scipy >=0.16.1
     - matplotlib >=1.5.1
     - biopython >=1.65
@@ -27,6 +26,7 @@ requirements:
     - weasyprint
     - pyyaml
     - pandas
+    - pyqt ==4.11.4
     - ete3
     - libgfortran
     - muscle
@@ -35,7 +35,7 @@ requirements:
 
   run:
     - python
-    - numpy >=1.8.1
+    - numpy >=1.8.2
     - scipy >=0.16.1
     - matplotlib >=1.5.1
     - biopython >=1.65
@@ -43,6 +43,7 @@ requirements:
     - weasyprint
     - pyyaml
     - pandas
+    - pyqt ==4.11.4
     - ete3   
     - muscle
     - hmmer
