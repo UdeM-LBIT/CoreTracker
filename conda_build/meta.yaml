@@ -5,7 +5,7 @@ package:
   version: "{{ version }}"
 
 source:
-  git-url: https://github.com/UdeM-LBIT/CoreTracker.git
+  git_url: https://github.com/UdeM-LBIT/CoreTracker.git
   git_rev: "{{ version }}"
 
 build:
