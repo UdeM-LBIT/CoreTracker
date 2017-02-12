@@ -23,7 +23,7 @@ before_install:
   - pip install --upgrade pip
   - pip install pep8
 install: 
-  - pip install -r requirement.txt
+  - pip install -r requirements.txt
   - python setup.py install
 # command to run tests
 script: 
