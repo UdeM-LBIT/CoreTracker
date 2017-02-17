@@ -1,12 +1,12 @@
 import re
 from PyQt4.QtGui import (QGraphicsRectItem, QGraphicsLineItem,
                          QGraphicsEllipseItem, QPen, QColor, QBrush,
-                         QFont, QPixmap, QFontMetrics, QPainter,
-                         QGraphicsSimpleTextItem, QGraphicsTextItem, QGraphicsItem)
+                         QFont, QPixmap, QPainter, QGraphicsSimpleTextItem,
+                         QGraphicsTextItem, QGraphicsItem)
 
-from PyQt4.QtCore import Qt, QPointF, QRect, QRectF
+from PyQt4.QtCore import Qt, QPointF, QRect
 from ete3 import faces
-from ete3.treeview.main import *
+from ete3.treeview.main import COLOR_SCHEMES
 import math
 
 _aafgcolors = {
@@ -173,7 +173,7 @@ class _PieChartItem(QGraphicsRectItem):
     def paint(self, painter, option, widget):
         a = 5760  # 16 * 360, this is a full circle
         angle_start = 0
-        radius = max(self.rect().width(), self.rect().height()) / 2.
+        # radius = max(self.rect().width(), self.rect().height()) / 2.
 
         if not self.line_color:
             painter.setPen(Qt.NoPen)
@@ -386,7 +386,7 @@ class List90Face(faces.StaticItemFace):
                 text.setFont(font)
                 text.setBrush(QBrush(QColor(self.fgcolor)))
                 # Center text according to rectitem size
-                txtw = text.boundingRect().width()
+                # txtw = text.boundingRect().width()
                 txth = text.boundingRect().height()
                 text.setRotation(self.rot)
                 text.setX(txth)

@@ -43,7 +43,6 @@ htmlcov/
 .cache
 nosetests.xml
 coverage.xml
-*,cover
 
 # Translations
 *.mo
@@ -60,17 +59,11 @@ target/
 # results
 tmp/*
 
-
-# discard images
-*.png
-*.svg
-*.jpg
-*.pdf
-
 data/*
 lscript/
 script/coretracker.py
 script/codeusage.py
-zip_resultat/
 misc_data/
 coretracker/classifier/model_old/
+coretracker/classifier/new_classifier.py
+coretracker.py

@@ -160,13 +160,13 @@ if __name__ == '__main__':
     parser.add_argument('--version', action='version', version='%(prog)s 1.0')
 
     parser.add_argument('--gapfilter', '--gap', type=float, default=0.6, dest='gapfilter',
-                        help="Remove position with gap from the alignment, using gapfilter as threshold (default :0.6)")
+                        help="Remove position with more than `gapfilter` gap from the alignment, using gapfilter as threshold (default :0.6)")
 
     parser.add_argument('--idfilter', '--id', type=float, default=0.5, dest='idfilter',
-                        help="Conserve only position with at least idfilter residue identity (default : 0.5)")
+                        help="Conserve only position with at least `idfilter` residue identity (default : 0.5)")
 
     parser.add_argument('--icfilter', '--ic', type=float, default=0.5, dest='iccontent',
-                        help="Shannon entropy threshold (default : 0.5 ). This will be used to discard column where IC < max(IC_INFO_VECTOR)*(IC_INFO_THRESHOLD/ 100.0)))")
+                        help="Shannon entropy threshold (default : 0.5 ). This will be used to discard column where IC < max(icvector)*icfilter)")
 
     parser.add_argument('-t', '--intree', dest="tree",
                         help='Input specietree in newick format', required=True)
