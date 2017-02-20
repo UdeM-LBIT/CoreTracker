@@ -342,10 +342,15 @@ class SequenceLoader:
                 executeCMD(buildline, 'hmmbuild')
             # will continue if not exception is found
             alignline = hmmalign + \
-                " -q -o %s %s %s" % (outputFile, tmphmmfile, ungapedInputFile)
+                " -o %s %s %s" % (outputFile, tmphmmfile, ungapedInputFile)
             executeCMD(alignline, 'hmmalign')
             # finding quality
-            quality.append(accessQuality(outputFile, minqual, strategie))
+            try:
+                quality.append(accessQuality(outputFile, minqual, strategie))
+            except IOError:
+                raise IOError(
+                    "File '%s' not found. Either alignment failed, or you are using a wrong hmm version with HMMER" % outputfile)
+
             inputFile = remove_gap_only_columns(outputFile, 'stockholm')
             if i > 0 and improve_is_stagned(outlist[-1], inputFile, len(outlist) * 1.0 / loop):
                 logging.debug(

@@ -41,13 +41,14 @@ class SeqRep:
         if outdir and not os.path.exists(outdir):
             os.makedirs(outdir)
 
+        if reverse:
+            seqlist = self.__convert_to(seqlist)
+
         if outfmt == 'corefile':
             CoreFile.write_corefile(
                 seqlist, os.path.join(outdir, outfile))
 
         elif outfmt in poss_format:
-            if reverse:
-                seqlist = self.__convert_to(seqlist)
             for spec, recs in seqlist.items():
                 if len(recs) > 0:
                     try:
@@ -62,9 +63,9 @@ class SeqRep:
             fname = os.path.basename(f).lower().split('.', 1)[0]
             for seqrec in SeqIO.parse(f, fmt):
                 geneid = seqrec.id.lower()
-                seqrec.id = fname
-                seqrec.name = fname
-                self.seqlist[geneid].append(seqrec)
+                seqrec.id = geneid
+                seqrec.name = geneid
+                self.seqlist[fname].append(seqrec)
 
     def _core_parser(self, flist):
         if len(flist) != 1:
