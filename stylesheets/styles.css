@@ -9,7 +9,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   color:#222;
   margin:0 0 20px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 p, ul, ol, table, pre, dl {
@@ -22,7 +22,7 @@ h1, h2, h3 {
 
 h1 {
   font-size:32px;
-font-family: 'Orbitron', sans-serif;
+  font-family: 'Orbitron', sans-serif;
 }
 
 p.subtitle{
@@ -46,6 +46,10 @@ a:hover {
   color:#069;
 }
 
+ol {
+	padding-left: 1.3rem;
+}
+
 a small {
   font-size:11px;
   color:#777;
@@ -65,6 +69,10 @@ blockquote {
 }
 code, pre {
   font-size:12px;
+}
+
+code.coretracker{
+	font-size:14px;
 }
 
 
@@ -91,6 +99,10 @@ ul + pre {
   margin-top: 1em;
 }
 
+p + h4 {
+	margin-top : 1em;
+}
+
 pre code {
   white-space: pre-wrap;       /* Since CSS 2.1 */
     white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
@@ -110,6 +122,10 @@ div.content{
 div.content p{
 margin-top: 10px;
 padding: 5px;
+}
+
+.normalul{
+	list-style: decimal;
 }
 
 pre.headers {
@@ -161,7 +177,7 @@ pre.terminal {
   background-clip: padding-box;
   border: 2px solid #DEDEDE;
   position: relative;
-  padding: 10px;
+  padding: 8px 6px 8px 8px;
   text-shadow: none;
   background-image: none;
   filter: none;
@@ -173,13 +189,27 @@ pre.terminal em {
 }
 
 
-span.bash-output {
-  background-image: none;
-  display: block;
-  position: relative;
+pre.seqrep{
+	white-space: pre-line;   
+	white-space: -moz-pre-line;  /* Mozilla, since 1999 */
+    white-space: -pre-line;      /* Opera 4-6 */
+    white-space: -o-pre-line;    /* Opera 7 */
+    word-wrap: break-word;  
+	word-break: break-all;
 
 }
 
+span.cmd {
+ background-image: none;
+ display: inline-block;
+ word-wrap: break-word;   
+ padding: 0px 0px;
+ text-align: left;
+}
+
+span.cmd:before{
+	content : '$ ';
+}
 /* end */
 
 table {
@@ -209,7 +239,7 @@ img {
 .wrapper {
   min-width: 700px;
   max-width:1000px;
-  margin:0 20px;
+  margin:0 auto;
 
 }
 
@@ -273,26 +303,27 @@ header ul.index{
   padding:0;
   margin: 0;
   float:left;
+  padding-left: 10px;  
   font-size: 1.12em;
 
 }
 
 header ul.index li{
-  list-style-position: inside;
-  display: block;
-  margin-bottom: 15px;
-  width : 100%;
-
+	list-style-position: inside;
+	display: block;
+	line-height:1.5;
+	margin: 0.8rem 0;
+	width : 100%;
 }
 
 header ul.index a {
     text-decoration: none;
-    line-height:1.5;
-    padding: 10px;  
     text-align:left;
 
-
 }
+
+
+
 /* Change the link color on hover */
 header ul.index a:hover {
     color: #222;
@@ -302,6 +333,21 @@ header ul.index a.active {
   color: #222;
 }
 
+
+header ul.tutoindex{
+	width: 250px;
+	font-size: 0.95em;
+	margin: 0px 15px;
+	padding: 0px 1.5rem;
+
+}
+
+header ul.tutoindex li{
+	line-height:1;
+	list-style-position: outside;
+	display: list-item;
+	list-style-type: disc;
+}
 
 strong {
   color:#222;
@@ -323,12 +369,13 @@ section {
   padding-top: 20px;
   width:700px;
   float:right;
-  padding-bottom:100px;
+  padding-bottom:50px;
 }
 
 .section{
   margin-left: 5px;
   width: auto;
+  margin-top : 8px;
 }
 small {
   font-size:11px;
@@ -342,11 +389,16 @@ hr {
 }
 
 footer {
-  width:250px;
-  float:left;
-  position:fixed;
-  bottom:40px;
-  -webkit-font-smoothing:subpixel-antialiased;
+  width:700px;
+  float:right;
+  padding-bottom: 30px;
+}
+
+footer p{
+	line-height: 1;
+}
+footer p small{
+	color:#999;
 }
 
 @media print, screen and (max-width: 960px) {
@@ -380,8 +432,35 @@ footer {
   header ul {
     position:absolute;
     right:50px;
-    top:52px;
+    top:50px;
   }
+  
+  header ul.index {
+   
+   top: 120px;
+   right: 45px;
+   min-width: 350px;
+   text-align: right;
+  }
+  
+  header ul.index li{
+  	display: inline;
+  	padding-right: 8px;
+  }
+
+  header ul.index a.active {
+	color:#39c;
+
+  }
+
+  header ul.index a.active:hover {
+	color: #222;
+
+  }
+  .tutoindex{
+  	display: none;
+  }
+
 }
 
 @media print, screen and (max-width: 720px) {
@@ -393,6 +472,10 @@ footer {
     padding:0;
   }
 
+  div.wrapper{
+  	padding-right: 30px;
+  }
+
   header ul, header p.view {
     position:static;
   }
@@ -400,12 +483,18 @@ footer {
   pre, code {
     word-wrap:normal;
   }
+
+  header ul.index {
+    display: none;
+  }
+
 }
 
 @media print, screen and (max-width: 480px) {
   body {
     padding:15px;
   }
+
 
   header ul {
     width:99%;
@@ -414,6 +503,7 @@ footer {
   header li, header ul li + li + li {
     width:33%;
   }
+
 }
 
 @media print {

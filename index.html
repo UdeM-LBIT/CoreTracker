@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/github-light.css">
     <meta name="viewport" content="width=device-width">
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Orbitron|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Orbitron|Lato" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -41,10 +41,21 @@
         </ul>
         <ul class="index">
           <li><a class="active" href="#readme">About</a></li>
-          <li><a href="#install">Installation</a></li>
+          <li><a href="#install">Installation</a>
+    		<ul class="tutoindex" type ="1">
+          		<li ><a href="#conda">Conda</a></li>
+          		<li ><a href="#native">Native</a></li>
+          	</ul>
+          </li>
+
           <li><a href="#usage">Usage</a></li>
-          <li><a href="#tuto">Tutorial</a></li>
-          <li><a href="#help">Help</a></li>
+          <li><a href="#tuto">Tutorial</a>
+          	<ul class="tutoindex">
+          		<li ><a href="#dataprep">Dataset preparation</a></li>
+          		<li ><a href="#corexec">CoreTracker execution</a></li>
+          		<li ><a href="#gclust">Genome clustering</a></li>
+          	</ul>
+          </li>
         </ul>
       </header>
       <section>
@@ -52,39 +63,136 @@
         <div class="section" id="readme">
           <h2>
           <a class="anchor" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About CoreTracker</h2><p>
-        CoreTracker is a tool witten in python for the prediction of codon reassignment. CoreTracker detects evidences of codon reassignment from the protein repertoire of a set of genomes by successively applying different algorithms. It’s therefore a filtering approach that explore all possible reassignments in every genomes from the input set, and retain only the most promising one. Our method is the first approach for detecting codon reassignments, that accounts for the phylogenetic context of considered genomes.</p>
-        <p>CoreTracker requires as input a groups of orthologous genes (nucleotide and amino acid sequences) across the genomes of interest, the species phylogenetic tree and a preliminary genetic code. User can either provide their own protein alignment or use CoreTracker default alignment pipeline which consist of a preliminary alignment with <a href="http://drive5.com/muscle/">muscle</a>/<a href="http://mafft.cbrc.jp/alignment/software/">mafft</a> followed by a refinement with a hmm profile, using binaries from <a href="http://hmmer.org/">HMMER</a></p>
-        <p> A thorough description of CoreTracer pipeline can be found in our paper : </p><p><blockquote cite="">V. Calderon, E. Noutahi, M. Blanchette, N. El-Mabrouk and F. Lang, New sequence-based method to predict codon reassignments, applied to mitochondrial codon evolution. </blockquote></p>
+        <code class="coretracker">CoreTracker</code> is a tool witten in python for the prediction of codon reassignment. <code class="coretracker">CoreTracker</code> detects evidences of codon reassignment from the protein repertoire of a set of genomes by successively applying different algorithms. It’s therefore a filtering approach that explore all possible reassignments in every genomes from the input set, and retain only the most promising one. Our method is the first approach for detecting codon reassignments, that accounts for the phylogenetic context of considered genomes.</p>
+        <p><code class="coretracker">CoreTracker</code> requires as input a groups of orthologous genes (nucleotide and amino acid sequences) across the genomes of interest, the species phylogenetic tree and a preliminary genetic code. User can either provide their own protein alignment or use <code class="coretracker">CoreTracker</code> default alignment pipeline which consist of a preliminary alignment with <a href="http://drive5.com/muscle/">muscle</a>/<a href="http://mafft.cbrc.jp/alignment/software/">mafft</a> followed by a refinement with a hmm profile, using binaries from <a href="http://hmmer.org/">HMMER</a></p>
+        <p> A thorough description of <code class="coretracker">CoreTracker</code>  pipeline can be found in our paper : </p><p><blockquote cite="">V. Calderon, E. Noutahi, M. Blanchette, N. El-Mabrouk and F. Lang, New sequence-based method to predict codon reassignments, applied to mitochondrial codon evolution. </blockquote></p>
       </div>
 
       <!-- Install section -->
       <div class="section" id="install">
         <h2>
         <a class="anchor" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
-        <p>CoreTracker is only compatible with python 2.7 currently. You will find below, multiple ways to install CoreTracker. I recommend to install it through the conda way.</p>
-          <h4>Manually download from github</h4>
-          <h4>Install using pip</h4>
-          <h4>Install with a conda environment</h4>
-          <p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-          <p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-          <p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-          <p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-      </div>
+        <p><code class="coretracker">CoreTracker</code> is only compatible with python 2.7 currently and was only tested on linux. Installation require the following external application : <code>gfortran</code>, <a href="https://www.riverbankcomputing.com/software/pyqt/download"><code>PyQt4</code>, </a><a href="http://drive5.com/muscle/"><code>muscle</code></a>, <a href="http://mafft.cbrc.jp/alignment/software/"><code>mafft</code></a> and <a href="http://hmmer.org/download.html"><code>HMMER</code></a>. Python dependencies are listed in the <a href="https://github.com/UdeM-LBIT/CoreTracker/blob/master/requirements.txt"> <code>requirements.txt</code></a> file</p>
+          <h3 id="conda">Install CoreTracker using the Anaconda/Miniconda environment</h3>
+          The easiest and recommended way to install <code class="coretracker">CoreTracker</code> is through <a href="https://www.continuum.io/content/conda-data-science"><code>conda</code></a>. If you are already familiar with conda, I recommend you setup a virtual env just for this.
+<pre class="terminal">
+<span class="comment"># Install Miniconda  (you can ignore this step if you already have Anaconda/Miniconda)</span>
+<span class="cmd">wget http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh -O miniconda.sh</span>
+<span class="cmd">bash miniconda.sh -b -p ~/anaconda/</span>
+<span class="cmd">export PATH=~/anaconda/bin:$PATH;</span>
+<span class="comment"># Install CoreTracker (all dependencies should be installed along)</span>
+<span class="cmd">conda install -c maclandrol coretracker=1.1.5</span>
+<span class="comment"># Run this or add it to your .bashrc before using CoreTracker</span>
+<span class="cmd">export PATH=~/anaconda/bin:$PATH</span>
+</pre>
+
+Alternatively, my conda environment is <a href="https://github.com/UdeM-LBIT/CoreTracker/blob/master/env.yml">also provided here (env.yml)</a> if you encounter any troubles with the installation. Common problems are due to a wrong version of numpy, or scipy (compilation error due to BLAS and LAPACK or lack of <code>gcc/gfortran</code> for <code>C/fortran</code> extensions). If you have a <code>segmentation fault</code> after installing CoreTracker, try reinstalling numpy and scipy. 
+
+<pre class="terminal">
+<span class="comment"># Using conda, create a new environment based on the provided env.yml file</span>
+<span class="cmd">conda env create -f env.yml</span>
+<span class="comment"># Now install CoreTracker using the native method</span>
+<span class="cmd">pip install --upgrade coretracker</span>
+</pre>
+
+
+<h3 id="native">Native installation</h3>
+First install the external dependencies. You will need <code>sudo</code>. Depending on your distribution, you could also have to compile and install from sources. From experience, it's sometime better to install <code>numpy</code> using distribution specific source because of <code>C/fortran</code> extensions.
+<pre class="terminal">
+<span class="comment"># Install dependencies (debian distributions)</span>
+<span class="cmd">sudo apt-get update</span>
+<span class="cmd">sudo apt-get install libgfortran python-numpy python-qt4 python-lxml python-six</span>
+<span class="cmd">sudo apt-get install muscle mafft hmmer</span>
+</pre>
+Now install CoreTracker with <code>pip</code> or <code>setup.py</code>. I recommend setting-up a virtualenv for coretracker.
+<pre class="terminal">
+<span class="cmd">pip install --upgrade coretracker</span>
+</pre>
+
+<pre class="terminal">
+<span class="comment"># Download the latest source from <a href="https://github.com/UdeM-LBIT/CoreTracker/releases/latest">github</a> or <a href="https://pypi.python.org/pypi/CoreTracker">PyPi</a></span>
+<span class="cmd">python setup.py install</span>
+<span class="comment"># You may want to install <code>seaborn</code> from the <a href="https://github.com/UdeM-LBIT/CoreTracker/blob/master/requirements.txt">requirements.txt</a> file if you want prettier plots</span>
+<span class="comment"># This is however, totally optionnal</span>
+<span class="cmd">pip install --upgrade seaborn</span>
+</pre>
+
+</div>
 
 <!-- Usage section -->
 <div class="section" id="usage">
 <h2><a class="anchor" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
 
-<p>To invoke CoreTracker, just type <code>coretracker</code> in a terminal. Its command line options will be printed </p>
+<p>To invoke CoreTracker, just type <b><code>coretracker -h</code></b> after installation in a terminal. Its command line options will be printed </p>
 <p>
-<code> coretracker [-h] [--wdir OUTDIR] [--version] [--gapfilter GAPFILTER]
-  [--idfilter IDFILTER] [--iccontent ICCONTENT]
-  [--verbose {0,1,2}] -t TREE [-s SCALE] --protseq SEQ
-  --dnaseq DNASEQ [--stopcodon] [--debug] [--rmconst]
-  [--showall] [--norefine] [--novalid]
-  [--align {muscle,mafft}] [--use_tree] [--expos]
-  [--submat SUBMAT] [--hmmdir HMMDIR] [--params PARAMS]
-  [--parallel [PARALLEL]]</code></p>
+<pre class="terminal">CoreTracker v:1.1.5 Copyright (C) 2017 Emmanuel Noutahi
+usage: coretracker [-h] [--wdir OUTDIR] [--version] [--gapfilter GAPFILTER]
+                   [--idfilter IDFILTER] [--icfilter ICCONTENT] -t TREE
+                   [--scale SCALE] --protseq SEQ --dnaseq DNASEQ [--stopcodon]
+                   [--debug] [--rmconst] [--norefine] [--novalid]
+                   [--align [ALIGN]] [--use_tree] [--expos] [--hmmdir HMMDIR]
+                   [--params PARAMS] [--parallel [PARALLEL]]
+                   [--imformat {pdf,png,svg}]
+
+CoreTracker, A codon reassignment tracker
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --wdir OUTDIR, --outdir OUTDIR
+                        Working directory
+  --version             show program's version number and exit
+  --gapfilter GAPFILTER, --gap GAPFILTER
+                        Remove position with more than `gapfilter` gap from
+                        the alignment, using gapfilter as threshold (default
+                        :0.6)
+  --idfilter IDFILTER, --id IDFILTER
+                        Conserve only position with at least `idfilter`
+                        residue identity (default : 0.5)
+  --icfilter ICCONTENT, --ic ICCONTENT
+                        Shannon entropy threshold (default : 0.5 ). This will
+                        be used to discard column where IC <
+                        max(icvector)*icfilter)
+  -t TREE, --intree TREE
+                        Input specietree in newick format
+  --scale SCALE         Scale to compute the branch format for the '--treein'
+                        option of mafft. If you're unsure, use the default
+                        value. See
+                        http://mafft.cbrc.jp/alignment/software/treein.html
+  --protseq SEQ, --prot SEQ, -p SEQ
+                        Protein sequence input in fasta format
+  --dnaseq DNASEQ, --dna DNASEQ, -n DNASEQ
+                        Nucleotides sequences input in fasta format
+  --stopcodon           Whether or not stop are present in protein alignment
+                        and dna sequences.
+  --debug               Enable debug printing
+  --rmconst             Remove constant site from filtered alignment.
+  --norefine            Do not refine the alignment. By default the alignment
+                        will be refined. This option should never be used if
+                        you have made your own multiple alignment and
+                        concatenate it. Else you will have absurd alignment
+                        (TO FIX)
+  --novalid             Do not validate prediction by retranslating and
+                        checking alignment improvement
+  --align [ALIGN]       Choose a program to align your sequences
+  --use_tree            This is helpfull only if the mafft alignment is
+                        selected. Perform multiple alignment, using species
+                        tree as guide tree. The tree must be rooted and binary
+  --expos, --export_position
+                        Export a json file with the position of each
+                        reassignment in the corresponding genome.
+  --hmmdir HMMDIR       Link a directory with hmm files for alignment. Each
+                        hmmfile should be named in the following format :
+                        genename.hmm
+  --params PARAMS       Use A parameter file to load parameters. If a
+                        parameter is not set, the default will be used
+  --parallel [PARALLEL]
+                        Use Parallelization during execution for each
+                        reassignment. This does not guarantee an increase in
+                        speed. CPU count will be used if no argument is
+                        provided
+  --imformat {pdf,png,svg}
+                        Image format to use for output (Codon_data file)
+  </pre></p>
 
 <p>Those options can be confusing for a new user, so here is a break down, depending on what you want to do. Please see the <a href="#tuto">tutoral section</a> for any issues not addressed here (dataset preparation, other tools, output interpretation)</p>
 <!-- BEGINNER -->
@@ -100,35 +208,35 @@
 <span class="comment"># Control sequence filtering</span>
 <code>coretracker -t "tree.nw" -p "protfile.core" -n "nucfile.core" <b>--gapfilter 0.3 --icfilter 0.3  --idfilter 0.6</b> --wdir "path/to/outdir"</code>
 
+<span class="comment"># Specify "Codon_data" file output format</span>
+<code>coretracker -t "tree.nw" -p "protfile.core" -n "nucfile.core" --gapfilter 0.3 --icfilter 0.3  --idfilter 0.6 --wdir "path/to/outdir" <b>--imformat svg</b></code>
+
 <span class="comment"># Remove constant site from alignment</span>
 <code>coretracker -t "tree.nw" -p "protfile.core" -n "nucfile.core" --gapfilter 0.3 --icfilter 0.3  --idfilter 0.6 --wdir "path/to/outdir" <b>--rmconst</b></code>
 
-<span class="comment"># Specify verbose level </span>
-<code>coretracker -t "tree.nw" -p "protfile.core" -n "nucfile.core" --gapfilter 0.3 --icfilter 0.3  --idfilter 0.6 --wdir "path/to/outdir" <b>--verbose 2</b></code>
+<span class="comment"># Use mafft to perform alignment</span>
+<code>coretracker -t "tree.nw" -p "protfile.core" -n "nucfile.core" --gapfilter 0.3 --icfilter 0.3  --idfilter 0.6 --wdir "path/to/outdir" <b>--align mafft</b></code>
 </pre>
 </div>
 
 <!-- EXPERT -->
 <div class="content">
-    <pre class="headers">Expert level</pre>
+    <pre class="headers">Intermediate level</pre>
 <pre class="highlight">
+<span class="comment"># Show verbose for debugging purpose</span>
+<code>coretracker -t "tree.nw" -p "protfile.core" -n "nucfile.core" --gapfilter 0.3 --icfilter 0.3  --idfilter 0.6 --wdir "path/to/outdir" <b>--debug</b></code>
+
 <span class="comment"># Use parallel processing on 4 CPU</span>
 <code>coretracker -t "tree.nw" -p "protfile.core" -n "nucfile.core" --gapfilter 0.3 --icfilter 0.3  --idfilter 0.6 --wdir "path/to/outdir" <b>--parallel 4</b></code>
-
-<span class="comment"># Use mafft to perform alignment</span>
-<code>coretracker -t "tree.nw" -p "protfile.core" -n "nucfile.core" --gapfilter 0.3 --icfilter 0.3  --idfilter 0.6 --wdir "path/to/outdir" <b>--align mafft</b></code>
 
 <span class="comment"># Perform alignment according to input tree</span>
 <code>coretracker -t "tree.nw" -p "protfile.core" -n "nucfile.core" --gapfilter 0.3 --icfilter 0.3  --idfilter 0.6 --wdir "path/to/outdir" <b>--align mafft --use_tree --scale 1</b></code>
 
-<span class="comment"># Deactivate automatic  alignment refinement step based on HMM</span>
+<span class="comment"># Deactivate automatic alignment refinement step based on HMM</span>
 <code>coretracker -t "tree.nw" -p "protfile.core" -n "nucfile.core" --gapfilter 0.3 --icfilter 0.3  --idfilter 0.6 --wdir "path/to/outdir" <b>--norefine</b></code>
 
 <span class="comment"># Specify a directory with HMM files for each gene</span>
 <code>coretracker -t "tree.nw" -p "protfile.core" -n "nucfile.core" --gapfilter 0.3 --icfilter 0.3  --idfilter 0.6 --wdir "path/to/outdir" <b>--hmmdir "path/to/hmmdir"</b></code>
-
-<span class="comment"># Try to remove '*' and stop codons from alignment</span>
-<code>coretracker -t "tree.nw" -p "protfile.core" -n "nucfile.core" --gapfilter 0.3 --icfilter 0.3  --idfilter 0.6 --wdir "path/to/outdir" <b>--stopcodon</b></code>
 </pre>
 </div>
 
@@ -138,17 +246,15 @@
 <pre class="highlight"><span class="comment"># Export a json file with postition of validated reassigned codon in each genome</span>
 <code>coretracker -t "tree.nw" -p "protfile.core" -n "nucfile.core" --gapfilter 0.3 --icfilter 0.3  --idfilter 0.6 --wdir "path/to/outdir" <b>--expos</b></code>
 
-<span class="comment"># Use `pam250` substitution matrix instead</span>
-<code>coretracker -t "tree.nw" -p "protfile.core" -n "nucfile.core" --gapfilter 0.3 --icfilter 0.3  --idfilter 0.6 --wdir "path/to/outdir" <b>--submat pam250</b></code>
-
 <span class="comment"># More control over parameters</span>
 <code>coretracker -t "tree.nw" -p "protfile.core" -n "nucfile.core" --gapfilter 0.3 --icfilter 0.3  --idfilter 0.6 --wdir "path/to/outdir" <b>---params param.yml</b></code>
 
 </pre>
 <p><strong>"param.yml"</strong> is a parameter file in <a href="http://www.yaml.org/start.html">YAML format</a> used to provide additional control over 
-CoreTracker's internal algorithm. An example of the content of such file is provided below.</p>
-<pre class="terminal"><span class="comment"># amino acid to exclude from the plot
-# this will speed up a lot the data generation
+CoreTracker's internal algorithm. An example of the content of such file is provided below. For a complete list of the hidden parameters, please see this file : <span class="highlight"><a href="https://github.com/UdeM-LBIT/CoreTracker/blob/master/coretracker/settings/parameters.py">parameters</a></span></p>
+
+<pre class="terminal"><span class="comment"># amino acid to exclude
+# this will speed up a lot the analysis
 # If you exclude an amino acid, there won't be a reassignment to that aa</span>
 EXCLUDE_AA: "CDEHLPTVWY"
 
@@ -159,12 +265,12 @@ EXCLUDE_AA_FROM: "CDEHLPTVWY"
 AA_MAJORITY_THRESH: 0.5
 
 <span class="comment"># Mode to compute suspected species
-# possible values : count, wilcoxon, mannwhitney, kmean, ttest
+# possible values : wilcoxon, mannwhitney, kmean, ttest
 # Keep this to wilcoxon</span>
 MODE: 'wilcoxon'
 
-<span class="comment"># Distance matrice:</span>
-MATRIX: 'identity'
+<span class="comment"># Distance matrice: identity or known substitution matrix</span>
+MATRIX: 'blosum62'
 
 <span class="comment"># Codon to amino acid likelihood. 
 # Use either consensus or complete alignment for Telford score</span>
@@ -173,7 +279,7 @@ USE_CONSENSUS_FOR_LIKELIHOOD: False
 <span class="comment"># Show codon in non conserved position for its amino acid on the output 'Codon_data' file</span>
 SHOW_MIXTE_CODONS: False
 
-<span class="comment"># Show Filtered codon data</span>
+<span class="comment"># Show global codon data</span>
 SHOW_GLOBAL_CODON_DATA: False
 
 <span class="comment"># Add the total count in each pie chart in the codon detail figure</span>
@@ -182,10 +288,7 @@ ADD_NUMBER_PIE: False
 <span class="comment"># alpha : rejection of the null hypothesis</span>
 CONF: 0.05
 
-<span class="comment"># Methionine start codon range from gene 5' end.</span>
-STARTDIST: 20
-
-<span class="comment"># Learning model to use (1-3)</span>
+<span class="comment"># RF model to use (1-3)</span>
 MODEL_TYPE: '3'
 </pre>
 </div>
@@ -195,86 +298,120 @@ MODEL_TYPE: '3'
 <!-- Tuto section -->
 <div class="section" id="tuto">
   <h2>
-  <a class="anchor" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Complete Tutorial</h2>
-  <p>You can @mention a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-  <p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-  <p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-  <p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-</div>
+  <a class="anchor" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tutorial</h2>
+	<p>The data used in this tutorial is available on the <a href="https://github.com/UdeM-LBIT/CoreTracker/tree/master/examples">examples</a> folder of the <a href="https://github.com/UdeM-LBIT/CoreTracker">github repository</a> or as a zip file from google drive : <a href="">tutorial.zip</a>.</p>
+	<h3 id="dataprep">Dataset preparation</h3>
+	<p>In this section, we will learn how to prepare dataset for a typical coretracker run. We will introduce the following tools : <b><code>corextract</code></b>, <b><code>coretrans</code></b>, <b><code>corefus</code></b> and <b><code>coreconvert</code></b> shipped with <code class="coretracker">CoreTracker</code>.
+     <ol>
+     <h4><li>The core sequence format</li></h4>
+     <p>The <b>corefasta</b> or <b>core</b> sequence format is the default sequence format used by <code class="coretracker">CoreTracker</code>. It is a format adapted from the <a href="https://en.wikipedia.org/wiki/FASTA_format">fasta format</a>  whose purpose is to keep annoted genes from multiple different genomes in the same file. As the fasta format, this format support both aligned and unaligned sequences. This format make easy the representation of concatenated alignment by allowing clear delimitation of genes start and ends.</p>
+     <p>The first line in a core file starts either with a "<b><code>&gt;&gt;</code></b>", taken as a comment containing an identifiant shared by a group or sequences (usually gene name for a list of orthologous sequences). This line is followed by multiple other lines which either start by a sequence identifiant "<b><code>&gt;</code></b>" or represent the actual sequence itself in the standard one-letter code. Thus the <b>core</b> sequence format is just multiples fasta files separated by a line starting by <b><code>&gt;&gt;</code></b> which represent a group identifiant. The fasta format specification should be used, except for the character limits per line and both nucleotide and amino-acid sequences are accepted</p> 
+     <p>An example of such file (with fictional sequences) is provided bellow : </p>
+<pre class="seqrep">
+<b>>>Gene_1
+>species_1</b>
+ATGTCGTGAAGTAGGGATTCCATTAGTACAATACTTATTGTCTTAAGTATTTTAGTAATCTTATTGAGTGGTATTATTATAATAGAAAGGAACCGAAATAATTATATAATAATATCCTTTTTCTTTTCTATACTCTTTTTAATCTTAAATACTACCTATGAACGTATATTTTCCAATTATTATTT
+<b>>species_2</b>
+GTGAATAATACGCCTCACACTCATTCTCAACCCCCTGACAAAACACATAGCCTACCCCTTCCTTGTACTATCCCTATGAGGCATAATTATAACAAGCTCCATCTGCCTACGACAAACAGACCTAAAATCGCTCATTGCATACTCTTCAAAATCGCCCACGGGCTTACCTAGCAAACTCAAACTACGAACGC
+<b>>species_3</b>
+GTGGGGCAATTTCAAGCCATTAAAAATTTTGAGTGAGTTCCGGGGTCGGCACTTTTAATTTTAACTGCTTTATTAACCCCGATTTGTGTTTTAATAAGTCGAAATTCGATTAAATCTTTGCTTTCTTTTTCTATACGTTTATTGGGTCCGTATTTATGTTACTAGCCATATGACCAAGTAGGAACTACTGACTATCAAGCCCTATGTTGTCAACA
 
-<!-- Help section -->
-<div class="section" id="help">
-  <h2>
-  <a class="anchor" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Help</h2>
-<div class="content">
-<p>The complete list of options available through <code>coretracker --help</code> is shown below</p>
-       <pre class="terminal">CoreTracker, A codon reassignment tracker
-    optional arguments:
-      -h, --help            show this help message and exit
-      --wdir OUTDIR, --outdir OUTDIR
-                            Working directory
-      --version             show program's version number and exit
-      --gapfilter GAPFILTER, --gap GAPFILTER
-                            Remove position with gap from the alignment, using
-                            gapfilter as threshold. The absolute values are taken
-      --idfilter IDFILTER, --id IDFILTER
-                            Conserve only position with at least idfilter residue
-                            identity
-      --iccontent ICCONTENT, --ic ICCONTENT
-                            Shannon entropy threshold (default : 0.5 ). This will
-                            be used to discard column where IC <
-                            max(IC_INFO_VECTOR)*(IC_INFO_THRESHOLD/ 100.0)))
-      --verbose {0,1,2}, -v {0,1,2}
-                            Verbosity level
-      -t TREE, --intree TREE
-                            Input specietree in newick format
-      -s SCALE, --scale SCALE
-                            Scale to compute the branch format
-      --protseq SEQ, --prot SEQ, -p SEQ
-                            Protein sequence input in fasta format
-      --dnaseq DNASEQ, --dna DNASEQ, -n DNASEQ
-                            Nucleotides sequences input in fasta format
-      --stopcodon           Whether or not stop are present in protein alignment
-                            and dna sequences.
-      --debug               Enable debug printing
-      --rmconst             Remove constant site from filtered alignment.
-      --showall             Save all result. Do not attempt to filter based on
-                            significance
-      --norefine            Do not refine the alignment. By default the alignment
-                            will be refined. This option should never be used if
-                            you have made your own multiple alignment and
-                            concatenate it. Else you will have absurd alignment
-                            (TO FIX)
-      --novalid             Do not validate prediction by retranslating and
-                            checking alignment improvement
-      --align {muscle,mafft}
-                            Choose a program to align your sequences
-      --use_tree            This is helpfull only if the mafft alignment is
-                            selected. Perform multiple alignment, using species
-                            tree as guide tree.
-      --expos, --export_position
-                            Export a json file with the position of each
-                            reassignment in the corresponding genome.
-      --submat SUBMAT       Choose a substitution matrix to compute codon
-                            alignment to amino acid likelihood, Default value is
-                            blosum62
-      --hmmdir HMMDIR       Link a directory with hmm files for alignment. Each
-                            hmmfile should be named in the following format :
-                            genename.hmm
-      --params PARAMS       Use A parameter file to load parameters. If a
-                            parameter is not set, the default will be used
-      --parallel [PARALLEL]
-                            Use Parallelization during execution for each
-                            reassignment. This does not guarantee an increase in
-                            speed. CPU count will be used if no argument is
-                            provided
-  </pre>
- </div>
- </div>
+<b>>>Gene_2
+>species_1</b>
+ATGCCACAATTAGAAGCTACAGAAATGAAGAAAGAAAGAATTAAACTGGAGACAATTTTAATAATATAA
+<b>>species_2</b>
+ATGCCCCAACTAAAACAAACCCTGAGAACCAAAATGAACGAAAATCTGTTCGCTTCATTCATTGCCCCCACAATCCTAG
+<b>>species_3</b>
+ATGCCACAATTAAACAGTAATCTCTTTTTCTATATTGATGATCACTTTTAAATATGAGCCTATTTTAGTACCTGTTTATTCTAAATAA
+<b>>species_4</b>
+ATTCCACAAATAGCACCTATTAGATGTTCTATTAACTATTATTCTTATATACCAAATCAATAAATTGAAAATGATAA
+</pre>
+<br>
+<p>Another example with aligned protein sequences : </p>
+<pre class="seqrep">
+<b>>>Gene_1
+>species_1</b>
+MATEILTAAKFVGAGAASIGAAGSGAGIGTVFGNLIIGYARNPSLKQQLFTYAILGFAISEAMGLFCLMMAFLILFAL
+<b>>species_2</b>
+MATEILTAAKFVGAG--SIGAAGSGAGIGTVFGNLIIGYARNPSLKQQLFTYAILGFAISEAMGLFCLMMAFLILFGL
+
+<b>>>Gene_2
+>species_1</b>
+-------------I-PQIAPI------RWLLL-FIIFSITFILF---------------------------------CSIN-------------------Y------------------YSYIPN-SPKSNELKNIN-----------------------------------LNSINW--KW----------------------------------
+<b>>species_2</b>
+--------------MPQLN----------------------------------------------------------------------------------------------------LF------S--------------------------------------------FFYISVISFSILMI---------TFKYEPIL------VPVY-SK
+<b>>species_3</b>
+--------------MPQLNTT------VWPTIITPI---LLTLFLITQLKILNTNYHLPP------------------SP----------KP---------IKIKNYN-------------------------------KPWEPKWTKICSLHSLPPQS---------------------------------------------------------
+<b>>species_4</b>
+--------------MPQIAPICH-LIYP-------------------------------------------------SIIILLIIVW---------------------------V-----------------------------ALGR---WKTARPTKTSQTSGRKLPS------------------------------PILNLPGKSW--NW--
+
+</pre>
+<br>
+<h4><li>Converting between format with coreconvert</li></h4>
+<p><code class="coretracker">CoreTracker</code> accept either already concatenated protein alignment in fasta format or (un)aligned sequences in core format. If your sequences are not in this format, you might want to convert them in an appropriate format. This can be done if you are familiar with sequence manipulation tools. Alternatively, you can use the <b><code>coreconvert</code></b> script installed with <code class="coretracker">CoreTracker</code>.</p>
+<p><b><code>coreconvert</code></b> support the following format for aligned sequence : <b><code>fasta, nexus, stockholm, clustal, core</code></b> and <b><code>fasta, core</code></b> for unaligned sequence. Type <b><code>coreconvert -h</code></b> for help.</p>
+<p>In the following example, we will try to convert multiple fasta files into a single core file. You will use the fasta files from the <b>test_convert</b> folder of the tutorial data.</p>
+<pre class="terminal">
+<span class="cmd">unzip coretrackerTutorial.zip</span>
+<span class="cmd">ls test_convert</span>
+<span class="cmd">coreconvert --outfmt=corefile --infmt=fasta  --outfile out.core test_convert/*.fasta</span>
+<span class="cmd">less out.core</span>
+</pre>
+<br>
+<p>Check the output file. Sequences are grouped by orthologous genes. You can flip the grouping by using the option <b><code>--order_reverse</code></b>. This does however not make sense for of aligned sequences. <code class="coretracker">CoreTracker</code>  as input a grouping of the sequences by orthology. The identifiant following "<b><code>&gt;&gt;</code></b>" should thereby be the gene identifiant.</p>
+     	<h4><li>Build a local sequences database from refseq gbff file with corextract</li></h4>
+     	<p>We will start by first downloading mitochondrial genomes from refseq release.</p>
+     	<pre class="terminal">
+<span class="cmd">mkdir genomes</span>
+<span class="cmd">wget ftp://ftp.ncbi.nlm.nih.gov/refseq/release/mitochondrion/mitochondrion.1.genomic.gbff.gz -P genomes/</span>
+<span class="cmd">gunzip genomes/mitochondrion.1.genomic.gbff.gz</span></pre>
+     	
+     	<p>Now we will build a local database containing mitochondrial genomes from the compressed genbank file, for fast data extraction later. For this purpose, we will use <b><code>corextract build</code></b>. You can either go grab a coffee, work on other things or just contemplate existence, because this step can take some time to finish (up to 5min).</p>
+     	<pre class="terminal"><span class="cmd">corextract build -db genomes/name.db -ib genomes/index.db -G genomes/mitochondrion.1.genomic.gbff</span></pre>
+     	<p>We have now two databases, <b><code>name.db</code></b> which serve to search faster for genome based on species name and <b><code>index.db</code></b> which link species to their genomes. Now we are going to attempt to construct a dataset from a list of genomes of interest by using they name. We will be using the following two files : <b><code><a href="">speclist</a></code></b> which contains a list of species name and <b><code><a href="">genelist</a></code></b> which contains a list of the genes we are trying to extract from their respective genbank genome file. Note that empty line and line starting with <b>"#"</b> are ignored from those files and regular expressions are accepted for the species list. Gene name are query against a local large database of mitochondrial gene alias when during sequence extraction. Latter version of the package will include alias from chloroplast and nuclear genes.</p>
+     	<p>In this example, we will search only completely annoted genomes by using the optional argument <b><code>--complete</code></b>. Note that if <b><code>-db name.db</code></b> is not use, http request will be made on ncbi taxonomy in order to guess the correct species name. The closest match to the provided name will be used, otherwise, the species will be skipped.</p>
+     	<pre class="terminal"><span class="cmd">corextract extract -G genomes/mitochondrion.1.genomic.gbff -ib genomes/index.db -db genomes/name.db --genelist genomes/genelist --speclist genomes/speclist --complete</span></pre>	
+     	<p>You can instead provide <b>NCBI taxonomy identifier</b> for all species in your <b><code>speclist</code></b> file, then use the option <b><code>--taxid</code></b>. For a complete list of the available option, run the help with <b><code>corextract -h</code></b>.</p>
+     	<p>The default output of the <b><code>corextract extract</code></b> is two files in the core sequence format : <b><code>output.core</code></b> which contains the nucleotide sequences and <b><code>output.core_prot</code></b> which contains the amino acid sequences. The program also print, in the terminal, warnings about possible <b>frame-shifting</b> and <b>undefined nucleotides (N)</b>. Attempts are made to correct <b>partial termination codons where TAA stop codon is completed by the addition of 3' A residues to the mRNA</b>, the success of such correction relies on the validness of the genbank file and the accuracy of its annotation. Therefore, manual correction might be needed. Corrections are mentionned in the terminal, with the label "FIXED" for easier confirmation.</p>
+     	<p>The number of genomes sharing a specific gene is shown. So is the genetic code of each extracted genomes. I don't recommend trusting this genetic code however.</p>
+     
+	<h4><li>Sequence translation with coretrans</li></h4>
+<p><code class="coretracker">CoreTracker</code> require the <em>a priori</em> amino-acid sequences matching the CDS as input. You can obtain this sequence by translating the nucleotide sequences according to a genetic code. This task can be done by the program <b><code>coretrans</code></b> from the package. <b><code>coretrans</code></b>  is not only able to translate dna sequences using a specified genetic code, but also align the resulting protein sequences. Current version of the package only accept one of the several genetic code listed at <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi">NCBI</a>. In the latter version, it might be possible to pass a user-made genetic code as input.</p>
+<p><b><code>coretrans</code></b> takes as mandatory input, the nucleotide sequences in corefasta format. Here we are going to translate the input file using the metazoan genetic code (4), filter out genes with frame-shifting that we were unable to recover, then align the translated sequences with <code>muscle</code>, and refine them using HMM of each genes.</p>
+
+<pre class="terminal">
+<span class="cmd">coretrans --nuc output.core --align --refine --hmmdir metazoan_hmm --filter --gcode '4' --wdir outdir</span>
+<span class="cmd">ls outdir</span></pre>
+<p>The output files should be listed in the specified output folder, by default, this folder is <b><code>trans_output</code></b>.</p> 
+<p>The sequence alignment pipeline use either <code>muscle</code> or <code>mafft</code> to align protein sequences. Those alignment can be refined by building a preliminary <code>Hidden Markov Model (HMM)</code> model using <b><code>hmmbuild</code></b> from <b><code>HMMER</code></b> then use it to align the sequences with <b><code>hmmalign</code></b> from the same package. This last step can be done on multiple iterations at the end of which only the best alignment according to the posterior probability will be kept. Note that from experimental data, alignment quality often stopped improving after a certain number of iteration, so we use an <b> early stopping criterion </b> which stop the n-loop at iteration <b>i</b> with probability <b>i/n</b> if the the alignment quality didn't improve. Aternatively, if <code>hmm</code> files are provided, they will be used to align the input sequences with <b><code>hmmalign</code></b>.
+
+	<h4><li>Basic dataset merging with corefus</li></h4>
+    <p>We also offer <b><code>corefus</code></b>, a basic tool for merging two datasets before running <code class="coretracker">CoreTracker</code>. Merging two datasets, can be considered for example if you want to include new genomes in a previous analysis in order to either measure the impact of adding species to the phylogeny or to use a group of genome with known genetic code as reference. <b><code>corefus</code></b> take as input two nucleotide sequences in corefasta format and as optionnal argument the corresponding two species trees in newick format.</p>
+<pre class="terminal">
+<span class="cmd">corefusion --nucs metazoa1.core metazoa2.core --out metazoa</span>
+<span class="cmd">ls outdir</span></pre>
+    <p>The trees are joined by creating a new node which children are the roots of the two input trees. True phylogenetic relationship and branch lengths are therefore ignored. Since this might not be the desired we recommend to build a new species phylogenetic tree with your favorite phylogenetic program. You can for example: <ul class="normalul"><li>Merge the nucleotide sequences with <code>corefus</code></li><li>Translate it to protein sequences and align them using <code>coretrans</code></li><li>Convert the aligned protein sequences in core format into multiple genes fasta file with <code>coreconvert</code></li><li>Use those alignments to build a new species tree using a supermatrix of a supertree approach</li></ul></p>
+
+    </ol>
+     
+     <h3 id="corexec">Running CoreTracker</h3>
+     <p>In this section, we will run coretracker on a test dataset and learn how to interpret its ouptut.</p>     
+     <ol>
+     <h4><li>Run coretracker on the metazoan test dataset</li></h4>
+     <h4><li>Coretracker output</li></h4>
+     </ol>
+     <h3 id="gclust">Supplemental analysis</h3>
+	<p>Here we will perform some additional analysis with available scripts in order to either confirm or infirm prediction if possible. These supplemental analysis are not always informative and are totally optional.</p>     
+     <ol>
+     <h4><li>Ancestral state reconstruction with ancrec</li></h4>
+     <h4><li>Genome clustering with codonclust</li></h4>
+     </ol>
+
+</div>
 
 </section>
 <footer>
-<p>This project is maintained by <a href="https://github.com/UdeM-LBIT">maclandrol@UdeM-LBIT</a></p>
+<p><b>This project is maintained by <a href="https://github.com/UdeM-LBIT">maclandrol@UdeM-LBIT</a></b></p>
 <p><small>Hosted on GitHub Pages &mdash; Theme modified from <a href="https://github.com/orderedlist">orderedlist</a></small></p>
 </footer>
 </div>
