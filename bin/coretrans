@@ -30,7 +30,7 @@ import argparse
 # argument parser
 parser = argparse.ArgumentParser(
     description='Translator, translate nucleotide alignment. You need to install hmmalign, muscle or mafft and biopython')
-parser.add_argument('--wdir', '--outdir', dest="outdir",
+parser.add_argument('--outdir', '--wdir', dest="outdir",
                     default="trans_output", help="Working directory")
 parser.add_argument('--nuc', '--input', '-n', dest='dnafile',
                     required=True, help="Dnafile input")
@@ -46,15 +46,14 @@ parser.add_argument('--refine', dest='refine', action='store_true',
                     help="Whether we should refine the alignment with hmm")
 parser.add_argument('--noclean', dest='noclean', action='store_false',
                     help="Whether we should clean unnecessary file or not")
-
+parser.add_argument('--alignarg', dest='alignargs',
+                    help="Additional arguments for the alignment program (muscle or mafft).")
 parser.add_argument('--notrans', dest='notrans', action='store_true',
                     help="Whether we should attempt to translate or not. This overrule --align")
-
 parser.add_argument('--filter', dest='filter', action='store_true',
                     help="Filter nuc sequences to remove gene where frame-shifting occur")
 parser.add_argument('--hmmdir', dest='hmmdir',
                     help="Link a directory with hmm files for alignment. Each hmmfile should be named in the following format : genename.hmm")
-
 parser.add_argument('--count', '-c', dest="hcount", default=1, type=int,
                     help="Number of loops for the hmm build and align")
 parser.add_argument('--verbose', '-v', dest='verbose', action='store_true',
@@ -73,9 +72,9 @@ core_inst = args.dnafile
 gcode = args.gcode
 align = args.align
 
-prog = "mafft --auto"
-if args.prog == 'muscle':
-    prog = 'muscle'
+prog = 'muscle ' + args.alignargs
+if args.prog == 'mafft':
+    prog = "mafft " + (args.alignargs or "--auto")
 
 hmmfiles = {}
 if args.hmmdir:

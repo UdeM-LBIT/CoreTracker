@@ -1,3 +1,0 @@
-### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher pval	Gene frac	N. rea	N. used	Cod. count	Sub. count	G. len	codon_lik	id	prediction	probability
-Terebratulina	ATA	I	K	0.0	0.0510203905483	0.166666666667	0.0588235294118	0.235294117647	0.215189873418	0.0126582278481	990.0	-1.47880299252	4.0	0.0	0.388

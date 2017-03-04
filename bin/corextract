@@ -186,7 +186,7 @@ def check_specie_list(specielist, namedb, taxid=False, clade=False, complete=Tru
 
 
 def get_poss_event_diff(gene, prot, features, gcode=1):
-    """Get correct rna data, based on difference 
+    """Get correct rna data, based on difference
     between gene and prot and use features to confirm"""
 
     codontable = CodonTable.unambiguous_dna_by_id[gcode]
@@ -204,8 +204,8 @@ def get_poss_event_diff(gene, prot, features, gcode=1):
         # check start from 10 first position
         bestmatch = (0, 0)
         for pos in xrange(10):
-            matcher = sum([ct_dict[gene[pos + i * 3:pos + (i + 1) * 3].upper()]
-                           == potent_prot[i] for i in xrange(max_aa)])
+            matcher = sum([ct_dict[gene[pos + i * 3:pos + (i + 1) * 3].upper()] == potent_prot[i]
+                           for i in xrange(max_aa)])
             if matcher == max_x:
                 bestmatch = (pos, matcher)
                 break
@@ -233,7 +233,7 @@ def extract_genome(speclist, genelist, records, revmtgenes, getprot=False, gcode
     prot2spec = defaultdict(list)
 
     def motif_in_seq(motif, slist, product):
-        return sum([1 for x in slist if (motif in x.lower()) ]) > 0 and \
+        return sum([1 for x in slist if (motif in x.lower())]) > 0 and \
             'hypothetical' in " ".join(product).lower()
 
     # fetch gene and protein from the database and add them to the list
@@ -254,7 +254,7 @@ def extract_genome(speclist, genelist, records, revmtgenes, getprot=False, gcode
                     seq = None
                     seq = f.extract(curr_seq.seq)
                     if len(seq) % 3 != 0:
-                        #print("%s | %d"%(spec, len(seq)%3))
+                        # print("%s | %d"%(spec, len(seq)%3))
                         try:
                             polyaterm = f.qualifiers['transl_except'][0]
                             pos_range, aa_term = polyaterm.strip(

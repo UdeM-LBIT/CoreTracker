@@ -146,7 +146,8 @@ def compile_result(x, clf, cod_align, model):
         fitch, data, reafinder, cod_align, (X_data, X_labels, pred_prob, pred))
     utils.print_data_to_txt(os.path.join(outdir, fitch.ori_aa + "_to_" + fitch.dest_aa + "_data.txt"),
                             selected_et, X_dataprint, X_labels, pred, pred_prob, sppval, fitch.dest_aa, valid=codvalid)
-    return rkp
+    tmp_data = [X_labels, pred, pred_prob, codvalid]
+    return rkp, tmp_data
 
 if __name__ == '__main__':
 
@@ -241,8 +242,9 @@ if __name__ == '__main__':
 
     done = False
     results = []
+    ALL_PRED = []
     if args.parallel > 0 and ENABLE_PAR:
-        results = Parallel(n_jobs=args.parallel, verbose=2)(delayed(compile_result)(
+        results = Parallel(n_jobs=args.parallel, verbose=1)(delayed(compile_result)(
             x, clf, cod_align, model) for x in reafinder.run_analysis(codon_align, fcodon_align))
         done = True
     elif args.parallel > 0:
@@ -253,6 +255,8 @@ if __name__ == '__main__':
         for x in reafinder.run_analysis(codon_align, fcodon_align):
             results.append(compile_result(x, clf, cod_align, model))
 
+    results, ALL_PRED = zip(*results)
+
     if args.valid and args.expos and results:
         rea_pos_keeper = ddict(dict)
         for r in results:
@@ -262,4 +266,4 @@ if __name__ == '__main__':
         exp_outfile = os.path.join(reafinder.settings.OUTDIR, "positions.json")
         reafinder.export_position(rea_pos_keeper, exp_outfile)
 
-    reafinder.save_all(True)
+    reafinder.save_all(ALL_PRED, True)
