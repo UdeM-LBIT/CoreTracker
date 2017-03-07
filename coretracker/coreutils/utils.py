@@ -2239,6 +2239,7 @@ def violin_plot(vals, output, score, codon, cible, imformat="pdf"):
         ax.set_title(title)
         fig = ax.get_figure()
         fig.savefig(output, format=imformat)
+        fig.clf()
 
     return output, (codon, cible, score)
 
@@ -2416,7 +2417,7 @@ def print_data_to_txt(outputfile, header, X, X_label, Y, Y_prob, codon_data, cib
     out = Output(file=outputfile)
     out.write("### Random Forest prediction\n")
     out.write("\t".join(["genome", "codon",
-                         "ori_aa", "rea_aa"] + list(header) + ["prediction", "probability"] +
+                         "ori_aa", "rea_aa"] + list([x.replace(' ', '_') for x in header]) + ["prediction", "probability"] +
                         (["clad_valid", "trans_valid"] if valid else [])))
 
     total_elm = len(Y)
@@ -2430,7 +2431,7 @@ def print_data_to_txt(outputfile, header, X, X_label, Y, Y_prob, codon_data, cib
             except:
                 tmp_val = '0'
                 gtmp_val = '0'
-            end_data.append(tmp_val)
+            end_data.extend([tmp_val, gtmp_val])
         out.write("\n" + "\t".join(list(X_label[i]) + [str(x)
                                                        for x in X[i]] + end_data))
 

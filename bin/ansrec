@@ -1,0 +1,197 @@
+#!/usr/bin/env python
+
+# CoreTracker Copyright (C) 2016  Emmanuel Noutahi
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+from coretracker.coreutils import AncestralRecon as AR
+from coretracker.coreutils import Faces
+from ete3 import Tree, TreeStyle, faces
+import yaml
+import json
+import argparse
+from collections import defaultdict
+from Bio.Data import CodonTable
+import re
+
+try:
+    from yaml import CLoader as Loader
+except ImportError:
+    from yaml import Loader
+
+
+def load_input(infile, isjson=False):
+    readict = None
+    with open(infile, 'r') as IN:
+        if isjson:
+            readict = json.load()
+        else:
+            readict = yaml.load(IN, Loader=Loader)
+    if not readict:
+        raise ValueError("Could not load codon reassignment, empty dict")
+    else:
+        return readict
+
+
+def load_csvs(infiles, thresh=0.5):
+    #   0         1         2       3      -2           -1
+    # 'genome' 'codon'  'ori_aa' 'rea_aa'  'predict'   'proba'
+    readict = defaultdict(dict)
+    for f in infiles:
+        with open(f.strip(), 'r') as IN:
+            read_until = False
+            for line in IN:
+                line = line.strip()
+                if line.startswith('### Random'):
+                    read_until = True
+                elif line.startswith('#'):
+                    read_until = False
+                if read_until and line:
+                    dt = line.strip().split()
+                    genome, codon = dt[:2]
+                    rea_aa = dt[3]
+                    predict = int(
+                        dt[-2]) if thresh == 0.5 else float(dt[-1]) > thresh
+                    if predict:
+                        try:
+                            readict[genome][rea_aa].append(codon)
+                        except:
+                            readict[genome][rea_aa] = [codon]
+    if not readict:
+        raise ValueError("Could not load codon reassignment, empty dict")
+    else:
+        return readict
+
+
+def load_from_coretracker_output(infile, valid='BOTH'):
+    # NNN (X, Y)
+    #    Spec1  0.504   Valid
+    #    Spec2  0.993   Valid
+    #    Spec3  0.765   Valid
+    EITHER = ('CLAD', 'ALGN')
+    BOTH = ('BOTH',)
+    readict = defaultdict(dict)
+    pattern = re.compile("^[A-Z]{3,}\s?\([A-Z]\,\s[A-Z]\)")
+    with open(infile) as RTable:
+        for line in RTable:
+            line = line.strip()
+            if line and not line.startswith('#'):
+                if pattern.match(line):
+                    curr_cod = line.split('(')[0].strip()
+                    dest_aa = line.split(',')[-1].strip(' )')
+                else:
+                    line = line.strip().split("\t")
+                    spec = line[0].strip()
+                    valid_state = line[-1].strip().upper()
+                    if valid_state.upper() not in EITHER + BOTH + ('NONE',):
+                        valid_state = None
+                    passed_valid = (valid_state is None)\
+                        or (valid == 'EITHER' and valid_state in EITHER)\
+                        or valid == 'BOTH' and valid_state in BOTH
+                    if curr_cod and dest_aa and passed_valid:
+                        try:
+                            readict[spec][dest_aa].append(curr_cod)
+                        except:
+                            readict[spec][dest_aa] = [curr_cod]
+    if not readict:
+        raise ValueError("Could not load codon reassignment, empty dict")
+    else:
+        return readict
+
+
+def perform_anc_recon(tree, readict, artype="fitch", gtable={}):
+    """Perform ancestral reconstruction"""
+    if artype == 'fitch' :
+        anc = AR.FitchParsimony(tree, readict)
+    elif artype == 'dollo':
+        anc = AR.DolloParsimony(tree, readict)
+    else:
+        raise NotImplementedError("%s is not available yet" % artype)
+    stmat, stmap, codlist = anc.make_codonrea_matrice(tree, readict, gtable)
+    stmat = anc.label_internal(stmat, codlist, stmap)#, alphmap)
+    new_rea_dict = anc.mat_to_dict(codlist, gtable)
+    return new_rea_dict
+
+
+def plot_recon_tree(tree, new_rea_dict, outputfile, show_head_text=True):
+    aalist = set(sum([x.keys() for x in new_rea_dict.values()], []))
+    legend_w = 40
+    legend_h = 15
+
+    def layout(node):
+        if node.is_leaf():
+            faces.add_face_to_node(Faces.ReaRectFace(aalist, new_rea_dict[
+                                   node.name], margin_left=20, ncodons=6), node, column=1, position='aligned')
+        else:
+            faces.add_face_to_node(Faces.ReaRectFace(aalist, new_rea_dict[
+                                   node.name], margin_left=10, ncodons=6), node, column=1, position='branch-right')
+    ts = TreeStyle()
+    ts.layout_fn = layout
+
+    if show_head_text:
+        headtext = Faces.List90Face(
+            sorted(aalist), fsize=13, ftype="Arial", rotation=0, col_w=34)
+        headtext.margin_left = 13
+        ts.aligned_header.add_face(headtext, column=1)
+
+    for aa in sorted(aalist):
+        f = faces.TextFace("  " + aa + ":  ", fsize=14)
+        r = faces.RectFace(10, 5, "#000000", Faces._aabgcolors[aa], label=aa)
+        f.margin_top = 8
+        r.margin_top = 8
+        ts.legend.add_face(f, column=0)
+        ts.legend.add_face(r, column=1)
+
+    ts.legend_position = 4
+    tree.render(outputfile, tree_style=ts, dpi=600)
+
+
+if __name__ == '__main__':
+
+    # argument parser
+    parser = argparse.ArgumentParser(
+        description='AnsRec, Ancestral codon reassignment ploting')
+
+    parser.add_argument(
+        '--algorithm', '-a', choices=('fitch', 'dollo', 'MML'), default='fitch', dest="algo", help="Ancestral reconstruction algorithm")
+    parser.add_argument('--json', action='store_true',
+                        help="Use json instead of yaml file for '-i' option")
+
+    input_type = parser.add_mutually_exclusive_group(required=True)
+    input_type.add_argument('--input', '-i', dest='input',
+                            help="Reassignment file. Either a yaml or a json file")
+    input_type.add_argument('--cinput', '-c', dest='cinput',
+                            help="CoreTracker output-like file")
+    parser.add_argument('--tree', '-t', dest='tree', required=True,
+                        help="Input tree to draw on")
+    parser.add_argument('--gcode', default=4, type=int,
+                        dest='gcode', help="Base genetic code to build on.")
+    parser.add_argument('--out', '-o', dest="outfile", default="outfile.svg",
+                        help="Output file name, add image extension (svg, pdf or png).")
+    parser.add_argument('--valid', default="both", choices=('both', 'either'),
+                        help="Validation status to consider for coretracker-like output (-c). \
+                        `both` require both validation, whereas `either` require only one.")
+    parser.add_argument('--show_head_text', action='store_true',
+                        help="Wheter we should show text (AA) on header container or not")
+    args = parser.parse_args()
+
+    tree = Tree(args.tree)
+    if args.cinput:
+        readict = load_from_coretracker_output(args.cinput, args.valid.upper())
+    else:
+        readict = load_input(args.input, args.json)
+
+    table = CodonTable.unambiguous_dna_by_id[abs(args.gcode)]
+    new_rea_dict = perform_anc_recon(
+        tree, readict, artype=args.algo, gtable=table.forward_table)
+    plot_recon_tree(tree, new_rea_dict, args.outfile, args.show_head_text)

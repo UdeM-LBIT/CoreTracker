@@ -155,7 +155,7 @@ def db_lookup(dbname, speclist, complete=True):
     return result
 
 
-def check_specie_list(specielist, namedb, taxid=False, clade=False, complete=True):
+def check_species_list(specielist, namedb, taxid=False, clade=False, complete=True):
     """ Verify and return the true name
     of each specie in your specielist """
     curated_spec_list = []
@@ -374,8 +374,8 @@ if __name__ == '__main__':
         except IOError:
             speclist.append(args.speclist)
 
-        speclist = check_specie_list(set(speclist), args.database,
-                                     args.taxid, args.clade, args.complete)
+        speclist = check_species_list(set(speclist), args.database,
+                                      args.taxid, args.clade, args.complete)
         genelist = []
         if args.genelist:
             with open(args.genelist) as Glist:
