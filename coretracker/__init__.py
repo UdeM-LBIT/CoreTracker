@@ -12,7 +12,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 __project__ = 'CoreTracker'
-__version__ = '1.1.5'
+__version__ = '1.1.6'
 __author__ = 'Emmanuel Noutahi'
 __email__ = "fmr.noutahi@umontreal.ca"
 __license__ = "GPLv3"
