@@ -338,7 +338,7 @@ class SequenceLoader:
                 shutil.copyfile(hmmfile, tmphmmfile)
             else:
                 buildline = hmmbuild + \
-                    " -F --amino %s %s" % (tmphmmfile, inputFile)
+                    " --amino %s %s" % (tmphmmfile, inputFile)
                 executeCMD(buildline, 'hmmbuild')
             # will continue if not exception is found
             alignline = hmmalign + \
@@ -1125,7 +1125,7 @@ class ReaGenomeFinder:
                 aapaired = abs(
                     use_similarity - self.aa_paired_distance[aa][self.seq_names[i], self.seq_names[j]])
                 self.aa_sim_json[aa_letters_1to3[aa]].append(
-                    {'global': gpaired, 'filtered': aapaired, "species": "%s||%s" % (self.seq_names[i], self.seq_names[j])})
+                    {'global': gpaired, 'aafiltered': aapaired, "species": "%s||%s" % (self.seq_names[i], self.seq_names[j])})
                 if (paired > aapaired and use_similarity) or (paired < aapaired and not use_similarity):
                     aa2suspect[aa][self.seq_names[i]] = aa2suspect[
                         aa].get(self.seq_names[i], 0) + 1
@@ -1325,7 +1325,45 @@ class ReaGenomeFinder:
         with open(os.path.join(self.settings.OUTDIR, "reassignment.json"), "w") as outfile3:
             json.dump(self.reassignment_mapper, outfile3, indent=4)
 
-    def save_all(self, savecodon=False):
+    def save_predictions(self, preds, outfile):
+        """Save all prediction in the root folder"""
+        def _valid_state(spec, valid):
+            state = "None"
+            if valid:
+                if spec in valid[0] and valid[1]:
+                    state = "Both"
+                elif spec in valid[0]:
+                    state = "Clad"
+                elif valid[1]:
+                    state = "Algn"
+            return state
+
+        # reorganize predictions by codon, aa
+        predict = defaultdict(list)
+        max_spec_len = 0
+        for (xlab, y, ypred, valid) in preds:
+            xlab = xlab[y == 1, :]
+            prob = ypred[y == 1, -1]
+            for (i, line) in enumerate(xlab):
+                reaformat = "%s (%s, %s)" % (line[1], line[2], line[3])
+                max_spec_len = max(max_spec_len, len(line[0]))
+                predict[reaformat].append(
+                    [line[0], "%.3f" % prob[i], _valid_state(line[0], valid.get(line[1], None))])
+
+        with open(outfile, 'w') as OUT:
+            gcode = self.seqset.codontable.id
+            gcode_descr = self.seqset.codontable.names[
+                0] if self.seqset.codontable.names else ""
+            OUT.write("#Reference Genetic Code : %d (%s)\n" %
+                      (gcode, gcode_descr))
+            OUT.write("#Exception: \n")
+            for rea, total_rea in predict.items():
+                OUT.write("%s\n" % rea)
+                for spec_with_rea in total_rea:
+                    OUT.write("\t%s\t%s\n" % (spec_with_rea[0].ljust(
+                        max_spec_len), "\t".join(spec_with_rea[1:])))
+
+    def save_all(self, predictions, savecodon=False):
         """Save everything"""
         if savecodon:
             self.reassignment_mapper['codons'] = self.get_codon_usage()
@@ -1338,6 +1376,8 @@ class ReaGenomeFinder:
         newick = os.path.join(self.settings.OUTDIR, "tree.nwk")
         self.seqset.write_data(ori_alignment=ori_al,
                                id_filtered=id_filtfile, gap_filtered=gap_filtfile, ic_filtered=ic_filtfile, tree=newick)
+        self.save_predictions(predictions, os.path.join(
+            self.settings.OUTDIR, "predictions.txt"))
 
     def run_analysis(self, codon_align, fcodon_align):
         """ Run the filtering analysis of the current dataset in sequenceset"""
@@ -2199,6 +2239,7 @@ def violin_plot(vals, output, score, codon, cible, imformat="pdf"):
         ax.set_title(title)
         fig = ax.get_figure()
         fig.savefig(output, format=imformat)
+        fig.clf()
 
     return output, (codon, cible, score)
 
@@ -2376,7 +2417,7 @@ def print_data_to_txt(outputfile, header, X, X_label, Y, Y_prob, codon_data, cib
     out = Output(file=outputfile)
     out.write("### Random Forest prediction\n")
     out.write("\t".join(["genome", "codon",
-                         "ori_aa", "rea_aa"] + list(header) + ["prediction", "probability"] +
+                         "ori_aa", "rea_aa"] + list([x.replace(' ', '_') for x in header]) + ["prediction", "probability"] +
                         (["clad_valid", "trans_valid"] if valid else [])))
 
     total_elm = len(Y)
@@ -2390,7 +2431,7 @@ def print_data_to_txt(outputfile, header, X, X_label, Y, Y_prob, codon_data, cib
             except:
                 tmp_val = '0'
                 gtmp_val = '0'
-            end_data.append(tmp_val)
+            end_data.extend([tmp_val, gtmp_val])
         out.write("\n" + "\t".join(list(X_label[i]) + [str(x)
                                                        for x in X[i]] + end_data))
 

@@ -1,0 +1,35 @@
+COX3	PF00510.16	Paracentrotus	4.8e-114	380.4	5	260	5	260	Cytochrome	c	oxidase	subunit	III
+SnAPC_2_like	PF11035.6	Paracentrotus	0.075	13.1	113	130	103	135	Small	nuclear	RNA	activating	complex	subunit	2,	SNAP190	Myb
+COX3	PF00510.16	Schistosoma	1.7e-07	31.2	54	214	4	216	Cytochrome	c	oxidase	subunit	III
+COX3	PF00510.16	Fasciola	2.6e-16	60.1	56	212	4	213	Cytochrome	c	oxidase	subunit	III
+COX3	PF00510.16	Patiria	8.3e-120	399.3	5	260	5	260	Cytochrome	c	oxidase	subunit	III
+COX3	PF00510.16	Lumbricus	7.9e-112	373.1	5	258	4	258	Cytochrome	c	oxidase	subunit	III
+COX3	PF00510.16	Halocynthia	3.4e-95	318.6	7	259	5	260	Cytochrome	c	oxidase	subunit	III
+COX3	PF00510.16	Limulus	1.1e-118	395.7	6	260	6	260	Cytochrome	c	oxidase	subunit	III
+COX3	PF00510.16	Caenorhabditis	3.7e-105	351.3	3	255	3	255	Cytochrome	c	oxidase	subunit	III
+COX3	PF00510.16	Axinella	5.8e-118	393.3	7	262	7	262	Cytochrome	c	oxidase	subunit	III
+COX3	PF00510.16	Terebratulina	4.7e-110	367.3	5	259	4	259	Cytochrome	c	oxidase	subunit	III
+SnAPC_2_like	PF11035.6	Terebratulina	0.39	10.8	113	129	101	134	Small	nuclear	RNA	activating	complex	subunit	2,	SNAP190	Myb
+COX3	PF00510.16	Katharina	2.1e-114	381.6	5	259	4	259	Cytochrome	c	oxidase	subunit	III
+Oxidored_q3	PF00499.18	Katharina	0.032	13.9	16	145	1	255	NADH-ubiquinone/plastoquinone	oxidoreductase	chain	6
+COX3	PF00510.16	Geodia	2.2e-116	388.1	7	262	7	262	Cytochrome	c	oxidase	subunit	III
+COX3	PF00510.16	Metridium	1.1e-119	398.9	7	262	7	262	Cytochrome	c	oxidase	subunit	III
+COX3	PF00510.16	Acropora	9.9e-114	379.4	7	262	7	262	Cytochrome	c	oxidase	subunit	III
+COX3	PF00510.16	Trichinella	8.9e-62	209.1	8	256	4	257	Cytochrome	c	oxidase	subunit	III
+Herpes_LMP1	PF05297.9	Trichinella	6.3	5.7	36	86	31	112	Herpesvirus	latent	membrane	protein	1	(LMP1)
+Herpes_LMP1	PF05297.9	Trichinella	6.3	5.7	159	240	114	255	Herpesvirus	latent	membrane	protein	1	(LMP1)
+COX3	PF00510.16	Balanoglossus	7.1e-122	406.1	5	260	5	260	Cytochrome	c	oxidase	subunit	III
+COX3	PF00510.16	Drosophila	1e-122	408.8	7	261	7	262	Cytochrome	c	oxidase	subunit	III
+ACR_tran	PF00873.17	Drosophila	0.1	10.1	133	189	104	205	AcrB/AcrD/AcrF	family
+COX3	PF00510.16	Myxine	9.7e-116	386.0	6	260	6	260	Cytochrome	c	oxidase	subunit	III
+DUF4131	PF13567.4	Myxine	0.0061	16.1	11	66	6	85	Domain	of	unknown	function	(DUF4131)
+DUF4131	PF13567.4	Myxine	0.0061	16.1	91	116	67	124	Domain	of	unknown	function	(DUF4131)
+DUF4131	PF13567.4	Myxine	0.0061	16.1	135	174	111	183	Domain	of	unknown	function	(DUF4131)
+DUF4131	PF13567.4	Myxine	0.0061	16.1	208	254	192	260	Domain	of	unknown	function	(DUF4131)
+DUF1980	PF09323.8	Myxine	0.092	12.5	41	86	33	102	Domain	of	unknown	function	(DUF1980)
+COX3	PF00510.16	Ciona	6.2e-83	278.5	7	261	6	261	Cytochrome	c	oxidase	subunit	III
+COX3	PF00510.16	Saccoglossus	6.8e-124	412.7	5	260	5	260	Cytochrome	c	oxidase	subunit	III
+COX3	PF00510.16	Daphnia	2.5e-117	391.2	7	261	7	262	Cytochrome	c	oxidase	subunit	III
+COX3	PF00510.16	Homo	1.9e-125	417.8	6	260	6	260	Cytochrome	c	oxidase	subunit	III
+COX3	PF00510.16	Epigonichthys	7.7e-119	396.1	7	261	7	261	Cytochrome	c	oxidase	subunit	III
+Dirigent	PF03018.12	Epigonichthys	0.11	12.3	15	36	7	50	Dirigent-like	protein

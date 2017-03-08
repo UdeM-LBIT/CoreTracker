@@ -1,0 +1,44 @@
+# amino acid to exclude from the plot
+# this will speed up a lot the data generation
+# If you exclude an amino acid, there won't be a reassignment to that aa
+EXCLUDE_AA: "CDEHLPTVWYAMLI"
+# If you exclude a aa, there won't be a reassignment from that aa
+EXCLUDE_AA_FROM: "CDEHMLPTVWYALI"
+# Threshold require to determine if an aa is majoritary in a column
+AA_MAJORITY_THRESH: 0.5
+
+# Mode to compute suspected species
+# possible values : count, wilcoxon, mannwhitney, kmean, ttest
+# kmean does not work well, use wilcoxon
+MODE: 'wilcoxon'
+
+# Distance matrice:
+MATRIX: 'identity'
+
+# Codon to amino acid likelihood. Use consensus or complete
+# alignement for Telford score
+USE_CONSENSUS_FOR_LIKELIHOOD: False
+
+# Show codon in non conserved position for its amino acid
+SHOW_MIXTE_CODONS: False
+
+# Show Filtered codon data
+SHOW_GLOBAL_CODON_DATA: False
+
+# Add the total count in each pie chart in the
+# codon detail figure
+ADD_NUMBER_PIE: True
+
+# alpha : rejection of the null hypothesis
+CONF: 0.05
+
+# Selection start codon range
+STARTDIST: 20
+
+# Learning model to use (this is the default)
+MODEL_TYPE: '3'
+
+# type
+LIMIT_TO_SUSPECTED_SPECIES: False
+
+HMMLOOP : 5

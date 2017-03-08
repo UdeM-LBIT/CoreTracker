@@ -46,7 +46,7 @@ _aabgcolors = {
     'C': "#E6E600",
     'Q': "#00DCDC",
     'E': "#E60A0A",
-    'G': "#EBEBEB",
+    'G': "#DBDBDB",
     'H': "#8282D2",
     'I': "#0F820F",
     'L': "#0F820F",
@@ -400,11 +400,11 @@ class ReaRectFace(faces.StaticItemFace):
     ancestral sequence
     """
 
-    def __init__(self, aalist, readict, is_leaf=True, spacer=1, height=13,
-                 ffamily='Courier', ncodons=None, fsize=10, col_w=None, margin_left=0):
+    def __init__(self, aalist, readict, is_leaf=True, spacer=1, height=12,
+                 ffamily='Courier', ncodons=None, fsize=12, col_w=None, margin_left=0):
         self.readict = readict
         if self.readict is None:
-            raise ValueError("Readict is required to not be empty")
+            raise ValueError("Readict is required to not be None")
 
         faces.StaticItemFace.__init__(self, None)
         self.spacer = spacer
@@ -440,7 +440,7 @@ class ReaRectFace(faces.StaticItemFace):
         max_h = max_codons * (self.h + self.spacer)
         rect_cls = QGraphicsRectItem
         self.item = rect_cls()
-        nopen = QPen(Qt.NoPen)
+        nopen = QPen(QColor('#EEEEEE'))
         nobrush = QBrush(Qt.NoBrush)
         width = self.mgl
         font = QFont(self.ffamily, self.fsize)

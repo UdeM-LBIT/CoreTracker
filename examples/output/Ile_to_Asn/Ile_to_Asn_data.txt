@@ -1,4 +1,0 @@
-### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher pval	Gene frac	N. rea	N. used	Cod. count	Sub. count	G. len	codon_lik	id	prediction	probability
-Ciona	ATT	I	N	0.0	0.261616116629	0.2	0.0172413793103	0.724137931034	0.591836734694	0.0204081632653	979.0	-2.72197962154	5.0	0.0	0.005
-Ciona	ATA	I	N	0.0	0.261616116629	0.2	0.030303030303	0.242424242424	0.336734693878	0.0204081632653	979.0	-2.42179487179	4.0	0.0	0.292
