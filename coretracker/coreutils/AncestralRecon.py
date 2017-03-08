@@ -200,7 +200,7 @@ class FitchParsimony(AbsAncest):
     def __init__(self, tree, nodestates):
         super(FitchParsimony, self).__init__(tree, nodestates)
 
-    def label_internal(self, state_mat, header_list=None, header_map=None, **kwargs):
+    def label_internal(self, state_mat, header_list=None, header_map=None, null_map=None, **kwargs):
         self.state_mat, self.header_list = state_mat, header_list
         # self.state_mat, self.codon_list = self.make_codonrea_matrice(self.tree, self.nodestates, self.alphmap)
         self._bottomup()

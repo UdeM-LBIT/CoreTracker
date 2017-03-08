@@ -111,44 +111,51 @@ def load_from_coretracker_output(infile, valid='BOTH'):
 
 def perform_anc_recon(tree, readict, artype="fitch", gtable={}):
     """Perform ancestral reconstruction"""
-    if artype == 'fitch' :
+    if artype == 'fitch':
         anc = AR.FitchParsimony(tree, readict)
     elif artype == 'dollo':
         anc = AR.DolloParsimony(tree, readict)
     else:
         raise NotImplementedError("%s is not available yet" % artype)
     stmat, stmap, codlist = anc.make_codonrea_matrice(tree, readict, gtable)
-    stmat = anc.label_internal(stmat, codlist, stmap)#, alphmap)
+    stmat = anc.label_internal(stmat, codlist, stmap, gtable)
     new_rea_dict = anc.mat_to_dict(codlist, gtable)
     return new_rea_dict
 
 
 def plot_recon_tree(tree, new_rea_dict, outputfile, show_head_text=True):
     aalist = set(sum([x.keys() for x in new_rea_dict.values()], []))
-    legend_w = 40
-    legend_h = 15
+    legend_w = 50
+    legend_h = 25
+    max_cod = 0
+    for k, v in new_rea_dict.items():
+        max_cod = max(max_cod, max([len(x) for x in v.values()]))
 
     def layout(node):
         if node.is_leaf():
             faces.add_face_to_node(Faces.ReaRectFace(aalist, new_rea_dict[
-                                   node.name], margin_left=20, ncodons=6), node, column=1, position='aligned')
+                                   node.name], margin_left=10, ncodons=max_cod), node, column=1, position='aligned')
         else:
             faces.add_face_to_node(Faces.ReaRectFace(aalist, new_rea_dict[
-                                   node.name], margin_left=10, ncodons=6), node, column=1, position='branch-right')
+                                   node.name], is_leaf=False, margin_left=5, ncodons=max_cod), node, column=1, position='branch-right')
     ts = TreeStyle()
     ts.layout_fn = layout
 
     if show_head_text:
         headtext = Faces.List90Face(
-            sorted(aalist), fsize=13, ftype="Arial", rotation=0, col_w=34)
-        headtext.margin_left = 13
+            sorted(aalist), fsize=14, ftype="Arial", rotation=0, col_w=40)
+        headtext.margin_left = 5
+        headtext.margin_top = 8
+        headtext.margin_bottom = 10
         ts.aligned_header.add_face(headtext, column=1)
 
     for aa in sorted(aalist):
-        f = faces.TextFace("  " + aa + ":  ", fsize=14)
-        r = faces.RectFace(10, 5, "#000000", Faces._aabgcolors[aa], label=aa)
-        f.margin_top = 8
-        r.margin_top = 8
+        f = faces.TextFace("  " + aa + ":  ", fsize=20)
+        r = faces.RectFace(legend_w, legend_h, "#000000",
+                           Faces._aabgcolors[aa], label=aa)
+        f.margin_top = 20
+        r.margin_top = 20
+        r.margin_right = 10
         ts.legend.add_face(f, column=0)
         ts.legend.add_face(r, column=1)
 
@@ -161,31 +168,33 @@ if __name__ == '__main__':
     # argument parser
     parser = argparse.ArgumentParser(
         description='AnsRec, Ancestral codon reassignment ploting')
-
     parser.add_argument(
         '--algorithm', '-a', choices=('fitch', 'dollo', 'MML'), default='fitch', dest="algo", help="Ancestral reconstruction algorithm")
     parser.add_argument('--json', action='store_true',
                         help="Use json instead of yaml file for '-i' option")
-
     input_type = parser.add_mutually_exclusive_group(required=True)
     input_type.add_argument('--input', '-i', dest='input',
-                            help="Reassignment file. Either a yaml or a json file")
+                            help="Reassignment file. Either a yaml or a json file, unless the json flag is set, a yaml file is expected.")
     input_type.add_argument('--cinput', '-c', dest='cinput',
-                            help="CoreTracker output-like file")
+                            help="CoreTracker output-like file. The accepted file does not have to strictly follow the same data organisation \
+                                Prediction probability and validation test are not mandatory.")
     parser.add_argument('--tree', '-t', dest='tree', required=True,
-                        help="Input tree to draw on")
+                        help="Input tree to draw on, can be a non-binary tree")
     parser.add_argument('--gcode', default=4, type=int,
                         dest='gcode', help="Base genetic code to build on.")
     parser.add_argument('--out', '-o', dest="outfile", default="outfile.svg",
                         help="Output file name, add image extension (svg, pdf or png).")
     parser.add_argument('--valid', default="both", choices=('both', 'either'),
-                        help="Validation status to consider for coretracker-like output (-c). \
-                        `both` require both validation, whereas `either` require only one.")
-    parser.add_argument('--show_head_text', action='store_true',
-                        help="Wheter we should show text (AA) on header container or not")
+                        help="Validation status to consider for coretracker-like output (-c), if such column is present\
+                        `both` require both validation, whereas `either` require only one (clad or algn). Default value is `both`.")
     args = parser.parse_args()
 
     tree = Tree(args.tree)
+    i = 0
+    for node in tree.traverse():
+        if not node.is_leaf():
+            node.name = "%d" % i
+            i += 1
     if args.cinput:
         readict = load_from_coretracker_output(args.cinput, args.valid.upper())
     else:
@@ -194,4 +203,4 @@ if __name__ == '__main__':
     table = CodonTable.unambiguous_dna_by_id[abs(args.gcode)]
     new_rea_dict = perform_anc_recon(
         tree, readict, artype=args.algo, gtable=table.forward_table)
-    plot_recon_tree(tree, new_rea_dict, args.outfile, args.show_head_text)
+    plot_recon_tree(tree, new_rea_dict, args.outfile, True)

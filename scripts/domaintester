@@ -13,7 +13,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from coretracker.coreutils import SequenceLoader, CoreFile, makehash, utils
+from coretracker.coreutils import SequenceLoader, CoreFile, utils
 import numpy as np
 from Bio import AlignIO
 from Bio import SeqIO
@@ -55,7 +55,7 @@ def parse_json_file(jfile):
     t_len = 0
     with open(jfile) as INDATA:
         tmpdt = json.load(INDATA)
-    data = makehash(2, list)
+    data = utils.makehash(2, list)
     for (spec, readict) in tmpdt.items():
         for rea, pos_list in readict.items():
             for info in pos_list:
@@ -180,7 +180,7 @@ def domain_checker(posfile, sequencefile, outdir, hmmdb, addargs="", aligned=Fal
     data, t_len = parse_json_file(posfile)
     print("Total of: %d" % t_len)
     xport_align_to_dir(corefile, outdir, aligned)
-    new_dt = makehash(2, list)
+    new_dt = utils.makehash(2, list)
     for gene in data.keys():
         gdomain = get_domain_in_gene(gene, outdir, hmmdb, addargs)
         rea = data[gene]
@@ -213,11 +213,11 @@ if __name__ == '__main__':
     curdir = os.getcwd()
     fchoices = ['json', 'csv']
     parser = argparse.ArgumentParser(
-        description='Find information about position')
+        description='Find information about reassigned positions')
     parser.add_argument('--corefile', '-c', required=True,
                         dest="corefile", help="Protein corefile")
     parser.add_argument('--posfile', '-p', required=True,
-                        dest="posfile", help="Position file in json format")
+                        dest="posfile", help="Position file in json format (positions.json from coretracker)")
     parser.add_argument('--outdir', dest='outdir',
                         default=curdir, help="Output directory")
     parser.add_argument('--outfile', '--out', '-o',
@@ -229,7 +229,7 @@ if __name__ == '__main__':
     parser.add_argument('--align', '-a', action='store_true',
                         dest="aligned", help="save data as alignment intead of sequences")
     parser.add_argument('--format', '--fmt', choices=fchoices,
-                        dest="format", help="Format to save the data in 9json or csv")
+                        dest="format", help="Format to save the data in json or csv")
 
     args = parser.parse_args()
     dt = domain_checker(args.posfile, args.corefile, args.outdir,

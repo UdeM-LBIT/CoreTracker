@@ -1,0 +1,31 @@
+#Reference Genetic Code : 4 (Mold Mitochondrial)
+#Exception: 
+
+AGG (R, S)
+	Schistosoma   	0.504	Both
+	Caenorhabditis	0.993	Both
+	Katharina     	0.765	Both
+	Terebratulina 	0.661	Both	
+AAA (K, N)
+	Paracentrotus 	0.727	Both
+	Schistosoma   	0.833	Both
+	Fasciola      	0.753	Both
+	Patiria       	0.917	Both
+AGG (R, G)
+	Halocynthia   	0.995	Both
+	Ciona         	0.995	Both
+AGA (R, G)
+	Halocynthia   	0.995	Both
+	Ciona         	0.991	Both
+AGA (R, S)
+	Paracentrotus 	0.995	Both
+	Patiria       	0.595	Both
+	Lumbricus     	0.998	Both
+	Limulus       	0.927	Both
+	Caenorhabditis	0.989	Both
+	Terebratulina 	0.661	Both
+	Katharina     	0.820	Both
+	Trichinella   	0.988	Both
+	Drosophila    	0.822	Both
+	Daphnia       	0.821	Both
+	Saccoglossus 	0.661	Both

@@ -1,0 +1,276 @@
+Species	Gene	Codon	AA	Pos	Domain	Pfam	start	end	description
+Paracentrotus	cox2	AGA	S	168	COX2	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Patiria	cox2	AGA	S	168	COX2	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Lumbricus	cox2	AGA	S	168	COX2|94-213	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Caenorhabditis	cox2	AGA	S	112	COX2	PF00116.18	97	216	Cytochrome C oxidase subunit II, periplasmic domain
+Caenorhabditis	cox2	AGA	S	154	COX2	PF00116.18	97	216	Cytochrome C oxidase subunit II, periplasmic domain
+Caenorhabditis	cox2	AGA	S	168	COX2	PF00116.18	97	216	Cytochrome C oxidase subunit II, periplasmic domain
+Caenorhabditis	cox2	AGA	S	230	NID	NID	-	-	NID
+Caenorhabditis	cox2	AGA	S	230	NID	NID	-	-	NID
+Trichinella	cox2	AGA	S	157	COX2	PF00116.18	94	209	Cytochrome C oxidase subunit II, periplasmic domain
+Trichinella	cox2	AGA	S	224	NID	NID	-	-	NID
+Trichinella	cox2	AGA	S	224	NID	NID	-	-	NID
+Drosophila	cox2	AGA	S	227	NID	NID	-	-	NID
+Halocynthia	cox2	AGG	G	162	COX2	PF00116.18	93	213	Cytochrome C oxidase subunit II, periplasmic domain
+Halocynthia	cox2	AGG	G	224	NID	NID	-	-	NID
+Halocynthia	cox2	AGG	G	224	NID	NID	-	-	NID
+Ciona	cox2	AGG	G	162	COX2	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Halocynthia	cox2	AGA	G	224	NID	NID	-	-	NID
+Halocynthia	cox2	AGA	G	224	NID	NID	-	-	NID
+Ciona	cox2	AGA	G	149	COX2	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Ciona	cox2	AGA	G	154	COX2	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Ciona	cox2	AGA	G	228	NID	NID	-	-	NID
+Patiria	cox2	AAA	N	227	NID	NID	-	-	NID
+Schistosoma	cox2	AGG	S	176	COX2	PF00116.18	84	191	Cytochrome C oxidase subunit II, periplasmic domain
+Caenorhabditis	cox2	AGG	S	83	DUF4149	PF13664.4	27	106	Domain of unknown function (DUF4149)
+Katharina	cox2	AGG	S	168	COX2	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Paracentrotus	cox3	AGA	S	196	COX3	PF00510.16	4	259	Cytochrome c oxidase subunit III
+Paracentrotus	cox3	AGA	S	197	COX3	PF00510.16	4	259	Cytochrome c oxidase subunit III
+Patiria	cox3	AGA	S	196	COX3	PF00510.16	4	259	Cytochrome c oxidase subunit III
+Patiria	cox3	AGA	S	259	COX3	PF00510.16	4	259	Cytochrome c oxidase subunit III
+Lumbricus	cox3	AGA	S	196	COX3	PF00510.16	3	257	Cytochrome c oxidase subunit III
+Limulus	cox3	AGA	S	196	COX3	PF00510.16	5	259	Cytochrome c oxidase subunit III
+Limulus	cox3	AGA	S	197	COX3	PF00510.16	5	259	Cytochrome c oxidase subunit III
+Caenorhabditis	cox3	AGA	S	254	COX3	PF00510.16	2	254	Cytochrome c oxidase subunit III
+Katharina	cox3	AGA	S	197	COX3	PF00510.16	3	258	Cytochrome c oxidase subunit III
+Trichinella	cox3	AGA	S	116	COX3	PF00510.16	3	256	Cytochrome c oxidase subunit III
+Trichinella	cox3	AGA	S	195	COX3	PF00510.16	3	256	Cytochrome c oxidase subunit III
+Trichinella	cox3	AGA	S	217	COX3	PF00510.16	3	256	Cytochrome c oxidase subunit III
+Trichinella	cox3	AGA	S	223	COX3	PF00510.16	3	256	Cytochrome c oxidase subunit III
+Trichinella	cox3	AGA	S	256	COX3	PF00510.16	3	256	Cytochrome c oxidase subunit III
+Trichinella	cox3	AGA	S	256	COX3	PF00510.16	3	256	Cytochrome c oxidase subunit III
+Trichinella	cox3	AGA	S	256	COX3	PF00510.16	3	256	Cytochrome c oxidase subunit III
+Trichinella	cox3	AGA	S	256	COX3	PF00510.16	3	256	Cytochrome c oxidase subunit III
+Drosophila	cox3	AGA	S	196	COX3	PF00510.16	6	261	Cytochrome c oxidase subunit III
+Daphnia	cox3	AGA	S	106	COX3	PF00510.16	6	261	Cytochrome c oxidase subunit III
+Halocynthia	cox3	AGG	G	174	COX3	PF00510.16	4	259	Cytochrome c oxidase subunit III
+Halocynthia	cox3	AGG	G	263	NID	NID	-	-	NID
+Halocynthia	cox3	AGG	G	263	NID	NID	-	-	NID
+Ciona	cox3	AGG	G	174	COX3	PF00510.16	5	260	Cytochrome c oxidase subunit III
+Ciona	cox3	AGG	G	261	NID	NID	-	-	NID
+Halocynthia	cox3	AGA	G	262	NID	NID	-	-	NID
+Ciona	cox3	AGA	G	116	COX3	PF00510.16	5	260	Cytochrome c oxidase subunit III
+Ciona	cox3	AGA	G	161	COX3	PF00510.16	5	260	Cytochrome c oxidase subunit III
+Ciona	cox3	AGA	G	205	COX3	PF00510.16	5	260	Cytochrome c oxidase subunit III
+Ciona	cox3	AGA	G	212	COX3	PF00510.16	5	260	Cytochrome c oxidase subunit III
+Ciona	cox3	AGA	G	233	COX3	PF00510.16	5	260	Cytochrome c oxidase subunit III
+Ciona	cox3	AGA	G	261	NID	NID	-	-	NID
+Ciona	cox3	AGA	G	261	NID	NID	-	-	NID
+Ciona	cox3	AGA	G	261	NID	NID	-	-	NID
+Ciona	cox3	AGA	G	261	NID	NID	-	-	NID
+Ciona	cox3	AGA	G	261	NID	NID	-	-	NID
+Paracentrotus	cox3	AAA	N	225	COX3	PF00510.16	4	259	Cytochrome c oxidase subunit III
+Schistosoma	cox3	AAA	N	216	NID	NID	-	-	NID
+Caenorhabditis	cox3	AGG	S	101	COX3	PF00510.16	2	254	Cytochrome c oxidase subunit III
+Caenorhabditis	cox3	AGG	S	181	COX3	PF00510.16	2	254	Cytochrome c oxidase subunit III
+Caenorhabditis	cox3	AGG	S	254	COX3	PF00510.16	2	254	Cytochrome c oxidase subunit III
+Paracentrotus	cox1	AGA	S	44	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Paracentrotus	cox1	AGA	S	114	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Paracentrotus	cox1	AGA	S	338	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Patiria	cox1	AGA	S	114	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Patiria	cox1	AGA	S	477	NID	NID	-	-	NID
+Lumbricus	cox1	AGA	S	44	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	AGA	S	114	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	AGA	S	400	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Limulus	cox1	AGA	S	44	COX1	PF00115.18	11	457	Cytochrome C and Quinol oxidase polypeptide I
+Limulus	cox1	AGA	S	338	COX1	PF00115.18	11	457	Cytochrome C and Quinol oxidase polypeptide I
+Limulus	cox1	AGA	S	497	NID	NID	-	-	NID
+Caenorhabditis	cox1	AGA	S	19	NID	NID	-	-	NID
+Caenorhabditis	cox1	AGA	S	106	COX1	PF00115.18	21	466	Cytochrome C and Quinol oxidase polypeptide I
+Caenorhabditis	cox1	AGA	S	114	COX1	PF00115.18	21	466	Cytochrome C and Quinol oxidase polypeptide I
+Caenorhabditis	cox1	AGA	S	147	COX1	PF00115.18	21	466	Cytochrome C and Quinol oxidase polypeptide I
+Caenorhabditis	cox1	AGA	S	156	COX1	PF00115.18	21	466	Cytochrome C and Quinol oxidase polypeptide I
+Caenorhabditis	cox1	AGA	S	170	COX1	PF00115.18	21	466	Cytochrome C and Quinol oxidase polypeptide I
+Caenorhabditis	cox1	AGA	S	239	COX1	PF00115.18	21	466	Cytochrome C and Quinol oxidase polypeptide I
+Caenorhabditis	cox1	AGA	S	271	COX1	PF00115.18	21	466	Cytochrome C and Quinol oxidase polypeptide I
+Caenorhabditis	cox1	AGA	S	338	COX1	PF00115.18	21	466	Cytochrome C and Quinol oxidase polypeptide I
+Caenorhabditis	cox1	AGA	S	380	COX1	PF00115.18	21	466	Cytochrome C and Quinol oxidase polypeptide I
+Caenorhabditis	cox1	AGA	S	393	COX1	PF00115.18	21	466	Cytochrome C and Quinol oxidase polypeptide I
+Caenorhabditis	cox1	AGA	S	416	COX1	PF00115.18	21	466	Cytochrome C and Quinol oxidase polypeptide I
+Caenorhabditis	cox1	AGA	S	480	NID	NID	-	-	NID
+Terebratulina	cox1	AGA	S	114	COX1	PF00115.18	10	476	Cytochrome C and Quinol oxidase polypeptide I
+Terebratulina	cox1	AGA	S	338	COX1	PF00115.18	10	476	Cytochrome C and Quinol oxidase polypeptide I
+Terebratulina	cox1	AGA	S	400	COX1	PF00115.18	10	476	Cytochrome C and Quinol oxidase polypeptide I
+Katharina	cox1	AGA	S	44	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Trichinella	cox1	AGA	S	89	COX1	PF00115.18	11	460	Cytochrome C and Quinol oxidase polypeptide I
+Trichinella	cox1	AGA	S	175	COX1	PF00115.18	11	460	Cytochrome C and Quinol oxidase polypeptide I
+Trichinella	cox1	AGA	S	203	COX1	PF00115.18	11	460	Cytochrome C and Quinol oxidase polypeptide I
+Trichinella	cox1	AGA	S	338	COX1	PF00115.18	11	460	Cytochrome C and Quinol oxidase polypeptide I
+Trichinella	cox1	AGA	S	375	COX1	PF00115.18	11	460	Cytochrome C and Quinol oxidase polypeptide I
+Trichinella	cox1	AGA	S	463	NID	NID	-	-	NID
+Drosophila	cox1	AGA	S	44	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Drosophila	cox1	AGA	S	114	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Daphnia	cox1	AGA	S	44	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Daphnia	cox1	AGA	S	114	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Daphnia	cox1	AGA	S	160	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Daphnia	cox1	AGA	S	338	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Daphnia	cox1	AGA	S	380	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Daphnia	cox1	AGA	S	497	NID	NID	-	-	NID
+Halocynthia	cox1	AGG	G	26	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Halocynthia	cox1	AGG	G	268	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Halocynthia	cox1	AGG	G	312	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Halocynthia	cox1	AGG	G	333	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Halocynthia	cox1	AGG	G	450	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Halocynthia	cox1	AGG	G	476	NID	NID	-	-	NID
+Ciona	cox1	AGG	G	37	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGG	G	156	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGG	G	242	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGG	G	285	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGG	G	297	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGG	G	450	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Halocynthia	cox1	AGA	G	90	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Halocynthia	cox1	AGA	G	92	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Halocynthia	cox1	AGA	G	137	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Halocynthia	cox1	AGA	G	168	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Halocynthia	cox1	AGA	G	242	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Halocynthia	cox1	AGA	G	255	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Halocynthia	cox1	AGA	G	297	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Halocynthia	cox1	AGA	G	361	Cupin_1	PF00190.20	345	399	Cupin
+Halocynthia	cox1	AGA	G	370	Cupin_1	PF00190.20	345	399	Cupin
+Halocynthia	cox1	AGA	G	420	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Halocynthia	cox1	AGA	G	453	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	26	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	33	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	40	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	54	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	55	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	64	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	89	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	90	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	92	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	101	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	135	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	137	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	139	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	174	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	240	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	241	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	255	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	266	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	268	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	288	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	300	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	333	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	345	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	369	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	370	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	373	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	402	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	438	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	453	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	476	NID	NID	-	-	NID
+Paracentrotus	cox1	AAA	N	59	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Paracentrotus	cox1	AAA	N	68	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Paracentrotus	cox1	AAA	N	230	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Schistosoma	cox1	AAA	N	196	COX1	PF00115.18	12	451	Cytochrome C and Quinol oxidase polypeptide I
+Schistosoma	cox1	AAA	N	230	COX1	PF00115.18	12	451	Cytochrome C and Quinol oxidase polypeptide I
+Schistosoma	cox1	AAA	N	280	COX1	PF00115.18	12	451	Cytochrome C and Quinol oxidase polypeptide I
+Fasciola	cox1	AAA	N	177	COX1	PF00115.18	10	454	Cytochrome C and Quinol oxidase polypeptide I
+Fasciola	cox1	AAA	N	230	COX1	PF00115.18	10	454	Cytochrome C and Quinol oxidase polypeptide I
+Patiria	cox1	AAA	N	21	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Patiria	cox1	AAA	N	68	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Patiria	cox1	AAA	N	177	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Patiria	cox1	AAA	N	230	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Patiria	cox1	AAA	N	378	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Schistosoma	cox1	AGG	S	44	COX1	PF00115.18	12	451	Cytochrome C and Quinol oxidase polypeptide I
+Schistosoma	cox1	AGG	S	128	COX1	PF00115.18	12	451	Cytochrome C and Quinol oxidase polypeptide I
+Schistosoma	cox1	AGG	S	271	COX1	PF00115.18	12	451	Cytochrome C and Quinol oxidase polypeptide I
+Caenorhabditis	cox1	AGG	S	59	COX1	PF00115.18	21	466	Cytochrome C and Quinol oxidase polypeptide I
+Caenorhabditis	cox1	AGG	S	139	COX1	PF00115.18	21	466	Cytochrome C and Quinol oxidase polypeptide I
+Katharina	cox1	AGG	S	338	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Katharina	cox1	AGG	S	388	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Paracentrotus	atp6	AGA	S	231	NID	NID	-	-	NID
+Lumbricus	atp6	AGA	S	229	NID	NID	-	-	NID
+Lumbricus	atp6	AGA	S	229	NID	NID	-	-	NID
+Lumbricus	atp6	AGA	S	229	NID	NID	-	-	NID
+Caenorhabditis	atp6	AGA	S	198	NID	NID	-	-	NID
+Terebratulina	atp6	AGA	S	227	NID	NID	-	-	NID
+Terebratulina	atp6	AGA	S	227	NID	NID	-	-	NID
+Katharina	atp6	AGA	S	229	NID	NID	-	-	NID
+Katharina	atp6	AGA	S	229	NID	NID	-	-	NID
+Drosophila	atp6	AGA	S	223	NID	NID	-	-	NID
+Ciona	atp6	AGG	G	209	NID	NID	-	-	NID
+Halocynthia	atp6	AGA	G	210	NID	NID	-	-	NID
+Halocynthia	atp6	AGA	G	210	NID	NID	-	-	NID
+Halocynthia	atp6	AGA	G	210	NID	NID	-	-	NID
+Halocynthia	atp6	AGA	G	210	NID	NID	-	-	NID
+Halocynthia	atp6	AGA	G	210	NID	NID	-	-	NID
+Ciona	atp6	AGA	G	209	NID	NID	-	-	NID
+Paracentrotus	atp6	AAA	N	231	NID	NID	-	-	NID
+Schistosoma	atp6	AAA	N	172	NID	NID	-	-	NID
+Patiria	atp6	AAA	N	229	NID	NID	-	-	NID
+Katharina	atp6	AGG	S	229	NID	NID	-	-	NID
+Katharina	atp6	AGG	S	229	NID	NID	-	-	NID
+Lumbricus	cob	AGA	S	62	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Lumbricus	cob	AGA	S	149	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Limulus	cob	AGA	S	75	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Caenorhabditis	cob	AGA	S	19	Cytochrome_B	PF00033.17	14	200	Cytochrome b/b6/petB
+Caenorhabditis	cob	AGA	S	34	Cytochrome_B	PF00033.17	14	200	Cytochrome b/b6/petB
+Caenorhabditis	cob	AGA	S	40	Cytochrome_B	PF00033.17	14	200	Cytochrome b/b6/petB
+Caenorhabditis	cob	AGA	S	116	Cytochrom_B_C|46-149	PF00032.15	46	149	Cytochrome b(C-terminal)/b6/petD
+Caenorhabditis	cob	AGA	S	149	Cytochrom_B_C|46-149	PF00032.15	46	149	Cytochrome b(C-terminal)/b6/petD
+Caenorhabditis	cob	AGA	S	158	Cytochrome_B	PF00033.17	14	200	Cytochrome b/b6/petB
+Caenorhabditis	cob	AGA	S	161	Cytochrome_B	PF00033.17	14	200	Cytochrome b/b6/petB
+Caenorhabditis	cob	AGA	S	176	Cytochrome_B	PF00033.17	14	200	Cytochrome b/b6/petB
+Caenorhabditis	cob	AGA	S	216	Cytochrom_B_N_2|84-253	PF13631.4	84	253	Cytochrome b(N-terminal)/b6/petB
+Caenorhabditis	cob	AGA	S	233	Cytochrom_B_N_2|84-253	PF13631.4	84	253	Cytochrome b(N-terminal)/b6/petB
+Caenorhabditis	cob	AGA	S	350	Cytochrome_B|256-369	PF00033.17	256	369	Cytochrome b/b6/petB
+Caenorhabditis	cob	AGA	S	365	Cytochrome_B|256-369	PF00033.17	256	369	Cytochrome b/b6/petB
+Trichinella	cob	AGA	S	45	Cytochrome_B	PF00033.17	14	200	Cytochrome b/b6/petB
+Trichinella	cob	AGA	S	122	Cytochrome_B	PF00033.17	14	200	Cytochrome b/b6/petB
+Trichinella	cob	AGA	S	179	Cytochrom_B_C|169-245	PF00032.15	169	245	Cytochrome b(C-terminal)/b6/petD
+Trichinella	cob	AGA	S	216	Cytochrom_B_C|169-245	PF00032.15	169	245	Cytochrome b(C-terminal)/b6/petD
+Trichinella	cob	AGA	S	296	Cytochrome_B|225-366	PF00033.17	225	366	Cytochrome b/b6/petB
+Trichinella	cob	AGA	S	297	Cytochrome_B|225-366	PF00033.17	225	366	Cytochrome b/b6/petB
+Trichinella	cob	AGA	S	299	Cytochrome_B|225-366	PF00033.17	225	366	Cytochrome b/b6/petB
+Trichinella	cob	AGA	S	310	Cytochrom_B_N_2|309-366	PF13631.4	309	366	Cytochrome b(N-terminal)/b6/petB
+Halocynthia	cob	AGG	G	86	Cytochrome_B	PF00033.17	7	193	Cytochrome b/b6/petB
+Halocynthia	cob	AGG	G	140	Cytochrome_B	PF00033.17	7	193	Cytochrome b/b6/petB
+Halocynthia	cob	AGG	G	152	Cytochrome_B	PF00033.17	7	193	Cytochrome b/b6/petB
+Halocynthia	cob	AGG	G	176	Cytochrom_B_C|165-236	PF00032.15	165	236	Cytochrome b(C-terminal)/b6/petD
+Halocynthia	cob	AGG	G	177	Cytochrom_B_C|165-236	PF00032.15	165	236	Cytochrome b(C-terminal)/b6/petD
+Halocynthia	cob	AGG	G	332	Cytochrom_B_C|247-349	PF00032.15	247	349	Cytochrome b(C-terminal)/b6/petD
+Halocynthia	cob	AGG	G	361	NID	NID	-	-	NID
+Ciona	cob	AGG	G	48	Cytochrome_B	PF00033.17	15	201	Cytochrome b/b6/petB
+Ciona	cob	AGG	G	126	Cytochrome_B	PF00033.17	15	201	Cytochrome b/b6/petB
+Ciona	cob	AGG	G	140	Cytochrome_B	PF00033.17	15	201	Cytochrome b/b6/petB
+Ciona	cob	AGG	G	215	Cytochrom_B_C|181-246	PF00032.15	181	246	Cytochrome b(C-terminal)/b6/petD
+Halocynthia	cob	AGA	G	48	Cytochrome_B	PF00033.17	7	193	Cytochrome b/b6/petB
+Halocynthia	cob	AGA	G	58	Cytochrome_B	PF00033.17	7	193	Cytochrome b/b6/petB
+Halocynthia	cob	AGA	G	243	Cytochrom_B_N_2	PF13631.4	77	255	Cytochrome b(N-terminal)/b6/petB
+Halocynthia	cob	AGA	G	301	Cytochrom_B_N_2|274-306	PF13631.4	274	306	Cytochrome b(N-terminal)/b6/petB
+Ciona	cob	AGA	G	43	Cytochrome_B	PF00033.17	15	201	Cytochrome b/b6/petB
+Ciona	cob	AGA	G	44	Cytochrome_B	PF00033.17	15	201	Cytochrome b/b6/petB
+Ciona	cob	AGA	G	85	Cytochrome_B	PF00033.17	15	201	Cytochrome b/b6/petB
+Ciona	cob	AGA	G	86	Cytochrome_B	PF00033.17	15	201	Cytochrome b/b6/petB
+Ciona	cob	AGA	G	96	Cytochrome_B	PF00033.17	15	201	Cytochrome b/b6/petB
+Ciona	cob	AGA	G	109	Cytochrome_B	PF00033.17	15	201	Cytochrome b/b6/petB
+Ciona	cob	AGA	G	152	Cytochrome_B	PF00033.17	15	201	Cytochrome b/b6/petB
+Ciona	cob	AGA	G	167	Cytochrome_B	PF00033.17	15	201	Cytochrome b/b6/petB
+Ciona	cob	AGA	G	221	Cytochrom_B_C|181-246	PF00032.15	181	246	Cytochrome b(C-terminal)/b6/petD
+Ciona	cob	AGA	G	243	Cytochrom_B_C|181-246	PF00032.15	181	246	Cytochrome b(C-terminal)/b6/petD
+Ciona	cob	AGA	G	303	Cytochrom_B_C|255-352	PF00032.15	255	352	Cytochrome b(C-terminal)/b6/petD
+Ciona	cob	AGA	G	353	Cytochrome_B|289-358	PF00033.17	289	358	Cytochrome b/b6/petB
+Paracentrotus	cob	AAA	N	25	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Paracentrotus	cob	AAA	N	36	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Paracentrotus	cob	AAA	N	42	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Paracentrotus	cob	AAA	N	95	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Paracentrotus	cob	AAA	N	268	Cytochrom_B_C|258-359	PF00032.15	258	359	Cytochrome b(C-terminal)/b6/petD
+Paracentrotus	cob	AAA	N	321	Cytochrom_B_N_2|286-351	PF13631.4	286	351	Cytochrome b(N-terminal)/b6/petB
+Schistosoma	cob	AAA	N	38	Cytochrom_B_C	PF00032.15	18	136	Cytochrome b(C-terminal)/b6/petD
+Schistosoma	cob	AAA	N	273	Cytochrom_B_C|247-344	PF00032.15	247	344	Cytochrome b(C-terminal)/b6/petD
+Patiria	cob	AAA	N	25	Serpentine_r_xa	PF03383.13	9	72	Caenorhabditis serpentine receptor-like protein, class xa
+Patiria	cob	AAA	N	36	Serpentine_r_xa	PF03383.13	9	72	Caenorhabditis serpentine receptor-like protein, class xa
+Patiria	cob	AAA	N	42	Serpentine_r_xa	PF03383.13	9	72	Caenorhabditis serpentine receptor-like protein, class xa
+Patiria	cob	AAA	N	84	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Patiria	cob	AAA	N	218	LrgB|167-269	PF04172.14	167	269	LrgB-like family
+Patiria	cob	AAA	N	268	LrgB|167-269	PF04172.14	167	269	LrgB-like family
+Patiria	cob	AAA	N	270	Cytochrom_B_C|258-359	PF00032.15	258	359	Cytochrome b(C-terminal)/b6/petD
+Patiria	cob	AAA	N	273	Cytochrom_B_C|258-359	PF00032.15	258	359	Cytochrome b(C-terminal)/b6/petD
+Patiria	cob	AAA	N	299	Cytochrom_B_C|258-359	PF00032.15	258	359	Cytochrome b(C-terminal)/b6/petD
+Schistosoma	cob	AGG	S	72	Cytochrom_B_C	PF00032.15	18	136	Cytochrome b(C-terminal)/b6/petD
+Schistosoma	cob	AGG	S	116	Ni_hydr_CYTB|100-257	PF01292.18	100	257	Prokaryotic cytochrome b561
+Caenorhabditis	cob	AGG	S	98	Cytochrom_B_C|46-149	PF00032.15	46	149	Cytochrome b(C-terminal)/b6/petD
+Caenorhabditis	cob	AGG	S	219	Cytochrom_B_N_2|84-253	PF13631.4	84	253	Cytochrome b(N-terminal)/b6/petB
+Caenorhabditis	cob	AGG	S	277	Cytochrome_B|256-369	PF00033.17	256	369	Cytochrome b/b6/petB
+Caenorhabditis	cob	AGG	S	310	Cytochrome_B|256-369	PF00033.17	256	369	Cytochrome b/b6/petB
