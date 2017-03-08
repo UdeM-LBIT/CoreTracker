@@ -26,7 +26,7 @@ h1 {
 }
 
 p.subtitle{
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Lato', cursive;
   font-size: 18px;
   margin-top: -10px;
 }
@@ -40,15 +40,49 @@ h2, h3, h4, h5, h6 {
 a {
   color:#39c;
   text-decoration:none;
+
 }
 
 a:hover {
   color:#069;
 }
 
-ol {
-	padding-left: 1.3rem;
+a.fancybox img {
+  border: none;
+  -o-transform: scale(1,1); -ms-transform: scale(1,1); -moz-transform: scale(1,1); -webkit-transform: scale(1,1); transform: scale(1,1); -o-transition: all 0.2s ease-in-out; -ms-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out;
+} 
+
+a.fancybox:hover img {
+  position: relative; z-index: 999; -o-transform: scale(1.03,1.03); -ms-transform: scale(1.03,1.03); -moz-transform: scale(1.03,1.03); -webkit-transform: scale(1.03,1.03); transform: scale(1.03,1.03);
 }
+
+ol {
+  list-style-type: none;
+  counter-reset: item;
+  margin: 0;
+  padding: 0;
+}
+
+ol > li {
+  display: table;
+  counter-increment: item;
+  margin-bottom: 0.6em;
+}
+
+ol > li:before {
+  content: counters(item, ".") ". ";
+  display: table-cell;
+  padding-right: 0.6em;    
+}
+
+li ol > li {
+  margin: 0;
+}
+
+li ol > li:before {
+  content: counters(item, ".") " ";
+}
+
 
 a small {
   font-size:11px;
@@ -72,7 +106,7 @@ code, pre {
 }
 
 code.coretracker{
-	font-size:14px;
+	font-size:13px;
 }
 
 
@@ -115,13 +149,24 @@ pre span.comment {
     color: #aaa;
 }
 
+pre span.folder{
+    color: #69bcef;
+    font-weight: 600;
+}
+
+
 div.content{
   margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 div.content p{
-margin-top: 10px;
-padding: 5px;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+span.foldername{
+  text-decoration: underline;
 }
 
 .normalul{
@@ -192,9 +237,9 @@ pre.terminal em {
 pre.seqrep{
 	white-space: pre-line;   
 	white-space: -moz-pre-line;  /* Mozilla, since 1999 */
-    white-space: -pre-line;      /* Opera 4-6 */
-    white-space: -o-pre-line;    /* Opera 7 */
-    word-wrap: break-word;  
+  white-space: -pre-line;      /* Opera 4-6 */
+  white-space: -o-pre-line;    /* Opera 7 */
+  word-wrap: break-word;  
 	word-break: break-all;
 
 }
@@ -322,7 +367,9 @@ header ul.index a {
 
 }
 
-
+.normalul li{
+  padding-bottom: 7px;
+}
 
 /* Change the link color on hover */
 header ul.index a:hover {
