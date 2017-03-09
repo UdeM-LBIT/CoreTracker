@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/UdeM-LBIT/CoreTracker.svg?branch=master)](https://travis-ci.org/UdeM-LBIT/CoreTracker) [![PyPI version](https://badge.fury.io/py/CoreTracker.svg)](https://badge.fury.io/py/CoreTracker)
+[![Build Status](https://travis-ci.org/UdeM-LBIT/CoreTracker.svg?branch=master)](https://travis-ci.org/UdeM-LBIT/CoreTracker) [![PyPI version](https://badge.fury.io/py/CoreTracker.svg)](https://badge.fury.io/py/CoreTracker) [![Anaconda-Server Badge](https://anaconda.org/maclandrol/coretracker/badges/version.svg)](https://anaconda.org/maclandrol/coretracker) [![Anaconda-Server Badge](https://anaconda.org/maclandrol/coretracker/badges/installer/conda.svg)](https://conda.anaconda.org/maclandrol)
 # CoreTracker
 CoreTracker detects evidences of codon reassignment from the protein repertoire of a set
 of genomes by successively applying different algorithms. It’s therefore a filtering approach that
