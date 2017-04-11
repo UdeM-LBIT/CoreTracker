@@ -1,3 +1,0 @@
-### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
-SjapoA	CAT	H	I	0.0	0.514285714286	0.166666666667	0.025641025641	0.846153846154	0.975	0.025	1423.0	-2.75098231827	49.0	0.0	0.0

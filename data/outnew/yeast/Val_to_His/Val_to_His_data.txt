@@ -1,4 +1,0 @@
-### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
-MtetrA	GTA	V	H	8.0	0.435064887985	0.111111111111	0.025641025641	0.512820512821	0.258278145695	0.0	2248.0	-2.60724305024	36.0	0.0	0.052
-CjadiA	GTT	V	H	0.0	0.213483146067	0.125	0.0222222222222	0.822222222222	0.348837209302	0.0077519379845	2250.0	-2.69278399619	37.0	0.0	0.0

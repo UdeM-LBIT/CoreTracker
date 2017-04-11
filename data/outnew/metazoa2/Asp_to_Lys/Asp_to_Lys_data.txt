@@ -1,4 +1,0 @@
-### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
-Taenia_crassiceps	GAT	D	K	0.0	0.0201408951212	0.125	0.0238095238095	0.761904761905	0.976744186047	0.0232558139535	1333.0	-0.71921182266	33.0	0.0	0.0
-Acropora	GAT	D	K	0.0	0.615384615385	0.142857142857	0.0322580645161	0.935483870968	0.756097560976	0.0243902439024	1350.0	-0.732888146912	33.0	0.0	0.0

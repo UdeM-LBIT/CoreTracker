@@ -1,3 +1,0 @@
-### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
-Euseius_nicholsi	GAT	D	A	0.0	0.581081081081	0.142857142857	0.0285714285714	0.857142857143	0.853658536585	0.0243902439024	1296.0	-1.69667896679	33.0	0.0	0.0

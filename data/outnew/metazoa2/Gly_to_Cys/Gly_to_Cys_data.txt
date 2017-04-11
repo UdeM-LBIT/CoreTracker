@@ -1,3 +1,0 @@
-### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
-Halocynthia	GGT	G	C	0.0	0.749999913686	0.1	0.0238095238095	0.785714285714	0.518518518519	0.0123456790123	1348.0	-2.34782608696	41.0	0.0	0.0

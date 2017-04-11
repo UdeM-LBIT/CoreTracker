@@ -1,3 +1,0 @@
-### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
-Tetrancistrum_nebulosi	ACA	T	H	0.0	0.409090872473	0.2	0.0833333333333	0.5	0.218181818182	0.0181818181818	1333.0	-1.27450980392	12.0	0.0	0.0

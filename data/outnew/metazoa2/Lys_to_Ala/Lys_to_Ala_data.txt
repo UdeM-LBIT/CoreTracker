@@ -1,3 +1,0 @@
-### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
-Taenia_crassiceps	AAA	K	A	0.0	0.0416666666667	0.166666666667	0.0769230769231	0.0769230769231	0.342105263158	0.0263157894737	1333.0	-1.05952380952	0.0	0.0	0.385

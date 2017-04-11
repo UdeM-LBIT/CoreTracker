@@ -1,3 +1,0 @@
-### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
-Euseius_nicholsi	TGG	W	A	0.0	0.135416666667	0.166666666667	0.0769230769231	0.923076923077	0.270833333333	0.0208333333333	1296.0	-2.4731610338	26.0	0.0	0.0
