@@ -1,0 +1,4 @@
+### Random Forest prediction
+genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
+Benedenia_hoshinai	GTA	V	C	0.0	0.285714226528	0.111111111111	0.03125	0.34375	0.307692307692	0.00961538461538	1333.0	-1.04735152488	36.0	0.0	0.0
+Caenorhabditis	GTT	V	C	0.0	0.764705801117	0.0909090909091	0.0217391304348	0.5	0.511111111111	0.0111111111111	1346.0	-0.924191750279	37.0	0.0	0.0

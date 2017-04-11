@@ -1,0 +1,3 @@
+### Random Forest prediction
+genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
+Trichinella	TGG	W	G	0.0	0.0888888888889	0.25	0.111111111111	0.777777777778	0.173076923077	0.0192307692308	1343.0	-1.64387464387	26.0	0.0	0.0

@@ -1,0 +1,5 @@
+### Random Forest prediction
+genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
+Echinococcus_equinus	GCT	A	D	0.0	0.659999882614	0.125	0.03125	0.5	0.68085106383	0.0212765957447	1331.0	-1.55769230769	45.0	0.0	0.0
+Taenia_crassiceps	GCT	A	D	0.0	0.608695517074	0.125	0.0294117647059	0.5	0.790697674419	0.0232558139535	1333.0	-1.76147479308	45.0	0.0	0.0
+Benedenia_hoshinai	GCT	A	D	0.0	0.703703601406	0.142857142857	0.030303030303	0.454545454545	0.647058823529	0.0196078431373	1333.0	-1.56790123457	45.0	0.0	0.0

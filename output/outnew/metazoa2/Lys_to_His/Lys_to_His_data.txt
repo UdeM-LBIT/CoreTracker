@@ -1,0 +1,5 @@
+### Random Forest prediction
+genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
+Euseius_nicholsi	AAA	K	H	0.0	0.571428571429	0.125	0.0357142857143	0.821428571429	0.8	0.0285714285714	1296.0	-0.869565217391	0.0	0.0	0.21
+Tetrancistrum_nebulosi	AAG	K	H	0.0	0.0188921485645	0.125	0.0333333333333	0.833333333333	0.714285714286	0.0238095238095	1333.0	-0.783091374893	2.0	0.0	0.0
+Caenorhabditis	AAA	K	H	0.0	0.6	0.1	0.0333333333333	0.633333333333	0.833333333333	0.0277777777778	1346.0	-0.775803722504	0.0	0.0	0.21

@@ -1,0 +1,4 @@
+### Random Forest prediction
+genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
+Schistosoma	GAC	D	R	0.0	0.0192307692308	1.0	1.0	0.0	0.0322580645161	0.0322580645161	1325.0	2.9	35.0	0.0	0.324
+Trichobilharzia_regenti	GAT	D	R	0.0	0.010520385059	0.125	0.0333333333333	0.733333333333	0.9375	0.03125	1324.0	-1.53972366149	33.0	0.0	0.0

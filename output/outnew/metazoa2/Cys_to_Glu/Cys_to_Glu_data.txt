@@ -1,0 +1,4 @@
+### Random Forest prediction
+genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
+Versteria_mustelae	TGT	C	E	0.0	9.6394652989e-05	0.111111111111	0.03125	0.09375	0.941176470588	0.0294117647059	1328.0	-1.75424413905	25.0	0.0	0.179
+Trichinella	TGT	C	E	0.0	9.6394652989e-05	0.2	0.0909090909091	0.272727272727	0.846153846154	0.0769230769231	1343.0	-2.01631701632	25.0	0.0	0.159

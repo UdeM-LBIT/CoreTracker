@@ -1,0 +1,186 @@
+Fun_ATP-synt_8	PF05933.11	LmeyeA	1.1e-26	92.6	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+PsbL	PF02419.15	LmeyeA	0.079	12.8	8	11	4	11	PsbL	protein
+PsbL	PF02419.15	LmeyeA	0.079	12.8	15	32	12	33	PsbL	protein
+Fun_ATP-synt_8	PF05933.11	SpombA	7.8e-25	86.7	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+Fun_ATP-synt_8	PF05933.11	SpastA	8.5e-25	86.5	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+Fun_ATP-synt_8	PF05933.11	CmetaD	5.3e-21	74.4	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+CytB6-F_Fe-S	PF08802.8	CmetaD	0.056	13.3	9	33	8	34	Cytochrome	B6-F	complex	Fe-S	subunit
+Fun_ATP-synt_8	PF05933.11	CgigaA	5.4e-22	77.6	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+Fun_ATP-synt_8	PF05933.11	CsantA	3e-17	62.4	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+Fun_ATP-synt_8	PF05933.11	CtropB	2.9e-22	78.5	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+CytB6-F_Fe-S	PF08802.8	CtropB	0.045	13.7	10	23	9	36	Cytochrome	B6-F	complex	Fe-S	subunit
+Fun_ATP-synt_8	PF05933.11	CtropA	2.9e-22	78.5	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+CytB6-F_Fe-S	PF08802.8	CtropA	0.045	13.7	10	23	9	36	Cytochrome	B6-F	complex	Fe-S	subunit
+Fun_ATP-synt_8	PF05933.11	WpijpA	1.2e-24	86.0	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+YMF19	PF02326.13	WpijpA	2.2	9.0	2	42	2	48	Plant	ATP	synthase	F0
+Fun_ATP-synt_8	PF05933.11	CsubhA	3e-13	49.6	1	47	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+DUF423	PF04241.13	CsubhA	0.065	13.3	8	31	2	45	Protein	of	unknown	function	(DUF423)
+Fun_ATP-synt_8	PF05933.11	CsubhB	3e-13	49.6	1	47	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+DUF423	PF04241.13	CsubhB	0.065	13.3	8	31	2	45	Protein	of	unknown	function	(DUF423)
+Fun_ATP-synt_8	PF05933.11	OanguA	7.1e-15	54.8	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+Fun_ATP-synt_8	PF05933.11	SarboA	7.2e-24	83.6	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+PsbL	PF02419.15	SarboA	0.046	13.6	8	11	4	11	PsbL	protein
+PsbL	PF02419.15	SarboA	0.046	13.6	15	32	12	33	PsbL	protein
+Fun_ATP-synt_8	PF05933.11	CcastA	9.2e-23	80.0	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+Fun_ATP-synt_8	PF05933.11	KtherA	1.1e-26	92.6	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+PsbL	PF02419.15	KtherA	0.079	12.8	8	11	4	11	PsbL	protein
+PsbL	PF02419.15	KtherA	0.079	12.8	15	32	12	33	PsbL	protein
+Fun_ATP-synt_8	PF05933.11	CnorvA	7.4e-23	80.3	1	46	1	47	Fungal	ATP	synthase	protein	8	(A6L)
+YMF19	PF02326.13	CnorvA	0.48	11.1	2	43	2	51	Plant	ATP	synthase	F0
+Fun_ATP-synt_8	PF05933.11	CviswA	1.2e-20	73.3	1	47	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+ATP-synt_8	PF00895.18	CviswA	0.079	13.3	1	26	1	44	ATP	synthase	protein	8
+Fun_ATP-synt_8	PF05933.11	MstarA	6.8e-22	77.2	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+Fun_ATP-synt_8	PF05933.11	NbaciA	7.5e-24	83.5	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+PsbT	PF01405.15	NbaciA	0.046	13.4	12	32	10	32	Photosystem	II	reaction	centre	T	protein
+PsbL	PF02419.15	NbaciA	3.6	7.5	8	11	4	11	PsbL	protein
+PsbL	PF02419.15	NbaciA	3.6	7.5	15	32	12	33	PsbL	protein
+Fun_ATP-synt_8	PF05933.11	CbohiA	3e-14	52.7	1	46	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+MASE5	PF17178.2	CbohiA	0.034	13.8	10	41	4	47	Membrane-associated	sensor
+Fun_ATP-synt_8	PF05933.11	LstarA	5.3e-19	68.0	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+YMF19	PF02326.13	LstarA	2.1	9.1	2	43	2	48	Plant	ATP	synthase	F0
+Fun_ATP-synt_8	PF05933.11	MfariA	4.5e-22	77.8	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+DUF975	PF06161.9	MfariA	0.016	14.9	3	29	2	35	Protein	of	unknown	function	(DUF975)
+Fun_ATP-synt_8	PF05933.11	MfariB	1.9e-19	69.4	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+NEMP	PF10225.7	MfariB	0.052	13.1	4	38	1	47	NEMP	family
+Fun_ATP-synt_8	PF05933.11	LanspB	1.1e-26	92.6	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+PsbL	PF02419.15	LanspB	0.079	12.8	8	11	4	11	PsbL	protein
+PsbL	PF02419.15	LanspB	0.079	12.8	15	32	12	33	PsbL	protein
+Fun_ATP-synt_8	PF05933.11	CphanA	2e-26	91.7	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+Fun_ATP-synt_8	PF05933.11	LanspA	4e-26	90.8	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+PsbL	PF02419.15	LanspA	0.07	13.0	8	11	4	11	PsbL	protein
+PsbL	PF02419.15	LanspA	0.07	13.0	15	32	12	33	PsbL	protein
+Fun_ATP-synt_8	PF05933.11	CsojaA	1.1e-21	76.6	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+Fun_ATP-synt_8	PF05933.11	CglabA	2e-24	85.3	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+PsbL	PF02419.15	CglabA	0.0053	16.6	8	11	4	11	PsbL	protein
+PsbL	PF02419.15	CglabA	0.0053	16.6	15	32	12	33	PsbL	protein
+Fun_ATP-synt_8	PF05933.11	ScryoA	7.6e-20	70.7	1	46	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+Fun_ATP-synt_8	PF05933.11	CneerA	1.3e-21	76.4	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+ATP-synt_8	PF00895.18	CneerA	0.047	14.0	1	31	1	44	ATP	synthase	protein	8
+Fun_ATP-synt_8	PF05933.11	CsakeA	7.9e-20	70.6	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+TMEM43	PF07787.10	CsakeA	3.1	7.0	12	45	10	48	Transmembrane	protein	43
+Fun_ATP-synt_8	PF05933.11	CjiufA	2.2e-19	69.2	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+Fun_ATP-synt_8	PF05933.11	KlactA	7.5e-27	93.1	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+Fun_ATP-synt_8	PF05933.11	CzempA	1.8e-19	69.5	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+YMF19	PF02326.13	CzempA	0.005	17.5	2	46	2	50	Plant	ATP	synthase	F0
+Fun_ATP-synt_8	PF05933.11	CmetaB	5.3e-21	74.4	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+CytB6-F_Fe-S	PF08802.8	CmetaB	0.056	13.3	9	33	8	34	Cytochrome	B6-F	complex	Fe-S	subunit
+Fun_ATP-synt_8	PF05933.11	CmetaC	5.3e-21	74.4	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+CytB6-F_Fe-S	PF08802.8	CmetaC	0.056	13.3	9	33	8	34	Cytochrome	B6-F	complex	Fe-S	subunit
+Fun_ATP-synt_8	PF05933.11	CmetaA	5.3e-21	74.4	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+CytB6-F_Fe-S	PF08802.8	CmetaA	0.056	13.3	9	33	8	34	Cytochrome	B6-F	complex	Fe-S	subunit
+Fun_ATP-synt_8	PF05933.11	CmetaF	5.3e-21	74.4	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+CytB6-F_Fe-S	PF08802.8	CmetaF	0.056	13.3	9	33	8	34	Cytochrome	B6-F	complex	Fe-S	subunit
+Fun_ATP-synt_8	PF05933.11	CfrijA	2.2e-21	75.6	1	47	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+ATP-synt_8	PF00895.18	CfrijA	0.052	13.9	1	30	1	38	ATP	synthase	protein	8
+Fun_ATP-synt_8	PF05933.11	CgallA	2e-26	91.7	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+Fun_ATP-synt_8	PF05933.11	CmetaE	5.3e-21	74.4	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+CytB6-F_Fe-S	PF08802.8	CmetaE	0.056	13.3	9	33	8	34	Cytochrome	B6-F	complex	Fe-S	subunit
+Fun_ATP-synt_8	PF05933.11	PpastA	1.9e-18	66.2	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+YMF19	PF02326.13	PpastA	0.083	13.6	2	46	2	48	Plant	ATP	synthase	F0
+NEMP	PF10225.7	PpastA	0.28	10.8	4	38	1	47	NEMP	family
+Fun_ATP-synt_8	PF05933.11	SjapoA	2.4e-16	59.5	1	45	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+Fun_ATP-synt_8	PF05933.11	CalbiE	4.6e-24	84.2	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+ATP-synt_8	PF00895.18	CalbiE	0.1	12.9	1	31	1	40	ATP	synthase	protein	8
+Fun_ATP-synt_8	PF05933.11	CtetrA	9.6e-21	73.6	1	47	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+ATP-synt_8	PF00895.18	CtetrA	0.34	11.3	1	31	1	45	ATP	synthase	protein	8
+Fun_ATP-synt_8	PF05933.11	MmagnB	9.1e-20	70.4	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+Fun_ATP-synt_8	PF05933.11	MmagnA	9.1e-20	70.4	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+Fun_ATP-synt_8	PF05933.11	CparaA	1.3e-20	73.2	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+NEMP	PF10225.7	CparaA	0.22	11.1	4	36	1	47	NEMP	family
+CytB6-F_Fe-S	PF08802.8	CparaA	0.3	11.0	9	33	8	34	Cytochrome	B6-F	complex	Fe-S	subunit
+Fun_ATP-synt_8	PF05933.11	CcoryA	1e-11	44.6	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+Fun_ATP-synt_8	PF05933.11	CparaC	1.3e-20	73.2	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+NEMP	PF10225.7	CparaC	0.22	11.1	4	36	1	47	NEMP	family
+CytB6-F_Fe-S	PF08802.8	CparaC	0.3	11.0	9	33	8	34	Cytochrome	B6-F	complex	Fe-S	subunit
+Fun_ATP-synt_8	PF05933.11	CparaB	1.3e-20	73.2	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+NEMP	PF10225.7	CparaB	0.22	11.1	4	36	1	47	NEMP	family
+CytB6-F_Fe-S	PF08802.8	CparaB	0.3	11.0	9	33	8	34	Cytochrome	B6-F	complex	Fe-S	subunit
+Fun_ATP-synt_8	PF05933.11	CparaE	1.3e-20	73.2	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+NEMP	PF10225.7	CparaE	0.22	11.1	4	36	1	47	NEMP	family
+CytB6-F_Fe-S	PF08802.8	CparaE	0.3	11.0	9	33	8	34	Cytochrome	B6-F	complex	Fe-S	subunit
+Fun_ATP-synt_8	PF05933.11	CparaD	1.3e-20	73.2	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+NEMP	PF10225.7	CparaD	0.22	11.1	4	36	1	47	NEMP	family
+CytB6-F_Fe-S	PF08802.8	CparaD	0.3	11.0	9	33	8	34	Cytochrome	B6-F	complex	Fe-S	subunit
+Fun_ATP-synt_8	PF05933.11	CparaF	1.3e-20	73.2	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+NEMP	PF10225.7	CparaF	0.22	11.1	4	36	1	47	NEMP	family
+CytB6-F_Fe-S	PF08802.8	CparaF	0.3	11.0	9	33	8	34	Cytochrome	B6-F	complex	Fe-S	subunit
+Fun_ATP-synt_8	PF05933.11	MtetrA	1.6e-20	72.8	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+Fun_ATP-synt_8	PF05933.11	CsaraA	3.2e-19	68.7	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+ATP-synt_8	PF00895.18	CsaraA	0.2	12.0	1	26	1	40	ATP	synthase	protein	8
+Fun_ATP-synt_8	PF05933.11	CsuavA	3.6e-25	87.7	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+Fun_ATP-synt_8	PF05933.11	PkluyA	4.4e-15	55.4	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+YMF19	PF02326.13	PkluyA	0.16	12.6	2	47	2	48	Plant	ATP	synthase	F0
+OppC_N	PF12911.5	PkluyA	1.5	8.7	18	36	8	45	N-terminal	TM	domain	of	oligopeptide	transport	permease	C
+Fun_ATP-synt_8	PF05933.11	PcanaA	1.6e-25	88.9	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+YMF19	PF02326.13	PcanaA	2.8	8.7	2	42	2	48	Plant	ATP	synthase	F0
+Fun_ATP-synt_8	PF05933.11	CsalmA	3.2e-18	65.5	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+ATP-synt_8	PF00895.18	CsalmA	0.054	13.8	1	31	1	45	ATP	synthase	protein	8
+YMF19	PF02326.13	CsalmA	0.55	10.9	2	42	2	48	Plant	ATP	synthase	F0
+Fun_ATP-synt_8	PF05933.11	BcustA	3.7e-17	62.1	1	47	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+YMF19	PF02326.13	BcustA	0.052	14.2	2	46	2	48	Plant	ATP	synthase	F0
+Fun_ATP-synt_8	PF05933.11	CjadiA	6.7e-25	86.9	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+Fun_ATP-synt_8	PF05933.11	AgossB	2.8e-19	68.9	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+Fun_ATP-synt_8	PF05933.11	NdelpA	3.7e-25	87.7	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+PsbL	PF02419.15	NdelpA	0.0053	16.6	8	11	4	11	PsbL	protein
+PsbL	PF02419.15	NdelpA	0.0053	16.6	15	32	12	33	PsbL	protein
+Fun_ATP-synt_8	PF05933.11	LelonA	4.4e-21	74.6	1	47	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+YMF19	PF02326.13	LelonA	0.15	12.7	2	46	2	48	Plant	ATP	synthase	F0
+Fun_ATP-synt_8	PF05933.11	CalimA	2e-26	91.7	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+Fun_ATP-synt_8	PF05933.11	BcaliA	9.7e-25	86.3	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+YMF19	PF02326.13	BcaliA	2.4	8.9	2	42	2	48	Plant	ATP	synthase	F0
+Fun_ATP-synt_8	PF05933.11	SoctoA	2.8e-20	72.1	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+ATP-synt_8	PF00895.18	SoctoA	0.06	13.7	1	24	1	42	ATP	synthase	protein	8
+Fun_ATP-synt_8	PF05933.11	CdefoA	2e-26	91.7	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+Fun_ATP-synt_8	PF05933.11	LdasiA	1.7e-26	92.0	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+Fun_ATP-synt_8	PF05933.11	LkluyF	2.7e-26	91.3	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+YMF19	PF02326.13	LkluyF	2.2	9.0	2	42	2	48	Plant	ATP	synthase	F0
+Fun_ATP-synt_8	PF05933.11	LkluyE	2.7e-26	91.3	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+YMF19	PF02326.13	LkluyE	2.2	9.0	2	42	2	48	Plant	ATP	synthase	F0
+Fun_ATP-synt_8	PF05933.11	LkluyD	2.7e-26	91.3	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+YMF19	PF02326.13	LkluyD	2.2	9.0	2	42	2	48	Plant	ATP	synthase	F0
+Fun_ATP-synt_8	PF05933.11	LkluyC	2.7e-26	91.3	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+YMF19	PF02326.13	LkluyC	2.2	9.0	2	42	2	48	Plant	ATP	synthase	F0
+Fun_ATP-synt_8	PF05933.11	CvartA	3.6e-25	87.7	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+Fun_ATP-synt_8	PF05933.11	LkluyA	2.7e-26	91.3	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+YMF19	PF02326.13	LkluyA	2.2	9.0	2	42	2	48	Plant	ATP	synthase	F0
+Fun_ATP-synt_8	PF05933.11	CorthB	1.3e-20	73.2	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+NEMP	PF10225.7	CorthB	0.22	11.1	4	36	1	47	NEMP	family
+CytB6-F_Fe-S	PF08802.8	CorthB	0.3	11.0	9	33	8	34	Cytochrome	B6-F	complex	Fe-S	subunit
+Fun_ATP-synt_8	PF05933.11	CorthC	1.3e-20	73.2	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+NEMP	PF10225.7	CorthC	0.22	11.1	4	36	1	47	NEMP	family
+CytB6-F_Fe-S	PF08802.8	CorthC	0.3	11.0	9	33	8	34	Cytochrome	B6-F	complex	Fe-S	subunit
+Fun_ATP-synt_8	PF05933.11	CorthA	1.3e-20	73.2	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+NEMP	PF10225.7	CorthA	0.22	11.1	4	36	1	47	NEMP	family
+CytB6-F_Fe-S	PF08802.8	CorthA	0.3	11.0	9	33	8	34	Cytochrome	B6-F	complex	Fe-S	subunit
+Fun_ATP-synt_8	PF05933.11	ClusiA	1.8e-20	72.7	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+NEMP	PF10225.7	ClusiA	0.2	11.2	4	38	1	47	NEMP	family
+ATP-synt_8	PF00895.18	ClusiA	1.1	9.6	1	26	1	39	ATP	synthase	protein	8
+ATP-synt_B	PF00430.16	ClusiA	1.5	8.8	15	42	12	47	ATP	synthase	B/B'	CF(0)
+Fun_ATP-synt_8	PF05933.11	MguilA	1.5e-19	69.7	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+Fun_ATP-synt_8	PF05933.11	WmucoA	2.9e-25	88.0	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+YMF19	PF02326.13	WmucoA	1.3	9.7	2	42	2	48	Plant	ATP	synthase	F0
+Fun_ATP-synt_8	PF05933.11	ScereC	1.6e-25	88.8	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+YMF19	PF02326.13	ScereC	2.2	9.0	2	42	2	48	Plant	ATP	synthase	F0
+Fun_ATP-synt_8	PF05933.11	ScereA	1.6e-25	88.8	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+YMF19	PF02326.13	ScereA	2.2	9.0	2	42	2	48	Plant	ATP	synthase	F0
+Fun_ATP-synt_8	PF05933.11	ScereD	1.6e-25	88.8	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+YMF19	PF02326.13	ScereD	2.2	9.0	2	42	2	48	Plant	ATP	synthase	F0
+Fun_ATP-synt_8	PF05933.11	ScereE	1.6e-25	88.8	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+YMF19	PF02326.13	ScereE	2.2	9.0	2	42	2	48	Plant	ATP	synthase	F0
+Fun_ATP-synt_8	PF05933.11	DhansA	5.2e-23	80.8	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+Fun_ATP-synt_8	PF05933.11	YlipoB	2e-26	91.7	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+Fun_ATP-synt_8	PF05933.11	LnothA	1.1e-26	92.6	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+PsbL	PF02419.15	LnothA	0.079	12.8	8	11	4	11	PsbL	protein
+PsbL	PF02419.15	LnothA	0.079	12.8	15	32	12	33	PsbL	protein
+Fun_ATP-synt_8	PF05933.11	YlipoA	2e-26	91.7	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+Fun_ATP-synt_8	PF05933.11	CtheaA	1.3e-20	73.2	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+NEMP	PF10225.7	CtheaA	0.22	11.1	4	36	1	47	NEMP	family
+CytB6-F_Fe-S	PF08802.8	CtheaA	0.3	11.0	9	33	8	34	Cytochrome	B6-F	complex	Fe-S	subunit
+Fun_ATP-synt_8	PF05933.11	AgossA	2.8e-19	68.9	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+Fun_ATP-synt_8	PF05933.11	MingeA	3.6e-22	78.1	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+Fun_ATP-synt_8	PF05933.11	ScastA	3.8e-23	81.3	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+PsbL	PF02419.15	ScastA	2	8.3	8	11	4	11	PsbL	protein
+PsbL	PF02419.15	ScastA	2	8.3	15	32	12	33	PsbL	protein
+Fun_ATP-synt_8	PF05933.11	CmaltA	2.1e-23	82.1	1	48	1	48	Fungal	ATP	synthase	protein	8	(A6L)
+ATP-synt_8	PF00895.18	CmaltA	0.021	15.1	1	33	1	39	ATP	synthase	protein	8
+NEMP	PF10225.7	CmaltA	0.053	13.1	4	44	1	48	NEMP	family

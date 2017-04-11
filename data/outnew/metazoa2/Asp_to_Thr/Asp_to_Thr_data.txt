@@ -1,0 +1,5 @@
+### Random Forest prediction
+genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
+Echinococcus_equinus	GAT	D	T	0.0	0.515625	0.125	0.025641025641	0.769230769231	0.975	0.025	1331.0	-0.788461538462	33.0	0.0	0.0
+Taenia_crassiceps	GAT	D	T	0.0	0.0326132504658	0.125	0.0238095238095	0.761904761905	0.976744186047	0.0232558139535	1333.0	-0.88854679803	33.0	0.0	0.0
+Caenorhabditis	GAC	D	T	0.0	0.0441176470588	0.25	0.25	0.5	0.105263157895	0.0263157894737	1346.0	0.128205128205	35.0	0.0	0.0

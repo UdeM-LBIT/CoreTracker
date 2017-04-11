@@ -46,7 +46,7 @@ parser.add_argument('--refine', dest='refine', action='store_true',
                     help="Whether we should refine the alignment with hmm")
 parser.add_argument('--noclean', dest='noclean', action='store_false',
                     help="Whether we should clean unnecessary file or not")
-parser.add_argument('--alignarg', dest='alignargs',
+parser.add_argument('--alignarg', dest='alignargs', default="",
                     help="Additional arguments for the alignment program (muscle or mafft).")
 parser.add_argument('--notrans', dest='notrans', action='store_true',
                     help="Whether we should attempt to translate or not. This overrule --align")
