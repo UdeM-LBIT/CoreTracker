@@ -59,6 +59,7 @@ target/
 # results
 tmp/*
 
+output/*
 data/*
 lscript/
 script/coretracker.py
