@@ -1,0 +1,4 @@
+### Random Forest prediction
+genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
+Caenorhabditis	TAT	Y	I	0.0	0.55	0.1	0.0166666666667	0.733333333333	0.909090909091	0.0151515151515	1346.0	-0.818026484408	17.0	0.0	0.0
+Blanceolatum	TAC	Y	I	0.0	0.223684210526	0.142857142857	0.0555555555556	0.888888888889	0.428571428571	0.0238095238095	775.0	-0.497902097902	19.0	0.0	0.062

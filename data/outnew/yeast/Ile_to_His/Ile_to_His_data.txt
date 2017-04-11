@@ -1,0 +1,4 @@
+### Random Forest prediction
+genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
+CsuavA	ATA	I	H	0.0	0.192499976695	0.111111111111	0.03125	0.8125	0.129032258065	0.00403225806452	2250.0	-2.64887533359	4.0	0.0	0.153
+MingeA	ATA	I	H	0.0	0.708994608524	0.0833333333333	0.00680272108844	0.741496598639	0.59756097561	0.00406504065041	2249.0	-2.8072298045	4.0	0.0	0.199

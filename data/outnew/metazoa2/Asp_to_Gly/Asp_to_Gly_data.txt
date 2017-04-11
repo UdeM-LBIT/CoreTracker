@@ -1,0 +1,5 @@
+### Random Forest prediction
+genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
+Versteria_mustelae	GAT	D	G	0.0	0.529411764706	0.125	0.0277777777778	0.861111111111	0.923076923077	0.025641025641	1328.0	-0.913012221423	33.0	0.0	0.0
+Echinococcus_equinus	GAT	D	G	0.0	0.515625	0.125	0.025641025641	0.769230769231	0.975	0.025	1331.0	-0.939655172414	33.0	0.0	0.0
+Taenia_crassiceps	GAT	D	G	0.0	0.0665005870698	0.125	0.0238095238095	0.761904761905	0.976744186047	0.0232558139535	1333.0	-1.01169950739	33.0	0.0	0.0

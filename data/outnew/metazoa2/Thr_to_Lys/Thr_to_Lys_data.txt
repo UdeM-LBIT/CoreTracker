@@ -1,0 +1,4 @@
+### Random Forest prediction
+genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
+Terebratulina	ACG	T	K	0.0	0.0294117545514	0.5	0.333333333333	0.666666666667	0.051724137931	0.0172413793103	1351.0	0.393162393162	14.0	0.0	0.013
+Trichinella	ACT	T	K	0.0	0.113636340096	0.142857142857	0.0769230769231	0.384615384615	0.180555555556	0.0138888888889	1343.0	-1.1171875	13.0	0.0	0.0

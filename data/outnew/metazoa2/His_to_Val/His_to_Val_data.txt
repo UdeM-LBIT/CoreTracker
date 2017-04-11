@@ -1,0 +1,3 @@
+### Random Forest prediction
+genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
+Haplorchis_taichui	CAT	H	V	0.0	0.573529411765	0.142857142857	0.030303030303	0.848484848485	0.825	0.025	1320.0	-2.71931196247	49.0	0.0	0.0

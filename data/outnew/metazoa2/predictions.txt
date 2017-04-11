@@ -1,0 +1,118 @@
+#Reference Genetic Code : 4 (Mold Mitochondrial)
+#Exception: 
+AGG (R, K)
+	Limulus                 	0.918	Both
+	Strigamia_maritima      	0.790	Both
+ATA (I, M)
+	Metaseiulus_occidentalis	0.993	Both
+	Euseius_nicholsi        	0.972	Both
+	Patiria                 	0.559	Algn
+	Daphnia                 	0.999	Both
+	Lumbricus               	0.976	Both
+	Limulus                 	0.996	Both
+	Axinella                	0.553	Algn
+	Terebratulina           	0.996	Both
+	Bfloridae               	0.660	Both
+	Katharina               	0.994	Both
+	Trichinella             	0.781	Both
+	Pseudogarypus_banksi    	0.994	Both
+	Myxine                  	0.995	Both
+	Drosophila              	0.997	Both
+	Ciona                   	0.972	Both
+	Epigonichthys           	0.998	Both
+	Strigamia_maritima      	0.996	Both
+	Caenorhabditis          	0.867	Both
+	Homo                    	0.999	Both
+	Ascidiella_aspersa      	0.947	Both
+	Blanceolatum            	0.689	Both
+AAA (K, N)
+	Paracentrotus           	0.997	Both
+	Schistosoma             	0.677	Both
+	Fasciola                	0.724	Both
+	Trichobilharzia_regenti 	0.771	Both
+	Versteria_mustelae      	0.589	Both
+	Patiria                 	0.997	Both
+	Haplorchis_taichui      	0.582	Both
+	Taenia_crassiceps       	0.631	Both
+	Tetrancistrum_nebulosi  	0.922	Both
+	Benedenia_hoshinai      	0.617	Both
+AAA (K, S)
+	Haplorchis_taichui      	0.573	Clad
+	Echinococcus_equinus    	0.678	Clad
+AGG (R, G)
+	Metaseiulus_occidentalis	0.886	Both
+	Aphrocallistes_vastus   	0.955	Both
+	Halocynthia             	0.997	Both
+	Ciona                   	0.997	Both
+	Ascidiella_aspersa      	1.000	Both
+ATA (I, L)
+	Euseius_nicholsi        	0.896	Both
+	Lumbricus               	0.990	Both
+	Myxine                  	0.750	Both
+	Ciona                   	0.895	Both
+	Epigonichthys           	0.992	Both
+	Strigamia_maritima      	0.541	Both
+	Ascidiella_aspersa      	0.783	Both
+AAA (K, L)
+	Echinococcus_equinus    	0.678	Clad
+ATC (I, L)
+	Euseius_nicholsi        	0.728	None
+	Lumbricus               	0.721	None
+	Ciona                   	0.813	Clad
+	Epigonichthys           	0.520	None
+AAA (K, R)
+	Ascidiella_aspersa      	0.572	None
+AGG (R, S)
+	Metaseiulus_occidentalis	0.731	Both
+	Paracentrotus           	0.993	Both
+	Schistosoma             	0.996	Both
+	Fasciola                	0.743	Both
+	Trichobilharzia_regenti 	0.643	Both
+	Versteria_mustelae      	0.997	Both
+	Euseius_nicholsi        	0.996	Both
+	Patiria                 	0.859	Both
+	Haplorchis_taichui      	0.996	Both
+	Echinococcus_equinus    	0.755	Both
+	Taenia_crassiceps       	0.650	Both
+	Terebratulina           	0.752	Both
+	Katharina               	0.907	Both
+	Tetrancistrum_nebulosi  	0.707	Both
+	Trichinella             	0.996	Both
+	Caenorhabditis          	0.995	Both
+AGA (R, G)
+	Aphrocallistes_vastus   	0.993	Both
+	Euseius_nicholsi        	0.527	Both
+	Halocynthia             	0.997	Both
+	Ciona                   	0.993	Both
+	Ascidiella_aspersa      	0.998	Both
+ATT (I, L)
+	Euseius_nicholsi        	0.577	None
+	Lumbricus               	0.588	None
+	Ciona                   	0.580	None
+	Epigonichthys           	0.586	None
+AGA (R, S)
+	Metaseiulus_occidentalis	0.998	Both
+	Paracentrotus           	0.997	Both
+	Aphrocallistes_vastus   	0.995	Both
+	Schistosoma             	0.993	Both
+	Trichobilharzia_regenti 	0.894	Both
+	Versteria_mustelae      	0.992	Both
+	Euseius_nicholsi        	0.996	Both
+	Patiria                 	0.909	Both
+	Daphnia                 	1.000	Both
+	Haplorchis_taichui      	0.992	Both
+	Lumbricus               	1.000	Both
+	Limulus                 	0.999	Both
+	Echinococcus_equinus    	0.681	Both
+	Terebratulina           	1.000	Both
+	Katharina               	0.899	Both
+	Tetrancistrum_nebulosi  	0.995	Both
+	Trichinella             	0.995	Both
+	Balanoglossus           	0.707	Both
+	Pseudogarypus_banksi    	0.987	Both
+	Drosophila              	0.999	Both
+	Epigonichthys           	0.649	Both
+	Strigamia_maritima      	1.000	Both
+	Caenorhabditis          	0.993	Both
+	Blanceolatum            	0.587	Both
+	Saccoglossus            	0.502	Both

@@ -1,0 +1,5 @@
+### Random Forest prediction
+genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
+Tetrancistrum_nebulosi	GAA	E	H	0.0	0.720588235294	0.1	0.0454545454545	0.818181818182	0.55	0.025	1333.0	0.0834298957126	32.0	0.0	0.0
+Trichinella	GAA	E	H	0.0	0.645161290323	0.125	0.0384615384615	0.807692307692	0.702702702703	0.027027027027	1343.0	0.142433234421	32.0	0.0	0.0
+Pseudogarypus_banksi	GAG	E	H	0.0	0.138888888889	0.166666666667	0.0909090909091	0.818181818182	0.275	0.025	1347.0	0.343457943925	34.0	0.0	0.0

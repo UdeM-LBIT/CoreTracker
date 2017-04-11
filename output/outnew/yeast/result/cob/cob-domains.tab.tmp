@@ -1,0 +1,897 @@
+Cytochrome_B	PF00033.17	LmeyeA	1.3e-75	253.2	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	LmeyeA	1.3e-75	253.2	289	336	270	344	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	LmeyeA	3.1e-38	131.3	29	57	11	84	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	LmeyeA	3.1e-38	131.3	88	253	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	LmeyeA	3.1e-38	131.3	338	338	284	377	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	LmeyeA	5.3e-35	119.7	106	135	77	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	LmeyeA	5.3e-35	119.7	187	218	175	236	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	LmeyeA	5.3e-35	119.7	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	SpombA	2e-75	252.7	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	SpombA	2e-75	252.7	351	363	323	377	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	SpombA	5.4e-41	140.3	30	50	27	54	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	SpombA	5.4e-41	140.3	88	253	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	SpombA	5.4e-41	140.3	289	300	282	319	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	SpombA	3.4e-34	117.1	113	132	23	184	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	SpombA	3.4e-34	117.1	186	219	161	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	SpombA	3.4e-34	117.1	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	SpastA	1.7e-70	236.6	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	SpastA	1.7e-70	236.6	234	238	221	246	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	SpastA	1.7e-70	236.6	295	355	288	382	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	SpastA	3.4e-37	127.9	30	56	26	72	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	SpastA	3.4e-37	127.9	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	SpastA	3.4e-37	127.9	329	329	283	376	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	SpastA	1.1e-34	118.7	107	134	67	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	SpastA	1.1e-34	118.7	188	225	177	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	SpastA	1.1e-34	118.7	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	CmetaD	7e-78	260.7	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CmetaD	7e-78	260.7	322	335	313	346	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CmetaD	5.6e-43	146.7	30	57	25	84	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CmetaD	5.6e-43	146.7	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CmetaD	5.6e-43	146.7	322	335	312	343	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CmetaD	4e-33	113.7	108	126	75	155	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CmetaD	4e-33	113.7	190	212	173	236	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CmetaD	4e-33	113.7	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	CgigaA	9.1e-76	253.8	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CgigaA	9.1e-76	253.8	355	361	335	373	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CgigaA	1.2e-39	135.9	30	72	23	86	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CgigaA	1.2e-39	135.9	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CgigaA	5.1e-34	116.5	106	136	80	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CgigaA	5.1e-34	116.5	189	211	173	236	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CgigaA	5.1e-34	116.5	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	CsantA	9.5e-74	247.2	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CsantA	9.5e-74	247.2	353	383	289	384	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CsantA	1.6e-39	135.5	29	56	23	72	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CsantA	1.6e-39	135.5	88	250	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CsantA	1.6e-39	135.5	290	318	281	346	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CsantA	2.1e-31	108.1	96	140	59	148	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CsantA	2.1e-31	108.1	217	217	177	247	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CsantA	2.1e-31	108.1	260	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Ninjurin	PF04923.10	CsantA	0.23	11.3	16	59	15	98	Ninjurin
+Ninjurin	PF04923.10	CsantA	0.23	11.3	119	127	104	154	Ninjurin
+Ninjurin	PF04923.10	CsantA	0.23	11.3	228	245	188	260	Ninjurin
+Ninjurin	PF04923.10	CsantA	0.23	11.3	293	305	278	315	Ninjurin
+Ninjurin	PF04923.10	CsantA	0.23	11.3	360	381	352	382	Ninjurin
+Cytochrome_B	PF00033.17	CtropB	4.5e-78	261.3	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CtropB	4.5e-78	261.3	353	359	315	380	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CtropB	7.6e-43	146.3	30	60	22	85	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CtropB	7.6e-43	146.3	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CtropB	7.6e-43	146.3	321	341	317	372	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CtropB	3.2e-34	117.2	105	134	79	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CtropB	3.2e-34	117.2	189	213	173	236	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CtropB	3.2e-34	117.2	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	CtropA	4.5e-78	261.3	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CtropA	4.5e-78	261.3	353	359	315	380	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CtropA	7.6e-43	146.3	30	60	22	85	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CtropA	7.6e-43	146.3	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CtropA	7.6e-43	146.3	321	341	317	372	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CtropA	3.2e-34	117.2	105	134	79	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CtropA	3.2e-34	117.2	189	213	173	236	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CtropA	3.2e-34	117.2	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	WpijpA	1.6e-75	252.9	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	WpijpA	1.6e-75	252.9	322	334	291	362	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	WpijpA	2.6e-39	134.8	32	55	25	69	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	WpijpA	2.6e-39	134.8	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	WpijpA	1.3e-32	112.1	106	136	84	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	WpijpA	1.3e-32	112.1	189	219	175	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	WpijpA	1.3e-32	112.1	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Ni_hydr_CYTB	PF01292.18	WpijpA	0.00079	18.9	32	105	17	113	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	WpijpA	0.00079	18.9	116	207	104	214	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	WpijpA	0.00079	18.9	232	310	229	371	Prokaryotic	cytochrome	b561
+Cytochrome_B	PF00033.17	CsubhA	8.4e-77	257.1	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CsubhA	8.4e-77	257.1	355	373	322	384	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CsubhA	1.6e-40	138.7	30	72	24	86	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CsubhA	1.6e-40	138.7	88	253	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CsubhA	1.3e-32	112.0	106	135	78	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CsubhA	1.3e-32	112.0	189	216	176	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CsubhA	1.3e-32	112.0	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Ni_hydr_CYTB	PF01292.18	CsubhA	0.00028	20.4	28	104	18	112	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	CsubhA	0.00028	20.4	116	206	105	216	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	CsubhA	0.00028	20.4	287	305	229	372	Prokaryotic	cytochrome	b561
+Cytochrome_B	PF00033.17	CsubhB	8.4e-77	257.1	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CsubhB	8.4e-77	257.1	355	373	322	384	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CsubhB	1.6e-40	138.7	30	72	24	86	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CsubhB	1.6e-40	138.7	88	253	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CsubhB	1.3e-32	112.0	106	135	78	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CsubhB	1.3e-32	112.0	189	216	176	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CsubhB	1.3e-32	112.0	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Ni_hydr_CYTB	PF01292.18	CsubhB	0.00028	20.4	28	104	18	112	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	CsubhB	0.00028	20.4	116	206	105	216	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	CsubhB	0.00028	20.4	287	305	229	372	Prokaryotic	cytochrome	b561
+Cytochrome_B	PF00033.17	OanguA	5.8e-77	257.7	19	205	18	206	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	OanguA	5.8e-77	257.7	296	357	290	379	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	OanguA	2.6e-42	144.6	33	58	27	77	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	OanguA	2.6e-42	144.6	89	255	88	255	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	OanguA	2.6e-42	144.6	345	368	322	379	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	OanguA	4.1e-33	113.6	117	125	79	157	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	OanguA	4.1e-33	113.6	189	220	174	226	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	OanguA	4.1e-33	113.6	231	245	216	251	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	OanguA	4.1e-33	113.6	260	361	260	361	Cytochrome	b(C-terminal)/b6/petD
+Ni_hydr_CYTB	PF01292.18	OanguA	0.0019	17.7	33	112	19	118	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	OanguA	0.0019	17.7	116	207	107	213	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	OanguA	0.0019	17.7	289	328	231	371	Prokaryotic	cytochrome	b561
+Cytochrome_B	PF00033.17	SarboA	3.6e-71	238.8	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	SarboA	3.6e-71	238.8	299	336	288	380	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	SarboA	3.3e-37	128.0	30	56	23	72	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	SarboA	3.3e-37	128.0	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	SarboA	3.3e-37	128.0	324	336	287	375	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	SarboA	1e-34	118.8	18	61	6	69	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	SarboA	1e-34	118.8	101	135	75	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	SarboA	1e-34	118.8	188	225	177	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	SarboA	1e-34	118.8	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	CcastA	1.3e-73	246.8	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CcastA	1.3e-73	246.8	224	240	216	246	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CcastA	1.3e-73	246.8	323	323	277	376	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CcastA	1.2e-38	132.7	30	56	24	83	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CcastA	1.2e-38	132.7	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CcastA	1.2e-38	132.7	321	343	317	377	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CcastA	9.1e-34	115.7	102	135	60	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CcastA	9.1e-34	115.7	188	225	171	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CcastA	9.1e-34	115.7	230	240	217	246	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CcastA	9.1e-34	115.7	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	KtherA	3.4e-75	251.9	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	KtherA	3.4e-75	251.9	294	357	288	381	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	KtherA	1.8e-38	132.0	29	57	11	84	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	KtherA	1.8e-38	132.0	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	KtherA	1.8e-38	132.0	339	339	289	377	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	KtherA	1.9e-33	114.7	106	135	77	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	KtherA	1.9e-33	114.7	186	218	170	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	KtherA	1.9e-33	114.7	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	CnorvA	7.3e-77	257.3	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CnorvA	7.3e-77	257.3	320	334	291	366	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CnorvA	1.6e-39	135.5	32	55	26	69	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CnorvA	1.6e-39	135.5	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CnorvA	1.6e-39	135.5	294	304	285	309	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CnorvA	9.4e-33	112.5	106	136	85	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CnorvA	9.4e-33	112.5	189	219	162	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CnorvA	9.4e-33	112.5	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Ni_hydr_CYTB	PF01292.18	CnorvA	0.00099	18.6	32	105	18	113	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	CnorvA	0.00099	18.6	116	207	103	212	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	CnorvA	0.00099	18.6	285	305	229	370	Prokaryotic	cytochrome	b561
+Cytochrome_B	PF00033.17	CviswA	8.7e-77	257.1	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CviswA	8.7e-77	257.1	348	362	317	378	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CviswA	1.8e-41	141.9	29	70	22	85	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CviswA	1.8e-41	141.9	88	251	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CviswA	4.2e-34	116.8	104	135	80	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CviswA	4.2e-34	116.8	189	224	172	236	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CviswA	4.2e-34	116.8	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	MstarA	4.2e-76	254.8	18	205	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	MstarA	4.2e-76	254.8	355	373	291	381	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	MstarA	1.3e-44	152.1	30	55	27	65	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	MstarA	1.3e-44	152.1	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	MstarA	1.3e-44	152.1	295	303	285	308	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	MstarA	1.3e-44	152.1	324	340	315	374	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	MstarA	3.1e-33	114.0	103	129	68	150	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	MstarA	3.1e-33	114.0	194	209	180	236	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	MstarA	3.1e-33	114.0	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	NbaciA	9.4e-74	247.2	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	NbaciA	9.4e-74	247.2	300	354	275	379	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	NbaciA	1.1e-38	132.7	30	56	24	74	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	NbaciA	1.1e-38	132.7	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	NbaciA	1.1e-38	132.7	326	341	318	378	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	NbaciA	9.9e-35	118.8	116	130	62	154	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	NbaciA	9.9e-35	118.8	188	225	176	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	NbaciA	9.9e-35	118.8	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	CbohiA	9.4e-77	257.0	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CbohiA	9.4e-77	257.0	321	336	313	346	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CbohiA	9.4e-77	257.0	355	377	339	383	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CbohiA	1.5e-42	145.3	30	56	27	83	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CbohiA	1.5e-42	145.3	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CbohiA	1.5e-42	145.3	320	335	310	345	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CbohiA	1.6e-32	111.7	106	125	75	155	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CbohiA	1.6e-32	111.7	189	212	173	236	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CbohiA	1.6e-32	111.7	233	240	217	247	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CbohiA	1.6e-32	111.7	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	LstarA	5.9e-78	260.9	18	205	17	205	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	LstarA	1.2e-43	149.0	29	54	25	78	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	LstarA	1.2e-43	149.0	88	249	87	267	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	LstarA	1.2e-43	149.0	300	309	284	343	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	LstarA	3.3e-33	113.9	25	50	8	69	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	LstarA	3.3e-33	113.9	105	132	77	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	LstarA	3.3e-33	113.9	188	215	177	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	LstarA	3.3e-33	113.9	260	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	MfariA	1.5e-73	246.6	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	MfariA	1.5e-73	246.6	321	336	304	352	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	MfariA	1.5e-73	246.6	357	372	348	379	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	MfariA	5.3e-38	130.5	30	57	25	84	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	MfariA	5.3e-38	130.5	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	MfariA	5.3e-38	130.5	344	344	311	376	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	MfariA	3.7e-32	110.6	111	125	77	154	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	MfariA	3.7e-32	110.6	188	225	161	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	MfariA	3.7e-32	110.6	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Ni_hydr_CYTB	PF01292.18	MfariA	0.0003	20.3	27	105	7	113	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	MfariA	0.0003	20.3	114	206	105	212	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	MfariA	0.0003	20.3	232	366	229	371	Prokaryotic	cytochrome	b561
+Cytochrome_B	PF00033.17	MfariB	1.8e-76	256.1	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	MfariB	1.8e-76	256.1	353	379	345	381	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	MfariB	4.5e-41	140.5	30	56	26	82	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	MfariB	4.5e-41	140.5	88	252	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	MfariB	4.5e-41	140.5	321	336	311	351	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	MfariB	3.6e-33	113.8	106	126	74	154	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	MfariB	3.6e-33	113.8	189	222	174	236	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	MfariB	3.6e-33	113.8	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	CalaiA	5.9e-76	254.4	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CalaiA	5.9e-76	254.4	353	361	320	380	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CalaiA	4.9e-41	140.4	88	251	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CalaiA	4.9e-41	140.4	347	365	318	376	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CalaiA	1.6e-33	115.0	115	131	79	154	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CalaiA	1.6e-33	115.0	188	216	176	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CalaiA	1.6e-33	115.0	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Ninjurin	PF04923.10	CalaiA	0.29	11.0	18	59	15	129	Ninjurin
+Ninjurin	PF04923.10	CalaiA	0.29	11.0	201	240	175	246	Ninjurin
+Cytochrome_B	PF00033.17	LanspB	1.3e-75	253.2	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	LanspB	1.3e-75	253.2	287	336	269	344	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	LanspB	3.1e-38	131.3	29	57	11	84	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	LanspB	3.1e-38	131.3	88	253	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	LanspB	3.1e-38	131.3	341	341	285	377	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	LanspB	6.9e-35	119.3	106	135	77	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	LanspB	6.9e-35	119.3	187	218	175	236	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	LanspB	6.9e-35	119.3	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	CphanA	7.9e-74	247.4	19	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CphanA	7.9e-74	247.4	296	330	291	344	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CphanA	7.9e-74	247.4	356	372	338	380	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CphanA	9.3e-41	139.5	29	61	23	81	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CphanA	9.3e-41	139.5	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CphanA	1.4e-36	124.7	119	129	85	164	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CphanA	1.4e-36	124.7	189	218	174	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CphanA	1.4e-36	124.7	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	LanspA	1.7e-75	252.9	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	LanspA	1.7e-75	252.9	298	335	288	380	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	LanspA	3e-38	131.3	29	57	11	84	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	LanspA	3e-38	131.3	88	253	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	LanspA	3e-38	131.3	299	305	283	340	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	LanspA	3e-38	131.3	356	368	343	376	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	LanspA	3.8e-34	116.9	106	135	77	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	LanspA	3.8e-34	116.9	188	220	174	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	LanspA	3.8e-34	116.9	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	CglabA	7.1e-77	257.4	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CglabA	7.1e-77	257.4	320	336	290	346	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CglabA	7.7e-39	133.3	29	56	20	82	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CglabA	7.7e-39	133.3	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CglabA	7.7e-39	133.3	318	318	283	375	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CglabA	2.7e-34	117.4	104	135	75	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CglabA	2.7e-34	117.4	188	225	174	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CglabA	2.7e-34	117.4	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	ScryoA	2.6e-75	252.3	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	ScryoA	3.7e-40	137.5	30	51	27	58	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	ScryoA	3.7e-40	137.5	88	253	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	ScryoA	3.7e-40	137.5	287	303	280	323	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	ScryoA	2.8e-33	114.2	113	140	26	188	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	ScryoA	2.8e-33	114.2	186	218	161	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	ScryoA	2.8e-33	114.2	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Ni_hydr_CYTB	PF01292.18	ScryoA	0.00014	21.3	31	103	17	113	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	ScryoA	0.00014	21.3	117	201	103	216	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	ScryoA	0.00014	21.3	234	377	230	385	Prokaryotic	cytochrome	b561
+SafA	PF17073.3	ScryoA	4.5	7.2	31	74	24	83	Two-component-system	connector	protein
+SafA	PF17073.3	ScryoA	4.5	7.2	118	128	111	131	Two-component-system	connector	protein
+SafA	PF17073.3	ScryoA	4.5	7.2	297	322	287	325	Two-component-system	connector	protein
+Cytochrome_B	PF00033.17	CneerA	1.6e-76	256.3	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CneerA	1.6e-76	256.3	348	362	321	377	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CneerA	1.1e-41	142.6	30	56	25	83	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CneerA	1.1e-41	142.6	88	251	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CneerA	1.1e-41	142.6	320	341	318	348	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CneerA	1.1e-41	142.6	359	371	347	379	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CneerA	1.1e-33	115.4	107	133	79	158	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CneerA	1.1e-33	115.4	191	211	169	236	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CneerA	1.1e-33	115.4	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	CsakeA	6.3e-77	257.5	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CsakeA	6.3e-77	257.5	333	333	292	365	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CsakeA	2.1e-41	141.6	30	57	25	84	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CsakeA	2.1e-41	141.6	88	252	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CsakeA	2.1e-41	141.6	320	342	318	376	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CsakeA	7.4e-34	116.0	110	125	77	150	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CsakeA	7.4e-34	116.0	188	225	173	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CsakeA	7.4e-34	116.0	234	240	226	247	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CsakeA	7.4e-34	116.0	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	HuvarA	1.2e-63	214.2	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	HuvarA	1.2e-63	214.2	334	362	303	378	Cytochrome	b/b6/petB
+Cytochrom_B_C	PF00032.15	HuvarA	1.1e-28	99.4	106	131	62	154	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	HuvarA	1.1e-28	99.4	260	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_N_2	PF13631.4	HuvarA	1.1e-27	96.9	30	72	24	85	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	HuvarA	1.1e-27	96.9	88	248	87	266	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	HuvarA	1.1e-27	96.9	348	364	315	373	Cytochrome	b(N-terminal)/b6/petB
+TrbC	PF04956.11	HuvarA	2.1	8.5	38	55	35	65	TrbC/VIRB2	family
+TrbC	PF04956.11	HuvarA	2.1	8.5	114	146	106	165	TrbC/VIRB2	family
+TrbC	PF04956.11	HuvarA	2.1	8.5	290	299	275	306	TrbC/VIRB2	family
+Cytochrome_B	PF00033.17	CjiufA	5.9e-77	257.6	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CjiufA	5.9e-77	257.6	313	335	294	346	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CjiufA	2e-42	144.9	30	56	26	82	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CjiufA	2e-42	144.9	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CjiufA	2.5e-33	114.3	114	129	77	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CjiufA	2.5e-33	114.3	189	213	171	236	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CjiufA	2.5e-33	114.3	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	KlactA	1.9e-76	256.0	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	KlactA	1.9e-76	256.0	311	338	273	345	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	KlactA	8.7e-40	136.4	29	57	21	78	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	KlactA	8.7e-40	136.4	88	253	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	KlactA	8.7e-40	136.4	354	369	341	376	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	KlactA	3.7e-35	120.2	117	135	86	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	KlactA	3.7e-35	120.2	186	219	173	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	KlactA	3.7e-35	120.2	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	CzempA	1.8e-74	249.6	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CzempA	1.8e-74	249.6	349	382	278	384	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CzempA	2.1e-40	138.4	30	56	27	75	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CzempA	2.1e-40	138.4	88	252	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CzempA	2.1e-40	138.4	319	354	308	363	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CzempA	1.5e-30	105.4	116	129	77	185	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CzempA	1.5e-30	105.4	189	216	160	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CzempA	1.5e-30	105.4	235	241	226	247	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CzempA	1.5e-30	105.4	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	CmetaB	7e-78	260.7	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CmetaB	7e-78	260.7	322	335	313	346	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CmetaB	5.6e-43	146.7	30	57	25	84	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CmetaB	5.6e-43	146.7	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CmetaB	5.6e-43	146.7	322	335	312	343	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CmetaB	4e-33	113.7	108	126	75	155	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CmetaB	4e-33	113.7	190	212	173	236	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CmetaB	4e-33	113.7	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	CmetaC	7e-78	260.7	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CmetaC	7e-78	260.7	322	335	313	346	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CmetaC	5.6e-43	146.7	30	57	25	84	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CmetaC	5.6e-43	146.7	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CmetaC	5.6e-43	146.7	322	335	312	343	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CmetaC	4e-33	113.7	108	126	75	155	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CmetaC	4e-33	113.7	190	212	173	236	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CmetaC	4e-33	113.7	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	CmetaA	7e-78	260.7	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CmetaA	7e-78	260.7	322	335	313	346	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CmetaA	5.6e-43	146.7	30	57	25	84	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CmetaA	5.6e-43	146.7	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CmetaA	5.6e-43	146.7	322	335	312	343	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CmetaA	4e-33	113.7	108	126	75	155	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CmetaA	4e-33	113.7	190	212	173	236	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CmetaA	4e-33	113.7	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	CmetaF	7e-78	260.7	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CmetaF	7e-78	260.7	322	335	313	346	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CmetaF	5.6e-43	146.7	30	57	25	84	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CmetaF	5.6e-43	146.7	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CmetaF	5.6e-43	146.7	322	335	312	343	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CmetaF	4e-33	113.7	108	126	75	155	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CmetaF	4e-33	113.7	190	212	173	236	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CmetaF	4e-33	113.7	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	CfrijA	1.5e-76	256.3	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CfrijA	1.5e-76	256.3	349	363	321	380	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CfrijA	6.7e-42	143.2	30	56	24	84	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CfrijA	6.7e-42	143.2	88	251	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CfrijA	2.4e-33	114.4	106	133	79	157	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CfrijA	2.4e-33	114.4	190	213	170	236	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CfrijA	2.4e-33	114.4	233	236	214	246	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CfrijA	2.4e-33	114.4	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+TrbC	PF04956.11	CfrijA	4.3	7.5	111	160	106	165	TrbC/VIRB2	family
+TrbC	PF04956.11	CfrijA	4.3	7.5	234	240	225	253	TrbC/VIRB2	family
+TrbC	PF04956.11	CfrijA	4.3	7.5	294	297	278	305	TrbC/VIRB2	family
+Cytochrome_B	PF00033.17	CgallA	3.9e-74	248.4	19	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CgallA	3.9e-74	248.4	297	330	291	354	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CgallA	8.1e-41	139.7	29	61	23	81	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CgallA	8.1e-41	139.7	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CgallA	1.1e-36	125.1	119	129	85	164	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CgallA	1.1e-36	125.1	189	218	174	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CgallA	1.1e-36	125.1	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	CmetaE	7e-78	260.7	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CmetaE	7e-78	260.7	322	335	313	346	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CmetaE	5.6e-43	146.7	30	57	25	84	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CmetaE	5.6e-43	146.7	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CmetaE	5.6e-43	146.7	322	335	312	343	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CmetaE	4e-33	113.7	108	126	75	155	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CmetaE	4e-33	113.7	190	212	173	236	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CmetaE	4e-33	113.7	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	PpastA	4.9e-78	261.2	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	PpastA	4.9e-78	261.2	336	344	310	369	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	PpastA	1.8e-42	145.1	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	PpastA	1.1e-31	109.0	116	124	76	154	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	PpastA	1.1e-31	109.0	188	225	171	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	PpastA	1.1e-31	109.0	233	241	226	247	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	PpastA	1.1e-31	109.0	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Ninjurin	PF04923.10	PpastA	0.12	12.2	18	60	14	103	Ninjurin
+Ninjurin	PF04923.10	PpastA	0.12	12.2	225	240	178	246	Ninjurin
+Cytochrome_B	PF00033.17	SjapoA	6e-76	254.3	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	SjapoA	6e-76	254.3	335	335	289	374	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	SjapoA	3.1e-41	141.1	42	54	33	69	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	SjapoA	3.1e-41	141.1	88	251	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	SjapoA	3.1e-41	141.1	305	305	280	370	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	SjapoA	2.4e-33	114.3	90	90	22	150	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	SjapoA	2.4e-33	114.3	190	211	177	236	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	SjapoA	2.4e-33	114.3	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	CalbiE	1.1e-77	260.1	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CalbiE	1.1e-77	260.1	349	349	310	380	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CalbiE	1.4e-42	145.4	30	57	24	84	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CalbiE	1.4e-42	145.4	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CalbiE	1.4e-42	145.4	321	341	318	371	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CalbiE	8.5e-34	115.8	110	125	77	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CalbiE	8.5e-34	115.8	189	215	172	236	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CalbiE	8.5e-34	115.8	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Ni_hydr_CYTB	PF01292.18	CalbiE	0.00062	19.3	28	109	17	114	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	CalbiE	0.00062	19.3	113	206	105	213	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	CalbiE	0.00062	19.3	259	305	229	372	Prokaryotic	cytochrome	b561
+Cytochrome_B	PF00033.17	CtetrA	1.8e-78	262.5	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CtetrA	1.8e-78	262.5	341	352	317	376	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CtetrA	1.9e-42	145.0	30	59	24	85	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CtetrA	1.9e-42	145.0	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CtetrA	1.9e-42	145.0	326	341	318	376	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CtetrA	8e-35	119.1	105	134	78	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CtetrA	8e-35	119.1	189	219	177	236	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CtetrA	8e-35	119.1	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	MmagnB	2.7e-75	252.2	18	205	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	MmagnB	2.7e-75	252.2	351	373	292	382	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	MmagnB	1e-44	152.4	30	56	22	74	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	MmagnB	1e-44	152.4	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	MmagnB	1e-44	152.4	295	303	285	308	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	MmagnB	1e-44	152.4	356	356	318	376	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	MmagnB	5.2e-34	116.5	101	135	67	151	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	MmagnB	5.2e-34	116.5	223	223	183	245	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	MmagnB	5.2e-34	116.5	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	MmagnA	2.5e-75	252.3	18	205	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	MmagnA	2.5e-75	252.3	351	373	292	382	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	MmagnA	1e-44	152.4	30	56	22	74	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	MmagnA	1e-44	152.4	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	MmagnA	1e-44	152.4	295	303	285	308	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	MmagnA	1e-44	152.4	356	356	318	376	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	MmagnA	5.2e-34	116.5	101	135	67	151	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	MmagnA	5.2e-34	116.5	223	223	183	245	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	MmagnA	5.2e-34	116.5	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	CparaA	1.8e-77	259.3	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CparaA	1.8e-77	259.3	322	335	313	346	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CparaA	1e-42	145.9	30	57	25	84	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CparaA	1e-42	145.9	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CparaA	1e-42	145.9	322	335	312	343	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CparaA	4e-33	113.7	109	128	77	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CparaA	4e-33	113.7	194	212	173	245	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CparaA	4e-33	113.7	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	CcoryA	3.1e-77	258.5	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CcoryA	7.8e-43	146.3	30	57	27	84	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CcoryA	7.8e-43	146.3	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CcoryA	5.3e-33	113.3	106	131	77	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CcoryA	5.3e-33	113.3	189	221	172	236	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CcoryA	5.3e-33	113.3	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Ni_hydr_CYTB	PF01292.18	CcoryA	0.0007	19.1	27	106	13	117	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	CcoryA	0.0007	19.1	112	206	105	210	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	CcoryA	0.0007	19.1	288	305	230	370	Prokaryotic	cytochrome	b561
+Cytochrome_B	PF00033.17	CparaC	1.8e-77	259.3	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CparaC	1.8e-77	259.3	322	335	313	346	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CparaC	1e-42	145.9	30	57	25	84	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CparaC	1e-42	145.9	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CparaC	1e-42	145.9	322	335	312	343	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CparaC	4e-33	113.7	109	128	77	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CparaC	4e-33	113.7	194	212	173	245	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CparaC	4e-33	113.7	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	CparaB	1.8e-77	259.3	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CparaB	1.8e-77	259.3	322	335	313	346	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CparaB	1e-42	145.9	30	57	25	84	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CparaB	1e-42	145.9	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CparaB	1e-42	145.9	322	335	312	343	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CparaB	4e-33	113.7	109	128	77	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CparaB	4e-33	113.7	194	212	173	245	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CparaB	4e-33	113.7	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	CparaE	1.8e-77	259.3	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CparaE	1.8e-77	259.3	322	335	313	346	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CparaE	1e-42	145.9	30	57	25	84	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CparaE	1e-42	145.9	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CparaE	1e-42	145.9	322	335	312	343	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CparaE	4e-33	113.7	109	128	77	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CparaE	4e-33	113.7	194	212	173	245	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CparaE	4e-33	113.7	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	CparaD	1.8e-77	259.3	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CparaD	1.8e-77	259.3	322	335	313	346	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CparaD	1e-42	145.9	30	57	25	84	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CparaD	1e-42	145.9	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CparaD	1e-42	145.9	322	335	312	343	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CparaD	4e-33	113.7	109	128	77	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CparaD	4e-33	113.7	194	212	173	245	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CparaD	4e-33	113.7	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	CparaF	1.8e-77	259.3	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CparaF	1.8e-77	259.3	322	335	313	346	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CparaF	1e-42	145.9	30	57	25	84	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CparaF	1e-42	145.9	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CparaF	1e-42	145.9	322	335	312	343	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CparaF	4e-33	113.7	109	128	77	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CparaF	4e-33	113.7	194	212	173	245	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CparaF	4e-33	113.7	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	MtetrA	1.2e-75	253.4	18	205	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	MtetrA	1.2e-75	253.4	299	324	291	339	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	MtetrA	1.2e-75	253.4	356	376	349	380	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	MtetrA	1.1e-44	152.3	30	56	22	74	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	MtetrA	1.1e-44	152.3	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	MtetrA	1.1e-44	152.3	295	303	285	309	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	MtetrA	1.1e-44	152.3	353	365	317	377	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	MtetrA	9.8e-35	118.8	101	135	62	151	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	MtetrA	9.8e-35	118.8	191	207	177	236	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	MtetrA	9.8e-35	118.8	231	240	216	246	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	MtetrA	9.8e-35	118.8	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	CsaraA	2.9e-77	258.7	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CsaraA	2.9e-77	258.7	357	362	316	380	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CsaraA	8.4e-43	146.2	30	60	24	85	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CsaraA	8.4e-43	146.2	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CsaraA	8.4e-43	146.2	345	345	317	373	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CsaraA	6.9e-34	116.1	111	128	78	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CsaraA	6.9e-34	116.1	189	212	172	236	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CsaraA	6.9e-34	116.1	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Ni_hydr_CYTB	PF01292.18	CsaraA	0.00037	20.0	28	112	17	117	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	CsaraA	0.00037	20.0	113	206	105	212	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	CsaraA	0.00037	20.0	259	305	230	372	Prokaryotic	cytochrome	b561
+Cytochrome_B	PF00033.17	CsuavA	1.1e-74	250.2	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CsuavA	1.1e-74	250.2	232	237	214	246	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CsuavA	1.8e-37	128.8	31	56	26	71	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CsuavA	1.8e-37	128.8	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CsuavA	1.8e-37	128.8	321	331	285	362	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CsuavA	3.7e-34	117.0	106	136	81	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CsuavA	3.7e-34	117.0	189	224	175	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CsuavA	3.7e-34	117.0	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Ni_hydr_CYTB	PF01292.18	CsuavA	0.0013	18.2	32	105	17	113	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	CsuavA	0.0013	18.2	116	207	105	213	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	CsuavA	0.0013	18.2	287	305	228	369	Prokaryotic	cytochrome	b561
+Cytochrome_B	PF00033.17	PkluyA	3.1e-75	252.0	19	205	18	206	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	PkluyA	3.1e-75	252.0	310	331	294	344	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	PkluyA	3.1e-75	252.0	337	354	318	363	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	PkluyA	1.5e-41	142.1	32	58	24	85	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	PkluyA	1.5e-41	142.1	89	255	88	255	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	PkluyA	3.1e-33	114.0	117	132	86	152	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	PkluyA	3.1e-33	114.0	189	226	171	226	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	PkluyA	3.1e-33	114.0	260	361	260	361	Cytochrome	b(C-terminal)/b6/petD
+Ni_hydr_CYTB	PF01292.18	PkluyA	0.0016	17.9	33	112	19	118	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	PkluyA	0.0016	17.9	141	207	108	213	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	PkluyA	0.0016	17.9	286	309	230	371	Prokaryotic	cytochrome	b561
+Ninjurin	PF04923.10	PkluyA	0.087	12.6	27	60	16	99	Ninjurin
+Ninjurin	PF04923.10	PkluyA	0.087	12.6	224	242	174	248	Ninjurin
+Cytochrome_B	PF00033.17	PcanaA	5.8e-75	251.1	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	PcanaA	5.8e-75	251.1	355	376	349	381	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	PcanaA	4e-38	130.9	32	56	23	71	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	PcanaA	4e-38	130.9	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	PcanaA	3.1e-33	114.0	107	132	77	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	PcanaA	3.1e-33	114.0	189	219	172	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	PcanaA	3.1e-33	114.0	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Ni_hydr_CYTB	PF01292.18	PcanaA	0.0024	17.4	32	105	17	113	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	PcanaA	0.0024	17.4	116	206	104	212	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	PcanaA	0.0024	17.4	233	305	229	369	Prokaryotic	cytochrome	b561
+Cytochrome_B	PF00033.17	CsalmA	9.5e-72	240.6	21	207	20	208	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CsalmA	9.5e-72	240.6	355	357	313	383	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CsalmA	5.6e-38	130.5	33	63	28	82	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CsalmA	5.6e-38	130.5	91	253	90	257	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CsalmA	5.6e-38	130.5	292	315	286	347	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CsalmA	7.6e-36	122.4	120	131	84	157	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CsalmA	7.6e-36	122.4	192	225	181	228	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CsalmA	7.6e-36	122.4	228	228	193	250	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CsalmA	7.6e-36	122.4	263	363	262	363	Cytochrome	b(C-terminal)/b6/petD
+Ninjurin	PF04923.10	CsalmA	0.023	14.5	33	64	18	133	Ninjurin
+Ninjurin	PF04923.10	CsalmA	0.023	14.5	231	246	189	258	Ninjurin
+Cytochrome_B	PF00033.17	BcustA	1.3e-76	256.6	19	205	18	206	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	BcustA	1.3e-76	256.6	226	242	216	248	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	BcustA	1.3e-76	256.6	310	335	293	374	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	BcustA	1.1e-43	149.0	33	57	29	76	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	BcustA	1.1e-43	149.0	89	255	88	255	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	BcustA	6.6e-34	116.2	104	138	78	155	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	BcustA	6.6e-34	116.2	187	226	165	226	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	BcustA	6.6e-34	116.2	234	243	228	250	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	BcustA	6.6e-34	116.2	260	361	260	361	Cytochrome	b(C-terminal)/b6/petD
+Ni_hydr_CYTB	PF01292.18	BcustA	6.2e-05	22.5	33	112	4	115	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	BcustA	6.2e-05	22.5	117	206	106	213	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	BcustA	6.2e-05	22.5	290	306	230	366	Prokaryotic	cytochrome	b561
+Cytochrome_B	PF00033.17	CjadiA	8.6e-75	250.6	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CjadiA	8.6e-75	250.6	338	338	310	370	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CjadiA	6.5e-39	133.5	31	56	25	71	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CjadiA	6.5e-39	133.5	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CjadiA	6.5e-39	133.5	318	318	284	354	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CjadiA	4.7e-34	116.6	106	136	81	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CjadiA	4.7e-34	116.6	189	219	174	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CjadiA	4.7e-34	116.6	234	239	226	246	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CjadiA	4.7e-34	116.6	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Ni_hydr_CYTB	PF01292.18	CjadiA	0.00097	18.6	32	105	18	112	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	CjadiA	0.00097	18.6	116	207	105	214	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	CjadiA	0.00097	18.6	265	265	230	330	Prokaryotic	cytochrome	b561
+Cytochrome_B	PF00033.17	AgossB	1.7e-75	252.9	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	AgossB	1.7e-75	252.9	294	336	284	344	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	AgossB	1.1e-37	129.6	29	56	23	81	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	AgossB	1.1e-37	129.6	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	AgossB	1.1e-37	129.6	340	340	310	378	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	AgossB	1.2e-31	108.9	35	55	17	68	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	AgossB	1.2e-31	108.9	107	135	83	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	AgossB	1.2e-31	108.9	187	216	161	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	AgossB	1.2e-31	108.9	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	NdelpA	7.1e-77	257.4	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	NdelpA	7.1e-77	257.4	304	335	289	373	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	NdelpA	1.6e-38	132.3	29	56	20	82	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	NdelpA	1.6e-38	132.3	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	NdelpA	1.6e-38	132.3	320	320	283	375	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	NdelpA	1.3e-34	118.5	104	135	75	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	NdelpA	1.3e-34	118.5	188	225	174	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	NdelpA	1.3e-34	118.5	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Ninjurin	PF04923.10	NdelpA	2.5	7.9	30	63	14	101	Ninjurin
+Ninjurin	PF04923.10	NdelpA	2.5	7.9	223	239	173	246	Ninjurin
+Ninjurin	PF04923.10	NdelpA	2.5	7.9	353	364	320	375	Ninjurin
+Cytochrome_B	PF00033.17	LelonA	2.9e-76	255.4	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	LelonA	2.9e-76	255.4	325	343	293	377	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	LelonA	3e-42	144.4	30	56	24	81	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	LelonA	3e-42	144.4	88	251	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	LelonA	3e-42	144.4	321	341	318	371	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	LelonA	6e-34	116.3	115	127	78	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	LelonA	6e-34	116.3	189	219	171	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	LelonA	6e-34	116.3	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	CalimA	2.1e-74	249.3	19	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CalimA	2.1e-74	249.3	215	243	212	247	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CalimA	2.1e-74	249.3	310	330	291	371	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CalimA	1.8e-41	141.9	29	61	22	81	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CalimA	1.8e-41	141.9	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CalimA	9.4e-37	125.3	119	128	82	164	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CalimA	9.4e-37	125.3	189	215	175	236	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CalimA	9.4e-37	125.3	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+DUF485	PF04341.10	CalimA	0.5	10.2	35	67	28	71	Protein	of	unknown	function,	DUF485
+DUF485	PF04341.10	CalimA	0.5	10.2	97	130	79	133	Protein	of	unknown	function,	DUF485
+DUF485	PF04341.10	CalimA	0.5	10.2	120	136	113	152	Protein	of	unknown	function,	DUF485
+DUF485	PF04341.10	CalimA	0.5	10.2	186	198	176	203	Protein	of	unknown	function,	DUF485
+DUF485	PF04341.10	CalimA	0.5	10.2	231	253	224	270	Protein	of	unknown	function,	DUF485
+DUF485	PF04341.10	CalimA	0.5	10.2	352	365	348	372	Protein	of	unknown	function,	DUF485
+Cytochrome_B	PF00033.17	BcaliA	7.3e-77	257.3	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	BcaliA	7.3e-77	257.3	318	334	291	346	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	BcaliA	7.3e-77	257.3	355	373	349	379	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	BcaliA	4.5e-39	134.0	32	55	25	69	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	BcaliA	4.5e-39	134.0	88	253	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	BcaliA	2.8e-33	114.2	106	136	85	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	BcaliA	2.8e-33	114.2	189	219	162	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	BcaliA	2.8e-33	114.2	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Ni_hydr_CYTB	PF01292.18	BcaliA	0.00096	18.7	32	105	17	113	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	BcaliA	0.00096	18.7	116	207	103	212	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	BcaliA	0.00096	18.7	236	305	229	371	Prokaryotic	cytochrome	b561
+Cytochrome_B	PF00033.17	SoctoA	4.2e-76	254.9	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	SoctoA	5.8e-41	140.2	30	51	27	60	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	SoctoA	5.8e-41	140.2	88	253	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	SoctoA	5.8e-41	140.2	290	303	282	323	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	SoctoA	5.8e-41	140.2	354	367	344	375	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	SoctoA	2.9e-33	114.1	113	133	27	185	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	SoctoA	2.9e-33	114.1	187	219	161	236	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	SoctoA	2.9e-33	114.1	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+DUF4405	PF14358.4	SoctoA	0.021	15.2	35	98	33	99	Domain	of	unknown	function	(DUF4405)
+DUF4405	PF14358.4	SoctoA	0.021	15.2	181	200	116	203	Domain	of	unknown	function	(DUF4405)
+DUF4405	PF14358.4	SoctoA	0.021	15.2	294	303	292	304	Domain	of	unknown	function	(DUF4405)
+SafA	PF17073.3	SoctoA	3.1	7.7	31	74	24	83	Two-component-system	connector	protein
+SafA	PF17073.3	SoctoA	3.1	7.7	118	127	112	130	Two-component-system	connector	protein
+SafA	PF17073.3	SoctoA	3.1	7.7	297	322	286	325	Two-component-system	connector	protein
+Cytochrome_B	PF00033.17	CdefoA	3.9e-74	248.4	19	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CdefoA	3.9e-74	248.4	297	330	291	354	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CdefoA	8.1e-41	139.7	29	61	23	81	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CdefoA	8.1e-41	139.7	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CdefoA	1.1e-36	125.1	119	129	85	164	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CdefoA	1.1e-36	125.1	189	218	174	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CdefoA	1.1e-36	125.1	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	LdasiA	2e-75	252.7	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	LdasiA	2e-75	252.7	319	335	278	344	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	LdasiA	1.8e-38	132.1	29	57	11	84	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	LdasiA	1.8e-38	132.1	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	LdasiA	1.8e-38	132.1	326	326	283	377	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	LdasiA	8.5e-35	119.0	114	135	77	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	LdasiA	8.5e-35	119.0	186	218	162	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	LdasiA	8.5e-35	119.0	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	LkluyF	8.3e-76	253.9	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	LkluyF	8.3e-76	253.9	344	344	289	373	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	LkluyF	8.3e-76	253.9	348	364	339	382	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	LkluyF	1.4e-37	129.1	29	57	22	84	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	LkluyF	1.4e-37	129.1	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	LkluyF	1.4e-37	129.1	319	319	284	375	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	LkluyF	1.1e-33	115.5	19	62	7	69	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	LkluyF	1.1e-33	115.5	106	135	78	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	LkluyF	1.1e-33	115.5	187	217	175	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	LkluyF	1.1e-33	115.5	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	LkluyE	1.4e-75	253.2	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	LkluyE	1.4e-75	253.2	344	344	289	373	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	LkluyE	1.4e-75	253.2	348	364	339	382	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	LkluyE	1.3e-37	129.2	29	57	22	84	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	LkluyE	1.3e-37	129.2	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	LkluyE	1.3e-37	129.2	319	319	284	375	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	LkluyE	1.1e-33	115.5	19	62	7	69	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	LkluyE	1.1e-33	115.5	106	135	78	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	LkluyE	1.1e-33	115.5	186	216	172	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	LkluyE	1.1e-33	115.5	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	LkluyD	4.9e-74	248.1	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	LkluyD	4.9e-74	248.1	344	344	289	373	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	LkluyD	4.9e-74	248.1	348	364	339	382	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	LkluyD	2.4e-36	125.2	29	57	23	84	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	LkluyD	2.4e-36	125.2	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	LkluyD	2.4e-36	125.2	319	319	284	375	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	LkluyD	1.1e-33	115.5	22	60	9	69	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	LkluyD	1.1e-33	115.5	106	135	77	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	LkluyD	1.1e-33	115.5	186	216	172	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	LkluyD	1.1e-33	115.5	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	LkluyC	8.3e-76	253.9	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	LkluyC	8.3e-76	253.9	344	344	289	373	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	LkluyC	8.3e-76	253.9	348	364	339	382	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	LkluyC	1.4e-37	129.1	29	57	22	84	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	LkluyC	1.4e-37	129.1	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	LkluyC	1.4e-37	129.1	319	319	284	375	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	LkluyC	1.1e-33	115.5	19	62	7	69	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	LkluyC	1.1e-33	115.5	106	135	78	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	LkluyC	1.1e-33	115.5	187	217	175	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	LkluyC	1.1e-33	115.5	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	CvartA	1.5e-74	249.8	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CvartA	1.5e-74	249.8	336	349	313	371	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CvartA	9.3e-39	133.0	31	56	25	72	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CvartA	9.3e-39	133.0	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CvartA	9.3e-39	133.0	320	320	284	356	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CvartA	6e-34	116.3	105	136	81	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CvartA	6e-34	116.3	189	219	173	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CvartA	6e-34	116.3	234	239	226	246	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CvartA	6e-34	116.3	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Ni_hydr_CYTB	PF01292.18	CvartA	0.0011	18.5	32	105	17	113	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	CvartA	0.0011	18.5	117	207	105	214	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	CvartA	0.0011	18.5	290	290	226	366	Prokaryotic	cytochrome	b561
+Cytochrome_B	PF00033.17	LkluyA	8.3e-76	253.9	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	LkluyA	8.3e-76	253.9	344	344	289	373	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	LkluyA	8.3e-76	253.9	348	364	339	382	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	LkluyA	1.4e-37	129.1	29	57	22	84	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	LkluyA	1.4e-37	129.1	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	LkluyA	1.4e-37	129.1	319	319	284	375	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	LkluyA	1.1e-33	115.5	19	62	7	69	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	LkluyA	1.1e-33	115.5	106	135	78	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	LkluyA	1.1e-33	115.5	187	217	175	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	LkluyA	1.1e-33	115.5	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	CorthB	6.4e-78	260.8	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CorthB	6.4e-78	260.8	322	335	313	346	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CorthB	2.1e-43	148.1	30	57	25	84	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CorthB	2.1e-43	148.1	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CorthB	2.1e-43	148.1	322	335	312	343	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CorthB	4e-33	113.7	110	126	74	154	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CorthB	4e-33	113.7	190	212	173	236	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CorthB	4e-33	113.7	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	CorthC	6.4e-78	260.8	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CorthC	6.4e-78	260.8	322	335	313	346	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CorthC	2.1e-43	148.1	30	57	25	84	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CorthC	2.1e-43	148.1	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CorthC	2.1e-43	148.1	322	335	312	343	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CorthC	4e-33	113.7	110	126	74	154	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CorthC	4e-33	113.7	190	212	173	236	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CorthC	4e-33	113.7	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	CorthA	6.4e-78	260.8	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CorthA	6.4e-78	260.8	322	335	313	346	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CorthA	2.1e-43	148.1	30	57	25	84	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CorthA	2.1e-43	148.1	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CorthA	2.1e-43	148.1	322	335	312	343	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CorthA	4e-33	113.7	110	126	74	154	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CorthA	4e-33	113.7	190	212	173	236	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CorthA	4e-33	113.7	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	ClusiA	1.1e-78	263.3	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	ClusiA	1.1e-78	263.3	339	339	292	378	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	ClusiA	5.1e-43	146.9	30	57	24	84	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	ClusiA	5.1e-43	146.9	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	ClusiA	5.1e-43	146.9	294	304	285	309	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	ClusiA	4.1e-33	113.6	114	126	79	155	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	ClusiA	4.1e-33	113.6	188	225	172	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	ClusiA	4.1e-33	113.6	233	241	226	247	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	ClusiA	4.1e-33	113.6	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Ni_hydr_CYTB	PF01292.18	ClusiA	0.0007	19.1	27	105	17	113	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	ClusiA	0.0007	19.1	115	205	105	213	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	ClusiA	0.0007	19.1	233	305	229	367	Prokaryotic	cytochrome	b561
+Ninjurin	PF04923.10	ClusiA	0.39	10.5	30	61	15	125	Ninjurin
+Ninjurin	PF04923.10	ClusiA	0.39	10.5	222	240	173	246	Ninjurin
+Cytochrome_B	PF00033.17	MguilA	1.9e-77	259.2	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	MguilA	1.9e-77	259.2	234	237	218	247	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	MguilA	1.9e-77	259.2	325	325	289	352	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	MguilA	4.9e-41	140.4	30	56	25	82	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	MguilA	4.9e-41	140.4	88	251	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	MguilA	9.4e-33	112.5	115	133	80	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	MguilA	9.4e-33	112.5	188	225	172	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	MguilA	9.4e-33	112.5	233	240	226	248	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	MguilA	9.4e-33	112.5	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Ni_hydr_CYTB	PF01292.18	MguilA	0.00042	19.8	28	105	16	113	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	MguilA	0.00042	19.8	116	206	103	213	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	MguilA	0.00042	19.8	287	305	229	371	Prokaryotic	cytochrome	b561
+Ninjurin	PF04923.10	MguilA	0.12	12.2	33	63	15	132	Ninjurin
+Ninjurin	PF04923.10	MguilA	0.12	12.2	202	240	173	246	Ninjurin
+Cytochrome_B	PF00033.17	WmucoA	3.7e-75	251.8	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	WmucoA	3.7e-75	251.8	317	335	290	362	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	WmucoA	4.9e-38	130.7	32	56	23	71	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	WmucoA	4.9e-38	130.7	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	WmucoA	9e-34	115.7	106	135	81	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	WmucoA	9e-34	115.7	189	219	175	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	WmucoA	9e-34	115.7	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Ni_hydr_CYTB	PF01292.18	WmucoA	0.00084	18.8	32	106	16	117	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	WmucoA	0.00084	18.8	116	207	105	214	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	WmucoA	0.00084	18.8	234	310	230	371	Prokaryotic	cytochrome	b561
+Cytochrome_B	PF00033.17	ScereC	6.1e-71	238.0	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	ScereC	6.1e-71	238.0	296	352	288	381	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	ScereC	4.6e-37	127.5	30	56	23	72	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	ScereC	4.6e-37	127.5	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	ScereC	4.6e-37	127.5	330	330	283	376	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	ScereC	9.9e-35	118.8	18	61	6	69	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	ScereC	9.9e-35	118.8	97	136	76	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	ScereC	9.9e-35	118.8	188	225	177	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	ScereC	9.9e-35	118.8	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	ScereA	5.8e-71	238.1	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	ScereA	5.8e-71	238.1	296	352	288	381	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	ScereA	4.6e-37	127.5	30	56	23	72	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	ScereA	4.6e-37	127.5	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	ScereA	4.6e-37	127.5	330	330	283	376	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	ScereA	9.9e-35	118.8	18	61	6	69	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	ScereA	9.9e-35	118.8	97	136	76	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	ScereA	9.9e-35	118.8	188	225	177	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	ScereA	9.9e-35	118.8	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	ScereD	5.8e-71	238.1	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	ScereD	5.8e-71	238.1	296	352	288	381	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	ScereD	4.6e-37	127.5	30	56	23	72	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	ScereD	4.6e-37	127.5	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	ScereD	4.6e-37	127.5	330	330	283	376	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	ScereD	9.9e-35	118.8	18	61	6	69	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	ScereD	9.9e-35	118.8	97	136	76	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	ScereD	9.9e-35	118.8	188	225	177	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	ScereD	9.9e-35	118.8	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	ScereE	1.7e-70	236.5	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	ScereE	1.7e-70	236.5	296	340	288	381	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	ScereE	4.6e-37	127.5	30	54	24	69	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	ScereE	4.6e-37	127.5	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	ScereE	4.6e-37	127.5	339	339	292	376	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	ScereE	7.8e-35	119.2	18	62	6	69	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	ScereE	7.8e-35	119.2	97	136	76	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	ScereE	7.8e-35	119.2	188	225	177	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	ScereE	7.8e-35	119.2	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	DhansA	2.2e-77	259.1	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	DhansA	2.2e-77	259.1	331	351	291	379	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	DhansA	9.7e-40	136.2	30	57	25	84	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	DhansA	9.7e-40	136.2	88	251	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	DhansA	9.7e-40	136.2	294	304	286	308	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	DhansA	9.7e-40	136.2	321	341	318	372	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	DhansA	3.7e-32	110.5	115	130	80	154	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	DhansA	3.7e-32	110.5	188	216	174	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	DhansA	3.7e-32	110.5	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Ni_hydr_CYTB	PF01292.18	DhansA	0.00051	19.5	28	105	17	113	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	DhansA	0.00051	19.5	116	205	106	210	Prokaryotic	cytochrome	b561
+Ni_hydr_CYTB	PF01292.18	DhansA	0.00051	19.5	234	305	229	371	Prokaryotic	cytochrome	b561
+Cytochrome_B	PF00033.17	YlipoB	4.4e-74	248.3	19	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	YlipoB	4.4e-74	248.3	296	327	291	345	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	YlipoB	3e-40	137.8	29	61	23	81	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	YlipoB	3e-40	137.8	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	YlipoB	3e-40	137.8	305	305	286	343	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	YlipoB	1.9e-36	124.3	117	129	81	160	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	YlipoB	1.9e-36	124.3	189	219	176	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	YlipoB	1.9e-36	124.3	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	LnothA	1.3e-75	253.2	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	LnothA	1.3e-75	253.2	296	333	289	340	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	LnothA	1.8e-38	132.0	29	57	11	84	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	LnothA	1.8e-38	132.0	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	LnothA	1.8e-38	132.0	335	335	285	377	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	LnothA	2.9e-34	117.3	106	135	77	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	LnothA	2.9e-34	117.3	186	218	170	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	LnothA	2.9e-34	117.3	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	YlipoA	4.4e-74	248.3	19	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	YlipoA	4.4e-74	248.3	296	327	291	345	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	YlipoA	3e-40	137.8	29	61	23	81	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	YlipoA	3e-40	137.8	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	YlipoA	3e-40	137.8	305	305	286	343	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	YlipoA	1.9e-36	124.3	117	129	81	160	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	YlipoA	1.9e-36	124.3	189	219	176	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	YlipoA	1.9e-36	124.3	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	CtheaA	6.4e-78	260.8	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	CtheaA	6.4e-78	260.8	322	335	313	346	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CtheaA	2.1e-43	148.1	30	57	25	84	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CtheaA	2.1e-43	148.1	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CtheaA	2.1e-43	148.1	322	335	312	343	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CtheaA	4e-33	113.7	110	126	74	154	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CtheaA	4e-33	113.7	190	212	173	236	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CtheaA	4e-33	113.7	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	AgossA	8.3e-76	253.9	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	AgossA	8.3e-76	253.9	294	336	284	344	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	AgossA	2e-37	128.7	29	56	23	81	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	AgossA	2e-37	128.7	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	AgossA	2e-37	128.7	340	340	310	378	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	AgossA	1.2e-31	108.9	35	55	17	68	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	AgossA	1.2e-31	108.9	107	135	81	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	AgossA	1.2e-31	108.9	188	216	176	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	AgossA	1.2e-31	108.9	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	MingeA	1.2e-76	256.7	18	205	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	MingeA	1.2e-76	256.7	352	372	291	382	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	MingeA	2.8e-45	154.2	30	56	22	75	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	MingeA	2.8e-45	154.2	88	254	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	MingeA	2.8e-45	154.2	322	342	298	378	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	MingeA	8.6e-34	115.8	101	130	62	150	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	MingeA	8.6e-34	115.8	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	ScastA	5.5e-70	234.9	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrome_B	PF00033.17	ScastA	5.5e-70	234.9	334	334	288	367	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	ScastA	3.6e-38	131.1	30	56	24	72	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	ScastA	3.6e-38	131.1	88	253	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	ScastA	3.6e-38	131.1	328	334	289	373	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	ScastA	1.5e-32	111.8	26	55	15	68	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	ScastA	1.5e-32	111.8	106	135	82	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	ScastA	1.5e-32	111.8	188	224	174	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	ScastA	1.5e-32	111.8	235	239	226	246	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	ScastA	1.5e-32	111.8	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
+Cytochrome_B	PF00033.17	CmaltA	1.4e-77	259.7	18	204	17	205	Cytochrome	b/b6/petB
+Cytochrom_B_N_2	PF13631.4	CmaltA	4.3e-43	147.1	30	56	25	82	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CmaltA	4.3e-43	147.1	88	251	87	254	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_N_2	PF13631.4	CmaltA	4.3e-43	147.1	322	341	318	373	Cytochrome	b(N-terminal)/b6/petB
+Cytochrom_B_C	PF00032.15	CmaltA	8.6e-34	115.8	114	127	78	156	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CmaltA	8.6e-34	115.8	189	225	170	225	Cytochrome	b(C-terminal)/b6/petD
+Cytochrom_B_C	PF00032.15	CmaltA	8.6e-34	115.8	259	360	259	360	Cytochrome	b(C-terminal)/b6/petD
