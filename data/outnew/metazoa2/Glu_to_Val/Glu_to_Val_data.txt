@@ -1,3 +1,0 @@
-### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
-Amphimedon_queenslandica	GAG	E	V	0.0	0.719512195122	0.1	0.0416666666667	0.916666666667	0.558139534884	0.0232558139535	1351.0	-1.75721925134	34.0	0.0	0.0

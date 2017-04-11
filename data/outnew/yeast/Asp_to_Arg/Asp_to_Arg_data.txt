@@ -1,3 +1,0 @@
-### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
-CsalmA	GAT	D	R	0.0	0.00871928614568	0.111111111111	0.0161290322581	0.806451612903	1.0	0.0161290322581	2153.0	-1.56703862661	33.0	0.0	0.001

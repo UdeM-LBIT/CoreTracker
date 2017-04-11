@@ -1,3 +1,0 @@
-### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
-Ascidiella_aspersa	ATG	M	D	0.0	0.000444580427861	0.125	0.0555555555556	0.333333333333	1.0	0.0555555555556	1350.0	-2.60143884892	6.0	0.0	0.041

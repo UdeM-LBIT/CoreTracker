@@ -1,4 +1,0 @@
-### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
-Trichinella	AGA	R	I	0.0	0.0142857093535	0.142857142857	0.03125	0.0	0.438356164384	0.013698630137	1343.0	-1.6270096463	8.0	0.0	0.001
-Ascidiella_aspersa	AGG	R	I	0.0	0.0135135088479	0.125	0.0384615384615	0.0	0.371428571429	0.0142857142857	1350.0	-2.87093596059	10.0	0.0	0.0

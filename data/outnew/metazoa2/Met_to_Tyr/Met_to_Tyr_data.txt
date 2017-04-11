@@ -1,7 +1,0 @@
-### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
-Trichobilharzia_regenti	ATG	M	Y	0.0	2.38807146479e-05	0.2	0.05	0.275	1.0	0.05	1324.0	-0.660462130937	6.0	0.0	0.102
-Versteria_mustelae	ATG	M	Y	0.0	2.02142268911e-05	0.222222222222	0.0625	0.3125	1.0	0.0625	1328.0	-0.536546184739	6.0	0.0	0.091
-Euseius_nicholsi	ATG	M	Y	0.0	0.00221594006495	0.166666666667	0.1	0.3	1.0	0.1	1296.0	-0.0816326530612	6.0	0.0	0.001
-Haplorchis_taichui	ATG	M	Y	0.0	0.00663309990485	0.111111111111	0.025	0.275	1.0	0.025	1320.0	-0.715578539108	6.0	0.0	0.0
-Echinococcus_equinus	ATG	M	Y	0.0	2.02142268911e-05	0.181818181818	0.0555555555556	0.277777777778	1.0	0.0555555555556	1331.0	-0.532810271041	6.0	0.0	0.109

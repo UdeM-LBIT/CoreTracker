@@ -1,3 +1,0 @@
-### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
-CmaltA	TGT	C	W	0.0	0.000653182024694	0.111111111111	0.0666666666667	0.933333333333	1.0	0.0666666666667	2250.0	-1.43058648849	25.0	0.0	0.013

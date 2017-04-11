@@ -1,3 +1,0 @@
-### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
-Bfloridae	GAT	D	V	0.0	0.657894736842	0.2	0.0769230769231	0.923076923077	0.684210526316	0.0526315789474	777.0	-2.4625984252	33.0	0.0	0.003

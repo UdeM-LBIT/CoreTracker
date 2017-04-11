@@ -1,4 +1,0 @@
-### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
-Euseius_nicholsi	TAT	Y	S	0.0	0.681481481481	0.222222222222	0.0333333333333	0.7	0.821917808219	0.027397260274	1296.0	-1.71698113208	17.0	0.0	0.0
-Drosophila	TAC	Y	S	0.0	0.0967741935484	0.166666666667	0.0833333333333	0.916666666667	0.179104477612	0.0149253731343	1351.0	-1.57537154989	19.0	0.0	0.0

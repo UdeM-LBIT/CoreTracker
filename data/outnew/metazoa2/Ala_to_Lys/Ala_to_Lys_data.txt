@@ -1,3 +1,0 @@
-### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
-Benedenia_hoshinai	GCT	A	K	0.0	0.703703601406	0.142857142857	0.030303030303	0.454545454545	0.647058823529	0.0196078431373	1333.0	-1.03163580247	45.0	0.0	0.0

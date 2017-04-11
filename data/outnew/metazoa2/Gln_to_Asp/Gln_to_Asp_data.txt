@@ -1,5 +1,0 @@
-### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
-Schistosoma	CAA	Q	D	0.0	0.1	0.333333333333	0.25	0.25	0.266666666667	0.0666666666667	1325.0	0.480769230769	48.0	0.0	0.0
-Tetrancistrum_nebulosi	CAA	Q	D	0.0	0.227272727273	0.25	0.2	0.8	0.357142857143	0.0714285714286	1333.0	0.767676767677	48.0	0.0	0.0
-Trichinella	CAA	Q	D	0.0	0.65625	0.166666666667	0.0714285714286	0.714285714286	0.736842105263	0.0526315789474	1343.0	-0.0727611940299	48.0	0.0	0.0

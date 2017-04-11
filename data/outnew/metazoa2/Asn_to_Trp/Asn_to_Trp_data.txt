@@ -1,5 +1,0 @@
-### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
-Metaseiulus_occidentalis	AAT	N	W	0.0	0.702702702703	0.125	0.0333333333333	0.7	0.63829787234	0.0212765957447	1280.0	-2.98462852263	1.0	0.0	0.0
-Pseudogarypus_banksi	AAT	N	W	0.0	0.65625	0.1	0.0344827586207	0.724137931034	0.674418604651	0.0232558139535	1347.0	-2.72848269743	1.0	0.0	0.0
-Benedenia_hoshinai	AAT	N	W	0.0	0.545454545455	0.125	0.0416666666667	0.375	0.96	0.04	1333.0	-2.61777301927	1.0	0.0	0.0
