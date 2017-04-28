@@ -1698,11 +1698,11 @@ def compute_SP_per_col(al1, al2, columns, nspec, scoring_matrix):
             # give 0 to gap event
             score = 0
             try:
-                score = scoring_matrix.get((aa1, aa2), scoring_matrix[(aa2,aa1)])
+                score = scoring_matrix.get((aa1, aa2), scoring_matrix[(aa2, aa1)])
             except:
                 pass
             return score
-    
+
     al1_score = []
     al2_score = []
     for col in columns:
