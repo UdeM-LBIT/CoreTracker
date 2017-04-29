@@ -356,9 +356,18 @@ if __name__ == '__main__':
                 for k, rec in records.items():
                     annot = rec.annotations
                     desc = rec.description
+                    gi = None
+                    try:
+                        gi = annot.get('gi', annot['accessions'])
+                        if isintance(gi, list):
+                            gi = gi[0]
+                    except:
+                        gi = 'null'
+
                     conn.execute("insert into genbank (accession, seqid, gi, complete_genome, \
-                        source, organism, lineage) values (?, ?, ?, ?, ?, ?, ?)", [rec.name, rec.id, annot['gi'],
+                        source, organism, lineage) values (?, ?, ?, ?, ?, ?, ?)", [rec.name, rec.id, gi,
                                                                                    ('complete genome' in desc), annot['source'], annot['organism'], ">".join(annot['taxonomy'])])
+
                 conn.commit()
                 print("%s elements inserted in %s" %
                       (conn.total_changes, args.database))
