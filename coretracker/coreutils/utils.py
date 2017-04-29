@@ -350,11 +350,12 @@ class SequenceLoader:
                     "File '%s' not found. Either alignment failed, or you are using a wrong hmm version with HMMER" % outputfile)
 
             inputFile = remove_gap_only_columns(outputFile, 'stockholm')
-            if i > 0 and improve_is_stagned(outlist[-1], inputFile, len(outlist) * 1.0 / loop):
+            prev_out = outlist[-1]
+            outlist.append(inputFile)
+            if i > 0 and improve_is_stagned(prev_out, inputFile, len(outlist) * 1.0 / loop):
                 logging.debug(
                     "Stopping hmm loop : no alignment improvement after %d/%d iteration" % (len(outlist), loop))
                 break
-            outlist.append(inputFile)
 
             # next input for hmm is current output
 
