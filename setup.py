@@ -2,8 +2,8 @@
 #
 # setup for CoreTracker library packages
 
-from __future__ import absolute_import
-from __future__ import print_function
+
+
 import glob
 import os
 import sys
@@ -110,9 +110,9 @@ def binaries_checker():
         print("Some binaries where not found : \n-%s" % "\n-".join(nfound))
         answer = 'n'
         try:
-            answer = raw_input("Do you want to still continue the installation (y/n) ? ")
-        except:
             answer = input("Do you want to still continue the installation (y/n) ? ")
+        except:
+            answer = eval(input("Do you want to still continue the installation (y/n) ? "))
 
         return answer.lower().startswith('y')
 

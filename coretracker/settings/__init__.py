@@ -11,6 +11,6 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from settings import Settings
-import parameters
+from .settings import Settings
+from . import parameters
 __all__ = ['Settings', 'parameters']

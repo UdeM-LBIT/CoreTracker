@@ -1,4 +1,4 @@
-from output import Output
+from .output import Output
 
 
 class BasicTemplate(object):

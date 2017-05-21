@@ -1,4 +1,4 @@
-from __future__ import division
+
 
 import argparse
 import glob
@@ -14,7 +14,7 @@ import sys
 import time
 import traceback
 from collections import Counter, defaultdict
-from cStringIO import StringIO
+from io import StringIO
 from distutils import spawn
 from functools import partial
 
@@ -37,13 +37,13 @@ from Bio.SeqRecord import SeqRecord, _RestrictedDict
 from ete3 import Tree
 from scipy.cluster.vq import kmeans2
 
-from AncestralRecon import SingleNaiveRec, init_back_table
-from corefile import CoreFile
+from .AncestralRecon import SingleNaiveRec, init_back_table
+from .corefile import CoreFile
 from coretracker.FisherExact import fisher_exact
-from Faces import LineFace, List90Face, PPieChartFace, SequenceFace
-from letterconfig import *
-from output import Output
-from pdfutils import *
+from .Faces import LineFace, List90Face, PPieChartFace, SequenceFace
+from .letterconfig import *
+from .output import Output
+from .pdfutils import *
 
 SEABORN = False
 try:
@@ -59,7 +59,7 @@ except ImportError as e:
 GRAPHICAL_ACCESS = True
 try:
     from ete3 import TreeStyle, NodeStyle, faces, AttrFace, TextFace, CircleFace
-except ImportError, e:
+except ImportError as e:
     GRAPHICAL_ACCESS = False
 
 # define array to contains temp values
@@ -118,7 +118,7 @@ class SequenceLoader:
 
         logging.debug('DNA sequence was read')
         self.genes = set(self.dnasequences.keys()).intersection(
-            self.sequences.keys())
+            list(self.sequences.keys()))
 
         common_spec_per_gene = {}
         common_spec_per_gene_len = {}
@@ -145,7 +145,7 @@ class SequenceLoader:
                 "Can't find genes present in protein and nucleotide file.")
         logging.debug('List of selected genes : %s ' % str(self.genes))
 
-        self.true_spec_list = set().union(*self.common_spec_per_gene.values())
+        self.true_spec_list = set().union(*list(self.common_spec_per_gene.values()))
         if (stop_removed and has_stop):
             self.clean_stop()
             logging.debug('Stop codon removed for sequences')
@@ -304,7 +304,7 @@ class SequenceLoader:
             return sum(highpos)
 
         cur_dir = []
-        for i in xrange(loop):
+        for i in range(loop):
             d = os.path.join(outdir, '%d' % i)
             purge_directory(d)
             cur_dir.append(d)
@@ -328,7 +328,7 @@ class SequenceLoader:
             '... trying to run hmmbuild and hmmalign ' + str(loop) + " times!")
         quality = []
         outlist = []
-        for i in xrange(loop):
+        for i in range(loop):
             outputFile = os.path.join(cur_dir[i], "alignment.sto")
             tmphmmfile = os.path.join(cur_dir[i], "alignment.hmm")
             if hmmfile:
@@ -364,7 +364,7 @@ class SequenceLoader:
         alignment = AlignIO.read(bestiter, format="fasta")
         # clean by removing anything we had
         if clean:
-            for i in xrange(loop):
+            for i in range(loop):
                 d = os.path.join(outdir, '%d' % i)
                 shutil.rmtree(d, ignore_errors=True)
             if file_created:
@@ -412,9 +412,9 @@ class SequenceLoader:
         elif stop_checked:
             stop_removed = False
             core_dict = {}
-            gene_pos = stopmapping.values()[0]
+            gene_pos = list(stopmapping.values())[0]
             start = 0
-            for i in xrange(len(gene_pos)):
+            for i in range(len(gene_pos)):
                 seq_rec_list = []
                 for seqrec in seqlist:
                     s_rec = SeqRecord(seqrec.seq[start:stopmapping[seqrec.id][i]],
@@ -440,12 +440,12 @@ class SequenceLoader:
         except:
             logging.warn("Wrong genetic code, resetting it to 1")
 
-        if isinstance(core_inst, basestring):
+        if isinstance(core_inst, str):
             core_inst = CoreFile(core_inst, alphabet=generic_nucleotide)
 
         core_prot_inst = {}
         stop_checker = lambda x: '*' if x.upper() in codontable.stop_codons else 'X'
-        for gene, seqs in core_inst.items():
+        for gene, seqs in list(core_inst.items()):
             translated = []
             for s in seqs:
                 if len(s) % 3 != 0:
@@ -453,7 +453,7 @@ class SequenceLoader:
                         "Frame-shifting detected in %s : [%s], current version does not supported it." % (s.id, gene))
                 else:
                     aa_list = [codontable.forward_table.get(
-                        s.seq[i:i + 3].upper(), stop_checker(s.seq[i:i + 3])) for i in xrange(0, len(s), 3)]
+                        s.seq[i:i + 3].upper(), stop_checker(s.seq[i:i + 3])) for i in range(0, len(s), 3)]
                     trans_s = Seq("".join(aa_list), generic_protein)
                     translated.append(SeqRecord(trans_s, id=s.id, name=s.name))
             core_prot_inst[gene] = translated
@@ -474,8 +474,7 @@ class CodonSeq(CodonSeq):
         if rf_table is None:
             seq_ungapped = self._data.replace(gap_char, "")
             assert len(self) % 3 == 0, "Sequence length is not divisible by 3"
-            self.rf_table = list(filter(lambda x: x % 3 == 0,
-                                        range(len(seq_ungapped))))
+            self.rf_table = list([x for x in range(len(seq_ungapped)) if x % 3 == 0])
             # check alphabet
             # Not use Alphabet._verify_alphabet function because it
             # only works for single alphabet
@@ -513,7 +512,7 @@ class CodonReaData(object):
 
         # change aa2 is a list now
         self.aa1, aareas = aas
-        self.aa2_list = aareas.keys()
+        self.aa2_list = list(aareas.keys())
         self.codon_alignment = codon_align_dict
         self.dct = dct
         self.back_table = init_back_table(dct)
@@ -544,7 +543,7 @@ class CodonReaData(object):
     def _spec_codon_usage(self):
         """Check codon usage in each species"""
         for i, aa in enumerate(self.consensus):
-            for spec in self.codon_alignment.keys():
+            for spec in list(self.codon_alignment.keys()):
                 spec_codon = self.codon_alignment[spec].seq.get_codon(i)
                 spec_aa = self.dct.forward_table.get(spec_codon, None)
                 cur_pos = self.positions[i]
@@ -590,7 +589,7 @@ class CodonReaData(object):
             amino_counters = self.codon_map_in_genome[spec][codon]
             total = 0.0
             numerator = 0
-            for k, v in amino_counters.items():
+            for k, v in list(amino_counters.items()):
                 if k != '-':
                     total += v
                     try:
@@ -630,11 +629,11 @@ class CodonReaData(object):
 
     def get_rea_aa_codon_distribution(self, specie, aa):
         """Get codon distribution in potentially reassigned positions"""
-        return dict((k, list(v)) for k, v in self.codons_distribution[specie][aa].items())
+        return dict((k, list(v)) for k, v in list(self.codons_distribution[specie][aa].items()))
 
     def get_total_rea_aa_codon_distribution(self, specie, aa):
         """Get total codon distribution"""
-        return dict((k, list(v)) for k, v in self.total_codons_distribution[specie][aa].items())
+        return dict((k, list(v)) for k, v in list(self.total_codons_distribution[specie][aa].items()))
 
 
 class SequenceSet(object):
@@ -646,7 +645,7 @@ class SequenceSet(object):
         self.codontable = CodonTable.unambiguous_dna_by_id[abs(table_num)]
 
         self.prot_dict, self.dna_dict, self.gene_limits = coreinstance.concat()
-        self.prot_align = MultipleSeqAlignment(self.prot_dict.values())
+        self.prot_align = MultipleSeqAlignment(list(self.prot_dict.values()))
         self.seqload = coreinstance
         self.phylotree = phylotree
         self.common_genome = []
@@ -672,7 +671,7 @@ class SequenceSet(object):
         gene_in_spec = {}
         for spec in self.common_genome:
             gene_in_spec[spec] = np.sum(
-                [1 for gene, speclist in self.seqload.common_spec_per_gene.items() if spec in speclist])
+                [1 for gene, speclist in list(self.seqload.common_spec_per_gene.items()) if spec in speclist])
         return gene_in_spec
 
     def restrict_to_common(self):
@@ -710,15 +709,15 @@ class SequenceSet(object):
         logging.debug(common_genome)
         # return common_genome, dict((k, v) for k, v in dna_dict.items() if k
         # in common_genome), prot_dict
-        self.dna_dict, self.prot_dict = dict((k, v) for k, v in self.dna_dict.items(
-        ) if k in common_genome), dict((k, v) for k, v in self.prot_dict.items() if k in common_genome)
+        self.dna_dict, self.prot_dict = dict((k, v) for k, v in list(self.dna_dict.items(
+        )) if k in common_genome), dict((k, v) for k, v in list(self.prot_dict.items()) if k in common_genome)
 
-        for k, v in self.prot_dict.items():
+        for k, v in list(self.prot_dict.items()):
             v.seq.alphabet = generic_protein
             v.id = k
 
         self.prot_align = MultipleSeqAlignment(
-            self.prot_dict.values(), alphabet=alpha)
+            list(self.prot_dict.values()), alphabet=alpha)
         self.core = CoreFile.split_alignment(self.prot_align, self.gene_limits)
 
     @classmethod
@@ -742,7 +741,7 @@ class SequenceSet(object):
         # build codon alignment and return it
         codon_aln = []
         all_undef_codon = {}
-        for g in self.dna_dict.keys():
+        for g in list(self.dna_dict.keys()):
             codon_rec, undef_c = self._get_codon_record(
                 self.dna_dict[g], self.prot_dict[g], self.codontable, alphabet)
             all_undef_codon[g] = undef_c
@@ -752,17 +751,17 @@ class SequenceSet(object):
             codon_aln, alphabet=alphabet)
 
         if all_undef_codon:
-            undef_codon = set().union(*all_undef_codon.values())
+            undef_codon = set().union(*list(all_undef_codon.values()))
             logging.debug("Total position lost due to undef codon : %d" %
                           len(undef_codon))
             undef_codon = sorted(list(undef_codon))
             # R_aa_position = np.asarray(xrange(self.prot_align.get_alignment_length()))
             # R_aa_position = np.setxor1d(tt_filter_position, np.asarray(undef_codon))
-            for gene, seqrec in self.prot_dict.items():
+            for gene, seqrec in list(self.prot_dict.items()):
                 seqrec.seq._data = seqrec.seq._data.replace('X', gap_char)
                 # self.prot_dict[gene] = seqrec
             self.prot_align = MultipleSeqAlignment(
-                self.prot_dict.values(), alphabet=alpha)
+                list(self.prot_dict.values()), alphabet=alpha)
 
             # remove all the position with undef codon from the dna_dict
             for codseqrec in self.codon_alignment:
@@ -835,9 +834,9 @@ class SequenceSet(object):
         """Filter protein alignment"""
         current_alignment = self.prot_align
         tt_filter_position = np.asarray(
-            xrange(current_alignment.get_alignment_length()))
+            range(current_alignment.get_alignment_length()))
         self.position = np.asarray(
-            xrange(current_alignment.get_alignment_length()))
+            range(current_alignment.get_alignment_length()))
 
         logging.debug("Alignment length  %d" %
                       current_alignment.get_alignment_length())
@@ -861,7 +860,7 @@ class SequenceSet(object):
             # little hack for biopython < 1.69 and > 1.65
             if isinstance(ic_vector, dict):
                 ic_vector = np.zeros(len(align_info.ic_vector))
-                for (ic_i, ic_v) in align_info.ic_vector.items():
+                for (ic_i, ic_v) in list(align_info.ic_vector.items()):
                     ic_vector[ic_i] = ic_v
                 max_val = max(ic_vector) * \
                     ((abs(ic_thresh) <= 1 or 0.01) * abs(ic_thresh))
@@ -928,7 +927,7 @@ class SequenceSet(object):
         else:
             edited_alignment = clc.copy_codon_alignment(alignment, codontable)
             index_array = sorted(index_array)
-            for i in xrange(len(edited_alignment)):
+            for i in range(len(edited_alignment)):
                 codseq = CodonSeq('')
                 for pos in index_array:
                     codseq += edited_alignment[i].seq.get_codon(pos)
@@ -1109,7 +1108,7 @@ class ReaGenomeFinder:
         self.aa_sim_json = defaultdict(list)
         aa2suspect = defaultdict(Counter)
         aa2suspect_dist = makehash(1, list)
-        for (j, i) in itertools.combinations(xrange(number_seq), r=2):
+        for (j, i) in itertools.combinations(range(number_seq), r=2):
             gpaired = abs(
                 use_similarity - self.global_paired_distance[self.seq_names[i], self.seq_names[j]])
             fpaired = abs(
@@ -1119,7 +1118,7 @@ class ReaGenomeFinder:
             paired = fpaired
             if self.settings.USE_GLOBAL:
                 paired = gpaired
-            for aa in self.aa_paired_distance.keys():
+            for aa in list(self.aa_paired_distance.keys()):
                 aapaired = abs(
                     use_similarity - self.aa_paired_distance[aa][self.seq_names[i], self.seq_names[j]])
                 self.aa_sim_json[aa_letters_1to3[aa]].append(
@@ -1147,7 +1146,7 @@ class ReaGenomeFinder:
 
     def get_suspect_by_count(self, aa2suspect, seq_num):
         """Find suspected species by simple counting"""
-        for aa in aa2suspect.keys():
+        for aa in list(aa2suspect.keys()):
             tmp_list = aa2suspect[aa].most_common()
             i = 0
             while i < len(tmp_list) and tmp_list[i][1] > self.settings.FREQUENCY_THRESHOLD * seq_num:
@@ -1157,9 +1156,9 @@ class ReaGenomeFinder:
 
     def get_suspect_by_stat(self, aa2suspect_dist, seq_num, use_similarity=1, test='wilcoxon', confd=0.05):
         """Use a statistic test to find suspected species"""
-        for aa in aa2suspect_dist.keys():
+        for aa in list(aa2suspect_dist.keys()):
             tmp_list = aa2suspect_dist[aa]
-            for seq, val in tmp_list.items():
+            for seq, val in list(tmp_list.items()):
                 val = np.asarray(val)
                 rank, pval = self.get_paired_test(
                     val[:, 0], val[:, 1], use_similarity, test)
@@ -1171,16 +1170,16 @@ class ReaGenomeFinder:
 
         def get_cluster(cluster_list):
             """Perform kmean in order to find clusters"""
-            features = np.asarray(cluster_list.values())
+            features = np.asarray(list(cluster_list.values()))
             return kmeans2(features, 2, iter=100)
 
         logging.debug('Clustering chosen, labels for each species :')
-        for aa in aa2suspect_dist.keys():
+        for aa in list(aa2suspect_dist.keys()):
             aafilt2dict = self.seqset.aa_filt_prot_align[aa_letters_1to3[aa]]
             tmp_list = aa2suspect_dist[aa]
             cluster_list = {}
             aa_set = set([])
-            for seq, val in tmp_list.items():
+            for seq, val in list(tmp_list.items()):
                 val = np.mean(val, axis=0)
                 if (val[0] > val[1] and use_similarity) or (val[0] < val[1] and not use_similarity):
                     aa_set.add(seq)
@@ -1193,8 +1192,8 @@ class ReaGenomeFinder:
                 logging.debug("%s\t%s\t%d" %
                               (elem, cluster_list[elem], labels[index]))
 
-            lab1 = set(np.asarray(cluster_list.keys())[labels == 1])
-            lab2 = set(np.asarray(cluster_list.keys())[labels == 0])
+            lab1 = set(np.asarray(list(cluster_list.keys()))[labels == 1])
+            lab2 = set(np.asarray(list(cluster_list.keys()))[labels == 0])
             size1 = aa_set.intersection(lab1)
             size2 = aa_set.intersection(lab2)
             lab = lab1 if len(size1) > len(size2) else lab2
@@ -1244,7 +1243,7 @@ class ReaGenomeFinder:
         # TODO :  CHANGE THIS FUNCTION TO A MORE REALISTIC ONE
         aa_count_spec = self.get_aa_count_in_alignment()
         aa_count_cons = Counter(self.filtered_consensus)
-        for aa, suspect in self.suspected_species.items():
+        for aa, suspect in list(self.suspected_species.items()):
             aa_alignment = self.seqset.aa_filt_prot_align[aa_letters_1to3[aa]]
             suspected_list = sorted(suspect.keys())
             for spec in self.seqset.common_genome:
@@ -1254,11 +1253,11 @@ class ReaGenomeFinder:
                     cur_aa_c2 = aa_count_spec[spec][
                         cur_aa] + aa_count_cons[cur_aa]
                     filt_size = sum([aa_count_spec[spec][x]
-                                     for x in aa_count_spec[spec].keys() if x != '-'])
+                                     for x in list(aa_count_spec[spec].keys()) if x != '-'])
                     cons_size = sum(
-                        [aa_count_cons[x] for x in aa_count_spec.keys() if x not in ('-', 'X')])
+                        [aa_count_cons[x] for x in list(aa_count_spec.keys()) if x not in ('-', 'X')])
                     tot = sum([spec_aa_counter[x]
-                               for x in spec_aa_counter.keys() if x != '-'])
+                               for x in list(spec_aa_counter.keys()) if x != '-'])
                     prob = spec_aa_counter[cur_aa] / tot if tot > 0 else 0
                     if prob > 0 and cur_aa != '-' and cur_aa != aa and cur_aa not in self.settings.EXCLUDE_AA_FROM:
 
@@ -1304,7 +1303,7 @@ class ReaGenomeFinder:
         codons_align, _ = self.seqset.get_codon_alignment()
         spec_data = {}
         codons_align = SeqIO.to_dict(codons_align)
-        for (spec, codalign) in codons_align.items():
+        for (spec, codalign) in list(codons_align.items()):
             cseq = str(codalign.seq)
             spec_data[spec] = Counter([cseq[x:x + 3]
                                        for x in range(0, len(cseq), 3)])
@@ -1355,7 +1354,7 @@ class ReaGenomeFinder:
             OUT.write("#Reference Genetic Code : %d (%s)\n" %
                       (gcode, gcode_descr))
             OUT.write("#Exception: \n")
-            for rea, total_rea in predict.items():
+            for rea, total_rea in list(predict.items()):
                 OUT.write("%s\n" % rea)
                 for spec_with_rea in total_rea:
                     OUT.write("\t%s\t%s\n" % (spec_with_rea[0].ljust(
@@ -1380,14 +1379,14 @@ class ReaGenomeFinder:
     def run_analysis(self, codon_align, fcodon_align):
         """ Run the filtering analysis of the current dataset in sequenceset"""
 
-        for aa1, aarea in self.aa2aa_rea.items():
+        for aa1, aarea in list(self.aa2aa_rea.items()):
             aa_alignment = self.seqset.aa_filt_prot_align[aa_letters_1to3[aa1]]
             gcodon_rea = CodonReaData((aa1, aarea), self.seqset.prot_align, self.global_consensus, codon_align,
                                       self.seqset.codontable, self.seqset.position, self.seqset.gene_limits, self.settings)
             fcodon_rea = CodonReaData((aa1, aarea), self.seqset.filt_prot_align, self.filtered_consensus, fcodon_align,
                                       self.seqset.codontable, self.seqset.filt_position, self.seqset.gene_limits, self.settings)
 
-            for aa2, species in aarea.items():
+            for aa2, species in list(aarea.items()):
                 # logging.debug("%s to %s" % (aa2, aa1))
                 counts = []
                 t = self.seqset.phylotree.copy("newick")
@@ -1409,7 +1408,7 @@ class ReaGenomeFinder:
                     leaf.add_features(count=0)
                     leaf.add_features(filter_count=filt_count)
                     leaf.add_features(lost=True)
-                    for pos in xrange(len(self.global_consensus)):
+                    for pos in range(len(self.global_consensus)):
                         if self.global_consensus[pos] == aa1 and rec[pos] == aa2:
                             leaf.count += 1
 
@@ -1428,7 +1427,7 @@ class ReaGenomeFinder:
                         reacodon, usedcodon, mcodon = greacodon, gusedcodon, gmixtecodon
 
                     eprob = None
-                    if len(reacodon.values()) == 1 or len(usedcodon.values()) == 1:
+                    if len(list(reacodon.values())) == 1 or len(list(usedcodon.values())) == 1:
                         eprob = self.get_expected_prob_per_species(genome, aa2, aa1,
                                                                    use_cost=True, use_align=True)
                         # print("%s | %s to %s : %f"%(genome, aa2, aa1, eprob))
@@ -1501,8 +1500,8 @@ def convert_tree_to_mafft(tree, seq_order, output, scale, dist_thresh=1e-10):
             right_branch = node.children[1]
             left_branch_leaf = left_branch.get_leaf_names()
             right_branch_leaf = right_branch.get_leaf_names()
-            seqnames = [min(map(lambda x: seq_order.index(x), left_branch_leaf)) +
-                        1, min(map(lambda x: seq_order.index(x), right_branch_leaf)) + 1, ]
+            seqnames = [min([seq_order.index(x) for x in left_branch_leaf]) +
+                        1, min([seq_order.index(x) for x in right_branch_leaf]) + 1, ]
             # seqnames = [seq_order.index(left_branch_leaf.name)+1, seq_order.index(right_branch_leaf.name)+1]
             # seqnames = [left_branch_leaf.name, right_branch_leaf.name]
             branchlens = [
@@ -1511,7 +1510,7 @@ def convert_tree_to_mafft(tree, seq_order, output, scale, dist_thresh=1e-10):
                 seqnames.reverse()
                 branchlens.reverse()
 
-            if filter(lambda x: x > 10, branchlens):
+            if [x for x in branchlens if x > 10]:
                 raise ValueError(
                     "Your branch length cannot be greater than 10.0. Mafft won't run.")
 
@@ -1526,7 +1525,7 @@ def check_stop(seq_list, is_aligned, stop='*'):
         last_pos = len(seq.seq) - 1
         result_map[seq.id] = [pos for pos,
                               char in enumerate(seq.seq) if char == stop]
-    result = result_map.values()
+    result = list(result_map.values())
     length_list = sorted([len(x) for x in result])
     length = length_list[-1]
     if is_aligned:
@@ -1595,7 +1594,7 @@ def remove_gap_only_columns(alignfile, curformat):
     """Remove all gap position from a file and return a new file"""
     align = AlignIO.read(alignfile, curformat)
     align, positions = SequenceSet.clean_alignment(align, threshold=1)
-    for i in xrange(len(align)):
+    for i in range(len(align)):
         seqname = align._records[i].name
         if hmmidpattern.match(seqname):
             seqname = seqname.split('|')[1]
@@ -1610,7 +1609,7 @@ def remove_gap_only_columns(alignfile, curformat):
 def independance_test(rea, ori, genome, confd=0.05, expct_prob=0.5):
     """Perform a Fisher's Exact test"""
     codon_list = set(rea.keys())
-    codon_list.update(ori.keys())
+    codon_list.update(list(ori.keys()))
     codon_list = [x for x in codon_list if not (
         rea.get(x, 0) == 0 and ori.get(x, 0) == 0)]
     nelmt = len(codon_list)
@@ -1618,7 +1617,7 @@ def independance_test(rea, ori, genome, confd=0.05, expct_prob=0.5):
     # in this case, we can perform a fisher test
     if nelmt > 1:
         obs = np.zeros((nelmt, 2))
-        for i in xrange(nelmt):
+        for i in range(nelmt):
             obs[i, 0] = rea.get(codon_list[i], 0)
             obs[i, 1] = ori.get(codon_list[i], 0)
         try:
@@ -1633,15 +1632,15 @@ def independance_test(rea, ori, genome, confd=0.05, expct_prob=0.5):
     # strangely, codon is used only in rea column
     # complete reassignment ??
     # to avoid returning 0, we return the smallest positive int
-    elif len(rea.values()) > 0 and len(ori.values()) == 0:
+    elif len(list(rea.values())) > 0 and len(list(ori.values())) == 0:
         return True, eps
     # codon is used in both column
-    elif len(rea.values()) > 0 and len(ori.values()) > 0:
+    elif len(list(rea.values())) > 0 and len(list(ori.values())) > 0:
         # fpval = abs(rea.values()[0] - ori.values()[0]) / \
             # (rea.values()[0] + ori.values()[0])
         # return rea.values()[0] >= ori.values()[0], fpval / tot_size
-        n = rea.values()[0] + ori.values()[0]  # ignoring mixcodon ??
-        pval = onevalbinomtest(rea.values()[0], n, expct_prob)
+        n = list(rea.values())[0] + list(ori.values())[0]  # ignoring mixcodon ??
+        pval = onevalbinomtest(list(rea.values())[0], n, expct_prob)
         return pval <= confd, pval
     # In this case, the codon is neither in the rea column nor in the
     # second column, strange result
@@ -1708,8 +1707,8 @@ def compute_SP_per_col(al1, al2, columns, nspec, scoring_matrix):
     for col in columns:
         al1_s = 0
         al2_s = 0
-        for i in xrange(nspec - 1):
-            for j in xrange(i + 1, nspec):
+        for i in range(nspec - 1):
+            for j in range(i + 1, nspec):
                 al1_s += scoring_function(al1[i][col],
                                           al1[j][col], scoring_matrix)
                 al2_s += scoring_function(al2[i][col],
@@ -1724,16 +1723,16 @@ def check_align_upgrade(al1, al2, scoring_method, method="wilcoxon", column_list
     """Check if reassignment actually improve the alignment"""
     # al1 is the new alignement after changing the Gcode, and it's a dict
     # what we are testing is mean(al1_qual) >  mean(al2_qual)
-    if scoring_method != "identity" and isinstance(scoring_method, basestring):
+    if scoring_method != "identity" and isinstance(scoring_method, str):
         scoring_method = getattr(MatrixInfo, scoring_method)
     if isinstance(al1, dict):
-        al1 = al1.values()
+        al1 = list(al1.values())
     if isinstance(al2, dict):
-        al2 = al2.values()
+        al2 = list(al2.values())
     al_len = len(al1[0])
     nspec = len(al1)
     if not column_list:
-        column_list = range(al_len)
+        column_list = list(range(al_len))
     assert (nspec == len(al2) and al_len == len(
         al2[0])), "The alignment are different"
     al1_sim, al2_sim = compute_SP_per_col(
@@ -1747,13 +1746,13 @@ def compute_ic_content(alignment):
         align_info = AlignInfo.SummaryInfo(alignment)
     else:
         align_info = AlignInfo.SummaryInfo(
-            MultipleSeqAlignment(alignment.values()))
+            MultipleSeqAlignment(list(alignment.values())))
     align_info.information_content()
     ic_vector = align_info.ic_vector
     # biopython wrong version hack
     if isinstance(ic_vector, dict):
         ic_vector = np.zeros(len(align_info.ic_vector))
-        for (ic_i, ic_v) in align_info.ic_vector.items():
+        for (ic_i, ic_v) in list(align_info.ic_vector.items()):
             ic_vector[ic_i] = ic_v
     return ic_vector.tolist()
 
@@ -1767,7 +1766,7 @@ def check_gain(codon, cible_aa, speclist, tree, codontable, codon_alignment,
     def extract_alignment(codon_alignment, alignment, not_wanted_species):
         new_cod_alignment = []
         new_alignment = []
-        for spec, nucseq in codon_alignment.items():
+        for spec, nucseq in list(codon_alignment.items()):
             if spec not in not_wanted_species:
                 new_cod_alignment.append(nucseq)
                 new_alignment.append(alignment[spec])
@@ -1781,10 +1780,10 @@ def check_gain(codon, cible_aa, speclist, tree, codontable, codon_alignment,
         # [prot[i:i + 3] for i in xrange(0, len(prot), 3)]))) for spec, prot in codon_alignment.items())
         translated_al = {}
         position = set([])
-        for spec, nucseq in codon_alignment.items():
+        for spec, nucseq in list(codon_alignment.items()):
             translated = ""
             nucseq_len = int(len(nucseq.seq) / 3)
-            for i in xrange(0, nucseq_len):
+            for i in range(0, nucseq_len):
                 cod = nucseq[i * 3:(i + 1) * 3].seq.tostring()
                 if changes.get(spec, (None,))[0] != cod:
                     # use X for amino acid when stop codon is found
@@ -1961,12 +1960,12 @@ def get_report(fitchtree, gdata, reafinder, codon_align, prediction, output="", 
                 spec_codonused_f = gdata[node.name]['filtered']['used_codon']
 
                 # add data
-                faces.add_face_to_node(PPieChartFace(spec_codonrea_f.values(), pie_size, pie_size, show_label=show_n,
-                                                     colors=[fitchtree.colors[k] for k in spec_codonrea_f.keys()]),
+                faces.add_face_to_node(PPieChartFace(list(spec_codonrea_f.values()), pie_size, pie_size, show_label=show_n,
+                                                     colors=[fitchtree.colors[k] for k in list(spec_codonrea_f.keys())]),
                                        node, column=1, position="aligned")
 
-                faces.add_face_to_node(PPieChartFace(spec_codonused_f.values(), pie_size, pie_size, show_label=show_n,
-                                                     colors=[fitchtree.colors[k] for k in spec_codonused_f.keys()]),
+                faces.add_face_to_node(PPieChartFace(list(spec_codonused_f.values()), pie_size, pie_size, show_label=show_n,
+                                                     colors=[fitchtree.colors[k] for k in list(spec_codonused_f.keys())]),
                                        node, column=2, position="aligned")
 
                 next_column = 3
@@ -1974,8 +1973,8 @@ def get_report(fitchtree, gdata, reafinder, codon_align, prediction, output="", 
                 if(settings.SHOW_MIXTE_CODONS):
                     spec_mixtecodon_f = gdata[node.name][
                         'filtered']['mixte_codon']
-                    faces.add_face_to_node(PPieChartFace(spec_mixtecodon_f.values(), pie_size, pie_size, show_label=show_n,
-                                                         colors=[fitchtree.colors[k] for k in spec_mixtecodon_f.keys()]),
+                    faces.add_face_to_node(PPieChartFace(list(spec_mixtecodon_f.values()), pie_size, pie_size, show_label=show_n,
+                                                         colors=[fitchtree.colors[k] for k in list(spec_mixtecodon_f.keys())]),
                                            node, column=3, position="aligned")
                     next_column = 4
 
@@ -1987,20 +1986,20 @@ def get_report(fitchtree, gdata, reafinder, codon_align, prediction, output="", 
                     faces.add_face_to_node(LineFace(
                         pie_size, pie_size, None), node, column=next_column, position="aligned")
 
-                    faces.add_face_to_node(PPieChartFace(spec_codonrea_g.values(), pie_size, pie_size, show_label=show_n,
-                                                         colors=[fitchtree.colors[k] for k in spec_codonrea_g.keys()]),
+                    faces.add_face_to_node(PPieChartFace(list(spec_codonrea_g.values()), pie_size, pie_size, show_label=show_n,
+                                                         colors=[fitchtree.colors[k] for k in list(spec_codonrea_g.keys())]),
                                            node, column=next_column + 1, position="aligned")
 
-                    faces.add_face_to_node(PPieChartFace(spec_codonused_g.values(), pie_size, pie_size, show_label=show_n,
-                                                         colors=[fitchtree.colors[k] for k in spec_codonused_g.keys()]),
+                    faces.add_face_to_node(PPieChartFace(list(spec_codonused_g.values()), pie_size, pie_size, show_label=show_n,
+                                                         colors=[fitchtree.colors[k] for k in list(spec_codonused_g.keys())]),
                                            node, column=next_column + 2, position="aligned")
 
                     next_column += 3
                     if(settings.SHOW_MIXTE_CODONS):
                         spec_mixtecodon_g = gdata[node.name][
                             'global']['mixte_codon']
-                        faces.add_face_to_node(PPieChartFace(spec_mixtecodon_g.values(), pie_size, pie_size, show_label=show_n,
-                                                             colors=[fitchtree.colors[k] for k in spec_mixtecodon_g.keys()]),
+                        faces.add_face_to_node(PPieChartFace(list(spec_mixtecodon_g.values()), pie_size, pie_size, show_label=show_n,
+                                                             colors=[fitchtree.colors[k] for k in list(spec_mixtecodon_g.keys())]),
                                                node, column=next_column, position="aligned")
                         next_column += 1
 
@@ -2048,7 +2047,7 @@ def get_report(fitchtree, gdata, reafinder, codon_align, prediction, output="", 
         ts.title.add_face(TextFace(fitchtree.ori_aa + " --> " +
                                    fitchtree.dest_aa, fsize=14), column=0)
         if(fitchtree.has_codon_data()):
-            for cod, col in fitchtree.colors.items():
+            for cod, col in list(fitchtree.colors.items()):
                 ts.legend.add_face(CircleFace(
                     (pie_size / 3), col), column=0)
                 ts.legend.add_face(
@@ -2180,7 +2179,7 @@ def format_tree(tree, codon, cible, alignment, SP_score, ic_contents, pos=[],
                 ind += 2
 
     else:
-        for (cod, col) in codon_col.items():
+        for (cod, col) in list(codon_col.items()):
             ts.legend.add_face(faces.RectFace(50, 25, col, col), column=0)
             ts.legend.add_face(TextFace("  %s " % cod, fsize=8), column=1)
         ts.legend.add_face(faces.RectFace(50, 25, 'black', 'black'), column=0)
@@ -2205,10 +2204,10 @@ def identify_position_with_codon(fcodal, codon, spec_to_check):
     """Get all positions where a codon is used"""
     positions = []
     try:
-        al_len = int(len(fcodal.values()[0]) / 3)
+        al_len = int(len(list(fcodal.values())[0]) / 3)
     except:
         al_len = fcodal.get_aln_length()
-    for i in xrange(al_len):
+    for i in range(al_len):
         for spec in spec_to_check:
             if fcodal[spec].seq.get_codon(i) == codon:
                 positions.append(i)
@@ -2218,7 +2217,7 @@ def identify_position_with_codon(fcodal, codon, spec_to_check):
 
 def violin_plot(vals, output, score, codon, cible, imformat="pdf"):
     """Return violin plot of SP score """
-    keys = vals.keys()
+    keys = list(vals.keys())
     data = [vals[k] for k in keys]
     pos = [y + 1 for y in range(len(data))]
     title = 'p-values({} --> {}) : {:.2e}'.format(codon, cible, score)
@@ -2301,7 +2300,7 @@ def codon_adjust_improve(fitchtree, reafinder, codon_align, codontable, predicti
 
         return gene_pos, gene_break, close_to_start
 
-    for codon in true_codon_set.keys():
+    for codon in list(true_codon_set.keys()):
         speclist = true_codon_set[codon]
         if len(speclist) > 0:
             # pos = identify_position_with_codon(codon_align, codon, speclist)
@@ -2320,8 +2319,8 @@ def codon_adjust_improve(fitchtree, reafinder, codon_align, codontable, predicti
                 # only compute this if asked
                 rea_pos = reafinder.update_reas(
                     codon, cible_aa, speclist, codon_align, pos, filt_position, genelimit)
-                for cuspec, readt in rea_pos.items():
-                    for k in readt.keys():
+                for cuspec, readt in list(rea_pos.items()):
+                    for k in list(readt.keys()):
                         rea_pos_keeper[cuspec][k] = readt[k]
             sp, cor_sp = alsp
             ic, cor_ic = alic
@@ -2381,7 +2380,7 @@ def pdf_format_data(ori_aa, dest_aa, gdata, prediction, codvalid, dtype, output=
         cd = X_labels[i, 1]
         pred_dict[gm][cd] = i
 
-    for codon in codon_set.keys():
+    for codon in list(codon_set.keys()):
         genome_list = codon_set[codon]
         for g in genome_list:
             pos = pred_dict[g][codon]
@@ -2409,7 +2408,7 @@ def pdf_format_data(ori_aa, dest_aa, gdata, prediction, codvalid, dtype, output=
 
     frames = []
     glist = []
-    for (g, dt) in pd_data.items():
+    for (g, dt) in list(pd_data.items()):
         glist.append(g)
         frames.append(pd.DataFrame.from_dict(dt, orient='index'))
     fdata = pd.concat(frames, keys=glist)
@@ -2429,7 +2428,7 @@ def print_data_to_txt(outputfile, header, X, X_label, Y, Y_prob, codon_data, cib
                         (["clad_valid", "trans_valid"] if valid else [])))
 
     total_elm = len(Y)
-    for i in xrange(total_elm):
+    for i in range(total_elm):
         end_data = [str(Y[i]), str(Y_prob[i][-1])]
         if valid:
             try:
@@ -2445,7 +2444,7 @@ def print_data_to_txt(outputfile, header, X, X_label, Y, Y_prob, codon_data, cib
 
     if codon_data:
         out.write("\n\n### Alignment improvement:\n")
-        for (codon, score) in codon_data.items():
+        for (codon, score) in list(codon_data.items()):
             out.write("{}\t{}\t{:.2e}\n".format(codon, cible, score))
 
     tmp = Y_prob[Y > 0, 1]
@@ -2454,7 +2453,7 @@ def print_data_to_txt(outputfile, header, X, X_label, Y, Y_prob, codon_data, cib
         write_d = "\n### Prediction Prob. range for Positive :[ %.3f - %.3f ]\n" % prerange
         out.write("\n{}\n".format(write_d))
 
-    if suptext and isinstance(suptext, basestring):
+    if suptext and isinstance(suptext, str):
         out.write("\n\n{}\n".format(suptext))
     out.close()
 

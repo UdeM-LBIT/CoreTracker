@@ -1,4 +1,4 @@
-import parameters
+from . import parameters
 import Bio.SubsMat.MatrixInfo as MatrixInfo
 
 AVAILABLE_MAT = MatrixInfo.available_matrices + ['identity']
@@ -104,7 +104,7 @@ class Settings():
             self.__dict__.update(params.__dict__)
 
     def update_params(self, **kwargs):
-        for k, v in kwargs.items():
+        for k, v in list(kwargs.items()):
             if k == 'MATRIX' and v in AVAILABLE_MAT:
                 self.__dict__[k] = v
                 if v != "identity":

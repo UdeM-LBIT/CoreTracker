@@ -11,7 +11,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from classifier import Classifier, getDataFromFeatures, read_from_json
+from .classifier import Classifier, getDataFromFeatures, read_from_json
 import os
 this_dir, this_filename = os.path.split(__file__)
 MODELPATH = os.path.join(this_dir, "models", '%s/classifier.pkl.z')

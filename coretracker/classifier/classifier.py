@@ -1,4 +1,4 @@
-from __future__ import division
+
 
 import itertools
 import json
@@ -55,7 +55,7 @@ class Classifier(object):
             clf = joblib.load(loadfile)
             return clf
         except IOError:
-            print('Problem with file %s, can not open it' % loadfile)
+            print(('Problem with file %s, can not open it' % loadfile))
         except Exception as e:
             raise e
         return None
@@ -112,11 +112,11 @@ class Classifier(object):
                 [tree.feature_importances_ for tree in self.clf.estimators_], axis=0)
             plt.figure()
             plt.title("Feature importances")
-            plt.bar(range(n_feats), importances[
+            plt.bar(list(range(n_feats)), importances[
                     indices], width=0.5, color="b", yerr=std[indices], align="center")
             if len(features_list) > 0:
                 features_list = np.asarray(features_list)[indices]
-                plt.xticks(range(n_feats), features_list, rotation='vertical')
+                plt.xticks(list(range(n_feats)), features_list, rotation='vertical')
             plt.xlim([-1, n_feats])
             plt.margins(0.2)
 
@@ -176,21 +176,21 @@ class Classifier(object):
                 (prob_pos.max() - prob_pos.min())
 
         clf_score = brier_score_loss(y_test, prob_pos)
-        print("%s:" % self.method)
-        print("\tBrier: %1.3f" % (clf_score))
-        print("\tPrecision: %1.3f" % precision_score(y_test, y_pred))
-        print("\tRecall: %1.3f" % recall_score(y_test, y_pred))
-        print("\tF1: %1.3f" % f1_score(y_test, y_pred))
-        print("\tROC AUC score: %1.3f\n" % roc_auc_score(y_test, prob_pos))
+        print(("%s:" % self.method))
+        print(("\tBrier: %1.3f" % (clf_score)))
+        print(("\tPrecision: %1.3f" % precision_score(y_test, y_pred)))
+        print(("\tRecall: %1.3f" % recall_score(y_test, y_pred)))
+        print(("\tF1: %1.3f" % f1_score(y_test, y_pred)))
+        print(("\tROC AUC score: %1.3f\n" % roc_auc_score(y_test, prob_pos)))
 
 
 def read_from_json(data, labels=None, use_global=True, use_pvalue=True):
     """Parse X array from data"""
-    if isinstance(data, basestring):
+    if isinstance(data, str):
         with open(data) as jfile:
             data = json.load(jfile)
 
-    if labels and isinstance(labels, basestring):
+    if labels and isinstance(labels, str):
         with open(labels) as jfile2:
             labels = json.load(jfile2)
     # matrice format
@@ -209,9 +209,9 @@ def read_from_json(data, labels=None, use_global=True, use_pvalue=True):
     # each entry format :
     # [fitch, suspected, gene_frac, rea_frac, used_frac, subs_count, codon_lik_for_rea_aa]
 
-    for aa2, val in data['aa'].items():
-        for aa1, glist in val.items():
-            for genome, gdata in glist.items():
+    for aa2, val in list(data['aa'].items()):
+        for aa1, glist in list(val.items()):
+            for genome, gdata in list(glist.items()):
                 type_check = gdata[dtype]
                 codon_total = gdata['codons'][dtype]
                 fitch = gdata['fitch']
@@ -221,10 +221,10 @@ def read_from_json(data, labels=None, use_global=True, use_pvalue=True):
                 used_codon = type_check['used_codon']
                 # gene_in_genome = data['genes'][genome]
                 was_lost = gdata['lost'][fisher_type]
-                total_aa = np.sum(codon_total.values())
+                total_aa = np.sum(list(codon_total.values()))
                 # mixte_codon = type_check['mixte_codon']
                 subs_count = type_check['count']
-                for codon in codon_total.keys():
+                for codon in list(codon_total.keys()):
                     gene_count = 0
                     total_gene_count = 0
                     try:
@@ -320,7 +320,7 @@ def get_2D_distinct(Xdata, Xlabel, y, etiquette, outfile="2Dcompare.png", featur
     ncomp = len(features)
     if ncomp == 0 or ncomp > len(etiquette):
         ncomp = len(etiquette)
-        features = range(len(etiquette))
+        features = list(range(len(etiquette)))
     else:
         Xdata = Xdata[:, features]
 
@@ -331,8 +331,8 @@ def get_2D_distinct(Xdata, Xlabel, y, etiquette, outfile="2Dcompare.png", featur
 
     plt.close('all')
     f, axarr = plt.subplots(i, j)
-    for xax in xrange(ncomp):
-        for yax in xrange(xax + 1, ncomp):
+    for xax in range(ncomp):
+        for yax in range(xax + 1, ncomp):
             total_size -= 1
             i, j = np.unravel_index(total_size, axarr.shape)
             axarr[i, j].scatter(Xdata[:, xax], Xdata[:, yax], c=color)
@@ -385,8 +385,8 @@ def draw_pca_data(X_features, Xlabel, y, outfile="PCA.png"):
     plt.close('all')
     f, axarr = plt.subplots(i, j)
     if total_size > 1:
-        for xax in xrange(ncomp):
-            for yax in xrange(xax + 1, ncomp):
+        for xax in range(ncomp):
+            for yax in range(xax + 1, ncomp):
                 total_size -= 1
                 i, j = np.unravel_index(total_size, axarr.shape)
                 axarr[i, j].scatter(X_features[:, xax],
@@ -413,11 +413,11 @@ def print_data(X, X_label, Y, etiquette=None):
                      "N. used", "Cod. count", "Sub. count", "G. len", "codon_lik", "N. mixte", "id"]
     etiquette = list(etiquette)
 
-    print("\n" + "\t".join(["genome", "codon",
-                            "ori_aa", "rea_aa"] + etiquette))
-    for i in xrange(len(X_label)):
+    print(("\n" + "\t".join(["genome", "codon",
+                            "ori_aa", "rea_aa"] + etiquette)))
+    for i in range(len(X_label)):
         if Y[i] == 1:
-            print("\t".join(list(X_label[i]) + [str(x) for x in X[i]]))
+            print(("\t".join(list(X_label[i]) + [str(x) for x in X[i]])))
 
 
 def getDataFromFeatures(Xdata, etiquette, feats=[]):
@@ -434,7 +434,7 @@ def get_sensibility_and_precision(pred_y, true_y, X_labels=None, X=None, log=Tru
     assert nel == len(pred_y), 'Vector should be the same size\n'
     true_pos, true_neg, false_pos, false_neg = 0.0, 0.0, 0.0, 0.0
     false_neg_list, false_pos_list = [], []
-    for i in xrange(len(pred_y)):
+    for i in range(len(pred_y)):
         if pred_y[i] == 0 and true_y[i] == 1:
             false_neg += 1
             false_neg_list.append(i)
@@ -446,30 +446,30 @@ def get_sensibility_and_precision(pred_y, true_y, X_labels=None, X=None, log=Tru
         elif pred_y[i] == 0 and true_y[i] == 0:
             true_neg += 1
 
-    print("Test size is: %d\nTrue Positive is: %d\nTrue negative is: \
+    print(("Test size is: %d\nTrue Positive is: %d\nTrue negative is: \
           %d\nFalse positive is: %d\nFalse negative is:%d" % (
-        nel, true_pos, true_neg, false_pos, false_neg))
+        nel, true_pos, true_neg, false_pos, false_neg)))
     print('-------------------------------------------')
-    print("Sensibility is %f" % (true_pos / (true_pos + false_neg)
-                                 if (true_pos + false_neg) > 0 else 1))
-    print("Specificity is %f" % (true_neg / (true_neg + false_pos)
-                                 if (true_neg + false_pos) > 0 else 1))
-    print("Accuracy is %f" % ((true_neg + true_pos) / nel))
-    print("Precision is %f\n\n" %
-          (true_pos / (true_pos + false_pos) if (true_pos + false_pos) > 0 else 1))
+    print(("Sensibility is %f" % (true_pos / (true_pos + false_neg)
+                                 if (true_pos + false_neg) > 0 else 1)))
+    print(("Specificity is %f" % (true_neg / (true_neg + false_pos)
+                                 if (true_neg + false_pos) > 0 else 1)))
+    print(("Accuracy is %f" % ((true_neg + true_pos) / nel)))
+    print(("Precision is %f\n\n" %
+          (true_pos / (true_pos + false_pos) if (true_pos + false_pos) > 0 else 1)))
     if log:
         if X_labels is not None and X is not None:
             if len(false_neg_list) > 0:
                 print("List of false negatives")
                 for i in false_neg_list:
-                    print("\t".join(X_labels[i]))
-                    print("\t".join([str(x) for x in X[i]]))
+                    print(("\t".join(X_labels[i])))
+                    print(("\t".join([str(x) for x in X[i]])))
 
             if len(false_pos_list) > 0:
                 print("\nList of False positives")
                 for i in false_pos_list:
-                    print("\t".join(X_labels[i]))
-                    print("\t".join([str(x) for x in X[i]]))
+                    print(("\t".join(X_labels[i])))
+                    print(("\t".join([str(x) for x in X[i]])))
 
 
 def split_zeros_pos(L, X, Y, split_size=300):
@@ -493,7 +493,7 @@ def get_aa_cross_val(L, X, Y, AA, tsize=None, rstate=-1):
     """Get test data from dataset"""
     test_position = []
     aa_y = np.zeros(Y.shape)
-    for i in xrange(len(Y)):
+    for i in range(len(Y)):
         if L[i][-1] == AA:
             aa_y[i] = 1
             test_position.append(i)
@@ -510,7 +510,7 @@ def get_aa_cross_val(L, X, Y, AA, tsize=None, rstate=-1):
     test_position = np.random.permutation(test_position)
     mask = np.ones(Y.shape, dtype=bool)
     mask[test_position] = False
-    train_position = np.array(range(len(mask)))[mask]
+    train_position = np.array(list(range(len(mask))))[mask]
 
     if rstate > 0:
         return shuffle(train_position, random_state=rstate), shuffle(test_position, random_state=rstate)

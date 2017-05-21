@@ -31,7 +31,7 @@ aa_letters_1to3 = {
     'Y': 'Tyr',
 }
 
-aa_letters_3to1 = dict((x[1], x[0]) for x in aa_letters_1to3.items())
+aa_letters_3to1 = dict((x[1], x[0]) for x in list(aa_letters_1to3.items()))
 
 aamap = lambda x: (aa_letters_3to1[x[0]], aa_letters_3to1[x[1]])
 

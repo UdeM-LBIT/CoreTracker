@@ -1,9 +1,9 @@
 import scipy.stats as ss
 from scipy.special import gammaln as lgamma
-import statlib.fexact as f
-from statlib.fexact import fisher_exact as f_exact
-from statlib.asa159 import rcont2
-from statlib.asa205 import enum as rcont
+from . import statlib.fexact as f
+from .statlib.fexact import fisher_exact as f_exact
+from .statlib.asa159 import rcont2
+from .statlib.asa205 import enum as rcont
 import numpy as np
 import logging
 import os
@@ -220,11 +220,11 @@ def _fisher_sim(c, replicate, seed=None):
     results = np.zeros(replicate)
 
     fact = np.zeros(n + 1)
-    for i in xrange(2, n + 1):
+    for i in range(2, n + 1):
         fact[i] = fact[i - 1] + np.log(i)
 
     observed = np.zeros((nr, nc), dtype="int32", order='F')
-    for it in xrange(replicate):
+    for it in range(replicate):
         rcont2(nrow=nr, ncol=nc, nrowt=sr, ncolt=sc, key=key,
                seed=seed, matrix=observed, ierror=ierror)
         # if we do not have an error, make spcial action
@@ -232,7 +232,7 @@ def _fisher_sim(c, replicate, seed=None):
         tmp_observed = observed.ravel()
         if ierror[0] != 0:
             raise ValueError("Fortran subroutine rcont2 return an error !")
-        for j in xrange(nc):
+        for j in range(nc):
             i = 0
             ii = j * nr
             while(i < nr):
@@ -268,7 +268,7 @@ def _midp(c):
     global result
     result = []
     logfact = np.zeros(n + 1)
-    for i in xrange(2, n + 1):
+    for i in range(2, n + 1):
         logfact[i] = logfact[i - 1] + np.log(i)
 
     def callback(iflag, table, m, n, rowsum, colsum, prob, mult):

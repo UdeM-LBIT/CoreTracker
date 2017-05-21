@@ -29,7 +29,7 @@ class CoreFile:
 
     def __init__(self, infile, alphabet=generic_protein):
         self.infile = infile
-        if isinstance(alphabet, basestring):
+        if isinstance(alphabet, str):
             if alphabet.startswith('nuc'):
                 alphabet = generic_nucleotide
             else:
@@ -110,7 +110,7 @@ class CoreFile:
     @classmethod
     def write_corefile(clc, sequences, outfile):
         with open(outfile, 'w') as OUT:
-            for gene, sequence in sequences.items():
+            for gene, sequence in list(sequences.items()):
                 OUT.write('>>%s\n' % gene)
                 for seq in sequence:
                     OUT.write('>%s\n' % seq.name)
@@ -126,7 +126,7 @@ class CoreFile:
 
     def items(self):
         """ iterate over the keys and values"""
-        return self.sequences.items()
+        return list(self.sequences.items())
 
     @classmethod
     def split_alignment(clc, alignment, genelimit):
@@ -134,7 +134,7 @@ class CoreFile:
         # genelimit convert:
         sequences = {}
         if isinstance(alignment, dict):
-            alignment = MSA(alignment.values())
+            alignment = MSA(list(alignment.values()))
         exp_len = alignment.get_alignment_length()
         for dt in genelimit:
             gene, start, end = dt
@@ -148,8 +148,8 @@ class CoreFile:
     def flip_data(clc, indict):
         """Change data structure for dict of genome to dict of genes"""
         flip_dt = ddict()
-        for (genome, genedict) in indict.items():
-            for (gene, seq) in genedict.items():
+        for (genome, genedict) in list(indict.items()):
+            for (gene, seq) in list(genedict.items()):
                 try:
                     flip_dt[gene][genome] += str(seq)
                 except:

@@ -12,12 +12,12 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import warnings
-from corefile import CoreFile
+from .corefile import CoreFile
 warnings.filterwarnings("ignore")
-import utils
-from utils import SequenceLoader, SequenceSet, ReaGenomeFinder
-import AncestralRecon
-import Faces
+from . import utils
+from .utils import SequenceLoader, SequenceSet, ReaGenomeFinder
+from . import AncestralRecon
+from . import Faces
 
 __all__ = ['utils', 'SequenceLoader', 'SequenceSet', 'CoreFile',
            'ReaGenomeFinder', 'AncestralRecon', 'Faces']

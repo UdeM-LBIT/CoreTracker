@@ -1,4 +1,4 @@
-from template import BasicTemplate
+from .template import BasicTemplate
 from weasyprint import HTML
 import os
 

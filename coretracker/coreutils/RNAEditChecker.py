@@ -16,7 +16,7 @@ class CodonGraph(dict):
         self.create_graph()
 
     def create_graph(self):
-        for codon in codontable.forward_dict.keys():
+        for codon in list(codontable.forward_dict.keys()):
             codtrans = CodonTransition(codon, self.subsrea, self.codontable)
             for trans in codtrans.iter_possible_transition():
                 self.codon_graph[codon].append(trans)
@@ -38,8 +38,8 @@ class CodonTransition(object):
             self.codon) if self.subsrea.is_edited(x)]
         pstates = [0, 1]
         for state in itertools.product([0, 1], repeat=len(expc_trans)):
-            state = map(lambda x: state[x] *
-                        expc_trans[x], range(len(expc_trans)))
+            state = [state[x] *
+                        expc_trans[x] for x in range(len(expc_trans))]
             codon = self.codon[:]
             changed = False
             for pos in state:
@@ -96,7 +96,7 @@ class RNAediting (object):
         self.aalign = self._to_mutable(aalign)
         self.dict_align = SeqIO.to_dict(codonalign)
         self.alen = codonalign.get_aln_length()
-        self.glist = self.dict_align.keys()
+        self.glist = list(self.dict_align.keys())
         self.radius = radius
         self._compute_info_content()
         self.reatype = SubsReaType(reatype[0], reatype[1])

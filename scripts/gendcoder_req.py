@@ -27,7 +27,7 @@ def parse_gdec_out(cntnt, outfile):
     for a in a_list:
         parts += [a.text] + [child.text for child in a.getchildren()] + \
             [a.tail]
-    predicted_aa = "".join([x.strip() for x in filter(None, parts)])
+    predicted_aa = "".join([x.strip() for x in [_f for _f in parts if _f]])
     sup_infos = a_parent.tail.strip().split("\n")
     first = sup_infos[0].split(':')[1].strip()
     second = sup_infos[1].split(':')[1].strip()
@@ -35,9 +35,9 @@ def parse_gdec_out(cntnt, outfile):
     with open(outfile, 'w') as OUT:
         OUT.write("#%s\n" % code)
         OUT.write("#codon\tGenDecoder\tExpected\n")
-        print "File ==> ", outfile
+        print("File ==> ", outfile)
         # print "Predicted len ==> ", len(predicted_aa)
-        print "Predicted ==>", predicted_aa
+        print("Predicted ==>", predicted_aa)
         # print(etree.tostring(a_parent, pretty_print=True))
         for i, letter in enumerate(first):
             codon = letter + second[i] + third[i]
@@ -98,7 +98,7 @@ if __name__ == '__main__':
                     args.outdir, specname + ".txt"))
 
             except AssertionError:
-                print "*** %s : failed job, retry again" % specname
+                print("*** %s : failed job, retry again" % specname)
                 tryagain -= 1
 
             # * (1 if (start%penality) else penality/2.0))

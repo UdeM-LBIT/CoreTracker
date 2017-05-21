@@ -1,22 +1,20 @@
 from abc import ABCMeta, abstractmethod
-import utils
+from . import utils
 from collections import defaultdict, Counter
 import numpy as np
 import operator
-from letterconfig import *
+from .letterconfig import *
 
 
 def init_back_table(dct):
     """Get back table for the current genetic code"""
     back_table = defaultdict(list)
-    for aa, codon in zip(dct.forward_table.values(), dct.forward_table.keys()):
+    for aa, codon in zip(list(dct.forward_table.values()), list(dct.forward_table.keys())):
         back_table[aa].append(codon)
     return back_table
 
 
-class AbsAncest:
-    __metaclass__ = ABCMeta
-
+class AbsAncest(metaclass=ABCMeta):
     def __init__(self, tree, nodestates):
         self.tree = tree
         self.nodestates = nodestates
@@ -55,8 +53,8 @@ class AbsAncest:
         """Flip rea data dict"""
         new_dt = utils.makehash(1, set)
         state_map = defaultdict(set)
-        for (genome, aarea) in nodestates.items():
-            nl = [(c, aa) for aa, codons in aarea.items() for c in codons]
+        for (genome, aarea) in list(nodestates.items()):
+            nl = [(c, aa) for aa, codons in list(aarea.items()) for c in codons]
             for (c, aa) in nl:
                 new_dt[genome][c].add(aa)
                 state_map[c].add(aa)
@@ -149,13 +147,13 @@ class DolloParsimony(AbsAncest):
 
         # sort, whether by total number
         if self.enforce_order:
-            return [(x, is_valid_for_c[x]) for x in char_states if x in is_valid_for_c.keys()]
+            return [(x, is_valid_for_c[x]) for x in char_states if x in list(is_valid_for_c.keys())]
         if self.sort_by_size:
-            possible_order = sorted([(x, np.count_nonzero(y)) for x, y in is_valid_for_c.items(
-            )], key=operator.itemgetter(1), reverse=True)
+            possible_order = sorted([(x, np.count_nonzero(y)) for x, y in list(is_valid_for_c.items(
+            ))], key=operator.itemgetter(1), reverse=True)
         else:
             # here we sort by subtree weight, ignoring excluded subgroup
-            possible_order = sorted([(x, y[-1]) for x, y in is_valid_for_c.items()],
+            possible_order = sorted([(x, y[-1]) for x, y in list(is_valid_for_c.items())],
                                     key=operator.itemgetter(1), reverse=True)
         return possible_order
 
@@ -263,7 +261,7 @@ class SingleNaiveRec(object):
         self.dct = dct
         self.back_table = init_back_table(dct)
         codon_list = self.back_table[aa_letters_3to1[ori_aa]]
-        self.colors = dict(zip(codon_list, colors))
+        self.colors = dict(list(zip(codon_list, colors)))
         for leaf in tree:
             if leaf.name in reassigned:
                 leaf.add_features(reassigned={1})

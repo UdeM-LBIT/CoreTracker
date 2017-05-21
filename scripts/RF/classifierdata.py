@@ -59,7 +59,7 @@ def train_load(Xlab, n, genetic_code):
                 codon = codon.upper().replace('U', 'T')
                 if len(codon) == 3 and codontable.forward_table[codon] != aa.upper():
                     datadict[genome][codon][aa] = 1
-    for i in xrange(n):
+    for i in range(n):
         g, codon, ori, rea = Xlab[i]
         gkey = [x for x in speclist if x.match(g)]
         if gkey:
@@ -126,7 +126,7 @@ def parse_input_file(file, genetic_code):
 
 def test_and_print(Xtest, Ytest, Xlab, clf, seuil=0.5):
     # get result information
-    print("Threshold used : %f" % seuil)
+    print(("Threshold used : %f" % seuil))
     Ypred = clf.predict_proba(Xtest)
     Ypred = (Ypred[:, -1] > seuil).astype(int)
     clf.get_stat(Xtest, Ytest)
@@ -232,7 +232,7 @@ def visualize_plot(xaxis, yaxis, xlab, ylab, title, hline=None):
     if hline:
         plt.axhline(y=hline, ls='--')
     plt.xlabel(xlab)
-    plt.xticks(range(len(xaxis)), [str(a) for a in xaxis])
+    plt.xticks(list(range(len(xaxis))), [str(a) for a in xaxis])
     plt.ylabel(ylab)
     plt.title('Classification with %s' % title)
     plt.savefig('data/images/' + title + '.png')
@@ -267,7 +267,7 @@ def continuous_classification(c, X_train, Y_train, Xlab_train, X_test, Y_test):
 
         cur_x, cur_y = shuffle(tmp_false, tmp_false_lab, random_state=12345)
         c.train(cur_x, cur_y)
-        print("%d, Accuracy = %f" % (i, c.get_score(X_test, Y_test)))
+        print(("%d, Accuracy = %f" % (i, c.get_score(X_test, Y_test))))
         i += 1
 
 
@@ -277,7 +277,7 @@ def oneHotFeatImport(cl, outfile="importance", features_list=[], shift_pos=9):
         importances = cl.clf.feature_importances_
         sum_imp = np.sum(importances[shift_pos:])
         importances = np.hstack((importances[:shift_pos], sum_imp))
-        print(np.sum(importances))
+        print((np.sum(importances)))
         if len(features_list) > 0 and len(features_list) != len(importances):
             raise ValueError("Number of features does not fit!")
 
@@ -290,11 +290,11 @@ def oneHotFeatImport(cl, outfile="importance", features_list=[], shift_pos=9):
              for tree in cl.clf.estimators_], axis=0)
         plt.figure()
         plt.title("Feature importances")
-        plt.bar(range(n_feats), importances[
+        plt.bar(list(range(n_feats)), importances[
                 indices], width=0.5, color="b", yerr=std[indices], align="center")
         if len(features_list) > 0:
             features_list = np.asarray(features_list)[indices]
-            plt.xticks(range(n_feats), features_list, rotation='vertical')
+            plt.xticks(list(range(n_feats)), features_list, rotation='vertical')
         plt.xlim([-1, n_feats])
         plt.margins(0.2)
 
@@ -344,7 +344,7 @@ if __name__ == '__main__':
             yeast_X_train, etiquette, feats=selected_feats)
         yeast_X_train_1hot = onhotencode(yeast_X_train)
         # undersampling(X, meta_Y_train, ratio=10, lab=meta_Xlab_train, xtest=yeast_X_train, ytest=yeast_Y_train, ylab=yeast_Xlab_train, prefix="Ori_")
-        print '\n\n---------------------------using one hot encoding ------------------------ \n\n'
+        print('\n\n---------------------------using one hot encoding ------------------------ \n\n')
         classifier = undersampling(X_1hot, meta_Y_train, ratio=10, lab=meta_Xlab_train,
                                    xtest=yeast_X_train_1hot, ytest=yeast_Y_train, ylab=yeast_Xlab_train, prefix="OneHot_")
         classifier.save_model(MODELPATH % '3')
@@ -353,6 +353,6 @@ if __name__ == '__main__':
                  "Cod. count", "Sub. count", "G. len", "Telford", "N. mixte", "Codon ID"]
     selected_feats = [0, 2, 3, 4, 5, 6, 7, 8, 9, 11]
     et = [etiquette[x] for x in selected_feats]
-    print et
+    print(et)
     clf = Classifier.load_from_file(MODELPATH % '3')
     oneHotFeatImport(clf, outfile="importance", features_list=et, shift_pos=9)

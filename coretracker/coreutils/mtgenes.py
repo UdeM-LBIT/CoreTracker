@@ -37,7 +37,7 @@ mtgenes = {
 
 }
 
-revmtgenes = dict((v, k) for k in mtgenes.keys() for v in mtgenes[k])
+revmtgenes = dict((v, k) for k in list(mtgenes.keys()) for v in mtgenes[k])
 try:
     import os
     curdir = os.path.dirname(os.path.realpath(__file__))
@@ -47,17 +47,17 @@ try:
             key, value = line.strip().split(None, 1)
             correspondances = value.split('|')
             key = key.lower()
-            if key in revmtgenes.keys():
+            if key in list(revmtgenes.keys()):
                 mtgenes[revmtgenes[key]].update(correspondances)
             else:
                 reverse_find = False
                 for c in correspondances:
-                    if c in mtgenes.keys():
+                    if c in list(mtgenes.keys()):
                         reverse_find = True
                         mtgenes[c].add(key)
                 if not reverse_find:
                     mtgenes[key] = set(correspondances)
 except:
-    print "Error parsing mtgenes alias"
+    print("Error parsing mtgenes alias")
     pass
-revmtgenes = dict((v, k) for k in mtgenes.keys() for v in mtgenes[k])
+revmtgenes = dict((v, k) for k in list(mtgenes.keys()) for v in mtgenes[k])

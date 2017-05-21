@@ -23,7 +23,7 @@ class ModelType(object):
     default_sfeat = {'1': mod1, '2': mod2, '3': mod3}
 
     def __init__(self, m, etiquette, sfeat=[], encode=False):
-        if m not in self.default_sfeat.keys():
+        if m not in list(self.default_sfeat.keys()):
             raise ValueError('Selected model do not exist')
         self.model = str(m)
         self.etiquette = etiquette
@@ -31,7 +31,7 @@ class ModelType(object):
             try:
                 self.sfeat = self.default_sfeat[self.model]
             except:
-                self.sfeat = range(len(etiquette))
+                self.sfeat = list(range(len(etiquette)))
         else:
             self.sfeat = sfeat
         self.encode = encode

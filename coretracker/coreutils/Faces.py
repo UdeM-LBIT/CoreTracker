@@ -94,12 +94,12 @@ _ntbgcolors = {
 
 def _get_codon_fgcolors(codontable, cible_aa):
     """Get colon foreground color"""
-    return dict((k, (_aafgcolors[v] if v != cible_aa else '#FFFFFF')) for (k, v) in codontable.items())
+    return dict((k, (_aafgcolors[v] if v != cible_aa else '#FFFFFF')) for (k, v) in list(codontable.items()))
 
 
 def _get_codon_bgcolors(codontable, cible_aa, spec_codon_col):
     """Get colon background color"""
-    return dict((k, spec_codon_col.get(k, ("#FFFFFF" if v != cible_aa else '#000000'))) for (k, v) in codontable.items())
+    return dict((k, spec_codon_col.get(k, ("#FFFFFF" if v != cible_aa else '#000000'))) for (k, v) in list(codontable.items()))
 
 
 class PPieChartFace(faces.StaticItemFace):
@@ -120,7 +120,7 @@ class PPieChartFace(faces.StaticItemFace):
 
         if not is_percent:
             s = sum(percents)
-            percents = map(lambda x: x * 100. / s, percents)
+            percents = [x * 100. / s for x in percents]
 
         if round(sum(percents)) > 100:
             raise ValueError("PPieChartItem: percentage values > 100")
@@ -271,7 +271,7 @@ class SequenceFace(faces.StaticItemFace):
             self.col_w *= 3
             if not isinstance(self.seq, list):
                 # only consider the position where 3 nuc can be obtained
-                self.seq = [self.seq[i:i + 3] for i in xrange(0,
+                self.seq = [self.seq[i:i + 3] for i in range(0,
                                                               len(self.seq) - len(self.seq) % 3, 3)]
             if not fg_colors:
                 fg_colors = _get_codon_fgcolors(codontable, cible_aa)
@@ -421,7 +421,7 @@ class ReaRectFace(faces.StaticItemFace):
 
         def _init_colors(bgtype=True, fgcolor='#000000'):
             color = {}
-            for aa in readict.keys():
+            for aa in list(readict.keys()):
                 c = _aabgcolors[aa.upper()] if bgtype else fgcolor
                 color[aa.upper()] = QBrush(QColor(c))
             return color
@@ -431,7 +431,7 @@ class ReaRectFace(faces.StaticItemFace):
     def update_items(self):
         try:
             max_codons = math.ceil(
-                max([len(x) for x in self.readict.values()]) / 2.0) * 2
+                max([len(x) for x in list(self.readict.values())]) / 2.0) * 2
         except:
             max_codons = 1
         if self.maxcodon:
