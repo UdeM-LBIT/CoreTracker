@@ -139,15 +139,19 @@ def compile_result(x, clf, cod_align, model):
     X_data, X_labels, _ = read_from_json(
         s_complete_data, None, use_global=False)
     # extract usefull features
-    X_data, X_dataprint, selected_et = model.format_data(X_data)
-    pred_prob = clf.predict_proba(X_data)
-    pred = clf.predict(X_data)
-    sppval, outdir, rkp, codvalid = utils.get_report(
-        fitch, data, reafinder, cod_align, (X_data, X_labels, pred_prob, pred))
-    utils.print_data_to_txt(os.path.join(outdir, fitch.ori_aa + "_to_" + fitch.dest_aa + "_data.txt"),
-                            selected_et, X_dataprint, X_labels, pred, pred_prob, sppval, fitch.dest_aa, valid=codvalid)
-    tmp_data = [X_labels, pred, pred_prob, codvalid]
-    return rkp, tmp_data
+    if X_data is not None and X_data.size:
+        X_data, X_dataprint, selected_et = model.format_data(X_data)
+        pred_prob = clf.predict_proba(X_data)
+        pred = clf.predict(X_data)
+        sppval, outdir, rkp, codvalid = utils.get_report(
+            fitch, data, reafinder, cod_align, (X_data, X_labels, pred_prob, pred))
+        utils.print_data_to_txt(os.path.join(outdir, fitch.ori_aa + "_to_" + fitch.dest_aa + "_data.txt"),
+                                selected_et, X_dataprint, X_labels, pred, pred_prob, sppval, fitch.dest_aa, valid=codvalid)
+        tmp_data = [X_labels, pred, pred_prob, codvalid]
+        return rkp, tmp_data
+    else:
+        return None
+
 
 if __name__ == '__main__':
 
@@ -255,6 +259,8 @@ if __name__ == '__main__':
         for x in reafinder.run_analysis(codon_align, fcodon_align):
             results.append(compile_result(x, clf, cod_align, model))
 
+    # remove None results then unzip
+    results = [r for r in results if r is not None]
     results, ALL_PRED = zip(*results)
 
     if args.valid and args.expos and results:

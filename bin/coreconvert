@@ -110,6 +110,8 @@ if __name__ == '__main__':
     options = parser.parse_args()
     if options.outfmt != 'core' and options.outfile:
         parser.error('--outfile can only be set when --outfmt=core')
+    elif not options.outfile:
+        options.outfile = "converted_seq"
 
     seqreader = SeqRep(options.seqs, options.infmt)
     seqreader.export_as(options.outfmt, options.outdir,

@@ -270,7 +270,7 @@ class SequenceLoader:
 
         execute_alignment(msaprog, tmpseq, align_seq)
         msa = AlignIO.read(align_seq, 'fasta', alphabet=alpha)
-        filelist = glob.glob(os.path.join(outdir + "tmp_*"))
+        filelist = glob.glob(os.path.join(outdir, "tmp_*"))
         for f in filelist:
             os.remove(f)
         return msa
@@ -328,6 +328,7 @@ class SequenceLoader:
             '... trying to run hmmbuild and hmmalign ' + str(loop) + " times!")
         quality = []
         outlist = []
+        should_break = False
         for i in xrange(loop):
             outputFile = os.path.join(cur_dir[i], "alignment.sto")
             tmphmmfile = os.path.join(cur_dir[i], "alignment.hmm")
@@ -350,11 +351,12 @@ class SequenceLoader:
                     "File '%s' not found. Either alignment failed, or you are using a wrong hmm version with HMMER" % outputfile)
 
             inputFile = remove_gap_only_columns(outputFile, 'stockholm')
-            prev_out = outlist[-1]
-            outlist.append(inputFile)
-            if i > 0 and improve_is_stagned(prev_out, inputFile, len(outlist) * 1.0 / loop):
+            if i > 0 and improve_is_stagned(outlist[-1], inputFile, len(outlist) * 1.0 / loop):
+                should_break = True
                 logging.debug(
                     "Stopping hmm loop : no alignment improvement after %d/%d iteration" % (len(outlist), loop))
+            outlist.append(inputFile)
+            if should_break:
                 break
 
             # next input for hmm is current output
@@ -1756,7 +1758,7 @@ def compute_ic_content(alignment):
         ic_vector = np.zeros(len(align_info.ic_vector))
         for (ic_i, ic_v) in align_info.ic_vector.items():
             ic_vector[ic_i] = ic_v
-    return ic_vector.tolist()
+    return list(ic_vector)
 
 
 def check_gain(codon, cible_aa, speclist, tree, codontable, codon_alignment,
