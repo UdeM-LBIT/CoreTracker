@@ -36,6 +36,7 @@ from Bio.Seq import Seq
 from Bio.SeqRecord import SeqRecord, _RestrictedDict
 from ete3 import Tree
 from scipy.cluster.vq import kmeans2
+from sklearn.externals import joblib
 
 from AncestralRecon import SingleNaiveRec, init_back_table
 from corefile import CoreFile
@@ -70,6 +71,81 @@ hmmidpattern = re.compile("^\d+\|\w+")
 eps = np.finfo(np.float).eps
 
 alpha = Alphabet.Gapped(IUPAC.protein)
+
+class RefData:
+    def __init__(self, nucfile, protfile, gcode=1, gcodemap={}):
+        self.prot = protfile
+        self.nuc = nucfile
+        self.gcode = gcode
+        self.gcodemap = gcodemap
+
+    def align_new_seq(newseq):pass
+
+
+
+    @classmethod
+    def load_from_file(clc, loadfile):
+        """Load model from a file"""
+        try:
+            clf = joblib.load(loadfile)
+            return clf
+        except IOError:
+            print('Problem with file %s, can not open it' % loadfile)
+        except Exception as e:
+            raise e
+        return None
+
+    def save_model(self, outfile):
+        """Save model to a file"""
+        joblib.dump(self, outfile)
+
+
+class ConsensusKeeper:
+    def __init__(self, alignment, threshold, ambiguous='X', alphabet=generic_protein):
+        self.alignment = alignment
+        self.threshold  = threshold
+        self.ambiguous = ambiguous
+        self.allen = alignment.get_alignment_length()
+        self.number_seq = len(alignment)
+        self.aligninfo = AlignInfo.SummaryInfo(alignment)
+        self.consensus = aligninfo.gap_consensus(
+            threshold=threshold, ambiguous=ambiguous, consensus_alpha=alphabet)
+        self.pssm = self.aligninfo.pos_specific_score_matrix(self.consensus)
+
+    def get_cons(self):
+        return self.consensus
+
+    def get_pssm(self):
+        return self.pssm
+
+    def get_alt_cons(self):
+        rep_per_pos = ddict(list)
+        for k in range(self.allen):
+            added = False
+            for aa, aacount in self.pssm[k].items():
+                if (aacount / self.number_seq)>= self.threshold:
+                    rep_per_pos[k].append((aa, aacount/self.number_seq))
+                    added=True
+            if not added:
+                rep_per_pos[k] = ambiguous
+        return rep_per_pos
+
+    def get_maj_aa_pos(self, aa):
+        rep_per_pos = self.get_alt_cons()
+        filt_pos = []
+        for pos in range(self.allen):
+            aalist = rep_per_pos[pos]
+            aalist =  sorted(aalist, key=lambda x:x[1])
+            best_aa, score = aalist.pop()
+            best_aalist = []
+            aascore = score
+            while(aascore == score):
+                best_aalist.append(best_aa)
+                best_aa, aascore = aalist.pop()
+            if aa in best_aalist:
+                filt_pos.append(pos)
+        return filt_pos 
+
 
 
 class SequenceLoader:
@@ -435,7 +511,7 @@ class SequenceLoader:
                 "Stop codon no uniformely placed in your alignment. Expect them to be places at the same position in all sequences")
 
     @classmethod
-    def translate(clc, core_inst, gcode=1):
+    def translate(clc, core_inst, gcode=1, codemap={}):
         """Translate nucleotide sequences into protein sequence given a genetic code"""
         codontable = CodonTable.unambiguous_dna_by_id[1]
         try:
@@ -451,11 +527,18 @@ class SequenceLoader:
         for gene, seqs in core_inst.items():
             translated = []
             for s in seqs:
+                seq_code = codontable
+                try:
+                    has_code = codemap.get(s.id, None)
+                    if has_code:
+                        seq_code = CodonTable.unambiguous_dna_by_id[abs(has_code)]
+                except KeyError:
+                    pass
                 if len(s) % 3 != 0:
                     raise ValueError(
                         "Frame-shifting detected in %s : [%s], current version does not supported it." % (s.id, gene))
                 else:
-                    aa_list = [codontable.forward_table.get(
+                    aa_list = [seq_code.forward_table.get(
                         s.seq[i:i + 3].upper(), stop_checker(s.seq[i:i + 3])) for i in xrange(0, len(s), 3)]
                     trans_s = Seq("".join(aa_list), generic_protein)
                     translated.append(SeqRecord(trans_s, id=s.id, name=s.name))
@@ -524,7 +607,7 @@ class CodonReaData(object):
         self.alignment = alignment
         if not isinstance(self.codon_alignment, dict):
             self.codon_alignment = SeqIO.to_dict(self.codon_alignment)
-        self.consensus = consensus
+        self.consensus = consensus.get_alt_cons()
         # self.rea_codons = defaultdict(partial(defaultdict, Counter))
         self.reacodons = makehash(1, Counter)
         self.usedcodons = makehash(1, Counter)
@@ -546,12 +629,20 @@ class CodonReaData(object):
 
     def _spec_codon_usage(self):
         """Check codon usage in each species"""
-        for i, aa in enumerate(self.consensus):
+        for i, aa in self.consensus.items():
             for spec in self.codon_alignment.keys():
                 spec_codon = self.codon_alignment[spec].seq.get_codon(i)
                 spec_aa = self.dct.forward_table.get(spec_codon, None)
                 cur_pos = self.positions[i]
+                if isinstance(aa, list):
+                    aa = sorted(aa, key=lambda x: x[-1])#.pop()
+                    aa_b, aa_s = aa.pop()
+                    aa = "".join([aa_b] + [x[0] for x in aa if x[1]==aa_s])
                 if(spec_aa):
+                    if spec_aa in aa:
+                        aa = spec_aa
+                    else:
+                        aa = aa[0]
                     self.specs_amino_count[spec][spec_aa].update([spec_codon])
                     aa_set_list = aa
                     if not self.cons_for_lik:
@@ -780,7 +871,7 @@ class SequenceSet(object):
         nuc_seq = dnarec.seq.ungap(gap_char)
         codon_seq = ""
         aa_num = 0
-        max_error = 1000
+        max_error = 100
         x_undecoded = []
         undef = {"R", "Y", "S", "W", "K", "M", "B", "D", "H", "V", "N"}
         for aa in protrec.seq:
@@ -948,7 +1039,7 @@ class SequenceSet(object):
         return clc.filter_align_position(alignment, indel_array), indel_array
 
     @classmethod
-    def filter_alignment(clc, alignment, threshold=0.8, remove_identity=False, ambiguous='X', alphabet=generic_protein):
+    def filter_alignment(clc, alignment, threshold=0.5, remove_identity=False, ambiguous='X', alphabet=generic_protein):
         """Filter an alignment using threshold as the minimum aa identity per columns"""
         aligninfo = AlignInfo.SummaryInfo(alignment)
         # Smart move : Make a consensus sequence with threshold
@@ -1004,17 +1095,15 @@ class SequenceSet(object):
     @classmethod
     def get_consensus(clc, alignment, threshold, ambiguous='X', alphabet=generic_protein):
         """return consensus, using a defined threshold"""
-        aligninfo = AlignInfo.SummaryInfo(alignment)
-        consensus = aligninfo.gap_consensus(
-            threshold=threshold, ambiguous=ambiguous, consensus_alpha=alphabet)
-        return consensus
+        return ConsensusKeeper(alignment, threshold, ambiguous='X', alphabet=generic_protein)
 
     @classmethod
     def get_aa_filtered_alignment(clc, consensus, aa):
         """Get the filtered alignment for an amino acid"""
         aa = aa.upper()
-        cons_array = [i for i, c in enumerate(consensus) if c.upper() == aa]
-        return cons_array
+        #cons_array = [i for i, c in enumerate(consensus) if c.upper() == aa]
+        #return cons_array
+        return consensus.get_maj_aa_pos(aa)
 
     def get_total_genomes(self):
         """Return the total number of genomes. This should be genome present in dna, prot and tree """
@@ -1087,8 +1176,6 @@ class ReaGenomeFinder:
         self.global_consensus = self.seqset.get_consensus(
             self.seqset.prot_align, self.settings.AA_MAJORITY_THRESH)
 
-        logging.debug("Filtered alignment consensus : \n%s\n" %
-                      self.filtered_consensus)
         number_seq = self.seqset.get_total_genomes()
         self.seq_names = list(self.seqset.common_genome)
         self.sim_json = defaultdict(list)
@@ -1242,15 +1329,17 @@ class ReaGenomeFinder:
         self.reassignment_mapper['genome'][
             'filtered'] = self.seqset.get_genome_size("filtered")
 
-    def possible_aa_reassignation(self):
+    def possible_aa_reassignation(self, speclist=None):
         """Find to which amino acid the reassignation are probable"""
         # TODO :  CHANGE THIS FUNCTION TO A MORE REALISTIC ONE
         aa_count_spec = self.get_aa_count_in_alignment()
-        aa_count_cons = Counter(self.filtered_consensus)
+        aa_count_cons = Counter(self.filtered_consensus.consensus)
+        if not speclist:
+            speclist = self.seqset.common_genome
         for aa, suspect in self.suspected_species.items():
             aa_alignment = self.seqset.aa_filt_prot_align[aa_letters_1to3[aa]]
             suspected_list = sorted(suspect.keys())
-            for spec in self.seqset.common_genome:
+            for spec in speclist:
                 spec_aa_counter = Counter(aa_alignment[spec])
                 for (cur_aa, aacounter) in spec_aa_counter.most_common():
                     aa_c1 = aa_count_spec[spec][aa] + aa_count_cons[aa]
@@ -1412,8 +1501,12 @@ class ReaGenomeFinder:
                     leaf.add_features(count=0)
                     leaf.add_features(filter_count=filt_count)
                     leaf.add_features(lost=True)
-                    for pos in xrange(len(self.global_consensus)):
-                        if self.global_consensus[pos] == aa1 and rec[pos] == aa2:
+                    g_rep_keeper = self.global_consensus.get_alt_cons()
+                    for pos in xrange(self.global_consensus.allen):
+                        pos_best_aa = sorted(g_rep_keeper[pos], key=lambda x: x[-1])#.pop()
+                        aa_b, aa_s = pos_best_aa.pop()
+                        pos_best_aa = [aa_b] + [x[0] for x in pos_best_aa if x[1]==aa_s]
+                        if aa1 in pos_best_aa and rec[pos] == aa2:
                             leaf.count += 1
 
                     # filtered codon infos
@@ -2470,3 +2563,13 @@ def makehash(depth=None, type=None):
         return defaultdict(type)
     else:
         return defaultdict(partial(makehash, depth - 1, type))
+
+def parse_spec_to_code(filename):
+    spec_to_code = {}
+    with open(filename) as GIN:
+        for line in GIN:
+            line = line.strip()
+            if not line.startswith('#'):
+                spec, code = line.split()
+                spec_to_code[spec] = int(code)
+    return spec_to_code
