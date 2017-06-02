@@ -1,0 +1,12 @@
+#Reference Genetic Code : 1 (Standard)
+#Exception: 
+CTG (L, A)
+	pacta 	0.951	Both
+CTG (L, S)
+	candub	0.953	Both
+	canta 	0.953	Both
+	meygui	0.956	Both
+	clalu 	0.986	Both
+	canalb	0.954	Both
+	debha 	0.954	Both
+	cantro	0.953	Both

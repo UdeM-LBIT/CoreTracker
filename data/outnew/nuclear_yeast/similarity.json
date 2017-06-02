@@ -1,0 +1,1311 @@
+{
+    "zygro": [
+        {
+            "filtered": 0.7393772299708077, 
+            "global": 0.4671802960446494, 
+            "species": "candub"
+        }
+    ], 
+    "ogapa": [
+        {
+            "filtered": 0.7487836522867337, 
+            "global": 0.5087357437515166, 
+            "species": "candub"
+        }, 
+        {
+            "filtered": 0.7215374635095686, 
+            "global": 0.5118903178840087, 
+            "species": "zygro"
+        }
+    ], 
+    "canta": [
+        {
+            "filtered": 0.8297113201427181, 
+            "global": 0.5889347245814123, 
+            "species": "candub"
+        }, 
+        {
+            "filtered": 0.7075900097307817, 
+            "global": 0.46299441883038095, 
+            "species": "zygro"
+        }, 
+        {
+            "filtered": 0.723807979240999, 
+            "global": 0.5077651055569037, 
+            "species": "ogapa"
+        }
+    ], 
+    "cybja": [
+        {
+            "filtered": 0.7187804086928317, 
+            "global": 0.48277117204562003, 
+            "species": "candub"
+        }, 
+        {
+            "filtered": 0.6999675640609796, 
+            "global": 0.4900509585052172, 
+            "species": "zygro"
+        }, 
+        {
+            "filtered": 0.7053194939993512, 
+            "global": 0.5237199708808542, 
+            "species": "ogapa"
+        }, 
+        {
+            "filtered": 0.7513785274083685, 
+            "global": 0.5683086629458869, 
+            "species": "canta"
+        }
+    ], 
+    "meygui": [
+        {
+            "filtered": 0.727538112228349, 
+            "global": 0.545013346275176, 
+            "species": "candub"
+        }, 
+        {
+            "filtered": 0.6323386312033733, 
+            "global": 0.4434603251637952, 
+            "species": "zygro"
+        }, 
+        {
+            "filtered": 0.6427181316899124, 
+            "global": 0.48386314001455966, 
+            "species": "ogapa"
+        }, 
+        {
+            "filtered": 0.703211157963023, 
+            "global": 0.5288764862897355, 
+            "species": "canta"
+        }, 
+        {
+            "filtered": 0.6331495296788842, 
+            "global": 0.46244843484591125, 
+            "species": "cybja"
+        }
+    ], 
+    "clalu": [
+        {
+            "filtered": 0.7615958481998054, 
+            "global": 0.5478039310846882, 
+            "species": "candub"
+        }, 
+        {
+            "filtered": 0.6633149529678884, 
+            "global": 0.44619024508614413, 
+            "species": "zygro"
+        }, 
+        {
+            "filtered": 0.6702886798572819, 
+            "global": 0.48216452317398684, 
+            "species": "ogapa"
+        }, 
+        {
+            "filtered": 0.7361336360687641, 
+            "global": 0.545619995146809, 
+            "species": "canta"
+        }, 
+        {
+            "filtered": 0.6445021083360364, 
+            "global": 0.4549259888376608, 
+            "species": "cybja"
+        }, 
+        {
+            "filtered": 0.7184560493026273, 
+            "global": 0.5409487988352342, 
+            "species": "meygui"
+        }
+    ], 
+    "pacta": [
+        {
+            "filtered": 0.7244566980214078, 
+            "global": 0.48962630429507403, 
+            "species": "candub"
+        }, 
+        {
+            "filtered": 0.6886149854038275, 
+            "global": 0.48076923076923084, 
+            "species": "zygro"
+        }, 
+        {
+            "filtered": 0.719104768083036, 
+            "global": 0.5417981072555205, 
+            "species": "ogapa"
+        }, 
+        {
+            "filtered": 0.7220240025948751, 
+            "global": 0.53445765590876, 
+            "species": "canta"
+        }, 
+        {
+            "filtered": 0.7062925721699643, 
+            "global": 0.5441640378548895, 
+            "species": "cybja"
+        }, 
+        {
+            "filtered": 0.6106065520596822, 
+            "global": 0.4517714147051686, 
+            "species": "meygui"
+        }, 
+        {
+            "filtered": 0.6409341550437885, 
+            "global": 0.45729191943702985, 
+            "species": "clalu"
+        }
+    ], 
+    "klula": [
+        {
+            "filtered": 0.7416477457022381, 
+            "global": 0.4771293375394321, 
+            "species": "candub"
+        }, 
+        {
+            "filtered": 0.7953292247810574, 
+            "global": 0.5971851492356224, 
+            "species": "zygro"
+        }, 
+        {
+            "filtered": 0.7152124554005839, 
+            "global": 0.5149842271293376, 
+            "species": "ogapa"
+        }, 
+        {
+            "filtered": 0.7090496269867013, 
+            "global": 0.471790827469061, 
+            "species": "canta"
+        }, 
+        {
+            "filtered": 0.7043464158287382, 
+            "global": 0.502729919922349, 
+            "species": "cybja"
+        }, 
+        {
+            "filtered": 0.6326629905935777, 
+            "global": 0.451650084930842, 
+            "species": "meygui"
+        }, 
+        {
+            "filtered": 0.6625040544923776, 
+            "global": 0.45498665372482405, 
+            "species": "clalu"
+        }, 
+        {
+            "filtered": 0.6879662666234188, 
+            "global": 0.4912035913613201, 
+            "species": "pacta"
+        }
+    ], 
+    "canalb": [
+        {
+            "filtered": 0.9834576710995784, 
+            "global": 0.9161004610531425, 
+            "species": "candub"
+        }, 
+        {
+            "filtered": 0.7390528705806033, 
+            "global": 0.4685755884494055, 
+            "species": "zygro"
+        }, 
+        {
+            "filtered": 0.7478105741161206, 
+            "global": 0.5096457170589662, 
+            "species": "ogapa"
+        }, 
+        {
+            "filtered": 0.8301978592280247, 
+            "global": 0.5915433147294346, 
+            "species": "canta"
+        }, 
+        {
+            "filtered": 0.7194291274732404, 
+            "global": 0.4834384858044164, 
+            "species": "cybja"
+        }, 
+        {
+            "filtered": 0.7278624716185533, 
+            "global": 0.5468939577772385, 
+            "species": "meygui"
+        }, 
+        {
+            "filtered": 0.7609471294193967, 
+            "global": 0.5498058723610774, 
+            "species": "clalu"
+        }, 
+        {
+            "filtered": 0.7241323386312034, 
+            "global": 0.4922348944430963, 
+            "species": "pacta"
+        }, 
+        {
+            "filtered": 0.7422964644826467, 
+            "global": 0.4794952681388013, 
+            "species": "klula"
+        }
+    ], 
+    "cangla": [
+        {
+            "filtered": 0.6921829386960753, 
+            "global": 0.4514074253821888, 
+            "species": "candub"
+        }, 
+        {
+            "filtered": 0.761271488809601, 
+            "global": 0.5796529968454258, 
+            "species": "zygro"
+        }, 
+        {
+            "filtered": 0.670450859552384, 
+            "global": 0.490596942489687, 
+            "species": "ogapa"
+        }, 
+        {
+            "filtered": 0.6590982808952319, 
+            "global": 0.44983013831594265, 
+            "species": "canta"
+        }, 
+        {
+            "filtered": 0.653584171261758, 
+            "global": 0.4739140985197767, 
+            "species": "cybja"
+        }, 
+        {
+            "filtered": 0.5966590982808953, 
+            "global": 0.4288400873574375, 
+            "species": "meygui"
+        }, 
+        {
+            "filtered": 0.618877716509893, 
+            "global": 0.43187333171560294, 
+            "species": "clalu"
+        }, 
+        {
+            "filtered": 0.6445021083360364, 
+            "global": 0.46238776995874786, 
+            "species": "pacta"
+        }, 
+        {
+            "filtered": 0.7367823548491729, 
+            "global": 0.5609682115991265, 
+            "species": "klula"
+        }, 
+        {
+            "filtered": 0.6915342199156665, 
+            "global": 0.45183207959233196, 
+            "species": "canalb"
+        }
+    ], 
+    "torde": [
+        {
+            "filtered": 0.7444048005189751, 
+            "global": 0.4703348701771415, 
+            "species": "candub"
+        }, 
+        {
+            "filtered": 0.8640934155043789, 
+            "global": 0.6801140499878671, 
+            "species": "zygro"
+        }, 
+        {
+            "filtered": 0.7231592604605903, 
+            "global": 0.5146202378063577, 
+            "species": "ogapa"
+        }, 
+        {
+            "filtered": 0.7145637366201751, 
+            "global": 0.47185149235622426, 
+            "species": "canta"
+        }, 
+        {
+            "filtered": 0.7014271813168991, 
+            "global": 0.49696675564183446, 
+            "species": "cybja"
+        }, 
+        {
+            "filtered": 0.639474537787869, 
+            "global": 0.44898082989565635, 
+            "species": "meygui"
+        }, 
+        {
+            "filtered": 0.6689912422964645, 
+            "global": 0.4508007765105557, 
+            "species": "clalu"
+        }, 
+        {
+            "filtered": 0.693804735647097, 
+            "global": 0.4868357194855617, 
+            "species": "pacta"
+        }, 
+        {
+            "filtered": 0.7969510217320791, 
+            "global": 0.6041009463722398, 
+            "species": "klula"
+        }, 
+        {
+            "filtered": 0.7445669802140772, 
+            "global": 0.4722761465663674, 
+            "species": "canalb"
+        }, 
+        {
+            "filtered": 0.7680830360038923, 
+            "global": 0.5865081290948799, 
+            "species": "cangla"
+        }
+    ], 
+    "erecy": [
+        {
+            "filtered": 0.6052546221213104, 
+            "global": 0.4033608347488473, 
+            "species": "candub"
+        }, 
+        {
+            "filtered": 0.6691534219915667, 
+            "global": 0.5296651298228585, 
+            "species": "zygro"
+        }, 
+        {
+            "filtered": 0.5883879338306844, 
+            "global": 0.4501941276389225, 
+            "species": "ogapa"
+        }, 
+        {
+            "filtered": 0.5742783003567953, 
+            "global": 0.4066367386556661, 
+            "species": "canta"
+        }, 
+        {
+            "filtered": 0.5681154719429128, 
+            "global": 0.42726280029119146, 
+            "species": "cybja"
+        }, 
+        {
+            "filtered": 0.5131365553032761, 
+            "global": 0.38467604950254786, 
+            "species": "meygui"
+        }, 
+        {
+            "filtered": 0.537463509568602, 
+            "global": 0.3867993205532638, 
+            "species": "clalu"
+        }, 
+        {
+            "filtered": 0.5587090496269868, 
+            "global": 0.41980101917010426, 
+            "species": "pacta"
+        }, 
+        {
+            "filtered": 0.6741809925397341, 
+            "global": 0.5396141713176413, 
+            "species": "klula"
+        }, 
+        {
+            "filtered": 0.6062277002919234, 
+            "global": 0.40554477068672656, 
+            "species": "canalb"
+        }, 
+        {
+            "filtered": 0.661044437236458, 
+            "global": 0.5205047318611987, 
+            "species": "cangla"
+        }, 
+        {
+            "filtered": 0.6788842036976971, 
+            "global": 0.5373695704925989, 
+            "species": "torde"
+        }
+    ], 
+    "yarli": [
+        {
+            "filtered": 0.6916963996107688, 
+            "global": 0.4576559087600097, 
+            "species": "candub"
+        }, 
+        {
+            "filtered": 0.6782354849172884, 
+            "global": 0.4714875030332444, 
+            "species": "zygro"
+        }, 
+        {
+            "filtered": 0.6847226727213753, 
+            "global": 0.5019412763892259, 
+            "species": "ogapa"
+        }, 
+        {
+            "filtered": 0.6762893285760623, 
+            "global": 0.46390439213783063, 
+            "species": "canta"
+        }, 
+        {
+            "filtered": 0.6615309763217645, 
+            "global": 0.47785731618539184, 
+            "species": "cybja"
+        }, 
+        {
+            "filtered": 0.6021732079143691, 
+            "global": 0.4400024265954865, 
+            "species": "meygui"
+        }, 
+        {
+            "filtered": 0.6391501783976646, 
+            "global": 0.4428536762921621, 
+            "species": "clalu"
+        }, 
+        {
+            "filtered": 0.6537463509568602, 
+            "global": 0.47100218393593796, 
+            "species": "pacta"
+        }, 
+        {
+            "filtered": 0.6727213752838145, 
+            "global": 0.47270080077651055, 
+            "species": "klula"
+        }, 
+        {
+            "filtered": 0.690074602659747, 
+            "global": 0.4583232225188061, 
+            "species": "canalb"
+        }, 
+        {
+            "filtered": 0.6389879987025624, 
+            "global": 0.45328803688425134, 
+            "species": "cangla"
+        }, 
+        {
+            "filtered": 0.6766136879662666, 
+            "global": 0.4762800291191458, 
+            "species": "torde"
+        }, 
+        {
+            "filtered": 0.5538436587739215, 
+            "global": 0.4211356466876972, 
+            "species": "erecy"
+        }
+    ], 
+    "picpa": [
+        {
+            "filtered": 0.7054816736944535, 
+            "global": 0.486289735501092, 
+            "species": "candub"
+        }, 
+        {
+            "filtered": 0.6834252351605579, 
+            "global": 0.48562242174229553, 
+            "species": "zygro"
+        }, 
+        {
+            "filtered": 0.724781057411612, 
+            "global": 0.5532031060422228, 
+            "species": "ogapa"
+        }, 
+        {
+            "filtered": 0.6856957508919883, 
+            "global": 0.48362048046590633, 
+            "species": "canta"
+        }, 
+        {
+            "filtered": 0.6605578981511515, 
+            "global": 0.49126425624848336, 
+            "species": "cybja"
+        }, 
+        {
+            "filtered": 0.6211482322413234, 
+            "global": 0.4708201892744479, 
+            "species": "meygui"
+        }, 
+        {
+            "filtered": 0.6419072332144016, 
+            "global": 0.47106284882310123, 
+            "species": "clalu"
+        }, 
+        {
+            "filtered": 0.6743431722348362, 
+            "global": 0.5066124727008008, 
+            "species": "pacta"
+        }, 
+        {
+            "filtered": 0.6806681803438209, 
+            "global": 0.4922955593302596, 
+            "species": "klula"
+        }, 
+        {
+            "filtered": 0.7041842361336361, 
+            "global": 0.4890803203106042, 
+            "species": "canalb"
+        }, 
+        {
+            "filtered": 0.6490431397988972, 
+            "global": 0.47239747634069396, 
+            "species": "cangla"
+        }, 
+        {
+            "filtered": 0.6881284463185209, 
+            "global": 0.49350885707352576, 
+            "species": "torde"
+        }, 
+        {
+            "filtered": 0.5591955887122932, 
+            "global": 0.4235015772870663, 
+            "species": "erecy"
+        }, 
+        {
+            "filtered": 0.6524489133960428, 
+            "global": 0.47561271536034944, 
+            "species": "yarli"
+        }
+    ], 
+    "sacce": [
+        {
+            "filtered": 0.7458644177748945, 
+            "global": 0.4703348701771415, 
+            "species": "candub"
+        }, 
+        {
+            "filtered": 0.8316574764839442, 
+            "global": 0.6288522203348702, 
+            "species": "zygro"
+        }, 
+        {
+            "filtered": 0.7226727213752838, 
+            "global": 0.5107376850279058, 
+            "species": "ogapa"
+        }, 
+        {
+            "filtered": 0.7161855335711969, 
+            "global": 0.4677869449162825, 
+            "species": "canta"
+        }, 
+        {
+            "filtered": 0.7071034706454752, 
+            "global": 0.4959354525600582, 
+            "species": "cybja"
+        }, 
+        {
+            "filtered": 0.6388258190074603, 
+            "global": 0.44831351613686, 
+            "species": "meygui"
+        }, 
+        {
+            "filtered": 0.6689912422964645, 
+            "global": 0.44728221305508375, 
+            "species": "clalu"
+        }, 
+        {
+            "filtered": 0.693804735647097, 
+            "global": 0.48016258189759764, 
+            "species": "pacta"
+        }, 
+        {
+            "filtered": 0.7932208887447292, 
+            "global": 0.5889953894685755, 
+            "species": "klula"
+        }, 
+        {
+            "filtered": 0.745377878689588, 
+            "global": 0.4708808541616112, 
+            "species": "canalb"
+        }, 
+        {
+            "filtered": 0.7770029192345118, 
+            "global": 0.5915433147294346, 
+            "species": "cangla"
+        }, 
+        {
+            "filtered": 0.8373337658125203, 
+            "global": 0.6385586022809998, 
+            "species": "torde"
+        }, 
+        {
+            "filtered": 0.6710995783327928, 
+            "global": 0.5181388012618297, 
+            "species": "erecy"
+        }, 
+        {
+            "filtered": 0.6777489458319819, 
+            "global": 0.4634190730405241, 
+            "species": "yarli"
+        }, 
+        {
+            "filtered": 0.68731754784301, 
+            "global": 0.4834991506915798, 
+            "species": "picpa"
+        }
+    ], 
+    "ashgo": [
+        {
+            "filtered": 0.759325332468375, 
+            "global": 0.4802232467847609, 
+            "species": "candub"
+        }, 
+        {
+            "filtered": 0.8206292572169964, 
+            "global": 0.6138073283183694, 
+            "species": "zygro"
+        }, 
+        {
+            "filtered": 0.7367823548491729, 
+            "global": 0.5211720456199952, 
+            "species": "ogapa"
+        }, 
+        {
+            "filtered": 0.7319169639961077, 
+            "global": 0.4831958262557632, 
+            "species": "canta"
+        }, 
+        {
+            "filtered": 0.7186182289977295, 
+            "global": 0.5096457170589662, 
+            "species": "cybja"
+        }, 
+        {
+            "filtered": 0.6479078819331819, 
+            "global": 0.45322737199708807, 
+            "species": "meygui"
+        }, 
+        {
+            "filtered": 0.6834252351605579, 
+            "global": 0.4620844455229314, 
+            "species": "clalu"
+        }, 
+        {
+            "filtered": 0.7100227051573142, 
+            "global": 0.5014559572919194, 
+            "species": "pacta"
+        }, 
+        {
+            "filtered": 0.8201427181316899, 
+            "global": 0.6246663431206018, 
+            "species": "klula"
+        }, 
+        {
+            "filtered": 0.759325332468375, 
+            "global": 0.48186119873817035, 
+            "species": "canalb"
+        }, 
+        {
+            "filtered": 0.7539734025300032, 
+            "global": 0.5598155787430236, 
+            "species": "cangla"
+        }, 
+        {
+            "filtered": 0.8222510541680181, 
+            "global": 0.6116233923804901, 
+            "species": "torde"
+        }, 
+        {
+            "filtered": 0.7189425883879338, 
+            "global": 0.5894200436787188, 
+            "species": "erecy"
+        }, 
+        {
+            "filtered": 0.6916963996107688, 
+            "global": 0.48095122543072066, 
+            "species": "yarli"
+        }, 
+        {
+            "filtered": 0.6918585793058709, 
+            "global": 0.4912035913613201, 
+            "species": "picpa"
+        }, 
+        {
+            "filtered": 0.8160882257541355, 
+            "global": 0.599854404270808, 
+            "species": "sacce"
+        }
+    ], 
+    "debha": [
+        {
+            "filtered": 0.8636068764190723, 
+            "global": 0.6343120601795681, 
+            "species": "candub"
+        }, 
+        {
+            "filtered": 0.7437560817385663, 
+            "global": 0.48641106527541855, 
+            "species": "zygro"
+        }, 
+        {
+            "filtered": 0.7531625040544924, 
+            "global": 0.5283305023052657, 
+            "species": "ogapa"
+        }, 
+        {
+            "filtered": 0.8413882581900746, 
+            "global": 0.6360713419073041, 
+            "species": "canta"
+        }, 
+        {
+            "filtered": 0.7225105416801817, 
+            "global": 0.5028512496966756, 
+            "species": "cybja"
+        }, 
+        {
+            "filtered": 0.738728511190399, 
+            "global": 0.5819582625576316, 
+            "species": "meygui"
+        }, 
+        {
+            "filtered": 0.7784625364904314, 
+            "global": 0.5913613200679447, 
+            "species": "clalu"
+        }, 
+        {
+            "filtered": 0.732241323386312, 
+            "global": 0.5157728706624606, 
+            "species": "pacta"
+        }, 
+        {
+            "filtered": 0.7431073629581576, 
+            "global": 0.494904149478282, 
+            "species": "klula"
+        }, 
+        {
+            "filtered": 0.8634446967239702, 
+            "global": 0.6358286823586509, 
+            "species": "canalb"
+        }, 
+        {
+            "filtered": 0.6934803762568926, 
+            "global": 0.46554234409124007, 
+            "species": "cangla"
+        }, 
+        {
+            "filtered": 0.7469996756406098, 
+            "global": 0.4902329531667071, 
+            "species": "torde"
+        }, 
+        {
+            "filtered": 0.6102821926694778, 
+            "global": 0.4228949284154331, 
+            "species": "erecy"
+        }, 
+        {
+            "filtered": 0.7004541031462861, 
+            "global": 0.4788886192671682, 
+            "species": "yarli"
+        }, 
+        {
+            "filtered": 0.70596821277976, 
+            "global": 0.5043678718757583, 
+            "species": "picpa"
+        }, 
+        {
+            "filtered": 0.7494323710671424, 
+            "global": 0.4887769958747876, 
+            "species": "sacce"
+        }, 
+        {
+            "filtered": 0.7643529030165424, 
+            "global": 0.5004853190973064, 
+            "species": "ashgo"
+        }
+    ], 
+    "kazaf": [
+        {
+            "filtered": 0.7371067142393772, 
+            "global": 0.4700315457413249, 
+            "species": "candub"
+        }, 
+        {
+            "filtered": 0.8159260460590334, 
+            "global": 0.6276995874787673, 
+            "species": "zygro"
+        }, 
+        {
+            "filtered": 0.7122932208887447, 
+            "global": 0.5072191215724339, 
+            "species": "ogapa"
+        }, 
+        {
+            "filtered": 0.7009406422315926, 
+            "global": 0.46493569521960687, 
+            "species": "canta"
+        }, 
+        {
+            "filtered": 0.7017515407071034, 
+            "global": 0.49532880368842513, 
+            "species": "cybja"
+        }, 
+        {
+            "filtered": 0.6315277327278624, 
+            "global": 0.4471002183935937, 
+            "species": "meygui"
+        }, 
+        {
+            "filtered": 0.656341226078495, 
+            "global": 0.44418830380975494, 
+            "species": "clalu"
+        }, 
+        {
+            "filtered": 0.6822899772948426, 
+            "global": 0.4770686726522688, 
+            "species": "pacta"
+        }, 
+        {
+            "filtered": 0.7877067791112553, 
+            "global": 0.5913613200679447, 
+            "species": "klula"
+        }, 
+        {
+            "filtered": 0.7353227375932533, 
+            "global": 0.47100218393593796, 
+            "species": "canalb"
+        }, 
+        {
+            "filtered": 0.7651638014920532, 
+            "global": 0.5846275175928173, 
+            "species": "cangla"
+        }, 
+        {
+            "filtered": 0.8219266947778138, 
+            "global": 0.6290342149963601, 
+            "species": "torde"
+        }, 
+        {
+            "filtered": 0.6670450859552384, 
+            "global": 0.5245086144139772, 
+            "species": "erecy"
+        }, 
+        {
+            "filtered": 0.6680181641258515, 
+            "global": 0.46614899296287304, 
+            "species": "yarli"
+        }, 
+        {
+            "filtered": 0.6748297113201427, 
+            "global": 0.4840451346760495, 
+            "species": "picpa"
+        }, 
+        {
+            "filtered": 0.8293869607525138, 
+            "global": 0.6343120601795681, 
+            "species": "sacce"
+        }, 
+        {
+            "filtered": 0.8092766785598443, 
+            "global": 0.6012496966755642, 
+            "species": "ashgo"
+        }, 
+        {
+            "filtered": 0.7372688939344794, 
+            "global": 0.4845911186605193, 
+            "species": "debha"
+        }
+    ], 
+    "wican": [
+        {
+            "filtered": 0.6547194291274733, 
+            "global": 0.46360106770201415, 
+            "species": "candub"
+        }, 
+        {
+            "filtered": 0.6378527408368472, 
+            "global": 0.48155787430235386, 
+            "species": "zygro"
+        }, 
+        {
+            "filtered": 0.6446642880311385, 
+            "global": 0.519776753215239, 
+            "species": "ogapa"
+        }, 
+        {
+            "filtered": 0.6636393123580928, 
+            "global": 0.514498908032031, 
+            "species": "canta"
+        }, 
+        {
+            "filtered": 0.7466753162504054, 
+            "global": 0.634494054841058, 
+            "species": "cybja"
+        }, 
+        {
+            "filtered": 0.5690885501135258, 
+            "global": 0.4425503518563456, 
+            "species": "meygui"
+        }, 
+        {
+            "filtered": 0.5742783003567953, 
+            "global": 0.437939820431934, 
+            "species": "clalu"
+        }, 
+        {
+            "filtered": 0.7129419396691534, 
+            "global": 0.6106527541858772, 
+            "species": "pacta"
+        }, 
+        {
+            "filtered": 0.6401232565682776, 
+            "global": 0.49011162339238057, 
+            "species": "klula"
+        }, 
+        {
+            "filtered": 0.6543950697372689, 
+            "global": 0.4639650570249939, 
+            "species": "canalb"
+        }, 
+        {
+            "filtered": 0.5929289652935452, 
+            "global": 0.46499636010677015, 
+            "species": "cangla"
+        }, 
+        {
+            "filtered": 0.6381771002270515, 
+            "global": 0.4848944430963358, 
+            "species": "torde"
+        }, 
+        {
+            "filtered": 0.5019461563412261, 
+            "global": 0.4186483863140015, 
+            "species": "erecy"
+        }, 
+        {
+            "filtered": 0.5968212779759974, 
+            "global": 0.4660276631885465, 
+            "species": "yarli"
+        }, 
+        {
+            "filtered": 0.6000648718780409, 
+            "global": 0.4777359864110653, 
+            "species": "picpa"
+        }, 
+        {
+            "filtered": 0.640447615958482, 
+            "global": 0.47955593302596455, 
+            "species": "sacce"
+        }, 
+        {
+            "filtered": 0.657314304249108, 
+            "global": 0.4993933511283669, 
+            "species": "ashgo"
+        }, 
+        {
+            "filtered": 0.6594226402854363, 
+            "global": 0.4879883523416646, 
+            "species": "debha"
+        }, 
+        {
+            "filtered": 0.6375283814466429, 
+            "global": 0.481193884979374, 
+            "species": "kazaf"
+        }
+    ], 
+    "cantro": [
+        {
+            "filtered": 0.8112228349010704, 
+            "global": 0.6486896384372725, 
+            "species": "candub"
+        }, 
+        {
+            "filtered": 0.6399610768731755, 
+            "global": 0.42956806600339725, 
+            "species": "zygro"
+        }, 
+        {
+            "filtered": 0.6396367174829711, 
+            "global": 0.4531667071099248, 
+            "species": "ogapa"
+        }, 
+        {
+            "filtered": 0.7152124554005839, 
+            "global": 0.5187454501334627, 
+            "species": "canta"
+        }, 
+        {
+            "filtered": 0.6125527084009083, 
+            "global": 0.4315093423926232, 
+            "species": "cybja"
+        }, 
+        {
+            "filtered": 0.661044437236458, 
+            "global": 0.503518563455472, 
+            "species": "meygui"
+        }, 
+        {
+            "filtered": 0.731268245215699, 
+            "global": 0.521536034942975, 
+            "species": "clalu"
+        }, 
+        {
+            "filtered": 0.6125527084009083, 
+            "global": 0.433450618781849, 
+            "species": "pacta"
+        }, 
+        {
+            "filtered": 0.6365553032760298, 
+            "global": 0.43363261344333903, 
+            "species": "klula"
+        }, 
+        {
+            "filtered": 0.8120337333765812, 
+            "global": 0.6553021111380732, 
+            "species": "canalb"
+        }, 
+        {
+            "filtered": 0.6073629581576386, 
+            "global": 0.42325891773841295, 
+            "species": "cangla"
+        }, 
+        {
+            "filtered": 0.6466104443723646, 
+            "global": 0.4333899538946857, 
+            "species": "torde"
+        }, 
+        {
+            "filtered": 0.646934803762569, 
+            "global": 0.5342149963601067, 
+            "species": "erecy"
+        }, 
+        {
+            "filtered": 0.59925397340253, 
+            "global": 0.4238049017228829, 
+            "species": "yarli"
+        }, 
+        {
+            "filtered": 0.6024975673045735, 
+            "global": 0.4348459111866052, 
+            "species": "picpa"
+        }, 
+        {
+            "filtered": 0.6436912098605254, 
+            "global": 0.42702014074253825, 
+            "species": "sacce"
+        }, 
+        {
+            "filtered": 0.6521245540058385, 
+            "global": 0.4310846881824799, 
+            "species": "ashgo"
+        }, 
+        {
+            "filtered": 0.7494323710671424, 
+            "global": 0.5578136374666343, 
+            "species": "debha"
+        }, 
+        {
+            "filtered": 0.6388258190074603, 
+            "global": 0.43096335840815336, 
+            "species": "kazaf"
+        }, 
+        {
+            "filtered": 0.5452481349335063, 
+            "global": 0.4168891045862655, 
+            "species": "wican"
+        }
+    ], 
+    "picme": [
+        {
+            "filtered": 0.6803438209536166, 
+            "global": 0.46153846153846156, 
+            "species": "candub"
+        }, 
+        {
+            "filtered": 0.6626662341874797, 
+            "global": 0.4683329289007523, 
+            "species": "zygro"
+        }, 
+        {
+            "filtered": 0.7384041518001946, 
+            "global": 0.5572069885950012, 
+            "species": "ogapa"
+        }, 
+        {
+            "filtered": 0.7001297437560817, 
+            "global": 0.5131036156272749, 
+            "species": "canta"
+        }, 
+        {
+            "filtered": 0.6783976646123905, 
+            "global": 0.5243266197524873, 
+            "species": "cybja"
+        }, 
+        {
+            "filtered": 0.5827116445021083, 
+            "global": 0.4342999272021354, 
+            "species": "meygui"
+        }, 
+        {
+            "filtered": 0.6122283490107039, 
+            "global": 0.44006309148264977, 
+            "species": "clalu"
+        }, 
+        {
+            "filtered": 0.6736944534544275, 
+            "global": 0.5171074981800534, 
+            "species": "pacta"
+        }, 
+        {
+            "filtered": 0.6600713590658449, 
+            "global": 0.47676534821645233, 
+            "species": "klula"
+        }, 
+        {
+            "filtered": 0.6795329224781057, 
+            "global": 0.4619631157486047, 
+            "species": "canalb"
+        }, 
+        {
+            "filtered": 0.6227700291923451, 
+            "global": 0.4557146323707838, 
+            "species": "cangla"
+        }, 
+        {
+            "filtered": 0.6665585468699319, 
+            "global": 0.47676534821645233, 
+            "species": "torde"
+        }, 
+        {
+            "filtered": 0.5371391501783976, 
+            "global": 0.41440184421256976, 
+            "species": "erecy"
+        }, 
+        {
+            "filtered": 0.6313655530327603, 
+            "global": 0.4557146323707838, 
+            "species": "yarli"
+        }, 
+        {
+            "filtered": 0.6508271164450211, 
+            "global": 0.48786702256733805, 
+            "species": "picpa"
+        }, 
+        {
+            "filtered": 0.6673694453454427, 
+            "global": 0.47160883280757093, 
+            "species": "sacce"
+        }, 
+        {
+            "filtered": 0.669477781381771, 
+            "global": 0.4770686726522688, 
+            "species": "ashgo"
+        }, 
+        {
+            "filtered": 0.6850470321115796, 
+            "global": 0.4765833535549624, 
+            "species": "debha"
+        }, 
+        {
+            "filtered": 0.659260460590334, 
+            "global": 0.47130550837175444, 
+            "species": "kazaf"
+        }, 
+        {
+            "filtered": 0.6101200129743756, 
+            "global": 0.5069764620237807, 
+            "species": "wican"
+        }, 
+        {
+            "filtered": 0.5831981835874148, 
+            "global": 0.4133705411307935, 
+            "species": "cantro"
+        }
+    ], 
+    "lodelo": [
+        {
+            "filtered": 0.7672721375283814, 
+            "global": 0.5566003397233681, 
+            "species": "candub"
+        }, 
+        {
+            "filtered": 0.644177748945832, 
+            "global": 0.42750545983984467, 
+            "species": "zygro"
+        }, 
+        {
+            "filtered": 0.6454751865066494, 
+            "global": 0.4503761223004126, 
+            "species": "ogapa"
+        }, 
+        {
+            "filtered": 0.7069412909503731, 
+            "global": 0.4953894685755884, 
+            "species": "canta"
+        }, 
+        {
+            "filtered": 0.6140123256568277, 
+            "global": 0.42210628488231006, 
+            "species": "cybja"
+        }, 
+        {
+            "filtered": 0.6586117418099254, 
+            "global": 0.49071827226401354, 
+            "species": "meygui"
+        }, 
+        {
+            "filtered": 0.6952643529030166, 
+            "global": 0.48926231497209416, 
+            "species": "clalu"
+        }, 
+        {
+            "filtered": 0.6112552708400908, 
+            "global": 0.4253821887891289, 
+            "species": "pacta"
+        }, 
+        {
+            "filtered": 0.6399610768731755, 
+            "global": 0.4307813637466634, 
+            "species": "klula"
+        }, 
+        {
+            "filtered": 0.766947778138177, 
+            "global": 0.5572676534821646, 
+            "species": "canalb"
+        }, 
+        {
+            "filtered": 0.618877716509893, 
+            "global": 0.42331958262557634, 
+            "species": "cangla"
+        }, 
+        {
+            "filtered": 0.6493674991891015, 
+            "global": 0.43266197524872596, 
+            "species": "torde"
+        }, 
+        {
+            "filtered": 0.659260460590334, 
+            "global": 0.5379155544770686, 
+            "species": "erecy"
+        }, 
+        {
+            "filtered": 0.6046059033409017, 
+            "global": 0.41670710992477555, 
+            "species": "yarli"
+        }, 
+        {
+            "filtered": 0.6229322088874473, 
+            "global": 0.43696918223732106, 
+            "species": "picpa"
+        }, 
+        {
+            "filtered": 0.6461239052870581, 
+            "global": 0.4292040766804174, 
+            "species": "sacce"
+        }, 
+        {
+            "filtered": 0.6550437885176776, 
+            "global": 0.43187333171560294, 
+            "species": "ashgo"
+        }, 
+        {
+            "filtered": 0.7400259487512163, 
+            "global": 0.5309390924532881, 
+            "species": "debha"
+        }, 
+        {
+            "filtered": 0.6430424910801168, 
+            "global": 0.4296893957777239, 
+            "species": "kazaf"
+        }, 
+        {
+            "filtered": 0.5480051897502433, 
+            "global": 0.4128852220334871, 
+            "species": "wican"
+        }, 
+        {
+            "filtered": 0.8399286409341551, 
+            "global": 0.6980101917010434, 
+            "species": "cantro"
+        }, 
+        {
+            "filtered": 0.5929289652935452, 
+            "global": 0.41039796165979125, 
+            "species": "picme"
+        }
+    ]
+}

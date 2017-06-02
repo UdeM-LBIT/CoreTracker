@@ -1,0 +1,3803 @@
+{
+    "Leu": [
+        {
+            "aafiltered": 0.6918392204628502, 
+            "global": 0.4671802960446494, 
+            "species": "zygro||candub"
+        }, 
+        {
+            "aafiltered": 0.7295980511571255, 
+            "global": 0.5087357437515166, 
+            "species": "ogapa||candub"
+        }, 
+        {
+            "aafiltered": 0.7868453105968332, 
+            "global": 0.5889347245814123, 
+            "species": "canta||candub"
+        }, 
+        {
+            "aafiltered": 0.7040194884287454, 
+            "global": 0.48277117204562003, 
+            "species": "cybja||candub"
+        }, 
+        {
+            "aafiltered": 0.7551766138855055, 
+            "global": 0.545013346275176, 
+            "species": "meygui||candub"
+        }, 
+        {
+            "aafiltered": 0.7490864799025578, 
+            "global": 0.5478039310846882, 
+            "species": "clalu||candub"
+        }, 
+        {
+            "aafiltered": 0.6699147381242387, 
+            "global": 0.48962630429507403, 
+            "species": "pacta||candub"
+        }, 
+        {
+            "aafiltered": 0.7210718635809987, 
+            "global": 0.4771293375394321, 
+            "species": "klula||candub"
+        }, 
+        {
+            "aafiltered": 0.9902557856272838, 
+            "global": 0.9161004610531425, 
+            "species": "canalb||candub"
+        }, 
+        {
+            "aafiltered": 0.6406820950060901, 
+            "global": 0.4514074253821888, 
+            "species": "cangla||candub"
+        }, 
+        {
+            "aafiltered": 0.707673568818514, 
+            "global": 0.4703348701771415, 
+            "species": "torde||candub"
+        }, 
+        {
+            "aafiltered": 0.5298416565164433, 
+            "global": 0.4033608347488473, 
+            "species": "erecy||candub"
+        }, 
+        {
+            "aafiltered": 0.6735688185140073, 
+            "global": 0.4576559087600097, 
+            "species": "yarli||candub"
+        }, 
+        {
+            "aafiltered": 0.6979293544457978, 
+            "global": 0.486289735501092, 
+            "species": "picpa||candub"
+        }, 
+        {
+            "aafiltered": 0.705237515225335, 
+            "global": 0.4703348701771415, 
+            "species": "sacce||candub"
+        }, 
+        {
+            "aafiltered": 0.7295980511571255, 
+            "global": 0.4802232467847609, 
+            "species": "ashgo||candub"
+        }, 
+        {
+            "aafiltered": 0.8465286236297198, 
+            "global": 0.6343120601795681, 
+            "species": "debha||candub"
+        }, 
+        {
+            "aafiltered": 0.6991473812423873, 
+            "global": 0.4700315457413249, 
+            "species": "kazaf||candub"
+        }, 
+        {
+            "aafiltered": 0.6236297198538368, 
+            "global": 0.46360106770201415, 
+            "species": "wican||candub"
+        }, 
+        {
+            "aafiltered": 0.7734470158343484, 
+            "global": 0.6486896384372725, 
+            "species": "cantro||candub"
+        }, 
+        {
+            "aafiltered": 0.6358099878197321, 
+            "global": 0.46153846153846156, 
+            "species": "picme||candub"
+        }, 
+        {
+            "aafiltered": 0.7271619975639464, 
+            "global": 0.5566003397233681, 
+            "species": "lodelo||candub"
+        }, 
+        {
+            "aafiltered": 0.6833130328867235, 
+            "global": 0.5118903178840087, 
+            "species": "ogapa||zygro"
+        }, 
+        {
+            "aafiltered": 0.6321559074299634, 
+            "global": 0.46299441883038095, 
+            "species": "canta||zygro"
+        }, 
+        {
+            "aafiltered": 0.6528623629719854, 
+            "global": 0.4900509585052172, 
+            "species": "cybja||zygro"
+        }, 
+        {
+            "aafiltered": 0.6285018270401949, 
+            "global": 0.4434603251637952, 
+            "species": "meygui||zygro"
+        }, 
+        {
+            "aafiltered": 0.6419001218026796, 
+            "global": 0.44619024508614413, 
+            "species": "clalu||zygro"
+        }, 
+        {
+            "aafiltered": 0.5895249695493301, 
+            "global": 0.48076923076923084, 
+            "species": "pacta||zygro"
+        }, 
+        {
+            "aafiltered": 0.7503045066991474, 
+            "global": 0.5971851492356224, 
+            "species": "klula||zygro"
+        }, 
+        {
+            "aafiltered": 0.6881851400730816, 
+            "global": 0.4685755884494055, 
+            "species": "canalb||zygro"
+        }, 
+        {
+            "aafiltered": 0.7088915956151035, 
+            "global": 0.5796529968454258, 
+            "species": "cangla||zygro"
+        }, 
+        {
+            "aafiltered": 0.8160779537149817, 
+            "global": 0.6801140499878671, 
+            "species": "torde||zygro"
+        }, 
+        {
+            "aafiltered": 0.584652862362972, 
+            "global": 0.5296651298228585, 
+            "species": "erecy||zygro"
+        }, 
+        {
+            "aafiltered": 0.6626065773447016, 
+            "global": 0.4714875030332444, 
+            "species": "yarli||zygro"
+        }, 
+        {
+            "aafiltered": 0.6345919610231425, 
+            "global": 0.48562242174229553, 
+            "species": "picpa||zygro"
+        }, 
+        {
+            "aafiltered": 0.8002436053593179, 
+            "global": 0.6288522203348702, 
+            "species": "sacce||zygro"
+        }, 
+        {
+            "aafiltered": 0.758830694275274, 
+            "global": 0.6138073283183694, 
+            "species": "ashgo||zygro"
+        }, 
+        {
+            "aafiltered": 0.6942752740560292, 
+            "global": 0.48641106527541855, 
+            "species": "debha||zygro"
+        }, 
+        {
+            "aafiltered": 0.7856272838002436, 
+            "global": 0.6276995874787673, 
+            "species": "kazaf||zygro"
+        }, 
+        {
+            "aafiltered": 0.5651644336175395, 
+            "global": 0.48155787430235386, 
+            "species": "wican||zygro"
+        }, 
+        {
+            "aafiltered": 0.5809987819732034, 
+            "global": 0.42956806600339725, 
+            "species": "cantro||zygro"
+        }, 
+        {
+            "aafiltered": 0.5919610231425091, 
+            "global": 0.4683329289007523, 
+            "species": "picme||zygro"
+        }, 
+        {
+            "aafiltered": 0.5895249695493301, 
+            "global": 0.42750545983984467, 
+            "species": "lodelo||zygro"
+        }, 
+        {
+            "aafiltered": 0.6735688185140073, 
+            "global": 0.5077651055569037, 
+            "species": "canta||ogapa"
+        }, 
+        {
+            "aafiltered": 0.6686967113276492, 
+            "global": 0.5237199708808542, 
+            "species": "cybja||ogapa"
+        }, 
+        {
+            "aafiltered": 0.6626065773447016, 
+            "global": 0.48386314001455966, 
+            "species": "meygui||ogapa"
+        }, 
+        {
+            "aafiltered": 0.6699147381242387, 
+            "global": 0.48216452317398684, 
+            "species": "clalu||ogapa"
+        }, 
+        {
+            "aafiltered": 0.6601705237515225, 
+            "global": 0.5417981072555205, 
+            "species": "pacta||ogapa"
+        }, 
+        {
+            "aafiltered": 0.6833130328867235, 
+            "global": 0.5149842271293376, 
+            "species": "klula||ogapa"
+        }, 
+        {
+            "aafiltered": 0.7247259439707674, 
+            "global": 0.5096457170589662, 
+            "species": "canalb||ogapa"
+        }, 
+        {
+            "aafiltered": 0.6187576126674786, 
+            "global": 0.490596942489687, 
+            "species": "cangla||ogapa"
+        }, 
+        {
+            "aafiltered": 0.7003654080389768, 
+            "global": 0.5146202378063577, 
+            "species": "torde||ogapa"
+        }, 
+        {
+            "aafiltered": 0.5249695493300852, 
+            "global": 0.4501941276389225, 
+            "species": "erecy||ogapa"
+        }, 
+        {
+            "aafiltered": 0.6577344701583435, 
+            "global": 0.5019412763892259, 
+            "species": "yarli||ogapa"
+        }, 
+        {
+            "aafiltered": 0.6979293544457978, 
+            "global": 0.5532031060422228, 
+            "species": "picpa||ogapa"
+        }, 
+        {
+            "aafiltered": 0.707673568818514, 
+            "global": 0.5107376850279058, 
+            "species": "sacce||ogapa"
+        }, 
+        {
+            "aafiltered": 0.7149817295980512, 
+            "global": 0.5211720456199952, 
+            "species": "ashgo||ogapa"
+        }, 
+        {
+            "aafiltered": 0.7259439707673568, 
+            "global": 0.5283305023052657, 
+            "species": "debha||ogapa"
+        }, 
+        {
+            "aafiltered": 0.6869671132764921, 
+            "global": 0.5072191215724339, 
+            "species": "kazaf||ogapa"
+        }, 
+        {
+            "aafiltered": 0.6065773447015834, 
+            "global": 0.519776753215239, 
+            "species": "wican||ogapa"
+        }, 
+        {
+            "aafiltered": 0.584652862362972, 
+            "global": 0.4531667071099248, 
+            "species": "cantro||ogapa"
+        }, 
+        {
+            "aafiltered": 0.682095006090134, 
+            "global": 0.5572069885950012, 
+            "species": "picme||ogapa"
+        }, 
+        {
+            "aafiltered": 0.5980511571254568, 
+            "global": 0.4503761223004126, 
+            "species": "lodelo||ogapa"
+        }, 
+        {
+            "aafiltered": 0.7527405602923264, 
+            "global": 0.5683086629458869, 
+            "species": "cybja||canta"
+        }, 
+        {
+            "aafiltered": 0.6906211936662606, 
+            "global": 0.5288764862897355, 
+            "species": "meygui||canta"
+        }, 
+        {
+            "aafiltered": 0.6942752740560292, 
+            "global": 0.545619995146809, 
+            "species": "clalu||canta"
+        }, 
+        {
+            "aafiltered": 0.682095006090134, 
+            "global": 0.53445765590876, 
+            "species": "pacta||canta"
+        }, 
+        {
+            "aafiltered": 0.6492082825822169, 
+            "global": 0.471790827469061, 
+            "species": "klula||canta"
+        }, 
+        {
+            "aafiltered": 0.7856272838002436, 
+            "global": 0.5915433147294346, 
+            "species": "canalb||canta"
+        }, 
+        {
+            "aafiltered": 0.582216808769793, 
+            "global": 0.44983013831594265, 
+            "species": "cangla||canta"
+        }, 
+        {
+            "aafiltered": 0.6431181485992692, 
+            "global": 0.47185149235622426, 
+            "species": "torde||canta"
+        }, 
+        {
+            "aafiltered": 0.47624847746650434, 
+            "global": 0.4066367386556661, 
+            "species": "erecy||canta"
+        }, 
+        {
+            "aafiltered": 0.6199756394640682, 
+            "global": 0.46390439213783063, 
+            "species": "yarli||canta"
+        }, 
+        {
+            "aafiltered": 0.6516443361753959, 
+            "global": 0.48362048046590633, 
+            "species": "picpa||canta"
+        }, 
+        {
+            "aafiltered": 0.656516443361754, 
+            "global": 0.4677869449162825, 
+            "species": "sacce||canta"
+        }, 
+        {
+            "aafiltered": 0.6772228989037758, 
+            "global": 0.4831958262557632, 
+            "species": "ashgo||canta"
+        }, 
+        {
+            "aafiltered": 0.7831912302070646, 
+            "global": 0.6360713419073041, 
+            "species": "debha||canta"
+        }, 
+        {
+            "aafiltered": 0.633373934226553, 
+            "global": 0.46493569521960687, 
+            "species": "kazaf||canta"
+        }, 
+        {
+            "aafiltered": 0.6419001218026796, 
+            "global": 0.514498908032031, 
+            "species": "wican||canta"
+        }, 
+        {
+            "aafiltered": 0.6455542021924482, 
+            "global": 0.5187454501334627, 
+            "species": "cantro||canta"
+        }, 
+        {
+            "aafiltered": 0.6601705237515225, 
+            "global": 0.5131036156272749, 
+            "species": "picme||canta"
+        }, 
+        {
+            "aafiltered": 0.633373934226553, 
+            "global": 0.4953894685755884, 
+            "species": "lodelo||canta"
+        }, 
+        {
+            "aafiltered": 0.6345919610231425, 
+            "global": 0.46244843484591125, 
+            "species": "meygui||cybja"
+        }, 
+        {
+            "aafiltered": 0.6370280146163215, 
+            "global": 0.4549259888376608, 
+            "species": "clalu||cybja"
+        }, 
+        {
+            "aafiltered": 0.7064555420219245, 
+            "global": 0.5441640378548895, 
+            "species": "pacta||cybja"
+        }, 
+        {
+            "aafiltered": 0.6833130328867235, 
+            "global": 0.502729919922349, 
+            "species": "klula||cybja"
+        }, 
+        {
+            "aafiltered": 0.7040194884287454, 
+            "global": 0.4834384858044164, 
+            "species": "canalb||cybja"
+        }, 
+        {
+            "aafiltered": 0.6041412911084044, 
+            "global": 0.4739140985197767, 
+            "species": "cangla||cybja"
+        }, 
+        {
+            "aafiltered": 0.6638246041412911, 
+            "global": 0.49696675564183446, 
+            "species": "torde||cybja"
+        }, 
+        {
+            "aafiltered": 0.48599269183922045, 
+            "global": 0.42726280029119146, 
+            "species": "erecy||cybja"
+        }, 
+        {
+            "aafiltered": 0.6467722289890377, 
+            "global": 0.47785731618539184, 
+            "species": "yarli||cybja"
+        }, 
+        {
+            "aafiltered": 0.6406820950060901, 
+            "global": 0.49126425624848336, 
+            "species": "picpa||cybja"
+        }, 
+        {
+            "aafiltered": 0.679658952496955, 
+            "global": 0.4959354525600582, 
+            "species": "sacce||cybja"
+        }, 
+        {
+            "aafiltered": 0.7064555420219245, 
+            "global": 0.5096457170589662, 
+            "species": "ashgo||cybja"
+        }, 
+        {
+            "aafiltered": 0.6979293544457978, 
+            "global": 0.5028512496966756, 
+            "species": "debha||cybja"
+        }, 
+        {
+            "aafiltered": 0.6711327649208283, 
+            "global": 0.49532880368842513, 
+            "species": "kazaf||cybja"
+        }, 
+        {
+            "aafiltered": 0.7149817295980512, 
+            "global": 0.634494054841058, 
+            "species": "wican||cybja"
+        }, 
+        {
+            "aafiltered": 0.5736906211936662, 
+            "global": 0.4315093423926232, 
+            "species": "cantro||cybja"
+        }, 
+        {
+            "aafiltered": 0.6577344701583435, 
+            "global": 0.5243266197524873, 
+            "species": "picme||cybja"
+        }, 
+        {
+            "aafiltered": 0.5736906211936662, 
+            "global": 0.42210628488231006, 
+            "species": "lodelo||cybja"
+        }, 
+        {
+            "aafiltered": 0.705237515225335, 
+            "global": 0.5409487988352342, 
+            "species": "clalu||meygui"
+        }, 
+        {
+            "aafiltered": 0.5895249695493301, 
+            "global": 0.4517714147051686, 
+            "species": "pacta||meygui"
+        }, 
+        {
+            "aafiltered": 0.6370280146163215, 
+            "global": 0.451650084930842, 
+            "species": "klula||meygui"
+        }, 
+        {
+            "aafiltered": 0.7539585870889159, 
+            "global": 0.5468939577772385, 
+            "species": "canalb||meygui"
+        }, 
+        {
+            "aafiltered": 0.5919610231425091, 
+            "global": 0.4288400873574375, 
+            "species": "cangla||meygui"
+        }, 
+        {
+            "aafiltered": 0.6528623629719854, 
+            "global": 0.44898082989565635, 
+            "species": "torde||meygui"
+        }, 
+        {
+            "aafiltered": 0.4823386114494519, 
+            "global": 0.38467604950254786, 
+            "species": "erecy||meygui"
+        }, 
+        {
+            "aafiltered": 0.6151035322777101, 
+            "global": 0.4400024265954865, 
+            "species": "yarli||meygui"
+        }, 
+        {
+            "aafiltered": 0.6394640682095006, 
+            "global": 0.4708201892744479, 
+            "species": "picpa||meygui"
+        }, 
+        {
+            "aafiltered": 0.6601705237515225, 
+            "global": 0.44831351613686, 
+            "species": "sacce||meygui"
+        }, 
+        {
+            "aafiltered": 0.658952496954933, 
+            "global": 0.45322737199708807, 
+            "species": "ashgo||meygui"
+        }, 
+        {
+            "aafiltered": 0.758830694275274, 
+            "global": 0.5819582625576316, 
+            "species": "debha||meygui"
+        }, 
+        {
+            "aafiltered": 0.6382460414129111, 
+            "global": 0.4471002183935937, 
+            "species": "kazaf||meygui"
+        }, 
+        {
+            "aafiltered": 0.5517661388550548, 
+            "global": 0.4425503518563456, 
+            "species": "wican||meygui"
+        }, 
+        {
+            "aafiltered": 0.6321559074299634, 
+            "global": 0.503518563455472, 
+            "species": "cantro||meygui"
+        }, 
+        {
+            "aafiltered": 0.5676004872107187, 
+            "global": 0.4342999272021354, 
+            "species": "picme||meygui"
+        }, 
+        {
+            "aafiltered": 0.6443361753958587, 
+            "global": 0.49071827226401354, 
+            "species": "lodelo||meygui"
+        }, 
+        {
+            "aafiltered": 0.6151035322777101, 
+            "global": 0.45729191943702985, 
+            "species": "pacta||clalu"
+        }, 
+        {
+            "aafiltered": 0.6650426309378806, 
+            "global": 0.45498665372482405, 
+            "species": "klula||clalu"
+        }, 
+        {
+            "aafiltered": 0.7466504263093788, 
+            "global": 0.5498058723610774, 
+            "species": "canalb||clalu"
+        }, 
+        {
+            "aafiltered": 0.610231425091352, 
+            "global": 0.43187333171560294, 
+            "species": "cangla||clalu"
+        }, 
+        {
+            "aafiltered": 0.6613885505481121, 
+            "global": 0.4508007765105557, 
+            "species": "torde||clalu"
+        }, 
+        {
+            "aafiltered": 0.48355663824604145, 
+            "global": 0.3867993205532638, 
+            "species": "erecy||clalu"
+        }, 
+        {
+            "aafiltered": 0.6443361753958587, 
+            "global": 0.4428536762921621, 
+            "species": "yarli||clalu"
+        }, 
+        {
+            "aafiltered": 0.6419001218026796, 
+            "global": 0.47106284882310123, 
+            "species": "picpa||clalu"
+        }, 
+        {
+            "aafiltered": 0.6662606577344702, 
+            "global": 0.44728221305508375, 
+            "species": "sacce||clalu"
+        }, 
+        {
+            "aafiltered": 0.6747868453105969, 
+            "global": 0.4620844455229314, 
+            "species": "ashgo||clalu"
+        }, 
+        {
+            "aafiltered": 0.7697929354445798, 
+            "global": 0.5913613200679447, 
+            "species": "debha||clalu"
+        }, 
+        {
+            "aafiltered": 0.658952496954933, 
+            "global": 0.44418830380975494, 
+            "species": "kazaf||clalu"
+        }, 
+        {
+            "aafiltered": 0.5566382460414129, 
+            "global": 0.437939820431934, 
+            "species": "wican||clalu"
+        }, 
+        {
+            "aafiltered": 0.6760048721071864, 
+            "global": 0.521536034942975, 
+            "species": "cantro||clalu"
+        }, 
+        {
+            "aafiltered": 0.582216808769793, 
+            "global": 0.44006309148264977, 
+            "species": "picme||clalu"
+        }, 
+        {
+            "aafiltered": 0.6455542021924482, 
+            "global": 0.48926231497209416, 
+            "species": "lodelo||clalu"
+        }, 
+        {
+            "aafiltered": 0.6285018270401949, 
+            "global": 0.4912035913613201, 
+            "species": "klula||pacta"
+        }, 
+        {
+            "aafiltered": 0.6662606577344702, 
+            "global": 0.4922348944430963, 
+            "species": "canalb||pacta"
+        }, 
+        {
+            "aafiltered": 0.561510353227771, 
+            "global": 0.46238776995874786, 
+            "species": "cangla||pacta"
+        }, 
+        {
+            "aafiltered": 0.6224116930572473, 
+            "global": 0.4868357194855617, 
+            "species": "torde||pacta"
+        }, 
+        {
+            "aafiltered": 0.44457978075517657, 
+            "global": 0.41980101917010426, 
+            "species": "erecy||pacta"
+        }, 
+        {
+            "aafiltered": 0.6029232643118149, 
+            "global": 0.47100218393593796, 
+            "species": "yarli||pacta"
+        }, 
+        {
+            "aafiltered": 0.6345919610231425, 
+            "global": 0.5066124727008008, 
+            "species": "picpa||pacta"
+        }, 
+        {
+            "aafiltered": 0.6199756394640682, 
+            "global": 0.48016258189759764, 
+            "species": "sacce||pacta"
+        }, 
+        {
+            "aafiltered": 0.6455542021924482, 
+            "global": 0.5014559572919194, 
+            "species": "ashgo||pacta"
+        }, 
+        {
+            "aafiltered": 0.6833130328867235, 
+            "global": 0.5157728706624606, 
+            "species": "debha||pacta"
+        }, 
+        {
+            "aafiltered": 0.6041412911084044, 
+            "global": 0.4770686726522688, 
+            "species": "kazaf||pacta"
+        }, 
+        {
+            "aafiltered": 0.7356881851400731, 
+            "global": 0.6106527541858772, 
+            "species": "wican||pacta"
+        }, 
+        {
+            "aafiltered": 0.5347137637028014, 
+            "global": 0.433450618781849, 
+            "species": "cantro||pacta"
+        }, 
+        {
+            "aafiltered": 0.6321559074299634, 
+            "global": 0.5171074981800534, 
+            "species": "picme||pacta"
+        }, 
+        {
+            "aafiltered": 0.5274056029232643, 
+            "global": 0.4253821887891289, 
+            "species": "lodelo||pacta"
+        }, 
+        {
+            "aafiltered": 0.7174177831912302, 
+            "global": 0.4794952681388013, 
+            "species": "canalb||klula"
+        }, 
+        {
+            "aafiltered": 0.6845310596833131, 
+            "global": 0.5609682115991265, 
+            "species": "cangla||klula"
+        }, 
+        {
+            "aafiltered": 0.756394640682095, 
+            "global": 0.6041009463722398, 
+            "species": "torde||klula"
+        }, 
+        {
+            "aafiltered": 0.6004872107186358, 
+            "global": 0.5396141713176413, 
+            "species": "erecy||klula"
+        }, 
+        {
+            "aafiltered": 0.6479902557856273, 
+            "global": 0.47270080077651055, 
+            "species": "yarli||klula"
+        }, 
+        {
+            "aafiltered": 0.6674786845310596, 
+            "global": 0.4922955593302596, 
+            "species": "picpa||klula"
+        }, 
+        {
+            "aafiltered": 0.7527405602923264, 
+            "global": 0.5889953894685755, 
+            "species": "sacce||klula"
+        }, 
+        {
+            "aafiltered": 0.8038976857490865, 
+            "global": 0.6246663431206018, 
+            "species": "ashgo||klula"
+        }, 
+        {
+            "aafiltered": 0.7137637028014616, 
+            "global": 0.494904149478282, 
+            "species": "debha||klula"
+        }, 
+        {
+            "aafiltered": 0.7637028014616322, 
+            "global": 0.5913613200679447, 
+            "species": "kazaf||klula"
+        }, 
+        {
+            "aafiltered": 0.5919610231425091, 
+            "global": 0.49011162339238057, 
+            "species": "wican||klula"
+        }, 
+        {
+            "aafiltered": 0.5943970767356882, 
+            "global": 0.43363261344333903, 
+            "species": "cantro||klula"
+        }, 
+        {
+            "aafiltered": 0.5980511571254568, 
+            "global": 0.47676534821645233, 
+            "species": "picme||klula"
+        }, 
+        {
+            "aafiltered": 0.5919610231425091, 
+            "global": 0.4307813637466634, 
+            "species": "lodelo||klula"
+        }, 
+        {
+            "aafiltered": 0.6370280146163215, 
+            "global": 0.45183207959233196, 
+            "species": "cangla||canalb"
+        }, 
+        {
+            "aafiltered": 0.7040194884287454, 
+            "global": 0.4722761465663674, 
+            "species": "torde||canalb"
+        }, 
+        {
+            "aafiltered": 0.5274056029232643, 
+            "global": 0.40554477068672656, 
+            "species": "erecy||canalb"
+        }, 
+        {
+            "aafiltered": 0.6735688185140073, 
+            "global": 0.4583232225188061, 
+            "species": "yarli||canalb"
+        }, 
+        {
+            "aafiltered": 0.6942752740560292, 
+            "global": 0.4890803203106042, 
+            "species": "picpa||canalb"
+        }, 
+        {
+            "aafiltered": 0.7015834348355664, 
+            "global": 0.4708808541616112, 
+            "species": "sacce||canalb"
+        }, 
+        {
+            "aafiltered": 0.7259439707673568, 
+            "global": 0.48186119873817035, 
+            "species": "ashgo||canalb"
+        }, 
+        {
+            "aafiltered": 0.8428745432399513, 
+            "global": 0.6358286823586509, 
+            "species": "debha||canalb"
+        }, 
+        {
+            "aafiltered": 0.6942752740560292, 
+            "global": 0.47100218393593796, 
+            "species": "kazaf||canalb"
+        }, 
+        {
+            "aafiltered": 0.6199756394640682, 
+            "global": 0.4639650570249939, 
+            "species": "wican||canalb"
+        }, 
+        {
+            "aafiltered": 0.7722289890377588, 
+            "global": 0.6553021111380732, 
+            "species": "cantro||canalb"
+        }, 
+        {
+            "aafiltered": 0.6321559074299634, 
+            "global": 0.4619631157486047, 
+            "species": "picme||canalb"
+        }, 
+        {
+            "aafiltered": 0.7259439707673568, 
+            "global": 0.5572676534821646, 
+            "species": "lodelo||canalb"
+        }, 
+        {
+            "aafiltered": 0.7088915956151035, 
+            "global": 0.5865081290948799, 
+            "species": "torde||cangla"
+        }, 
+        {
+            "aafiltered": 0.5785627283800243, 
+            "global": 0.5205047318611987, 
+            "species": "erecy||cangla"
+        }, 
+        {
+            "aafiltered": 0.6029232643118149, 
+            "global": 0.45328803688425134, 
+            "species": "yarli||cangla"
+        }, 
+        {
+            "aafiltered": 0.5968331303288672, 
+            "global": 0.47239747634069396, 
+            "species": "picpa||cangla"
+        }, 
+        {
+            "aafiltered": 0.7356881851400731, 
+            "global": 0.5915433147294346, 
+            "species": "sacce||cangla"
+        }, 
+        {
+            "aafiltered": 0.6954933008526187, 
+            "global": 0.5598155787430236, 
+            "species": "ashgo||cangla"
+        }, 
+        {
+            "aafiltered": 0.6504263093788063, 
+            "global": 0.46554234409124007, 
+            "species": "debha||cangla"
+        }, 
+        {
+            "aafiltered": 0.7247259439707674, 
+            "global": 0.5846275175928173, 
+            "species": "kazaf||cangla"
+        }, 
+        {
+            "aafiltered": 0.5274056029232643, 
+            "global": 0.46499636010677015, 
+            "species": "wican||cangla"
+        }, 
+        {
+            "aafiltered": 0.5444579780755177, 
+            "global": 0.42325891773841295, 
+            "species": "cantro||cangla"
+        }, 
+        {
+            "aafiltered": 0.5408038976857491, 
+            "global": 0.4557146323707838, 
+            "species": "picme||cangla"
+        }, 
+        {
+            "aafiltered": 0.5676004872107187, 
+            "global": 0.42331958262557634, 
+            "species": "lodelo||cangla"
+        }, 
+        {
+            "aafiltered": 0.5919610231425091, 
+            "global": 0.5373695704925989, 
+            "species": "erecy||torde"
+        }, 
+        {
+            "aafiltered": 0.658952496954933, 
+            "global": 0.4762800291191458, 
+            "species": "yarli||torde"
+        }, 
+        {
+            "aafiltered": 0.6504263093788063, 
+            "global": 0.49350885707352576, 
+            "species": "picpa||torde"
+        }, 
+        {
+            "aafiltered": 0.8160779537149817, 
+            "global": 0.6385586022809998, 
+            "species": "sacce||torde"
+        }, 
+        {
+            "aafiltered": 0.7807551766138855, 
+            "global": 0.6116233923804901, 
+            "species": "ashgo||torde"
+        }, 
+        {
+            "aafiltered": 0.7003654080389768, 
+            "global": 0.4902329531667071, 
+            "species": "debha||torde"
+        }, 
+        {
+            "aafiltered": 0.7880633373934226, 
+            "global": 0.6290342149963601, 
+            "species": "kazaf||torde"
+        }, 
+        {
+            "aafiltered": 0.5712545676004872, 
+            "global": 0.4848944430963358, 
+            "species": "wican||torde"
+        }, 
+        {
+            "aafiltered": 0.5931790499390986, 
+            "global": 0.4333899538946857, 
+            "species": "cantro||torde"
+        }, 
+        {
+            "aafiltered": 0.5968331303288672, 
+            "global": 0.47676534821645233, 
+            "species": "picme||torde"
+        }, 
+        {
+            "aafiltered": 0.5943970767356882, 
+            "global": 0.43266197524872596, 
+            "species": "lodelo||torde"
+        }, 
+        {
+            "aafiltered": 0.4920828258221681, 
+            "global": 0.4211356466876972, 
+            "species": "yarli||erecy"
+        }, 
+        {
+            "aafiltered": 0.484774665042631, 
+            "global": 0.4235015772870663, 
+            "species": "picpa||erecy"
+        }, 
+        {
+            "aafiltered": 0.582216808769793, 
+            "global": 0.5181388012618297, 
+            "species": "sacce||erecy"
+        }, 
+        {
+            "aafiltered": 0.6492082825822169, 
+            "global": 0.5894200436787188, 
+            "species": "ashgo||erecy"
+        }, 
+        {
+            "aafiltered": 0.5395858708891595, 
+            "global": 0.4228949284154331, 
+            "species": "debha||erecy"
+        }, 
+        {
+            "aafiltered": 0.5907429963459196, 
+            "global": 0.5245086144139772, 
+            "species": "kazaf||erecy"
+        }, 
+        {
+            "aafiltered": 0.40438489646772235, 
+            "global": 0.4186483863140015, 
+            "species": "wican||erecy"
+        }, 
+        {
+            "aafiltered": 0.6236297198538368, 
+            "global": 0.5342149963601067, 
+            "species": "cantro||erecy"
+        }, 
+        {
+            "aafiltered": 0.43239951278928135, 
+            "global": 0.41440184421256976, 
+            "species": "picme||erecy"
+        }, 
+        {
+            "aafiltered": 0.6419001218026796, 
+            "global": 0.5379155544770686, 
+            "species": "lodelo||erecy"
+        }, 
+        {
+            "aafiltered": 0.6272838002436053, 
+            "global": 0.47561271536034944, 
+            "species": "picpa||yarli"
+        }, 
+        {
+            "aafiltered": 0.6601705237515225, 
+            "global": 0.4634190730405241, 
+            "species": "sacce||yarli"
+        }, 
+        {
+            "aafiltered": 0.6723507917174177, 
+            "global": 0.48095122543072066, 
+            "species": "ashgo||yarli"
+        }, 
+        {
+            "aafiltered": 0.6833130328867235, 
+            "global": 0.4788886192671682, 
+            "species": "debha||yarli"
+        }, 
+        {
+            "aafiltered": 0.658952496954933, 
+            "global": 0.46614899296287304, 
+            "species": "kazaf||yarli"
+        }, 
+        {
+            "aafiltered": 0.5688185140073082, 
+            "global": 0.4660276631885465, 
+            "species": "wican||yarli"
+        }, 
+        {
+            "aafiltered": 0.5700365408038977, 
+            "global": 0.4238049017228829, 
+            "species": "cantro||yarli"
+        }, 
+        {
+            "aafiltered": 0.5724725943970768, 
+            "global": 0.4557146323707838, 
+            "species": "picme||yarli"
+        }, 
+        {
+            "aafiltered": 0.5663824604141291, 
+            "global": 0.41670710992477555, 
+            "species": "lodelo||yarli"
+        }, 
+        {
+            "aafiltered": 0.6504263093788063, 
+            "global": 0.4834991506915798, 
+            "species": "sacce||picpa"
+        }, 
+        {
+            "aafiltered": 0.6516443361753959, 
+            "global": 0.4912035913613201, 
+            "species": "ashgo||picpa"
+        }, 
+        {
+            "aafiltered": 0.6881851400730816, 
+            "global": 0.5043678718757583, 
+            "species": "debha||picpa"
+        }, 
+        {
+            "aafiltered": 0.6455542021924482, 
+            "global": 0.4840451346760495, 
+            "species": "kazaf||picpa"
+        }, 
+        {
+            "aafiltered": 0.5724725943970768, 
+            "global": 0.4777359864110653, 
+            "species": "wican||picpa"
+        }, 
+        {
+            "aafiltered": 0.5663824604141291, 
+            "global": 0.4348459111866052, 
+            "species": "cantro||picpa"
+        }, 
+        {
+            "aafiltered": 0.5883069427527405, 
+            "global": 0.48786702256733805, 
+            "species": "picme||picpa"
+        }, 
+        {
+            "aafiltered": 0.5736906211936662, 
+            "global": 0.43696918223732106, 
+            "species": "lodelo||picpa"
+        }, 
+        {
+            "aafiltered": 0.7783191230207065, 
+            "global": 0.599854404270808, 
+            "species": "ashgo||sacce"
+        }, 
+        {
+            "aafiltered": 0.7101096224116931, 
+            "global": 0.4887769958747876, 
+            "species": "debha||sacce"
+        }, 
+        {
+            "aafiltered": 0.805115712545676, 
+            "global": 0.6343120601795681, 
+            "species": "kazaf||sacce"
+        }, 
+        {
+            "aafiltered": 0.582216808769793, 
+            "global": 0.47955593302596455, 
+            "species": "wican||sacce"
+        }, 
+        {
+            "aafiltered": 0.5883069427527405, 
+            "global": 0.42702014074253825, 
+            "species": "cantro||sacce"
+        }, 
+        {
+            "aafiltered": 0.6041412911084044, 
+            "global": 0.47160883280757093, 
+            "species": "picme||sacce"
+        }, 
+        {
+            "aafiltered": 0.5919610231425091, 
+            "global": 0.4292040766804174, 
+            "species": "lodelo||sacce"
+        }, 
+        {
+            "aafiltered": 0.728380024360536, 
+            "global": 0.5004853190973064, 
+            "species": "debha||ashgo"
+        }, 
+        {
+            "aafiltered": 0.7807551766138855, 
+            "global": 0.6012496966755642, 
+            "species": "kazaf||ashgo"
+        }, 
+        {
+            "aafiltered": 0.6138855054811205, 
+            "global": 0.4993933511283669, 
+            "species": "wican||ashgo"
+        }, 
+        {
+            "aafiltered": 0.5980511571254568, 
+            "global": 0.4310846881824799, 
+            "species": "cantro||ashgo"
+        }, 
+        {
+            "aafiltered": 0.6126674786845311, 
+            "global": 0.4770686726522688, 
+            "species": "picme||ashgo"
+        }, 
+        {
+            "aafiltered": 0.607795371498173, 
+            "global": 0.43187333171560294, 
+            "species": "lodelo||ashgo"
+        }, 
+        {
+            "aafiltered": 0.6991473812423873, 
+            "global": 0.4845911186605193, 
+            "species": "kazaf||debha"
+        }, 
+        {
+            "aafiltered": 0.6211936662606578, 
+            "global": 0.4879883523416646, 
+            "species": "wican||debha"
+        }, 
+        {
+            "aafiltered": 0.7003654080389768, 
+            "global": 0.5578136374666343, 
+            "species": "cantro||debha"
+        }, 
+        {
+            "aafiltered": 0.6345919610231425, 
+            "global": 0.4765833535549624, 
+            "species": "picme||debha"
+        }, 
+        {
+            "aafiltered": 0.6869671132764921, 
+            "global": 0.5309390924532881, 
+            "species": "lodelo||debha"
+        }, 
+        {
+            "aafiltered": 0.584652862362972, 
+            "global": 0.481193884979374, 
+            "species": "wican||kazaf"
+        }, 
+        {
+            "aafiltered": 0.582216808769793, 
+            "global": 0.43096335840815336, 
+            "species": "cantro||kazaf"
+        }, 
+        {
+            "aafiltered": 0.5992691839220463, 
+            "global": 0.47130550837175444, 
+            "species": "picme||kazaf"
+        }, 
+        {
+            "aafiltered": 0.6004872107186358, 
+            "global": 0.4296893957777239, 
+            "species": "lodelo||kazaf"
+        }, 
+        {
+            "aafiltered": 0.49330085261875767, 
+            "global": 0.4168891045862655, 
+            "species": "cantro||wican"
+        }, 
+        {
+            "aafiltered": 0.5602923264311814, 
+            "global": 0.5069764620237807, 
+            "species": "picme||wican"
+        }, 
+        {
+            "aafiltered": 0.49817295980511567, 
+            "global": 0.4128852220334871, 
+            "species": "lodelo||wican"
+        }, 
+        {
+            "aafiltered": 0.5176613885505481, 
+            "global": 0.4133705411307935, 
+            "species": "picme||cantro"
+        }, 
+        {
+            "aafiltered": 0.8428745432399513, 
+            "global": 0.6980101917010434, 
+            "species": "lodelo||cantro"
+        }, 
+        {
+            "aafiltered": 0.5213154689403167, 
+            "global": 0.41039796165979125, 
+            "species": "lodelo||picme"
+        }
+    ], 
+    "Ser": [
+        {
+            "aafiltered": 0.676829268292683, 
+            "global": 0.4671802960446494, 
+            "species": "zygro||candub"
+        }, 
+        {
+            "aafiltered": 0.6951219512195121, 
+            "global": 0.5087357437515166, 
+            "species": "ogapa||candub"
+        }, 
+        {
+            "aafiltered": 0.7865853658536586, 
+            "global": 0.5889347245814123, 
+            "species": "canta||candub"
+        }, 
+        {
+            "aafiltered": 0.6310975609756098, 
+            "global": 0.48277117204562003, 
+            "species": "cybja||candub"
+        }, 
+        {
+            "aafiltered": 0.6371951219512195, 
+            "global": 0.545013346275176, 
+            "species": "meygui||candub"
+        }, 
+        {
+            "aafiltered": 0.6890243902439024, 
+            "global": 0.5478039310846882, 
+            "species": "clalu||candub"
+        }, 
+        {
+            "aafiltered": 0.6554878048780488, 
+            "global": 0.48962630429507403, 
+            "species": "pacta||candub"
+        }, 
+        {
+            "aafiltered": 0.6310975609756098, 
+            "global": 0.4771293375394321, 
+            "species": "klula||candub"
+        }, 
+        {
+            "aafiltered": 0.9847560975609756, 
+            "global": 0.9161004610531425, 
+            "species": "canalb||candub"
+        }, 
+        {
+            "aafiltered": 0.6219512195121951, 
+            "global": 0.4514074253821888, 
+            "species": "cangla||candub"
+        }, 
+        {
+            "aafiltered": 0.6859756097560976, 
+            "global": 0.4703348701771415, 
+            "species": "torde||candub"
+        }, 
+        {
+            "aafiltered": 0.5609756097560976, 
+            "global": 0.4033608347488473, 
+            "species": "erecy||candub"
+        }, 
+        {
+            "aafiltered": 0.600609756097561, 
+            "global": 0.4576559087600097, 
+            "species": "yarli||candub"
+        }, 
+        {
+            "aafiltered": 0.6036585365853658, 
+            "global": 0.486289735501092, 
+            "species": "picpa||candub"
+        }, 
+        {
+            "aafiltered": 0.6646341463414634, 
+            "global": 0.4703348701771415, 
+            "species": "sacce||candub"
+        }, 
+        {
+            "aafiltered": 0.6707317073170732, 
+            "global": 0.4802232467847609, 
+            "species": "ashgo||candub"
+        }, 
+        {
+            "aafiltered": 0.8170731707317073, 
+            "global": 0.6343120601795681, 
+            "species": "debha||candub"
+        }, 
+        {
+            "aafiltered": 0.6524390243902439, 
+            "global": 0.4700315457413249, 
+            "species": "kazaf||candub"
+        }, 
+        {
+            "aafiltered": 0.6219512195121951, 
+            "global": 0.46360106770201415, 
+            "species": "wican||candub"
+        }, 
+        {
+            "aafiltered": 0.8140243902439024, 
+            "global": 0.6486896384372725, 
+            "species": "cantro||candub"
+        }, 
+        {
+            "aafiltered": 0.6341463414634146, 
+            "global": 0.46153846153846156, 
+            "species": "picme||candub"
+        }, 
+        {
+            "aafiltered": 0.7347560975609756, 
+            "global": 0.5566003397233681, 
+            "species": "lodelo||candub"
+        }, 
+        {
+            "aafiltered": 0.6798780487804879, 
+            "global": 0.5118903178840087, 
+            "species": "ogapa||zygro"
+        }, 
+        {
+            "aafiltered": 0.6615853658536586, 
+            "global": 0.46299441883038095, 
+            "species": "canta||zygro"
+        }, 
+        {
+            "aafiltered": 0.6798780487804879, 
+            "global": 0.4900509585052172, 
+            "species": "cybja||zygro"
+        }, 
+        {
+            "aafiltered": 0.573170731707317, 
+            "global": 0.4434603251637952, 
+            "species": "meygui||zygro"
+        }, 
+        {
+            "aafiltered": 0.6128048780487805, 
+            "global": 0.44619024508614413, 
+            "species": "clalu||zygro"
+        }, 
+        {
+            "aafiltered": 0.676829268292683, 
+            "global": 0.48076923076923084, 
+            "species": "pacta||zygro"
+        }, 
+        {
+            "aafiltered": 0.7560975609756098, 
+            "global": 0.5971851492356224, 
+            "species": "klula||zygro"
+        }, 
+        {
+            "aafiltered": 0.6798780487804879, 
+            "global": 0.4685755884494055, 
+            "species": "canalb||zygro"
+        }, 
+        {
+            "aafiltered": 0.7317073170731707, 
+            "global": 0.5796529968454258, 
+            "species": "cangla||zygro"
+        }, 
+        {
+            "aafiltered": 0.8658536585365854, 
+            "global": 0.6801140499878671, 
+            "species": "torde||zygro"
+        }, 
+        {
+            "aafiltered": 0.6707317073170732, 
+            "global": 0.5296651298228585, 
+            "species": "erecy||zygro"
+        }, 
+        {
+            "aafiltered": 0.6128048780487805, 
+            "global": 0.4714875030332444, 
+            "species": "yarli||zygro"
+        }, 
+        {
+            "aafiltered": 0.625, 
+            "global": 0.48562242174229553, 
+            "species": "picpa||zygro"
+        }, 
+        {
+            "aafiltered": 0.801829268292683, 
+            "global": 0.6288522203348702, 
+            "species": "sacce||zygro"
+        }, 
+        {
+            "aafiltered": 0.7865853658536586, 
+            "global": 0.6138073283183694, 
+            "species": "ashgo||zygro"
+        }, 
+        {
+            "aafiltered": 0.7073170731707317, 
+            "global": 0.48641106527541855, 
+            "species": "debha||zygro"
+        }, 
+        {
+            "aafiltered": 0.7835365853658537, 
+            "global": 0.6276995874787673, 
+            "species": "kazaf||zygro"
+        }, 
+        {
+            "aafiltered": 0.6585365853658537, 
+            "global": 0.48155787430235386, 
+            "species": "wican||zygro"
+        }, 
+        {
+            "aafiltered": 0.6189024390243902, 
+            "global": 0.42956806600339725, 
+            "species": "cantro||zygro"
+        }, 
+        {
+            "aafiltered": 0.6280487804878049, 
+            "global": 0.4683329289007523, 
+            "species": "picme||zygro"
+        }, 
+        {
+            "aafiltered": 0.6067073170731707, 
+            "global": 0.42750545983984467, 
+            "species": "lodelo||zygro"
+        }, 
+        {
+            "aafiltered": 0.6676829268292683, 
+            "global": 0.5077651055569037, 
+            "species": "canta||ogapa"
+        }, 
+        {
+            "aafiltered": 0.6920731707317073, 
+            "global": 0.5237199708808542, 
+            "species": "cybja||ogapa"
+        }, 
+        {
+            "aafiltered": 0.5762195121951219, 
+            "global": 0.48386314001455966, 
+            "species": "meygui||ogapa"
+        }, 
+        {
+            "aafiltered": 0.6097560975609756, 
+            "global": 0.48216452317398684, 
+            "species": "clalu||ogapa"
+        }, 
+        {
+            "aafiltered": 0.725609756097561, 
+            "global": 0.5417981072555205, 
+            "species": "pacta||ogapa"
+        }, 
+        {
+            "aafiltered": 0.676829268292683, 
+            "global": 0.5149842271293376, 
+            "species": "klula||ogapa"
+        }, 
+        {
+            "aafiltered": 0.6951219512195121, 
+            "global": 0.5096457170589662, 
+            "species": "canalb||ogapa"
+        }, 
+        {
+            "aafiltered": 0.649390243902439, 
+            "global": 0.490596942489687, 
+            "species": "cangla||ogapa"
+        }, 
+        {
+            "aafiltered": 0.6859756097560976, 
+            "global": 0.5146202378063577, 
+            "species": "torde||ogapa"
+        }, 
+        {
+            "aafiltered": 0.5884146341463414, 
+            "global": 0.4501941276389225, 
+            "species": "erecy||ogapa"
+        }, 
+        {
+            "aafiltered": 0.6189024390243902, 
+            "global": 0.5019412763892259, 
+            "species": "yarli||ogapa"
+        }, 
+        {
+            "aafiltered": 0.6798780487804879, 
+            "global": 0.5532031060422228, 
+            "species": "picpa||ogapa"
+        }, 
+        {
+            "aafiltered": 0.7073170731707317, 
+            "global": 0.5107376850279058, 
+            "species": "sacce||ogapa"
+        }, 
+        {
+            "aafiltered": 0.6890243902439024, 
+            "global": 0.5211720456199952, 
+            "species": "ashgo||ogapa"
+        }, 
+        {
+            "aafiltered": 0.7042682926829268, 
+            "global": 0.5283305023052657, 
+            "species": "debha||ogapa"
+        }, 
+        {
+            "aafiltered": 0.6890243902439024, 
+            "global": 0.5072191215724339, 
+            "species": "kazaf||ogapa"
+        }, 
+        {
+            "aafiltered": 0.6554878048780488, 
+            "global": 0.519776753215239, 
+            "species": "wican||ogapa"
+        }, 
+        {
+            "aafiltered": 0.625, 
+            "global": 0.4531667071099248, 
+            "species": "cantro||ogapa"
+        }, 
+        {
+            "aafiltered": 0.7621951219512195, 
+            "global": 0.5572069885950012, 
+            "species": "picme||ogapa"
+        }, 
+        {
+            "aafiltered": 0.6128048780487805, 
+            "global": 0.4503761223004126, 
+            "species": "lodelo||ogapa"
+        }, 
+        {
+            "aafiltered": 0.6920731707317073, 
+            "global": 0.5683086629458869, 
+            "species": "cybja||canta"
+        }, 
+        {
+            "aafiltered": 0.6524390243902439, 
+            "global": 0.5288764862897355, 
+            "species": "meygui||canta"
+        }, 
+        {
+            "aafiltered": 0.698170731707317, 
+            "global": 0.545619995146809, 
+            "species": "clalu||canta"
+        }, 
+        {
+            "aafiltered": 0.6585365853658537, 
+            "global": 0.53445765590876, 
+            "species": "pacta||canta"
+        }, 
+        {
+            "aafiltered": 0.625, 
+            "global": 0.471790827469061, 
+            "species": "klula||canta"
+        }, 
+        {
+            "aafiltered": 0.7896341463414634, 
+            "global": 0.5915433147294346, 
+            "species": "canalb||canta"
+        }, 
+        {
+            "aafiltered": 0.6128048780487805, 
+            "global": 0.44983013831594265, 
+            "species": "cangla||canta"
+        }, 
+        {
+            "aafiltered": 0.6829268292682927, 
+            "global": 0.47185149235622426, 
+            "species": "torde||canta"
+        }, 
+        {
+            "aafiltered": 0.524390243902439, 
+            "global": 0.4066367386556661, 
+            "species": "erecy||canta"
+        }, 
+        {
+            "aafiltered": 0.6189024390243902, 
+            "global": 0.46390439213783063, 
+            "species": "yarli||canta"
+        }, 
+        {
+            "aafiltered": 0.6158536585365854, 
+            "global": 0.48362048046590633, 
+            "species": "picpa||canta"
+        }, 
+        {
+            "aafiltered": 0.6524390243902439, 
+            "global": 0.4677869449162825, 
+            "species": "sacce||canta"
+        }, 
+        {
+            "aafiltered": 0.6524390243902439, 
+            "global": 0.4831958262557632, 
+            "species": "ashgo||canta"
+        }, 
+        {
+            "aafiltered": 0.8170731707317073, 
+            "global": 0.6360713419073041, 
+            "species": "debha||canta"
+        }, 
+        {
+            "aafiltered": 0.6219512195121951, 
+            "global": 0.46493569521960687, 
+            "species": "kazaf||canta"
+        }, 
+        {
+            "aafiltered": 0.6402439024390244, 
+            "global": 0.514498908032031, 
+            "species": "wican||canta"
+        }, 
+        {
+            "aafiltered": 0.7012195121951219, 
+            "global": 0.5187454501334627, 
+            "species": "cantro||canta"
+        }, 
+        {
+            "aafiltered": 0.6432926829268293, 
+            "global": 0.5131036156272749, 
+            "species": "picme||canta"
+        }, 
+        {
+            "aafiltered": 0.6707317073170732, 
+            "global": 0.4953894685755884, 
+            "species": "lodelo||canta"
+        }, 
+        {
+            "aafiltered": 0.5640243902439024, 
+            "global": 0.46244843484591125, 
+            "species": "meygui||cybja"
+        }, 
+        {
+            "aafiltered": 0.5823170731707317, 
+            "global": 0.4549259888376608, 
+            "species": "clalu||cybja"
+        }, 
+        {
+            "aafiltered": 0.6920731707317073, 
+            "global": 0.5441640378548895, 
+            "species": "pacta||cybja"
+        }, 
+        {
+            "aafiltered": 0.6585365853658537, 
+            "global": 0.502729919922349, 
+            "species": "klula||cybja"
+        }, 
+        {
+            "aafiltered": 0.6341463414634146, 
+            "global": 0.4834384858044164, 
+            "species": "canalb||cybja"
+        }, 
+        {
+            "aafiltered": 0.6524390243902439, 
+            "global": 0.4739140985197767, 
+            "species": "cangla||cybja"
+        }, 
+        {
+            "aafiltered": 0.6920731707317073, 
+            "global": 0.49696675564183446, 
+            "species": "torde||cybja"
+        }, 
+        {
+            "aafiltered": 0.5823170731707317, 
+            "global": 0.42726280029119146, 
+            "species": "erecy||cybja"
+        }, 
+        {
+            "aafiltered": 0.6128048780487805, 
+            "global": 0.47785731618539184, 
+            "species": "yarli||cybja"
+        }, 
+        {
+            "aafiltered": 0.6158536585365854, 
+            "global": 0.49126425624848336, 
+            "species": "picpa||cybja"
+        }, 
+        {
+            "aafiltered": 0.6829268292682927, 
+            "global": 0.4959354525600582, 
+            "species": "sacce||cybja"
+        }, 
+        {
+            "aafiltered": 0.6737804878048781, 
+            "global": 0.5096457170589662, 
+            "species": "ashgo||cybja"
+        }, 
+        {
+            "aafiltered": 0.6646341463414634, 
+            "global": 0.5028512496966756, 
+            "species": "debha||cybja"
+        }, 
+        {
+            "aafiltered": 0.6615853658536586, 
+            "global": 0.49532880368842513, 
+            "species": "kazaf||cybja"
+        }, 
+        {
+            "aafiltered": 0.7317073170731707, 
+            "global": 0.634494054841058, 
+            "species": "wican||cybja"
+        }, 
+        {
+            "aafiltered": 0.5701219512195121, 
+            "global": 0.4315093423926232, 
+            "species": "cantro||cybja"
+        }, 
+        {
+            "aafiltered": 0.6432926829268293, 
+            "global": 0.5243266197524873, 
+            "species": "picme||cybja"
+        }, 
+        {
+            "aafiltered": 0.5792682926829268, 
+            "global": 0.42210628488231006, 
+            "species": "lodelo||cybja"
+        }, 
+        {
+            "aafiltered": 0.6615853658536586, 
+            "global": 0.5409487988352342, 
+            "species": "clalu||meygui"
+        }, 
+        {
+            "aafiltered": 0.5365853658536586, 
+            "global": 0.4517714147051686, 
+            "species": "pacta||meygui"
+        }, 
+        {
+            "aafiltered": 0.5213414634146342, 
+            "global": 0.451650084930842, 
+            "species": "klula||meygui"
+        }, 
+        {
+            "aafiltered": 0.6341463414634146, 
+            "global": 0.5468939577772385, 
+            "species": "canalb||meygui"
+        }, 
+        {
+            "aafiltered": 0.5304878048780488, 
+            "global": 0.4288400873574375, 
+            "species": "cangla||meygui"
+        }, 
+        {
+            "aafiltered": 0.573170731707317, 
+            "global": 0.44898082989565635, 
+            "species": "torde||meygui"
+        }, 
+        {
+            "aafiltered": 0.46036585365853666, 
+            "global": 0.38467604950254786, 
+            "species": "erecy||meygui"
+        }, 
+        {
+            "aafiltered": 0.5274390243902439, 
+            "global": 0.4400024265954865, 
+            "species": "yarli||meygui"
+        }, 
+        {
+            "aafiltered": 0.5091463414634146, 
+            "global": 0.4708201892744479, 
+            "species": "picpa||meygui"
+        }, 
+        {
+            "aafiltered": 0.5762195121951219, 
+            "global": 0.44831351613686, 
+            "species": "sacce||meygui"
+        }, 
+        {
+            "aafiltered": 0.5487804878048781, 
+            "global": 0.45322737199708807, 
+            "species": "ashgo||meygui"
+        }, 
+        {
+            "aafiltered": 0.676829268292683, 
+            "global": 0.5819582625576316, 
+            "species": "debha||meygui"
+        }, 
+        {
+            "aafiltered": 0.5457317073170732, 
+            "global": 0.4471002183935937, 
+            "species": "kazaf||meygui"
+        }, 
+        {
+            "aafiltered": 0.5304878048780488, 
+            "global": 0.4425503518563456, 
+            "species": "wican||meygui"
+        }, 
+        {
+            "aafiltered": 0.6067073170731707, 
+            "global": 0.503518563455472, 
+            "species": "cantro||meygui"
+        }, 
+        {
+            "aafiltered": 0.5457317073170732, 
+            "global": 0.4342999272021354, 
+            "species": "picme||meygui"
+        }, 
+        {
+            "aafiltered": 0.5853658536585366, 
+            "global": 0.49071827226401354, 
+            "species": "lodelo||meygui"
+        }, 
+        {
+            "aafiltered": 0.6128048780487805, 
+            "global": 0.45729191943702985, 
+            "species": "pacta||clalu"
+        }, 
+        {
+            "aafiltered": 0.5945121951219512, 
+            "global": 0.45498665372482405, 
+            "species": "klula||clalu"
+        }, 
+        {
+            "aafiltered": 0.6859756097560976, 
+            "global": 0.5498058723610774, 
+            "species": "canalb||clalu"
+        }, 
+        {
+            "aafiltered": 0.5670731707317073, 
+            "global": 0.43187333171560294, 
+            "species": "cangla||clalu"
+        }, 
+        {
+            "aafiltered": 0.6310975609756098, 
+            "global": 0.4508007765105557, 
+            "species": "torde||clalu"
+        }, 
+        {
+            "aafiltered": 0.5213414634146342, 
+            "global": 0.3867993205532638, 
+            "species": "erecy||clalu"
+        }, 
+        {
+            "aafiltered": 0.5823170731707317, 
+            "global": 0.4428536762921621, 
+            "species": "yarli||clalu"
+        }, 
+        {
+            "aafiltered": 0.5548780487804879, 
+            "global": 0.47106284882310123, 
+            "species": "picpa||clalu"
+        }, 
+        {
+            "aafiltered": 0.6128048780487805, 
+            "global": 0.44728221305508375, 
+            "species": "sacce||clalu"
+        }, 
+        {
+            "aafiltered": 0.6097560975609756, 
+            "global": 0.4620844455229314, 
+            "species": "ashgo||clalu"
+        }, 
+        {
+            "aafiltered": 0.7347560975609756, 
+            "global": 0.5913613200679447, 
+            "species": "debha||clalu"
+        }, 
+        {
+            "aafiltered": 0.5975609756097561, 
+            "global": 0.44418830380975494, 
+            "species": "kazaf||clalu"
+        }, 
+        {
+            "aafiltered": 0.5670731707317073, 
+            "global": 0.437939820431934, 
+            "species": "wican||clalu"
+        }, 
+        {
+            "aafiltered": 0.6951219512195121, 
+            "global": 0.521536034942975, 
+            "species": "cantro||clalu"
+        }, 
+        {
+            "aafiltered": 0.5914634146341463, 
+            "global": 0.44006309148264977, 
+            "species": "picme||clalu"
+        }, 
+        {
+            "aafiltered": 0.6524390243902439, 
+            "global": 0.48926231497209416, 
+            "species": "lodelo||clalu"
+        }, 
+        {
+            "aafiltered": 0.6615853658536586, 
+            "global": 0.4912035913613201, 
+            "species": "klula||pacta"
+        }, 
+        {
+            "aafiltered": 0.6646341463414634, 
+            "global": 0.4922348944430963, 
+            "species": "canalb||pacta"
+        }, 
+        {
+            "aafiltered": 0.6189024390243902, 
+            "global": 0.46238776995874786, 
+            "species": "cangla||pacta"
+        }, 
+        {
+            "aafiltered": 0.6646341463414634, 
+            "global": 0.4868357194855617, 
+            "species": "torde||pacta"
+        }, 
+        {
+            "aafiltered": 0.5670731707317073, 
+            "global": 0.41980101917010426, 
+            "species": "erecy||pacta"
+        }, 
+        {
+            "aafiltered": 0.6128048780487805, 
+            "global": 0.47100218393593796, 
+            "species": "yarli||pacta"
+        }, 
+        {
+            "aafiltered": 0.649390243902439, 
+            "global": 0.5066124727008008, 
+            "species": "picpa||pacta"
+        }, 
+        {
+            "aafiltered": 0.6890243902439024, 
+            "global": 0.48016258189759764, 
+            "species": "sacce||pacta"
+        }, 
+        {
+            "aafiltered": 0.6615853658536586, 
+            "global": 0.5014559572919194, 
+            "species": "ashgo||pacta"
+        }, 
+        {
+            "aafiltered": 0.7012195121951219, 
+            "global": 0.5157728706624606, 
+            "species": "debha||pacta"
+        }, 
+        {
+            "aafiltered": 0.6280487804878049, 
+            "global": 0.4770686726522688, 
+            "species": "kazaf||pacta"
+        }, 
+        {
+            "aafiltered": 0.6829268292682927, 
+            "global": 0.6106527541858772, 
+            "species": "wican||pacta"
+        }, 
+        {
+            "aafiltered": 0.6036585365853658, 
+            "global": 0.433450618781849, 
+            "species": "cantro||pacta"
+        }, 
+        {
+            "aafiltered": 0.6798780487804879, 
+            "global": 0.5171074981800534, 
+            "species": "picme||pacta"
+        }, 
+        {
+            "aafiltered": 0.573170731707317, 
+            "global": 0.4253821887891289, 
+            "species": "lodelo||pacta"
+        }, 
+        {
+            "aafiltered": 0.6341463414634146, 
+            "global": 0.4794952681388013, 
+            "species": "canalb||klula"
+        }, 
+        {
+            "aafiltered": 0.7073170731707317, 
+            "global": 0.5609682115991265, 
+            "species": "cangla||klula"
+        }, 
+        {
+            "aafiltered": 0.7652439024390244, 
+            "global": 0.6041009463722398, 
+            "species": "torde||klula"
+        }, 
+        {
+            "aafiltered": 0.6646341463414634, 
+            "global": 0.5396141713176413, 
+            "species": "erecy||klula"
+        }, 
+        {
+            "aafiltered": 0.5670731707317073, 
+            "global": 0.47270080077651055, 
+            "species": "yarli||klula"
+        }, 
+        {
+            "aafiltered": 0.6189024390243902, 
+            "global": 0.4922955593302596, 
+            "species": "picpa||klula"
+        }, 
+        {
+            "aafiltered": 0.7378048780487805, 
+            "global": 0.5889953894685755, 
+            "species": "sacce||klula"
+        }, 
+        {
+            "aafiltered": 0.801829268292683, 
+            "global": 0.6246663431206018, 
+            "species": "ashgo||klula"
+        }, 
+        {
+            "aafiltered": 0.6798780487804879, 
+            "global": 0.494904149478282, 
+            "species": "debha||klula"
+        }, 
+        {
+            "aafiltered": 0.7408536585365854, 
+            "global": 0.5913613200679447, 
+            "species": "kazaf||klula"
+        }, 
+        {
+            "aafiltered": 0.6371951219512195, 
+            "global": 0.49011162339238057, 
+            "species": "wican||klula"
+        }, 
+        {
+            "aafiltered": 0.5762195121951219, 
+            "global": 0.43363261344333903, 
+            "species": "cantro||klula"
+        }, 
+        {
+            "aafiltered": 0.625, 
+            "global": 0.47676534821645233, 
+            "species": "picme||klula"
+        }, 
+        {
+            "aafiltered": 0.5762195121951219, 
+            "global": 0.4307813637466634, 
+            "species": "lodelo||klula"
+        }, 
+        {
+            "aafiltered": 0.625, 
+            "global": 0.45183207959233196, 
+            "species": "cangla||canalb"
+        }, 
+        {
+            "aafiltered": 0.6890243902439024, 
+            "global": 0.4722761465663674, 
+            "species": "torde||canalb"
+        }, 
+        {
+            "aafiltered": 0.5579268292682927, 
+            "global": 0.40554477068672656, 
+            "species": "erecy||canalb"
+        }, 
+        {
+            "aafiltered": 0.5914634146341463, 
+            "global": 0.4583232225188061, 
+            "species": "yarli||canalb"
+        }, 
+        {
+            "aafiltered": 0.600609756097561, 
+            "global": 0.4890803203106042, 
+            "species": "picpa||canalb"
+        }, 
+        {
+            "aafiltered": 0.6676829268292683, 
+            "global": 0.4708808541616112, 
+            "species": "sacce||canalb"
+        }, 
+        {
+            "aafiltered": 0.6676829268292683, 
+            "global": 0.48186119873817035, 
+            "species": "ashgo||canalb"
+        }, 
+        {
+            "aafiltered": 0.8140243902439024, 
+            "global": 0.6358286823586509, 
+            "species": "debha||canalb"
+        }, 
+        {
+            "aafiltered": 0.6554878048780488, 
+            "global": 0.47100218393593796, 
+            "species": "kazaf||canalb"
+        }, 
+        {
+            "aafiltered": 0.625, 
+            "global": 0.4639650570249939, 
+            "species": "wican||canalb"
+        }, 
+        {
+            "aafiltered": 0.8170731707317073, 
+            "global": 0.6553021111380732, 
+            "species": "cantro||canalb"
+        }, 
+        {
+            "aafiltered": 0.6341463414634146, 
+            "global": 0.4619631157486047, 
+            "species": "picme||canalb"
+        }, 
+        {
+            "aafiltered": 0.7408536585365854, 
+            "global": 0.5572676534821646, 
+            "species": "lodelo||canalb"
+        }, 
+        {
+            "aafiltered": 0.75, 
+            "global": 0.5865081290948799, 
+            "species": "torde||cangla"
+        }, 
+        {
+            "aafiltered": 0.6463414634146342, 
+            "global": 0.5205047318611987, 
+            "species": "erecy||cangla"
+        }, 
+        {
+            "aafiltered": 0.5945121951219512, 
+            "global": 0.45328803688425134, 
+            "species": "yarli||cangla"
+        }, 
+        {
+            "aafiltered": 0.6219512195121951, 
+            "global": 0.47239747634069396, 
+            "species": "picpa||cangla"
+        }, 
+        {
+            "aafiltered": 0.75, 
+            "global": 0.5915433147294346, 
+            "species": "sacce||cangla"
+        }, 
+        {
+            "aafiltered": 0.7134146341463414, 
+            "global": 0.5598155787430236, 
+            "species": "ashgo||cangla"
+        }, 
+        {
+            "aafiltered": 0.6463414634146342, 
+            "global": 0.46554234409124007, 
+            "species": "debha||cangla"
+        }, 
+        {
+            "aafiltered": 0.7317073170731707, 
+            "global": 0.5846275175928173, 
+            "species": "kazaf||cangla"
+        }, 
+        {
+            "aafiltered": 0.6189024390243902, 
+            "global": 0.46499636010677015, 
+            "species": "wican||cangla"
+        }, 
+        {
+            "aafiltered": 0.5701219512195121, 
+            "global": 0.42325891773841295, 
+            "species": "cantro||cangla"
+        }, 
+        {
+            "aafiltered": 0.5975609756097561, 
+            "global": 0.4557146323707838, 
+            "species": "picme||cangla"
+        }, 
+        {
+            "aafiltered": 0.5762195121951219, 
+            "global": 0.42331958262557634, 
+            "species": "lodelo||cangla"
+        }, 
+        {
+            "aafiltered": 0.6920731707317073, 
+            "global": 0.5373695704925989, 
+            "species": "erecy||torde"
+        }, 
+        {
+            "aafiltered": 0.6280487804878049, 
+            "global": 0.4762800291191458, 
+            "species": "yarli||torde"
+        }, 
+        {
+            "aafiltered": 0.6524390243902439, 
+            "global": 0.49350885707352576, 
+            "species": "picpa||torde"
+        }, 
+        {
+            "aafiltered": 0.8140243902439024, 
+            "global": 0.6385586022809998, 
+            "species": "sacce||torde"
+        }, 
+        {
+            "aafiltered": 0.8140243902439024, 
+            "global": 0.6116233923804901, 
+            "species": "ashgo||torde"
+        }, 
+        {
+            "aafiltered": 0.7286585365853658, 
+            "global": 0.4902329531667071, 
+            "species": "debha||torde"
+        }, 
+        {
+            "aafiltered": 0.7957317073170732, 
+            "global": 0.6290342149963601, 
+            "species": "kazaf||torde"
+        }, 
+        {
+            "aafiltered": 0.676829268292683, 
+            "global": 0.4848944430963358, 
+            "species": "wican||torde"
+        }, 
+        {
+            "aafiltered": 0.625, 
+            "global": 0.4333899538946857, 
+            "species": "cantro||torde"
+        }, 
+        {
+            "aafiltered": 0.6554878048780488, 
+            "global": 0.47676534821645233, 
+            "species": "picme||torde"
+        }, 
+        {
+            "aafiltered": 0.6067073170731707, 
+            "global": 0.43266197524872596, 
+            "species": "lodelo||torde"
+        }, 
+        {
+            "aafiltered": 0.5152439024390244, 
+            "global": 0.4211356466876972, 
+            "species": "yarli||erecy"
+        }, 
+        {
+            "aafiltered": 0.524390243902439, 
+            "global": 0.4235015772870663, 
+            "species": "picpa||erecy"
+        }, 
+        {
+            "aafiltered": 0.676829268292683, 
+            "global": 0.5181388012618297, 
+            "species": "sacce||erecy"
+        }, 
+        {
+            "aafiltered": 0.7408536585365854, 
+            "global": 0.5894200436787188, 
+            "species": "ashgo||erecy"
+        }, 
+        {
+            "aafiltered": 0.5853658536585366, 
+            "global": 0.4228949284154331, 
+            "species": "debha||erecy"
+        }, 
+        {
+            "aafiltered": 0.6646341463414634, 
+            "global": 0.5245086144139772, 
+            "species": "kazaf||erecy"
+        }, 
+        {
+            "aafiltered": 0.5426829268292683, 
+            "global": 0.4186483863140015, 
+            "species": "wican||erecy"
+        }, 
+        {
+            "aafiltered": 0.5914634146341463, 
+            "global": 0.5342149963601067, 
+            "species": "cantro||erecy"
+        }, 
+        {
+            "aafiltered": 0.5304878048780488, 
+            "global": 0.41440184421256976, 
+            "species": "picme||erecy"
+        }, 
+        {
+            "aafiltered": 0.6067073170731707, 
+            "global": 0.5379155544770686, 
+            "species": "lodelo||erecy"
+        }, 
+        {
+            "aafiltered": 0.600609756097561, 
+            "global": 0.47561271536034944, 
+            "species": "picpa||yarli"
+        }, 
+        {
+            "aafiltered": 0.6158536585365854, 
+            "global": 0.4634190730405241, 
+            "species": "sacce||yarli"
+        }, 
+        {
+            "aafiltered": 0.6036585365853658, 
+            "global": 0.48095122543072066, 
+            "species": "ashgo||yarli"
+        }, 
+        {
+            "aafiltered": 0.6310975609756098, 
+            "global": 0.4788886192671682, 
+            "species": "debha||yarli"
+        }, 
+        {
+            "aafiltered": 0.5853658536585366, 
+            "global": 0.46614899296287304, 
+            "species": "kazaf||yarli"
+        }, 
+        {
+            "aafiltered": 0.5823170731707317, 
+            "global": 0.4660276631885465, 
+            "species": "wican||yarli"
+        }, 
+        {
+            "aafiltered": 0.5426829268292683, 
+            "global": 0.4238049017228829, 
+            "species": "cantro||yarli"
+        }, 
+        {
+            "aafiltered": 0.5640243902439024, 
+            "global": 0.4557146323707838, 
+            "species": "picme||yarli"
+        }, 
+        {
+            "aafiltered": 0.5335365853658537, 
+            "global": 0.41670710992477555, 
+            "species": "lodelo||yarli"
+        }, 
+        {
+            "aafiltered": 0.6646341463414634, 
+            "global": 0.4834991506915798, 
+            "species": "sacce||picpa"
+        }, 
+        {
+            "aafiltered": 0.6189024390243902, 
+            "global": 0.4912035913613201, 
+            "species": "ashgo||picpa"
+        }, 
+        {
+            "aafiltered": 0.6219512195121951, 
+            "global": 0.5043678718757583, 
+            "species": "debha||picpa"
+        }, 
+        {
+            "aafiltered": 0.6189024390243902, 
+            "global": 0.4840451346760495, 
+            "species": "kazaf||picpa"
+        }, 
+        {
+            "aafiltered": 0.5792682926829268, 
+            "global": 0.4777359864110653, 
+            "species": "wican||picpa"
+        }, 
+        {
+            "aafiltered": 0.5365853658536586, 
+            "global": 0.4348459111866052, 
+            "species": "cantro||picpa"
+        }, 
+        {
+            "aafiltered": 0.6402439024390244, 
+            "global": 0.48786702256733805, 
+            "species": "picme||picpa"
+        }, 
+        {
+            "aafiltered": 0.5091463414634146, 
+            "global": 0.43696918223732106, 
+            "species": "lodelo||picpa"
+        }, 
+        {
+            "aafiltered": 0.7713414634146342, 
+            "global": 0.599854404270808, 
+            "species": "ashgo||sacce"
+        }, 
+        {
+            "aafiltered": 0.7012195121951219, 
+            "global": 0.4887769958747876, 
+            "species": "debha||sacce"
+        }, 
+        {
+            "aafiltered": 0.7865853658536586, 
+            "global": 0.6343120601795681, 
+            "species": "kazaf||sacce"
+        }, 
+        {
+            "aafiltered": 0.6585365853658537, 
+            "global": 0.47955593302596455, 
+            "species": "wican||sacce"
+        }, 
+        {
+            "aafiltered": 0.6036585365853658, 
+            "global": 0.42702014074253825, 
+            "species": "cantro||sacce"
+        }, 
+        {
+            "aafiltered": 0.6554878048780488, 
+            "global": 0.47160883280757093, 
+            "species": "picme||sacce"
+        }, 
+        {
+            "aafiltered": 0.5945121951219512, 
+            "global": 0.4292040766804174, 
+            "species": "lodelo||sacce"
+        }, 
+        {
+            "aafiltered": 0.698170731707317, 
+            "global": 0.5004853190973064, 
+            "species": "debha||ashgo"
+        }, 
+        {
+            "aafiltered": 0.7835365853658537, 
+            "global": 0.6012496966755642, 
+            "species": "kazaf||ashgo"
+        }, 
+        {
+            "aafiltered": 0.6585365853658537, 
+            "global": 0.4993933511283669, 
+            "species": "wican||ashgo"
+        }, 
+        {
+            "aafiltered": 0.6097560975609756, 
+            "global": 0.4310846881824799, 
+            "species": "cantro||ashgo"
+        }, 
+        {
+            "aafiltered": 0.6371951219512195, 
+            "global": 0.4770686726522688, 
+            "species": "picme||ashgo"
+        }, 
+        {
+            "aafiltered": 0.600609756097561, 
+            "global": 0.43187333171560294, 
+            "species": "lodelo||ashgo"
+        }, 
+        {
+            "aafiltered": 0.6707317073170732, 
+            "global": 0.4845911186605193, 
+            "species": "kazaf||debha"
+        }, 
+        {
+            "aafiltered": 0.6676829268292683, 
+            "global": 0.4879883523416646, 
+            "species": "wican||debha"
+        }, 
+        {
+            "aafiltered": 0.7439024390243902, 
+            "global": 0.5578136374666343, 
+            "species": "cantro||debha"
+        }, 
+        {
+            "aafiltered": 0.6646341463414634, 
+            "global": 0.4765833535549624, 
+            "species": "picme||debha"
+        }, 
+        {
+            "aafiltered": 0.7225609756097561, 
+            "global": 0.5309390924532881, 
+            "species": "lodelo||debha"
+        }, 
+        {
+            "aafiltered": 0.6463414634146342, 
+            "global": 0.481193884979374, 
+            "species": "wican||kazaf"
+        }, 
+        {
+            "aafiltered": 0.5884146341463414, 
+            "global": 0.43096335840815336, 
+            "species": "cantro||kazaf"
+        }, 
+        {
+            "aafiltered": 0.6189024390243902, 
+            "global": 0.47130550837175444, 
+            "species": "picme||kazaf"
+        }, 
+        {
+            "aafiltered": 0.5975609756097561, 
+            "global": 0.4296893957777239, 
+            "species": "lodelo||kazaf"
+        }, 
+        {
+            "aafiltered": 0.5457317073170732, 
+            "global": 0.4168891045862655, 
+            "species": "cantro||wican"
+        }, 
+        {
+            "aafiltered": 0.6067073170731707, 
+            "global": 0.5069764620237807, 
+            "species": "picme||wican"
+        }, 
+        {
+            "aafiltered": 0.5457317073170732, 
+            "global": 0.4128852220334871, 
+            "species": "lodelo||wican"
+        }, 
+        {
+            "aafiltered": 0.5762195121951219, 
+            "global": 0.4133705411307935, 
+            "species": "picme||cantro"
+        }, 
+        {
+            "aafiltered": 0.801829268292683, 
+            "global": 0.6980101917010434, 
+            "species": "lodelo||cantro"
+        }, 
+        {
+            "aafiltered": 0.5914634146341463, 
+            "global": 0.41039796165979125, 
+            "species": "lodelo||picme"
+        }
+    ], 
+    "Ala": [
+        {
+            "aafiltered": 0.6734006734006734, 
+            "global": 0.4671802960446494, 
+            "species": "zygro||candub"
+        }, 
+        {
+            "aafiltered": 0.7070707070707071, 
+            "global": 0.5087357437515166, 
+            "species": "ogapa||candub"
+        }, 
+        {
+            "aafiltered": 0.8114478114478114, 
+            "global": 0.5889347245814123, 
+            "species": "canta||candub"
+        }, 
+        {
+            "aafiltered": 0.6531986531986532, 
+            "global": 0.48277117204562003, 
+            "species": "cybja||candub"
+        }, 
+        {
+            "aafiltered": 0.7104377104377104, 
+            "global": 0.545013346275176, 
+            "species": "meygui||candub"
+        }, 
+        {
+            "aafiltered": 0.7407407407407407, 
+            "global": 0.5478039310846882, 
+            "species": "clalu||candub"
+        }, 
+        {
+            "aafiltered": 0.6296296296296297, 
+            "global": 0.48962630429507403, 
+            "species": "pacta||candub"
+        }, 
+        {
+            "aafiltered": 0.7070707070707071, 
+            "global": 0.4771293375394321, 
+            "species": "klula||candub"
+        }, 
+        {
+            "aafiltered": 0.9797979797979798, 
+            "global": 0.9161004610531425, 
+            "species": "canalb||candub"
+        }, 
+        {
+            "aafiltered": 0.6767676767676768, 
+            "global": 0.4514074253821888, 
+            "species": "cangla||candub"
+        }, 
+        {
+            "aafiltered": 0.6868686868686869, 
+            "global": 0.4703348701771415, 
+            "species": "torde||candub"
+        }, 
+        {
+            "aafiltered": 0.622895622895623, 
+            "global": 0.4033608347488473, 
+            "species": "erecy||candub"
+        }, 
+        {
+            "aafiltered": 0.6599326599326599, 
+            "global": 0.4576559087600097, 
+            "species": "yarli||candub"
+        }, 
+        {
+            "aafiltered": 0.6565656565656566, 
+            "global": 0.486289735501092, 
+            "species": "picpa||candub"
+        }, 
+        {
+            "aafiltered": 0.7205387205387206, 
+            "global": 0.4703348701771415, 
+            "species": "sacce||candub"
+        }, 
+        {
+            "aafiltered": 0.7272727272727273, 
+            "global": 0.4802232467847609, 
+            "species": "ashgo||candub"
+        }, 
+        {
+            "aafiltered": 0.8215488215488216, 
+            "global": 0.6343120601795681, 
+            "species": "debha||candub"
+        }, 
+        {
+            "aafiltered": 0.6902356902356902, 
+            "global": 0.4700315457413249, 
+            "species": "kazaf||candub"
+        }, 
+        {
+            "aafiltered": 0.5622895622895623, 
+            "global": 0.46360106770201415, 
+            "species": "wican||candub"
+        }, 
+        {
+            "aafiltered": 0.835016835016835, 
+            "global": 0.6486896384372725, 
+            "species": "cantro||candub"
+        }, 
+        {
+            "aafiltered": 0.632996632996633, 
+            "global": 0.46153846153846156, 
+            "species": "picme||candub"
+        }, 
+        {
+            "aafiltered": 0.8249158249158249, 
+            "global": 0.5566003397233681, 
+            "species": "lodelo||candub"
+        }, 
+        {
+            "aafiltered": 0.6902356902356902, 
+            "global": 0.5118903178840087, 
+            "species": "ogapa||zygro"
+        }, 
+        {
+            "aafiltered": 0.6363636363636364, 
+            "global": 0.46299441883038095, 
+            "species": "canta||zygro"
+        }, 
+        {
+            "aafiltered": 0.67003367003367, 
+            "global": 0.4900509585052172, 
+            "species": "cybja||zygro"
+        }, 
+        {
+            "aafiltered": 0.5959595959595959, 
+            "global": 0.4434603251637952, 
+            "species": "meygui||zygro"
+        }, 
+        {
+            "aafiltered": 0.6127946127946128, 
+            "global": 0.44619024508614413, 
+            "species": "clalu||zygro"
+        }, 
+        {
+            "aafiltered": 0.6430976430976431, 
+            "global": 0.48076923076923084, 
+            "species": "pacta||zygro"
+        }, 
+        {
+            "aafiltered": 0.8114478114478114, 
+            "global": 0.5971851492356224, 
+            "species": "klula||zygro"
+        }, 
+        {
+            "aafiltered": 0.6734006734006734, 
+            "global": 0.4685755884494055, 
+            "species": "canalb||zygro"
+        }, 
+        {
+            "aafiltered": 0.7676767676767676, 
+            "global": 0.5796529968454258, 
+            "species": "cangla||zygro"
+        }, 
+        {
+            "aafiltered": 0.8585858585858586, 
+            "global": 0.6801140499878671, 
+            "species": "torde||zygro"
+        }, 
+        {
+            "aafiltered": 0.7003367003367004, 
+            "global": 0.5296651298228585, 
+            "species": "erecy||zygro"
+        }, 
+        {
+            "aafiltered": 0.696969696969697, 
+            "global": 0.4714875030332444, 
+            "species": "yarli||zygro"
+        }, 
+        {
+            "aafiltered": 0.6430976430976431, 
+            "global": 0.48562242174229553, 
+            "species": "picpa||zygro"
+        }, 
+        {
+            "aafiltered": 0.7946127946127947, 
+            "global": 0.6288522203348702, 
+            "species": "sacce||zygro"
+        }, 
+        {
+            "aafiltered": 0.8013468013468014, 
+            "global": 0.6138073283183694, 
+            "species": "ashgo||zygro"
+        }, 
+        {
+            "aafiltered": 0.6767676767676768, 
+            "global": 0.48641106527541855, 
+            "species": "debha||zygro"
+        }, 
+        {
+            "aafiltered": 0.7676767676767676, 
+            "global": 0.6276995874787673, 
+            "species": "kazaf||zygro"
+        }, 
+        {
+            "aafiltered": 0.6060606060606061, 
+            "global": 0.48155787430235386, 
+            "species": "wican||zygro"
+        }, 
+        {
+            "aafiltered": 0.6060606060606061, 
+            "global": 0.42956806600339725, 
+            "species": "cantro||zygro"
+        }, 
+        {
+            "aafiltered": 0.6262626262626263, 
+            "global": 0.4683329289007523, 
+            "species": "picme||zygro"
+        }, 
+        {
+            "aafiltered": 0.6498316498316499, 
+            "global": 0.42750545983984467, 
+            "species": "lodelo||zygro"
+        }, 
+        {
+            "aafiltered": 0.67003367003367, 
+            "global": 0.5077651055569037, 
+            "species": "canta||ogapa"
+        }, 
+        {
+            "aafiltered": 0.6767676767676768, 
+            "global": 0.5237199708808542, 
+            "species": "cybja||ogapa"
+        }, 
+        {
+            "aafiltered": 0.5959595959595959, 
+            "global": 0.48386314001455966, 
+            "species": "meygui||ogapa"
+        }, 
+        {
+            "aafiltered": 0.622895622895623, 
+            "global": 0.48216452317398684, 
+            "species": "clalu||ogapa"
+        }, 
+        {
+            "aafiltered": 0.6531986531986532, 
+            "global": 0.5417981072555205, 
+            "species": "pacta||ogapa"
+        }, 
+        {
+            "aafiltered": 0.7171717171717171, 
+            "global": 0.5149842271293376, 
+            "species": "klula||ogapa"
+        }, 
+        {
+            "aafiltered": 0.7003367003367004, 
+            "global": 0.5096457170589662, 
+            "species": "canalb||ogapa"
+        }, 
+        {
+            "aafiltered": 0.6835016835016835, 
+            "global": 0.490596942489687, 
+            "species": "cangla||ogapa"
+        }, 
+        {
+            "aafiltered": 0.7070707070707071, 
+            "global": 0.5146202378063577, 
+            "species": "torde||ogapa"
+        }, 
+        {
+            "aafiltered": 0.6296296296296297, 
+            "global": 0.4501941276389225, 
+            "species": "erecy||ogapa"
+        }, 
+        {
+            "aafiltered": 0.6801346801346801, 
+            "global": 0.5019412763892259, 
+            "species": "yarli||ogapa"
+        }, 
+        {
+            "aafiltered": 0.7239057239057239, 
+            "global": 0.5532031060422228, 
+            "species": "picpa||ogapa"
+        }, 
+        {
+            "aafiltered": 0.7070707070707071, 
+            "global": 0.5107376850279058, 
+            "species": "sacce||ogapa"
+        }, 
+        {
+            "aafiltered": 0.7542087542087542, 
+            "global": 0.5211720456199952, 
+            "species": "ashgo||ogapa"
+        }, 
+        {
+            "aafiltered": 0.7037037037037037, 
+            "global": 0.5283305023052657, 
+            "species": "debha||ogapa"
+        }, 
+        {
+            "aafiltered": 0.6835016835016835, 
+            "global": 0.5072191215724339, 
+            "species": "kazaf||ogapa"
+        }, 
+        {
+            "aafiltered": 0.5858585858585859, 
+            "global": 0.519776753215239, 
+            "species": "wican||ogapa"
+        }, 
+        {
+            "aafiltered": 0.5993265993265994, 
+            "global": 0.4531667071099248, 
+            "species": "cantro||ogapa"
+        }, 
+        {
+            "aafiltered": 0.7138047138047138, 
+            "global": 0.5572069885950012, 
+            "species": "picme||ogapa"
+        }, 
+        {
+            "aafiltered": 0.6599326599326599, 
+            "global": 0.4503761223004126, 
+            "species": "lodelo||ogapa"
+        }, 
+        {
+            "aafiltered": 0.6801346801346801, 
+            "global": 0.5683086629458869, 
+            "species": "cybja||canta"
+        }, 
+        {
+            "aafiltered": 0.67003367003367, 
+            "global": 0.5288764862897355, 
+            "species": "meygui||canta"
+        }, 
+        {
+            "aafiltered": 0.6801346801346801, 
+            "global": 0.545619995146809, 
+            "species": "clalu||canta"
+        }, 
+        {
+            "aafiltered": 0.6531986531986532, 
+            "global": 0.53445765590876, 
+            "species": "pacta||canta"
+        }, 
+        {
+            "aafiltered": 0.7037037037037037, 
+            "global": 0.471790827469061, 
+            "species": "klula||canta"
+        }, 
+        {
+            "aafiltered": 0.8181818181818182, 
+            "global": 0.5915433147294346, 
+            "species": "canalb||canta"
+        }, 
+        {
+            "aafiltered": 0.6632996632996633, 
+            "global": 0.44983013831594265, 
+            "species": "cangla||canta"
+        }, 
+        {
+            "aafiltered": 0.6666666666666666, 
+            "global": 0.47185149235622426, 
+            "species": "torde||canta"
+        }, 
+        {
+            "aafiltered": 0.6195286195286195, 
+            "global": 0.4066367386556661, 
+            "species": "erecy||canta"
+        }, 
+        {
+            "aafiltered": 0.6531986531986532, 
+            "global": 0.46390439213783063, 
+            "species": "yarli||canta"
+        }, 
+        {
+            "aafiltered": 0.6531986531986532, 
+            "global": 0.48362048046590633, 
+            "species": "picpa||canta"
+        }, 
+        {
+            "aafiltered": 0.696969696969697, 
+            "global": 0.4677869449162825, 
+            "species": "sacce||canta"
+        }, 
+        {
+            "aafiltered": 0.7239057239057239, 
+            "global": 0.4831958262557632, 
+            "species": "ashgo||canta"
+        }, 
+        {
+            "aafiltered": 0.7878787878787878, 
+            "global": 0.6360713419073041, 
+            "species": "debha||canta"
+        }, 
+        {
+            "aafiltered": 0.6666666666666666, 
+            "global": 0.46493569521960687, 
+            "species": "kazaf||canta"
+        }, 
+        {
+            "aafiltered": 0.569023569023569, 
+            "global": 0.514498908032031, 
+            "species": "wican||canta"
+        }, 
+        {
+            "aafiltered": 0.7138047138047138, 
+            "global": 0.5187454501334627, 
+            "species": "cantro||canta"
+        }, 
+        {
+            "aafiltered": 0.622895622895623, 
+            "global": 0.5131036156272749, 
+            "species": "picme||canta"
+        }, 
+        {
+            "aafiltered": 0.7441077441077442, 
+            "global": 0.4953894685755884, 
+            "species": "lodelo||canta"
+        }, 
+        {
+            "aafiltered": 0.6195286195286195, 
+            "global": 0.46244843484591125, 
+            "species": "meygui||cybja"
+        }, 
+        {
+            "aafiltered": 0.5791245791245792, 
+            "global": 0.4549259888376608, 
+            "species": "clalu||cybja"
+        }, 
+        {
+            "aafiltered": 0.6565656565656566, 
+            "global": 0.5441640378548895, 
+            "species": "pacta||cybja"
+        }, 
+        {
+            "aafiltered": 0.6868686868686869, 
+            "global": 0.502729919922349, 
+            "species": "klula||cybja"
+        }, 
+        {
+            "aafiltered": 0.6599326599326599, 
+            "global": 0.4834384858044164, 
+            "species": "canalb||cybja"
+        }, 
+        {
+            "aafiltered": 0.6464646464646465, 
+            "global": 0.4739140985197767, 
+            "species": "cangla||cybja"
+        }, 
+        {
+            "aafiltered": 0.67003367003367, 
+            "global": 0.49696675564183446, 
+            "species": "torde||cybja"
+        }, 
+        {
+            "aafiltered": 0.5959595959595959, 
+            "global": 0.42726280029119146, 
+            "species": "erecy||cybja"
+        }, 
+        {
+            "aafiltered": 0.6632996632996633, 
+            "global": 0.47785731618539184, 
+            "species": "yarli||cybja"
+        }, 
+        {
+            "aafiltered": 0.6363636363636364, 
+            "global": 0.49126425624848336, 
+            "species": "picpa||cybja"
+        }, 
+        {
+            "aafiltered": 0.6767676767676768, 
+            "global": 0.4959354525600582, 
+            "species": "sacce||cybja"
+        }, 
+        {
+            "aafiltered": 0.696969696969697, 
+            "global": 0.5096457170589662, 
+            "species": "ashgo||cybja"
+        }, 
+        {
+            "aafiltered": 0.6632996632996633, 
+            "global": 0.5028512496966756, 
+            "species": "debha||cybja"
+        }, 
+        {
+            "aafiltered": 0.6498316498316499, 
+            "global": 0.49532880368842513, 
+            "species": "kazaf||cybja"
+        }, 
+        {
+            "aafiltered": 0.6936026936026936, 
+            "global": 0.634494054841058, 
+            "species": "wican||cybja"
+        }, 
+        {
+            "aafiltered": 0.569023569023569, 
+            "global": 0.4315093423926232, 
+            "species": "cantro||cybja"
+        }, 
+        {
+            "aafiltered": 0.632996632996633, 
+            "global": 0.5243266197524873, 
+            "species": "picme||cybja"
+        }, 
+        {
+            "aafiltered": 0.6060606060606061, 
+            "global": 0.42210628488231006, 
+            "species": "lodelo||cybja"
+        }, 
+        {
+            "aafiltered": 0.6734006734006734, 
+            "global": 0.5409487988352342, 
+            "species": "clalu||meygui"
+        }, 
+        {
+            "aafiltered": 0.5723905723905723, 
+            "global": 0.4517714147051686, 
+            "species": "pacta||meygui"
+        }, 
+        {
+            "aafiltered": 0.6060606060606061, 
+            "global": 0.451650084930842, 
+            "species": "klula||meygui"
+        }, 
+        {
+            "aafiltered": 0.7205387205387206, 
+            "global": 0.5468939577772385, 
+            "species": "canalb||meygui"
+        }, 
+        {
+            "aafiltered": 0.5791245791245792, 
+            "global": 0.4288400873574375, 
+            "species": "cangla||meygui"
+        }, 
+        {
+            "aafiltered": 0.6026936026936027, 
+            "global": 0.44898082989565635, 
+            "species": "torde||meygui"
+        }, 
+        {
+            "aafiltered": 0.5117845117845118, 
+            "global": 0.38467604950254786, 
+            "species": "erecy||meygui"
+        }, 
+        {
+            "aafiltered": 0.5892255892255892, 
+            "global": 0.4400024265954865, 
+            "species": "yarli||meygui"
+        }, 
+        {
+            "aafiltered": 0.5723905723905723, 
+            "global": 0.4708201892744479, 
+            "species": "picpa||meygui"
+        }, 
+        {
+            "aafiltered": 0.6026936026936027, 
+            "global": 0.44831351613686, 
+            "species": "sacce||meygui"
+        }, 
+        {
+            "aafiltered": 0.6262626262626263, 
+            "global": 0.45322737199708807, 
+            "species": "ashgo||meygui"
+        }, 
+        {
+            "aafiltered": 0.7171717171717171, 
+            "global": 0.5819582625576316, 
+            "species": "debha||meygui"
+        }, 
+        {
+            "aafiltered": 0.5925925925925926, 
+            "global": 0.4471002183935937, 
+            "species": "kazaf||meygui"
+        }, 
+        {
+            "aafiltered": 0.569023569023569, 
+            "global": 0.4425503518563456, 
+            "species": "wican||meygui"
+        }, 
+        {
+            "aafiltered": 0.6666666666666666, 
+            "global": 0.503518563455472, 
+            "species": "cantro||meygui"
+        }, 
+        {
+            "aafiltered": 0.5151515151515151, 
+            "global": 0.4342999272021354, 
+            "species": "picme||meygui"
+        }, 
+        {
+            "aafiltered": 0.7037037037037037, 
+            "global": 0.49071827226401354, 
+            "species": "lodelo||meygui"
+        }, 
+        {
+            "aafiltered": 0.569023569023569, 
+            "global": 0.45729191943702985, 
+            "species": "pacta||clalu"
+        }, 
+        {
+            "aafiltered": 0.6161616161616161, 
+            "global": 0.45498665372482405, 
+            "species": "klula||clalu"
+        }, 
+        {
+            "aafiltered": 0.7474747474747475, 
+            "global": 0.5498058723610774, 
+            "species": "canalb||clalu"
+        }, 
+        {
+            "aafiltered": 0.6026936026936027, 
+            "global": 0.43187333171560294, 
+            "species": "cangla||clalu"
+        }, 
+        {
+            "aafiltered": 0.6296296296296297, 
+            "global": 0.4508007765105557, 
+            "species": "torde||clalu"
+        }, 
+        {
+            "aafiltered": 0.5488215488215489, 
+            "global": 0.3867993205532638, 
+            "species": "erecy||clalu"
+        }, 
+        {
+            "aafiltered": 0.5723905723905723, 
+            "global": 0.4428536762921621, 
+            "species": "yarli||clalu"
+        }, 
+        {
+            "aafiltered": 0.5959595959595959, 
+            "global": 0.47106284882310123, 
+            "species": "picpa||clalu"
+        }, 
+        {
+            "aafiltered": 0.6498316498316499, 
+            "global": 0.44728221305508375, 
+            "species": "sacce||clalu"
+        }, 
+        {
+            "aafiltered": 0.6599326599326599, 
+            "global": 0.4620844455229314, 
+            "species": "ashgo||clalu"
+        }, 
+        {
+            "aafiltered": 0.7205387205387206, 
+            "global": 0.5913613200679447, 
+            "species": "debha||clalu"
+        }, 
+        {
+            "aafiltered": 0.6060606060606061, 
+            "global": 0.44418830380975494, 
+            "species": "kazaf||clalu"
+        }, 
+        {
+            "aafiltered": 0.49494949494949503, 
+            "global": 0.437939820431934, 
+            "species": "wican||clalu"
+        }, 
+        {
+            "aafiltered": 0.7474747474747475, 
+            "global": 0.521536034942975, 
+            "species": "cantro||clalu"
+        }, 
+        {
+            "aafiltered": 0.5286195286195287, 
+            "global": 0.44006309148264977, 
+            "species": "picme||clalu"
+        }, 
+        {
+            "aafiltered": 0.7104377104377104, 
+            "global": 0.48926231497209416, 
+            "species": "lodelo||clalu"
+        }, 
+        {
+            "aafiltered": 0.6666666666666666, 
+            "global": 0.4912035913613201, 
+            "species": "klula||pacta"
+        }, 
+        {
+            "aafiltered": 0.632996632996633, 
+            "global": 0.4922348944430963, 
+            "species": "canalb||pacta"
+        }, 
+        {
+            "aafiltered": 0.6397306397306397, 
+            "global": 0.46238776995874786, 
+            "species": "cangla||pacta"
+        }, 
+        {
+            "aafiltered": 0.6565656565656566, 
+            "global": 0.4868357194855617, 
+            "species": "torde||pacta"
+        }, 
+        {
+            "aafiltered": 0.5656565656565656, 
+            "global": 0.41980101917010426, 
+            "species": "erecy||pacta"
+        }, 
+        {
+            "aafiltered": 0.6195286195286195, 
+            "global": 0.47100218393593796, 
+            "species": "yarli||pacta"
+        }, 
+        {
+            "aafiltered": 0.6464646464646465, 
+            "global": 0.5066124727008008, 
+            "species": "picpa||pacta"
+        }, 
+        {
+            "aafiltered": 0.6464646464646465, 
+            "global": 0.48016258189759764, 
+            "species": "sacce||pacta"
+        }, 
+        {
+            "aafiltered": 0.6868686868686869, 
+            "global": 0.5014559572919194, 
+            "species": "ashgo||pacta"
+        }, 
+        {
+            "aafiltered": 0.6565656565656566, 
+            "global": 0.5157728706624606, 
+            "species": "debha||pacta"
+        }, 
+        {
+            "aafiltered": 0.6498316498316499, 
+            "global": 0.4770686726522688, 
+            "species": "kazaf||pacta"
+        }, 
+        {
+            "aafiltered": 0.6094276094276094, 
+            "global": 0.6106527541858772, 
+            "species": "wican||pacta"
+        }, 
+        {
+            "aafiltered": 0.5420875420875421, 
+            "global": 0.433450618781849, 
+            "species": "cantro||pacta"
+        }, 
+        {
+            "aafiltered": 0.6296296296296297, 
+            "global": 0.5171074981800534, 
+            "species": "picme||pacta"
+        }, 
+        {
+            "aafiltered": 0.5959595959595959, 
+            "global": 0.4253821887891289, 
+            "species": "lodelo||pacta"
+        }, 
+        {
+            "aafiltered": 0.7104377104377104, 
+            "global": 0.4794952681388013, 
+            "species": "canalb||klula"
+        }, 
+        {
+            "aafiltered": 0.7744107744107744, 
+            "global": 0.5609682115991265, 
+            "species": "cangla||klula"
+        }, 
+        {
+            "aafiltered": 0.8249158249158249, 
+            "global": 0.6041009463722398, 
+            "species": "torde||klula"
+        }, 
+        {
+            "aafiltered": 0.734006734006734, 
+            "global": 0.5396141713176413, 
+            "species": "erecy||klula"
+        }, 
+        {
+            "aafiltered": 0.696969696969697, 
+            "global": 0.47270080077651055, 
+            "species": "yarli||klula"
+        }, 
+        {
+            "aafiltered": 0.6767676767676768, 
+            "global": 0.4922955593302596, 
+            "species": "picpa||klula"
+        }, 
+        {
+            "aafiltered": 0.8080808080808081, 
+            "global": 0.5889953894685755, 
+            "species": "sacce||klula"
+        }, 
+        {
+            "aafiltered": 0.8451178451178452, 
+            "global": 0.6246663431206018, 
+            "species": "ashgo||klula"
+        }, 
+        {
+            "aafiltered": 0.7037037037037037, 
+            "global": 0.494904149478282, 
+            "species": "debha||klula"
+        }, 
+        {
+            "aafiltered": 0.7912457912457912, 
+            "global": 0.5913613200679447, 
+            "species": "kazaf||klula"
+        }, 
+        {
+            "aafiltered": 0.6094276094276094, 
+            "global": 0.49011162339238057, 
+            "species": "wican||klula"
+        }, 
+        {
+            "aafiltered": 0.6296296296296297, 
+            "global": 0.43363261344333903, 
+            "species": "cantro||klula"
+        }, 
+        {
+            "aafiltered": 0.6464646464646465, 
+            "global": 0.47676534821645233, 
+            "species": "picme||klula"
+        }, 
+        {
+            "aafiltered": 0.6632996632996633, 
+            "global": 0.4307813637466634, 
+            "species": "lodelo||klula"
+        }, 
+        {
+            "aafiltered": 0.6734006734006734, 
+            "global": 0.45183207959233196, 
+            "species": "cangla||canalb"
+        }, 
+        {
+            "aafiltered": 0.6936026936026936, 
+            "global": 0.4722761465663674, 
+            "species": "torde||canalb"
+        }, 
+        {
+            "aafiltered": 0.6262626262626263, 
+            "global": 0.40554477068672656, 
+            "species": "erecy||canalb"
+        }, 
+        {
+            "aafiltered": 0.6464646464646465, 
+            "global": 0.4583232225188061, 
+            "species": "yarli||canalb"
+        }, 
+        {
+            "aafiltered": 0.6632996632996633, 
+            "global": 0.4890803203106042, 
+            "species": "picpa||canalb"
+        }, 
+        {
+            "aafiltered": 0.7239057239057239, 
+            "global": 0.4708808541616112, 
+            "species": "sacce||canalb"
+        }, 
+        {
+            "aafiltered": 0.7373737373737373, 
+            "global": 0.48186119873817035, 
+            "species": "ashgo||canalb"
+        }, 
+        {
+            "aafiltered": 0.8316498316498316, 
+            "global": 0.6358286823586509, 
+            "species": "debha||canalb"
+        }, 
+        {
+            "aafiltered": 0.6868686868686869, 
+            "global": 0.47100218393593796, 
+            "species": "kazaf||canalb"
+        }, 
+        {
+            "aafiltered": 0.5656565656565656, 
+            "global": 0.4639650570249939, 
+            "species": "wican||canalb"
+        }, 
+        {
+            "aafiltered": 0.8249158249158249, 
+            "global": 0.6553021111380732, 
+            "species": "cantro||canalb"
+        }, 
+        {
+            "aafiltered": 0.6262626262626263, 
+            "global": 0.4619631157486047, 
+            "species": "picme||canalb"
+        }, 
+        {
+            "aafiltered": 0.8249158249158249, 
+            "global": 0.5572676534821646, 
+            "species": "lodelo||canalb"
+        }, 
+        {
+            "aafiltered": 0.8047138047138047, 
+            "global": 0.5865081290948799, 
+            "species": "torde||cangla"
+        }, 
+        {
+            "aafiltered": 0.7037037037037037, 
+            "global": 0.5205047318611987, 
+            "species": "erecy||cangla"
+        }, 
+        {
+            "aafiltered": 0.67003367003367, 
+            "global": 0.45328803688425134, 
+            "species": "yarli||cangla"
+        }, 
+        {
+            "aafiltered": 0.6599326599326599, 
+            "global": 0.47239747634069396, 
+            "species": "picpa||cangla"
+        }, 
+        {
+            "aafiltered": 0.8114478114478114, 
+            "global": 0.5915433147294346, 
+            "species": "sacce||cangla"
+        }, 
+        {
+            "aafiltered": 0.7878787878787878, 
+            "global": 0.5598155787430236, 
+            "species": "ashgo||cangla"
+        }, 
+        {
+            "aafiltered": 0.6801346801346801, 
+            "global": 0.46554234409124007, 
+            "species": "debha||cangla"
+        }, 
+        {
+            "aafiltered": 0.7643097643097643, 
+            "global": 0.5846275175928173, 
+            "species": "kazaf||cangla"
+        }, 
+        {
+            "aafiltered": 0.5892255892255892, 
+            "global": 0.46499636010677015, 
+            "species": "wican||cangla"
+        }, 
+        {
+            "aafiltered": 0.6161616161616161, 
+            "global": 0.42325891773841295, 
+            "species": "cantro||cangla"
+        }, 
+        {
+            "aafiltered": 0.6262626262626263, 
+            "global": 0.4557146323707838, 
+            "species": "picme||cangla"
+        }, 
+        {
+            "aafiltered": 0.6565656565656566, 
+            "global": 0.42331958262557634, 
+            "species": "lodelo||cangla"
+        }, 
+        {
+            "aafiltered": 0.7171717171717171, 
+            "global": 0.5373695704925989, 
+            "species": "erecy||torde"
+        }, 
+        {
+            "aafiltered": 0.67003367003367, 
+            "global": 0.4762800291191458, 
+            "species": "yarli||torde"
+        }, 
+        {
+            "aafiltered": 0.6666666666666666, 
+            "global": 0.49350885707352576, 
+            "species": "picpa||torde"
+        }, 
+        {
+            "aafiltered": 0.8249158249158249, 
+            "global": 0.6385586022809998, 
+            "species": "sacce||torde"
+        }, 
+        {
+            "aafiltered": 0.8181818181818182, 
+            "global": 0.6116233923804901, 
+            "species": "ashgo||torde"
+        }, 
+        {
+            "aafiltered": 0.6835016835016835, 
+            "global": 0.4902329531667071, 
+            "species": "debha||torde"
+        }, 
+        {
+            "aafiltered": 0.8148148148148148, 
+            "global": 0.6290342149963601, 
+            "species": "kazaf||torde"
+        }, 
+        {
+            "aafiltered": 0.5892255892255892, 
+            "global": 0.4848944430963358, 
+            "species": "wican||torde"
+        }, 
+        {
+            "aafiltered": 0.6195286195286195, 
+            "global": 0.4333899538946857, 
+            "species": "cantro||torde"
+        }, 
+        {
+            "aafiltered": 0.6464646464646465, 
+            "global": 0.47676534821645233, 
+            "species": "picme||torde"
+        }, 
+        {
+            "aafiltered": 0.6666666666666666, 
+            "global": 0.43266197524872596, 
+            "species": "lodelo||torde"
+        }, 
+        {
+            "aafiltered": 0.5925925925925926, 
+            "global": 0.4211356466876972, 
+            "species": "yarli||erecy"
+        }, 
+        {
+            "aafiltered": 0.5993265993265994, 
+            "global": 0.4235015772870663, 
+            "species": "picpa||erecy"
+        }, 
+        {
+            "aafiltered": 0.7037037037037037, 
+            "global": 0.5181388012618297, 
+            "species": "sacce||erecy"
+        }, 
+        {
+            "aafiltered": 0.7811447811447811, 
+            "global": 0.5894200436787188, 
+            "species": "ashgo||erecy"
+        }, 
+        {
+            "aafiltered": 0.6262626262626263, 
+            "global": 0.4228949284154331, 
+            "species": "debha||erecy"
+        }, 
+        {
+            "aafiltered": 0.6936026936026936, 
+            "global": 0.5245086144139772, 
+            "species": "kazaf||erecy"
+        }, 
+        {
+            "aafiltered": 0.5016835016835017, 
+            "global": 0.4186483863140015, 
+            "species": "wican||erecy"
+        }, 
+        {
+            "aafiltered": 0.6161616161616161, 
+            "global": 0.5342149963601067, 
+            "species": "cantro||erecy"
+        }, 
+        {
+            "aafiltered": 0.5589225589225589, 
+            "global": 0.41440184421256976, 
+            "species": "picme||erecy"
+        }, 
+        {
+            "aafiltered": 0.6565656565656566, 
+            "global": 0.5379155544770686, 
+            "species": "lodelo||erecy"
+        }, 
+        {
+            "aafiltered": 0.6531986531986532, 
+            "global": 0.47561271536034944, 
+            "species": "picpa||yarli"
+        }, 
+        {
+            "aafiltered": 0.6902356902356902, 
+            "global": 0.4634190730405241, 
+            "species": "sacce||yarli"
+        }, 
+        {
+            "aafiltered": 0.6936026936026936, 
+            "global": 0.48095122543072066, 
+            "species": "ashgo||yarli"
+        }, 
+        {
+            "aafiltered": 0.6666666666666666, 
+            "global": 0.4788886192671682, 
+            "species": "debha||yarli"
+        }, 
+        {
+            "aafiltered": 0.6599326599326599, 
+            "global": 0.46614899296287304, 
+            "species": "kazaf||yarli"
+        }, 
+        {
+            "aafiltered": 0.5925925925925926, 
+            "global": 0.4660276631885465, 
+            "species": "wican||yarli"
+        }, 
+        {
+            "aafiltered": 0.5791245791245792, 
+            "global": 0.4238049017228829, 
+            "species": "cantro||yarli"
+        }, 
+        {
+            "aafiltered": 0.6127946127946128, 
+            "global": 0.4557146323707838, 
+            "species": "picme||yarli"
+        }, 
+        {
+            "aafiltered": 0.632996632996633, 
+            "global": 0.41670710992477555, 
+            "species": "lodelo||yarli"
+        }, 
+        {
+            "aafiltered": 0.6801346801346801, 
+            "global": 0.4834991506915798, 
+            "species": "sacce||picpa"
+        }, 
+        {
+            "aafiltered": 0.7138047138047138, 
+            "global": 0.4912035913613201, 
+            "species": "ashgo||picpa"
+        }, 
+        {
+            "aafiltered": 0.6599326599326599, 
+            "global": 0.5043678718757583, 
+            "species": "debha||picpa"
+        }, 
+        {
+            "aafiltered": 0.6397306397306397, 
+            "global": 0.4840451346760495, 
+            "species": "kazaf||picpa"
+        }, 
+        {
+            "aafiltered": 0.5353535353535354, 
+            "global": 0.4777359864110653, 
+            "species": "wican||picpa"
+        }, 
+        {
+            "aafiltered": 0.569023569023569, 
+            "global": 0.4348459111866052, 
+            "species": "cantro||picpa"
+        }, 
+        {
+            "aafiltered": 0.6161616161616161, 
+            "global": 0.48786702256733805, 
+            "species": "picme||picpa"
+        }, 
+        {
+            "aafiltered": 0.6397306397306397, 
+            "global": 0.43696918223732106, 
+            "species": "lodelo||picpa"
+        }, 
+        {
+            "aafiltered": 0.8047138047138047, 
+            "global": 0.599854404270808, 
+            "species": "ashgo||sacce"
+        }, 
+        {
+            "aafiltered": 0.7070707070707071, 
+            "global": 0.4887769958747876, 
+            "species": "debha||sacce"
+        }, 
+        {
+            "aafiltered": 0.8215488215488216, 
+            "global": 0.6343120601795681, 
+            "species": "kazaf||sacce"
+        }, 
+        {
+            "aafiltered": 0.5925925925925926, 
+            "global": 0.47955593302596455, 
+            "species": "wican||sacce"
+        }, 
+        {
+            "aafiltered": 0.6296296296296297, 
+            "global": 0.42702014074253825, 
+            "species": "cantro||sacce"
+        }, 
+        {
+            "aafiltered": 0.6565656565656566, 
+            "global": 0.47160883280757093, 
+            "species": "picme||sacce"
+        }, 
+        {
+            "aafiltered": 0.67003367003367, 
+            "global": 0.4292040766804174, 
+            "species": "lodelo||sacce"
+        }, 
+        {
+            "aafiltered": 0.7272727272727273, 
+            "global": 0.5004853190973064, 
+            "species": "debha||ashgo"
+        }, 
+        {
+            "aafiltered": 0.797979797979798, 
+            "global": 0.6012496966755642, 
+            "species": "kazaf||ashgo"
+        }, 
+        {
+            "aafiltered": 0.6127946127946128, 
+            "global": 0.4993933511283669, 
+            "species": "wican||ashgo"
+        }, 
+        {
+            "aafiltered": 0.6397306397306397, 
+            "global": 0.4310846881824799, 
+            "species": "cantro||ashgo"
+        }, 
+        {
+            "aafiltered": 0.6464646464646465, 
+            "global": 0.4770686726522688, 
+            "species": "picme||ashgo"
+        }, 
+        {
+            "aafiltered": 0.6902356902356902, 
+            "global": 0.43187333171560294, 
+            "species": "lodelo||ashgo"
+        }, 
+        {
+            "aafiltered": 0.6868686868686869, 
+            "global": 0.4845911186605193, 
+            "species": "kazaf||debha"
+        }, 
+        {
+            "aafiltered": 0.5824915824915825, 
+            "global": 0.4879883523416646, 
+            "species": "wican||debha"
+        }, 
+        {
+            "aafiltered": 0.7239057239057239, 
+            "global": 0.5578136374666343, 
+            "species": "cantro||debha"
+        }, 
+        {
+            "aafiltered": 0.6363636363636364, 
+            "global": 0.4765833535549624, 
+            "species": "picme||debha"
+        }, 
+        {
+            "aafiltered": 0.7643097643097643, 
+            "global": 0.5309390924532881, 
+            "species": "lodelo||debha"
+        }, 
+        {
+            "aafiltered": 0.5656565656565656, 
+            "global": 0.481193884979374, 
+            "species": "wican||kazaf"
+        }, 
+        {
+            "aafiltered": 0.6195286195286195, 
+            "global": 0.43096335840815336, 
+            "species": "cantro||kazaf"
+        }, 
+        {
+            "aafiltered": 0.622895622895623, 
+            "global": 0.47130550837175444, 
+            "species": "picme||kazaf"
+        }, 
+        {
+            "aafiltered": 0.6430976430976431, 
+            "global": 0.4296893957777239, 
+            "species": "lodelo||kazaf"
+        }, 
+        {
+            "aafiltered": 0.49158249158249157, 
+            "global": 0.4168891045862655, 
+            "species": "cantro||wican"
+        }, 
+        {
+            "aafiltered": 0.5286195286195287, 
+            "global": 0.5069764620237807, 
+            "species": "picme||wican"
+        }, 
+        {
+            "aafiltered": 0.5286195286195287, 
+            "global": 0.4128852220334871, 
+            "species": "lodelo||wican"
+        }, 
+        {
+            "aafiltered": 0.5420875420875421, 
+            "global": 0.4133705411307935, 
+            "species": "picme||cantro"
+        }, 
+        {
+            "aafiltered": 0.8316498316498316, 
+            "global": 0.6980101917010434, 
+            "species": "lodelo||cantro"
+        }, 
+        {
+            "aafiltered": 0.5791245791245792, 
+            "global": 0.41039796165979125, 
+            "species": "lodelo||picme"
+        }
+    ]
+}
