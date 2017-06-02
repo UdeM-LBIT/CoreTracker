@@ -132,21 +132,24 @@ def set_coretracker(args, settings):
     seqloader = SequenceLoader(input_alignment, args.dnaseq, settings, args.gapfilter, has_stop=args.hasstop,
                                use_tree=use_tree, refine_alignment=args.refine, msaprog=msaprg, hmmdict=hmmfiles)
     t2 = time.time()
-    logging.debug("Sequence loaded in %.3f s"%(abs(t2-t)))
+    logging.debug("Sequence loaded in %.3f s" % (abs(t2 - t)))
     # create sequence set
-    setseq = SequenceSet(seqloader, specietree, settings.GENETIC_CODE,codemap=codemap)
+    setseq = SequenceSet(seqloader, specietree,
+                         settings.GENETIC_CODE, codemap=codemap)
     setseq.prot_filtering(args.idfilter, args.gapfilter,
                           args.iccontent, args.rmconst)
-    spec_restricted_list = list(set(spec_restricted_list).intersection(setseq.common_genome))
+    spec_restricted_list = list(
+        set(spec_restricted_list).intersection(setseq.common_genome))
     if spec_restricted_list:
         settings.LIMIT_TO_SUSPECTED_SPECIES = True
     t = time.time()
-    logging.debug("Sequence filtered in %.3f s"%(abs(t-t2)))
+    logging.debug("Sequence filtered in %.3f s" % (abs(t - t2)))
     reafinder = ReaGenomeFinder(setseq, settings)
     reafinder.get_genomes()
     reafinder.possible_aa_reassignation(speclist=spec_restricted_list)
     t2 = time.time()
-    logging.debug("List of probable reassignment identified in %f"%(abs(t-t2)))
+    logging.debug("List of probable reassignment identified in %f" %
+                  (abs(t - t2)))
 
     return reafinder, clf, model
 
@@ -242,10 +245,11 @@ if __name__ == '__main__':
     parser.add_argument('--imformat', dest='imformat', choices=('pdf', 'png', 'svg'), default="pdf",
                         help="Image format to use for output (Codon_data file)")
 
-    parser.add_argument('--restrict_to', dest='restrict_to', help="Restrict analysis to list of genomes only")
-    
+    parser.add_argument('--restrict_to', dest='restrict_to',
+                        help="Restrict analysis to list of genomes only")
+
     parser.add_argument('--codemap', dest='codemap',
-                    help="A tab delimited file that map each species to its genetic code. Default code (--gcode) will be used for missing species")
+                        help="A tab delimited file that map each species to its genetic code. Default code (--gcode) will be used for missing species")
 
     print("CoreTracker v:%s Copyright (C) %s %s" %
           (__version__, date, __author__))

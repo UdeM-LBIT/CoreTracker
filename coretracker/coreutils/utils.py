@@ -71,6 +71,7 @@ eps = np.finfo(np.float).eps
 
 alpha = Alphabet.Gapped(IUPAC.protein)
 
+
 class ConsensusKeeper:
 
     def __init__(self, alignment, threshold, ambiguous='X', alphabet=generic_protein):
@@ -722,7 +723,8 @@ class SequenceSet(object):
         self.codemap = codemap
         if codemap:
             logging.debug("Species genetic code passed as input: ")
-            logging.debug("\n"+"\n".join(["\t%s\t%s"%(k,v) for k,v in codemap.items()]))
+            logging.debug(
+                "\n" + "\n".join(["\t%s\t%s" % (k, v) for k, v in codemap.items()]))
         self.prot_dict, self.dna_dict, self.gene_limits = coreinstance.concat()
         self.prot_align = MultipleSeqAlignment(self.prot_dict.values())
         self.seqload = coreinstance
@@ -828,7 +830,7 @@ class SequenceSet(object):
                     seq_code = CodonTable.unambiguous_dna_by_id[abs(has_code)]
             except KeyError:
                 seq_code = self.codontable
-            
+
             codon_rec, undef_c = self._get_codon_record(
                 self.dna_dict[g], self.prot_dict[g], seq_code, alphabet)
             all_undef_codon[g] = undef_c
@@ -1526,11 +1528,13 @@ class ReaGenomeFinder:
                         leaf.lost = False
 
                     gdata = {}
-                    if self.settings.CODON_COUNT_THRESHOLD >1:
+                    if self.settings.CODON_COUNT_THRESHOLD > 1:
                         if self.settings.USE_GLOBAL:
-                            greacodon = Counter({_cod:_count for _cod,_count in greacodon.iteritems() if _count>self.settings.CODON_COUNT_THRESHOLD})
+                            greacodon = Counter({_cod: _count for _cod, _count in greacodon.iteritems(
+                            ) if _count > self.settings.CODON_COUNT_THRESHOLD})
                         else:
-                            freacodon = Counter({_cod:_count for _cod,_count in freacodon.iteritems() if _count>self.settings.CODON_COUNT_THRESHOLD})
+                            freacodon = Counter({_cod: _count for _cod, _count in freacodon.iteritems(
+                            ) if _count > self.settings.CODON_COUNT_THRESHOLD})
                     g_rea_dist = gcodon_rea.get_rea_aa_codon_distribution(
                         genome, aa2)
                     g_total_rea_dist = gcodon_rea.get_total_rea_aa_codon_distribution(
@@ -1973,7 +1977,8 @@ def get_report(fitchtree, reafinder, codon_align, prediction, output="", pie_siz
     settings = reafinder.settings
     OUTDIR = purge_directory(os.path.join(settings.OUTDIR, fitchtree.ori_aa +
                                           "_to_" + fitchtree.dest_aa))
-    gdata = reafinder.reassignment_mapper['aa'][fitchtree.ori_aa1][fitchtree.dest_aa1]
+    gdata = reafinder.reassignment_mapper['aa'][
+        fitchtree.ori_aa1][fitchtree.dest_aa1]
     c_rea = get_rea_genome_list(prediction[1], prediction[3])
     if not output:
         output = os.path.join(OUTDIR, "Codon_data." + settings.IMAGE_FORMAT)
