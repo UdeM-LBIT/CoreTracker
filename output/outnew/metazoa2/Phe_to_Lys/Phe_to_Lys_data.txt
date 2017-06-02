@@ -1,4 +1,0 @@
-### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
-Fasciola	TTT	F	K	0.0	0.514285714286	0.0909090909091	0.00769230769231	0.515384615385	0.970149253731	0.00746268656716	1332.0	-2.4020862035	21.0	0.0	0.0
-Caenorhabditis	TTT	F	K	0.0	0.595454545455	0.166666666667	0.0142857142857	0.628571428571	0.903225806452	0.0129032258065	1346.0	-2.44017563117	21.0	0.0	0.0

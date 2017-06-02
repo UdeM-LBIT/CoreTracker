@@ -1,4 +1,0 @@
-### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
-Trichobilharzia_regenti	GGT	G	K	0.0	0.683907936845	0.1	0.0135135135135	0.72972972973	0.627118644068	0.00847457627119	1324.0	-1.55578655579	41.0	0.0	0.0
-Versteria_mustelae	GGT	G	K	0.0	0.626505895146	0.0909090909091	0.012987012987	0.792207792208	0.754901960784	0.00980392156863	1328.0	-1.50735294118	41.0	0.0	0.0

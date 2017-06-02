@@ -1,4 +1,0 @@
-### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
-Halocynthia	CCC	P	Q	0.0	0.0217391229293	0.5	0.333333333333	0.666666666667	0.0422535211268	0.0140845070423	1348.0	0.387931034483	63.0	0.0	0.011
-Caenorhabditis	CCT	P	Q	0.0	0.339622589396	0.166666666667	0.0625	0.9375	0.301886792453	0.0188679245283	1346.0	-0.717320261438	61.0	0.0	0.0

@@ -1,3 +1,0 @@
-### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
-Versteria_mustelae	AAA	K	V	0.0	0.0217391304348	0.2	0.0769230769231	0.0	0.333333333333	0.025641025641	1328.0	-1.80157170923	0.0	0.0	0.385

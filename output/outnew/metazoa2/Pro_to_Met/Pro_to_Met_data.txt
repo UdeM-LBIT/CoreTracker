@@ -1,3 +1,0 @@
-### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
-Echinococcus_equinus	CCT	P	M	0.0	0.692307586076	0.1	0.0285714285714	0.885714285714	0.614035087719	0.0175438596491	1331.0	-1.67255334805	61.0	0.0	0.0

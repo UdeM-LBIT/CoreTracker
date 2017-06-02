@@ -1,4 +1,0 @@
-### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
-Trichobilharzia_regenti	AAA	K	T	0.0	0.0416666666667	0.2	0.1	0.1	0.277777777778	0.0277777777778	1324.0	-0.0230769230769	0.0	0.0	0.385
-Benedenia_hoshinai	AAA	K	T	0.0	0.0384615384615	0.111111111111	0.0714285714286	0.0714285714286	0.325581395349	0.0232558139535	1333.0	-0.204007285974	0.0	0.0	0.385

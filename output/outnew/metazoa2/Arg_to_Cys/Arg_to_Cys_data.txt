@@ -1,4 +1,0 @@
-### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
-Tetrancistrum_nebulosi	AGG	R	C	0.0	0.107142844812	0.111111111111	0.0384615384615	0.0384615384615	0.342105263158	0.0131578947368	1333.0	-1.57058823529	10.0	0.0	0.0
-Pseudogarypus_banksi	AGA	R	C	0.0	0.0454545402234	0.111111111111	0.0333333333333	0.0	0.483870967742	0.0161290322581	1347.0	-1.32993197279	8.0	0.0	0.0

@@ -1,4 +1,0 @@
-### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
-Schistosoma	CAG	Q	V	0.0	0.55	0.142857142857	0.0909090909091	0.727272727273	0.733333333333	0.0666666666667	1325.0	-1.70183486239	50.0	0.0	0.0
-Benedenia_hoshinai	CAA	Q	V	0.0	0.708333333333	0.2	0.1	0.6	0.625	0.0625	1333.0	-1.68020304569	48.0	0.0	0.0

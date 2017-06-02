@@ -1,4 +1,0 @@
-### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
-Trichobilharzia_regenti	GAC	D	S	0.0	0.0217391304348	0.5	0.5	0.0	0.0625	0.03125	1324.0	0.705128205128	35.0	0.0	0.072
-Echinococcus_equinus	GAT	D	S	0.0	0.515625	0.125	0.025641025641	0.769230769231	0.975	0.025	1331.0	0.119363395225	33.0	0.0	0.0

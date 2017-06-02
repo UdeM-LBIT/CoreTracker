@@ -1,8 +1,7 @@
 
 # TODO
 
-    - consensus class to not ignore column with same aa frequency
+    - pred to  ori aa
     - full integration of rna editing part in the software
-    - code quality improvement and cleaning classifier part 
-
+    
 

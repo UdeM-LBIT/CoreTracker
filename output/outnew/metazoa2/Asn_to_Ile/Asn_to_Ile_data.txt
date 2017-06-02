@@ -1,3 +1,0 @@
-### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
-Blanceolatum	AAT	N	I	0.0	0.619047619048	0.2	0.0625	0.9375	0.695652173913	0.0434782608696	775.0	-2.315625	1.0	0.0	0.007

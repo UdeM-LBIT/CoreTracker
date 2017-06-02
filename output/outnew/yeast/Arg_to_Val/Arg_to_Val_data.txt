@@ -1,3 +1,0 @@
-### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
-CzempA	AGA	R	V	0.0	0.685185185185	0.166666666667	0.047619047619	0.761904761905	0.677419354839	0.0322580645161	1428.0	-2.53651814424	8.0	0.0	0.002
