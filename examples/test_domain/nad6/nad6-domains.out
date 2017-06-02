@@ -1,0 +1,2152 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             examples/out/nad6/nad6.fasta
+# target HMM database:             data/pfam/Pfam-A.hmm
+# output directed to file:         examples/out/nad6/nad6-domains.out
+# per-dom hits tabular output:     examples/out/nad6/nad6-domains.tab
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       Metaseiulus_occidentalis  [L=0]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (0 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                         0  (0); expected 326.1 (0.02)
+Passed bias filter:                        0  (0); expected 326.1 (0.02)
+Passed Vit filter:                         0  (0); expected 16.3 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.36u 0.26s 00:00:00.62 Elapsed: 00:00:00.50
+# Mc/sec: 0.00
+//
+Query:       Paracentrotus  [L=160]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    5.5e-14   52.0  17.6    5.5e-14   52.0  17.6    1.5  1  Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase cha
+
+
+Domain annotation for each model (and alignments):
+>> Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   52.0  17.6   3.4e-18   5.5e-14       4     137 .]      16     148 ..      13     148 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 52.0 bits;  conditional E-value: 3.4e-18
+                    HHHH-SBHHHHHHHHHHHHHHHHHHHHHTT-HHHHHHHHHIIIIIHHHHHHHHHHHTS----TTCHHHHHHHHHHHHHHHHHHHTT-..------- CS
+    Oxidored_q3   4 lvitsknpvysalfLilvflgiaglfillgaeFlalvqilvYvGAilvLflFvimleeeeekeklkkslplaalligllllallllvaesaadael 99 
+                    lv++  +p+ysal L++v ++ ++++ +lg +F+alv++lvY+G++lv+f ++ ++++e+ ++ ++ + +++ l + +   ++l + + +  +++ 
+  Paracentrotus  16 LVFYRLSPYYSALGLVVVSISGCIILSFLGGSFVALVLVLVYMGGMLVVFAYSSAISAERFPSVNNLGEVIG-LSVLFSSWVFLSFDNFQDFSKSF 110
+                    6777889*************************************************7555554444444444.44444444444444455567777 PP
+
+                    --TT-HHHHHHHHTTTTHHHHHHHHHHHHHHHHHHHHC CS
+    Oxidored_q3 100 aevsnieaigkllftkyllpfelasvlLLvaligaivl 137
+                    + + + e++ ++ f+   +++++  ++LLv+l+ga+++
+  Paracentrotus 111 SCFISGERLVEAGFYMKGFLVLVGVFVLLVVLVGALII 148
+                    888888999888899888999999999********986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (160 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1017  (0.0623697); expected 326.1 (0.02)
+Passed bias filter:                      379  (0.023243); expected 326.1 (0.02)
+Passed Vit filter:                        49  (0.00300503); expected 16.3 (0.001)
+Passed Fwd filter:                        12  (0.000735925); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.63u 0.29s 00:00:00.92 Elapsed: 00:00:00.53
+# Mc/sec: 863.65
+//
+Query:       Aphrocallistes_vastus  [L=188]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    4.1e-25   88.1   5.6    4.1e-25   88.1   5.6    1.5  2  Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase cha
+  ------ inclusion threshold ------
+      0.014   15.0   6.3      0.052   13.2   6.3    1.8  1  IncA         IncA protein
+        0.3   10.9   0.8       0.47   10.3   0.8    1.2  1  TMEM119      TMEM119 family
+
+
+Domain annotation for each model (and alignments):
+>> Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   88.1   5.6   7.5e-29   4.1e-25       3     137 .]      14     159 ..      12     159 .. 0.85
+   2 ?   -2.0   0.0       0.5   2.7e+03     101     115 ..     161     175 ..     160     182 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 88.1 bits;  conditional E-value: 7.5e-29
+                            HHHHH-SBHHHHHHHHHHHHHHHHHHHHHTT-HHHHHHHHHIIIIIHHHHHHHHHHH...TS----TTCHHHHHHHHHHHHHHHHHHH CS
+            Oxidored_q3   3 llvitsknpvysalfLilvflgiaglfillgaeFlalvqilvYvGAilvLflFviml...eeeeekeklkkslplaalligllllall 87 
+                            llv +s++ +  +++Lil f+++++l+ill+ eF+a++ i+vYvGAi++Lf+F+im+   ++++ k++++  +p+  l+i ++l++ +
+  Aphrocallistes_vastus  14 LLVTSSRRTINRVIWLILRFINTSLLLILLKLEFIAIFIIIVYVGAIAILFIFIIMIlnlRNQKHKKSRNHLIPIR-LIIRITLILHI 100
+                            78999****************************************************9875555555666556665.55655555555 PP
+
+                            TT-...........---------TT-HHHHHHHHTTTTHHHHHHHHHHHHHHHHHHHHC CS
+            Oxidored_q3  88 llv.........aesaadaelaevsnieaigkllftkyllpfelasvlLLvaligaivl 137
+                            + +         +e  ++++  +  n+e i +l++++y  ++++   +LL+ ++ ai +
+  Aphrocallistes_vastus 101 TEIikkrkinnnQERISNKQIINLRNLEIIRNLIYSNYCEWLIIRRAILLLRMLTAILI 159
+                            5558999998764455588889999*******************************986 PP
+
+  == domain 2  score: -2.0 bits;  conditional E-value: 0.5
+                            -TT-HHHHHHHHTTT CS
+            Oxidored_q3 101 evsnieaigkllftk 115
+                            e++n+++i ++lft+
+  Aphrocallistes_vastus 161 EKENTQNIKQQLFTQ 175
+                            567999999999996 PP
+
+>> IncA  IncA protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   13.2   6.3   9.6e-06     0.052      24      77 ..      38     110 ..      37     184 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 13.2 bits;  conditional E-value: 9.6e-06
+                   IncA  24 allilfasslgalisiilgivllAlgvvLlalgllllllkapvlqsedekiee...................s 77 
+                            +llil+ + ++a+++ii+ ++++A+ ++++++ l l+ +k+ +++    +i+                    +
+  Aphrocallistes_vastus  38 LLLILLKLEFIAIFIIIVYVGAIAILFIFIIMILNLRNQKHKKSRNHLIPIRLiiritlilhiteiikkrkiN 110
+                            589**********************999999999999999999998888777777766666655444433331 PP
+
+>> TMEM119  TMEM119 family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.3   0.8   8.6e-05      0.47      71     101 ..      51      81 ..      44      84 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 10.3 bits;  conditional E-value: 8.6e-05
+                TMEM119  71 vlliavvGslaflllfivCaalitrqkhkas 101
+                             ++i  vG++a+l++fi+    +  qkhk s
+  Aphrocallistes_vastus  51 FIIIVYVGAIAILFIFIIMILNLRNQKHKKS 81 
+                            467888***********************87 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (188 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1608  (0.098614); expected 326.1 (0.02)
+Passed bias filter:                      360  (0.0220778); expected 326.1 (0.02)
+Passed Vit filter:                        40  (0.00245308); expected 16.3 (0.001)
+Passed Fwd filter:                         6  (0.000367963); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.62u 0.33s 00:00:00.95 Elapsed: 00:00:00.57
+# Mc/sec: 927.30
+//
+Query:       Schistosoma  [L=149]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    0.00079   19.1  23.7      0.001   18.8  23.1    1.6  1  Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase cha
+
+
+Domain annotation for each model (and alignments):
+>> Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   18.8  23.1   6.3e-08     0.001      12     133 ..      21     141 ..       9     144 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 18.8 bits;  conditional E-value: 6.3e-08
+                  HHHHHHHHHHHHHHHHHHHHTT-HHHHHHHHHIIIIIHHHHHHHHHHHTS----TTCHHHHHHHHHHHHHHHHHHHTT-..---.------TT-HHHH CS
+  Oxidored_q3  12 vysalfLilvflgiaglfillgaeFlalvqilvYvGAilvLflFvimleeeeekeklkkslplaalligllllallllvaesaa.daelaevsnieai 108
+                   +++l  +++f++   +f ++  + + l+++lvYvG+i v++++v m     +++ ++ +l  +a +++ll+l+l ++ + s   ++ +++   +  +
+  Schistosoma  21 TRAVLLVLVSFIVSLWIFKVFSFSWYFLLFVLVYVGGIYVILIYVSMAF--PKFRLFRFKLRGWAGFVVLLFLLLGVWRDVSVMdEGLMENRFYLCGV 116
+                  35566666666666677889999************************95..34455556666665666666666655652222224555555566666 PP
+
+                  HHHHTTTTHHHHHHHHHHHHHHHHH CS
+  Oxidored_q3 109 gkllftkyllpfelasvlLLvalig 133
+                  +++l++ +l +++++s++ +  ++g
+  Schistosoma 117 SEVLIYLFLCLVLMISLVFINFIVG 141
+                  7777777777777777777666665 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (149 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1103  (0.0676438); expected 326.1 (0.02)
+Passed bias filter:                      302  (0.0185208); expected 326.1 (0.02)
+Passed Vit filter:                        37  (0.0022691); expected 16.3 (0.001)
+Passed Fwd filter:                        12  (0.000735925); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.65u 0.35s 00:00:01.00 Elapsed: 00:00:00.55
+# Mc/sec: 775.02
+//
+Query:       Fasciola  [L=150]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    0.00012   21.8  19.4    0.00034   20.3  19.4    1.7  1  Oxidored_q3      NADH-ubiquinone/plastoquinone oxidoreductase
+  ------ inclusion threshold ------
+       0.11   13.0   1.1       0.15   12.5   0.0    1.7  2  Sushi            Sushi repeat (SCR repeat)
+
+
+Domain annotation for each model (and alignments):
+>> Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   20.3  19.4   4.1e-08   0.00034       3      91 ..      15     105 ..      13     143 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: 20.3 bits;  conditional E-value: 4.1e-08
+                  HHHHH-SBHHHHHHHHHHHHHHHHHH.HHHTT-HHHHHHHHHIIIIIHHHHHHHHHHHTS----TTCHHHHHHHHHHHHHHHHHHHTT-.... CS
+  Oxidored_q3   3 llvitsknpvysalfLilvflgiagl.fillgaeFlalvqilvYvGAilvLflFvimleeeeekeklkkslplaalligllllallllv...a 91 
+                  l++ + ++p+   l Li + l+i+gl ++++g + + +v+ lvYvG++ vLf+Fv   +   ++ ++ +++ + +l++++++l ++ +v    
+     Fasciola  15 LGFSFVSHPIVYCLLLIGAALSISGLgYLVVGFSWYLVVFCLVYVGGVYVLFIFVSIHT--PNPLPKFRGIGIDGLVLFFGFLCVFSFVffsV 105
+                  7788999******************978899************************9995..44555555666655666666666555553331 PP
+
+>> Sushi  Sushi repeat (SCR repeat)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.5   0.0   1.9e-05      0.15      23      43 ..       7      27 ..       3      30 .. 0.91
+   2 ?   -2.9   0.4       1.2   9.9e+03      29      37 ..     109     117 ..     107     125 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 12.5 bits;  conditional E-value: 1.9e-05
+              EEEEEEE-TTEEESTTSCEEE CS
+     Sushi 23 aqveyeCkpGyrlsgssvitC 43
+              a+v+++C  G+++++ + ++C
+  Fasciola  7 AKVYFSCLLGFSFVSHPIVYC 27
+              89******************* PP
+
+  == domain 2  score: -2.9 bits;  conditional E-value: 1.2
+               E-TTEEEST CS
+     Sushi  29 CkpGyrlsg 37 
+               C++ ++l +
+  Fasciola 109 CDSSFYLCS 117
+               888888754 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (150 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       782  (0.0479578); expected 326.1 (0.02)
+Passed bias filter:                      274  (0.0168036); expected 326.1 (0.02)
+Passed Vit filter:                        32  (0.00196247); expected 16.3 (0.001)
+Passed Fwd filter:                        10  (0.000613271); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.59u 0.35s 00:00:00.94 Elapsed: 00:00:00.56
+# Mc/sec: 752.85
+//
+Query:       Trichobilharzia_regenti  [L=152]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+  ------ inclusion threshold ------
+      0.045   13.5  28.7      0.029   14.0  27.0    1.6  1  Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase cha
+
+
+Domain annotation for each model (and alignments):
+>> Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   14.0  27.0   1.8e-06     0.029       4     131 ..      17     139 ..      13     144 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 14.0 bits;  conditional E-value: 1.8e-06
+                              HHHH-SBHHHHHHHHHHHHHHHHHHHHHTT-HHHHHHHHHIIIIIHHHHHHHHHHHTS----TTCHHHHHHHHHHHHHHHHHHHTT CS
+              Oxidored_q3   4 lvitsknpvysalfLilvflgiaglfillgaeFlalvqilvYvGAilvLflFvimleeeeekeklkkslplaalligllllallll 89 
+                              +++   ++v+  l  + ++++  +l+ ++g + + l++ilvYvG++ +Lf+++ +   +    +++ s+ ++++li+ll++   ++
+  Trichobilharzia_regenti  17 FIFRLGSLVRIFLIVVSSLVSSLVLYRIMGFSWYLLLFILVYVGGVYILFVYMRLVLPKVGLVNYRFSYLVGSFLIFLLFFCC-MW 101
+                              55566789999999***************************************999656667788888888877777666655.55 PP
+
+                              -..---------TT-HHHHHHHHTTTTHHHHHHHHHHHHHHH CS
+              Oxidored_q3  90 vaesaadaelaevsnieaigkllftkyllpfelasvlLLval 131
+                              +   +  + +  v+n   + k++ ++++++f    +lL v l
+  Trichobilharzia_regenti 102 I---SLCGGEVVVDNSIYLCKSF-ESFVYLFFCSVLLLGVIL 139
+                              5...1223334445555555554.335555544444443433 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (152 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1105  (0.0677665); expected 326.1 (0.02)
+Passed bias filter:                      320  (0.0196247); expected 326.1 (0.02)
+Passed Vit filter:                        25  (0.00153318); expected 16.3 (0.001)
+Passed Fwd filter:                        11  (0.000674598); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.67u 0.27s 00:00:00.94 Elapsed: 00:00:00.55
+# Mc/sec: 790.63
+//
+Query:       Versteria_mustelae  [L=152]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    6.7e-05   22.6  23.6    7.1e-05   22.5  22.1    1.9  1  Oxidored_q3      NADH-ubiquinone/plastoquinone oxidoreductase
+  ------ inclusion threshold ------
+      0.029   14.1   0.7      0.029   14.1   0.7    3.4  4  DUF1049          Protein of unknown function (DUF1049)
+
+
+Domain annotation for each model (and alignments):
+>> Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.5  22.1   8.8e-09   7.1e-05       3      90 ..      18     105 ..      15     149 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  score: 22.5 bits;  conditional E-value: 8.8e-09
+                         HHHHH-SBHHHHHHHHHHHHHHHHHHHHHTT-HHHHHHHHHIIIIIHHHHHHHHHHHTS----TTCHHHHHHHHHHHHHHHHHHHTT- CS
+         Oxidored_q3   3 llvitsknpvysalfLilvflgiaglfillgaeFlalvqilvYvGAilvLflFvimleeeeekeklkkslplaalligllllallllv 90 
+                         l+ its+ ++y ++    ++l+  + ++l g + ++l++ lvY+G++ +Lf+Fv  ++ ++++  ++  +++++l+++++ +++ l++
+  Versteria_mustelae  18 LFSITSHCVYYCVFLVGKALLSSMICYMLYGFSWYSLLFCLVYIGGVYILFIFVSIFKPKNRFVLYSGLNVFGVLFCFVVSVGFCLFF 105
+                         344555555555555556777777889999***************************8666666666666666555555555444444 PP
+
+>> DUF1049  Protein of unknown function (DUF1049)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.6   2.0      0.28   2.3e+03      10      28 ..       3      20 ..       1      24 [. 0.68
+   2 ?   -0.8   0.4      0.16   1.3e+03      22      39 ..      54      71 ..      44      83 .. 0.64
+   3 ?   -0.9   0.2      0.16   1.3e+03      34      40 ..      90      96 ..      80     111 .. 0.59
+   4 ?   14.1   0.7   3.5e-06     0.029       9      43 ..     115     149 ..     115     152 .] 0.84
+
+  Alignments for each domain:
+  == domain 1  score: -1.6 bits;  conditional E-value: 0.28
+             DUF1049 10 flfaqvelpLsllllvafg 28
+                        f+f+   ++L++ +l+ f 
+  Versteria_mustelae  3 FFFWL-CISLYFFVLLLFS 20
+                        77777.6777777766664 PP
+
+  == domain 2  score: -0.8 bits;  conditional E-value: 0.16
+             DUF1049 22 lllvafgiGallgwllsl 39
+                        ll+  + iG + ++++++
+  Versteria_mustelae 54 LLFCLVYIGGVYILFIFV 71
+                        555555666666665555 PP
+
+  == domain 3  score: -0.9 bits;  conditional E-value: 0.16
+             DUF1049 34 gwllslw 40
+                        g+l++++
+  Versteria_mustelae 90 GVLFCFV 96
+                        3333332 PP
+
+  == domain 4  score: 14.1 bits;  conditional E-value: 3.5e-06
+             DUF1049   9 nflfaqvelpLsllllvafgiGallgwllslwsyl 43 
+                         nfl + +e +L+++l +++++G+++  l++ ++++
+  Versteria_mustelae 115 NFLCSCSEGSLYVCLCLTLIFGFIILSLVGSVKIM 149
+                         677777899****************9999987554 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (152 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       982  (0.0602232); expected 326.1 (0.02)
+Passed bias filter:                      279  (0.0171103); expected 326.1 (0.02)
+Passed Vit filter:                        24  (0.00147185); expected 16.3 (0.001)
+Passed Fwd filter:                         9  (0.000551944); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.65u 0.28s 00:00:00.93 Elapsed: 00:00:00.53
+# Mc/sec: 820.46
+//
+Query:       Euseius_nicholsi  [L=157]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+  ------ inclusion threshold ------
+        2.2    8.0  28.8        3.3    7.4  28.6    1.4  1  Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase cha
+
+
+Domain annotation for each model (and alignments):
+>> Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.4  28.6   0.00021       3.3       5     133 ..      15     140 ..      11     148 .. 0.61
+
+  Alignments for each domain:
+  == domain 1  score: 7.4 bits;  conditional E-value: 0.00021
+                       HHH-SBHHHHHHHHHHHHHH.HHHHHHHTT-HHHHHHHHHIIIIIHHHHHHHHHHHTS----TTCHHHHHHHHHHHHHHHHHHHTT-..---- CS
+       Oxidored_q3   5 vitsknpvysalfLilvflg.iaglfillgaeFlalvqilvYvGAilvLflFvimleeeeekeklkkslplaalligllllallllvaesaad 96 
+                       + +s + ++ ++ Li+ +++ i +  + l+   + +++++  +G++l+Lf++ i+++ +++   +k++l+++++++ l++ ++         +
+  Euseius_nicholsi  15 FYFSIKSIHKIIILIINLIIlIFISSYYLKSRWFIILFVILMIGGMLILFIYFISINISRNLIIIKNNLTILVFFVLLIIKII---------N 98 
+                       56677788888888887665155556788999999*********************855555555555555533333333333.........3 PP
+
+                       -----TT-HHHHHHHHTT.TTHHHHHHHHHH....HHHHHHH CS
+       Oxidored_q3  97 aelaevsnieaigkllft.kyllpfelasvl....LLvalig 133
+                         l+++ +i++i + l+  +y+   ++  ++    + + +i 
+  Euseius_nicholsi  99 RFLNDFIEIKRINSDLIFvNYITSWNINLLIylliIYIFIIL 140
+                       345667777777777644454444444333320003333333 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (157 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1560  (0.0956703); expected 326.1 (0.02)
+Passed bias filter:                      343  (0.0210352); expected 326.1 (0.02)
+Passed Vit filter:                        94  (0.00576475); expected 16.3 (0.001)
+Passed Fwd filter:                        38  (0.00233043); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.95u 0.35s 00:00:01.29 Elapsed: 00:00:00.64
+# Mc/sec: 701.80
+//
+Query:       Patiria  [L=162]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    2.5e-16   59.6  11.9    2.5e-16   59.6  11.9    1.4  1  Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase cha
+
+
+Domain annotation for each model (and alignments):
+>> Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   59.6  11.9   1.5e-20   2.5e-16       4     137 .]      16     150 ..      13     150 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 59.6 bits;  conditional E-value: 1.5e-20
+                  HHHH-SBHHHHHHHHHHHHHHHHHHHHHTT-HHHHHHHHHIIIIIHHHHHHHHHHHTS----TTCHHHHHHHHHHHHHHHHHHHTT-......----- CS
+  Oxidored_q3   4 lvitsknpvysalfLilvflgiaglfillgaeFlalvqilvYvGAilvLflFvimleeeeekeklkkslplaalligllllallllv....aesaada 97 
+                  lv++s +p+y al L+lv l+ ++l  llg +F+alv+il+YvG++lv+f++++++++e+++ + +k + ++ +l +l++ + +l +    +   +++
+      Patiria  16 LVFYSLSPYYGALGLVLVALSGCLLCRLLGFSFIALVLILIYVGGMLVVFVYSTAISAERYP-RVSKFNEIL-VLRSLVISWGVLKFdpliK--VEVK 109
+                  788999**************************************************544444.333333333.3444444444444433321..2344 PP
+
+                  ----TT-HHHH.HHHHTTTTHHHHHHHHHHHHHHHHHHHHC CS
+  Oxidored_q3  98 elaevsnieai.gkllftkyllpfelasvlLLvaligaivl 137
+                      v++ + + ++ l+ +    +++ + +LLval++a+vl
+      Patiria 110 RWGFVTKSDLVgARKLYRRMGGYLLIGGYILLVALVVALVL 150
+                  444555666662578999********************997 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (162 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       930  (0.0570342); expected 326.1 (0.02)
+Passed bias filter:                      393  (0.0241016); expected 326.1 (0.02)
+Passed Vit filter:                        39  (0.00239176); expected 16.3 (0.001)
+Passed Fwd filter:                         6  (0.000367963); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.61u 0.29s 00:00:00.89 Elapsed: 00:00:00.54
+# Mc/sec: 858.25
+//
+Query:       Daphnia  [L=170]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    7.3e-07   29.0  16.3    7.3e-07   29.0  16.3    1.4  1  Oxidored_q3    NADH-ubiquinone/plastoquinone oxidoreductase c
+     0.0037   16.8   3.3     0.0037   16.8   3.3    2.0  2  DUF4131        Domain of unknown function (DUF4131)
+
+
+Domain annotation for each model (and alignments):
+>> Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.0  16.3   8.9e-11   7.3e-07       9     137 .]      21     159 ..      12     160 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 29.0 bits;  conditional E-value: 8.9e-11
+                  SBH.HHHHHHHHHHHHHHHHHHHHTT-HHHHHHHHHIIIIIHHHHHHHHHHHTS----TTCHHHHHHHHHHHHHHHHHHHTT-...........---- CS
+  Oxidored_q3   9 knp.vysalfLilvflgiaglfillgaeFlalvqilvYvGAilvLflFvimleeeeekeklkkslplaalligllllallllv.........aesaad 96 
+                  ++p +  ++ Li++f+++a l +    + l++v++l+ +G+ lv+f+++ +l++ e++++ ++++ ++ l  + +l++ l++          + +a  
+      Daphnia  21 RHPlLIGLIILIITFIIAATLGLGGLRSWLSYVLVLILLGGLLVIFIYISLLASNENQTPQSNKIKIFFLSTTSILAGSLVISsrlkvfdskT-NALL 117
+                  44404556677777777777777777788***********************99999999999999997777777777777779999998642.2223 PP
+
+                  -----TT-HHHHHHHHTT.TTHHHHHHHHHHHHHHHHHHHHC CS
+  Oxidored_q3  97 aelaevsnieaigkllft.kyllpfelasvlLLvaligaivl 137
+                  + ++ +++ +   +ll++ +   + +++ + LL++li+++++
+      Daphnia 118 KITHYNNESTDWLNLLYSeQLGGMTIFLVLYLLLTLIVVVAI 159
+                  333344445555688888455555555555577777776654 PP
+
+>> DUF4131  Domain of unknown function (DUF4131)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   16.8   3.3   4.6e-07    0.0037      10     106 ..      24     124 ..       8     138 .. 0.63
+   2 ?   -0.6   0.3     0.097   7.9e+02      18      31 ..     142     155 ..     129     168 .. 0.52
+
+  Alignments for each domain:
+  == domain 1  score: 16.8 bits;  conditional E-value: 4.6e-07
+  DUF4131  10 pglplalvllalllllllllllllrrrprrrvllllllvlllallgfalrapqpnandlsqllss.....gqeviveG..vvaslpeltgsgrrfvleverv 104
+              + ++l ++++ ++++++l l+ l   r +  + l+l+l+  l++++++++ +  n+n+ +q  +      +++ i+ G  v++s+ ++ +s++   l+++++
+  Daphnia  24 LLIGLIILIITFIIAATLGLGGL---RSWLSYVLVLILLGGLLVIFIYISLLASNENQTPQSNKIkifflSTTSILAGslVISSRLKVFDSKTNALLKITHY 122
+              44455555555555555555555...55555544444444444444444444444444444443344777999999998999****************9987 PP
+
+  DUF4131 105 ls 106
+              ++
+  Daphnia 123 NN 124
+              43 PP
+
+  == domain 2  score: -0.6 bits;  conditional E-value: 0.097
+  DUF4131  18 llalllllllllll 31 
+              +++l+l lll+l++
+  Daphnia 142 TIFLVLYLLLTLIV 155
+              33333333333332 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (170 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1058  (0.0648841); expected 326.1 (0.02)
+Passed bias filter:                      358  (0.0219551); expected 326.1 (0.02)
+Passed Vit filter:                        47  (0.00288237); expected 16.3 (0.001)
+Passed Fwd filter:                        19  (0.00116522); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.75u 0.26s 00:00:01.01 Elapsed: 00:00:00.56
+# Mc/sec: 868.47
+//
+Query:       Haplorchis_taichui  [L=152]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    0.00021   21.0  18.5    0.00036   20.2  18.5    1.5  1  Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase cha
+
+
+Domain annotation for each model (and alignments):
+>> Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   20.2  18.5   2.2e-08   0.00036      11     112 ..      25     117 ..      14     144 .. 0.60
+
+  Alignments for each domain:
+  == domain 1  score: 20.2 bits;  conditional E-value: 2.2e-08
+                         HHHHHHHHHHHHHHHHHHHHHTT-HHHHHHHHHIIIIIHHHHHHHHHHHTS----TTCHHHHHHHHHHHHHHHHHHHTT-..--------- CS
+         Oxidored_q3  11 pvysalfLilvflgiaglfillgaeFlalvqilvYvGAilvLflFvimleeeeekeklkkslplaalligllllallllvaesaadaelae 101
+                         + y  l L+ +f +i  ++++lg   + +++ lvYvG++ vLf+Fv m +        ++s +l+    gl+l+++++l+  + +   +  
+  Haplorchis_taichui  25 VGYCYLLLLRAFRVIGYVYLVLGFRWYLVLFCLVYVGGVYVLFIFVSMHNP-------NPSPMLG-GSYGLVLFVYFFLA-INFVGYFTGY 106
+                         34788899999999**********************************962.......2222222.22222222222222.1111222233 PP
+
+                         TT-HHHHHHHH CS
+         Oxidored_q3 102 vsnieaigkll 112
+                         ++++ + ++ l
+  Haplorchis_taichui 107 EGSLVECSHYL 117
+                         34444444444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (152 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       716  (0.0439102); expected 326.1 (0.02)
+Passed bias filter:                      270  (0.0165583); expected 326.1 (0.02)
+Passed Vit filter:                        25  (0.00153318); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.54u 0.29s 00:00:00.83 Elapsed: 00:00:00.52
+# Mc/sec: 836.24
+//
+Query:       Lumbricus  [L=155]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    6.3e-08   32.4  22.6    6.3e-08   32.4  22.6    1.5  2  Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase cha
+
+
+Domain annotation for each model (and alignments):
+>> Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.8   2.3     0.068   1.1e+03      50      71 ..       1      21 [.       1      36 [. 0.38
+   2 !   32.4  22.6   3.8e-12   6.3e-08       4     136 ..      16     142 ..      13     143 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: -0.8 bits;  conditional E-value: 0.068
+                 HHHHHHHHHHTS----TTCHHH CS
+  Oxidored_q3 50 lvLflFvimleeeeekeklkks 71
+                 ++L  F++m+ ++ +++ +  s
+    Lumbricus  1 MILTSFILMIIAT-TFTLYLAS 21
+                 5677777777311.12222222 PP
+
+  == domain 2  score: 32.4 bits;  conditional E-value: 3.8e-12
+                  HHHH-SBHHHHHHHHHHHHHHHHHHHHHTT-HHHHHHHHHIIIIIHHHHHHHHHHHTS----TTCHHHHHHHHHHHHHHHHHHHTT-..--------- CS
+  Oxidored_q3   4 lvitsknpvysalfLilvflgiaglfillgaeFlalvqilvYvGAilvLflFvimleeeeekeklkkslplaalligllllallllvaesaadaelae 101
+                  ++ +++ p+  ++  ++  l++a  f  +  + +a++ +l+Y+G++lv+f + ++l+    ++++++ +++ ++li+ll +  l+++    ++ + ++
+    Lumbricus  16 TLYLASTPIVLGVNILIIALLLASTFASFISSWFAFLIFLIYIGGMLVIFAYFLALT---PNQQISNFNIIPYALITLLTFSALTYT----TNIKIPT 106
+                  5667778888888888888889999999999999**********************6...446777777888888888888888887....3567889 PP
+
+                  TT-HHHHHHHHTT.TTHHHHHHHHHHHHHHHHHHHH CS
+  Oxidored_q3 102 vsnieaigkllft.kyllpfelasvlLLvaligaiv 136
+                  +s+i++  + l+  +   +++l++++LL++++ ++ 
+    Lumbricus 107 FSDISQGNSILYIsRTAPFLILLALILLLTIVIVVK 142
+                  99**********955566667788899999999886 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (155 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1263  (0.0774562); expected 326.1 (0.02)
+Passed bias filter:                      395  (0.0242242); expected 326.1 (0.02)
+Passed Vit filter:                        63  (0.00386361); expected 16.3 (0.001)
+Passed Fwd filter:                        21  (0.00128787); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.72u 0.38s 00:00:01.10 Elapsed: 00:00:00.59
+# Mc/sec: 751.57
+//
+Query:       Halocynthia  [L=147]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    0.00012   21.7  27.0    0.00024   20.8  27.0    1.5  1  Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase cha
+
+
+Domain annotation for each model (and alignments):
+>> Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   20.8  27.0   1.5e-08   0.00024       2     132 ..      14     133 ..      13     139 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 20.8 bits;  conditional E-value: 1.5e-08
+                  HHHHHH-SBHHHHHHHHHHHHHHHHHHHHHTT-HHHHHHHHHIIIIIHHHHHHHHHHHTS----TTCHHHHHHHHHHHHHHHHHHHTT-..------- CS
+  Oxidored_q3   2 allvitsknpvysalfLilvflgiaglfillgaeFlalvqilvYvGAilvLflFvimleeeeekeklkkslplaalligllllallllvaesaadael 99 
+                  +++v++  + +  +l L+l  l++ +l+++l+  F++l+ +lvY+G il Lf Fv ++       +l+ks ++ +l ++l+l + ll++      +e 
+  Halocynthia  14 GFIVLFRGSFLVGILGLVLGALFLVFLIFFLNKVFFGLIVVLVYLGRILLLFAFVASML------GLWKSRTVRSLSGVLILGFGLLWFI-----SER 100
+                  78999999**************************************************5......5566666666666666666666652.....222 PP
+
+                  --TT-HHHHHHHHTTTTHHHHHHHHHHHHHHHH CS
+  Oxidored_q3 100 aevsnieaigkllftkyllpfelasvlLLvali 132
+                    + + +++  +++ + +++ +l  +lL+++l+
+  Halocynthia 101 FIYPSENNLVFVIYLDRFIFCILGRFLLVLVLL 133
+                  234456666666666666666666665555554 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (147 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1040  (0.0637802); expected 326.1 (0.02)
+Passed bias filter:                      301  (0.0184595); expected 326.1 (0.02)
+Passed Vit filter:                        45  (0.00275972); expected 16.3 (0.001)
+Passed Fwd filter:                        17  (0.00104256); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.63u 0.37s 00:00:01.00 Elapsed: 00:00:00.57
+# Mc/sec: 725.07
+//
+Query:       Limulus  [L=153]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    1.8e-05   24.5  20.4    2.7e-05   23.9  20.4    1.3  1  Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase cha
+  ------ inclusion threshold ------
+       0.31   10.2   7.9       0.21   10.8   3.0    2.1  2  DUF4191      Domain of unknown function (DUF4191)
+        1.2    8.9  28.5        1.1    9.1   5.7    2.1  2  Promethin    Promethin
+
+
+Domain annotation for each model (and alignments):
+>> Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.9  20.4   4.9e-09   2.7e-05       2     136 ..      13     141 ..      12     144 .. 0.68
+
+  Alignments for each domain:
+  == domain 1  score: 23.9 bits;  conditional E-value: 4.9e-09
+                  HHHHHH-SBHHHHHHHHHHHHHHHHHHHHHT.T-HHHHHHHHHIIIIIHHHHHHHHHHHTS----TTCHHHHHHHHHHHHHHHHHHHTT-..------ CS
+  Oxidored_q3   2 allvitsknpvysalfLilvflgiaglfill.gaeFlalvqilvYvGAilvLflFvimleeeeekeklkkslplaalligllllallllvaesaadae 98 
+                  ++l+++s +p+  ++ Lil++++++++  ll + + +++ ++l+ +G+ilv+f+++  l+  +e +k+  ++pl+++l + ll++ + + +   +   
+      Limulus  13 SVLFLISYHPIIIIINLILTTILVSLITTLLiKTSWFSYTLFLIILGGILVVFIYIARLA-PNESFKILTKIPLLIILSIPLLFTTISFKT---S--- 103
+                  78999*********************9987737778***********************6.556667888888886666666666655552...1... PP
+
+                  ---TT-HHHHH.HHHTTT.THHHHHHHHHHHHHHHHHHHH CS
+  Oxidored_q3  99 laevsnieaig.kllftk.yllpfelasvlLLvaligaiv 136
+                     + +i +i+ + +f++  +l  +++   LL++li+++ 
+      Limulus 104 --IYPEIYKISiSKIFSNlPILTTLFLVTFLLITLIAVVK 141
+                  ..12222222202233321333333333346666666655 PP
+
+>> DUF4191  Domain of unknown function (DUF4191)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.8   3.0   3.9e-05      0.21      27      79 ..      24      78 ..      19      84 .. 0.74
+   2 ?    2.2   0.2     0.017        90      13      47 ..     107     141 ..     101     150 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 10.8 bits;  conditional E-value: 3.9e-05
+  DUF4191 27 wlllaaflvvvvvfvvlglllgs..lilllilgillgllvalivltrraekaaya 79
+              +++ ++l +++v ++ +ll+++    ++l+l il g+lv++i ++r a +  ++
+  Limulus 24 IIIINLILTTILVSLITTLLIKTswFSYTLFLIILGGILVVFIYIARLAPNESFK 78
+             566777888888888888888642144566777788999********99988886 PP
+
+  == domain 2  score: 2.2 bits;  conditional E-value: 0.017
+  DUF4191  13 qvfkltrkedkkllwlllaaflvvvvvfvvlglll 47 
+              +++k+   +  + l++l+++flv++++++++ ++ 
+  Limulus 107 EIYKISISKIFSNLPILTTLFLVTFLLITLIAVVK 141
+              57777777777888999999999999999998874 PP
+
+>> Promethin  Promethin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    5.7  14.9    0.0022        12      34      88 ..      13      69 ..       6      72 .. 0.70
+   2 ?    9.1   5.7   0.00019       1.1      38      84 ..      79     143 ..      75     149 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 5.7 bits;  conditional E-value: 0.0022
+  Promethin 34 liqlllsllPlllFltfalstllfalvgallfelfvv..gvallvLvpvLfitsfla 88
+               ++ +l+s  P+++++ + l+t+l++l++ ll++  +   ++ l++L  +L++++ +a
+    Limulus 13 SVLFLISYHPIIIIINLILTTILVSLITTLLIKTSWFsyTLFLIILGGILVVFIYIA 69
+               566778999*******************66666555411455566777777766655 PP
+
+  == domain 2  score: 9.1 bits;  conditional E-value: 0.00019
+  Promethin  38 llsllPlllFltfalstllfalvg..................allfelfvvgvallvLvpvLfit 84 
+                +l+ +Pll++l++ l+   +++ +                   +l +lf+v++ l++L++v+ it
+    Limulus  79 ILTKIPLLIILSIPLLFTTISFKTsiypeiykisiskifsnlPILTTLFLVTFLLITLIAVVKIT 143
+                67889****99999999999999999***************99*****************99887 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (153 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1209  (0.0741445); expected 326.1 (0.02)
+Passed bias filter:                      306  (0.0187661); expected 326.1 (0.02)
+Passed Vit filter:                        40  (0.00245308); expected 16.3 (0.001)
+Passed Fwd filter:                        10  (0.000613271); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.62u 0.30s 00:00:00.92 Elapsed: 00:00:00.53
+# Mc/sec: 825.86
+//
+Query:       Echinococcus_equinus  [L=151]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    7.3e-05   22.5  30.3    0.00051   19.8  29.0    2.7  1  Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase cha
+
+
+Domain annotation for each model (and alignments):
+>> Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   19.8  29.0   3.1e-08   0.00051       3      88 ..      16     103 ..      14     147 .. 0.68
+
+  Alignments for each domain:
+  == domain 1  score: 19.8 bits;  conditional E-value: 3.1e-08
+                           HHHHH-SBHHHHHHHHHHHHHHHHHHHHHTT-HHHHHHHHHIIIIIHHHHHHHHHHH......TS----TTCHHHHHHHHHHHHHHHHH CS
+           Oxidored_q3   3 llvitsknpvysalfLilvflgiaglfillgaeFlalvqilvYvGAilvLflFviml......eeeeekeklkkslplaalliglllla 85 
+                           l+++t ++++y +l  + ++l+ ++ + + g + ++l++ lvYvG++ vLf+Fv ++            +++ +   + + +++ l++ 
+  Echinococcus_equinus  16 LFCFTRHSIYYCVLLVVNALLASCMCYTIYGFSWYSLLLCLVYVGGVYVLFIFVSVFspnssfV----LYHRIWEVSIYVWFVFGLFMC 100
+                           67889999999**********************************************7643220....222222222221222222222 PP
+
+                           HHT CS
+           Oxidored_q3  86 lll 88 
+                           +++
+  Echinococcus_equinus 101 VFI 103
+                           222 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (151 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1153  (0.0707102); expected 326.1 (0.02)
+Passed bias filter:                      288  (0.0176622); expected 326.1 (0.02)
+Passed Vit filter:                        38  (0.00233043); expected 16.3 (0.001)
+Passed Fwd filter:                        15  (0.000919907); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.74u 0.37s 00:00:01.10 Elapsed: 00:00:00.66
+# Mc/sec: 654.52
+//
+Query:       Taenia_crassiceps  [L=150]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    7.8e-05   22.4  22.1    9.3e-05   22.1  20.9    1.8  1  Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase cha
+
+
+Domain annotation for each model (and alignments):
+>> Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.1  20.9   5.7e-09   9.3e-05       6      90 ..      19     103 ..      13     146 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: 22.1 bits;  conditional E-value: 5.7e-09
+                        HH-SBHHHHHHHHHHHHHHHHHHHHHTT-HHHHHHHHHIIIIIHHHHHHHHHHHTS----TTCHHHHHHHHHHHHHHHHHHHTT- CS
+        Oxidored_q3   6 itsknpvysalfLilvflgiaglfillgaeFlalvqilvYvGAilvLflFvimleeeeekeklkkslplaalligllllallllv 90 
+                        ++ + ++y +l  + ++++  + + l g   ++l++ lvYvG++ +Lf+Fv  ++ ++++ k+ +++ + +++++++ l+ +++v
+  Taenia_crassiceps  19 LSRHCLFYCVLLVLKSLVAGLICYTLYGFRWYSLLLCLVYVGGVYILFIFVSIFKPKDNFVKYGSMIKFNVVFMFVFRLLCMFFV 103
+                        44445678888888999999999*******************************8888888888888888777777666666666 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (150 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1020  (0.0625537); expected 326.1 (0.02)
+Passed bias filter:                      240  (0.0147185); expected 326.1 (0.02)
+Passed Vit filter:                        27  (0.00165583); expected 16.3 (0.001)
+Passed Fwd filter:                         7  (0.00042929); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.65u 0.28s 00:00:00.93 Elapsed: 00:00:00.54
+# Mc/sec: 794.67
+//
+Query:       Axinella  [L=183]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    1.3e-34  118.8  21.1    1.6e-34  118.5  21.1    1.1  1  Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase cha
+  ------ inclusion threshold ------
+      0.054   13.4   0.2      0.054   13.4   0.2    3.1  2  FtsL         Cell division protein FtsL
+
+
+Domain annotation for each model (and alignments):
+>> Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  118.5  21.1     2e-38   1.6e-34       1     137 []      15     160 ..      15     160 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 118.5 bits;  conditional E-value: 2e-38
+                  HHHHHHH-SBHHHHHHHHHHHHHHHHHHHHHTT-HHHHHHHHHIIIIIHHHHHHHHHHH...TS----TTCHHHHHHHHHHHHHHHHHHHTT-..... CS
+  Oxidored_q3   1 gallvitsknpvysalfLilvflgiaglfillgaeFlalvqilvYvGAilvLflFviml...eeeeekeklkkslplaalligllllallllv..... 90 
+                  ++++vi++ npv+s+l+Li++f ++ +lfill+ eF+al++++vYvGAi++LflFvim+   ++ e  e+++++lp++ ++ig+++l+   +v     
+     Axinella  15 SGIMVISAFNPVHSVLWLIVAFTSATALFILLEVEFIALMFLIVYVGAIAILFLFVIMMlnlTDXEGGEDMSNYLPAG-FIIGVVFLINCRMVshfgq 111
+                  589**********************************************************9888999999*****99.8888888888777778998 PP
+
+                  .......---------TT-HHHHHHHHTTTTHHHHHHHHHHHHHHHHHHHHC CS
+  Oxidored_q3  91 .....aesaadaelaevsnieaigkllftkyllpfelasvlLLvaligaivl 137
+                        ++      ++  nie +g++l+t+y+++f++as++LLva+ig+ivl
+     Axinella 112 qssyyISWD---LIEKAPNIEVLGRVLYTNYYYLFIIASFILLVAMIGVIVL 160
+                  887763333...345667********************************97 PP
+
+>> FtsL  Cell division protein FtsL
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -6.6   8.9         2   1.6e+04      14      30 ..      49      65 ..      10      74 .. 0.62
+   2 ?   13.4   0.2   6.6e-06     0.054      15      54 ..     142     181 ..     131     183 .] 0.81
+
+  Alignments for each domain:
+  == domain 1  score: -6.6 bits;  conditional E-value: 2
+      FtsL 14 kllllllllvlvsavav 30
+              +++ l++l+v v a+a+
+  Axinella 49 EFIALMFLIVYVGAIAI 65
+              33444555555555555 PP
+
+  == domain 2  score: 13.4 bits;  conditional E-value: 6.6e-06
+      FtsL  15 llllllllvlvsavavvlithqtRqlvselekllserdkL 54 
+               l+++  +++lv+ ++v++ th+tR  ++ ++ +l+ +++L
+  Axinella 142 LFIIASFILLVAMIGVIVLTHDTRSEIKRQNIFLQTSRQL 181
+               44555566677889****************9999999887 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (183 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1063  (0.0651907); expected 326.1 (0.02)
+Passed bias filter:                      287  (0.0176009); expected 326.1 (0.02)
+Passed Vit filter:                        43  (0.00263707); expected 16.3 (0.001)
+Passed Fwd filter:                        13  (0.000797253); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.70u 0.24s 00:00:00.94 Elapsed: 00:00:00.53
+# Mc/sec: 987.80
+//
+Query:       Terebratulina  [L=162]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    5.4e-07   29.4  12.5      7e-07   29.0  12.5    1.2  1  Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase cha
+
+
+Domain annotation for each model (and alignments):
+>> Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.0  12.5   4.3e-11     7e-07       6     136 ..      18     149 ..       7     150 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 29.0 bits;  conditional E-value: 4.3e-11
+                    HH-SBHHHHHHHHHHHHHHHHHHHHHTT-HHHHHHHHHIIIIIHHHHHHHHHHHTS----TTCHHHHHHHHHHHHHHHHHHHTT-....------- CS
+    Oxidored_q3   6 itsknpvysalfLilvflgiaglfillgaeFlalvqilvYvGAilvLflFvimleeeeekeklkkslplaalligllllallllv..aesaadael 99 
+                     ++++pv  +  L+ + l+ ++++ +   + ++lv  ++Y+G+ lv+f ++ +++  e+  ++  s p+   li+l++ ++ + +  + ++a a  
+  Terebratulina  18 PFMSQPVILGAILLSLALASCLVLAIEAQTWYGLVVYIIYIGGLLVIFSYISVITPNEMLLSTGLSGPA--TLIFLIVSVESAQIhyPINQARAPI 111
+                    5788999999999999999999999999999***********************755555555544444..4777777777777744223334444 PP
+
+                    --TT-HHHHHHHHTT.TTHHHHHHHHHHHHHHHHHHHH CS
+    Oxidored_q3 100 aevsnieaigkllft.kyllpfelasvlLLvaligaiv 136
+                    ++  ++ + g ++++    ++++  +++LL+al+g+  
+  Terebratulina 112 RKALETIKNGIQVMDlPNRILLISHGIVLLLALVGVAS 149
+                    44445555599999999******************975 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (162 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       875  (0.0536612); expected 326.1 (0.02)
+Passed bias filter:                      356  (0.0218325); expected 326.1 (0.02)
+Passed Vit filter:                        31  (0.00190114); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.63u 0.33s 00:00:00.96 Elapsed: 00:00:00.66
+# Mc/sec: 702.20
+//
+Query:       Suberites_domuncula  [L=189]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    4.5e-37  126.8  18.0    6.1e-37  126.4  18.0    1.2  1  Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase cha
+  ------ inclusion threshold ------
+       0.48    9.3   7.3        4.1    6.2   0.0    2.0  2  Herpes_UL43  Herpesvirus UL43 protein
+       0.64   10.0  17.1       0.04   13.9   6.8    2.8  3  MpPF26       M penetrans paralogue family 26
+        2.1    7.8  10.7       0.49    9.8   5.2    2.1  2  DUF4131      Domain of unknown function (DUF4131)
+
+
+Domain annotation for each model (and alignments):
+>> Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  126.4  18.0   1.5e-40   6.1e-37       1     137 []      15     163 ..      15     163 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 126.4 bits;  conditional E-value: 1.5e-40
+                          HHHHHHH-SBHHHHHHHHHHHHHHHHHHHHHTT-HHHHHHHHHIIIIIHHHHHHHHHHH....TS----TTCHHHHHHHHHHHHHHHHHH CS
+          Oxidored_q3   1 gallvitsknpvysalfLilvflgiaglfillgaeFlalvqilvYvGAilvLflFviml....eeeeekeklkkslplaalligllllal 86 
+                          ++++vi++ npv+s+++Li++f ++a+lfill+ eF+a+++++vYvGAi++LflFvim+    +  ++++++++++p + l+ig++++++
+  Suberites_domuncula  15 SGIMVISALNPVHSVFWLIVAFTSAALLFILLEVEFIAFIFLIVYVGAIAILFLFVIMMlnltDLGNNPQDMSNYMPTG-LIIGVVVILE 103
+                          589***********************************************************96677899999999999.7777777777 PP
+
+                          HTT-................---------TT-HHHHHHHHTTTTHHHHHHHHHHHHHHHHHHHHC CS
+          Oxidored_q3  87 lllv..............aesaadaelaevsnieaigkllftkyllpfelasvlLLvaligaivl 137
+                          +l++              +        +++snie +g++l+t+y+++f+las++LL a+igaivl
+  Suberites_domuncula 104 VLIFsswksnsegspylrW-----DYIEKTSNIEVLGRVLYTDYYYLFILASFILLSAMIGAIVL 163
+                          6666699999988766442.....4567899********************************97 PP
+
+>> Herpes_UL43  Herpesvirus UL43 protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.6   4.8    0.0063        26     282     369 ..      12      98 ..       8     105 .. 0.77
+   2 ?    6.2   0.0     0.001       4.1     113     152 ..     133     174 ..     126     188 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 3.6 bits;  conditional E-value: 0.0063
+          Herpes_UL43 282 vaiflleliqslrdedltdplivlyvglsviglaltfagielvviaiLgsavaasLtcvlglRr.rlkgid.plaaayvaktlrGliisv 369
+                          v+  ++  i +l++ +   +liv++++  ++ + l   +i +   ++  +a+a+    v+++ +    g + ++++ y+     Glii v
+  Suberites_domuncula  12 VILSGIMVISALNPVHSVFWLIVAFTSAALLFILLEVEFIAFIFLIVYVGAIAILFLFVIMMLNlTDLGNNpQDMSNYMPT---GLIIGV 98 
+                          66777889999*******************999999999999***********9877766665414444441455555555...777776 PP
+
+  == domain 2  score: 6.2 bits;  conditional E-value: 0.001
+          Herpes_UL43 113 iaglvlAddvypyvlLapspdfvgtlgflvlvaGltiGg..s 152
+                          ++g vl  d y++++La+  ++   +g +vl+    +G+   
+  Suberites_domuncula 133 VLGRVLYTDYYYLFILASFILLSAMIGAIVLTQTKSVGIkrQ 174
+                          6899999********************999999999999443 PP
+
+>> MpPF26  M penetrans paralogue family 26
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.1   0.2      0.41   1.7e+03      12      28 ..      28      44 ..      19      47 .. 0.50
+   2 ?   13.9   6.8   9.9e-06      0.04       5      70 ..      45     106 ..      42     110 .. 0.80
+   3 ?    2.7   0.1     0.029   1.2e+02      18      37 ..     145     164 ..     130     183 .. 0.60
+
+  Alignments for each domain:
+  == domain 1  score: -1.1 bits;  conditional E-value: 0.41
+               MpPF26 12 sltiiilyllatvlllv 28
+                         s+  +i  ++ ++ll++
+  Suberites_domuncula 28 SVFWLIVAFTSAALLFI 44
+                         33334444444444444 PP
+
+  == domain 2  score: 13.9 bits;  conditional E-value: 9.9e-06
+               MpPF26   5 lkkikklsltiiilyllatvlllvsllayivllskskllskeyeeesslleaelligvllillidi 70 
+                          l ++  ++++ +i y+ a+++l+++++++++l        ++ ++ s+ + + l+igv++il + i
+  Suberites_domuncula  45 LLEVEFIAFIFLIVYVGAIAILFLFVIMMLNLTDL----GNNPQDMSNYMPTGLIIGVVVILEVLI 106
+                          568899************************99984....444456788888888888888876555 PP
+
+  == domain 3  score: 2.7 bits;  conditional E-value: 0.029
+               MpPF26  18 lyllatvlllvsllayivll 37 
+                          l++la ++ll +++ +ivl 
+  Suberites_domuncula 145 LFILASFILLSAMIGAIVLT 164
+                          33444444444333333333 PP
+
+>> DUF4131  Domain of unknown function (DUF4131)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    9.8   5.2   0.00012      0.49       3      84 ..      16     101 ..       9     115 .. 0.76
+   2 ?    0.8   0.2     0.072   2.9e+02      15      57 ..     143     161 ..     130     183 .. 0.53
+
+  Alignments for each domain:
+  == domain 1  score: 9.8 bits;  conditional E-value: 0.00012
+              DUF4131   3 Gilla.alpglplalvllalllllllllllllrr....rprrrvllllllvlllallgfalrapqpnandlsqllssgqeviveGvv 84 
+                          Gi    al++  + ++l++++ +++ll +ll  +         + +++++++l++ +++ l+ + +n +d s++++    +i + v+
+  Suberites_domuncula  16 GIMVIsALNPVHSVFWLIVAFTSAALLFILLEVEfiafIFLIVYVGAIAILFLFVIMMLNLTDLGNNPQDMSNYMP-TGLIIGVVVI 101
+                          4433347888888899999999999999998776888766777788888888888899999999999999999999.5555533333 PP
+
+  == domain 2  score: 0.8 bits;  conditional E-value: 0.072
+              DUF4131  15 alvllalllllllllllllrrrprrrvllllllvlllallgfa 57 
+                          +++                        ++l++++ll a++g+ 
+  Suberites_domuncula 143 YYL------------------------FILASFILLSAMIGAI 161
+                          333........................3333333333333333 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (189 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1102  (0.0675825); expected 326.1 (0.02)
+Passed bias filter:                      321  (0.019686); expected 326.1 (0.02)
+Passed Vit filter:                        45  (0.00275972); expected 16.3 (0.001)
+Passed Fwd filter:                        19  (0.00116522); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.74u 0.33s 00:00:01.07 Elapsed: 00:00:00.56
+# Mc/sec: 948.59
+//
+Query:       Bfloridae  [L=167]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    1.9e-10   40.6  18.2    3.6e-10   39.7  18.2    1.5  1  Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase cha
+
+
+Domain annotation for each model (and alignments):
+>> Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   39.7  18.2   2.2e-14   3.6e-10       2     134 ..      13     148 ..      12     151 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 39.7 bits;  conditional E-value: 2.2e-14
+                  HHHHHH-SBHHHHHHHHHHHHHHHHHHHHHTT-HHHHHHHHHIIIIIHHHHHHHHHHHTS----TTCHHHHHHHHHHHHHHHHHHHTT-......... CS
+  Oxidored_q3   2 allvitsknpvysalfLilvflgiaglfillgaeFlalvqilvYvGAilvLflFvimleeeeekeklkkslplaalligllllallllv......... 90 
+                  a++vi +++p+y al+ +++ l++a+l++  ++ F a+++il+Y+G+ilv+f+++++ +++  +  l  +l++ al+++++++++ ++          
+    Bfloridae  13 AIIVIRATSPYYGALATAWLALLAALLLLDADIIFPAIILILIYLGGILVVFIYSTAYAADLIP--LPINLTMSALIASFGVILITIISspsietlce 108
+                  89********************************************************755444..44445555444444444444344557776554 PP
+
+                  ...---------TT-HHHHHHHHTTTTHHHHHHHHHHHHHHHHHH CS
+  Oxidored_q3  91 .aesaadaelaevsnieaigkllftkyllpfelasvlLLvaliga 134
+                   +       l    +++ +   ++++ + +f++a ++L + l+ +
+    Bfloridae 109 tK-----PWLVYDIQPSYMLFDIYQRGSSIFIVAVMILTALLFSI 148
+                  31.....23344558888999999999999999999988877765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (167 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1131  (0.069361); expected 326.1 (0.02)
+Passed bias filter:                      360  (0.0220778); expected 326.1 (0.02)
+Passed Vit filter:                        38  (0.00233043); expected 16.3 (0.001)
+Passed Fwd filter:                        10  (0.000613271); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.62u 0.31s 00:00:00.93 Elapsed: 00:00:00.54
+# Mc/sec: 884.74
+//
+Query:       Katharina  [L=168]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+      4e-05   23.3  20.3    5.7e-05   22.8  20.3    1.2  1  Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase cha
+
+
+Domain annotation for each model (and alignments):
+>> Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.8  20.3   3.5e-09   5.7e-05       7     136 ..      19     153 ..      13     154 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  score: 22.8 bits;  conditional E-value: 3.5e-09
+                  H-SBHHHHHHHHHHHHHHHHHHHHHTT-HHHHHHHHHIIIIIHHHHHHHHHHH..TS----TTCHHHHHHHHHHHHHHHHHHHTT-...........- CS
+  Oxidored_q3   7 tsknpvysalfLilvflgiaglfillgaeFlalvqilvYvGAilvLflFviml..eeeeekeklkkslplaalligllllallllv.........aes 93 
+                  + ++p+  +l L++  l+i++l+++   + + ++++l+Y+G+ lv+f +v++l  +       + k++ + +++ + ++++ll+l          + +
+    Katharina  19 LLTQPISLGLLLLFIRLFISILIFFGRSTWFRFILFLIYIGGLLVIFAYVTALipN------LIFKKNLIQVFFPVRTVFWLLILYlrdfigtllE-E 109
+                  6789*************************************************542......2222233332333333333333333566666641.3 PP
+
+                  --------TT-HHHHHHHHTTTTHHHHHH.HHHHHHHHHHHHHH CS
+  Oxidored_q3  94 aadaelaevsnieaigkllftkyllpfel.asvlLLvaligaiv 136
+                  +++     +s  + +g +lf+ ++l++++ ++++L+ +li ++ 
+    Katharina 110 QTKIIFLWNSFFNHLGISLFSPFNLLIIVrLALILFFVLICVVK 153
+                  334445556678889******77666665267777777777765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (168 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1031  (0.0632283); expected 326.1 (0.02)
+Passed bias filter:                      331  (0.0202993); expected 326.1 (0.02)
+Passed Vit filter:                        38  (0.00233043); expected 16.3 (0.001)
+Passed Fwd filter:                        11  (0.000674598); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.63u 0.33s 00:00:00.96 Elapsed: 00:00:00.53
+# Mc/sec: 906.83
+//
+Query:       Geodia  [L=185]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    1.7e-36  124.9  21.8    2.1e-36  124.6  21.8    1.1  1  Oxidored_q3   NADH-ubiquinone/plastoquinone oxidoreductase ch
+  ------ inclusion threshold ------
+      0.069   13.1   0.5      0.069   13.1   0.5    2.7  2  DUF3671       Protein of unknown function
+       0.12   12.2   0.4       0.12   12.2   0.4    3.5  4  FtsL          Cell division protein FtsL
+        1.1    9.4   5.7        3.1    7.9   3.0    2.2  2  DUF3093       Protein of unknown function (DUF3093)
+
+
+Domain annotation for each model (and alignments):
+>> Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  124.6  21.8   5.2e-40   2.1e-36       1     137 []      15     160 ..      15     160 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 124.6 bits;  conditional E-value: 5.2e-40
+                  HHHHHHH-SBHHHHHHHHHHHHHHHHHHHHHTT-HHHHHHHHHIIIIIHHHHHHHHHHH..TS----TTCHHHHHHHHHHHHHHHHHHHTT-...... CS
+  Oxidored_q3   1 gallvitsknpvysalfLilvflgiaglfillgaeFlalvqilvYvGAilvLflFviml..eeeeekeklkkslplaalligllllallllv...... 90 
+                  ++++vi++ npv+s+l+L+++f+g+++lfill+ eFlal++++vYvGAi++LflFvim+   +  e ++++++lp++ ++ig+++l ++l++      
+       Geodia  15 SGVMVISALNPVHSVLWLVVAFIGASALFILLEVEFLALILLIVYVGAIAILFLFVIMMlnLTGLEGTDRSNYLPAG-FIIGIVFLSEVLILqtrist 111
+                  589********************************************************873344566777777777.99999999998888999999 PP
+
+                  ........---------TT-HHHHHHHHTTTTHHHHHHHHHHHHHHHHHHHHC CS
+  Oxidored_q3  91 ......aesaadaelaevsnieaigkllftkyllpfelasvlLLvaligaivl 137
+                        +    + +  e snie +g++l+t+y ++f+las++LLvaligaivl
+       Geodia 112 vesyrnS----NWNFMEASNIEVLGRVLYTNYCYLFILASLILLVALIGAIVL 160
+                  9965432....45567899********************************97 PP
+
+>> DUF3671  Protein of unknown function
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -7.9  11.5         4   1.6e+04      86     108 ..      49      72 ..       3     123 .. 0.66
+   2 ?   13.1   0.5   1.7e-05     0.069      38      77 ..     133     172 ..     122     183 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: -7.9 bits;  conditional E-value: 4
+  DUF3671  86 eklytiffiilv.viillvliYil 108
+              e l  i++i++v  i +l+l+ i+
+   Geodia  49 EFLALILLIVYVgAIAILFLFVIM 72 
+              333444444444234444444444 PP
+
+  == domain 2  score: 13.1 bits;  conditional E-value: 1.7e-05
+  DUF3671  38 kkvlkkyglllilpvllpliglivpilfeakskkslkkke 77 
+              + ++ +y++l+il +l+ l++li +i+ + + ++++k ++
+   Geodia 133 RVLYTNYCYLFILASLILLVALIGAIVLTHDTRVKIKRQD 172
+              567899******************9997776665555544 PP
+
+>> FtsL  Cell division protein FtsL
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.2   0.6      0.23   9.3e+02      16      32 ..       5      21 ..       2      30 .. 0.80
+   2 ?   -6.5   8.4         4   1.6e+04      12      31 ..      48      66 ..      17      75 .. 0.64
+   3 ?   -1.7   0.0      0.67   2.8e+03      21      43 ..     102     124 ..      93     144 .. 0.60
+   4 ?   12.2   0.4     3e-05      0.12      15      54 ..     142     181 ..     129     185 .] 0.83
+
+  Alignments for each domain:
+  == domain 1  score: -0.2 bits;  conditional E-value: 0.23
+    FtsL 16 lllllllvlvsavavvl 32
+            ++l +l +++s+v+v+ 
+  Geodia  5 FYLFALSIIISGVMVIS 21
+            56778999999999986 PP
+
+  == domain 2  score: -6.5 bits;  conditional E-value: 4
+    FtsL 12 vgkllllllllvlvsavavv 31
+            v ++l l+ll+v v a+a++
+  Geodia 48 V-EFLALILLIVYVGAIAIL 66
+            3.233334444555555555 PP
+
+  == domain 3  score: -1.7 bits;  conditional E-value: 0.67
+    FtsL  21 llvlvsavavvlithqtRqlvse 43 
+             +l+l + +++v +  ++   ++e
+  Geodia 102 VLILQTRISTVESYRNSNWNFME 124
+             55666666666655555555555 PP
+
+  == domain 4  score: 12.2 bits;  conditional E-value: 3e-05
+    FtsL  15 llllllllvlvsavavvlithqtRqlvselekllserdkL 54 
+             l++l  l++lv+ ++ ++ th+tR+ ++ ++ +++ +++L
+  Geodia 142 LFILASLILLVALIGAIVLTHDTRVKIKRQDIFIQTSRQL 181
+             55666778888999*******************9999998 PP
+
+>> DUF3093  Protein of unknown function (DUF3093)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.9   3.0   0.00077       3.1      11      53 ..      29      71 ..      22     109 .. 0.79
+   2 ?    2.2   0.0     0.043   1.7e+02      35      67 ..     143     175 ..     112     181 .. 0.64
+
+  Alignments for each domain:
+  == domain 1  score: 7.9 bits;  conditional E-value: 0.00077
+  DUF3093 11 wwWllallvalaaalvaaevglavavlvaavlvalavvallal 53
+              +Wl++++++++a+ +++ev+  + +l ++ + a+a++ l+++
+   Geodia 29 VLWLVVAFIGASALFILLEVEFLALILLIVYVGAIAILFLFVI 71
+             68******************99999988444444444443333 PP
+
+  == domain 2  score: 2.2 bits;  conditional E-value: 0.043
+  DUF3093  35 avlvaavlvalavvallalsrtrieVtdgeLrv 67 
+               +l+ ++l+++++ a++    tr++++++ + +
+   Geodia 143 FILASLILLVALIGAIVLTHDTRVKIKRQDIFI 175
+              333456667777777778888899988876655 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (185 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1102  (0.0675825); expected 326.1 (0.02)
+Passed bias filter:                      339  (0.0207899); expected 326.1 (0.02)
+Passed Vit filter:                        41  (0.00251441); expected 16.3 (0.001)
+Passed Fwd filter:                        16  (0.000981234); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.71u 0.35s 00:00:01.06 Elapsed: 00:00:00.59
+# Mc/sec: 897.04
+//
+Query:       Metridium  [L=202]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    1.6e-34  118.6  19.2      2e-34  118.2  19.2    1.1  1  Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase cha
+
+
+Domain annotation for each model (and alignments):
+>> Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  118.2  19.2   1.2e-38     2e-34       1     137 []      16     176 ..      16     176 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 118.2 bits;  conditional E-value: 1.2e-38
+                  HHHHHHH-SBHHHHHHHHHHHHHHHHHHHHHTT-HHHHHHHHHIIIIIHHHHHHHHHHH............TS----TTCHHHHHHHHHHHHHHHHHH CS
+  Oxidored_q3   1 gallvitsknpvysalfLilvflgiaglfillgaeFlalvqilvYvGAilvLflFviml............eeeeekeklkkslplaalligllllal 86 
+                  ++++vi++ npv+s+++L+++f++ a+lfillg +F+al++i++YvGAi++LflFvim+                 + +++++ p++ l++g l++  
+    Metridium  16 SGIMVISALNPVHSVFWLVVAFISSAALFILLGVDFIALMFIIIYVGAIAILFLFVIMMlnltdftpafrrG---GEADMTNYVPIG-LAVGTLFFEA 109
+                  589***************************************************************997541...445677777777.5555555544 PP
+
+                  HTT-..................---------TT-HHHHHHHHTTTTHHHHHHHHHHHHHHHHHHHHC CS
+  Oxidored_q3  87 lllv................aesaadaelaevsnieaigkllftkyllpfelasvlLLvaligaivl 137
+                  ++                  +  a+   l++++nieaig+ l+t+ +++f+l+s++LLva++gaivl
+    Metridium 110 IASSwlimggpyvyrgllgaWDLANPWFLKKYHNIEAIGRILYTDCYYLFILVSFILLVAMLGAIVL 176
+                  443367888999999999994444455678899********************************97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (202 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1088  (0.0667239); expected 326.1 (0.02)
+Passed bias filter:                      358  (0.0219551); expected 326.1 (0.02)
+Passed Vit filter:                        43  (0.00263707); expected 16.3 (0.001)
+Passed Fwd filter:                         7  (0.00042929); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.63u 0.29s 00:00:00.92 Elapsed: 00:00:00.55
+# Mc/sec: 1050.70
+//
+Query:       Amphimedon_queenslandica  [L=197]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    5.7e-30  103.8  20.9    6.7e-30  103.6  20.9    1.1  1  Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase cha
+  ------ inclusion threshold ------
+        3.9    7.1   0.0        3.9    7.1   0.0    4.0  3  FixS         Cytochrome oxidase maturation protein cbb3-type
+        5.2    5.1  10.5        6.8    4.7  10.5    1.1  1  DUF2070      Predicted membrane protein (DUF2070)
+
+
+Domain annotation for each model (and alignments):
+>> Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  103.6  20.9   1.2e-33   6.7e-30       1     137 []       7     156 ..       7     156 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 103.6 bits;  conditional E-value: 1.2e-33
+                               HHHHHHH-SBHHHHHHHHHHHHHHHHHHHHHTT-HHHHHHHHHIIIIIHHHHHHHHHHH...TS----TTCHHHHHHHHHHHHHH CS
+               Oxidored_q3   1 gallvitsknpvysalfLilvflgiaglfillgaeFlalvqilvYvGAilvLflFviml...eeeeekeklkkslplaalligll 82 
+                               +a+ vi++ +pvy++l+Li +fl+++++fi++g  ++++++i+vYvGAi++LflFv+m+    +ee  +++ + +p++ +++g++
+  Amphimedon_queenslandica   7 SAVKVISAVRPVYAVLWLISAFLSVSAVFIFIGLVYMGFIMIIVYVGAIAILFLFVMMMldqGKEEAGTPIVNIIPMG-MIVGVG 90 
+                               5889*******************************************************9875566677777777777.888888 PP
+
+                               HHHHHTT-.............---------TT-HHHHHHHHTTTTHHHHHHHHHHHHHHHHHHHHC CS
+               Oxidored_q3  83 llallllv...........aesaadaelaevsnieaigkllftkyllpfelasvlLLvaligaivl 137
+                               +l++ ++            ++s      +  ++i aig++++t+y+++f+++s +LLva++gaivl
+  Amphimedon_queenslandica  91 FLWVAATGgewvgayitqqNHSRGMIGGQPGGDIVAIGRVVYTEYSYMFIIVSYILLVAMVGAIVL 156
+                               88887776999999998875555566778889********************************97 PP
+
+>> FixS  Cytochrome oxidase maturation protein cbb3-type
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?  -10.3  12.9         3   1.6e+04       6       6 ..      43      43 ..      20      68 .. 0.60
+   2 ?    4.2   1.3    0.0059        32       6      20 ..      80      94 ..      77      98 .. 0.82
+   3 ?    7.1   0.0   0.00071       3.9       4      30 ..     137     163 ..     137     169 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: -10.3 bits;  conditional E-value: 3
+                      FixS  6 L 6 
+                              +
+  Amphimedon_queenslandica 43 M 43
+                              2 PP
+
+  == domain 2  score: 4.2 bits;  conditional E-value: 0.0059
+                      FixS  6 LiplSlllgllalaa 20
+                               ip+ +++g+++l++
+  Amphimedon_queenslandica 80 IIPMGMIVGVGFLWV 94
+                              589999999999986 PP
+
+  == domain 3  score: 7.1 bits;  conditional E-value: 0.00071
+                      FixS   4 ylLiplSlllgllalaaFlWAvksGQF 30 
+                               y+ i++S +l ++ ++a +   + G +
+  Amphimedon_queenslandica 137 YMFIIVSYILLVAMVGAIVLTHRHGEY 163
+                               899********************9998 PP
+
+>> DUF2070  Predicted membrane protein (DUF2070)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.7  10.5    0.0012       6.8      73     177 ..      23     159 ..       4     164 .. 0.65
+
+  Alignments for each domain:
+  == domain 1  score: 4.7 bits;  conditional E-value: 0.0012
+                   DUF2070  73 flalltelivviisllaillsallqalvllalvlslalvfalrllvlvavsdesllkavlpaliqpllailllvly......... 148
+                               +l  +++ ++++++++++++      + + ++++ + ++++l l+v++++++ ++   + ++ i+p+ +i+ + ++         
+  Amphimedon_queenslandica  23 WLISAFLSVSAVFIFIGLVY------MGFIMIIVYVGAIAILFLFVMMMLDQGKEEAGTPIVNIIPMGMIVGVGFLwvaatggew 101
+                               22222222223333333333......3344566666677777777777777777766665555555544444444448999**** PP
+
+                   DUF2070 149 .............................fspesfllllllslifalavylfivvvdr 177
+                                                            + +e++++++++s i+++a++  iv+  r
+  Amphimedon_queenslandica 102 vgayitqqnhsrgmiggqpggdivaigrvVYTEYSYMFIIVSYILLVAMVGAIVLTHR 159
+                               *****************9**99999999977778888888888888888877777766 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (197 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1183  (0.07255); expected 326.1 (0.02)
+Passed bias filter:                      435  (0.0266773); expected 326.1 (0.02)
+Passed Vit filter:                        61  (0.00374095); expected 16.3 (0.001)
+Passed Fwd filter:                        16  (0.000981234); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.73u 0.30s 00:00:01.03 Elapsed: 00:00:00.56
+# Mc/sec: 988.74
+//
+Query:       Acropora  [L=197]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    2.5e-30  104.9  22.0      3e-30  104.7  22.0    1.1  1  Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase cha
+  ------ inclusion threshold ------
+      0.031   13.9   2.8      0.058   13.0   2.8    1.4  1  Per1         Per1-like
+
+
+Domain annotation for each model (and alignments):
+>> Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  104.7  22.0   3.7e-34     3e-30       1     137 []       9     174 ..       9     174 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 104.7 bits;  conditional E-value: 3.7e-34
+                  HHHHHHH-SBHHHHHHHHHHHHHHHHHHHHHTT-HHHHHHHHHIIIIIHHHHHHHHHHH............TS----TTCHHHHHHHHHHHHHHHHHH CS
+  Oxidored_q3   1 gallvitsknpvysalfLilvflgiaglfillgaeFlalvqilvYvGAilvLflFviml............eeeeekeklkkslplaalligllllal 86 
+                  ++++vi++ np++s+++Li+vf+g a++f+ lg++F+al+++++YvGAi++LflFviml                 + ++++++p++ l+ig +++ +
+     Acropora   9 SGIMVISALNPIHSIFWLIVVFIGSAVFFLWLGISFVALMFLIIYVGAIAILFLFVIMLlnltdfppafrlG---GEADMTNYIPIG-LVIGTFFFSE 102
+                  589****************************************************************97651...445788899999.8888888888 PP
+
+                  HTT-...........................---------TT-HHHHHHHHTTTTHHHHHHHHHHHHHHHHHHHHC CS
+  Oxidored_q3  87 lllv.........................aesaadaelaevsnieaigkllftkyllpfelasvlLLvaligaivl 137
+                  ++                                   l +++n+ea+g+ l+   +++f+las++LLva++gaivl
+     Acropora 103 VASSwliiggpytpqgflgaeiggawdlaI----PWFLMKYQNMEALGRILYIACYYLFILASFILLVAMVGAIVL 174
+                  77667889999999999999**99965542....44567899********************************97 PP
+
+>> Per1  Per1-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   13.0   2.8   7.2e-06     0.058     174     225 ..      27      79 ..      13      84 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 13.0 bits;  conditional E-value: 7.2e-06
+      Per1 174 vnvvvgllqlllwllwslakkk.lvvlklillvlllllamllEllDFppllrl 225
+               + v++g + ++lwl +s+     l+ ++ ++ +l+l++ mll+l+DFpp +rl
+  Acropora  27 IVVFIGSAVFFLWLGISFVALMfLIIYVGAIAILFLFVIMLLNLTDFPPAFRL 79 
+               57899999999999999974330334566778888999***********9986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (197 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1114  (0.0683184); expected 326.1 (0.02)
+Passed bias filter:                      376  (0.023059); expected 326.1 (0.02)
+Passed Vit filter:                        58  (0.00355697); expected 16.3 (0.001)
+Passed Fwd filter:                        17  (0.00104256); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.65u 0.41s 00:00:01.06 Elapsed: 00:00:00.66
+# Mc/sec: 853.91
+//
+Query:       Trichinella  [L=156]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    5.8e-05   22.8   9.1    5.8e-05   22.8   9.1    1.7  2  Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase cha
+
+
+Domain annotation for each model (and alignments):
+>> Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.4   0.7     0.052   8.4e+02      19      31 ..       5      17 ..       1      24 [. 0.41
+   2 !   22.8   9.1   3.6e-09   5.8e-05       7     131 ..      20     138 ..      12     147 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: -0.4 bits;  conditional E-value: 0.052
+                 HHHHHHHHHHHHH CS
+  Oxidored_q3 19 ilvflgiaglfil 31
+                 +  +++ia+l++l
+  Trichinella  5 LTFIIIIACLLFL 17
+                 2222223333222 PP
+
+  == domain 2  score: 22.8 bits;  conditional E-value: 3.6e-09
+                  H-SBHHHHHHHHHHHHHHHHHHHHHTT-HHHHHHHHHIIIIIHHHHHHHHHHHTS----TTCHHHHHHHHHHHHHHHHHHHTT-..---------TT- CS
+  Oxidored_q3   7 tsknpvysalfLilvflgiaglfillgaeFlalvqilvYvGAilvLflFvimleeeeekeklkkslplaalligllllallllvaesaadaelaevsn 104
+                  t++  +  ++fL+  + +i  ++ + + + ++++++++Y G+ l+++ ++ +l+    +++++++lp+  ++i++ + +l++++ ++ + +e+ ++++
+  Trichinella  20 THPLWISTLVFLLRIITAIHKFYRVHNNSIFGYLFVIIYRGGLLIILTYISSLT----PRTTTNKLPIK-IIIIIPITYLFTWTITKHNFNENYNYNE 112
+                  4444566778888889999999*******************************7....66777888887.5555555566566633333344444555 PP
+
+                  HHHHHHHHTTTTHHHHHHHHHHHHHHH CS
+  Oxidored_q3 105 ieaigkllftkyllpfelasvlLLval 131
+                  ++ i  +++   + p++ a + LL++ 
+  Trichinella 113 LNLINITIYL-ISSPLINAVLTLLTTS 138
+                  5555444444.3344444444454443 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (156 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1075  (0.0659267); expected 326.1 (0.02)
+Passed bias filter:                      358  (0.0219551); expected 326.1 (0.02)
+Passed Vit filter:                        31  (0.00190114); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.51u 0.53s 00:00:01.04 Elapsed: 00:00:00.63
+# Mc/sec: 708.40
+//
+Query:       Balanoglossus  [L=160]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    2.6e-14   53.1  14.2    3.7e-14   52.6  14.2    1.3  1  Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase cha
+  ------ inclusion threshold ------
+        1.2    8.9   5.2       0.13   12.0   1.0    1.6  2  PIG-P        PIG-P
+
+
+Domain annotation for each model (and alignments):
+>> Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   52.6  14.2   4.6e-18   3.7e-14       1     137 []      13     148 ..      13     148 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 52.6 bits;  conditional E-value: 4.6e-18
+                    HHHHHHH-SBHHHHHHHHHHHHHHHHHHHHHTT-HHHHHHHHHIIIIIHHHHHHHHHHHTS---.-TTCHHHHHHHHHHHHHHHHHHHTT-..--- CS
+    Oxidored_q3   1 gallvitsknpvysalfLilvflgiaglfillgaeFlalvqilvYvGAilvLflFvimleeeee.keklkkslplaalligllllallllvaesaa 95 
+                    g++lv++s++p++sal  + +++g +g++i+ g  Fl+l+++l+Y+G++lv+f ++ +l+++++   +++k+lpl+++++gl+  +++     +  
+  Balanoglossus  13 GGILVFISRSPYFSALGVVGAVVGFSGFLIMSGGVFLGLILFLMYLGGMLVVFAYSAALASDRYpDVGWSKALPLVVIFGGLVPYFVFEGG-GWVC 107
+                    5799*******************************************************55554056777778888666665555554333.3444 PP
+
+                    ------TT-HHHHHHHHTTTTHHHHHHHHHHHHHHHHHHHHC CS
+    Oxidored_q3  96 daelaevsnieaigkllftkyllpfelasvlLLvaligaivl 137
+                    +  + e+ ++  + ++l++ +l+ +++ ++ L+++l+++++l
+  Balanoglossus 108 EVGVVEERSLVGV-SSLYGPFLVGLLVGGFGLFACLLVVLYL 148
+                    4333333333333.678889**************99998875 PP
+
+>> PIG-P  PIG-P
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.0   1.0   1.7e-05      0.13      13      63 ..      50     100 ..      33     107 .. 0.84
+   2 ?   -3.6   0.2       1.1   9.2e+03      12      22 ..     139     149 ..     136     153 .. 0.60
+
+  Alignments for each domain:
+  == domain 1  score: 12.0 bits;  conditional E-value: 1.7e-05
+          PIG-P  13 stlafllyllwallPeevlhalgityypnryWalavpayllvlvlyiyval 63 
+                     +++fl+yl  +l+  ++  al  + yp+  W+ a+p ++++  l+ y+++
+  Balanoglossus  50 GLILFLMYLGGMLVVFAYSAALASDRYPDVGWSKALPLVVIFGGLVPYFVF 100
+                    457899999999999**************************9999988876 PP
+
+  == domain 2  score: -3.6 bits;  conditional E-value: 1.1
+          PIG-P  12 lstlafllyll 22 
+                    +++l+++lyl+
+  Balanoglossus 139 FACLLVVLYLV 149
+                    44555555554 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (160 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       710  (0.0435423); expected 326.1 (0.02)
+Passed bias filter:                      294  (0.0180302); expected 326.1 (0.02)
+Passed Vit filter:                        30  (0.00183981); expected 16.3 (0.001)
+Passed Fwd filter:                         8  (0.000490617); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.57u 0.32s 00:00:00.88 Elapsed: 00:00:00.52
+# Mc/sec: 880.26
+//
+Query:       Tetrancistrum_nebulosi  [L=150]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    0.00099   18.8  15.6     0.0033   17.1  14.8    2.1  1  Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase cha
+
+
+Domain annotation for each model (and alignments):
+>> Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   17.1  14.8     2e-07    0.0033       7      82 ..      19      95 ..      13     146 .. 0.63
+
+  Alignments for each domain:
+  == domain 1  score: 17.1 bits;  conditional E-value: 2e-07
+                            H-SBHHHHHHHHHH.HHHHHHHHHHHTT-HHHHHHHHHIIIIIHHHHHHHHHHHTS----TTCHHHHHHHHHHHHHH CS
+             Oxidored_q3  7 tsknpvysalfLil.vflgiaglfillgaeFlalvqilvYvGAilvLflFvimleeeeekeklkkslplaalligll 82
+                            + +n++   l Li+ +++++ ++ ++ g + ++l++ lvYvG++ +L+lF+++   ++  +++ ++++l++  +++ 
+  Tetrancistrum_nebulosi 19 FISNLITYCLILIFnCLCCLTIITFIRGLSWYSLMLYLVYVGGVYILLLFITVHIPKNLIKNRDNGAWLVVSSFIAW 95
+                            455666666666662667788889999*************************9943333344444444432222222 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (150 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       959  (0.0588127); expected 326.1 (0.02)
+Passed bias filter:                      294  (0.0180302); expected 326.1 (0.02)
+Passed Vit filter:                        33  (0.00202379); expected 16.3 (0.001)
+Passed Fwd filter:                         7  (0.00042929); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.59u 0.28s 00:00:00.87 Elapsed: 00:00:00.52
+# Mc/sec: 825.24
+//
+Query:       Pseudogarypus_banksi  [L=151]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (151 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1095  (0.0671532); expected 326.1 (0.02)
+Passed bias filter:                      289  (0.0177235); expected 326.1 (0.02)
+Passed Vit filter:                        44  (0.00269839); expected 16.3 (0.001)
+Passed Fwd filter:                        12  (0.000735925); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.56u 0.38s 00:00:00.94 Elapsed: 00:00:00.56
+# Mc/sec: 757.87
+//
+Query:       Benedenia_hoshinai  [L=149]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+  ------ inclusion threshold ------
+      0.014   15.1  18.8      0.029   14.1  18.8    1.6  1  Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase cha
+
+
+Domain annotation for each model (and alignments):
+>> Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   14.1  18.8   1.8e-06     0.029       9      85 ..      19      93 ..      12     140 .. 0.64
+
+  Alignments for each domain:
+  == domain 1  score: 14.1 bits;  conditional E-value: 1.8e-06
+                        SBHH.HHHHHHHHHHHHHHHHHHHTT-HHHHHHHHHIIIIIHHHHHHHHHHH.TS----TTCHHHHHHHHHHHHHHHHH CS
+         Oxidored_q3  9 knpv.ysalfLilvflgiaglfillgaeFlalvqilvYvGAilvLflFviml.eeeeekeklkkslplaalliglllla 85
+                        +n + y +l  i ++++  ++f++ +   ++l++ l+YvG++ +LflF+ +   ++++ ++lk ++ l+      ++++
+  Benedenia_hoshinai 19 RNAIgYCILLVINALIACLIIFFFSNSIWYSLLLYLIYVGGVYILFLFISVHiPKMNNYTSLKFYNLLLLS----FFCF 93
+                        45550445555555555556666677777*******************98874333333344444433333....3333 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (149 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       967  (0.0593033); expected 326.1 (0.02)
+Passed bias filter:                      257  (0.0157611); expected 326.1 (0.02)
+Passed Vit filter:                        34  (0.00208512); expected 16.3 (0.001)
+Passed Fwd filter:                         6  (0.000367963); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.64u 0.25s 00:00:00.89 Elapsed: 00:00:00.56
+# Mc/sec: 761.19
+//
+Query:       Myxine  [L=167]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    6.7e-09   35.6  20.6      9e-09   35.1  20.3    1.4  1  Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase cha
+
+
+Domain annotation for each model (and alignments):
+>> Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   35.1  20.3   5.5e-13     9e-09       3     136 ..      16     154 ..      14     155 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 35.1 bits;  conditional E-value: 5.5e-13
+                  HHHHH-SBHHHHHHHHHHHHHHHHHHHHHTT-HHHHHHHHHIIIIIHHHHHHHHHHHTS----TTCHHHHHHHHHHHHHHHHHHHTT-.......... CS
+  Oxidored_q3   3 llvitsknpvysalfLilvflgiaglfillgaeFlalvqilvYvGAilvLflFvimleeeeekeklkkslplaalligllllallllv.........a 91 
+                  +++++  +p++ al Li+v l+ +++++  g +Fl+l+++l+Y+G+++v+f + ++l  + +++ + k   +  +++g+l++++l +           
+       Myxine  16 VILVVDISPYFGALGLIVVSLVGCLIILAKGNSFLSLSLLLIYLGGMIVVFSYCTALVLDLYPTVIVKEVLIK-IALGVLVVVFLGYGgylkadngvL 112
+                  7788999**************************************************7777777777666666.777777777777777776533220 PP
+
+                  .---------TT-HHHH.HHHHTTTTHHHHHHHHHHHHHHHHHHHH CS
+  Oxidored_q3  92 esaadaelaevsnieai.gkllftkyllpfelasvlLLvaligaiv 136
+                      +   +   + + + + +l+++ +l++++  + L++al++++ 
+       Myxine 113 ----SMLGEGGVDNSFLgAGVLYGESWLLIVFGCLGLFLALLVILE 154
+                  ....222333334444425566667777777777779999988765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (167 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       992  (0.0608365); expected 326.1 (0.02)
+Passed bias filter:                      369  (0.0226297); expected 326.1 (0.02)
+Passed Vit filter:                        40  (0.00245308); expected 16.3 (0.001)
+Passed Fwd filter:                         8  (0.000490617); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.59u 0.34s 00:00:00.93 Elapsed: 00:00:00.53
+# Mc/sec: 901.43
+//
+Query:       Drosophila  [L=174]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    4.2e-11   42.7  22.9    5.3e-11   42.4  22.9    1.1  1  Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase cha
+
+
+Domain annotation for each model (and alignments):
+>> Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   42.4  22.9   3.3e-15   5.3e-11       2     136 ..      14     161 ..      13     162 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 42.4 bits;  conditional E-value: 3.3e-15
+                  HHHHHH-SBHHHHHHHHHHHHHHHHHHHHHTT-HH.HHHHHHHIIIIIHHHHHHHHHHHTS----TTCHHHHHHHHHHHHHHHHHHHTT-....---- CS
+  Oxidored_q3   2 allvitsknpvysalfLilvflgiaglfillgaeF.lalvqilvYvGAilvLflFvimleeeeekeklkkslplaalligllllallllv..aesaad 96 
+                  +++++   +p+  +l L++ ++++++l  l+  +F ++++++l+++G+ilvLf++v++l+ ++e ++l+ +l+l++ li +++l+l +++  ++s+  
+   Drosophila  14 SIIFLNIIHPLALGLTLLIQTIFVCLLTGLITKSFwYSYILFLIFLGGILVLFIYVTSLA-SNEIFNLSIKLTLFSSLILIFILILSFIIdkTSSSLF 110
+                  678888899**************************************************5.8889999999999988888888888777755333334 PP
+
+                  -----TT-HHHHHHHHTTT.......THHHHHHHHHH....HHHHHHHHHH CS
+  Oxidored_q3  97 aelaevsnieaigkllftk.......yllpfelasvl....LLvaligaiv 136
+                    +++ ++i +i + ++++       y++p +++++l    LL++li+++ 
+   Drosophila 111 LINNDIQSIININSYFIENslslnklYNFPTNFITILlinyLLITLIVIVK 161
+                  44555556666655555545666667*********9977878888888776 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (174 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1103  (0.0676438); expected 326.1 (0.02)
+Passed bias filter:                      199  (0.0122041); expected 326.1 (0.02)
+Passed Vit filter:                        30  (0.00183981); expected 16.3 (0.001)
+Passed Fwd filter:                        12  (0.000735925); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.67u 0.30s 00:00:00.97 Elapsed: 00:00:00.56
+# Mc/sec: 888.90
+//
+Query:       Ciona  [L=160]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+  ------ inclusion threshold ------
+       0.49   10.1  29.6       0.31   10.7  27.5    1.7  1  Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase cha
+
+
+Domain annotation for each model (and alignments):
+>> Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.7  27.5   1.9e-05      0.31       7     131 ..      25     147 ..      18     154 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 10.7 bits;  conditional E-value: 1.9e-05
+                  H-SBHHHHHHHHHHHHHHHHHHHHHTT-HHHHHHHHHIIIIIHHHHHHHHHHHTS----TTCHHHHHHHHHHHHHHHHHHHTT-.....--------- CS
+  Oxidored_q3   7 tsknpvysalfLilvflgiaglfillgaeFlalvqilvYvGAilvLflFvimleeeeekeklkkslplaalligllllallllv...aesaadaelae 101
+                  t  +++  +++Li+ +++  ++f++ ++ Fl+++++l Y+   l+Lf ++  l++++  e++++++  + +li++ +l +  +    +          
+        Ciona  25 TVYSLYLILFSLIVIVILFFFFFYIKNIIFLGILMVLLYLRRLLILFSYSSILNSVKIVEDFQDNYRKFLMLIIVSYLSVKSIYhflP-----FLGFI 117
+                  44455556677788888888888888***************************98998999888888875555555555533332221.....22334 PP
+
+                  TT-HHHHHHHHTTTTHHHHHHHHHHHHHHH CS
+  Oxidored_q3 102 vsnieaigkllftkyllpfelasvlLLval 131
+                  +++i+ i++  +++++++f ++ ++ L+  
+        Ciona 118 NNRIRLISRFSLYSFNFFFFVIRLVFLIFF 147
+                  579999999988889999999988866643 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (160 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1398  (0.0857353); expected 326.1 (0.02)
+Passed bias filter:                      360  (0.0220778); expected 326.1 (0.02)
+Passed Vit filter:                        58  (0.00355697); expected 16.3 (0.001)
+Passed Fwd filter:                        18  (0.00110389); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.72u 0.34s 00:00:01.06 Elapsed: 00:00:00.55
+# Mc/sec: 832.24
+//
+Query:       Epigonichthys  [L=168]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    6.3e-12   45.4  14.8      8e-12   45.0  14.8    1.1  1  Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase cha
+  ------ inclusion threshold ------
+        9.1    6.1   8.5       0.87    9.4   3.7    1.8  2  DUF1418      Protein of unknown function (DUF1418)
+
+
+Domain annotation for each model (and alignments):
+>> Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   45.0  14.8   9.8e-16     8e-12       2     135 ..      14     150 ..      13     152 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 45.0 bits;  conditional E-value: 9.8e-16
+                    HHHHHH-SBHHHHHHHHHHHHHHHHHHHHHTT-HHHHHHHHHIIIIIHHHHHHHHHHHTS----TTCHHHHHHHHHHHHHHHHHHHTT-....... CS
+    Oxidored_q3   2 allvitsknpvysalfLilvflgiaglfillgaeFlalvqilvYvGAilvLflFvimleeeeekeklkkslplaalligllllallllv....... 90 
+                    a+++i +++p++ al+ + + l +++l++ ++  F a+++il+Y+G+ilv+f++ ++ +++  + +++ + +++a+++g+ll++ +          
+  Epigonichthys  14 AMIIIRATSPYFGALATAGLALTASLLLLQINVVFPAMILILIYLGGILVVFIYRTAYAADLLPLPINMGSTVVAAFLGILLITNISPRvtetvce 109
+                    7899******************************************************99999999999999999999999999988887655444 PP
+
+                    .....---------TT-HHHHHHHHTTTTHHHHHHHHHHHHHHHHHHH CS
+    Oxidored_q3  91 ...aesaadaelaevsnieaigkllftkyllpfelasvlLLvaligai 135
+                       +       ++  ++   i   l+++ + +f++a+++L v l+ ++
+  Epigonichthys 110 gkiW-------ESYSNTSGYILFDLYERGYGAFIVATIVLTVLLFSIL 150
+                    3222.......3445667789999999***************999876 PP
+
+>> DUF1418  Protein of unknown function (DUF1418)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    9.4   3.7   0.00011      0.87       7      56 ..      48      96 ..      42     108 .. 0.76
+   2 ?   -2.9   0.2      0.72   5.9e+03      20      30 ..     140     150 ..     134     157 .. 0.53
+
+  Alignments for each domain:
+  == domain 1  score: 9.4 bits;  conditional E-value: 0.00011
+        DUF1418  7 lPksvlilevlGllLLvvalLsindylsLPgplaskeaavvmiflGvgll 56
+                   +P  +lil +lG +L+v  + +      LP p++  + +vv +flG++l+
+  Epigonichthys 48 FPAMILILIYLGGILVVFIYRTAYAADLLPLPINMGS-TVVAAFLGILLI 96
+                   6999****************98765555555554433.456689999886 PP
+
+  == domain 2  score: -2.9 bits;  conditional E-value: 0.72
+        DUF1418  20 lLLvvalLsin 30 
+                    ++L v l si 
+  Epigonichthys 140 IVLTVLLFSIL 150
+                    44444444444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (168 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1048  (0.0642708); expected 326.1 (0.02)
+Passed bias filter:                      343  (0.0210352); expected 326.1 (0.02)
+Passed Vit filter:                        28  (0.00171716); expected 16.3 (0.001)
+Passed Fwd filter:                         6  (0.000367963); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.60u 0.28s 00:00:00.88 Elapsed: 00:00:00.52
+# Mc/sec: 924.27
+//
+Query:       Strigamia_maritima  [L=154]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    6.5e-09   35.6  16.8    7.7e-09   35.4  16.8    1.0  1  Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase cha
+  ------ inclusion threshold ------
+       0.17   12.4   5.4       0.17   12.4   0.4    2.6  2  OAD_gamma    Oxaloacetate decarboxylase, gamma chain
+       0.86   10.2   2.5        2.5    8.7   0.2    2.4  2  GRP          Glycine rich protein family
+
+
+Domain annotation for each model (and alignments):
+>> Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   35.4  16.8   1.4e-12   7.7e-09       1     137 []      12     142 ..      12     142 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 35.4 bits;  conditional E-value: 1.4e-12
+                         HHHHHHH-SBHHHHHHHHHHHHHHHHHHH.HHTT-HHHHHHHHHIIIIIHHHHHHHHHHHTS----TTCHHHHHHHHHHHHHHHHHHHTT- CS
+         Oxidored_q3   1 gallvitsknpvysalfLilvflgiaglf.illgaeFlalvqilvYvGAilvLflFvimleeeeekeklkkslplaalligllllallllv 90 
+                         +a+++i+ ++pv   ++ i+ ++++a+++ i+ + + + ++++l+++G+il+Lf ++++l+  ++++k++ + ++a     +++l+lll++
+  Strigamia_maritima  12 SAITTIFISHPVAITISIIAQTIMTALIIsIIYQTPWFRYILFLIFLGGILILFSYITSLT-ANMTFKANTAPIVA---PPAIMLWLLLTI 98 
+                         689***********************98726679999***********************5.34444444333333...333444444444 PP
+
+                         ..---------TT-HHHHHHHHTTTTHHHHHHHHHHHHHHHHHHHHC CS
+         Oxidored_q3  91 aesaadaelaevsnieaigkllftkyllpfelasvlLLvaligaivl 137
+                            + +a++ ++++++ i + lf + +   +++++ LL+ l+ a+ +
+  Strigamia_maritima  99 ---NLKADTINNQSTQLIINKLFHQDIKTTIILALFLLIILLIAVKI 142
+                         ...2345567889***********99999999999999999999876 PP
+
+>> OAD_gamma  Oxaloacetate decarboxylase, gamma chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.4   0.4   3.1e-05      0.17      16      51 ..      53      88 ..      52     100 .. 0.91
+   2 ?    1.7   0.6     0.067   3.6e+02      13      35 ..     125     147 ..     124     154 .] 0.68
+
+  Alignments for each domain:
+  == domain 1  score: 12.4 bits;  conditional E-value: 3.1e-05
+           OAD_gamma 16 vvLilLslvislfskiikkkakkkkkkakaaaaaaa 51
+                        ++Li+L  ++ lfs+i ++ a+   k+++a+  a++
+  Strigamia_maritima 53 LFLIFLGGILILFSYITSLTANMTFKANTAPIVAPP 88
+                        79******************9999999999888776 PP
+
+  == domain 2  score: 1.7 bits;  conditional E-value: 0.067
+           OAD_gamma  13 vVFvvLilLslvislfskiikkk 35 
+                         ++ ++L+lL++++ +++   ++k
+  Strigamia_maritima 125 TIILALFLLIILLIAVKITTAHK 147
+                         56778888888877777666655 PP
+
+>> GRP  Glycine rich protein family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.7   0.1      0.15   8.2e+02       6      26 ..      55      75 ..      52      84 .. 0.79
+   2 ?    8.7   0.2   0.00047       2.5       4      28 ..     123     147 ..     121     154 .] 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 0.7 bits;  conditional E-value: 0.15
+                 GRP  6 lilLglllaavlLissevaaa 26
+                        li+Lg +l+ +  i+s  a+ 
+  Strigamia_maritima 55 LIFLGGILILFSYITSLTANM 75
+                        799999999999999877765 PP
+
+  == domain 2  score: 8.7 bits;  conditional E-value: 0.00047
+                 GRP   4 kalilLglllaavlLissevaaael 28 
+                         k+ i+L+l+l ++lLi+ ++ +a++
+  Strigamia_maritima 123 KTTIILALFLLIILLIAVKITTAHK 147
+                         889**************99988765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (154 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1273  (0.0780694); expected 326.1 (0.02)
+Passed bias filter:                      355  (0.0217711); expected 326.1 (0.02)
+Passed Vit filter:                        38  (0.00233043); expected 16.3 (0.001)
+Passed Fwd filter:                         9  (0.000551944); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.60u 0.27s 00:00:00.87 Elapsed: 00:00:00.53
+# Mc/sec: 831.26
+//
+Query:       Caenorhabditis  [L=144]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (144 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1015  (0.062247); expected 326.1 (0.02)
+Passed bias filter:                      242  (0.0148412); expected 326.1 (0.02)
+Passed Vit filter:                        46  (0.00282105); expected 16.3 (0.001)
+Passed Fwd filter:                        10  (0.000613271); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.66u 0.28s 00:00:00.94 Elapsed: 00:00:00.56
+# Mc/sec: 735.64
+//
+Query:       Homo  [L=174]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+      3e-16   59.4  10.1    4.6e-16   58.7  10.1    1.3  1  Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase cha
+
+
+Domain annotation for each model (and alignments):
+>> Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   58.7  10.1   2.8e-20   4.6e-16       2     137 .]      16     170 ..      15     170 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 58.7 bits;  conditional E-value: 2.8e-20
+                  HHHHHH-SBHHHHHHHHHHHHHHHHHHHHHTT-HHHHHHHHHIIIIIHHHHHHHHHHHTS----TTCHHHHHHHHHHHHHHHHHHHTT-......... CS
+  Oxidored_q3   2 allvitsknpvysalfLilvflgiaglfillgaeFlalvqilvYvGAilvLflFvimleeeeekeklkkslplaalligllllallllv......... 90 
+                  ++++ ++++p+y +l+Li++ ++ +++++ +g  +++l+ +l+Y+G+++v+f ++++++ ee++e + ++  ++ + + ++l++++ lv         
+         Homo  16 FVGFSSKPSPIYGGLVLIVSGVVGCVIILNFGGGYMGLIVFLIYLGGMMVVFGYTTAMAIEEYPEAWGSGVEVL-VSVLVGLAMEVGLVlwvkeydgv 112
+                  6889999****************************************************9********998888.66666777776666556887777 PP
+
+                  .............---.------TT-HHHHHH.HHTTTTHHHHHHHHHHHHHHHHHHHHC CS
+  Oxidored_q3  91 ...........aesaa.daelaevsnieaigk.llftkyllpfelasvlLLvaligaivl 137
+                             +     ++e +   + + ig  +l+++  ++++++++ L+v+++ +i +
+         Homo 113 vvvvnfnsvgsW--IIyEGEGSGLIREDPIGAgALYDYGRWLVVVTGWTLFVGVYIVIEI 170
+                  777777777531..2224555566667777761455578899999*********999976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (174 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       618  (0.0379002); expected 326.1 (0.02)
+Passed bias filter:                      248  (0.0152091); expected 326.1 (0.02)
+Passed Vit filter:                        24  (0.00147185); expected 16.3 (0.001)
+Passed Fwd filter:                         5  (0.000306636); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.57u 0.27s 00:00:00.84 Elapsed: 00:00:00.52
+# Mc/sec: 957.28
+//
+Query:       Ascidiella_aspersa  [L=164]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (164 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1292  (0.0792346); expected 326.1 (0.02)
+Passed bias filter:                      393  (0.0241016); expected 326.1 (0.02)
+Passed Vit filter:                        59  (0.0036183); expected 16.3 (0.001)
+Passed Fwd filter:                        13  (0.000797253); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.70u 0.31s 00:00:01.01 Elapsed: 00:00:00.54
+# Mc/sec: 868.84
+//
+Query:       Blanceolatum  [L=166]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    7.9e-13   48.3  17.1      1e-12   47.9  17.1    1.1  1  Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase cha
+  ------ inclusion threshold ------
+        4.6    7.4   8.6        0.3   11.2   1.5    2.6  3  DUF3176      Protein of unknown function (DUF3176)
+
+
+Domain annotation for each model (and alignments):
+>> Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   47.9  17.1   1.2e-16     1e-12       2     135 ..      13     149 ..      12     151 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 47.9 bits;  conditional E-value: 1.2e-16
+                   HHHHHH-SBHHHHHHHHHHHHHHHHHHHHHTT-HHHHHHHHHIIIIIHHHHHHHHHHHTS----TTCHHHHHHHHHHHHHHHHHHHTT-........ CS
+   Oxidored_q3   2 allvitsknpvysalfLilvflgiaglfillgaeFlalvqilvYvGAilvLflFvimleeeeekeklkkslplaalligllllallllv........ 90 
+                   a+++i +++p+y al+ +++ l++a+l++ l+  F a++++l+Y+G++lv+f+++++ +++ ++ + +   +++++++g +l a++ +         
+  Blanceolatum  13 AIIIIRATSPYYGALATAWLALLTALLLLDLNVIFPAIILMLIYLGGMLVVFIYSTAYSADLMPLPVNITVTIIIATLGTVLTAIMSTPtievacel 109
+                   899*******************************************************999999999999999988888888888766677755544 PP
+
+                   ..---------TT-HHHHHHHHTTTTHHHHHHHHHHHHHHHHHHH CS
+   Oxidored_q3  91 aesaadaelaevsnieaigkllftkyllpfelasvlLLvaligai 135
+                   +       l  +s+++ i   l+++   +f++a+++L + l+ ++
+  Blanceolatum 110 K-----PWLLYESQPSYILFDLYERGASIFIIATIVLTILLFSIL 149
+                   2.....4466778*************************9999776 PP
+
+>> DUF3176  Protein of unknown function (DUF3176)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.0   1.1      0.22   1.8e+03      84      84 ..      21      21 ..       1      65 [. 0.61
+   2 ?   11.2   1.5   3.7e-05       0.3      15      58 ..      77     119 ..      60     153 .. 0.75
+   3 ?   -0.6   0.1      0.17   1.4e+03      25      45 ..     133     153 ..     127     161 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: -1.0 bits;  conditional E-value: 0.22
+       DUF3176 84 l 84
+                  +
+  Blanceolatum 21 S 21
+                  1 PP
+
+  == domain 2  score: 11.2 bits;  conditional E-value: 3.7e-05
+       DUF3176  15 Wpskitlnvliailstvakaalllavaegisqlk.Wrwfsekprp 58 
+                    p +it++ +ia+l tv+ a++  +  e+ + lk W+ +++  +p
+  Blanceolatum  77 LPVNITVTIIIATLGTVLTAIMSTPTIEVACELKpWLLYES--QP 119
+                   44569***************************998888865..44 PP
+
+  == domain 3  score: -0.6 bits;  conditional E-value: 0.17
+       DUF3176  25 iailstvakaalllavaegis 45 
+                   i i++t++ ++ll+ + e +s
+  Blanceolatum 133 IFIIATIVLTILLFSILELVS 153
+                   557777777777777777666 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (166 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1108  (0.0679504); expected 326.1 (0.02)
+Passed bias filter:                      328  (0.0201153); expected 326.1 (0.02)
+Passed Vit filter:                        32  (0.00196247); expected 16.3 (0.001)
+Passed Fwd filter:                         7  (0.00042929); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.57u 0.32s 00:00:00.88 Elapsed: 00:00:00.52
+# Mc/sec: 913.26
+//
+Query:       Saccoglossus  [L=159]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    4.8e-14   52.2  18.4    6.9e-14   51.7  18.4    1.2  1  Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase cha
+
+
+Domain annotation for each model (and alignments):
+>> Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   51.7  18.4   4.2e-18   6.9e-14       1     135 [.      12     145 ..      12     147 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 51.7 bits;  conditional E-value: 4.2e-18
+                   HHHHHHH-SBHHHHHHHHHHHHHHHHHHHHHTT-HHHHHHHHHIIIIIHHHHHHHHHHHTS----TTCHHHHHHHHHHHHHHHHHHHTT-..----- CS
+   Oxidored_q3   1 gallvitsknpvysalfLilvflgiaglfillgaeFlalvqilvYvGAilvLflFvimleeeeekeklkkslplaalligllllallllvaesaada 97 
+                   g+++v++s++p++sal L+l+++g++g+++l ga F++l+++l+Y+G++lv+f ++ +l+++ ++e    +  ++  l+g+++la+++ v ++ +++
+  Saccoglossus  12 GGVIVFMSRSPYFSALGLVLATCGLSGVLMLGGAVFVGLILFLMYLGGMLVVFAYSAALAADIYPEVGAGKGLVI-TLVGAAVLAMVVEV-SWGVVE 106
+                   5799*******************************************************8777775555555555.67777777777777.577777 PP
+
+                   ----TT-HHHHHHHHTT.TTHHHHHHHHHHHHHHHHHHH CS
+   Oxidored_q3  98 elaevsnieaigkllft.kyllpfelasvlLLvaligai 135
+                    +    + + +g + ++ + +  ++l ++ L+v+l++++
+  Saccoglossus 107 VKGLGVQEDLLGISGLYlDSWAGLLLGAFGLFVCLFVVL 145
+                   777777888888776555888889999999999999886 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (159 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       858  (0.0526187); expected 326.1 (0.02)
+Passed bias filter:                      335  (0.0205446); expected 326.1 (0.02)
+Passed Vit filter:                        32  (0.00196247); expected 16.3 (0.001)
+Passed Fwd filter:                         8  (0.000490617); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.61u 0.31s 00:00:00.92 Elapsed: 00:00:00.54
+# Mc/sec: 842.36
+//
+[ok]

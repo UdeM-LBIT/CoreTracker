@@ -1,0 +1,56 @@
+COX1	PF00115.18	Metaseiulus_occidentalis	3e-129	431.5	13	459	13	459	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+COX1	PF00115.18	Paracentrotus	2.4e-143	478.0	14	460	14	460	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+COX1	PF00115.18	Aphrocallistes_vastus	2.4e-142	474.6	13	459	13	459	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+COX1	PF00115.18	Schistosoma	2.6e-108	362.5	13	452	13	452	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+COX1	PF00115.18	Fasciola	3.9e-112	375.1	11	455	11	455	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+COX1	PF00115.18	Trichobilharzia_regenti	1.5e-110	369.9	16	455	16	455	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+TMEM126	PF07114.9	Trichobilharzia_regenti	0.65	9.2	157	201	148	207	Transmembrane	protein	126
+TMEM126	PF07114.9	Trichobilharzia_regenti	0.65	9.2	252	306	245	316	Transmembrane	protein	126
+COX1	PF00115.18	Versteria_mustelae	9.1e-106	354.1	17	461	17	461	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+COX1	PF00115.18	Euseius_nicholsi	3.9e-129	431.1	13	458	13	459	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+DUF3789	PF12664.5	Euseius_nicholsi	0.11	12.1	341	357	340	357	Protein	of	unknown	function	(DUF3789)
+COX1	PF00115.18	Patiria	5.9e-142	473.3	14	459	14	460	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+COX1	PF00115.18	Daphnia	1.7e-133	445.5	13	459	13	459	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+COX1	PF00115.18	Haplorchis_taichui	8.6e-112	374.0	12	454	12	455	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+COX1	PF00115.18	Lumbricus	1e-130	436.3	11	456	11	457	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+ENOD40	PF08247.9	Lumbricus	0.023	14.5	318	327	317	327	ENOD40	protein
+COX1	PF00115.18	Halocynthia	1.2e-108	363.6	17	459	16	469	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+Cupin_1	PF00190.20	Halocynthia	0.16	11.4	352	398	346	400	Cupin
+COX1	PF00115.18	Limulus	2.3e-136	454.9	12	457	12	458	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+COX1	PF00115.18	Echinococcus_equinus	1.3e-109	366.7	17	461	17	461	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+COX1	PF00115.18	Taenia_crassiceps	2.9e-105	352.5	17	461	17	461	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+COX1	PF00115.18	Axinella	6.1e-152	506.2	16	462	16	462	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+COX1	PF00115.18	Terebratulina	1.9e-131	438.7	11	457	11	477	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+NapE	PF06796.9	Terebratulina	2	7.9	59	87	57	88	Periplasmic	nitrate	reductase	protein	NapE
+NapE	PF06796.9	Terebratulina	2	7.9	273	293	256	295	Periplasmic	nitrate	reductase	protein	NapE
+DUF3789	PF12664.5	Terebratulina	2.6	7.7	339	355	338	355	Protein	of	unknown	function	(DUF3789)
+COX1	PF00115.18	Suberites_domuncula	2.8e-153	510.7	16	462	16	462	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+COX1	PF00115.18	Katharina	1.2e-137	459.2	11	457	11	457	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+DUF3789	PF12664.5	Katharina	2.4	7.8	339	355	338	355	Protein	of	unknown	function	(DUF3789)
+COX1	PF00115.18	Geodia	3.4e-152	507.1	15	461	15	461	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+COX1	PF00115.18	Metridium	2e-151	504.5	17	463	17	463	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+COX1	PF00115.18	Amphimedon_queenslandica	2.1e-151	504.5	15	461	15	461	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+G0-G1_switch_2	PF15103.4	Amphimedon_queenslandica	1.6	9.1	17	35	16	37	G0/G1	switch	protein	2
+G0-G1_switch_2	PF15103.4	Amphimedon_queenslandica	1.6	9.1	269	281	267	289	G0/G1	switch	protein	2
+G0-G1_switch_2	PF15103.4	Amphimedon_queenslandica	1.6	9.1	384	392	380	394	G0/G1	switch	protein	2
+G0-G1_switch_2	PF15103.4	Amphimedon_queenslandica	1.6	9.1	453	485	448	495	G0/G1	switch	protein	2
+COX1	PF00115.18	Acropora	2.7e-151	504.1	17	463	17	463	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+COX1	PF00115.18	Trichinella	8.7e-113	377.2	12	460	12	461	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+COX1	PF00115.18	Balanoglossus	1.3e-143	478.8	14	460	14	460	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+COX1	PF00115.18	Tetrancistrum_nebulosi	6.6e-109	364.5	16	461	16	469	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+COX1	PF00115.18	Pseudogarypus_banksi	2.5e-127	425.1	12	458	12	458	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+DUF3789	PF12664.5	Pseudogarypus_banksi	1.9	8.1	340	356	339	356	Protein	of	unknown	function	(DUF3789)
+DUF3789	PF12664.5	Pseudogarypus_banksi	1.9	8.1	453	460	451	461	Protein	of	unknown	function	(DUF3789)
+COX1	PF00115.18	Benedenia_hoshinai	5.2e-112	374.7	18	462	18	463	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+COX1	PF00115.18	Benedenia_hoshinai	5.2e-112	374.7	503	517	498	520	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+COX1	PF00115.18	Myxine	5.4e-141	470.2	14	460	14	460	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+COX1	PF00115.18	Drosophila	4.8e-135	450.6	13	459	13	459	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+COX1	PF00115.18	Ciona	8.8e-109	364.1	23	467	22	469	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+COX1	PF00115.18	Epigonichthys	6.8e-135	450.1	14	460	14	460	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+DUF3789	PF12664.5	Epigonichthys	1.7	8.3	342	358	341	358	Protein	of	unknown	function	(DUF3789)
+COX1	PF00115.18	Strigamia_maritima	9.1e-134	446.4	11	457	11	457	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+COX1	PF00115.18	Caenorhabditis	9.5e-120	400.2	22	467	22	467	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+DUF645	PF04875.10	Caenorhabditis	0.0042	17.0	105	127	103	129	Protein	of	unknown	function,	DUF645
+COX1	PF00115.18	Homo	3.9e-139	464.1	14	460	14	460	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+COX1	PF00115.18	Ascidiella_aspersa	1.4e-130	435.9	16	460	16	462	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+COX1	PF00115.18	Saccoglossus	9.2e-144	479.3	15	461	15	461	Cytochrome	C	and	Quinol	oxidase	polypeptide	I

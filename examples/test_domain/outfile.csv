@@ -1,0 +1,2064 @@
+Species	Gene	Codon	AA	Pos	Domain	Pfam	start	end	description
+Metaseiulus_occidentalis	cox2	AGA	S	185	COX2	PF00116.18	94	208	Cytochrome C oxidase subunit II, periplasmic domain
+Metaseiulus_occidentalis	cox2	AGA	S	220	NID	NID	-	-	NID
+Paracentrotus	cox2	AGA	S	170	COX2	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Schistosoma	cox2	AGA	S	196	NID	NID	-	-	NID
+Euseius_nicholsi	cox2	AGA	S	159	COX2	PF00116.18	94	211	Cytochrome C oxidase subunit II, periplasmic domain
+Euseius_nicholsi	cox2	AGA	S	192	COX2	PF00116.18	94	211	Cytochrome C oxidase subunit II, periplasmic domain
+Euseius_nicholsi	cox2	AGA	S	221	NID	NID	-	-	NID
+Patiria	cox2	AGA	S	170	COX2	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Lumbricus	cox2	AGA	S	170	COX2|94-213	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Strigamia_maritima	cox2	AGA	S	170	COX2	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Strigamia_maritima	cox2	AGA	S	226	NID	NID	-	-	NID
+Trichinella	cox2	AGA	S	159	COX2	PF00116.18	94	209	Cytochrome C oxidase subunit II, periplasmic domain
+Trichinella	cox2	AGA	S	224	NID	NID	-	-	NID
+Trichinella	cox2	AGA	S	224	NID	NID	-	-	NID
+Tetrancistrum_nebulosi	cox2	AGA	S	170	COX2	PF00116.18	82	188	Cytochrome C oxidase subunit II, periplasmic domain
+Pseudogarypus_banksi	cox2	AGA	S	226	NID	NID	-	-	NID
+Drosophila	cox2	AGA	S	227	NID	NID	-	-	NID
+Caenorhabditis	cox2	AGA	S	156	COX2	PF00116.18	97	216	Cytochrome C oxidase subunit II, periplasmic domain
+Caenorhabditis	cox2	AGA	S	170	COX2	PF00116.18	97	216	Cytochrome C oxidase subunit II, periplasmic domain
+Caenorhabditis	cox2	AGA	S	230	NID	NID	-	-	NID
+Caenorhabditis	cox2	AGA	S	230	NID	NID	-	-	NID
+Trichobilharzia_regenti	cox2	AAA	N	196	NID	NID	-	-	NID
+Patiria	cox2	AAA	N	227	NID	NID	-	-	NID
+Tetrancistrum_nebulosi	cox2	AAA	N	142	COX2	PF00116.18	82	188	Cytochrome C oxidase subunit II, periplasmic domain
+Tetrancistrum_nebulosi	cox2	AAA	N	191	NID	NID	-	-	NID
+Tetrancistrum_nebulosi	cox2	AAA	N	191	NID	NID	-	-	NID
+Tetrancistrum_nebulosi	cox2	AAA	N	191	NID	NID	-	-	NID
+Benedenia_hoshinai	cox2	AAA	N	142	COX2	PF00116.18	83	190	Cytochrome C oxidase subunit II, periplasmic domain
+Versteria_mustelae	cox2	AGG	S	148	COX2	PF00116.18	81	188	Cytochrome C oxidase subunit II, periplasmic domain
+Euseius_nicholsi	cox2	AGG	S	221	NID	NID	-	-	NID
+Haplorchis_taichui	cox2	AGG	S	156	COX2	PF00116.18	85	194	Cytochrome C oxidase subunit II, periplasmic domain
+Haplorchis_taichui	cox2	AGG	S	206	NID	NID	-	-	NID
+Katharina	cox2	AGG	S	170	COX2	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Katharina	cox2	AGG	S	213	COX2	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Tetrancistrum_nebulosi	cox2	AGG	S	191	NID	NID	-	-	NID
+Caenorhabditis	cox2	AGG	S	76	DUF4149	PF13664.4	27	106	Domain of unknown function (DUF4149)
+Metaseiulus_occidentalis	cox2	ATA	M	160	COX2	PF00116.18	94	208	Cytochrome C oxidase subunit II, periplasmic domain
+Metaseiulus_occidentalis	cox2	ATA	M	190	COX2	PF00116.18	94	208	Cytochrome C oxidase subunit II, periplasmic domain
+Metaseiulus_occidentalis	cox2	ATA	M	220	NID	NID	-	-	NID
+Metaseiulus_occidentalis	cox2	ATA	M	220	NID	NID	-	-	NID
+Euseius_nicholsi	cox2	ATA	M	61	COX2_TM	PF02790.13	0	82	Cytochrome C oxidase subunit II, transmembrane domain
+Euseius_nicholsi	cox2	ATA	M	163	COX2	PF00116.18	94	211	Cytochrome C oxidase subunit II, periplasmic domain
+Euseius_nicholsi	cox2	ATA	M	221	NID	NID	-	-	NID
+Euseius_nicholsi	cox2	ATA	M	221	NID	NID	-	-	NID
+Patiria	cox2	ATA	M	88	NID	NID	-	-	NID
+Patiria	cox2	ATA	M	134	COX2	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Patiria	cox2	ATA	M	160	COX2	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Patiria	cox2	ATA	M	163	COX2	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Patiria	cox2	ATA	M	227	NID	NID	-	-	NID
+Lumbricus	cox2	ATA	M	186	COX2|94-213	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Limulus	cox2	ATA	M	134	COX2	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Limulus	cox2	ATA	M	190	COX2	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Limulus	cox2	ATA	M	224	NID	NID	-	-	NID
+Limulus	cox2	ATA	M	225	NID	NID	-	-	NID
+Axinella	cox2	ATA	M	134	COX2	PF00116.18	96	217	Cytochrome C oxidase subunit II, periplasmic domain
+Axinella	cox2	ATA	M	233	NID	NID	-	-	NID
+Terebratulina	cox2	ATA	M	228	NID	NID	-	-	NID
+Katharina	cox2	ATA	M	228	NID	NID	-	-	NID
+Strigamia_maritima	cox2	ATA	M	158	COX2	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Strigamia_maritima	cox2	ATA	M	190	COX2	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Strigamia_maritima	cox2	ATA	M	225	NID	NID	-	-	NID
+Strigamia_maritima	cox2	ATA	M	226	NID	NID	-	-	NID
+Strigamia_maritima	cox2	ATA	M	226	NID	NID	-	-	NID
+Trichinella	cox2	ATA	M	141	COX2	PF00116.18	94	209	Cytochrome C oxidase subunit II, periplasmic domain
+Trichinella	cox2	ATA	M	143	COX2	PF00116.18	94	209	Cytochrome C oxidase subunit II, periplasmic domain
+Trichinella	cox2	ATA	M	190	COX2	PF00116.18	94	209	Cytochrome C oxidase subunit II, periplasmic domain
+Trichinella	cox2	ATA	M	224	NID	NID	-	-	NID
+Pseudogarypus_banksi	cox2	ATA	M	82	COX2_TM	PF02790.13	0	82	Cytochrome C oxidase subunit II, transmembrane domain
+Pseudogarypus_banksi	cox2	ATA	M	160	COX2	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Pseudogarypus_banksi	cox2	ATA	M	226	NID	NID	-	-	NID
+Pseudogarypus_banksi	cox2	ATA	M	226	NID	NID	-	-	NID
+Myxine	cox2	ATA	M	190	COX2	PF00116.18	94	214	Cytochrome C oxidase subunit II, periplasmic domain
+Myxine	cox2	ATA	M	228	NID	NID	-	-	NID
+Drosophila	cox2	ATA	M	190	COX2	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Drosophila	cox2	ATA	M	227	NID	NID	-	-	NID
+Ciona	cox2	ATA	M	146	COX2	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Ciona	cox2	ATA	M	186	COX2	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Ciona	cox2	ATA	M	213	COX2	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Ciona	cox2	ATA	M	224	NID	NID	-	-	NID
+Daphnia	cox2	ATA	M	224	NID	NID	-	-	NID
+Caenorhabditis	cox2	ATA	M	139	COX2	PF00116.18	97	216	Cytochrome C oxidase subunit II, periplasmic domain
+Caenorhabditis	cox2	ATA	M	190	COX2	PF00116.18	97	216	Cytochrome C oxidase subunit II, periplasmic domain
+Caenorhabditis	cox2	ATA	M	230	NID	NID	-	-	NID
+Caenorhabditis	cox2	ATA	M	230	NID	NID	-	-	NID
+Homo	cox2	ATA	M	148	COX2	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Homo	cox2	ATA	M	190	COX2	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Homo	cox2	ATA	M	224	NID	NID	-	-	NID
+Ascidiella_aspersa	cox2	ATA	M	163	COX2|96-215	PF00116.18	96	215	Cytochrome C oxidase subunit II, periplasmic domain
+Ascidiella_aspersa	cox2	ATA	M	190	COX2|96-215	PF00116.18	96	215	Cytochrome C oxidase subunit II, periplasmic domain
+Ascidiella_aspersa	cox2	ATA	M	227	NID	NID	-	-	NID
+Epigonichthys	cox2	ATA	M	61	COX2	PF00116.18	39	80	Cytochrome C oxidase subunit II, periplasmic domain
+Epigonichthys	cox2	ATA	M	190	COX2|94-213	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Euseius_nicholsi	cox2	ATA	L	61	COX2_TM	PF02790.13	0	82	Cytochrome C oxidase subunit II, transmembrane domain
+Euseius_nicholsi	cox2	ATA	L	163	COX2	PF00116.18	94	211	Cytochrome C oxidase subunit II, periplasmic domain
+Euseius_nicholsi	cox2	ATA	L	221	NID	NID	-	-	NID
+Euseius_nicholsi	cox2	ATA	L	221	NID	NID	-	-	NID
+Lumbricus	cox2	ATA	L	186	COX2|94-213	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Strigamia_maritima	cox2	ATA	L	158	COX2	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Strigamia_maritima	cox2	ATA	L	190	COX2	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Strigamia_maritima	cox2	ATA	L	225	NID	NID	-	-	NID
+Strigamia_maritima	cox2	ATA	L	226	NID	NID	-	-	NID
+Strigamia_maritima	cox2	ATA	L	226	NID	NID	-	-	NID
+Ciona	cox2	ATA	L	146	COX2	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Ciona	cox2	ATA	L	186	COX2	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Ciona	cox2	ATA	L	213	COX2	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Ciona	cox2	ATA	L	224	NID	NID	-	-	NID
+Epigonichthys	cox2	ATA	L	61	COX2	PF00116.18	39	80	Cytochrome C oxidase subunit II, periplasmic domain
+Epigonichthys	cox2	ATA	L	190	COX2|94-213	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Lumbricus	cox2	ATC	L	225	NID	NID	-	-	NID
+Lumbricus	cox2	ATC	L	226	NID	NID	-	-	NID
+Epigonichthys	cox2	ATC	L	88	NID	NID	-	-	NID
+Epigonichthys	cox2	ATC	L	134	COX2|94-213	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Epigonichthys	cox2	ATC	L	160	COX2|94-213	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Euseius_nicholsi	cox2	ATT	L	81	COX2_TM	PF02790.13	0	82	Cytochrome C oxidase subunit II, transmembrane domain
+Euseius_nicholsi	cox2	ATT	L	88	NID	NID	-	-	NID
+Euseius_nicholsi	cox2	ATT	L	160	COX2	PF00116.18	94	211	Cytochrome C oxidase subunit II, periplasmic domain
+Euseius_nicholsi	cox2	ATT	L	221	NID	NID	-	-	NID
+Euseius_nicholsi	cox2	ATT	L	221	NID	NID	-	-	NID
+Euseius_nicholsi	cox2	ATT	L	221	NID	NID	-	-	NID
+Euseius_nicholsi	cox2	ATT	L	221	NID	NID	-	-	NID
+Lumbricus	cox2	ATT	L	134	COX2|94-213	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Lumbricus	cox2	ATT	L	145	COX2|94-213	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Lumbricus	cox2	ATT	L	148	COX2|94-213	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Lumbricus	cox2	ATT	L	158	COX2|94-213	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Lumbricus	cox2	ATT	L	163	COX2|94-213	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Lumbricus	cox2	ATT	L	226	NID	NID	-	-	NID
+Lumbricus	cox2	ATT	L	226	NID	NID	-	-	NID
+Lumbricus	cox2	ATT	L	226	NID	NID	-	-	NID
+Epigonichthys	cox2	ATT	L	92	NID	NID	-	-	NID
+Epigonichthys	cox2	ATT	L	196	COX2|94-213	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Epigonichthys	cox2	ATT	L	228	NID	NID	-	-	NID
+Epigonichthys	cox2	ATT	L	228	NID	NID	-	-	NID
+Epigonichthys	cox2	ATT	L	228	NID	NID	-	-	NID
+Halocynthia	cox2	AGG	G	164	COX2	PF00116.18	93	213	Cytochrome C oxidase subunit II, periplasmic domain
+Halocynthia	cox2	AGG	G	224	NID	NID	-	-	NID
+Halocynthia	cox2	AGG	G	224	NID	NID	-	-	NID
+Halocynthia	cox2	AGG	G	224	NID	NID	-	-	NID
+Ciona	cox2	AGG	G	119	COX2	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Ciona	cox2	AGG	G	164	COX2	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Ciona	cox2	AGG	G	173	COX2	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Ascidiella_aspersa	cox2	AGG	G	139	COX2|96-215	PF00116.18	96	215	Cytochrome C oxidase subunit II, periplasmic domain
+Ascidiella_aspersa	cox2	AGG	G	227	NID	NID	-	-	NID
+Ascidiella_aspersa	cox2	AGG	G	227	NID	NID	-	-	NID
+Ascidiella_aspersa	cox2	AGG	G	227	NID	NID	-	-	NID
+Metaseiulus_occidentalis	cox2	AGA	G	185	COX2	PF00116.18	94	208	Cytochrome C oxidase subunit II, periplasmic domain
+Metaseiulus_occidentalis	cox2	AGA	G	220	NID	NID	-	-	NID
+Halocynthia	cox2	AGA	G	224	NID	NID	-	-	NID
+Halocynthia	cox2	AGA	G	224	NID	NID	-	-	NID
+Ciona	cox2	AGA	G	151	COX2	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Ciona	cox2	AGA	G	156	COX2	PF00116.18	94	213	Cytochrome C oxidase subunit II, periplasmic domain
+Ciona	cox2	AGA	G	228	NID	NID	-	-	NID
+Echinococcus_equinus	cox2	AAA	S	142	COX2	PF00116.18	81	188	Cytochrome C oxidase subunit II, periplasmic domain
+Metaseiulus_occidentalis	cox3	AGA	S	188	COX3	PF00510.16	15	273	Cytochrome c oxidase subunit III
+Paracentrotus	cox3	AGA	S	204	COX3	PF00510.16	4	259	Cytochrome c oxidase subunit III
+Aphrocallistes_vastus	cox3	AGA	S	103	COX3	PF00510.16	4	259	Cytochrome c oxidase subunit III
+Aphrocallistes_vastus	cox3	AGA	S	204	COX3	PF00510.16	4	259	Cytochrome c oxidase subunit III
+Aphrocallistes_vastus	cox3	AGA	S	259	COX3	PF00510.16	4	259	Cytochrome c oxidase subunit III
+Schistosoma	cox3	AGA	S	216	NID	NID	-	-	NID
+Versteria_mustelae	cox3	AGA	S	214	COX3|46-214	PF00510.16	46	214	Cytochrome c oxidase subunit III
+Versteria_mustelae	cox3	AGA	S	214	COX3|46-214	PF00510.16	46	214	Cytochrome c oxidase subunit III
+Versteria_mustelae	cox3	AGA	S	214	COX3|46-214	PF00510.16	46	214	Cytochrome c oxidase subunit III
+Euseius_nicholsi	cox3	AGA	S	103	COX3	PF00510.16	4	260	Cytochrome c oxidase subunit III
+Euseius_nicholsi	cox3	AGA	S	181	COX3	PF00510.16	4	260	Cytochrome c oxidase subunit III
+Euseius_nicholsi	cox3	AGA	S	188	COX3	PF00510.16	4	260	Cytochrome c oxidase subunit III
+Euseius_nicholsi	cox3	AGA	S	212	COX3	PF00510.16	4	260	Cytochrome c oxidase subunit III
+Euseius_nicholsi	cox3	AGA	S	233	COX3	PF00510.16	4	260	Cytochrome c oxidase subunit III
+Euseius_nicholsi	cox3	AGA	S	261	NID	NID	-	-	NID
+Euseius_nicholsi	cox3	AGA	S	261	NID	NID	-	-	NID
+Patiria	cox3	AGA	S	259	COX3	PF00510.16	4	259	Cytochrome c oxidase subunit III
+Limulus	cox3	AGA	S	204	COX3	PF00510.16	5	259	Cytochrome c oxidase subunit III
+Katharina	cox3	AGA	S	204	COX3	PF00510.16	3	258	Cytochrome c oxidase subunit III
+Strigamia_maritima	cox3	AGA	S	103	COX3	PF00510.16	5	260	Cytochrome c oxidase subunit III
+Trichinella	cox3	AGA	S	120	COX3	PF00510.16	3	256	Cytochrome c oxidase subunit III
+Trichinella	cox3	AGA	S	202	COX3	PF00510.16	3	256	Cytochrome c oxidase subunit III
+Trichinella	cox3	AGA	S	224	COX3	PF00510.16	3	256	Cytochrome c oxidase subunit III
+Trichinella	cox3	AGA	S	230	COX3	PF00510.16	3	256	Cytochrome c oxidase subunit III
+Trichinella	cox3	AGA	S	256	COX3	PF00510.16	3	256	Cytochrome c oxidase subunit III
+Trichinella	cox3	AGA	S	256	COX3	PF00510.16	3	256	Cytochrome c oxidase subunit III
+Trichinella	cox3	AGA	S	256	COX3	PF00510.16	3	256	Cytochrome c oxidase subunit III
+Trichinella	cox3	AGA	S	256	COX3	PF00510.16	3	256	Cytochrome c oxidase subunit III
+Pseudogarypus_banksi	cox3	AGA	S	103	COX3	PF00510.16	5	256	Cytochrome c oxidase subunit III
+Pseudogarypus_banksi	cox3	AGA	S	174	COX3	PF00510.16	5	256	Cytochrome c oxidase subunit III
+Pseudogarypus_banksi	cox3	AGA	S	188	COX3	PF00510.16	5	256	Cytochrome c oxidase subunit III
+Daphnia	cox3	AGA	S	109	COX3	PF00510.16	6	261	Cytochrome c oxidase subunit III
+Paracentrotus	cox3	AAA	N	232	COX3	PF00510.16	4	259	Cytochrome c oxidase subunit III
+Schistosoma	cox3	AAA	N	216	NID	NID	-	-	NID
+Taenia_crassiceps	cox3	AAA	N	210	COX3|37-213	PF00510.16	37	213	Cytochrome c oxidase subunit III
+Benedenia_hoshinai	cox3	AAA	N	214	COX3|75-214	PF00510.16	75	214	Cytochrome c oxidase subunit III
+Metaseiulus_occidentalis	cox3	AGG	S	103	COX3	PF00510.16	15	273	Cytochrome c oxidase subunit III
+Metaseiulus_occidentalis	cox3	AGG	S	181	COX3	PF00510.16	15	273	Cytochrome c oxidase subunit III
+Metaseiulus_occidentalis	cox3	AGG	S	273	COX3	PF00510.16	15	273	Cytochrome c oxidase subunit III
+Fasciola	cox3	AGG	S	188	COX3	PF00510.16	3	212	Cytochrome c oxidase subunit III
+Trichobilharzia_regenti	cox3	AGG	S	215	NID	NID	-	-	NID
+Trichobilharzia_regenti	cox3	AGG	S	215	NID	NID	-	-	NID
+Versteria_mustelae	cox3	AGG	S	214	COX3|46-214	PF00510.16	46	214	Cytochrome c oxidase subunit III
+Euseius_nicholsi	cox3	AGG	S	204	COX3	PF00510.16	4	260	Cytochrome c oxidase subunit III
+Haplorchis_taichui	cox3	AGG	S	217	COX3	PF00510.16	12	217	Cytochrome c oxidase subunit III
+Haplorchis_taichui	cox3	AGG	S	217	COX3	PF00510.16	12	217	Cytochrome c oxidase subunit III
+Echinococcus_equinus	cox3	AGG	S	214	COX3|46-214	PF00510.16	46	214	Cytochrome c oxidase subunit III
+Tetrancistrum_nebulosi	cox3	AGG	S	214	COX3|56-214	PF00510.16	56	214	Cytochrome c oxidase subunit III
+Tetrancistrum_nebulosi	cox3	AGG	S	214	COX3|56-214	PF00510.16	56	214	Cytochrome c oxidase subunit III
+Caenorhabditis	cox3	AGG	S	104	COX3	PF00510.16	2	254	Cytochrome c oxidase subunit III
+Caenorhabditis	cox3	AGG	S	188	COX3	PF00510.16	2	254	Cytochrome c oxidase subunit III
+Caenorhabditis	cox3	AGG	S	254	COX3	PF00510.16	2	254	Cytochrome c oxidase subunit III
+Metaseiulus_occidentalis	cox3	ATA	M	96	COX3	PF00510.16	15	273	Cytochrome c oxidase subunit III
+Metaseiulus_occidentalis	cox3	ATA	M	222	COX3	PF00510.16	15	273	Cytochrome c oxidase subunit III
+Metaseiulus_occidentalis	cox3	ATA	M	274	NID	NID	-	-	NID
+Metaseiulus_occidentalis	cox3	ATA	M	274	NID	NID	-	-	NID
+Metaseiulus_occidentalis	cox3	ATA	M	274	NID	NID	-	-	NID
+Metaseiulus_occidentalis	cox3	ATA	M	274	NID	NID	-	-	NID
+Euseius_nicholsi	cox3	ATA	M	178	COX3	PF00510.16	4	260	Cytochrome c oxidase subunit III
+Euseius_nicholsi	cox3	ATA	M	184	COX3	PF00510.16	4	260	Cytochrome c oxidase subunit III
+Euseius_nicholsi	cox3	ATA	M	230	COX3	PF00510.16	4	260	Cytochrome c oxidase subunit III
+Euseius_nicholsi	cox3	ATA	M	261	NID	NID	-	-	NID
+Euseius_nicholsi	cox3	ATA	M	261	NID	NID	-	-	NID
+Patiria	cox3	ATA	M	183	COX3	PF00510.16	4	259	Cytochrome c oxidase subunit III
+Patiria	cox3	ATA	M	186	COX3	PF00510.16	4	259	Cytochrome c oxidase subunit III
+Patiria	cox3	ATA	M	250	COX3	PF00510.16	4	259	Cytochrome c oxidase subunit III
+Patiria	cox3	ATA	M	259	COX3	PF00510.16	4	259	Cytochrome c oxidase subunit III
+Axinella	cox3	ATA	M	183	COX3	PF00510.16	6	261	Cytochrome c oxidase subunit III
+Axinella	cox3	ATA	M	186	COX3	PF00510.16	6	261	Cytochrome c oxidase subunit III
+Axinella	cox3	ATA	M	250	COX3	PF00510.16	6	261	Cytochrome c oxidase subunit III
+Terebratulina	cox3	ATA	M	125	COX3	PF00510.16	3	258	Cytochrome c oxidase subunit III
+Trichinella	cox3	ATA	M	125	COX3	PF00510.16	3	256	Cytochrome c oxidase subunit III
+Trichinella	cox3	ATA	M	178	COX3	PF00510.16	3	256	Cytochrome c oxidase subunit III
+Trichinella	cox3	ATA	M	199	COX3	PF00510.16	3	256	Cytochrome c oxidase subunit III
+Trichinella	cox3	ATA	M	222	COX3	PF00510.16	3	256	Cytochrome c oxidase subunit III
+Trichinella	cox3	ATA	M	245	COX3	PF00510.16	3	256	Cytochrome c oxidase subunit III
+Trichinella	cox3	ATA	M	256	COX3	PF00510.16	3	256	Cytochrome c oxidase subunit III
+Trichinella	cox3	ATA	M	256	COX3	PF00510.16	3	256	Cytochrome c oxidase subunit III
+Trichinella	cox3	ATA	M	256	COX3	PF00510.16	3	256	Cytochrome c oxidase subunit III
+Trichinella	cox3	ATA	M	256	COX3	PF00510.16	3	256	Cytochrome c oxidase subunit III
+Pseudogarypus_banksi	cox3	ATA	M	184	COX3	PF00510.16	5	256	Cytochrome c oxidase subunit III
+Pseudogarypus_banksi	cox3	ATA	M	210	COX3	PF00510.16	5	256	Cytochrome c oxidase subunit III
+Pseudogarypus_banksi	cox3	ATA	M	219	COX3	PF00510.16	5	256	Cytochrome c oxidase subunit III
+Ciona	cox3	ATA	M	125	COX3	PF00510.16	5	260	Cytochrome c oxidase subunit III
+Ciona	cox3	ATA	M	178	COX3	PF00510.16	5	260	Cytochrome c oxidase subunit III
+Ciona	cox3	ATA	M	261	NID	NID	-	-	NID
+Caenorhabditis	cox3	ATA	M	162	COX3	PF00510.16	2	254	Cytochrome c oxidase subunit III
+Caenorhabditis	cox3	ATA	M	254	COX3	PF00510.16	2	254	Cytochrome c oxidase subunit III
+Ascidiella_aspersa	cox3	ATA	M	226	COX3	PF00510.16	4	259	Cytochrome c oxidase subunit III
+Ascidiella_aspersa	cox3	ATA	M	260	NID	NID	-	-	NID
+Euseius_nicholsi	cox3	ATA	L	178	COX3	PF00510.16	4	260	Cytochrome c oxidase subunit III
+Euseius_nicholsi	cox3	ATA	L	184	COX3	PF00510.16	4	260	Cytochrome c oxidase subunit III
+Euseius_nicholsi	cox3	ATA	L	230	COX3	PF00510.16	4	260	Cytochrome c oxidase subunit III
+Euseius_nicholsi	cox3	ATA	L	261	NID	NID	-	-	NID
+Euseius_nicholsi	cox3	ATA	L	261	NID	NID	-	-	NID
+Ciona	cox3	ATA	L	125	COX3	PF00510.16	5	260	Cytochrome c oxidase subunit III
+Ciona	cox3	ATA	L	178	COX3	PF00510.16	5	260	Cytochrome c oxidase subunit III
+Ciona	cox3	ATA	L	261	NID	NID	-	-	NID
+Euseius_nicholsi	cox3	ATC	L	186	COX3	PF00510.16	4	260	Cytochrome c oxidase subunit III
+Euseius_nicholsi	cox3	ATC	L	190	COX3	PF00510.16	4	260	Cytochrome c oxidase subunit III
+Euseius_nicholsi	cox3	ATC	L	250	COX3	PF00510.16	4	260	Cytochrome c oxidase subunit III
+Euseius_nicholsi	cox3	ATC	L	261	NID	NID	-	-	NID
+Euseius_nicholsi	cox3	ATC	L	261	NID	NID	-	-	NID
+Lumbricus	cox3	ATC	L	257	COX3	PF00510.16	3	257	Cytochrome c oxidase subunit III
+Lumbricus	cox3	ATC	L	257	COX3	PF00510.16	3	257	Cytochrome c oxidase subunit III
+Epigonichthys	cox3	ATC	L	260	COX3	PF00510.16	6	260	Cytochrome c oxidase subunit III
+Epigonichthys	cox3	ATC	L	260	COX3	PF00510.16	6	260	Cytochrome c oxidase subunit III
+Euseius_nicholsi	cox3	ATT	L	160	COX3	PF00510.16	4	260	Cytochrome c oxidase subunit III
+Euseius_nicholsi	cox3	ATT	L	183	COX3	PF00510.16	4	260	Cytochrome c oxidase subunit III
+Euseius_nicholsi	cox3	ATT	L	235	COX3	PF00510.16	4	260	Cytochrome c oxidase subunit III
+Euseius_nicholsi	cox3	ATT	L	237	COX3	PF00510.16	4	260	Cytochrome c oxidase subunit III
+Euseius_nicholsi	cox3	ATT	L	261	NID	NID	-	-	NID
+Euseius_nicholsi	cox3	ATT	L	261	NID	NID	-	-	NID
+Lumbricus	cox3	ATT	L	183	COX3	PF00510.16	3	257	Cytochrome c oxidase subunit III
+Lumbricus	cox3	ATT	L	186	COX3	PF00510.16	3	257	Cytochrome c oxidase subunit III
+Lumbricus	cox3	ATT	L	257	COX3	PF00510.16	3	257	Cytochrome c oxidase subunit III
+Lumbricus	cox3	ATT	L	257	COX3	PF00510.16	3	257	Cytochrome c oxidase subunit III
+Epigonichthys	cox3	ATT	L	186	COX3	PF00510.16	6	260	Cytochrome c oxidase subunit III
+Epigonichthys	cox3	ATT	L	250	COX3	PF00510.16	6	260	Cytochrome c oxidase subunit III
+Epigonichthys	cox3	ATT	L	260	COX3	PF00510.16	6	260	Cytochrome c oxidase subunit III
+Metaseiulus_occidentalis	cox3	AGG	G	103	COX3	PF00510.16	15	273	Cytochrome c oxidase subunit III
+Metaseiulus_occidentalis	cox3	AGG	G	181	COX3	PF00510.16	15	273	Cytochrome c oxidase subunit III
+Metaseiulus_occidentalis	cox3	AGG	G	273	COX3	PF00510.16	15	273	Cytochrome c oxidase subunit III
+Halocynthia	cox3	AGG	G	181	COX3	PF00510.16	4	259	Cytochrome c oxidase subunit III
+Halocynthia	cox3	AGG	G	263	NID	NID	-	-	NID
+Halocynthia	cox3	AGG	G	263	NID	NID	-	-	NID
+Halocynthia	cox3	AGG	G	263	NID	NID	-	-	NID
+Ciona	cox3	AGG	G	181	COX3	PF00510.16	5	260	Cytochrome c oxidase subunit III
+Ciona	cox3	AGG	G	261	NID	NID	-	-	NID
+Ascidiella_aspersa	cox3	AGG	G	181	COX3	PF00510.16	4	259	Cytochrome c oxidase subunit III
+Ascidiella_aspersa	cox3	AGG	G	240	COX3	PF00510.16	4	259	Cytochrome c oxidase subunit III
+Ascidiella_aspersa	cox3	AGG	G	260	NID	NID	-	-	NID
+Ascidiella_aspersa	cox3	AGG	G	260	NID	NID	-	-	NID
+Metaseiulus_occidentalis	cox3	AGA	G	188	COX3	PF00510.16	15	273	Cytochrome c oxidase subunit III
+Aphrocallistes_vastus	cox3	AGA	G	103	COX3	PF00510.16	4	259	Cytochrome c oxidase subunit III
+Aphrocallistes_vastus	cox3	AGA	G	204	COX3	PF00510.16	4	259	Cytochrome c oxidase subunit III
+Aphrocallistes_vastus	cox3	AGA	G	259	COX3	PF00510.16	4	259	Cytochrome c oxidase subunit III
+Halocynthia	cox3	AGA	G	263	NID	NID	-	-	NID
+Ciona	cox3	AGA	G	120	COX3	PF00510.16	5	260	Cytochrome c oxidase subunit III
+Ciona	cox3	AGA	G	168	COX3	PF00510.16	5	260	Cytochrome c oxidase subunit III
+Ciona	cox3	AGA	G	212	COX3	PF00510.16	5	260	Cytochrome c oxidase subunit III
+Ciona	cox3	AGA	G	219	COX3	PF00510.16	5	260	Cytochrome c oxidase subunit III
+Ciona	cox3	AGA	G	240	COX3	PF00510.16	5	260	Cytochrome c oxidase subunit III
+Ciona	cox3	AGA	G	261	NID	NID	-	-	NID
+Ciona	cox3	AGA	G	261	NID	NID	-	-	NID
+Ciona	cox3	AGA	G	261	NID	NID	-	-	NID
+Ciona	cox3	AGA	G	261	NID	NID	-	-	NID
+Ciona	cox3	AGA	G	261	NID	NID	-	-	NID
+Ascidiella_aspersa	cox3	AGA	G	260	NID	NID	-	-	NID
+Metaseiulus_occidentalis	cox1	AGA	S	42	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Metaseiulus_occidentalis	cox1	AGA	S	480	NID	NID	-	-	NID
+Paracentrotus	cox1	AGA	S	42	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Paracentrotus	cox1	AGA	S	112	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Paracentrotus	cox1	AGA	S	336	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Aphrocallistes_vastus	cox1	AGA	S	42	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Aphrocallistes_vastus	cox1	AGA	S	112	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Aphrocallistes_vastus	cox1	AGA	S	153	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Aphrocallistes_vastus	cox1	AGA	S	173	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Aphrocallistes_vastus	cox1	AGA	S	336	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Aphrocallistes_vastus	cox1	AGA	S	378	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Aphrocallistes_vastus	cox1	AGA	S	473	NID	NID	-	-	NID
+Schistosoma	cox1	AGA	S	112	COX1	PF00115.18	12	451	Cytochrome C and Quinol oxidase polypeptide I
+Schistosoma	cox1	AGA	S	218	COX1	PF00115.18	12	451	Cytochrome C and Quinol oxidase polypeptide I
+Schistosoma	cox1	AGA	S	299	COX1	PF00115.18	12	451	Cytochrome C and Quinol oxidase polypeptide I
+Schistosoma	cox1	AGA	S	405	COX1	PF00115.18	12	451	Cytochrome C and Quinol oxidase polypeptide I
+Schistosoma	cox1	AGA	S	406	COX1	PF00115.18	12	451	Cytochrome C and Quinol oxidase polypeptide I
+Schistosoma	cox1	AGA	S	473	NID	NID	-	-	NID
+Schistosoma	cox1	AGA	S	474	NID	NID	-	-	NID
+Versteria_mustelae	cox1	AGA	S	153	COX1	PF00115.18	16	460	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	AGA	S	112	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	AGA	S	179	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	AGA	S	380	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	AGA	S	477	NID	NID	-	-	NID
+Euseius_nicholsi	cox1	AGA	S	480	NID	NID	-	-	NID
+Patiria	cox1	AGA	S	112	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Patiria	cox1	AGA	S	477	NID	NID	-	-	NID
+Haplorchis_taichui	cox1	AGA	S	112	COX1	PF00115.18	11	454	Cytochrome C and Quinol oxidase polypeptide I
+Haplorchis_taichui	cox1	AGA	S	269	COX1	PF00115.18	11	454	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	AGA	S	42	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	AGA	S	112	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	AGA	S	400	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Limulus	cox1	AGA	S	42	COX1	PF00115.18	11	457	Cytochrome C and Quinol oxidase polypeptide I
+Limulus	cox1	AGA	S	336	COX1	PF00115.18	11	457	Cytochrome C and Quinol oxidase polypeptide I
+Terebratulina	cox1	AGA	S	112	COX1	PF00115.18	10	476	Cytochrome C and Quinol oxidase polypeptide I
+Terebratulina	cox1	AGA	S	336	COX1	PF00115.18	10	476	Cytochrome C and Quinol oxidase polypeptide I
+Terebratulina	cox1	AGA	S	400	COX1	PF00115.18	10	476	Cytochrome C and Quinol oxidase polypeptide I
+Katharina	cox1	AGA	S	42	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Strigamia_maritima	cox1	AGA	S	42	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Strigamia_maritima	cox1	AGA	S	112	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Strigamia_maritima	cox1	AGA	S	201	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Strigamia_maritima	cox1	AGA	S	336	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Trichinella	cox1	AGA	S	87	COX1	PF00115.18	11	460	Cytochrome C and Quinol oxidase polypeptide I
+Trichinella	cox1	AGA	S	201	COX1	PF00115.18	11	460	Cytochrome C and Quinol oxidase polypeptide I
+Trichinella	cox1	AGA	S	336	COX1	PF00115.18	11	460	Cytochrome C and Quinol oxidase polypeptide I
+Trichinella	cox1	AGA	S	375	COX1	PF00115.18	11	460	Cytochrome C and Quinol oxidase polypeptide I
+Tetrancistrum_nebulosi	cox1	AGA	S	42	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Tetrancistrum_nebulosi	cox1	AGA	S	151	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Tetrancistrum_nebulosi	cox1	AGA	S	170	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Tetrancistrum_nebulosi	cox1	AGA	S	278	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Tetrancistrum_nebulosi	cox1	AGA	S	320	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Tetrancistrum_nebulosi	cox1	AGA	S	406	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Tetrancistrum_nebulosi	cox1	AGA	S	477	NID	NID	-	-	NID
+Pseudogarypus_banksi	cox1	AGA	S	42	COX1	PF00115.18	11	457	Cytochrome C and Quinol oxidase polypeptide I
+Pseudogarypus_banksi	cox1	AGA	S	112	COX1	PF00115.18	11	457	Cytochrome C and Quinol oxidase polypeptide I
+Pseudogarypus_banksi	cox1	AGA	S	336	COX1	PF00115.18	11	457	Cytochrome C and Quinol oxidase polypeptide I
+Drosophila	cox1	AGA	S	42	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Drosophila	cox1	AGA	S	112	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Daphnia	cox1	AGA	S	42	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Daphnia	cox1	AGA	S	112	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Daphnia	cox1	AGA	S	336	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Daphnia	cox1	AGA	S	380	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Caenorhabditis	cox1	AGA	S	17	NID	NID	-	-	NID
+Caenorhabditis	cox1	AGA	S	104	COX1	PF00115.18	21	466	Cytochrome C and Quinol oxidase polypeptide I
+Caenorhabditis	cox1	AGA	S	112	COX1	PF00115.18	21	466	Cytochrome C and Quinol oxidase polypeptide I
+Caenorhabditis	cox1	AGA	S	146	COX1	PF00115.18	21	466	Cytochrome C and Quinol oxidase polypeptide I
+Caenorhabditis	cox1	AGA	S	155	COX1	PF00115.18	21	466	Cytochrome C and Quinol oxidase polypeptide I
+Caenorhabditis	cox1	AGA	S	169	COX1	PF00115.18	21	466	Cytochrome C and Quinol oxidase polypeptide I
+Caenorhabditis	cox1	AGA	S	269	COX1	PF00115.18	21	466	Cytochrome C and Quinol oxidase polypeptide I
+Caenorhabditis	cox1	AGA	S	336	COX1	PF00115.18	21	466	Cytochrome C and Quinol oxidase polypeptide I
+Caenorhabditis	cox1	AGA	S	380	COX1	PF00115.18	21	466	Cytochrome C and Quinol oxidase polypeptide I
+Caenorhabditis	cox1	AGA	S	393	COX1	PF00115.18	21	466	Cytochrome C and Quinol oxidase polypeptide I
+Caenorhabditis	cox1	AGA	S	416	COX1	PF00115.18	21	466	Cytochrome C and Quinol oxidase polypeptide I
+Caenorhabditis	cox1	AGA	S	480	NID	NID	-	-	NID
+Paracentrotus	cox1	AAA	N	57	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Paracentrotus	cox1	AAA	N	66	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Paracentrotus	cox1	AAA	N	228	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Schistosoma	cox1	AAA	N	194	COX1	PF00115.18	12	451	Cytochrome C and Quinol oxidase polypeptide I
+Schistosoma	cox1	AAA	N	228	COX1	PF00115.18	12	451	Cytochrome C and Quinol oxidase polypeptide I
+Schistosoma	cox1	AAA	N	278	COX1	PF00115.18	12	451	Cytochrome C and Quinol oxidase polypeptide I
+Fasciola	cox1	AAA	N	176	COX1	PF00115.18	10	454	Cytochrome C and Quinol oxidase polypeptide I
+Fasciola	cox1	AAA	N	228	COX1	PF00115.18	10	454	Cytochrome C and Quinol oxidase polypeptide I
+Trichobilharzia_regenti	cox1	AAA	N	48	COX1	PF00115.18	15	454	Cytochrome C and Quinol oxidase polypeptide I
+Trichobilharzia_regenti	cox1	AAA	N	176	COX1	PF00115.18	15	454	Cytochrome C and Quinol oxidase polypeptide I
+Trichobilharzia_regenti	cox1	AAA	N	228	COX1	PF00115.18	15	454	Cytochrome C and Quinol oxidase polypeptide I
+Trichobilharzia_regenti	cox1	AAA	N	278	COX1	PF00115.18	15	454	Cytochrome C and Quinol oxidase polypeptide I
+Versteria_mustelae	cox1	AAA	N	48	COX1	PF00115.18	16	460	Cytochrome C and Quinol oxidase polypeptide I
+Versteria_mustelae	cox1	AAA	N	66	COX1	PF00115.18	16	460	Cytochrome C and Quinol oxidase polypeptide I
+Versteria_mustelae	cox1	AAA	N	176	COX1	PF00115.18	16	460	Cytochrome C and Quinol oxidase polypeptide I
+Versteria_mustelae	cox1	AAA	N	188	COX1	PF00115.18	16	460	Cytochrome C and Quinol oxidase polypeptide I
+Versteria_mustelae	cox1	AAA	N	228	COX1	PF00115.18	16	460	Cytochrome C and Quinol oxidase polypeptide I
+Patiria	cox1	AAA	N	19	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Patiria	cox1	AAA	N	66	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Patiria	cox1	AAA	N	176	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Patiria	cox1	AAA	N	228	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Patiria	cox1	AAA	N	378	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Haplorchis_taichui	cox1	AAA	N	91	COX1	PF00115.18	11	454	Cytochrome C and Quinol oxidase polypeptide I
+Haplorchis_taichui	cox1	AAA	N	228	COX1	PF00115.18	11	454	Cytochrome C and Quinol oxidase polypeptide I
+Haplorchis_taichui	cox1	AAA	N	278	COX1	PF00115.18	11	454	Cytochrome C and Quinol oxidase polypeptide I
+Haplorchis_taichui	cox1	AAA	N	424	COX1	PF00115.18	11	454	Cytochrome C and Quinol oxidase polypeptide I
+Haplorchis_taichui	cox1	AAA	N	470	NID	NID	-	-	NID
+Taenia_crassiceps	cox1	AAA	N	48	COX1	PF00115.18	16	460	Cytochrome C and Quinol oxidase polypeptide I
+Taenia_crassiceps	cox1	AAA	N	66	COX1	PF00115.18	16	460	Cytochrome C and Quinol oxidase polypeptide I
+Taenia_crassiceps	cox1	AAA	N	104	COX1	PF00115.18	16	460	Cytochrome C and Quinol oxidase polypeptide I
+Taenia_crassiceps	cox1	AAA	N	188	COX1	PF00115.18	16	460	Cytochrome C and Quinol oxidase polypeptide I
+Taenia_crassiceps	cox1	AAA	N	228	COX1	PF00115.18	16	460	Cytochrome C and Quinol oxidase polypeptide I
+Taenia_crassiceps	cox1	AAA	N	436	COX1	PF00115.18	16	460	Cytochrome C and Quinol oxidase polypeptide I
+Taenia_crassiceps	cox1	AAA	N	470	NID	NID	-	-	NID
+Tetrancistrum_nebulosi	cox1	AAA	N	66	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Tetrancistrum_nebulosi	cox1	AAA	N	91	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Tetrancistrum_nebulosi	cox1	AAA	N	131	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Tetrancistrum_nebulosi	cox1	AAA	N	228	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Tetrancistrum_nebulosi	cox1	AAA	N	499	NID	NID	-	-	NID
+Benedenia_hoshinai	cox1	AAA	N	176	COX1	PF00115.18	17	462	Cytochrome C and Quinol oxidase polypeptide I
+Benedenia_hoshinai	cox1	AAA	N	228	COX1	PF00115.18	17	462	Cytochrome C and Quinol oxidase polypeptide I
+Benedenia_hoshinai	cox1	AAA	N	278	COX1	PF00115.18	17	462	Cytochrome C and Quinol oxidase polypeptide I
+Schistosoma	cox1	AGG	S	42	COX1	PF00115.18	12	451	Cytochrome C and Quinol oxidase polypeptide I
+Schistosoma	cox1	AGG	S	126	COX1	PF00115.18	12	451	Cytochrome C and Quinol oxidase polypeptide I
+Schistosoma	cox1	AGG	S	269	COX1	PF00115.18	12	451	Cytochrome C and Quinol oxidase polypeptide I
+Fasciola	cox1	AGG	S	42	COX1	PF00115.18	10	454	Cytochrome C and Quinol oxidase polypeptide I
+Fasciola	cox1	AGG	S	153	COX1	PF00115.18	10	454	Cytochrome C and Quinol oxidase polypeptide I
+Trichobilharzia_regenti	cox1	AGG	S	112	COX1	PF00115.18	15	454	Cytochrome C and Quinol oxidase polypeptide I
+Versteria_mustelae	cox1	AGG	S	42	COX1	PF00115.18	16	460	Cytochrome C and Quinol oxidase polypeptide I
+Versteria_mustelae	cox1	AGG	S	170	COX1	PF00115.18	16	460	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	AGG	S	162	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	AGG	S	424	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Haplorchis_taichui	cox1	AGG	S	42	COX1	PF00115.18	11	454	Cytochrome C and Quinol oxidase polypeptide I
+Haplorchis_taichui	cox1	AGG	S	71	COX1	PF00115.18	11	454	Cytochrome C and Quinol oxidase polypeptide I
+Haplorchis_taichui	cox1	AGG	S	183	COX1	PF00115.18	11	454	Cytochrome C and Quinol oxidase polypeptide I
+Haplorchis_taichui	cox1	AGG	S	405	COX1	PF00115.18	11	454	Cytochrome C and Quinol oxidase polypeptide I
+Haplorchis_taichui	cox1	AGG	S	474	NID	NID	-	-	NID
+Echinococcus_equinus	cox1	AGG	S	126	COX1	PF00115.18	16	460	Cytochrome C and Quinol oxidase polypeptide I
+Taenia_crassiceps	cox1	AGG	S	299	COX1	PF00115.18	16	460	Cytochrome C and Quinol oxidase polypeptide I
+Katharina	cox1	AGG	S	336	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Katharina	cox1	AGG	S	388	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Tetrancistrum_nebulosi	cox1	AGG	S	71	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Tetrancistrum_nebulosi	cox1	AGG	S	112	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Tetrancistrum_nebulosi	cox1	AGG	S	269	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Tetrancistrum_nebulosi	cox1	AGG	S	464	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Caenorhabditis	cox1	AGG	S	57	COX1	PF00115.18	21	466	Cytochrome C and Quinol oxidase polypeptide I
+Caenorhabditis	cox1	AGG	S	138	COX1	PF00115.18	21	466	Cytochrome C and Quinol oxidase polypeptide I
+Metaseiulus_occidentalis	cox1	ATA	M	41	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Metaseiulus_occidentalis	cox1	ATA	M	76	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Metaseiulus_occidentalis	cox1	ATA	M	82	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Metaseiulus_occidentalis	cox1	ATA	M	108	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Metaseiulus_occidentalis	cox1	ATA	M	172	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Metaseiulus_occidentalis	cox1	ATA	M	189	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Metaseiulus_occidentalis	cox1	ATA	M	222	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Metaseiulus_occidentalis	cox1	ATA	M	291	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Metaseiulus_occidentalis	cox1	ATA	M	324	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Metaseiulus_occidentalis	cox1	ATA	M	338	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Metaseiulus_occidentalis	cox1	ATA	M	417	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Metaseiulus_occidentalis	cox1	ATA	M	441	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Metaseiulus_occidentalis	cox1	ATA	M	490	NID	NID	-	-	NID
+Euseius_nicholsi	cox1	ATA	M	15	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATA	M	57	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATA	M	76	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATA	M	108	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATA	M	172	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATA	M	189	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATA	M	291	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATA	M	324	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATA	M	360	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATA	M	417	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Patiria	cox1	ATA	M	44	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Patiria	cox1	ATA	M	45	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Patiria	cox1	ATA	M	68	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Patiria	cox1	ATA	M	160	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Patiria	cox1	ATA	M	175	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Patiria	cox1	ATA	M	178	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Patiria	cox1	ATA	M	291	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Patiria	cox1	ATA	M	326	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Patiria	cox1	ATA	M	332	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Patiria	cox1	ATA	M	407	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Patiria	cox1	ATA	M	479	NID	NID	-	-	NID
+Lumbricus	cox1	ATA	M	41	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	ATA	M	76	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	ATA	M	82	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	ATA	M	222	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	ATA	M	291	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	ATA	M	306	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	ATA	M	324	ENOD40	PF08247.9	316	326	ENOD40 protein
+Limulus	cox1	ATA	M	26	COX1	PF00115.18	11	457	Cytochrome C and Quinol oxidase polypeptide I
+Limulus	cox1	ATA	M	76	COX1	PF00115.18	11	457	Cytochrome C and Quinol oxidase polypeptide I
+Limulus	cox1	ATA	M	82	COX1	PF00115.18	11	457	Cytochrome C and Quinol oxidase polypeptide I
+Limulus	cox1	ATA	M	189	COX1	PF00115.18	11	457	Cytochrome C and Quinol oxidase polypeptide I
+Limulus	cox1	ATA	M	222	COX1	PF00115.18	11	457	Cytochrome C and Quinol oxidase polypeptide I
+Limulus	cox1	ATA	M	267	COX1	PF00115.18	11	457	Cytochrome C and Quinol oxidase polypeptide I
+Limulus	cox1	ATA	M	291	COX1	PF00115.18	11	457	Cytochrome C and Quinol oxidase polypeptide I
+Limulus	cox1	ATA	M	306	COX1	PF00115.18	11	457	Cytochrome C and Quinol oxidase polypeptide I
+Limulus	cox1	ATA	M	324	COX1	PF00115.18	11	457	Cytochrome C and Quinol oxidase polypeptide I
+Limulus	cox1	ATA	M	423	COX1	PF00115.18	11	457	Cytochrome C and Quinol oxidase polypeptide I
+Axinella	cox1	ATA	M	68	COX1	PF00115.18	15	461	Cytochrome C and Quinol oxidase polypeptide I
+Axinella	cox1	ATA	M	77	COX1	PF00115.18	15	461	Cytochrome C and Quinol oxidase polypeptide I
+Axinella	cox1	ATA	M	171	COX1	PF00115.18	15	461	Cytochrome C and Quinol oxidase polypeptide I
+Axinella	cox1	ATA	M	189	COX1	PF00115.18	15	461	Cytochrome C and Quinol oxidase polypeptide I
+Axinella	cox1	ATA	M	220	COX1	PF00115.18	15	461	Cytochrome C and Quinol oxidase polypeptide I
+Axinella	cox1	ATA	M	243	COX1	PF00115.18	15	461	Cytochrome C and Quinol oxidase polypeptide I
+Axinella	cox1	ATA	M	261	COX1	PF00115.18	15	461	Cytochrome C and Quinol oxidase polypeptide I
+Axinella	cox1	ATA	M	271	COX1	PF00115.18	15	461	Cytochrome C and Quinol oxidase polypeptide I
+Axinella	cox1	ATA	M	291	COX1	PF00115.18	15	461	Cytochrome C and Quinol oxidase polypeptide I
+Axinella	cox1	ATA	M	325	COX1	PF00115.18	15	461	Cytochrome C and Quinol oxidase polypeptide I
+Axinella	cox1	ATA	M	334	COX1	PF00115.18	15	461	Cytochrome C and Quinol oxidase polypeptide I
+Terebratulina	cox1	ATA	M	76	NapE	PF06796.9	56	87	Periplasmic nitrate reductase protein NapE
+Terebratulina	cox1	ATA	M	82	NapE	PF06796.9	56	87	Periplasmic nitrate reductase protein NapE
+Terebratulina	cox1	ATA	M	108	COX1	PF00115.18	10	476	Cytochrome C and Quinol oxidase polypeptide I
+Terebratulina	cox1	ATA	M	306	COX1	PF00115.18	10	476	Cytochrome C and Quinol oxidase polypeptide I
+Terebratulina	cox1	ATA	M	324	COX1	PF00115.18	10	476	Cytochrome C and Quinol oxidase polypeptide I
+Katharina	cox1	ATA	M	76	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Katharina	cox1	ATA	M	84	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Katharina	cox1	ATA	M	189	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Katharina	cox1	ATA	M	222	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Katharina	cox1	ATA	M	267	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Katharina	cox1	ATA	M	291	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Strigamia_maritima	cox1	ATA	M	26	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Strigamia_maritima	cox1	ATA	M	76	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Strigamia_maritima	cox1	ATA	M	82	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Strigamia_maritima	cox1	ATA	M	86	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Strigamia_maritima	cox1	ATA	M	93	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Strigamia_maritima	cox1	ATA	M	108	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Strigamia_maritima	cox1	ATA	M	124	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Strigamia_maritima	cox1	ATA	M	189	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Strigamia_maritima	cox1	ATA	M	222	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Strigamia_maritima	cox1	ATA	M	267	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Strigamia_maritima	cox1	ATA	M	291	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Strigamia_maritima	cox1	ATA	M	306	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Strigamia_maritima	cox1	ATA	M	324	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Strigamia_maritima	cox1	ATA	M	408	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Strigamia_maritima	cox1	ATA	M	423	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Strigamia_maritima	cox1	ATA	M	487	NID	NID	-	-	NID
+Trichinella	cox1	ATA	M	76	COX1	PF00115.18	11	460	Cytochrome C and Quinol oxidase polypeptide I
+Trichinella	cox1	ATA	M	82	COX1	PF00115.18	11	460	Cytochrome C and Quinol oxidase polypeptide I
+Trichinella	cox1	ATA	M	84	COX1	PF00115.18	11	460	Cytochrome C and Quinol oxidase polypeptide I
+Trichinella	cox1	ATA	M	208	COX1	PF00115.18	11	460	Cytochrome C and Quinol oxidase polypeptide I
+Trichinella	cox1	ATA	M	222	COX1	PF00115.18	11	460	Cytochrome C and Quinol oxidase polypeptide I
+Trichinella	cox1	ATA	M	248	COX1	PF00115.18	11	460	Cytochrome C and Quinol oxidase polypeptide I
+Trichinella	cox1	ATA	M	291	COX1	PF00115.18	11	460	Cytochrome C and Quinol oxidase polypeptide I
+Trichinella	cox1	ATA	M	306	COX1	PF00115.18	11	460	Cytochrome C and Quinol oxidase polypeptide I
+Trichinella	cox1	ATA	M	324	COX1	PF00115.18	11	460	Cytochrome C and Quinol oxidase polypeptide I
+Trichinella	cox1	ATA	M	408	COX1	PF00115.18	11	460	Cytochrome C and Quinol oxidase polypeptide I
+Trichinella	cox1	ATA	M	444	COX1	PF00115.18	11	460	Cytochrome C and Quinol oxidase polypeptide I
+Trichinella	cox1	ATA	M	469	NID	NID	-	-	NID
+Trichinella	cox1	ATA	M	490	NID	NID	-	-	NID
+Pseudogarypus_banksi	cox1	ATA	M	68	COX1	PF00115.18	11	457	Cytochrome C and Quinol oxidase polypeptide I
+Pseudogarypus_banksi	cox1	ATA	M	76	COX1	PF00115.18	11	457	Cytochrome C and Quinol oxidase polypeptide I
+Pseudogarypus_banksi	cox1	ATA	M	82	COX1	PF00115.18	11	457	Cytochrome C and Quinol oxidase polypeptide I
+Pseudogarypus_banksi	cox1	ATA	M	156	COX1	PF00115.18	11	457	Cytochrome C and Quinol oxidase polypeptide I
+Pseudogarypus_banksi	cox1	ATA	M	189	COX1	PF00115.18	11	457	Cytochrome C and Quinol oxidase polypeptide I
+Pseudogarypus_banksi	cox1	ATA	M	213	COX1	PF00115.18	11	457	Cytochrome C and Quinol oxidase polypeptide I
+Pseudogarypus_banksi	cox1	ATA	M	222	COX1	PF00115.18	11	457	Cytochrome C and Quinol oxidase polypeptide I
+Pseudogarypus_banksi	cox1	ATA	M	267	COX1	PF00115.18	11	457	Cytochrome C and Quinol oxidase polypeptide I
+Pseudogarypus_banksi	cox1	ATA	M	285	COX1	PF00115.18	11	457	Cytochrome C and Quinol oxidase polypeptide I
+Pseudogarypus_banksi	cox1	ATA	M	291	COX1	PF00115.18	11	457	Cytochrome C and Quinol oxidase polypeptide I
+Pseudogarypus_banksi	cox1	ATA	M	306	COX1	PF00115.18	11	457	Cytochrome C and Quinol oxidase polypeptide I
+Pseudogarypus_banksi	cox1	ATA	M	324	COX1	PF00115.18	11	457	Cytochrome C and Quinol oxidase polypeptide I
+Pseudogarypus_banksi	cox1	ATA	M	325	COX1	PF00115.18	11	457	Cytochrome C and Quinol oxidase polypeptide I
+Pseudogarypus_banksi	cox1	ATA	M	357	COX1	PF00115.18	11	457	Cytochrome C and Quinol oxidase polypeptide I
+Pseudogarypus_banksi	cox1	ATA	M	360	COX1	PF00115.18	11	457	Cytochrome C and Quinol oxidase polypeptide I
+Pseudogarypus_banksi	cox1	ATA	M	417	COX1	PF00115.18	11	457	Cytochrome C and Quinol oxidase polypeptide I
+Pseudogarypus_banksi	cox1	ATA	M	423	COX1	PF00115.18	11	457	Cytochrome C and Quinol oxidase polypeptide I
+Pseudogarypus_banksi	cox1	ATA	M	487	NID	NID	-	-	NID
+Myxine	cox1	ATA	M	76	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Myxine	cox1	ATA	M	82	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Myxine	cox1	ATA	M	96	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Myxine	cox1	ATA	M	108	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Myxine	cox1	ATA	M	189	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Myxine	cox1	ATA	M	222	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Myxine	cox1	ATA	M	285	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Myxine	cox1	ATA	M	291	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Myxine	cox1	ATA	M	306	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Myxine	cox1	ATA	M	324	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Myxine	cox1	ATA	M	408	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Drosophila	cox1	ATA	M	76	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Drosophila	cox1	ATA	M	82	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Drosophila	cox1	ATA	M	108	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Drosophila	cox1	ATA	M	222	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Drosophila	cox1	ATA	M	267	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Drosophila	cox1	ATA	M	291	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Drosophila	cox1	ATA	M	306	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Drosophila	cox1	ATA	M	324	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Drosophila	cox1	ATA	M	408	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	ATA	M	15	NID	NID	-	-	NID
+Ciona	cox1	ATA	M	76	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	ATA	M	82	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	ATA	M	108	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	ATA	M	222	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	ATA	M	267	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	ATA	M	291	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	ATA	M	324	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	ATA	M	490	NID	NID	-	-	NID
+Daphnia	cox1	ATA	M	76	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Daphnia	cox1	ATA	M	189	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Daphnia	cox1	ATA	M	267	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Daphnia	cox1	ATA	M	291	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Daphnia	cox1	ATA	M	306	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Caenorhabditis	cox1	ATA	M	76	COX1	PF00115.18	21	466	Cytochrome C and Quinol oxidase polypeptide I
+Caenorhabditis	cox1	ATA	M	82	COX1	PF00115.18	21	466	Cytochrome C and Quinol oxidase polypeptide I
+Caenorhabditis	cox1	ATA	M	120	COX1	PF00115.18	21	466	Cytochrome C and Quinol oxidase polypeptide I
+Caenorhabditis	cox1	ATA	M	324	COX1	PF00115.18	21	466	Cytochrome C and Quinol oxidase polypeptide I
+Homo	cox1	ATA	M	76	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Homo	cox1	ATA	M	82	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Homo	cox1	ATA	M	108	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Homo	cox1	ATA	M	189	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Homo	cox1	ATA	M	222	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Homo	cox1	ATA	M	267	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Homo	cox1	ATA	M	285	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Homo	cox1	ATA	M	306	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Homo	cox1	ATA	M	324	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Homo	cox1	ATA	M	408	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Homo	cox1	ATA	M	487	NID	NID	-	-	NID
+Ascidiella_aspersa	cox1	ATA	M	96	COX1	PF00115.18	15	461	Cytochrome C and Quinol oxidase polypeptide I
+Ascidiella_aspersa	cox1	ATA	M	122	COX1	PF00115.18	15	461	Cytochrome C and Quinol oxidase polypeptide I
+Ascidiella_aspersa	cox1	ATA	M	291	COX1	PF00115.18	15	461	Cytochrome C and Quinol oxidase polypeptide I
+Ascidiella_aspersa	cox1	ATA	M	306	COX1	PF00115.18	15	461	Cytochrome C and Quinol oxidase polypeptide I
+Ascidiella_aspersa	cox1	ATA	M	408	COX1	PF00115.18	15	461	Cytochrome C and Quinol oxidase polypeptide I
+Ascidiella_aspersa	cox1	ATA	M	487	NID	NID	-	-	NID
+Epigonichthys	cox1	ATA	M	41	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATA	M	76	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATA	M	96	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATA	M	108	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATA	M	115	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATA	M	267	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATA	M	306	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATA	M	324	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATA	L	15	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATA	L	57	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATA	L	76	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATA	L	108	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATA	L	172	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATA	L	189	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATA	L	291	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATA	L	324	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATA	L	360	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATA	L	417	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	ATA	L	41	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	ATA	L	76	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	ATA	L	82	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	ATA	L	222	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	ATA	L	291	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	ATA	L	306	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	ATA	L	324	ENOD40	PF08247.9	316	326	ENOD40 protein
+Strigamia_maritima	cox1	ATA	L	26	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Strigamia_maritima	cox1	ATA	L	76	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Strigamia_maritima	cox1	ATA	L	82	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Strigamia_maritima	cox1	ATA	L	86	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Strigamia_maritima	cox1	ATA	L	93	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Strigamia_maritima	cox1	ATA	L	108	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Strigamia_maritima	cox1	ATA	L	124	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Strigamia_maritima	cox1	ATA	L	189	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Strigamia_maritima	cox1	ATA	L	222	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Strigamia_maritima	cox1	ATA	L	267	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Strigamia_maritima	cox1	ATA	L	291	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Strigamia_maritima	cox1	ATA	L	306	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Strigamia_maritima	cox1	ATA	L	324	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Strigamia_maritima	cox1	ATA	L	408	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Strigamia_maritima	cox1	ATA	L	423	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Strigamia_maritima	cox1	ATA	L	487	NID	NID	-	-	NID
+Ciona	cox1	ATA	L	15	NID	NID	-	-	NID
+Ciona	cox1	ATA	L	76	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	ATA	L	82	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	ATA	L	108	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	ATA	L	222	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	ATA	L	267	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	ATA	L	291	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	ATA	L	324	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	ATA	L	490	NID	NID	-	-	NID
+Epigonichthys	cox1	ATA	L	41	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATA	L	76	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATA	L	96	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATA	L	108	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATA	L	115	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATA	L	267	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATA	L	306	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATA	L	324	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	ATC	L	45	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	ATC	L	68	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	ATC	L	220	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	ATC	L	294	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	ATC	L	326	ENOD40	PF08247.9	316	326	ENOD40 protein
+Lumbricus	cox1	ATC	L	407	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATC	L	84	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATC	L	220	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATC	L	259	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATC	L	268	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATC	L	479	NID	NID	-	-	NID
+Epigonichthys	cox1	ATC	L	490	NID	NID	-	-	NID
+Euseius_nicholsi	cox1	ATT	L	23	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATT	L	45	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATT	L	68	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATT	L	77	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATT	L	86	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATT	L	160	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATT	L	171	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATT	L	175	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATT	L	178	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATT	L	181	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATT	L	220	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATT	L	259	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATT	L	261	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATT	L	267	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATT	L	268	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATT	L	272	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATT	L	288	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATT	L	294	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATT	L	325	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATT	L	326	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATT	L	328	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATT	L	332	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATT	L	334	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATT	L	375	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATT	L	407	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Euseius_nicholsi	cox1	ATT	L	490	NID	NID	-	-	NID
+Lumbricus	cox1	ATT	L	23	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	ATT	L	77	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	ATT	L	86	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	ATT	L	160	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	ATT	L	171	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	ATT	L	175	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	ATT	L	178	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	ATT	L	243	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	ATT	L	259	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	ATT	L	261	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	ATT	L	268	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	ATT	L	271	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	ATT	L	288	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	ATT	L	325	ENOD40	PF08247.9	316	326	ENOD40 protein
+Lumbricus	cox1	ATT	L	332	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	ATT	L	341	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	ATT	L	374	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	ATT	L	375	COX1	PF00115.18	10	456	Cytochrome C and Quinol oxidase polypeptide I
+Lumbricus	cox1	ATT	L	490	NID	NID	-	-	NID
+Epigonichthys	cox1	ATT	L	23	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATT	L	45	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATT	L	68	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATT	L	77	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATT	L	86	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATT	L	160	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATT	L	171	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATT	L	175	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATT	L	178	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATT	L	181	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATT	L	189	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATT	L	229	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATT	L	243	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATT	L	261	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATT	L	271	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATT	L	272	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATT	L	294	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATT	L	326	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATT	L	332	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATT	L	374	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Epigonichthys	cox1	ATT	L	407	COX1	PF00115.18	13	459	Cytochrome C and Quinol oxidase polypeptide I
+Halocynthia	cox1	AGG	G	24	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Halocynthia	cox1	AGG	G	188	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Halocynthia	cox1	AGG	G	266	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Halocynthia	cox1	AGG	G	310	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Halocynthia	cox1	AGG	G	331	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Halocynthia	cox1	AGG	G	450	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Halocynthia	cox1	AGG	G	476	NID	NID	-	-	NID
+Ciona	cox1	AGG	G	35	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGG	G	155	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGG	G	240	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGG	G	283	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGG	G	295	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGG	G	450	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ascidiella_aspersa	cox1	AGG	G	131	COX1	PF00115.18	15	461	Cytochrome C and Quinol oxidase polypeptide I
+Ascidiella_aspersa	cox1	AGG	G	134	COX1	PF00115.18	15	461	Cytochrome C and Quinol oxidase polypeptide I
+Ascidiella_aspersa	cox1	AGG	G	239	COX1	PF00115.18	15	461	Cytochrome C and Quinol oxidase polypeptide I
+Ascidiella_aspersa	cox1	AGG	G	339	COX1	PF00115.18	15	461	Cytochrome C and Quinol oxidase polypeptide I
+Ascidiella_aspersa	cox1	AGG	G	369	COX1	PF00115.18	15	461	Cytochrome C and Quinol oxidase polypeptide I
+Metaseiulus_occidentalis	cox1	AGA	G	42	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Metaseiulus_occidentalis	cox1	AGA	G	480	NID	NID	-	-	NID
+Aphrocallistes_vastus	cox1	AGA	G	42	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Aphrocallistes_vastus	cox1	AGA	G	112	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Aphrocallistes_vastus	cox1	AGA	G	153	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Aphrocallistes_vastus	cox1	AGA	G	173	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Aphrocallistes_vastus	cox1	AGA	G	336	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Aphrocallistes_vastus	cox1	AGA	G	378	COX1	PF00115.18	12	458	Cytochrome C and Quinol oxidase polypeptide I
+Aphrocallistes_vastus	cox1	AGA	G	473	NID	NID	-	-	NID
+Halocynthia	cox1	AGA	G	88	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Halocynthia	cox1	AGA	G	90	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Halocynthia	cox1	AGA	G	136	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Halocynthia	cox1	AGA	G	167	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Halocynthia	cox1	AGA	G	240	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Halocynthia	cox1	AGA	G	253	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Halocynthia	cox1	AGA	G	295	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Halocynthia	cox1	AGA	G	361	Cupin_1	PF00190.20	345	399	Cupin
+Halocynthia	cox1	AGA	G	370	Cupin_1	PF00190.20	345	399	Cupin
+Halocynthia	cox1	AGA	G	420	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Halocynthia	cox1	AGA	G	453	COX1	PF00115.18	15	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	24	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	31	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	38	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	52	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	53	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	62	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	87	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	88	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	90	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	99	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	134	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	136	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	138	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	173	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	188	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	238	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	239	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	253	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	264	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	266	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	286	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	298	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	331	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	343	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	369	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	370	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	373	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	402	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	438	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	453	COX1	PF00115.18	21	468	Cytochrome C and Quinol oxidase polypeptide I
+Ciona	cox1	AGA	G	476	NID	NID	-	-	NID
+Ascidiella_aspersa	cox1	AGA	G	31	COX1	PF00115.18	15	461	Cytochrome C and Quinol oxidase polypeptide I
+Ascidiella_aspersa	cox1	AGA	G	343	COX1	PF00115.18	15	461	Cytochrome C and Quinol oxidase polypeptide I
+Versteria_mustelae	cox1	AAA	P	48	COX1	PF00115.18	16	460	Cytochrome C and Quinol oxidase polypeptide I
+Versteria_mustelae	cox1	AAA	P	66	COX1	PF00115.18	16	460	Cytochrome C and Quinol oxidase polypeptide I
+Versteria_mustelae	cox1	AAA	P	176	COX1	PF00115.18	16	460	Cytochrome C and Quinol oxidase polypeptide I
+Versteria_mustelae	cox1	AAA	P	188	COX1	PF00115.18	16	460	Cytochrome C and Quinol oxidase polypeptide I
+Versteria_mustelae	cox1	AAA	P	228	COX1	PF00115.18	16	460	Cytochrome C and Quinol oxidase polypeptide I
+Haplorchis_taichui	cox1	AAA	S	91	COX1	PF00115.18	11	454	Cytochrome C and Quinol oxidase polypeptide I
+Haplorchis_taichui	cox1	AAA	S	228	COX1	PF00115.18	11	454	Cytochrome C and Quinol oxidase polypeptide I
+Haplorchis_taichui	cox1	AAA	S	278	COX1	PF00115.18	11	454	Cytochrome C and Quinol oxidase polypeptide I
+Haplorchis_taichui	cox1	AAA	S	424	COX1	PF00115.18	11	454	Cytochrome C and Quinol oxidase polypeptide I
+Haplorchis_taichui	cox1	AAA	S	470	NID	NID	-	-	NID
+Echinococcus_equinus	cox1	AAA	S	188	COX1	PF00115.18	16	460	Cytochrome C and Quinol oxidase polypeptide I
+Metaseiulus_occidentalis	atp6	AGA	S	221	NID	NID	-	-	NID
+Metaseiulus_occidentalis	atp6	AGA	S	221	NID	NID	-	-	NID
+Metaseiulus_occidentalis	atp6	AGA	S	221	NID	NID	-	-	NID
+Paracentrotus	atp6	AGA	S	231	NID	NID	-	-	NID
+Aphrocallistes_vastus	atp6	AGA	S	241	NID	NID	-	-	NID
+Versteria_mustelae	atp6	AGA	S	170	N/A	N/A	-	-	N/A
+Versteria_mustelae	atp6	AGA	S	170	N/A	N/A	-	-	N/A
+Euseius_nicholsi	atp6	AGA	S	220	NID	NID	-	-	NID
+Euseius_nicholsi	atp6	AGA	S	220	NID	NID	-	-	NID
+Euseius_nicholsi	atp6	AGA	S	220	NID	NID	-	-	NID
+Lumbricus	atp6	AGA	S	229	NID	NID	-	-	NID
+Lumbricus	atp6	AGA	S	229	NID	NID	-	-	NID
+Terebratulina	atp6	AGA	S	227	NID	NID	-	-	NID
+Terebratulina	atp6	AGA	S	227	NID	NID	-	-	NID
+Katharina	atp6	AGA	S	229	NID	NID	-	-	NID
+Katharina	atp6	AGA	S	229	NID	NID	-	-	NID
+Strigamia_maritima	atp6	AGA	S	220	NID	NID	-	-	NID
+Pseudogarypus_banksi	atp6	AGA	S	212	NID	NID	-	-	NID
+Pseudogarypus_banksi	atp6	AGA	S	212	NID	NID	-	-	NID
+Drosophila	atp6	AGA	S	223	NID	NID	-	-	NID
+Caenorhabditis	atp6	AGA	S	198	NID	NID	-	-	NID
+Caenorhabditis	atp6	AGA	S	198	NID	NID	-	-	NID
+Paracentrotus	atp6	AAA	N	231	NID	NID	-	-	NID
+Schistosoma	atp6	AAA	N	172	NID	NID	-	-	NID
+Trichobilharzia_regenti	atp6	AAA	N	170	N/A	N/A	-	-	N/A
+Patiria	atp6	AAA	N	229	NID	NID	-	-	NID
+Taenia_crassiceps	atp6	AAA	N	169	N/A	N/A	-	-	N/A
+Tetrancistrum_nebulosi	atp6	AAA	N	168	NID	NID	-	-	NID
+Benedenia_hoshinai	atp6	AAA	N	168	NID	NID	-	-	NID
+Benedenia_hoshinai	atp6	AAA	N	168	NID	NID	-	-	NID
+Schistosoma	atp6	AGG	S	172	NID	NID	-	-	NID
+Trichobilharzia_regenti	atp6	AGG	S	170	N/A	N/A	-	-	N/A
+Trichobilharzia_regenti	atp6	AGG	S	170	N/A	N/A	-	-	N/A
+Haplorchis_taichui	atp6	AGG	S	170	NID	NID	-	-	NID
+Echinococcus_equinus	atp6	AGG	S	169	N/A	N/A	-	-	N/A
+Echinococcus_equinus	atp6	AGG	S	169	N/A	N/A	-	-	N/A
+Taenia_crassiceps	atp6	AGG	S	169	N/A	N/A	-	-	N/A
+Taenia_crassiceps	atp6	AGG	S	169	N/A	N/A	-	-	N/A
+Terebratulina	atp6	AGG	S	227	NID	NID	-	-	NID
+Katharina	atp6	AGG	S	229	NID	NID	-	-	NID
+Tetrancistrum_nebulosi	atp6	AGG	S	168	NID	NID	-	-	NID
+Metaseiulus_occidentalis	atp6	ATA	M	221	NID	NID	-	-	NID
+Metaseiulus_occidentalis	atp6	ATA	M	221	NID	NID	-	-	NID
+Metaseiulus_occidentalis	atp6	ATA	M	221	NID	NID	-	-	NID
+Euseius_nicholsi	atp6	ATA	M	220	NID	NID	-	-	NID
+Euseius_nicholsi	atp6	ATA	M	220	NID	NID	-	-	NID
+Patiria	atp6	ATA	M	229	NID	NID	-	-	NID
+Patiria	atp6	ATA	M	229	NID	NID	-	-	NID
+Patiria	atp6	ATA	M	229	NID	NID	-	-	NID
+Lumbricus	atp6	ATA	M	229	NID	NID	-	-	NID
+Lumbricus	atp6	ATA	M	229	NID	NID	-	-	NID
+Limulus	atp6	ATA	M	223	NID	NID	-	-	NID
+Limulus	atp6	ATA	M	223	NID	NID	-	-	NID
+Limulus	atp6	ATA	M	223	NID	NID	-	-	NID
+Axinella	atp6	ATA	M	243	NID	NID	-	-	NID
+Axinella	atp6	ATA	M	243	NID	NID	-	-	NID
+Bfloridae	atp6	ATA	M	225	NID	NID	-	-	NID
+Katharina	atp6	ATA	M	229	NID	NID	-	-	NID
+Strigamia_maritima	atp6	ATA	M	220	NID	NID	-	-	NID
+Strigamia_maritima	atp6	ATA	M	220	NID	NID	-	-	NID
+Trichinella	atp6	ATA	M	275	NID	NID	-	-	NID
+Pseudogarypus_banksi	atp6	ATA	M	212	NID	NID	-	-	NID
+Pseudogarypus_banksi	atp6	ATA	M	212	NID	NID	-	-	NID
+Myxine	atp6	ATA	M	227	NID	NID	-	-	NID
+Drosophila	atp6	ATA	M	223	NID	NID	-	-	NID
+Drosophila	atp6	ATA	M	223	NID	NID	-	-	NID
+Ciona	atp6	ATA	M	209	NID	NID	-	-	NID
+Ciona	atp6	ATA	M	209	NID	NID	-	-	NID
+Ciona	atp6	ATA	M	209	NID	NID	-	-	NID
+Caenorhabditis	atp6	ATA	M	198	NID	NID	-	-	NID
+Caenorhabditis	atp6	ATA	M	198	NID	NID	-	-	NID
+Homo	atp6	ATA	M	225	NID	NID	-	-	NID
+Ascidiella_aspersa	atp6	ATA	M	210	NID	NID	-	-	NID
+Ascidiella_aspersa	atp6	ATA	M	210	NID	NID	-	-	NID
+Blanceolatum	atp6	ATA	M	225	NID	NID	-	-	NID
+Epigonichthys	atp6	ATA	M	225	NID	NID	-	-	NID
+Euseius_nicholsi	atp6	ATA	L	220	NID	NID	-	-	NID
+Euseius_nicholsi	atp6	ATA	L	220	NID	NID	-	-	NID
+Lumbricus	atp6	ATA	L	229	NID	NID	-	-	NID
+Lumbricus	atp6	ATA	L	229	NID	NID	-	-	NID
+Strigamia_maritima	atp6	ATA	L	220	NID	NID	-	-	NID
+Strigamia_maritima	atp6	ATA	L	220	NID	NID	-	-	NID
+Ciona	atp6	ATA	L	209	NID	NID	-	-	NID
+Ciona	atp6	ATA	L	209	NID	NID	-	-	NID
+Ciona	atp6	ATA	L	209	NID	NID	-	-	NID
+Epigonichthys	atp6	ATA	L	225	NID	NID	-	-	NID
+Euseius_nicholsi	atp6	ATC	L	220	NID	NID	-	-	NID
+Euseius_nicholsi	atp6	ATC	L	220	NID	NID	-	-	NID
+Lumbricus	atp6	ATC	L	229	NID	NID	-	-	NID
+Lumbricus	atp6	ATC	L	229	NID	NID	-	-	NID
+Lumbricus	atp6	ATC	L	229	NID	NID	-	-	NID
+Lumbricus	atp6	ATC	L	229	NID	NID	-	-	NID
+Euseius_nicholsi	atp6	ATT	L	220	NID	NID	-	-	NID
+Euseius_nicholsi	atp6	ATT	L	220	NID	NID	-	-	NID
+Euseius_nicholsi	atp6	ATT	L	220	NID	NID	-	-	NID
+Euseius_nicholsi	atp6	ATT	L	220	NID	NID	-	-	NID
+Euseius_nicholsi	atp6	ATT	L	220	NID	NID	-	-	NID
+Euseius_nicholsi	atp6	ATT	L	220	NID	NID	-	-	NID
+Lumbricus	atp6	ATT	L	229	NID	NID	-	-	NID
+Lumbricus	atp6	ATT	L	229	NID	NID	-	-	NID
+Lumbricus	atp6	ATT	L	229	NID	NID	-	-	NID
+Epigonichthys	atp6	ATT	L	225	NID	NID	-	-	NID
+Epigonichthys	atp6	ATT	L	225	NID	NID	-	-	NID
+Epigonichthys	atp6	ATT	L	225	NID	NID	-	-	NID
+Epigonichthys	atp6	ATT	L	225	NID	NID	-	-	NID
+Ciona	atp6	AGG	G	209	NID	NID	-	-	NID
+Metaseiulus_occidentalis	atp6	AGA	G	221	NID	NID	-	-	NID
+Metaseiulus_occidentalis	atp6	AGA	G	221	NID	NID	-	-	NID
+Metaseiulus_occidentalis	atp6	AGA	G	221	NID	NID	-	-	NID
+Aphrocallistes_vastus	atp6	AGA	G	241	NID	NID	-	-	NID
+Halocynthia	atp6	AGA	G	210	NID	NID	-	-	NID
+Halocynthia	atp6	AGA	G	210	NID	NID	-	-	NID
+Halocynthia	atp6	AGA	G	210	NID	NID	-	-	NID
+Ciona	atp6	AGA	G	209	NID	NID	-	-	NID
+Ascidiella_aspersa	atp6	AGA	G	210	NID	NID	-	-	NID
+Schistosoma	atp6	CGC	G	172	NID	NID	-	-	NID
+Metaseiulus_occidentalis	cob	AGA	S	67	Cytochrom_B_C	PF00032.15	64	146	Cytochrome b(C-terminal)/b6/petD
+Metaseiulus_occidentalis	cob	AGA	S	149	Cytochrome_B	PF00033.17	7	194	Cytochrome b/b6/petB
+Metaseiulus_occidentalis	cob	AGA	S	356	NID	NID	-	-	NID
+Aphrocallistes_vastus	cob	AGA	S	47	Cytochrom_B_C	PF00032.15	22	159	Cytochrome b(C-terminal)/b6/petD
+Aphrocallistes_vastus	cob	AGA	S	95	Cytochrom_B_C	PF00032.15	22	159	Cytochrome b(C-terminal)/b6/petD
+Aphrocallistes_vastus	cob	AGA	S	108	Cytochrom_B_C	PF00032.15	22	159	Cytochrome b(C-terminal)/b6/petD
+Aphrocallistes_vastus	cob	AGA	S	114	DUF4405|114-205	PF14358.4	114	205	Domain of unknown function (DUF4405)
+Aphrocallistes_vastus	cob	AGA	S	179	DUF4405|114-205	PF14358.4	114	205	Domain of unknown function (DUF4405)
+Aphrocallistes_vastus	cob	AGA	S	217	Cytochrom_B_N_2|91-256	PF13631.4	91	256	Cytochrome b(N-terminal)/b6/petB
+Aphrocallistes_vastus	cob	AGA	S	310	Cytochrome_B|285-373	PF00033.17	285	373	Cytochrome b/b6/petB
+Aphrocallistes_vastus	cob	AGA	S	369	Cytochrome_B|285-373	PF00033.17	285	373	Cytochrome b/b6/petB
+Schistosoma	cob	AGA	S	114	Ni_hydr_CYTB|100-257	PF01292.18	100	257	Prokaryotic cytochrome b561
+Schistosoma	cob	AGA	S	162	Ni_hydr_CYTB|100-257	PF01292.18	100	257	Prokaryotic cytochrome b561
+Schistosoma	cob	AGA	S	217	Ni_hydr_CYTB|100-257	PF01292.18	100	257	Prokaryotic cytochrome b561
+Schistosoma	cob	AGA	S	363	NID	NID	-	-	NID
+Trichobilharzia_regenti	cob	AGA	S	37	Cytochrome_B	PF00033.17	8	193	Cytochrome b/b6/petB
+Trichobilharzia_regenti	cob	AGA	S	110	DUF4405|103-191	PF14358.4	103	191	Domain of unknown function (DUF4405)
+Trichobilharzia_regenti	cob	AGA	S	115	DUF4405|103-191	PF14358.4	103	191	Domain of unknown function (DUF4405)
+Trichobilharzia_regenti	cob	AGA	S	310	Cytochrome_B|263-352	PF00033.17	263	352	Cytochrome b/b6/petB
+Versteria_mustelae	cob	AGA	S	71	Cytochrome_B	PF00033.17	8	194	Cytochrome b/b6/petB
+Euseius_nicholsi	cob	AGA	S	149	Ni_hydr_CYTB|101-234	PF01292.18	101	234	Prokaryotic cytochrome b561
+Euseius_nicholsi	cob	AGA	S	217	Ni_hydr_CYTB|209-358	PF01292.18	209	358	Prokaryotic cytochrome b561
+Euseius_nicholsi	cob	AGA	S	358	Ni_hydr_CYTB|209-358	PF01292.18	209	358	Prokaryotic cytochrome b561
+Lumbricus	cob	AGA	S	149	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Limulus	cob	AGA	S	74	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Katharina	cob	AGA	S	34	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Strigamia_maritima	cob	AGA	S	74	GATase	PF00117.26	22	104	Glutamine amidotransferase class-I
+Trichinella	cob	AGA	S	44	Cytochrome_B	PF00033.17	14	200	Cytochrome b/b6/petB
+Trichinella	cob	AGA	S	179	Cytochrom_B_C|169-245	PF00032.15	169	245	Cytochrome b(C-terminal)/b6/petD
+Trichinella	cob	AGA	S	216	Cytochrom_B_C|169-245	PF00032.15	169	245	Cytochrome b(C-terminal)/b6/petD
+Trichinella	cob	AGA	S	296	Cytochrome_B|225-366	PF00033.17	225	366	Cytochrome b/b6/petB
+Trichinella	cob	AGA	S	297	Cytochrome_B|225-366	PF00033.17	225	366	Cytochrome b/b6/petB
+Trichinella	cob	AGA	S	299	Cytochrome_B|225-366	PF00033.17	225	366	Cytochrome b/b6/petB
+Trichinella	cob	AGA	S	310	Cytochrom_B_N_2|309-366	PF13631.4	309	366	Cytochrome b(N-terminal)/b6/petB
+Pseudogarypus_banksi	cob	AGA	S	37	Cytochrome_B	PF00033.17	15	201	Cytochrome b/b6/petB
+Pseudogarypus_banksi	cob	AGA	S	77	Cytochrome_B	PF00033.17	15	201	Cytochrome b/b6/petB
+Pseudogarypus_banksi	cob	AGA	S	93	Cytochrom_B_N_2|85-250	PF13631.4	85	250	Cytochrome b(N-terminal)/b6/petB
+Pseudogarypus_banksi	cob	AGA	S	97	Cytochrom_B_N_2|85-250	PF13631.4	85	250	Cytochrome b(N-terminal)/b6/petB
+Pseudogarypus_banksi	cob	AGA	S	110	Cytochrom_B_N_2|85-250	PF13631.4	85	250	Cytochrome b(N-terminal)/b6/petB
+Pseudogarypus_banksi	cob	AGA	S	136	Cytochrom_B_N_2|85-250	PF13631.4	85	250	Cytochrome b(N-terminal)/b6/petB
+Pseudogarypus_banksi	cob	AGA	S	183	Cytochrom_B_C|164-208	PF00032.15	164	208	Cytochrome b(C-terminal)/b6/petD
+Pseudogarypus_banksi	cob	AGA	S	216	Cytochrom_B_N_2|85-250	PF13631.4	85	250	Cytochrome b(N-terminal)/b6/petB
+Pseudogarypus_banksi	cob	AGA	S	233	Cytochrom_B_N_2|85-250	PF13631.4	85	250	Cytochrome b(N-terminal)/b6/petB
+Pseudogarypus_banksi	cob	AGA	S	362	NID	NID	-	-	NID
+Drosophila	cob	AGA	S	38	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Saccoglossus	cob	AGA	S	34	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Daphnia	cob	AGA	S	38	Cytochrome_B	PF00033.17	17	203	Cytochrome b/b6/petB
+Caenorhabditis	cob	AGA	S	18	Cytochrome_B	PF00033.17	14	200	Cytochrome b/b6/petB
+Caenorhabditis	cob	AGA	S	33	Cytochrome_B	PF00033.17	14	200	Cytochrome b/b6/petB
+Caenorhabditis	cob	AGA	S	115	Cytochrom_B_C|46-149	PF00032.15	46	149	Cytochrome b(C-terminal)/b6/petD
+Caenorhabditis	cob	AGA	S	149	Cytochrom_B_C|46-149	PF00032.15	46	149	Cytochrome b(C-terminal)/b6/petD
+Caenorhabditis	cob	AGA	S	158	Cytochrome_B	PF00033.17	14	200	Cytochrome b/b6/petB
+Caenorhabditis	cob	AGA	S	161	Cytochrome_B	PF00033.17	14	200	Cytochrome b/b6/petB
+Caenorhabditis	cob	AGA	S	176	Cytochrome_B	PF00033.17	14	200	Cytochrome b/b6/petB
+Caenorhabditis	cob	AGA	S	216	Cytochrom_B_N_2|84-253	PF13631.4	84	253	Cytochrome b(N-terminal)/b6/petB
+Caenorhabditis	cob	AGA	S	233	Cytochrom_B_N_2|84-253	PF13631.4	84	253	Cytochrome b(N-terminal)/b6/petB
+Caenorhabditis	cob	AGA	S	354	Cytochrome_B|256-369	PF00033.17	256	369	Cytochrome b/b6/petB
+Caenorhabditis	cob	AGA	S	369	Cytochrome_B|256-369	PF00033.17	256	369	Cytochrome b/b6/petB
+Epigonichthys	cob	AGA	S	34	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Paracentrotus	cob	AAA	N	24	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Paracentrotus	cob	AAA	N	35	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Paracentrotus	cob	AAA	N	41	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Paracentrotus	cob	AAA	N	94	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Paracentrotus	cob	AAA	N	268	Cytochrom_B_C|258-359	PF00032.15	258	359	Cytochrome b(C-terminal)/b6/petD
+Schistosoma	cob	AAA	N	37	Cytochrom_B_C	PF00032.15	18	136	Cytochrome b(C-terminal)/b6/petD
+Schistosoma	cob	AAA	N	273	Cytochrom_B_C|247-344	PF00032.15	247	344	Cytochrome b(C-terminal)/b6/petD
+Versteria_mustelae	cob	AAA	N	276	Cytochrome_B|253-347	PF00033.17	253	347	Cytochrome b/b6/petB
+Patiria	cob	AAA	N	24	Serpentine_r_xa	PF03383.13	9	72	Caenorhabditis serpentine receptor-like protein, class xa
+Patiria	cob	AAA	N	35	Serpentine_r_xa	PF03383.13	9	72	Caenorhabditis serpentine receptor-like protein, class xa
+Patiria	cob	AAA	N	41	Serpentine_r_xa	PF03383.13	9	72	Caenorhabditis serpentine receptor-like protein, class xa
+Patiria	cob	AAA	N	83	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Patiria	cob	AAA	N	218	LrgB|167-269	PF04172.14	167	269	LrgB-like family
+Patiria	cob	AAA	N	268	LrgB|167-269	PF04172.14	167	269	LrgB-like family
+Patiria	cob	AAA	N	273	Cytochrom_B_C|258-359	PF00032.15	258	359	Cytochrome b(C-terminal)/b6/petD
+Patiria	cob	AAA	N	299	Cytochrom_B_C|258-359	PF00032.15	258	359	Cytochrome b(C-terminal)/b6/petD
+Haplorchis_taichui	cob	AAA	N	33	Cytochrome_B	PF00033.17	8	194	Cytochrome b/b6/petB
+Haplorchis_taichui	cob	AAA	N	161	Cytochrom_B_N_2|78-243	PF13631.4	78	243	Cytochrome b(N-terminal)/b6/petB
+Haplorchis_taichui	cob	AAA	N	183	Cytochrom_B_N_2|78-243	PF13631.4	78	243	Cytochrome b(N-terminal)/b6/petB
+Tetrancistrum_nebulosi	cob	AAA	N	33	Cytochrome_B	PF00033.17	8	194	Cytochrome b/b6/petB
+Tetrancistrum_nebulosi	cob	AAA	N	217	Cytochrome_B|213-335	PF00033.17	213	335	Cytochrome b/b6/petB
+Benedenia_hoshinai	cob	AAA	N	33	Cytochrome_B	PF00033.17	8	194	Cytochrome b/b6/petB
+Benedenia_hoshinai	cob	AAA	N	80	Cytochrome_B	PF00033.17	8	194	Cytochrome b/b6/petB
+Benedenia_hoshinai	cob	AAA	N	217	Cytochrom_B_C|190-238	PF00032.15	190	238	Cytochrome b(C-terminal)/b6/petD
+Metaseiulus_occidentalis	cob	AGG	S	177	Cytochrome_B	PF00033.17	7	194	Cytochrome b/b6/petB
+Schistosoma	cob	AGG	S	71	Cytochrom_B_C	PF00032.15	18	136	Cytochrome b(C-terminal)/b6/petD
+Schistosoma	cob	AGG	S	115	Ni_hydr_CYTB|100-257	PF01292.18	100	257	Prokaryotic cytochrome b561
+Fasciola	cob	AGG	S	47	Cytochrome_B	PF00033.17	8	194	Cytochrome b/b6/petB
+Fasciola	cob	AGG	S	71	Cytochrome_B	PF00033.17	8	194	Cytochrome b/b6/petB
+Versteria_mustelae	cob	AGG	S	42	Cytochrome_B	PF00033.17	8	194	Cytochrome b/b6/petB
+Versteria_mustelae	cob	AGG	S	354	NID	NID	-	-	NID
+Haplorchis_taichui	cob	AGG	S	37	Cytochrome_B	PF00033.17	8	194	Cytochrome b/b6/petB
+Haplorchis_taichui	cob	AGG	S	71	Cytochrom_B_C|67-141	PF00032.15	67	141	Cytochrome b(C-terminal)/b6/petD
+Haplorchis_taichui	cob	AGG	S	268	Cytochrom_B_C|249-345	PF00032.15	249	345	Cytochrome b(C-terminal)/b6/petD
+Echinococcus_equinus	cob	AGG	S	71	Cytochrome_B	PF00033.17	8	194	Cytochrome b/b6/petB
+Echinococcus_equinus	cob	AGG	S	162	Cytochrom_B_N_2|78-246	PF13631.4	78	246	Cytochrome b(N-terminal)/b6/petB
+Echinococcus_equinus	cob	AGG	S	354	NID	NID	-	-	NID
+Taenia_crassiceps	cob	AGG	S	77	Cytochrom_B_C|73-146	PF00032.15	73	146	Cytochrome b(C-terminal)/b6/petD
+Terebratulina	cob	AGG	S	84	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Tetrancistrum_nebulosi	cob	AGG	S	42	Cytochrome_B	PF00033.17	8	194	Cytochrome b/b6/petB
+Tetrancistrum_nebulosi	cob	AGG	S	47	Cytochrome_B	PF00033.17	8	194	Cytochrome b/b6/petB
+Tetrancistrum_nebulosi	cob	AGG	S	71	Cytochrome_B	PF00033.17	8	194	Cytochrome b/b6/petB
+Tetrancistrum_nebulosi	cob	AGG	S	82	Cytochrome_B	PF00033.17	8	194	Cytochrome b/b6/petB
+Tetrancistrum_nebulosi	cob	AGG	S	268	Cytochrom_B_C|249-345	PF00032.15	249	345	Cytochrome b(C-terminal)/b6/petD
+Tetrancistrum_nebulosi	cob	AGG	S	298	Cytochrom_B_C|249-345	PF00032.15	249	345	Cytochrome b(C-terminal)/b6/petD
+Tetrancistrum_nebulosi	cob	AGG	S	357	NID	NID	-	-	NID
+Caenorhabditis	cob	AGG	S	97	Cytochrom_B_C|46-149	PF00032.15	46	149	Cytochrome b(C-terminal)/b6/petD
+Caenorhabditis	cob	AGG	S	219	Cytochrom_B_N_2|84-253	PF13631.4	84	253	Cytochrome b(N-terminal)/b6/petB
+Caenorhabditis	cob	AGG	S	277	Cytochrome_B|256-369	PF00033.17	256	369	Cytochrome b/b6/petB
+Caenorhabditis	cob	AGG	S	310	Cytochrome_B|256-369	PF00033.17	256	369	Cytochrome b/b6/petB
+Metaseiulus_occidentalis	cob	ATA	M	30	Cytochrome_B	PF00033.17	7	194	Cytochrome b/b6/petB
+Metaseiulus_occidentalis	cob	ATA	M	82	Cytochrom_B_C	PF00032.15	64	146	Cytochrome b(C-terminal)/b6/petD
+Metaseiulus_occidentalis	cob	ATA	M	112	Cytochrom_B_C	PF00032.15	64	146	Cytochrome b(C-terminal)/b6/petD
+Metaseiulus_occidentalis	cob	ATA	M	148	Cytochrome_B	PF00033.17	7	194	Cytochrome b/b6/petB
+Metaseiulus_occidentalis	cob	ATA	M	200	Cytochrom_B_N_2	PF13631.4	77	243	Cytochrome b(N-terminal)/b6/petB
+Metaseiulus_occidentalis	cob	ATA	M	203	Cytochrom_B_N_2	PF13631.4	77	243	Cytochrome b(N-terminal)/b6/petB
+Metaseiulus_occidentalis	cob	ATA	M	306	Cytochrom_B_N_2|297-337	PF13631.4	297	337	Cytochrome b(N-terminal)/b6/petB
+Metaseiulus_occidentalis	cob	ATA	M	337	Cytochrom_B_N_2|297-337	PF13631.4	297	337	Cytochrome b(N-terminal)/b6/petB
+Metaseiulus_occidentalis	cob	ATA	M	356	NID	NID	-	-	NID
+Euseius_nicholsi	cob	ATA	M	84	Cytochrome_B	PF00033.17	6	192	Cytochrome b/b6/petB
+Euseius_nicholsi	cob	ATA	M	148	Ni_hydr_CYTB|101-234	PF01292.18	101	234	Prokaryotic cytochrome b561
+Euseius_nicholsi	cob	ATA	M	203	Cytochrome_B|200-238	PF00033.17	200	238	Cytochrome b/b6/petB
+Euseius_nicholsi	cob	ATA	M	262	Ni_hydr_CYTB|209-358	PF01292.18	209	358	Prokaryotic cytochrome b561
+Patiria	cob	ATA	M	51	Serpentine_r_xa	PF03383.13	9	72	Caenorhabditis serpentine receptor-like protein, class xa
+Patiria	cob	ATA	M	52	Serpentine_r_xa	PF03383.13	9	72	Caenorhabditis serpentine receptor-like protein, class xa
+Patiria	cob	ATA	M	54	Serpentine_r_xa	PF03383.13	9	72	Caenorhabditis serpentine receptor-like protein, class xa
+Patiria	cob	ATA	M	78	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Patiria	cob	ATA	M	156	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Patiria	cob	ATA	M	160	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Patiria	cob	ATA	M	281	Cytochrom_B_C|258-359	PF00032.15	258	359	Cytochrome b(C-terminal)/b6/petD
+Patiria	cob	ATA	M	311	Cytochrom_B_C|258-359	PF00032.15	258	359	Cytochrome b(C-terminal)/b6/petD
+Patiria	cob	ATA	M	352	Cytochrom_B_C|258-359	PF00032.15	258	359	Cytochrome b(C-terminal)/b6/petD
+Lumbricus	cob	ATA	M	70	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Lumbricus	cob	ATA	M	290	Ni_hydr_CYTB|113-307	PF01292.18	113	307	Prokaryotic cytochrome b561
+Limulus	cob	ATA	M	148	Cytochrom_B_C	PF00032.15	78	164	Cytochrome b(C-terminal)/b6/petD
+Limulus	cob	ATA	M	203	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Axinella	cob	ATA	M	107	Cytochrom_B_C|74-156	PF00032.15	74	156	Cytochrome b(C-terminal)/b6/petD
+Axinella	cob	ATA	M	111	Cytochrom_B_C|74-156	PF00032.15	74	156	Cytochrome b(C-terminal)/b6/petD
+Axinella	cob	ATA	M	156	Cytochrom_B_C|74-156	PF00032.15	74	156	Cytochrome b(C-terminal)/b6/petD
+Axinella	cob	ATA	M	163	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Axinella	cob	ATA	M	281	Cytochrom_B_C|258-359	PF00032.15	258	359	Cytochrome b(C-terminal)/b6/petD
+Axinella	cob	ATA	M	293	Cytochrom_B_C|258-359	PF00032.15	258	359	Cytochrome b(C-terminal)/b6/petD
+Axinella	cob	ATA	M	311	Cytochrom_B_C|258-359	PF00032.15	258	359	Cytochrome b(C-terminal)/b6/petD
+Axinella	cob	ATA	M	368	NID	NID	-	-	NID
+Terebratulina	cob	ATA	M	34	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Terebratulina	cob	ATA	M	75	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Terebratulina	cob	ATA	M	148	DUF4405|116-202	PF14358.4	116	202	Domain of unknown function (DUF4405)
+Terebratulina	cob	ATA	M	229	Cytochrom_B_N_2|88-253	PF13631.4	88	253	Cytochrome b(N-terminal)/b6/petB
+Terebratulina	cob	ATA	M	307	Cytochrom_B_N_2|276-338	PF13631.4	276	338	Cytochrome b(N-terminal)/b6/petB
+Terebratulina	cob	ATA	M	311	Cytochrom_B_N_2|276-338	PF13631.4	276	338	Cytochrome b(N-terminal)/b6/petB
+Terebratulina	cob	ATA	M	350	Cytochrom_B_C|258-359	PF00032.15	258	359	Cytochrome b(C-terminal)/b6/petD
+Bfloridae	cob	ATA	M	99	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Katharina	cob	ATA	M	111	Cytochrom_B_C	PF00032.15	90	176	Cytochrome b(C-terminal)/b6/petD
+Katharina	cob	ATA	M	148	Cytochrom_B_C	PF00032.15	90	176	Cytochrome b(C-terminal)/b6/petD
+Katharina	cob	ATA	M	160	Cytochrom_B_C	PF00032.15	90	176	Cytochrome b(C-terminal)/b6/petD
+Strigamia_maritima	cob	ATA	M	52	GATase	PF00117.26	22	104	Glutamine amidotransferase class-I
+Strigamia_maritima	cob	ATA	M	84	GATase	PF00117.26	22	104	Glutamine amidotransferase class-I
+Strigamia_maritima	cob	ATA	M	111	Cytochrom_B_N_2|87-252	PF13631.4	87	252	Cytochrome b(N-terminal)/b6/petB
+Strigamia_maritima	cob	ATA	M	148	Cytochrom_B_N_2|87-252	PF13631.4	87	252	Cytochrome b(N-terminal)/b6/petB
+Trichinella	cob	ATA	M	50	Cytochrome_B	PF00033.17	14	200	Cytochrome b/b6/petB
+Trichinella	cob	ATA	M	101	Cytochrome_B	PF00033.17	14	200	Cytochrome b/b6/petB
+Trichinella	cob	ATA	M	107	Cytochrome_B	PF00033.17	14	200	Cytochrome b/b6/petB
+Trichinella	cob	ATA	M	112	Cytochrome_B	PF00033.17	14	200	Cytochrome b/b6/petB
+Trichinella	cob	ATA	M	148	Cytochrome_B	PF00033.17	14	200	Cytochrome b/b6/petB
+Trichinella	cob	ATA	M	160	Cytochrome_B	PF00033.17	14	200	Cytochrome b/b6/petB
+Trichinella	cob	ATA	M	290	Cytochrome_B|225-366	PF00033.17	225	366	Cytochrome b/b6/petB
+Trichinella	cob	ATA	M	307	Cytochrome_B|225-366	PF00033.17	225	366	Cytochrome b/b6/petB
+Pseudogarypus_banksi	cob	ATA	M	30	Cytochrome_B	PF00033.17	15	201	Cytochrome b/b6/petB
+Pseudogarypus_banksi	cob	ATA	M	52	Cytochrome_B	PF00033.17	15	201	Cytochrome b/b6/petB
+Pseudogarypus_banksi	cob	ATA	M	59	Cytochrome_B	PF00033.17	15	201	Cytochrome b/b6/petB
+Pseudogarypus_banksi	cob	ATA	M	100	Cytochrom_B_N_2|85-250	PF13631.4	85	250	Cytochrome b(N-terminal)/b6/petB
+Pseudogarypus_banksi	cob	ATA	M	108	Cytochrom_B_N_2|85-250	PF13631.4	85	250	Cytochrome b(N-terminal)/b6/petB
+Pseudogarypus_banksi	cob	ATA	M	127	Cytochrom_B_N_2|85-250	PF13631.4	85	250	Cytochrome b(N-terminal)/b6/petB
+Pseudogarypus_banksi	cob	ATA	M	132	Cytochrom_B_N_2|85-250	PF13631.4	85	250	Cytochrome b(N-terminal)/b6/petB
+Pseudogarypus_banksi	cob	ATA	M	148	Cytochrom_B_N_2|85-250	PF13631.4	85	250	Cytochrome b(N-terminal)/b6/petB
+Pseudogarypus_banksi	cob	ATA	M	203	Cytochrom_B_C|164-208	PF00032.15	164	208	Cytochrome b(C-terminal)/b6/petD
+Pseudogarypus_banksi	cob	ATA	M	220	Cytochrom_B_N_2|85-250	PF13631.4	85	250	Cytochrome b(N-terminal)/b6/petB
+Pseudogarypus_banksi	cob	ATA	M	236	Cytochrom_B_N_2|85-250	PF13631.4	85	250	Cytochrome b(N-terminal)/b6/petB
+Pseudogarypus_banksi	cob	ATA	M	275	Cytochrome_B|271-343	PF00033.17	271	343	Cytochrome b/b6/petB
+Myxine	cob	ATA	M	70	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Myxine	cob	ATA	M	148	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Myxine	cob	ATA	M	165	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Myxine	cob	ATA	M	200	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Myxine	cob	ATA	M	220	Cytochrom_B_N_2|88-253	PF13631.4	88	253	Cytochrome b(N-terminal)/b6/petB
+Myxine	cob	ATA	M	302	Cytochrom_B_N_2|273-317	PF13631.4	273	317	Cytochrome b(N-terminal)/b6/petB
+Myxine	cob	ATA	M	368	Cytochrome_B|301-372	PF00033.17	301	372	Cytochrome b/b6/petB
+Drosophila	cob	ATA	M	148	Ni_hydr_CYTB|113-369	PF01292.18	113	369	Prokaryotic cytochrome b561
+Drosophila	cob	ATA	M	203	Cytochrom_B_C|170-224	PF00032.15	170	224	Cytochrome b(C-terminal)/b6/petD
+Ciona	cob	ATA	M	50	Cytochrome_B	PF00033.17	15	201	Cytochrome b/b6/petB
+Ciona	cob	ATA	M	88	Cytochrome_B	PF00033.17	15	201	Cytochrome b/b6/petB
+Ciona	cob	ATA	M	148	Cytochrome_B	PF00033.17	15	201	Cytochrome b/b6/petB
+Ciona	cob	ATA	M	228	Cytochrom_B_C|181-246	PF00032.15	181	246	Cytochrome b(C-terminal)/b6/petD
+Ciona	cob	ATA	M	244	Cytochrom_B_C|181-246	PF00032.15	181	246	Cytochrome b(C-terminal)/b6/petD
+Ciona	cob	ATA	M	275	Cytochrom_B_C|255-352	PF00032.15	255	352	Cytochrome b(C-terminal)/b6/petD
+Ciona	cob	ATA	M	352	Cytochrom_B_C|255-352	PF00032.15	255	352	Cytochrome b(C-terminal)/b6/petD
+Ciona	cob	ATA	M	360	NID	NID	-	-	NID
+Daphnia	cob	ATA	M	70	Cytochrome_B	PF00033.17	17	203	Cytochrome b/b6/petB
+Daphnia	cob	ATA	M	148	DUF4405|105-201	PF14358.4	105	201	Domain of unknown function (DUF4405)
+Caenorhabditis	cob	ATA	M	45	Cytochrome_B	PF00033.17	14	200	Cytochrome b/b6/petB
+Caenorhabditis	cob	ATA	M	70	Cytochrom_B_C|46-149	PF00032.15	46	149	Cytochrome b(C-terminal)/b6/petD
+Caenorhabditis	cob	ATA	M	114	Cytochrom_B_C|46-149	PF00032.15	46	149	Cytochrome b(C-terminal)/b6/petD
+Caenorhabditis	cob	ATA	M	148	Cytochrom_B_C|46-149	PF00032.15	46	149	Cytochrome b(C-terminal)/b6/petD
+Caenorhabditis	cob	ATA	M	275	Cytochrome_B|256-369	PF00033.17	256	369	Cytochrome b/b6/petB
+Homo	cob	ATA	M	148	Cytochrom_B_N_2|87-252	PF13631.4	87	252	Cytochrome b(N-terminal)/b6/petB
+Ascidiella_aspersa	cob	ATA	M	27	Cytochrome_B	PF00033.17	16	202	Cytochrome b/b6/petB
+Ascidiella_aspersa	cob	ATA	M	129	Cytochrome_B	PF00033.17	16	202	Cytochrome b/b6/petB
+Ascidiella_aspersa	cob	ATA	M	148	Cytochrome_B	PF00033.17	16	202	Cytochrome b/b6/petB
+Ascidiella_aspersa	cob	ATA	M	275	Cytochrom_B_C|256-353	PF00032.15	256	353	Cytochrome b(C-terminal)/b6/petD
+Ascidiella_aspersa	cob	ATA	M	362	NID	NID	-	-	NID
+Blanceolatum	cob	ATA	M	148	Cytochrom_B_C	PF00032.15	91	158	Cytochrome b(C-terminal)/b6/petD
+Epigonichthys	cob	ATA	M	99	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Epigonichthys	cob	ATA	M	132	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Epigonichthys	cob	ATA	M	148	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Euseius_nicholsi	cob	ATA	L	84	Cytochrome_B	PF00033.17	6	192	Cytochrome b/b6/petB
+Euseius_nicholsi	cob	ATA	L	148	Ni_hydr_CYTB|101-234	PF01292.18	101	234	Prokaryotic cytochrome b561
+Euseius_nicholsi	cob	ATA	L	203	Cytochrome_B|200-238	PF00033.17	200	238	Cytochrome b/b6/petB
+Euseius_nicholsi	cob	ATA	L	262	Ni_hydr_CYTB|209-358	PF01292.18	209	358	Prokaryotic cytochrome b561
+Lumbricus	cob	ATA	L	70	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Lumbricus	cob	ATA	L	290	Ni_hydr_CYTB|113-307	PF01292.18	113	307	Prokaryotic cytochrome b561
+Strigamia_maritima	cob	ATA	L	52	GATase	PF00117.26	22	104	Glutamine amidotransferase class-I
+Strigamia_maritima	cob	ATA	L	84	GATase	PF00117.26	22	104	Glutamine amidotransferase class-I
+Strigamia_maritima	cob	ATA	L	111	Cytochrom_B_N_2|87-252	PF13631.4	87	252	Cytochrome b(N-terminal)/b6/petB
+Strigamia_maritima	cob	ATA	L	148	Cytochrom_B_N_2|87-252	PF13631.4	87	252	Cytochrome b(N-terminal)/b6/petB
+Ciona	cob	ATA	L	50	Cytochrome_B	PF00033.17	15	201	Cytochrome b/b6/petB
+Ciona	cob	ATA	L	88	Cytochrome_B	PF00033.17	15	201	Cytochrome b/b6/petB
+Ciona	cob	ATA	L	148	Cytochrome_B	PF00033.17	15	201	Cytochrome b/b6/petB
+Ciona	cob	ATA	L	228	Cytochrom_B_C|181-246	PF00032.15	181	246	Cytochrome b(C-terminal)/b6/petD
+Ciona	cob	ATA	L	244	Cytochrom_B_C|181-246	PF00032.15	181	246	Cytochrome b(C-terminal)/b6/petD
+Ciona	cob	ATA	L	275	Cytochrom_B_C|255-352	PF00032.15	255	352	Cytochrome b(C-terminal)/b6/petD
+Ciona	cob	ATA	L	352	Cytochrom_B_C|255-352	PF00032.15	255	352	Cytochrome b(C-terminal)/b6/petD
+Ciona	cob	ATA	L	360	NID	NID	-	-	NID
+Epigonichthys	cob	ATA	L	99	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Epigonichthys	cob	ATA	L	132	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Epigonichthys	cob	ATA	L	148	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Euseius_nicholsi	cob	ATC	L	82	Cytochrome_B	PF00033.17	6	192	Cytochrome b/b6/petB
+Euseius_nicholsi	cob	ATC	L	136	Ni_hydr_CYTB|101-234	PF01292.18	101	234	Prokaryotic cytochrome b561
+Euseius_nicholsi	cob	ATC	L	230	Ni_hydr_CYTB|209-358	PF01292.18	209	358	Prokaryotic cytochrome b561
+Euseius_nicholsi	cob	ATC	L	281	Cytochrom_B_N_2|278-343	PF13631.4	278	343	Cytochrome b(N-terminal)/b6/petB
+Euseius_nicholsi	cob	ATC	L	293	Cytochrom_B_N_2|278-343	PF13631.4	278	343	Cytochrome b(N-terminal)/b6/petB
+Euseius_nicholsi	cob	ATC	L	358	Ni_hydr_CYTB|209-358	PF01292.18	209	358	Prokaryotic cytochrome b561
+Lumbricus	cob	ATC	L	36	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Lumbricus	cob	ATC	L	52	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Lumbricus	cob	ATC	L	208	Ni_hydr_CYTB|113-307	PF01292.18	113	307	Prokaryotic cytochrome b561
+Lumbricus	cob	ATC	L	230	Ni_hydr_CYTB|113-307	PF01292.18	113	307	Prokaryotic cytochrome b561
+Lumbricus	cob	ATC	L	311	Cytochrom_B_C|258-359	PF00032.15	258	359	Cytochrome b(C-terminal)/b6/petD
+Lumbricus	cob	ATC	L	368	Ni_hydr_CYTB|236-370	PF01292.18	236	370	Prokaryotic cytochrome b561
+Epigonichthys	cob	ATC	L	54	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Epigonichthys	cob	ATC	L	156	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Epigonichthys	cob	ATC	L	200	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Epigonichthys	cob	ATC	L	281	Cytochrom_B_N_2|277-369	PF13631.4	277	369	Cytochrome b(N-terminal)/b6/petB
+Epigonichthys	cob	ATC	L	297	Cytochrome_B|287-377	PF00033.17	287	377	Cytochrome b/b6/petB
+Epigonichthys	cob	ATC	L	311	Cytochrome_B|287-377	PF00033.17	287	377	Cytochrome b/b6/petB
+Euseius_nicholsi	cob	ATT	L	75	Cytochrome_B	PF00033.17	6	192	Cytochrome b/b6/petB
+Euseius_nicholsi	cob	ATT	L	78	Cytochrome_B	PF00033.17	6	192	Cytochrome b/b6/petB
+Euseius_nicholsi	cob	ATT	L	156	Ni_hydr_CYTB|101-234	PF01292.18	101	234	Prokaryotic cytochrome b561
+Euseius_nicholsi	cob	ATT	L	163	Ni_hydr_CYTB|101-234	PF01292.18	101	234	Prokaryotic cytochrome b561
+Euseius_nicholsi	cob	ATT	L	180	Ni_hydr_CYTB|101-234	PF01292.18	101	234	Prokaryotic cytochrome b561
+Euseius_nicholsi	cob	ATT	L	208	Cytochrome_B|200-238	PF00033.17	200	238	Cytochrome b/b6/petB
+Euseius_nicholsi	cob	ATT	L	297	Cytochrom_B_N_2|278-343	PF13631.4	278	343	Cytochrome b(N-terminal)/b6/petB
+Euseius_nicholsi	cob	ATT	L	311	Cytochrom_B_N_2|278-343	PF13631.4	278	343	Cytochrome b(N-terminal)/b6/petB
+Euseius_nicholsi	cob	ATT	L	337	Cytochrom_B_N_2|278-343	PF13631.4	278	343	Cytochrome b(N-terminal)/b6/petB
+Euseius_nicholsi	cob	ATT	L	358	Ni_hydr_CYTB|209-358	PF01292.18	209	358	Prokaryotic cytochrome b561
+Lumbricus	cob	ATT	L	38	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Lumbricus	cob	ATT	L	78	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Lumbricus	cob	ATT	L	156	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Lumbricus	cob	ATT	L	163	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Lumbricus	cob	ATT	L	200	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Lumbricus	cob	ATT	L	220	Ni_hydr_CYTB|113-307	PF01292.18	113	307	Prokaryotic cytochrome b561
+Lumbricus	cob	ATT	L	281	Ni_hydr_CYTB|113-307	PF01292.18	113	307	Prokaryotic cytochrome b561
+Lumbricus	cob	ATT	L	293	Ni_hydr_CYTB|113-307	PF01292.18	113	307	Prokaryotic cytochrome b561
+Lumbricus	cob	ATT	L	297	Ni_hydr_CYTB|113-307	PF01292.18	113	307	Prokaryotic cytochrome b561
+Lumbricus	cob	ATT	L	352	Cytochrom_B_C|258-359	PF00032.15	258	359	Cytochrome b(C-terminal)/b6/petD
+Epigonichthys	cob	ATT	L	36	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Epigonichthys	cob	ATT	L	78	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Epigonichthys	cob	ATT	L	101	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Epigonichthys	cob	ATT	L	107	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Epigonichthys	cob	ATT	L	131	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Epigonichthys	cob	ATT	L	163	Cytochrome_B	PF00033.17	18	204	Cytochrome b/b6/petB
+Epigonichthys	cob	ATT	L	293	Cytochrome_B|287-377	PF00033.17	287	377	Cytochrome b/b6/petB
+Metaseiulus_occidentalis	cob	AGG	G	177	Cytochrome_B	PF00033.17	7	194	Cytochrome b/b6/petB
+Halocynthia	cob	AGG	G	85	Cytochrome_B	PF00033.17	7	193	Cytochrome b/b6/petB
+Halocynthia	cob	AGG	G	140	Cytochrome_B	PF00033.17	7	193	Cytochrome b/b6/petB
+Halocynthia	cob	AGG	G	176	Cytochrom_B_C|165-236	PF00032.15	165	236	Cytochrome b(C-terminal)/b6/petD
+Halocynthia	cob	AGG	G	177	Cytochrom_B_C|165-236	PF00032.15	165	236	Cytochrome b(C-terminal)/b6/petD
+Halocynthia	cob	AGG	G	361	NID	NID	-	-	NID
+Ciona	cob	AGG	G	47	Cytochrome_B	PF00033.17	15	201	Cytochrome b/b6/petB
+Ciona	cob	AGG	G	126	Cytochrome_B	PF00033.17	15	201	Cytochrome b/b6/petB
+Ciona	cob	AGG	G	140	Cytochrome_B	PF00033.17	15	201	Cytochrome b/b6/petB
+Ciona	cob	AGG	G	215	Cytochrom_B_C|181-246	PF00032.15	181	246	Cytochrome b(C-terminal)/b6/petD
+Ascidiella_aspersa	cob	AGG	G	57	Cytochrome_B	PF00033.17	16	202	Cytochrome b/b6/petB
+Ascidiella_aspersa	cob	AGG	G	85	Cytochrome_B	PF00033.17	16	202	Cytochrome b/b6/petB
+Ascidiella_aspersa	cob	AGG	G	101	Cytochrome_B	PF00033.17	16	202	Cytochrome b/b6/petB
+Ascidiella_aspersa	cob	AGG	G	126	Cytochrome_B	PF00033.17	16	202	Cytochrome b/b6/petB
+Metaseiulus_occidentalis	cob	AGA	G	67	Cytochrom_B_C	PF00032.15	64	146	Cytochrome b(C-terminal)/b6/petD
+Metaseiulus_occidentalis	cob	AGA	G	149	Cytochrome_B	PF00033.17	7	194	Cytochrome b/b6/petB
+Metaseiulus_occidentalis	cob	AGA	G	356	NID	NID	-	-	NID
+Aphrocallistes_vastus	cob	AGA	G	47	Cytochrom_B_C	PF00032.15	22	159	Cytochrome b(C-terminal)/b6/petD
+Aphrocallistes_vastus	cob	AGA	G	95	Cytochrom_B_C	PF00032.15	22	159	Cytochrome b(C-terminal)/b6/petD
+Aphrocallistes_vastus	cob	AGA	G	108	Cytochrom_B_C	PF00032.15	22	159	Cytochrome b(C-terminal)/b6/petD
+Aphrocallistes_vastus	cob	AGA	G	114	DUF4405|114-205	PF14358.4	114	205	Domain of unknown function (DUF4405)
+Aphrocallistes_vastus	cob	AGA	G	179	DUF4405|114-205	PF14358.4	114	205	Domain of unknown function (DUF4405)
+Aphrocallistes_vastus	cob	AGA	G	217	Cytochrom_B_N_2|91-256	PF13631.4	91	256	Cytochrome b(N-terminal)/b6/petB
+Aphrocallistes_vastus	cob	AGA	G	310	Cytochrome_B|285-373	PF00033.17	285	373	Cytochrome b/b6/petB
+Aphrocallistes_vastus	cob	AGA	G	369	Cytochrome_B|285-373	PF00033.17	285	373	Cytochrome b/b6/petB
+Halocynthia	cob	AGA	G	47	Cytochrome_B	PF00033.17	7	193	Cytochrome b/b6/petB
+Halocynthia	cob	AGA	G	57	Cytochrome_B	PF00033.17	7	193	Cytochrome b/b6/petB
+Halocynthia	cob	AGA	G	243	Cytochrom_B_N_2	PF13631.4	77	255	Cytochrome b(N-terminal)/b6/petB
+Halocynthia	cob	AGA	G	301	Cytochrom_B_N_2|274-306	PF13631.4	274	306	Cytochrome b(N-terminal)/b6/petB
+Ciona	cob	AGA	G	42	Cytochrome_B	PF00033.17	15	201	Cytochrome b/b6/petB
+Ciona	cob	AGA	G	43	Cytochrome_B	PF00033.17	15	201	Cytochrome b/b6/petB
+Ciona	cob	AGA	G	84	Cytochrome_B	PF00033.17	15	201	Cytochrome b/b6/petB
+Ciona	cob	AGA	G	85	Cytochrome_B	PF00033.17	15	201	Cytochrome b/b6/petB
+Ciona	cob	AGA	G	95	Cytochrome_B	PF00033.17	15	201	Cytochrome b/b6/petB
+Ciona	cob	AGA	G	108	Cytochrome_B	PF00033.17	15	201	Cytochrome b/b6/petB
+Ciona	cob	AGA	G	167	Cytochrome_B	PF00033.17	15	201	Cytochrome b/b6/petB
+Ciona	cob	AGA	G	221	Cytochrom_B_C|181-246	PF00032.15	181	246	Cytochrome b(C-terminal)/b6/petD
+Ciona	cob	AGA	G	243	Cytochrom_B_C|181-246	PF00032.15	181	246	Cytochrome b(C-terminal)/b6/petD
+Ciona	cob	AGA	G	303	Cytochrom_B_C|255-352	PF00032.15	255	352	Cytochrome b(C-terminal)/b6/petD
+Ciona	cob	AGA	G	357	Cytochrome_B|289-358	PF00033.17	289	358	Cytochrome b/b6/petB
+Versteria_mustelae	cob	AAA	P	276	Cytochrome_B|253-347	PF00033.17	253	347	Cytochrome b/b6/petB
+Haplorchis_taichui	cob	AAA	S	33	Cytochrome_B	PF00033.17	8	194	Cytochrome b/b6/petB
+Haplorchis_taichui	cob	AAA	S	161	Cytochrom_B_N_2|78-243	PF13631.4	78	243	Cytochrome b(N-terminal)/b6/petB
+Haplorchis_taichui	cob	AAA	S	183	Cytochrom_B_N_2|78-243	PF13631.4	78	243	Cytochrome b(N-terminal)/b6/petB
+Versteria_mustelae	nad3	AGA	S	60	Oxidored_q4|14-112	PF00507.17	14	112	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Versteria_mustelae	nad3	AGA	S	77	Oxidored_q4|14-112	PF00507.17	14	112	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Tetrancistrum_nebulosi	nad3	AGA	S	60	Oxidored_q4	PF00507.17	14	113	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Tetrancistrum_nebulosi	nad3	AGA	S	68	Oxidored_q4	PF00507.17	14	113	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Pseudogarypus_banksi	nad3	AGA	S	115	NID	NID	-	-	NID
+Caenorhabditis	nad3	AGA	S	60	Oxidored_q4|13-108	PF00507.17	13	108	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Caenorhabditis	nad3	AGA	S	68	Oxidored_q4|13-108	PF00507.17	13	108	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Caenorhabditis	nad3	AGA	S	77	Oxidored_q4|13-108	PF00507.17	13	108	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Schistosoma	nad3	AAA	N	99	vMSA	PF00695.17	43	114	Major surface antigen from hepadnavirus
+Fasciola	nad3	AAA	N	99	Oxidored_q4|22-115	PF00507.17	22	115	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Versteria_mustelae	nad3	AAA	N	99	Oxidored_q4|14-112	PF00507.17	14	112	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Haplorchis_taichui	nad3	AAA	N	99	Oxidored_q4|32-116	PF00507.17	32	116	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Taenia_crassiceps	nad3	AAA	N	55	Oxidored_q4|15-112	PF00507.17	15	112	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Taenia_crassiceps	nad3	AAA	N	99	Oxidored_q4|15-112	PF00507.17	15	112	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Benedenia_hoshinai	nad3	AAA	N	75	Oxidored_q4|15-114	PF00507.17	15	114	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Schistosoma	nad3	AGG	S	68	vMSA	PF00695.17	43	114	Major surface antigen from hepadnavirus
+Schistosoma	nad3	AGG	S	77	vMSA	PF00695.17	43	114	Major surface antigen from hepadnavirus
+Fasciola	nad3	AGG	S	77	Oxidored_q4|22-115	PF00507.17	22	115	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Haplorchis_taichui	nad3	AGG	S	77	Oxidored_q4|32-116	PF00507.17	32	116	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Echinococcus_equinus	nad3	AGG	S	77	Oxidored_q4|19-112	PF00507.17	19	112	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Taenia_crassiceps	nad3	AGG	S	60	Oxidored_q4|15-112	PF00507.17	15	112	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Taenia_crassiceps	nad3	AGG	S	77	Oxidored_q4|15-112	PF00507.17	15	112	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Tetrancistrum_nebulosi	nad3	AGG	S	75	Oxidored_q4	PF00507.17	14	113	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Euseius_nicholsi	nad3	ATA	M	92	Oxidored_q4|10-108	PF00507.17	10	108	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Patiria	nad3	ATA	M	94	Oxidored_q4|15-107	PF00507.17	15	107	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Lumbricus	nad3	ATA	M	98	Oxidored_q4	PF00507.17	14	114	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Trichinella	nad3	ATA	M	82	Oxidored_q4|14-113	PF00507.17	14	113	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Trichinella	nad3	ATA	M	115	NID	NID	-	-	NID
+Pseudogarypus_banksi	nad3	ATA	M	82	Oxidored_q4|13-113	PF00507.17	13	113	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Ciona	nad3	ATA	M	88	Oxidored_q4|13-112	PF00507.17	13	112	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Caenorhabditis	nad3	ATA	M	110	NID	NID	-	-	NID
+Ascidiella_aspersa	nad3	ATA	M	88	Oxidored_q4	PF00507.17	7	114	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Euseius_nicholsi	nad3	ATA	L	92	Oxidored_q4|10-108	PF00507.17	10	108	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Lumbricus	nad3	ATA	L	98	Oxidored_q4	PF00507.17	14	114	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Ciona	nad3	ATA	L	88	Oxidored_q4|13-112	PF00507.17	13	112	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Euseius_nicholsi	nad3	ATC	L	94	Oxidored_q4|10-108	PF00507.17	10	108	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Lumbricus	nad3	ATC	L	88	Oxidored_q4	PF00507.17	14	114	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Lumbricus	nad3	ATC	L	92	Oxidored_q4	PF00507.17	14	114	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Epigonichthys	nad3	ATC	L	94	Oxidored_q4	PF00507.17	13	114	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Epigonichthys	nad3	ATC	L	97	Oxidored_q4	PF00507.17	13	114	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Euseius_nicholsi	nad3	ATT	L	110	NID	NID	-	-	NID
+Euseius_nicholsi	nad3	ATT	L	110	NID	NID	-	-	NID
+Lumbricus	nad3	ATT	L	85	Oxidored_q4	PF00507.17	14	114	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Lumbricus	nad3	ATT	L	94	Oxidored_q4	PF00507.17	14	114	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Epigonichthys	nad3	ATT	L	85	Oxidored_q4	PF00507.17	13	114	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Halocynthia	nad3	AGG	G	75	Oxidored_q4|29-130	PF00507.17	29	130	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Ciona	nad3	AGA	G	65	Oxidored_q4|13-112	PF00507.17	13	112	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Versteria_mustelae	nad3	AAA	P	99	Oxidored_q4|14-112	PF00507.17	14	112	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Haplorchis_taichui	nad3	AAA	S	99	Oxidored_q4|32-116	PF00507.17	32	116	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3
+Metaseiulus_occidentalis	nad2	AGA	S	270	Proton_antipo_M|29-283	PF00361.18	29	283	Proton-conducting membrane transporter
+Metaseiulus_occidentalis	nad2	AGA	S	325	NID	NID	-	-	NID
+Aphrocallistes_vastus	nad2	AGA	S	266	Proton_antipo_M|109-381	PF00361.18	109	381	Proton-conducting membrane transporter
+Aphrocallistes_vastus	nad2	AGA	S	276	Proton_antipo_M|109-381	PF00361.18	109	381	Proton-conducting membrane transporter
+Aphrocallistes_vastus	nad2	AGA	S	342	Proton_antipo_M|109-381	PF00361.18	109	381	Proton-conducting membrane transporter
+Aphrocallistes_vastus	nad2	AGA	S	421	NID	NID	-	-	NID
+Aphrocallistes_vastus	nad2	AGA	S	422	NID	NID	-	-	NID
+Trichobilharzia_regenti	nad2	AGA	S	273	N/A	N/A	-	-	N/A
+Versteria_mustelae	nad2	AGA	S	290	N/A	N/A	-	-	N/A
+Fasciola	nad2	AAA	N	261	N/A	N/A	-	-	N/A
+Taenia_crassiceps	nad2	AAA	N	291	N/A	N/A	-	-	N/A
+Tetrancistrum_nebulosi	nad2	AAA	N	278	N/A	N/A	-	-	N/A
+Schistosoma	nad2	AGG	S	227	N/A	N/A	-	-	N/A
+Trichobilharzia_regenti	nad2	AGG	S	273	N/A	N/A	-	-	N/A
+Echinococcus_equinus	nad2	AGG	S	292	N/A	N/A	-	-	N/A
+Echinococcus_equinus	nad2	AGG	S	292	N/A	N/A	-	-	N/A
+Patiria	nad2	ATA	M	353	NID	NID	-	-	NID
+Lumbricus	nad2	ATA	M	223	NPCC|135-316	PF08058.9	135	316	Nuclear pore complex component
+Lumbricus	nad2	ATA	M	333	NID	NID	-	-	NID
+Limulus	nad2	ATA	M	225	Proton_antipo_M	PF00361.18	23	284	Proton-conducting membrane transporter
+Limulus	nad2	ATA	M	228	Proton_antipo_M	PF00361.18	23	284	Proton-conducting membrane transporter
+Axinella	nad2	ATA	M	223	Proton_antipo_M|179-454	PF00361.18	179	454	Proton-conducting membrane transporter
+Axinella	nad2	ATA	M	354	Proton_antipo_M|179-454	PF00361.18	179	454	Proton-conducting membrane transporter
+Terebratulina	nad2	ATA	M	223	Proton_antipo_M|78-280	PF00361.18	78	280	Proton-conducting membrane transporter
+Terebratulina	nad2	ATA	M	327	NID	NID	-	-	NID
+Terebratulina	nad2	ATA	M	327	NID	NID	-	-	NID
+Katharina	nad2	ATA	M	228	Proton_antipo_M	PF00361.18	23	288	Proton-conducting membrane transporter
+Strigamia_maritima	nad2	ATA	M	225	Proton_antipo_M	PF00361.18	20	274	Proton-conducting membrane transporter
+Strigamia_maritima	nad2	ATA	M	272	Proton_antipo_M	PF00361.18	20	274	Proton-conducting membrane transporter
+Strigamia_maritima	nad2	ATA	M	319	NID	NID	-	-	NID
+Strigamia_maritima	nad2	ATA	M	319	NID	NID	-	-	NID
+Trichinella	nad2	ATA	M	272	N/A	N/A	-	-	N/A
+Pseudogarypus_banksi	nad2	ATA	M	318	NID	NID	-	-	NID
+Pseudogarypus_banksi	nad2	ATA	M	323	NID	NID	-	-	NID
+Pseudogarypus_banksi	nad2	ATA	M	323	NID	NID	-	-	NID
+Myxine	nad2	ATA	M	227	NADH_dehy_S2_C|217-253	PF06444.9	217	253	NADH dehydrogenase subunit 2 C-terminus
+Myxine	nad2	ATA	M	228	NADH_dehy_S2_C|217-253	PF06444.9	217	253	NADH dehydrogenase subunit 2 C-terminus
+Drosophila	nad2	ATA	M	338	Proton_antipo_M|307-338	PF00361.18	307	338	Proton-conducting membrane transporter
+Ciona	nad2	ATA	M	223	Proton_antipo_M	PF00361.18	22	303	Proton-conducting membrane transporter
+Ciona	nad2	ATA	M	225	Proton_antipo_M	PF00361.18	22	303	Proton-conducting membrane transporter
+Ciona	nad2	ATA	M	233	Proton_antipo_M	PF00361.18	22	303	Proton-conducting membrane transporter
+Ciona	nad2	ATA	M	263	Proton_antipo_M	PF00361.18	22	303	Proton-conducting membrane transporter
+Caenorhabditis	nad2	ATA	M	281	N/A	N/A	-	-	N/A
+Homo	nad2	ATA	M	225	NADH_dehy_S2_C|190-260	PF06444.9	190	260	NADH dehydrogenase subunit 2 C-terminus
+Homo	nad2	ATA	M	322	NADH_dehy_S2_C|289-343	PF06444.9	289	343	NADH dehydrogenase subunit 2 C-terminus
+Homo	nad2	ATA	M	345	NID	NID	-	-	NID
+Ascidiella_aspersa	nad2	ATA	M	263	Proton_antipo_M	PF00361.18	21	302	Proton-conducting membrane transporter
+Ascidiella_aspersa	nad2	ATA	M	326	NID	NID	-	-	NID
+Blanceolatum	nad2	ATA	M	272	Proton_antipo_M	PF00361.18	22	288	Proton-conducting membrane transporter
+Lumbricus	nad2	ATA	L	223	NPCC|135-316	PF08058.9	135	316	Nuclear pore complex component
+Lumbricus	nad2	ATA	L	333	NID	NID	-	-	NID
+Strigamia_maritima	nad2	ATA	L	225	Proton_antipo_M	PF00361.18	20	274	Proton-conducting membrane transporter
+Strigamia_maritima	nad2	ATA	L	272	Proton_antipo_M	PF00361.18	20	274	Proton-conducting membrane transporter
+Strigamia_maritima	nad2	ATA	L	319	NID	NID	-	-	NID
+Strigamia_maritima	nad2	ATA	L	319	NID	NID	-	-	NID
+Ciona	nad2	ATA	L	223	Proton_antipo_M	PF00361.18	22	303	Proton-conducting membrane transporter
+Ciona	nad2	ATA	L	225	Proton_antipo_M	PF00361.18	22	303	Proton-conducting membrane transporter
+Ciona	nad2	ATA	L	233	Proton_antipo_M	PF00361.18	22	303	Proton-conducting membrane transporter
+Ciona	nad2	ATA	L	263	Proton_antipo_M	PF00361.18	22	303	Proton-conducting membrane transporter
+Lumbricus	nad2	ATC	L	333	NID	NID	-	-	NID
+Lumbricus	nad2	ATT	L	322	NID	NID	-	-	NID
+Lumbricus	nad2	ATT	L	333	NID	NID	-	-	NID
+Epigonichthys	nad2	ATT	L	318	NID	NID	-	-	NID
+Epigonichthys	nad2	ATT	L	343	NID	NID	-	-	NID
+Metaseiulus_occidentalis	nad2	AGA	G	270	Proton_antipo_M|29-283	PF00361.18	29	283	Proton-conducting membrane transporter
+Metaseiulus_occidentalis	nad2	AGA	G	325	NID	NID	-	-	NID
+Aphrocallistes_vastus	nad2	AGA	G	266	Proton_antipo_M|109-381	PF00361.18	109	381	Proton-conducting membrane transporter
+Aphrocallistes_vastus	nad2	AGA	G	276	Proton_antipo_M|109-381	PF00361.18	109	381	Proton-conducting membrane transporter
+Aphrocallistes_vastus	nad2	AGA	G	342	Proton_antipo_M|109-381	PF00361.18	109	381	Proton-conducting membrane transporter
+Aphrocallistes_vastus	nad2	AGA	G	421	NID	NID	-	-	NID
+Aphrocallistes_vastus	nad2	AGA	G	422	NID	NID	-	-	NID
+Halocynthia	nad2	AGA	G	327	NID	NID	-	-	NID
+Halocynthia	nad2	AGA	G	332	NID	NID	-	-	NID
+Ciona	nad2	AGA	G	257	Proton_antipo_M	PF00361.18	22	303	Proton-conducting membrane transporter
+Ciona	nad2	AGA	G	342	NID	NID	-	-	NID
+Ciona	nad2	AGA	G	356	NID	NID	-	-	NID
+Ciona	nad2	AGA	G	356	NID	NID	-	-	NID
+Ascidiella_aspersa	nad2	AGA	G	357	NID	NID	-	-	NID
+Metaseiulus_occidentalis	nad1	AGA	S	134	NADHdh	PF00146.19	2	261	NADH dehydrogenase
+Metaseiulus_occidentalis	nad1	AGA	S	174	NADHdh	PF00146.19	2	261	NADH dehydrogenase
+Metaseiulus_occidentalis	nad1	AGA	S	225	NADHdh	PF00146.19	2	261	NADH dehydrogenase
+Metaseiulus_occidentalis	nad1	AGA	S	229	NADHdh	PF00146.19	2	261	NADH dehydrogenase
+Paracentrotus	nad1	AGA	S	173	NADHdh	PF00146.19	7	309	NADH dehydrogenase
+Aphrocallistes_vastus	nad1	AGA	S	137	NADHdh	PF00146.19	4	305	NADH dehydrogenase
+Aphrocallistes_vastus	nad1	AGA	S	155	NADHdh	PF00146.19	4	305	NADH dehydrogenase
+Aphrocallistes_vastus	nad1	AGA	S	173	NADHdh	PF00146.19	4	305	NADH dehydrogenase
+Aphrocallistes_vastus	nad1	AGA	S	174	NADHdh	PF00146.19	4	305	NADH dehydrogenase
+Aphrocallistes_vastus	nad1	AGA	S	268	NADHdh	PF00146.19	4	305	NADH dehydrogenase
+Schistosoma	nad1	AGA	S	230	NADHdh	PF00146.19	6	289	NADH dehydrogenase
+Trichobilharzia_regenti	nad1	AGA	S	142	NADHdh	PF00146.19	8	288	NADH dehydrogenase
+Trichobilharzia_regenti	nad1	AGA	S	149	NADHdh	PF00146.19	8	288	NADH dehydrogenase
+Trichobilharzia_regenti	nad1	AGA	S	155	NADHdh	PF00146.19	8	288	NADH dehydrogenase
+Euseius_nicholsi	nad1	AGA	S	146	NADHdh	PF00146.19	2	290	NADH dehydrogenase
+Euseius_nicholsi	nad1	AGA	S	149	NADHdh	PF00146.19	2	290	NADH dehydrogenase
+Haplorchis_taichui	nad1	AGA	S	230	NADHdh	PF00146.19	11	298	NADH dehydrogenase
+Lumbricus	nad1	AGA	S	124	Vezatin	PF12632.5	78	169	Mysoin-binding motif of peroxisomes
+Terebratulina	nad1	AGA	S	124	DUF1495	PF07381.9	90	169	Winged helix DNA-binding domain (DUF1495)
+Katharina	nad1	AGA	S	51	NADHdh	PF00146.19	5	303	NADH dehydrogenase
+Katharina	nad1	AGA	S	92	NADHdh	PF00146.19	5	303	NADH dehydrogenase
+Balanoglossus	nad1	AGA	S	124	NADHdh	PF00146.19	7	309	NADH dehydrogenase
+Balanoglossus	nad1	AGA	S	174	NADHdh	PF00146.19	7	309	NADH dehydrogenase
+Strigamia_maritima	nad1	AGA	S	214	NADHdh	PF00146.19	5	297	NADH dehydrogenase
+Trichinella	nad1	AGA	S	127	NADHdh	PF00146.19	5	292	NADH dehydrogenase
+Trichinella	nad1	AGA	S	139	NADHdh	PF00146.19	5	292	NADH dehydrogenase
+Trichinella	nad1	AGA	S	226	NADHdh	PF00146.19	5	292	NADH dehydrogenase
+Trichinella	nad1	AGA	S	230	NADHdh	PF00146.19	5	292	NADH dehydrogenase
+Trichinella	nad1	AGA	S	298	NID	NID	-	-	NID
+Tetrancistrum_nebulosi	nad1	AGA	S	155	NADHdh	PF00146.19	7	291	NADH dehydrogenase
+Tetrancistrum_nebulosi	nad1	AGA	S	230	NADHdh	PF00146.19	7	291	NADH dehydrogenase
+Pseudogarypus_banksi	nad1	AGA	S	146	NADHdh	PF00146.19	2	294	NADH dehydrogenase
+Pseudogarypus_banksi	nad1	AGA	S	173	NADHdh	PF00146.19	2	294	NADH dehydrogenase
+Drosophila	nad1	AGA	S	124	NADHdh	PF00146.19	7	301	NADH dehydrogenase
+Saccoglossus	nad1	AGA	S	124	NADHdh	PF00146.19	10	312	NADH dehydrogenase
+Caenorhabditis	nad1	AGA	S	40	NADHdh	PF00146.19	4	285	NADH dehydrogenase
+Caenorhabditis	nad1	AGA	S	137	DUF1211|112-184	PF06736.9	112	184	Protein of unknown function (DUF1211)
+Caenorhabditis	nad1	AGA	S	151	DUF1211|112-184	PF06736.9	112	184	Protein of unknown function (DUF1211)
+Caenorhabditis	nad1	AGA	S	185	NADHdh	PF00146.19	4	285	NADH dehydrogenase
+Caenorhabditis	nad1	AGA	S	230	NADHdh	PF00146.19	4	285	NADH dehydrogenase
+Epigonichthys	nad1	AGA	S	174	NADHdh	PF00146.19	4	298	NADH dehydrogenase
+Epigonichthys	nad1	AGA	S	176	NADHdh	PF00146.19	4	298	NADH dehydrogenase
+Paracentrotus	nad1	AAA	N	48	NADHdh	PF00146.19	7	309	NADH dehydrogenase
+Paracentrotus	nad1	AAA	N	138	NADHdh	PF00146.19	7	309	NADH dehydrogenase
+Paracentrotus	nad1	AAA	N	215	NADHdh	PF00146.19	7	309	NADH dehydrogenase
+Trichobilharzia_regenti	nad1	AAA	N	48	NADHdh	PF00146.19	8	288	NADH dehydrogenase
+Trichobilharzia_regenti	nad1	AAA	N	176	NADHdh	PF00146.19	8	288	NADH dehydrogenase
+Trichobilharzia_regenti	nad1	AAA	N	214	NADHdh	PF00146.19	8	288	NADH dehydrogenase
+Versteria_mustelae	nad1	AAA	N	48	NADHdh	PF00146.19	7	295	NADH dehydrogenase
+Versteria_mustelae	nad1	AAA	N	139	NADHdh	PF00146.19	7	295	NADH dehydrogenase
+Versteria_mustelae	nad1	AAA	N	176	NADHdh	PF00146.19	7	295	NADH dehydrogenase
+Versteria_mustelae	nad1	AAA	N	235	NADHdh	PF00146.19	7	295	NADH dehydrogenase
+Patiria	nad1	AAA	N	235	NADHdh	PF00146.19	7	309	NADH dehydrogenase
+Haplorchis_taichui	nad1	AAA	N	139	NADHdh	PF00146.19	11	298	NADH dehydrogenase
+Haplorchis_taichui	nad1	AAA	N	215	NADHdh	PF00146.19	11	298	NADH dehydrogenase
+Taenia_crassiceps	nad1	AAA	N	73	NADHdh	PF00146.19	7	295	NADH dehydrogenase
+Taenia_crassiceps	nad1	AAA	N	140	NADHdh	PF00146.19	7	295	NADH dehydrogenase
+Taenia_crassiceps	nad1	AAA	N	215	NADHdh	PF00146.19	7	295	NADH dehydrogenase
+Taenia_crassiceps	nad1	AAA	N	235	NADHdh	PF00146.19	7	295	NADH dehydrogenase
+Tetrancistrum_nebulosi	nad1	AAA	N	235	NADHdh	PF00146.19	7	291	NADH dehydrogenase
+Benedenia_hoshinai	nad1	AAA	N	215	NADHdh	PF00146.19	9	296	NADH dehydrogenase
+Benedenia_hoshinai	nad1	AAA	N	268	NADHdh	PF00146.19	9	296	NADH dehydrogenase
+Paracentrotus	nad1	AGG	S	174	NADHdh	PF00146.19	7	309	NADH dehydrogenase
+Schistosoma	nad1	AGG	S	142	NADHdh	PF00146.19	6	289	NADH dehydrogenase
+Schistosoma	nad1	AGG	S	145	NADHdh	PF00146.19	6	289	NADH dehydrogenase
+Fasciola	nad1	AGG	S	58	NADHdh	PF00146.19	12	299	NADH dehydrogenase
+Fasciola	nad1	AGG	S	155	NADHdh	PF00146.19	12	299	NADH dehydrogenase
+Trichobilharzia_regenti	nad1	AGG	S	226	NADHdh	PF00146.19	8	288	NADH dehydrogenase
+Versteria_mustelae	nad1	AGG	S	58	NADHdh	PF00146.19	7	295	NADH dehydrogenase
+Versteria_mustelae	nad1	AGG	S	155	NADHdh	PF00146.19	7	295	NADH dehydrogenase
+Euseius_nicholsi	nad1	AGG	S	176	NADHdh	PF00146.19	2	290	NADH dehydrogenase
+Patiria	nad1	AGG	S	124	NADHdh	PF00146.19	7	309	NADH dehydrogenase
+Haplorchis_taichui	nad1	AGG	S	58	NADHdh	PF00146.19	11	298	NADH dehydrogenase
+Haplorchis_taichui	nad1	AGG	S	226	NADHdh	PF00146.19	11	298	NADH dehydrogenase
+Echinococcus_equinus	nad1	AGG	S	58	NADHdh	PF00146.19	9	295	NADH dehydrogenase
+Echinococcus_equinus	nad1	AGG	S	145	NADHdh	PF00146.19	9	295	NADH dehydrogenase
+Echinococcus_equinus	nad1	AGG	S	155	NADHdh	PF00146.19	9	295	NADH dehydrogenase
+Echinococcus_equinus	nad1	AGG	S	174	NADHdh	PF00146.19	9	295	NADH dehydrogenase
+Taenia_crassiceps	nad1	AGG	S	155	NADHdh	PF00146.19	7	295	NADH dehydrogenase
+Terebratulina	nad1	AGG	S	39	NADHdh	PF00146.19	5	305	NADH dehydrogenase
+Tetrancistrum_nebulosi	nad1	AGG	S	58	NADHdh	PF00146.19	7	291	NADH dehydrogenase
+Tetrancistrum_nebulosi	nad1	AGG	S	137	NADHdh	PF00146.19	7	291	NADH dehydrogenase
+Tetrancistrum_nebulosi	nad1	AGG	S	226	NADHdh	PF00146.19	7	291	NADH dehydrogenase
+Caenorhabditis	nad1	AGG	S	226	NADHdh	PF00146.19	4	285	NADH dehydrogenase
+Caenorhabditis	nad1	AGG	S	249	NADHdh	PF00146.19	4	285	NADH dehydrogenase
+Metaseiulus_occidentalis	nad1	ATA	M	50	NADHdh	PF00146.19	2	261	NADH dehydrogenase
+Metaseiulus_occidentalis	nad1	ATA	M	92	NADHdh	PF00146.19	2	261	NADH dehydrogenase
+Metaseiulus_occidentalis	nad1	ATA	M	93	NADHdh	PF00146.19	2	261	NADH dehydrogenase
+Metaseiulus_occidentalis	nad1	ATA	M	166	NADHdh	PF00146.19	2	261	NADH dehydrogenase
+Euseius_nicholsi	nad1	ATA	M	92	NADHdh	PF00146.19	2	290	NADH dehydrogenase
+Euseius_nicholsi	nad1	ATA	M	131	NADHdh	PF00146.19	2	290	NADH dehydrogenase
+Euseius_nicholsi	nad1	ATA	M	236	NADHdh	PF00146.19	2	290	NADH dehydrogenase
+Euseius_nicholsi	nad1	ATA	M	254	NADHdh	PF00146.19	2	290	NADH dehydrogenase
+Euseius_nicholsi	nad1	ATA	M	297	NID	NID	-	-	NID
+Patiria	nad1	ATA	M	91	NADHdh	PF00146.19	7	309	NADH dehydrogenase
+Patiria	nad1	ATA	M	120	NADHdh	PF00146.19	7	309	NADH dehydrogenase
+Patiria	nad1	ATA	M	158	NADHdh	PF00146.19	7	309	NADH dehydrogenase
+Patiria	nad1	ATA	M	248	NADHdh	PF00146.19	7	309	NADH dehydrogenase
+Lumbricus	nad1	ATA	M	27	NADHdh	PF00146.19	6	301	NADH dehydrogenase
+Lumbricus	nad1	ATA	M	87	Vezatin	PF12632.5	78	169	Mysoin-binding motif of peroxisomes
+Lumbricus	nad1	ATA	M	125	Vezatin	PF12632.5	78	169	Mysoin-binding motif of peroxisomes
+Lumbricus	nad1	ATA	M	160	Vezatin	PF12632.5	78	169	Mysoin-binding motif of peroxisomes
+Lumbricus	nad1	ATA	M	248	NADHdh	PF00146.19	6	301	NADH dehydrogenase
+Lumbricus	nad1	ATA	M	267	NADHdh	PF00146.19	6	301	NADH dehydrogenase
+Limulus	nad1	ATA	M	131	NADHdh	PF00146.19	6	298	NADH dehydrogenase
+Limulus	nad1	ATA	M	143	NADHdh	PF00146.19	6	298	NADH dehydrogenase
+Limulus	nad1	ATA	M	248	NADHdh	PF00146.19	6	298	NADH dehydrogenase
+Axinella	nad1	ATA	M	27	NADHdh	PF00146.19	6	320	NADH dehydrogenase
+Axinella	nad1	ATA	M	154	CRPA|108-199	PF05745.9	108	199	Chlamydia 15 kDa cysteine-rich outer membrane protein (CRPA)
+Axinella	nad1	ATA	M	164	CRPA|108-199	PF05745.9	108	199	Chlamydia 15 kDa cysteine-rich outer membrane protein (CRPA)
+Terebratulina	nad1	ATA	M	87	NADHdh	PF00146.19	5	305	NADH dehydrogenase
+Terebratulina	nad1	ATA	M	160	DUF4014|127-215	PF13198.4	127	215	Protein of unknown function (DUF4014)
+Terebratulina	nad1	ATA	M	248	NADHdh	PF00146.19	5	305	NADH dehydrogenase
+Terebratulina	nad1	ATA	M	313	NID	NID	-	-	NID
+Katharina	nad1	ATA	M	131	NADHdh	PF00146.19	5	303	NADH dehydrogenase
+Katharina	nad1	ATA	M	261	NADHdh	PF00146.19	5	303	NADH dehydrogenase
+Strigamia_maritima	nad1	ATA	M	177	NADHdh	PF00146.19	5	297	NADH dehydrogenase
+Trichinella	nad1	ATA	M	56	NADHdh	PF00146.19	5	292	NADH dehydrogenase
+Trichinella	nad1	ATA	M	87	NADHdh	PF00146.19	5	292	NADH dehydrogenase
+Trichinella	nad1	ATA	M	123	NADHdh	PF00146.19	5	292	NADH dehydrogenase
+Trichinella	nad1	ATA	M	248	NADHdh	PF00146.19	5	292	NADH dehydrogenase
+Trichinella	nad1	ATA	M	298	NID	NID	-	-	NID
+Pseudogarypus_banksi	nad1	ATA	M	152	NADHdh	PF00146.19	2	294	NADH dehydrogenase
+Pseudogarypus_banksi	nad1	ATA	M	208	NADHdh	PF00146.19	2	294	NADH dehydrogenase
+Pseudogarypus_banksi	nad1	ATA	M	248	NADHdh	PF00146.19	2	294	NADH dehydrogenase
+Pseudogarypus_banksi	nad1	ATA	M	294	NADHdh	PF00146.19	2	294	NADH dehydrogenase
+Myxine	nad1	ATA	M	117	NADHdh	PF00146.19	5	304	NADH dehydrogenase
+Myxine	nad1	ATA	M	144	NADHdh	PF00146.19	5	304	NADH dehydrogenase
+Myxine	nad1	ATA	M	164	NADHdh	PF00146.19	5	304	NADH dehydrogenase
+Myxine	nad1	ATA	M	267	NADHdh	PF00146.19	5	304	NADH dehydrogenase
+Drosophila	nad1	ATA	M	131	NADHdh	PF00146.19	7	301	NADH dehydrogenase
+Drosophila	nad1	ATA	M	177	NADHdh	PF00146.19	7	301	NADH dehydrogenase
+Drosophila	nad1	ATA	M	248	NADHdh	PF00146.19	7	301	NADH dehydrogenase
+Daphnia	nad1	ATA	M	247	ECSCR|225-269	PF15820.3	225	269	Endothelial cell-specific chemotaxis regulator
+Caenorhabditis	nad1	ATA	M	92	NADHdh	PF00146.19	4	285	NADH dehydrogenase
+Caenorhabditis	nad1	ATA	M	143	DUF1211|112-184	PF06736.9	112	184	Protein of unknown function (DUF1211)
+Caenorhabditis	nad1	ATA	M	265	NADHdh	PF00146.19	4	285	NADH dehydrogenase
+Caenorhabditis	nad1	ATA	M	290	NID	NID	-	-	NID
+Homo	nad1	ATA	M	248	NADHdh	PF00146.19	3	304	NADH dehydrogenase
+Epigonichthys	nad1	ATA	M	131	NADHdh	PF00146.19	4	298	NADH dehydrogenase
+Epigonichthys	nad1	ATA	M	304	NID	NID	-	-	NID
+Euseius_nicholsi	nad1	ATA	L	92	NADHdh	PF00146.19	2	290	NADH dehydrogenase
+Euseius_nicholsi	nad1	ATA	L	131	NADHdh	PF00146.19	2	290	NADH dehydrogenase
+Euseius_nicholsi	nad1	ATA	L	236	NADHdh	PF00146.19	2	290	NADH dehydrogenase
+Euseius_nicholsi	nad1	ATA	L	254	NADHdh	PF00146.19	2	290	NADH dehydrogenase
+Euseius_nicholsi	nad1	ATA	L	297	NID	NID	-	-	NID
+Lumbricus	nad1	ATA	L	27	NADHdh	PF00146.19	6	301	NADH dehydrogenase
+Lumbricus	nad1	ATA	L	87	Vezatin	PF12632.5	78	169	Mysoin-binding motif of peroxisomes
+Lumbricus	nad1	ATA	L	125	Vezatin	PF12632.5	78	169	Mysoin-binding motif of peroxisomes
+Lumbricus	nad1	ATA	L	160	Vezatin	PF12632.5	78	169	Mysoin-binding motif of peroxisomes
+Lumbricus	nad1	ATA	L	248	NADHdh	PF00146.19	6	301	NADH dehydrogenase
+Lumbricus	nad1	ATA	L	267	NADHdh	PF00146.19	6	301	NADH dehydrogenase
+Strigamia_maritima	nad1	ATA	L	177	NADHdh	PF00146.19	5	297	NADH dehydrogenase
+Epigonichthys	nad1	ATA	L	131	NADHdh	PF00146.19	4	298	NADH dehydrogenase
+Epigonichthys	nad1	ATA	L	304	NID	NID	-	-	NID
+Lumbricus	nad1	ATC	L	254	NADHdh	PF00146.19	6	301	NADH dehydrogenase
+Epigonichthys	nad1	ATC	L	164	NADHdh	PF00146.19	4	298	NADH dehydrogenase
+Epigonichthys	nad1	ATC	L	254	NADHdh	PF00146.19	4	298	NADH dehydrogenase
+Euseius_nicholsi	nad1	ATT	L	27	NADHdh	PF00146.19	2	290	NADH dehydrogenase
+Euseius_nicholsi	nad1	ATT	L	51	NADHdh	PF00146.19	2	290	NADH dehydrogenase
+Euseius_nicholsi	nad1	ATT	L	120	NADHdh	PF00146.19	2	290	NADH dehydrogenase
+Euseius_nicholsi	nad1	ATT	L	154	NADHdh	PF00146.19	2	290	NADH dehydrogenase
+Euseius_nicholsi	nad1	ATT	L	297	NID	NID	-	-	NID
+Lumbricus	nad1	ATT	L	154	Vezatin	PF12632.5	78	169	Mysoin-binding motif of peroxisomes
+Lumbricus	nad1	ATT	L	164	Vezatin	PF12632.5	78	169	Mysoin-binding motif of peroxisomes
+Lumbricus	nad1	ATT	L	208	NADHdh	PF00146.19	6	301	NADH dehydrogenase
+Lumbricus	nad1	ATT	L	265	NADHdh	PF00146.19	6	301	NADH dehydrogenase
+Epigonichthys	nad1	ATT	L	38	NADHdh	PF00146.19	4	298	NADH dehydrogenase
+Epigonichthys	nad1	ATT	L	208	NADHdh	PF00146.19	4	298	NADH dehydrogenase
+Aphrocallistes_vastus	nad1	AGG	G	224	NADHdh	PF00146.19	4	305	NADH dehydrogenase
+Halocynthia	nad1	AGG	G	39	NADHdh	PF00146.19	3	293	NADH dehydrogenase
+Halocynthia	nad1	AGG	G	54	NADHdh	PF00146.19	3	293	NADH dehydrogenase
+Halocynthia	nad1	AGG	G	124	NADHdh	PF00146.19	3	293	NADH dehydrogenase
+Halocynthia	nad1	AGG	G	142	NADHdh	PF00146.19	3	293	NADH dehydrogenase
+Halocynthia	nad1	AGG	G	145	NADHdh	PF00146.19	3	293	NADH dehydrogenase
+Halocynthia	nad1	AGG	G	231	NADHdh	PF00146.19	3	293	NADH dehydrogenase
+Ciona	nad1	AGG	G	134	NADHdh	PF00146.19	5	296	NADH dehydrogenase
+Ciona	nad1	AGG	G	145	NADHdh	PF00146.19	5	296	NADH dehydrogenase
+Ascidiella_aspersa	nad1	AGG	G	51	NADHdh	PF00146.19	7	296	NADH dehydrogenase
+Ascidiella_aspersa	nad1	AGG	G	146	NADHdh	PF00146.19	7	296	NADH dehydrogenase
+Ascidiella_aspersa	nad1	AGG	G	230	NADHdh	PF00146.19	7	296	NADH dehydrogenase
+Ascidiella_aspersa	nad1	AGG	G	305	NID	NID	-	-	NID
+Metaseiulus_occidentalis	nad1	AGA	G	134	NADHdh	PF00146.19	2	261	NADH dehydrogenase
+Metaseiulus_occidentalis	nad1	AGA	G	174	NADHdh	PF00146.19	2	261	NADH dehydrogenase
+Metaseiulus_occidentalis	nad1	AGA	G	225	NADHdh	PF00146.19	2	261	NADH dehydrogenase
+Metaseiulus_occidentalis	nad1	AGA	G	229	NADHdh	PF00146.19	2	261	NADH dehydrogenase
+Aphrocallistes_vastus	nad1	AGA	G	137	NADHdh	PF00146.19	4	305	NADH dehydrogenase
+Aphrocallistes_vastus	nad1	AGA	G	155	NADHdh	PF00146.19	4	305	NADH dehydrogenase
+Aphrocallistes_vastus	nad1	AGA	G	173	NADHdh	PF00146.19	4	305	NADH dehydrogenase
+Aphrocallistes_vastus	nad1	AGA	G	174	NADHdh	PF00146.19	4	305	NADH dehydrogenase
+Aphrocallistes_vastus	nad1	AGA	G	268	NADHdh	PF00146.19	4	305	NADH dehydrogenase
+Halocynthia	nad1	AGA	G	149	NADHdh	PF00146.19	3	293	NADH dehydrogenase
+Ciona	nad1	AGA	G	39	DUF1180	PF06679.10	5	58	Protein of unknown function (DUF1180)
+Ciona	nad1	AGA	G	46	DUF1180	PF06679.10	5	58	Protein of unknown function (DUF1180)
+Ciona	nad1	AGA	G	51	DUF1180	PF06679.10	5	58	Protein of unknown function (DUF1180)
+Ciona	nad1	AGA	G	146	NADHdh	PF00146.19	5	296	NADH dehydrogenase
+Ciona	nad1	AGA	G	249	NADHdh	PF00146.19	5	296	NADH dehydrogenase
+Ciona	nad1	AGA	G	268	NADHdh	PF00146.19	5	296	NADH dehydrogenase
+Ascidiella_aspersa	nad1	AGA	G	176	NADHdh	PF00146.19	7	296	NADH dehydrogenase
+Versteria_mustelae	nad1	AAA	P	48	NADHdh	PF00146.19	7	295	NADH dehydrogenase
+Versteria_mustelae	nad1	AAA	P	139	NADHdh	PF00146.19	7	295	NADH dehydrogenase
+Versteria_mustelae	nad1	AAA	P	176	NADHdh	PF00146.19	7	295	NADH dehydrogenase
+Versteria_mustelae	nad1	AAA	P	235	NADHdh	PF00146.19	7	295	NADH dehydrogenase
+Haplorchis_taichui	nad1	AAA	S	139	NADHdh	PF00146.19	11	298	NADH dehydrogenase
+Haplorchis_taichui	nad1	AAA	S	215	NADHdh	PF00146.19	11	298	NADH dehydrogenase
+Limulus	nad1	AGG	K	36	NADHdh	PF00146.19	6	298	NADH dehydrogenase
+Limulus	nad1	AGG	K	64	NADHdh	PF00146.19	6	298	NADH dehydrogenase
+Limulus	nad1	AGG	K	68	NADHdh	PF00146.19	6	298	NADH dehydrogenase
+Limulus	nad1	AGG	K	309	NID	NID	-	-	NID
+Strigamia_maritima	nad1	AGG	K	36	NADHdh	PF00146.19	5	297	NADH dehydrogenase
+Strigamia_maritima	nad1	AGG	K	49	NADHdh	PF00146.19	5	297	NADH dehydrogenase
+Strigamia_maritima	nad1	AGG	K	68	NADHdh	PF00146.19	5	297	NADH dehydrogenase
+Euseius_nicholsi	nad6	ATA	M	73	Oxidored_q3	PF00499.18	10	147	NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+Lumbricus	nad6	ATA	M	114	Oxidored_q3|12-142	PF00499.18	12	142	NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+Limulus	nad6	ATA	M	107	Promethin|74-148	PF16015.3	74	148	Promethin
+Terebratulina	nad6	ATA	M	114	Oxidored_q3	PF00499.18	6	149	NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+Katharina	nad6	ATA	M	114	Oxidored_q3	PF00499.18	12	153	NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+Trichinella	nad6	ATA	M	105	Oxidored_q3|11-146	PF00499.18	11	146	NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+Trichinella	nad6	ATA	M	114	Oxidored_q3|11-146	PF00499.18	11	146	NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+Ciona	nad6	ATA	M	113	Oxidored_q3	PF00499.18	17	153	NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+Ciona	nad6	AGG	G	109	Oxidored_q3	PF00499.18	17	153	NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+Ascidiella_aspersa	nad6	AGG	G	109	N/A	N/A	-	-	N/A
+Euseius_nicholsi	nad6	ATT	L	70	Oxidored_q3	PF00499.18	10	147	NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+Euseius_nicholsi	nad6	ATT	L	105	Oxidored_q3	PF00499.18	10	147	NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+Euseius_nicholsi	nad6	ATT	L	113	Oxidored_q3	PF00499.18	10	147	NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+Euseius_nicholsi	nad6	ATA	L	73	Oxidored_q3	PF00499.18	10	147	NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+Lumbricus	nad6	ATA	L	114	Oxidored_q3|12-142	PF00499.18	12	142	NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+Ciona	nad6	ATA	L	113	Oxidored_q3	PF00499.18	17	153	NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+Halocynthia	nad6	AGA	G	110	Oxidored_q3	PF00499.18	12	138	NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+Ciona	nad6	AGA	G	110	Oxidored_q3	PF00499.18	17	153	NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+Metaseiulus_occidentalis	nad5	AGA	S	165	Proton_antipo_M|102-381	PF00361.18	102	381	Proton-conducting membrane transporter
+Metaseiulus_occidentalis	nad5	AGA	S	175	Proton_antipo_M|102-381	PF00361.18	102	381	Proton-conducting membrane transporter
+Metaseiulus_occidentalis	nad5	AGA	S	324	Proton_antipo_M|102-381	PF00361.18	102	381	Proton-conducting membrane transporter
+Metaseiulus_occidentalis	nad5	AGA	S	387	NID	NID	-	-	NID
+Paracentrotus	nad5	AGA	S	414	PK_C	PF02887.14	316	416	Pyruvate kinase, alpha/beta domain
+Paracentrotus	nad5	AGA	S	540	NADH5_C|455-632	PF06455.9	455	632	NADH dehydrogenase subunit 5 C-terminus
+Aphrocallistes_vastus	nad5	AGA	S	252	Proton_antipo_M|129-411	PF00361.18	129	411	Proton-conducting membrane transporter
+Aphrocallistes_vastus	nad5	AGA	S	398	Proton_antipo_M|129-411	PF00361.18	129	411	Proton-conducting membrane transporter
+Aphrocallistes_vastus	nad5	AGA	S	469	NADH5_C|414-597	PF06455.9	414	597	NADH dehydrogenase subunit 5 C-terminus
+Aphrocallistes_vastus	nad5	AGA	S	504	NADH5_C|414-597	PF06455.9	414	597	NADH dehydrogenase subunit 5 C-terminus
+Trichobilharzia_regenti	nad5	AGA	S	225	Proton_antipo_M	PF00361.18	98	372	Proton-conducting membrane transporter
+Versteria_mustelae	nad5	AGA	S	225	Proton_antipo_M|97-365	PF00361.18	97	365	Proton-conducting membrane transporter
+Versteria_mustelae	nad5	AGA	S	394	Proton_antipo_M|371-438	PF00361.18	371	438	Proton-conducting membrane transporter
+Versteria_mustelae	nad5	AGA	S	398	Proton_antipo_M|371-438	PF00361.18	371	438	Proton-conducting membrane transporter
+Versteria_mustelae	nad5	AGA	S	464	NID	NID	-	-	NID
+Euseius_nicholsi	nad5	AGA	S	175	Proton_antipo_M	PF00361.18	100	382	Proton-conducting membrane transporter
+Euseius_nicholsi	nad5	AGA	S	324	Proton_antipo_M	PF00361.18	100	382	Proton-conducting membrane transporter
+Patiria	nad5	AGA	S	414	Proton_antipo_M|159-446	PF00361.18	159	446	Proton-conducting membrane transporter
+Lumbricus	nad5	AGA	S	324	NADH5_C|272-337	PF06455.9	272	337	NADH dehydrogenase subunit 5 C-terminus
+Lumbricus	nad5	AGA	S	414	Proton_antipo_M|407-440	PF00361.18	407	440	Proton-conducting membrane transporter
+Limulus	nad5	AGA	S	175	Proton_antipo_M|106-389	PF00361.18	106	389	Proton-conducting membrane transporter
+Limulus	nad5	AGA	S	324	Proton_antipo_M|106-389	PF00361.18	106	389	Proton-conducting membrane transporter
+Limulus	nad5	AGA	S	414	Proton_antipo_M|398-465	PF00361.18	398	465	Proton-conducting membrane transporter
+Terebratulina	nad5	AGA	S	414	NADH5_C|394-572	PF06455.9	394	572	NADH dehydrogenase subunit 5 C-terminus
+Katharina	nad5	AGA	S	324	Proton_antipo_M	PF00361.18	108	388	Proton-conducting membrane transporter
+Katharina	nad5	AGA	S	424	NADH5_C|391-567	PF06455.9	391	567	NADH dehydrogenase subunit 5 C-terminus
+Katharina	nad5	AGA	S	469	NADH5_C|391-567	PF06455.9	391	567	NADH dehydrogenase subunit 5 C-terminus
+Balanoglossus	nad5	AGA	S	540	Proton_antipo_M|443-569	PF00361.18	443	569	Proton-conducting membrane transporter
+Strigamia_maritima	nad5	AGA	S	414	NADH5_C|394-564	PF06455.9	394	564	NADH dehydrogenase subunit 5 C-terminus
+Trichinella	nad5	AGA	S	454	Proton_antipo_M|363-474	PF00361.18	363	474	Proton-conducting membrane transporter
+Tetrancistrum_nebulosi	nad5	AGA	S	225	Proton_antipo_M	PF00361.18	101	370	Proton-conducting membrane transporter
+Tetrancistrum_nebulosi	nad5	AGA	S	324	Proton_antipo_M	PF00361.18	101	370	Proton-conducting membrane transporter
+Tetrancistrum_nebulosi	nad5	AGA	S	390	Proton_antipo_M|353-432	PF00361.18	353	432	Proton-conducting membrane transporter
+Tetrancistrum_nebulosi	nad5	AGA	S	394	Proton_antipo_M|353-432	PF00361.18	353	432	Proton-conducting membrane transporter
+Tetrancistrum_nebulosi	nad5	AGA	S	513	NID	NID	-	-	NID
+Pseudogarypus_banksi	nad5	AGA	S	175	Proton_antipo_M|105-385	PF00361.18	105	385	Proton-conducting membrane transporter
+Pseudogarypus_banksi	nad5	AGA	S	225	Proton_antipo_M|105-385	PF00361.18	105	385	Proton-conducting membrane transporter
+Pseudogarypus_banksi	nad5	AGA	S	324	Proton_antipo_M|105-385	PF00361.18	105	385	Proton-conducting membrane transporter
+Pseudogarypus_banksi	nad5	AGA	S	350	Proton_antipo_M|105-385	PF00361.18	105	385	Proton-conducting membrane transporter
+Pseudogarypus_banksi	nad5	AGA	S	414	Proton_antipo_M|372-432	PF00361.18	372	432	Proton-conducting membrane transporter
+Pseudogarypus_banksi	nad5	AGA	S	462	Proton_antipo_M|437-490	PF00361.18	437	490	Proton-conducting membrane transporter
+Drosophila	nad5	AGA	S	175	Proton_antipo_M|102-387	PF00361.18	102	387	Proton-conducting membrane transporter
+Drosophila	nad5	AGA	S	324	Proton_antipo_M|102-387	PF00361.18	102	387	Proton-conducting membrane transporter
+Daphnia	nad5	AGA	S	324	Proton_antipo_M	PF00361.18	106	387	Proton-conducting membrane transporter
+Daphnia	nad5	AGA	S	414	NADH5_C|391-567	PF06455.9	391	567	NADH dehydrogenase subunit 5 C-terminus
+Caenorhabditis	nad5	AGA	S	217	Proton_antipo_M	PF00361.18	94	371	Proton-conducting membrane transporter
+Caenorhabditis	nad5	AGA	S	324	Proton_antipo_M	PF00361.18	94	371	Proton-conducting membrane transporter
+Caenorhabditis	nad5	AGA	S	350	Proton_antipo_M	PF00361.18	94	371	Proton-conducting membrane transporter
+Caenorhabditis	nad5	AGA	S	443	Proton_antipo_M|386-457	PF00361.18	386	457	Proton-conducting membrane transporter
+Caenorhabditis	nad5	AGA	S	507	NID	NID	-	-	NID
+Epigonichthys	nad5	AGA	S	540	NADH5_C|413-594	PF06455.9	413	594	NADH dehydrogenase subunit 5 C-terminus
+Schistosoma	nad5	AAA	N	462	NID	NID	-	-	NID
+Fasciola	nad5	AAA	N	415	NID	NID	-	-	NID
+Trichobilharzia_regenti	nad5	AAA	N	414	Proton_antipo_M|386-450	PF00361.18	386	450	Proton-conducting membrane transporter
+Trichobilharzia_regenti	nad5	AAA	N	415	Proton_antipo_M|386-450	PF00361.18	386	450	Proton-conducting membrane transporter
+Versteria_mustelae	nad5	AAA	N	175	Proton_antipo_M|97-365	PF00361.18	97	365	Proton-conducting membrane transporter
+Versteria_mustelae	nad5	AAA	N	465	NID	NID	-	-	NID
+Versteria_mustelae	nad5	AAA	N	483	NID	NID	-	-	NID
+Haplorchis_taichui	nad5	AAA	N	414	NID	NID	-	-	NID
+Haplorchis_taichui	nad5	AAA	N	415	NID	NID	-	-	NID
+Taenia_crassiceps	nad5	AAA	N	414	NID	NID	-	-	NID
+Taenia_crassiceps	nad5	AAA	N	465	Proton_antipo_M|462-520	PF00361.18	462	520	Proton-conducting membrane transporter
+Tetrancistrum_nebulosi	nad5	AAA	N	415	Proton_antipo_M|353-432	PF00361.18	353	432	Proton-conducting membrane transporter
+Tetrancistrum_nebulosi	nad5	AAA	N	465	NID	NID	-	-	NID
+Tetrancistrum_nebulosi	nad5	AAA	N	502	NID	NID	-	-	NID
+Benedenia_hoshinai	nad5	AAA	N	414	NID	NID	-	-	NID
+Paracentrotus	nad5	AGG	S	349	NADH5_C|286-377	PF06455.9	286	377	NADH dehydrogenase subunit 5 C-terminus
+Schistosoma	nad5	AGG	S	324	Proton_antipo_M|94-369	PF00361.18	94	369	Proton-conducting membrane transporter
+Schistosoma	nad5	AGG	S	394	Proton_antipo_M|361-449	PF00361.18	361	449	Proton-conducting membrane transporter
+Fasciola	nad5	AGG	S	183	Proton_antipo_M|92-361	PF00361.18	92	361	Proton-conducting membrane transporter
+Fasciola	nad5	AGG	S	454	NID	NID	-	-	NID
+Haplorchis_taichui	nad5	AGG	S	225	Proton_antipo_M	PF00361.18	97	367	Proton-conducting membrane transporter
+Haplorchis_taichui	nad5	AGG	S	324	Proton_antipo_M	PF00361.18	97	367	Proton-conducting membrane transporter
+Haplorchis_taichui	nad5	AGG	S	387	NID	NID	-	-	NID
+Haplorchis_taichui	nad5	AGG	S	394	NID	NID	-	-	NID
+Haplorchis_taichui	nad5	AGG	S	507	NID	NID	-	-	NID
+Echinococcus_equinus	nad5	AGG	S	398	Proton_antipo_M|373-438	PF00361.18	373	438	Proton-conducting membrane transporter
+Taenia_crassiceps	nad5	AGG	S	398	NID	NID	-	-	NID
+Terebratulina	nad5	AGG	S	324	Proton_antipo_M	PF00361.18	113	404	Proton-conducting membrane transporter
+Trichinella	nad5	AGG	S	225	Proton_antipo_M|97-374	PF00361.18	97	374	Proton-conducting membrane transporter
+Trichinella	nad5	AGG	S	324	Proton_antipo_M|97-374	PF00361.18	97	374	Proton-conducting membrane transporter
+Tetrancistrum_nebulosi	nad5	AGG	S	464	NID	NID	-	-	NID
+Caenorhabditis	nad5	AGG	S	225	Proton_antipo_M	PF00361.18	94	371	Proton-conducting membrane transporter
+Caenorhabditis	nad5	AGG	S	344	Proton_antipo_M	PF00361.18	94	371	Proton-conducting membrane transporter
+Caenorhabditis	nad5	AGG	S	411	Proton_antipo_M|386-457	PF00361.18	386	457	Proton-conducting membrane transporter
+Caenorhabditis	nad5	AGG	S	469	NID	NID	-	-	NID
+Metaseiulus_occidentalis	nad5	ATA	M	202	Proton_antipo_M|102-381	PF00361.18	102	381	Proton-conducting membrane transporter
+Metaseiulus_occidentalis	nad5	ATA	M	318	Proton_antipo_M|102-381	PF00361.18	102	381	Proton-conducting membrane transporter
+Metaseiulus_occidentalis	nad5	ATA	M	337	Proton_antipo_M|102-381	PF00361.18	102	381	Proton-conducting membrane transporter
+Metaseiulus_occidentalis	nad5	ATA	M	512	NID	NID	-	-	NID
+Euseius_nicholsi	nad5	ATA	M	202	Proton_antipo_M	PF00361.18	100	382	Proton-conducting membrane transporter
+Euseius_nicholsi	nad5	ATA	M	256	Proton_antipo_M	PF00361.18	100	382	Proton-conducting membrane transporter
+Euseius_nicholsi	nad5	ATA	M	318	Proton_antipo_M	PF00361.18	100	382	Proton-conducting membrane transporter
+Euseius_nicholsi	nad5	ATA	M	337	Proton_antipo_M	PF00361.18	100	382	Proton-conducting membrane transporter
+Euseius_nicholsi	nad5	ATA	M	425	Proton_antipo_M|398-472	PF00361.18	398	472	Proton-conducting membrane transporter
+Euseius_nicholsi	nad5	ATA	M	475	Proton_antipo_M|465-535	PF00361.18	465	535	Proton-conducting membrane transporter
+Euseius_nicholsi	nad5	ATA	M	483	Proton_antipo_M|465-535	PF00361.18	465	535	Proton-conducting membrane transporter
+Patiria	nad5	ATA	M	216	Proton_antipo_M|159-446	PF00361.18	159	446	Proton-conducting membrane transporter
+Patiria	nad5	ATA	M	318	Proton_antipo_M|159-446	PF00361.18	159	446	Proton-conducting membrane transporter
+Patiria	nad5	ATA	M	389	Proton_antipo_M|159-446	PF00361.18	159	446	Proton-conducting membrane transporter
+Patiria	nad5	ATA	M	404	Proton_antipo_M|159-446	PF00361.18	159	446	Proton-conducting membrane transporter
+Patiria	nad5	ATA	M	407	Proton_antipo_M|159-446	PF00361.18	159	446	Proton-conducting membrane transporter
+Patiria	nad5	ATA	M	430	Proton_antipo_M|159-446	PF00361.18	159	446	Proton-conducting membrane transporter
+Patiria	nad5	ATA	M	453	NADH5_C|449-629	PF06455.9	449	629	NADH dehydrogenase subunit 5 C-terminus
+Patiria	nad5	ATA	M	543	NADH5_C|449-629	PF06455.9	449	629	NADH dehydrogenase subunit 5 C-terminus
+Lumbricus	nad5	ATA	M	202	Proton_antipo_M|108-388	PF00361.18	108	388	Proton-conducting membrane transporter
+Lumbricus	nad5	ATA	M	255	Proton_antipo_M|108-388	PF00361.18	108	388	Proton-conducting membrane transporter
+Lumbricus	nad5	ATA	M	337	NADH5_C|272-337	PF06455.9	272	337	NADH dehydrogenase subunit 5 C-terminus
+Lumbricus	nad5	ATA	M	404	NADH5_C|391-572	PF06455.9	391	572	NADH dehydrogenase subunit 5 C-terminus
+Lumbricus	nad5	ATA	M	430	Proton_antipo_M|407-440	PF00361.18	407	440	Proton-conducting membrane transporter
+Lumbricus	nad5	ATA	M	435	Proton_antipo_M|407-440	PF00361.18	407	440	Proton-conducting membrane transporter
+Lumbricus	nad5	ATA	M	510	NADH5_C|391-572	PF06455.9	391	572	NADH dehydrogenase subunit 5 C-terminus
+Limulus	nad5	ATA	M	202	Proton_antipo_M|106-389	PF00361.18	106	389	Proton-conducting membrane transporter
+Limulus	nad5	ATA	M	337	Proton_antipo_M|106-389	PF00361.18	106	389	Proton-conducting membrane transporter
+Limulus	nad5	ATA	M	389	Proton_antipo_M|106-389	PF00361.18	106	389	Proton-conducting membrane transporter
+Limulus	nad5	ATA	M	404	Proton_antipo_M|398-465	PF00361.18	398	465	Proton-conducting membrane transporter
+Limulus	nad5	ATA	M	475	NADH5_C|392-567	PF06455.9	392	567	NADH dehydrogenase subunit 5 C-terminus
+Axinella	nad5	ATA	M	360	Proton_antipo_M|129-420	PF00361.18	129	420	Proton-conducting membrane transporter
+Axinella	nad5	ATA	M	453	NADH5_C|423-527	PF06455.9	423	527	NADH dehydrogenase subunit 5 C-terminus
+Axinella	nad5	ATA	M	511	NADH5_C|423-527	PF06455.9	423	527	NADH dehydrogenase subunit 5 C-terminus
+Terebratulina	nad5	ATA	M	165	Proton_antipo_M	PF00361.18	113	404	Proton-conducting membrane transporter
+Terebratulina	nad5	ATA	M	202	Proton_antipo_M	PF00361.18	113	404	Proton-conducting membrane transporter
+Terebratulina	nad5	ATA	M	337	Proton_antipo_M	PF00361.18	113	404	Proton-conducting membrane transporter
+Terebratulina	nad5	ATA	M	426	NADH5_C|394-572	PF06455.9	394	572	NADH dehydrogenase subunit 5 C-terminus
+Bfloridae	nad5	ATA	M	202	Proton_antipo_M|126-410	PF00361.18	126	410	Proton-conducting membrane transporter
+Bfloridae	nad5	ATA	M	337	Proton_antipo_M|126-410	PF00361.18	126	410	Proton-conducting membrane transporter
+Bfloridae	nad5	ATA	M	346	Proton_antipo_M|126-410	PF00361.18	126	410	Proton-conducting membrane transporter
+Bfloridae	nad5	ATA	M	352	Proton_antipo_M|126-410	PF00361.18	126	410	Proton-conducting membrane transporter
+Bfloridae	nad5	ATA	M	389	Proton_antipo_M|126-410	PF00361.18	126	410	Proton-conducting membrane transporter
+Bfloridae	nad5	ATA	M	404	Proton_antipo_M|126-410	PF00361.18	126	410	Proton-conducting membrane transporter
+Katharina	nad5	ATA	M	202	Proton_antipo_M	PF00361.18	108	388	Proton-conducting membrane transporter
+Katharina	nad5	ATA	M	337	Proton_antipo_M	PF00361.18	108	388	Proton-conducting membrane transporter
+Katharina	nad5	ATA	M	389	NADH5_C|360-389	PF06455.9	360	389	NADH dehydrogenase subunit 5 C-terminus
+Katharina	nad5	ATA	M	502	NADH5_C|391-567	PF06455.9	391	567	NADH dehydrogenase subunit 5 C-terminus
+Strigamia_maritima	nad5	ATA	M	337	Proton_antipo_M|111-391	PF00361.18	111	391	Proton-conducting membrane transporter
+Trichinella	nad5	ATA	M	433	Proton_antipo_M|363-474	PF00361.18	363	474	Proton-conducting membrane transporter
+Pseudogarypus_banksi	nad5	ATA	M	202	Proton_antipo_M|105-385	PF00361.18	105	385	Proton-conducting membrane transporter
+Pseudogarypus_banksi	nad5	ATA	M	214	Proton_antipo_M|105-385	PF00361.18	105	385	Proton-conducting membrane transporter
+Pseudogarypus_banksi	nad5	ATA	M	337	Proton_antipo_M|105-385	PF00361.18	105	385	Proton-conducting membrane transporter
+Pseudogarypus_banksi	nad5	ATA	M	435	NID	NID	-	-	NID
+Pseudogarypus_banksi	nad5	ATA	M	445	Proton_antipo_M|437-490	PF00361.18	437	490	Proton-conducting membrane transporter
+Pseudogarypus_banksi	nad5	ATA	M	500	NID	NID	-	-	NID
+Myxine	nad5	ATA	M	202	Proton_antipo_M|130-417	PF00361.18	130	417	Proton-conducting membrane transporter
+Myxine	nad5	ATA	M	221	Proton_antipo_M|130-417	PF00361.18	130	417	Proton-conducting membrane transporter
+Myxine	nad5	ATA	M	328	Proton_antipo_M|130-417	PF00361.18	130	417	Proton-conducting membrane transporter
+Myxine	nad5	ATA	M	337	Proton_antipo_M|130-417	PF00361.18	130	417	Proton-conducting membrane transporter
+Myxine	nad5	ATA	M	352	Proton_antipo_M|130-417	PF00361.18	130	417	Proton-conducting membrane transporter
+Myxine	nad5	ATA	M	389	Proton_antipo_M|130-417	PF00361.18	130	417	Proton-conducting membrane transporter
+Myxine	nad5	ATA	M	435	NADH5_C|420-596	PF06455.9	420	596	NADH dehydrogenase subunit 5 C-terminus
+Drosophila	nad5	ATA	M	202	Proton_antipo_M|102-387	PF00361.18	102	387	Proton-conducting membrane transporter
+Drosophila	nad5	ATA	M	337	Proton_antipo_M|102-387	PF00361.18	102	387	Proton-conducting membrane transporter
+Drosophila	nad5	ATA	M	425	NADH5_C|390-571	PF06455.9	390	571	NADH dehydrogenase subunit 5 C-terminus
+Drosophila	nad5	ATA	M	510	NADH5_C|390-571	PF06455.9	390	571	NADH dehydrogenase subunit 5 C-terminus
+Ciona	nad5	ATA	M	202	Proton_antipo_M|116-399	PF00361.18	116	399	Proton-conducting membrane transporter
+Ciona	nad5	ATA	M	320	Proton_antipo_M|116-399	PF00361.18	116	399	Proton-conducting membrane transporter
+Ciona	nad5	ATA	M	337	Proton_antipo_M|116-399	PF00361.18	116	399	Proton-conducting membrane transporter
+Ciona	nad5	ATA	M	404	NID	NID	-	-	NID
+Ciona	nad5	ATA	M	469	NID	NID	-	-	NID
+Ciona	nad5	ATA	M	502	NID	NID	-	-	NID
+Daphnia	nad5	ATA	M	337	Proton_antipo_M	PF00361.18	106	387	Proton-conducting membrane transporter
+Daphnia	nad5	ATA	M	389	NID	NID	-	-	NID
+Caenorhabditis	nad5	ATA	M	256	Proton_antipo_M	PF00361.18	94	371	Proton-conducting membrane transporter
+Caenorhabditis	nad5	ATA	M	337	Proton_antipo_M	PF00361.18	94	371	Proton-conducting membrane transporter
+Caenorhabditis	nad5	ATA	M	361	Proton_antipo_M	PF00361.18	94	371	Proton-conducting membrane transporter
+Caenorhabditis	nad5	ATA	M	416	Proton_antipo_M|386-457	PF00361.18	386	457	Proton-conducting membrane transporter
+Caenorhabditis	nad5	ATA	M	526	NID	NID	-	-	NID
+Homo	nad5	ATA	M	202	Proton_antipo_M|133-418	PF00361.18	133	418	Proton-conducting membrane transporter
+Homo	nad5	ATA	M	337	NADH5_C|241-360	PF06455.9	241	360	NADH dehydrogenase subunit 5 C-terminus
+Homo	nad5	ATA	M	352	NADH5_C|241-360	PF06455.9	241	360	NADH dehydrogenase subunit 5 C-terminus
+Homo	nad5	ATA	M	444	NADH5_C|421-601	PF06455.9	421	601	NADH dehydrogenase subunit 5 C-terminus
+Homo	nad5	ATA	M	543	NADH5_C|421-601	PF06455.9	421	601	NADH dehydrogenase subunit 5 C-terminus
+Ascidiella_aspersa	nad5	ATA	M	337	Proton_antipo_M|103-385	PF00361.18	103	385	Proton-conducting membrane transporter
+Ascidiella_aspersa	nad5	ATA	M	352	Proton_antipo_M|103-385	PF00361.18	103	385	Proton-conducting membrane transporter
+Ascidiella_aspersa	nad5	ATA	M	404	NID	NID	-	-	NID
+Ascidiella_aspersa	nad5	ATA	M	435	NID	NID	-	-	NID
+Ascidiella_aspersa	nad5	ATA	M	465	NID	NID	-	-	NID
+Ascidiella_aspersa	nad5	ATA	M	494	NID	NID	-	-	NID
+Blanceolatum	nad5	ATA	M	202	Proton_antipo_M|126-411	PF00361.18	126	411	Proton-conducting membrane transporter
+Blanceolatum	nad5	ATA	M	337	Proton_antipo_M|126-411	PF00361.18	126	411	Proton-conducting membrane transporter
+Blanceolatum	nad5	ATA	M	352	Proton_antipo_M|126-411	PF00361.18	126	411	Proton-conducting membrane transporter
+Blanceolatum	nad5	ATA	M	389	Proton_antipo_M|126-411	PF00361.18	126	411	Proton-conducting membrane transporter
+Blanceolatum	nad5	ATA	M	404	Proton_antipo_M|126-411	PF00361.18	126	411	Proton-conducting membrane transporter
+Blanceolatum	nad5	ATA	M	444	Proton_antipo_M|402-524	PF00361.18	402	524	Proton-conducting membrane transporter
+Epigonichthys	nad5	ATA	M	337	Proton_antipo_N|303-344	PF00662.18	303	344	NADH-Ubiquinone oxidoreductase (complex I), chain 5 N-terminus
+Epigonichthys	nad5	ATA	M	352	Proton_antipo_M|126-410	PF00361.18	126	410	Proton-conducting membrane transporter
+Epigonichthys	nad5	ATA	M	389	Proton_antipo_M|126-410	PF00361.18	126	410	Proton-conducting membrane transporter
+Epigonichthys	nad5	ATA	M	404	Proton_antipo_M|126-410	PF00361.18	126	410	Proton-conducting membrane transporter
+Euseius_nicholsi	nad5	ATA	L	202	Proton_antipo_M	PF00361.18	100	382	Proton-conducting membrane transporter
+Euseius_nicholsi	nad5	ATA	L	256	Proton_antipo_M	PF00361.18	100	382	Proton-conducting membrane transporter
+Euseius_nicholsi	nad5	ATA	L	318	Proton_antipo_M	PF00361.18	100	382	Proton-conducting membrane transporter
+Euseius_nicholsi	nad5	ATA	L	337	Proton_antipo_M	PF00361.18	100	382	Proton-conducting membrane transporter
+Euseius_nicholsi	nad5	ATA	L	425	Proton_antipo_M|398-472	PF00361.18	398	472	Proton-conducting membrane transporter
+Euseius_nicholsi	nad5	ATA	L	475	Proton_antipo_M|465-535	PF00361.18	465	535	Proton-conducting membrane transporter
+Euseius_nicholsi	nad5	ATA	L	483	Proton_antipo_M|465-535	PF00361.18	465	535	Proton-conducting membrane transporter
+Lumbricus	nad5	ATA	L	202	Proton_antipo_M|108-388	PF00361.18	108	388	Proton-conducting membrane transporter
+Lumbricus	nad5	ATA	L	255	Proton_antipo_M|108-388	PF00361.18	108	388	Proton-conducting membrane transporter
+Lumbricus	nad5	ATA	L	337	NADH5_C|272-337	PF06455.9	272	337	NADH dehydrogenase subunit 5 C-terminus
+Lumbricus	nad5	ATA	L	404	NADH5_C|391-572	PF06455.9	391	572	NADH dehydrogenase subunit 5 C-terminus
+Lumbricus	nad5	ATA	L	430	Proton_antipo_M|407-440	PF00361.18	407	440	Proton-conducting membrane transporter
+Lumbricus	nad5	ATA	L	435	Proton_antipo_M|407-440	PF00361.18	407	440	Proton-conducting membrane transporter
+Lumbricus	nad5	ATA	L	510	NADH5_C|391-572	PF06455.9	391	572	NADH dehydrogenase subunit 5 C-terminus
+Strigamia_maritima	nad5	ATA	L	337	Proton_antipo_M|111-391	PF00361.18	111	391	Proton-conducting membrane transporter
+Ciona	nad5	ATA	L	202	Proton_antipo_M|116-399	PF00361.18	116	399	Proton-conducting membrane transporter
+Ciona	nad5	ATA	L	320	Proton_antipo_M|116-399	PF00361.18	116	399	Proton-conducting membrane transporter
+Ciona	nad5	ATA	L	337	Proton_antipo_M|116-399	PF00361.18	116	399	Proton-conducting membrane transporter
+Ciona	nad5	ATA	L	404	NID	NID	-	-	NID
+Ciona	nad5	ATA	L	469	NID	NID	-	-	NID
+Ciona	nad5	ATA	L	502	NID	NID	-	-	NID
+Epigonichthys	nad5	ATA	L	337	Proton_antipo_N|303-344	PF00662.18	303	344	NADH-Ubiquinone oxidoreductase (complex I), chain 5 N-terminus
+Epigonichthys	nad5	ATA	L	352	Proton_antipo_M|126-410	PF00361.18	126	410	Proton-conducting membrane transporter
+Epigonichthys	nad5	ATA	L	389	Proton_antipo_M|126-410	PF00361.18	126	410	Proton-conducting membrane transporter
+Epigonichthys	nad5	ATA	L	404	Proton_antipo_M|126-410	PF00361.18	126	410	Proton-conducting membrane transporter
+Euseius_nicholsi	nad5	ATC	L	404	Proton_antipo_M|398-472	PF00361.18	398	472	Proton-conducting membrane transporter
+Lumbricus	nad5	ATC	L	206	Proton_antipo_M|108-388	PF00361.18	108	388	Proton-conducting membrane transporter
+Lumbricus	nad5	ATC	L	227	Proton_antipo_M|108-388	PF00361.18	108	388	Proton-conducting membrane transporter
+Lumbricus	nad5	ATC	L	318	NADH5_C|272-337	PF06455.9	272	337	NADH dehydrogenase subunit 5 C-terminus
+Lumbricus	nad5	ATC	L	361	Proton_antipo_M|108-388	PF00361.18	108	388	Proton-conducting membrane transporter
+Epigonichthys	nad5	ATC	L	216	Proton_antipo_M|126-410	PF00361.18	126	410	Proton-conducting membrane transporter
+Euseius_nicholsi	nad5	ATT	L	214	Proton_antipo_M	PF00361.18	100	382	Proton-conducting membrane transporter
+Euseius_nicholsi	nad5	ATT	L	343	Proton_antipo_M	PF00361.18	100	382	Proton-conducting membrane transporter
+Euseius_nicholsi	nad5	ATT	L	361	Proton_antipo_M	PF00361.18	100	382	Proton-conducting membrane transporter
+Euseius_nicholsi	nad5	ATT	L	387	NID	NID	-	-	NID
+Euseius_nicholsi	nad5	ATT	L	407	Proton_antipo_M|398-472	PF00361.18	398	472	Proton-conducting membrane transporter
+Euseius_nicholsi	nad5	ATT	L	435	Proton_antipo_M|398-472	PF00361.18	398	472	Proton-conducting membrane transporter
+Euseius_nicholsi	nad5	ATT	L	453	Proton_antipo_M|398-472	PF00361.18	398	472	Proton-conducting membrane transporter
+Euseius_nicholsi	nad5	ATT	L	465	Proton_antipo_M|398-472	PF00361.18	398	472	Proton-conducting membrane transporter
+Euseius_nicholsi	nad5	ATT	L	511	Proton_antipo_M|465-535	PF00361.18	465	535	Proton-conducting membrane transporter
+Euseius_nicholsi	nad5	ATT	L	535	Proton_antipo_M|465-535	PF00361.18	465	535	Proton-conducting membrane transporter
+Lumbricus	nad5	ATT	L	407	Proton_antipo_M|407-440	PF00361.18	407	440	Proton-conducting membrane transporter
+Lumbricus	nad5	ATT	L	408	Proton_antipo_M|407-440	PF00361.18	407	440	Proton-conducting membrane transporter
+Lumbricus	nad5	ATT	L	453	NADH5_C|391-572	PF06455.9	391	572	NADH dehydrogenase subunit 5 C-terminus
+Lumbricus	nad5	ATT	L	511	NADH5_C|391-572	PF06455.9	391	572	NADH dehydrogenase subunit 5 C-terminus
+Epigonichthys	nad5	ATT	L	229	Proton_antipo_M|126-410	PF00361.18	126	410	Proton-conducting membrane transporter
+Epigonichthys	nad5	ATT	L	361	Proton_antipo_M|126-410	PF00361.18	126	410	Proton-conducting membrane transporter
+Epigonichthys	nad5	ATT	L	435	NADH5_C|413-594	PF06455.9	413	594	NADH dehydrogenase subunit 5 C-terminus
+Epigonichthys	nad5	ATT	L	453	NADH5_C|413-594	PF06455.9	413	594	NADH dehydrogenase subunit 5 C-terminus
+Epigonichthys	nad5	ATT	L	511	NADH5_C|413-594	PF06455.9	413	594	NADH dehydrogenase subunit 5 C-terminus
+Epigonichthys	nad5	ATT	L	512	NADH5_C|413-594	PF06455.9	413	594	NADH dehydrogenase subunit 5 C-terminus
+Epigonichthys	nad5	ATT	L	528	NADH5_C|413-594	PF06455.9	413	594	NADH dehydrogenase subunit 5 C-terminus
+Halocynthia	nad5	AGG	G	165	Proton_antipo_M|137-414	PF00361.18	137	414	Proton-conducting membrane transporter
+Halocynthia	nad5	AGG	G	217	Proton_antipo_M|137-414	PF00361.18	137	414	Proton-conducting membrane transporter
+Halocynthia	nad5	AGG	G	220	Proton_antipo_M|137-414	PF00361.18	137	414	Proton-conducting membrane transporter
+Halocynthia	nad5	AGG	G	356	Proton_antipo_M|137-414	PF00361.18	137	414	Proton-conducting membrane transporter
+Halocynthia	nad5	AGG	G	504	NID	NID	-	-	NID
+Ciona	nad5	AGG	G	217	Proton_antipo_M|116-399	PF00361.18	116	399	Proton-conducting membrane transporter
+Ciona	nad5	AGG	G	417	NID	NID	-	-	NID
+Ciona	nad5	AGG	G	424	NID	NID	-	-	NID
+Ciona	nad5	AGG	G	426	NID	NID	-	-	NID
+Ascidiella_aspersa	nad5	AGG	G	217	Proton_antipo_M|103-385	PF00361.18	103	385	Proton-conducting membrane transporter
+Ascidiella_aspersa	nad5	AGG	G	252	Proton_antipo_M|103-385	PF00361.18	103	385	Proton-conducting membrane transporter
+Metaseiulus_occidentalis	nad5	AGA	G	165	Proton_antipo_M|102-381	PF00361.18	102	381	Proton-conducting membrane transporter
+Metaseiulus_occidentalis	nad5	AGA	G	175	Proton_antipo_M|102-381	PF00361.18	102	381	Proton-conducting membrane transporter
+Metaseiulus_occidentalis	nad5	AGA	G	324	Proton_antipo_M|102-381	PF00361.18	102	381	Proton-conducting membrane transporter
+Metaseiulus_occidentalis	nad5	AGA	G	387	NID	NID	-	-	NID
+Aphrocallistes_vastus	nad5	AGA	G	252	Proton_antipo_M|129-411	PF00361.18	129	411	Proton-conducting membrane transporter
+Aphrocallistes_vastus	nad5	AGA	G	398	Proton_antipo_M|129-411	PF00361.18	129	411	Proton-conducting membrane transporter
+Aphrocallistes_vastus	nad5	AGA	G	469	NADH5_C|414-597	PF06455.9	414	597	NADH dehydrogenase subunit 5 C-terminus
+Aphrocallistes_vastus	nad5	AGA	G	504	NADH5_C|414-597	PF06455.9	414	597	NADH dehydrogenase subunit 5 C-terminus
+Halocynthia	nad5	AGA	G	450	NID	NID	-	-	NID
+Halocynthia	nad5	AGA	G	498	NID	NID	-	-	NID
+Ciona	nad5	AGA	G	220	Proton_antipo_M|116-399	PF00361.18	116	399	Proton-conducting membrane transporter
+Ciona	nad5	AGA	G	222	Proton_antipo_M|116-399	PF00361.18	116	399	Proton-conducting membrane transporter
+Ciona	nad5	AGA	G	252	Proton_antipo_M|116-399	PF00361.18	116	399	Proton-conducting membrane transporter
+Ciona	nad5	AGA	G	339	Proton_antipo_M|116-399	PF00361.18	116	399	Proton-conducting membrane transporter
+Ciona	nad5	AGA	G	356	Proton_antipo_M|116-399	PF00361.18	116	399	Proton-conducting membrane transporter
+Ciona	nad5	AGA	G	387	Proton_antipo_M|116-399	PF00361.18	116	399	Proton-conducting membrane transporter
+Ciona	nad5	AGA	G	394	Proton_antipo_M|116-399	PF00361.18	116	399	Proton-conducting membrane transporter
+Ciona	nad5	AGA	G	475	NID	NID	-	-	NID
+Ciona	nad5	AGA	G	498	NID	NID	-	-	NID
+Ciona	nad5	AGA	G	504	NID	NID	-	-	NID
+Versteria_mustelae	nad5	AAA	P	175	Proton_antipo_M|97-365	PF00361.18	97	365	Proton-conducting membrane transporter
+Versteria_mustelae	nad5	AAA	P	465	NID	NID	-	-	NID
+Versteria_mustelae	nad5	AAA	P	483	NID	NID	-	-	NID
+Haplorchis_taichui	nad5	AAA	S	414	NID	NID	-	-	NID
+Haplorchis_taichui	nad5	AAA	S	415	NID	NID	-	-	NID
+Strigamia_maritima	nad5	AGG	K	323	Proton_antipo_M|111-391	PF00361.18	111	391	Proton-conducting membrane transporter
+Strigamia_maritima	nad5	AGG	K	406	NADH5_C|394-564	PF06455.9	394	564	NADH dehydrogenase subunit 5 C-terminus
+Metaseiulus_occidentalis	nad4	AGA	S	382	Proton_antipo_M|96-382	PF00361.18	96	382	Proton-conducting membrane transporter
+Metaseiulus_occidentalis	nad4	AGA	S	395	NID	NID	-	-	NID
+Aphrocallistes_vastus	nad4	AGA	S	378	Proton_antipo_M	PF00361.18	122	411	Proton-conducting membrane transporter
+Aphrocallistes_vastus	nad4	AGA	S	389	Proton_antipo_M	PF00361.18	122	411	Proton-conducting membrane transporter
+Aphrocallistes_vastus	nad4	AGA	S	394	Proton_antipo_M	PF00361.18	122	411	Proton-conducting membrane transporter
+Schistosoma	nad4	AGA	S	192	Proton_antipo_M|87-370	PF00361.18	87	370	Proton-conducting membrane transporter
+Schistosoma	nad4	AGA	S	278	Proton_antipo_M|87-370	PF00361.18	87	370	Proton-conducting membrane transporter
+Schistosoma	nad4	AGA	S	292	Proton_antipo_M|87-370	PF00361.18	87	370	Proton-conducting membrane transporter
+Schistosoma	nad4	AGA	S	296	Proton_antipo_M|87-370	PF00361.18	87	370	Proton-conducting membrane transporter
+Trichobilharzia_regenti	nad4	AGA	S	214	Proton_antipo_M	PF00361.18	87	368	Proton-conducting membrane transporter
+Versteria_mustelae	nad4	AGA	S	296	Proton_antipo_M|93-406	PF00361.18	93	406	Proton-conducting membrane transporter
+Versteria_mustelae	nad4	AGA	S	418	NID	NID	-	-	NID
+Euseius_nicholsi	nad4	AGA	S	192	Proton_antipo_M|100-386	PF00361.18	100	386	Proton-conducting membrane transporter
+Lumbricus	nad4	AGA	S	449	NID	NID	-	-	NID
+Terebratulina	nad4	AGA	S	106	Proton_antipo_M|106-397	PF00361.18	106	397	Proton-conducting membrane transporter
+Katharina	nad4	AGA	S	440	NID	NID	-	-	NID
+Balanoglossus	nad4	AGA	S	382	Oxidored_q5_N|376-451	PF01059.15	376	451	NADH-ubiquinone oxidoreductase chain 4, amino terminus
+Strigamia_maritima	nad4	AGA	S	410	NID	NID	-	-	NID
+Tetrancistrum_nebulosi	nad4	AGA	S	288	Proton_antipo_M	PF00361.18	82	356	Proton-conducting membrane transporter
+Tetrancistrum_nebulosi	nad4	AGA	S	296	Proton_antipo_M	PF00361.18	82	356	Proton-conducting membrane transporter
+Pseudogarypus_banksi	nad4	AGA	S	106	Proton_antipo_M|99-385	PF00361.18	99	385	Proton-conducting membrane transporter
+Pseudogarypus_banksi	nad4	AGA	S	346	Proton_antipo_M|99-385	PF00361.18	99	385	Proton-conducting membrane transporter
+Pseudogarypus_banksi	nad4	AGA	S	378	Proton_antipo_M|99-385	PF00361.18	99	385	Proton-conducting membrane transporter
+Pseudogarypus_banksi	nad4	AGA	S	437	NID	NID	-	-	NID
+Caenorhabditis	nad4	AGA	S	292	Proton_antipo_M|86-364	PF00361.18	86	364	Proton-conducting membrane transporter
+Caenorhabditis	nad4	AGA	S	381	NID	NID	-	-	NID
+Caenorhabditis	nad4	AGA	S	382	NID	NID	-	-	NID
+Caenorhabditis	nad4	AGA	S	408	NID	NID	-	-	NID
+Paracentrotus	nad4	AAA	N	439	Oxidored_q5_N|376-455	PF01059.15	376	455	NADH-ubiquinone oxidoreductase chain 4, amino terminus
+Paracentrotus	nad4	AAA	N	447	Oxidored_q5_N|376-455	PF01059.15	376	455	NADH-ubiquinone oxidoreductase chain 4, amino terminus
+Schistosoma	nad4	AAA	N	191	Proton_antipo_M|87-370	PF00361.18	87	370	Proton-conducting membrane transporter
+Benedenia_hoshinai	nad4	AAA	N	397	NID	NID	-	-	NID
+Schistosoma	nad4	AGG	S	214	Proton_antipo_M|87-370	PF00361.18	87	370	Proton-conducting membrane transporter
+Schistosoma	nad4	AGG	S	367	Proton_antipo_M|87-370	PF00361.18	87	370	Proton-conducting membrane transporter
+Schistosoma	nad4	AGG	S	406	Proton_antipo_M|374-418	PF00361.18	374	418	Proton-conducting membrane transporter
+Fasciola	nad4	AGG	S	296	Proton_antipo_M|96-376	PF00361.18	96	376	Proton-conducting membrane transporter
+Fasciola	nad4	AGG	S	360	Proton_antipo_M|96-376	PF00361.18	96	376	Proton-conducting membrane transporter
+Euseius_nicholsi	nad4	AGG	S	334	Proton_antipo_M|100-386	PF00361.18	100	386	Proton-conducting membrane transporter
+Euseius_nicholsi	nad4	AGG	S	395	NID	NID	-	-	NID
+Haplorchis_taichui	nad4	AGG	S	288	Proton_antipo_M	PF00361.18	93	378	Proton-conducting membrane transporter
+Haplorchis_taichui	nad4	AGG	S	296	Proton_antipo_M	PF00361.18	93	378	Proton-conducting membrane transporter
+Taenia_crassiceps	nad4	AGG	S	296	Proton_antipo_M|91-372	PF00361.18	91	372	Proton-conducting membrane transporter
+Taenia_crassiceps	nad4	AGG	S	360	Proton_antipo_M|91-372	PF00361.18	91	372	Proton-conducting membrane transporter
+Trichinella	nad4	AGG	S	292	Proton_antipo_M|80-361	PF00361.18	80	361	Proton-conducting membrane transporter
+Tetrancistrum_nebulosi	nad4	AGG	S	215	Proton_antipo_M	PF00361.18	82	356	Proton-conducting membrane transporter
+Tetrancistrum_nebulosi	nad4	AGG	S	346	Proton_antipo_M	PF00361.18	82	356	Proton-conducting membrane transporter
+Tetrancistrum_nebulosi	nad4	AGG	S	404	NID	NID	-	-	NID
+Caenorhabditis	nad4	AGG	S	408	NID	NID	-	-	NID
+Metaseiulus_occidentalis	nad4	ATA	M	173	Proton_antipo_M|96-382	PF00361.18	96	382	Proton-conducting membrane transporter
+Metaseiulus_occidentalis	nad4	ATA	M	364	Proton_antipo_M|96-382	PF00361.18	96	382	Proton-conducting membrane transporter
+Metaseiulus_occidentalis	nad4	ATA	M	366	Proton_antipo_M|96-382	PF00361.18	96	382	Proton-conducting membrane transporter
+Metaseiulus_occidentalis	nad4	ATA	M	397	NID	NID	-	-	NID
+Euseius_nicholsi	nad4	ATA	M	109	Proton_antipo_M|100-386	PF00361.18	100	386	Proton-conducting membrane transporter
+Euseius_nicholsi	nad4	ATA	M	181	Proton_antipo_M|100-386	PF00361.18	100	386	Proton-conducting membrane transporter
+Euseius_nicholsi	nad4	ATA	M	210	Proton_antipo_M|100-386	PF00361.18	100	386	Proton-conducting membrane transporter
+Patiria	nad4	ATA	M	188	Oxidored_q5_N|160-221	PF01059.15	160	221	NADH-ubiquinone oxidoreductase chain 4, amino terminus
+Patiria	nad4	ATA	M	336	Oxidored_q5_N|247-336	PF01059.15	247	336	NADH-ubiquinone oxidoreductase chain 4, amino terminus
+Patiria	nad4	ATA	M	356	Proton_antipo_M	PF00361.18	112	405	Proton-conducting membrane transporter
+Patiria	nad4	ATA	M	366	Proton_antipo_M	PF00361.18	112	405	Proton-conducting membrane transporter
+Lumbricus	nad4	ATA	M	185	Proton_antipo_M|106-396	PF00361.18	106	396	Proton-conducting membrane transporter
+Lumbricus	nad4	ATA	M	367	Proton_antipo_M|106-396	PF00361.18	106	396	Proton-conducting membrane transporter
+Lumbricus	nad4	ATA	M	386	Proton_antipo_M|106-396	PF00361.18	106	396	Proton-conducting membrane transporter
+Lumbricus	nad4	ATA	M	400	Oxidored_q5_N|332-416	PF01059.15	332	416	NADH-ubiquinone oxidoreductase chain 4, amino terminus
+Axinella	nad4	ATA	M	182	Proton_antipo_M|127-416	PF00361.18	127	416	Proton-conducting membrane transporter
+Axinella	nad4	ATA	M	187	Proton_antipo_M|127-416	PF00361.18	127	416	Proton-conducting membrane transporter
+Axinella	nad4	ATA	M	188	Proton_antipo_M|127-416	PF00361.18	127	416	Proton-conducting membrane transporter
+Axinella	nad4	ATA	M	355	Proton_antipo_M|127-416	PF00361.18	127	416	Proton-conducting membrane transporter
+Axinella	nad4	ATA	M	356	Proton_antipo_M|127-416	PF00361.18	127	416	Proton-conducting membrane transporter
+Axinella	nad4	ATA	M	483	NID	NID	-	-	NID
+Terebratulina	nad4	ATA	M	187	Proton_antipo_M|106-397	PF00361.18	106	397	Proton-conducting membrane transporter
+Terebratulina	nad4	ATA	M	205	Proton_antipo_M|106-397	PF00361.18	106	397	Proton-conducting membrane transporter
+Terebratulina	nad4	ATA	M	364	Proton_antipo_M|106-397	PF00361.18	106	397	Proton-conducting membrane transporter
+Terebratulina	nad4	ATA	M	397	Oxidored_q5_N|366-444	PF01059.15	366	444	NADH-ubiquinone oxidoreductase chain 4, amino terminus
+Bfloridae	nad4	ATA	M	364	Oxidored_q5_N|296-366	PF01059.15	296	366	NADH-ubiquinone oxidoreductase chain 4, amino terminus
+Katharina	nad4	ATA	M	205	Oxidored_q5_N|145-255	PF01059.15	145	255	NADH-ubiquinone oxidoreductase chain 4, amino terminus
+Katharina	nad4	ATA	M	364	Proton_antipo_M	PF00361.18	100	391	Proton-conducting membrane transporter
+Katharina	nad4	ATA	M	367	Proton_antipo_M	PF00361.18	100	391	Proton-conducting membrane transporter
+Katharina	nad4	ATA	M	381	Proton_antipo_M	PF00361.18	100	391	Proton-conducting membrane transporter
+Katharina	nad4	ATA	M	386	Proton_antipo_M	PF00361.18	100	391	Proton-conducting membrane transporter
+Katharina	nad4	ATA	M	400	Oxidored_q5_N|330-435	PF01059.15	330	435	NADH-ubiquinone oxidoreductase chain 4, amino terminus
+Strigamia_maritima	nad4	ATA	M	364	Proton_antipo_M	PF00361.18	102	383	Proton-conducting membrane transporter
+Pseudogarypus_banksi	nad4	ATA	M	364	Proton_antipo_M|99-385	PF00361.18	99	385	Proton-conducting membrane transporter
+Pseudogarypus_banksi	nad4	ATA	M	366	Proton_antipo_M|99-385	PF00361.18	99	385	Proton-conducting membrane transporter
+Pseudogarypus_banksi	nad4	ATA	M	386	NID	NID	-	-	NID
+Myxine	nad4	ATA	M	116	Oxidored_q5_N|112-204	PF01059.15	112	204	NADH-ubiquinone oxidoreductase chain 4, amino terminus
+Myxine	nad4	ATA	M	299	Oxidored_q5_N|240-351	PF01059.15	240	351	NADH-ubiquinone oxidoreductase chain 4, amino terminus
+Myxine	nad4	ATA	M	367	Proton_antipo_M	PF00361.18	114	402	Proton-conducting membrane transporter
+Myxine	nad4	ATA	M	386	Proton_antipo_M	PF00361.18	114	402	Proton-conducting membrane transporter
+Myxine	nad4	ATA	M	457	NID	NID	-	-	NID
+Myxine	nad4	ATA	M	457	NID	NID	-	-	NID
+Drosophila	nad4	ATA	M	218	Proton_antipo_M|105-390	PF00361.18	105	390	Proton-conducting membrane transporter
+Drosophila	nad4	ATA	M	299	Oxidored_q5_N|230-314	PF01059.15	230	314	NADH-ubiquinone oxidoreductase chain 4, amino terminus
+Drosophila	nad4	ATA	M	364	Proton_antipo_M|105-390	PF00361.18	105	390	Proton-conducting membrane transporter
+Ciona	nad4	ATA	M	181	Proton_antipo_M|100-388	PF00361.18	100	388	Proton-conducting membrane transporter
+Ciona	nad4	ATA	M	218	Proton_antipo_M|100-388	PF00361.18	100	388	Proton-conducting membrane transporter
+Ciona	nad4	ATA	M	364	Proton_antipo_M|100-388	PF00361.18	100	388	Proton-conducting membrane transporter
+Ciona	nad4	ATA	M	386	Proton_antipo_M|100-388	PF00361.18	100	388	Proton-conducting membrane transporter
+Daphnia	nad4	ATA	M	364	Oxidored_q5_N|324-380	PF01059.15	324	380	NADH-ubiquinone oxidoreductase chain 4, amino terminus
+Caenorhabditis	nad4	ATA	M	169	Proton_antipo_M|86-364	PF00361.18	86	364	Proton-conducting membrane transporter
+Caenorhabditis	nad4	ATA	M	181	Proton_antipo_M|86-364	PF00361.18	86	364	Proton-conducting membrane transporter
+Caenorhabditis	nad4	ATA	M	187	Proton_antipo_M|86-364	PF00361.18	86	364	Proton-conducting membrane transporter
+Caenorhabditis	nad4	ATA	M	364	Proton_antipo_M|86-364	PF00361.18	86	364	Proton-conducting membrane transporter
+Caenorhabditis	nad4	ATA	M	408	NID	NID	-	-	NID
+Homo	nad4	ATA	M	364	Oxidored_q5_N|284-373	PF01059.15	284	373	NADH-ubiquinone oxidoreductase chain 4, amino terminus
+Homo	nad4	ATA	M	457	NID	NID	-	-	NID
+Ascidiella_aspersa	nad4	ATA	M	299	Proton_antipo_M|119-411	PF00361.18	119	411	Proton-conducting membrane transporter
+Blanceolatum	nad4	ATA	M	364	Proton_antipo_M	PF00361.18	104	399	Proton-conducting membrane transporter
+Epigonichthys	nad4	ATA	M	210	Proton_antipo_M	PF00361.18	110	399	Proton-conducting membrane transporter
+Euseius_nicholsi	nad4	ATA	L	109	Proton_antipo_M|100-386	PF00361.18	100	386	Proton-conducting membrane transporter
+Euseius_nicholsi	nad4	ATA	L	181	Proton_antipo_M|100-386	PF00361.18	100	386	Proton-conducting membrane transporter
+Euseius_nicholsi	nad4	ATA	L	210	Proton_antipo_M|100-386	PF00361.18	100	386	Proton-conducting membrane transporter
+Lumbricus	nad4	ATA	L	185	Proton_antipo_M|106-396	PF00361.18	106	396	Proton-conducting membrane transporter
+Lumbricus	nad4	ATA	L	367	Proton_antipo_M|106-396	PF00361.18	106	396	Proton-conducting membrane transporter
+Lumbricus	nad4	ATA	L	386	Proton_antipo_M|106-396	PF00361.18	106	396	Proton-conducting membrane transporter
+Lumbricus	nad4	ATA	L	400	Oxidored_q5_N|332-416	PF01059.15	332	416	NADH-ubiquinone oxidoreductase chain 4, amino terminus
+Strigamia_maritima	nad4	ATA	L	364	Proton_antipo_M	PF00361.18	102	383	Proton-conducting membrane transporter
+Ciona	nad4	ATA	L	181	Proton_antipo_M|100-388	PF00361.18	100	388	Proton-conducting membrane transporter
+Ciona	nad4	ATA	L	218	Proton_antipo_M|100-388	PF00361.18	100	388	Proton-conducting membrane transporter
+Ciona	nad4	ATA	L	364	Proton_antipo_M|100-388	PF00361.18	100	388	Proton-conducting membrane transporter
+Ciona	nad4	ATA	L	386	Proton_antipo_M|100-388	PF00361.18	100	388	Proton-conducting membrane transporter
+Epigonichthys	nad4	ATA	L	210	Proton_antipo_M	PF00361.18	110	399	Proton-conducting membrane transporter
+Lumbricus	nad4	ATC	L	188	Proton_antipo_M|106-396	PF00361.18	106	396	Proton-conducting membrane transporter
+Lumbricus	nad4	ATC	L	207	Proton_antipo_M|106-396	PF00361.18	106	396	Proton-conducting membrane transporter
+Euseius_nicholsi	nad4	ATT	L	116	Proton_antipo_M|100-386	PF00361.18	100	386	Proton-conducting membrane transporter
+Euseius_nicholsi	nad4	ATT	L	182	Proton_antipo_M|100-386	PF00361.18	100	386	Proton-conducting membrane transporter
+Euseius_nicholsi	nad4	ATT	L	188	Proton_antipo_M|100-386	PF00361.18	100	386	Proton-conducting membrane transporter
+Euseius_nicholsi	nad4	ATT	L	207	Proton_antipo_M|100-386	PF00361.18	100	386	Proton-conducting membrane transporter
+Euseius_nicholsi	nad4	ATT	L	356	Proton_antipo_M|100-386	PF00361.18	100	386	Proton-conducting membrane transporter
+Euseius_nicholsi	nad4	ATT	L	406	NID	NID	-	-	NID
+Lumbricus	nad4	ATT	L	182	Proton_antipo_M|106-396	PF00361.18	106	396	Proton-conducting membrane transporter
+Lumbricus	nad4	ATT	L	356	Proton_antipo_M|106-396	PF00361.18	106	396	Proton-conducting membrane transporter
+Epigonichthys	nad4	ATT	L	188	Oxidored_q5_N|113-201	PF01059.15	113	201	NADH-ubiquinone oxidoreductase chain 4, amino terminus
+Epigonichthys	nad4	ATT	L	356	Proton_antipo_M	PF00361.18	110	399	Proton-conducting membrane transporter
+Halocynthia	nad4	AGG	G	382	Proton_antipo_M|108-394	PF00361.18	108	394	Proton-conducting membrane transporter
+Halocynthia	nad4	AGG	G	391	Proton_antipo_M|108-394	PF00361.18	108	394	Proton-conducting membrane transporter
+Ciona	nad4	AGG	G	291	Proton_antipo_M|100-388	PF00361.18	100	388	Proton-conducting membrane transporter
+Ciona	nad4	AGG	G	378	Proton_antipo_M|100-388	PF00361.18	100	388	Proton-conducting membrane transporter
+Ciona	nad4	AGG	G	381	Proton_antipo_M|100-388	PF00361.18	100	388	Proton-conducting membrane transporter
+Ciona	nad4	AGG	G	418	NID	NID	-	-	NID
+Ascidiella_aspersa	nad4	AGG	G	291	Proton_antipo_M|119-411	PF00361.18	119	411	Proton-conducting membrane transporter
+Ascidiella_aspersa	nad4	AGG	G	303	Proton_antipo_M|119-411	PF00361.18	119	411	Proton-conducting membrane transporter
+Ascidiella_aspersa	nad4	AGG	G	370	Proton_antipo_M|119-411	PF00361.18	119	411	Proton-conducting membrane transporter
+Ascidiella_aspersa	nad4	AGG	G	378	Proton_antipo_M|119-411	PF00361.18	119	411	Proton-conducting membrane transporter
+Ascidiella_aspersa	nad4	AGG	G	391	Proton_antipo_M|119-411	PF00361.18	119	411	Proton-conducting membrane transporter
+Metaseiulus_occidentalis	nad4	AGA	G	382	Proton_antipo_M|96-382	PF00361.18	96	382	Proton-conducting membrane transporter
+Metaseiulus_occidentalis	nad4	AGA	G	395	NID	NID	-	-	NID
+Aphrocallistes_vastus	nad4	AGA	G	378	Proton_antipo_M	PF00361.18	122	411	Proton-conducting membrane transporter
+Aphrocallistes_vastus	nad4	AGA	G	389	Proton_antipo_M	PF00361.18	122	411	Proton-conducting membrane transporter
+Aphrocallistes_vastus	nad4	AGA	G	394	Proton_antipo_M	PF00361.18	122	411	Proton-conducting membrane transporter
+Halocynthia	nad4	AGA	G	434	NID	NID	-	-	NID
+Ciona	nad4	AGA	G	297	Proton_antipo_M|100-388	PF00361.18	100	388	Proton-conducting membrane transporter
+Ciona	nad4	AGA	G	303	Proton_antipo_M|100-388	PF00361.18	100	388	Proton-conducting membrane transporter
+Ciona	nad4	AGA	G	304	Proton_antipo_M|100-388	PF00361.18	100	388	Proton-conducting membrane transporter
+Ciona	nad4	AGA	G	306	Proton_antipo_M|100-388	PF00361.18	100	388	Proton-conducting membrane transporter
+Ciona	nad4	AGA	G	338	Proton_antipo_M|100-388	PF00361.18	100	388	Proton-conducting membrane transporter
+Ciona	nad4	AGA	G	438	NID	NID	-	-	NID

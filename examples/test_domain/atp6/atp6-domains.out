@@ -1,0 +1,1962 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             examples/out/atp6/atp6.fasta
+# target HMM database:             data/pfam/Pfam-A.hmm
+# output directed to file:         examples/out/atp6/atp6-domains.out
+# per-dom hits tabular output:     examples/out/atp6/atp6-domains.tab
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       Metaseiulus_occidentalis  [L=222]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    2.9e-28   99.1  31.8    3.7e-28   98.8  31.8    1.1  1  ATP-synt_A  ATP synthase A chain
+  ------ inclusion threshold ------
+          6    5.5   9.6          2    7.0   0.5    2.1  2  YqfD        Putative stage IV sporulation protein YqfD
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_A  ATP synthase A chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   98.8  31.8   4.5e-32   3.7e-28       5     210 ..      21     218 ..      16     219 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 98.8 bits;  conditional E-value: 4.5e-32
+                               XXXHHHHHHHH....CHCT.X.TTTSHHHHHHHHHHHHHH.HHHGGGTSS.SSXHHHHHHHHHHHHHHHHHHHHHHSSTTTTTTH CS
+                ATP-synt_A   5 livllilllll...llatrkkkkklpgklqnlvealvefv.dnlvesvigkkkkkkffpliltlflfilvsNllgliPglfaata 85 
+                               ++++++lll++   l+++r   ++ p+ +  + + +++ + +n+ +s+        f+ ++++lfl+i vsNl+ l+P++f++t 
+  Metaseiulus_occidentalis  21 WVAIFVLLLIFpknLFFQR---SRYPTTILLINKSMFNNLmNNVKKSQ------ILFINILISLFLLISVSNLIRLFPFIFTPTR 96 
+                               6666666655522222222...23366655555555555434444444......5799*************************** PP
+
+                               HHHHHHHHHHHHHHHHHHHTHHHHGG..GGHHHHXS..SXTTXHHHHHCCHHH.CHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+                ATP-synt_A  86 dinvtlalAlivfllvlilgikkkglkgyfkklfvp..plllvplllpielisefarpvsLalRLfgNifAGelllallagllll 168
+                               ++++ l +A+ ++l  ++  +  + l + f +l++   p+ll p++++ie+i  ++rp++L++RL +Ni+AG++l++ll ++l  
+  Metaseiulus_occidentalis  97 HLSISLRIAMPLWLNLFLKRWIFNPL-KRFSHLVPLntPILLCPFIVIIETIRSLIRPITLSIRLRANIIAGHILISLLSTIL-- 178
+                               ***********************998.67778874478*****************************************8654.. PP
+
+                               HT.SSSSTHHHHHHHHHHHHHHCHHHHHHHHHHHHHHHHHHH CS
+                ATP-synt_A 169 llllavllsvlilllavlllllelfvgfiQAfvFtlLtlvYi 210
+                                +  ++l+s++ +++ ++l++le  v++iQ +vF++L ++Y+
+  Metaseiulus_occidentalis 179 -GHRILLFSTI-FFILIILIILETAVAVIQRYVFITLISLYL 218
+                               .2222333333.445799999********************7 PP
+
+>> YqfD  Putative stage IV sporulation protein YqfD
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.0   0.5   0.00024         2      65     103 ..      47      85 ..      38      86 .. 0.88
+   2 ?    2.5   3.0    0.0058        47      53      98 ..     151     196 ..     143     206 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 7.0 bits;  conditional E-value: 0.00024
+                      YqfD  65 kivekkGlpfllkrlkkrkglligallfllllyllSsfi 103
+                                +++k+ +  l++++kk ++l+i +l++l+ll+ +S+ i
+  Metaseiulus_occidentalis  47 LLINKSMFNNLMNNVKKSQILFINILISLFLLISVSNLI 85 
+                               56778888899**************************98 PP
+
+  == domain 2  score: 2.5 bits;  conditional E-value: 0.0058
+                      YqfD  53 lrkiarktgcrvkivekkGlpfllkrlkkrkglligallfllllyl 98 
+                               +r+i+   + r +i++ + l+ ll+ +  +++ll+  ++f+l++++
+  Metaseiulus_occidentalis 151 IRPITLSIRLRANIIAGHILISLLSTILGHRILLFSTIFFILIILI 196
+                               7889999999******************999999999999988776 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (222 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       887  (0.0543972); expected 326.1 (0.02)
+Passed bias filter:                      211  (0.01294); expected 326.1 (0.02)
+Passed Vit filter:                        19  (0.00116522); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.62u 0.36s 00:00:00.98 Elapsed: 00:00:00.64
+# Mc/sec: 992.35
+//
+Query:       Paracentrotus  [L=232]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    5.6e-33  114.5  24.5      7e-33  114.2  23.5    1.5  2  ATP-synt_A  ATP synthase A chain
+  ------ inclusion threshold ------
+      0.029   14.3   0.4      0.029   14.3   0.4    2.9  3  PspB        Phage shock protein B
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_A  ATP synthase A chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.6   0.4     0.012     1e+02     142     168 ..       3      32 ..       2      45 .. 0.61
+   2 !  114.2  23.5   8.5e-37     7e-33       9     210 ..      27     228 ..      18     229 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 2.6 bits;  conditional E-value: 0.012
+                    HHHHHHHHHHHHHHHHHHHHHHHHH...HH CS
+     ATP-synt_A 142 vsLalRLfgNifAGelllallagll...ll 168
+                    +++++R+fg  f  +ll++ + ++    +l
+  Paracentrotus   3 MTITVRIFGQFFPETLLFIPMNLFSivfAL 32 
+                    688999999999999998888644221111 PP
+
+  == domain 2  score: 114.2 bits;  conditional E-value: 8.5e-37
+                    HHHHHHH.CHCT.X.TTT.SHHHHHHHHHHHHHHHHHGGGTSS.SSXHHHHHHHHHHHHHHHHHHHHHHSSTTTTTTHHHHHHHHHHHHHHHHHHH CS
+     ATP-synt_A   9 lilllllllatrkkkkkl.pgklqnlvealvefvdnlvesvigkkkkkkffpliltlflfilvsNllgliPglfaatadinvtlalAlivfllvli 103
+                     i++ l ++a  + +k   p+++q+++  +   v +++ +     k  +++ li t+f+ il + +lgl+P+ f+at +i++t+ l++ ++++v i
+  Paracentrotus  27 SIVFALSWIAFIYPTK-WaPSRFQSIWARFRANVLEMIFQKTR-PKTAPWAGLITTVFIVILSAKVLGLFPYAFTATRHISLTYRLGFPIWMAVKI 120
+                    3444555555554543.34***************666666664.4679************************************************ PP
+
+                    HTHHHHGG..GGHHHHXS..SXTTXHHHHHCCHHH.CHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHT.SSSSTHHHH.HHHHHHHHHHCHHHHH CS
+     ATP-synt_A 104 lgikkkglkgyfkklfvp..plllvplllpielisefarpvsLalRLfgNifAGelllallagllllllllavllsvli.lllavlllllelfvgf 196
+                    lg+    + + + +l++   p +l+pl++ ie++  fa+p++L+lRL +N++AG+ll++ll ++++ll+++++ +  ++ +++ vll++le+ v++
+  Paracentrotus 121 LGFYL-AFNRRLSHLVPQgtPRALIPLMVWIETLRLFAQPIALGLRLAANLTAGHLLIFLLSTAIWLLSSSLM-VRRIPiFVIFVLLFILEIGVAC 214
+                    ***99.577999898766889****************************************988855554444.44444366789999******** PP
+
+                    HHHHHHHHHHHHHH CS
+     ATP-synt_A 197 iQAfvFtlLtlvYi 210
+                    i A+vFt L   Y+
+  Paracentrotus 215 IEAYVFTALVHFYL 228
+                    ************98 PP
+
+>> PspB  Phage shock protein B
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   14.3   0.4   3.6e-06     0.029       3      31 ..      17      45 ..      15      51 .. 0.91
+   2 ?   -3.0   0.0      0.87   7.1e+03      56      69 ..      56      69 ..      53      70 .. 0.80
+   3 ?   -0.4   1.0      0.14   1.1e+03       7      19 ..     194     206 ..     188     210 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 14.3 bits;  conditional E-value: 3.6e-06
+           PspB  3 vflavpliifvlfVapiWLiLHYrskkkr 31
+                    +l++p+ +f ++ a+ W+ + Y +k+  
+  Paracentrotus 17 TLLFIPMNLFSIVFALSWIAFIYPTKWAP 45
+                   689***********************975 PP
+
+  == domain 2  score: -3.0 bits;  conditional E-value: 0.87
+           PspB 56 RietLEriLdaesp 69
+                   R + LE i  +  p
+  Paracentrotus 56 RANVLEMIFQKTRP 69
+                   77889999998887 PP
+
+  == domain 3  score: -0.4 bits;  conditional E-value: 0.14
+           PspB   7 vpliifvlfVapi 19 
+                      + ifv+fV+++
+  Paracentrotus 194 RRIPIFVIFVLLF 206
+                    5567889998765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (232 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       689  (0.0422544); expected 326.1 (0.02)
+Passed bias filter:                      221  (0.0135533); expected 326.1 (0.02)
+Passed Vit filter:                        22  (0.0013492); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.58u 0.55s 00:00:01.12 Elapsed: 00:00:00.79
+# Mc/sec: 840.14
+//
+Query:       Aphrocallistes_vastus  [L=242]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    4.3e-35  121.5  28.6    5.3e-35  121.2  28.6    1.0  1  ATP-synt_A  ATP synthase A chain
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_A  ATP synthase A chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  121.2  28.6   3.3e-39   5.3e-35       5     211 .]      31     236 ..      28     236 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 121.2 bits;  conditional E-value: 3.3e-39
+                            XXXHHHHHHHH.CHCT.X.TTTSHHHHHHHHHHHHHHHHHGGGTSS.SSXHHHHHHHHHHHHHHHHHHHHHHSSTTTTTTHHHHHHHH CS
+             ATP-synt_A   5 livllilllllllatrkkkkklpgklqnlvealvefvdnlvesvigkkkkkkffpliltlflfilvsNllgliPglfaatadinvtla 92 
+                            li++li++++ ++ +r++   l ++ + + ++l+++ + l+++ ++  k+k+f+p+i+ l++f+   Nl+gl+P++ ++ta+i +t++
+  Aphrocallistes_vastus  31 LILILIIIIITIIQHRNRI--LIRRNTIINKILYTIAYTLTKEHLNI-KHKTFLPFIFNLLIFLTRINLIGLLPYVLTTTAHIIITFS 115
+                            5566666666656666553..3678788889999999********84.679************************************* PP
+
+                            HHHHHHHHHHHHTHHHHGG..GGHHHHXS...SXTTXHHHHHCCHHH.CHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHT.S.SSST CS
+             ATP-synt_A  93 lAlivfllvlilgikkkglkgyfkklfvp...plllvplllpielisefarpvsLalRLfgNifAGelllallagllllllll.avll 176
+                            l+l++++  +i  i++ +  +++ ++++p   pl+l+p+l++ie+ s+++r +sL++RL +Ni AG+lll++l  + + +ll+ + +l
+  Aphrocallistes_vastus 116 LSLTILIRRTIKRIQNFKR-KFI-RILTPqgaPLILAPFLVLIETASYLTRAISLGVRLAANISAGHLLLTILSRFSFNILLSeLPAL 201
+                            ************9999665.555.55544589*****************************************887733333313444 PP
+
+                            HHHHHHHHHHHHHHCHHHHHHHHHHHHHHHHHHHH CS
+             ATP-synt_A 177 svlilllavlllllelfvgfiQAfvFtlLtlvYis 211
+                            s+++l + +++++le+ v++iQA+vFtlL+++Y+s
+  Aphrocallistes_vastus 202 SFIPLTILTFIAILEIAVALIQAYVFTLLSTIYLS 236
+                            544455899************************96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (242 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       956  (0.0586287); expected 326.1 (0.02)
+Passed bias filter:                      258  (0.0158224); expected 326.1 (0.02)
+Passed Vit filter:                        21  (0.00128787); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.64u 0.41s 00:00:01.05 Elapsed: 00:00:00.73
+# Mc/sec: 948.38
+//
+Query:       Schistosoma  [L=173]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+  ------ inclusion threshold ------
+      0.014   15.3  18.7       0.02   14.7  18.7    1.3  1  ATP-synt_A  ATP synthase A chain
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_A  ATP synthase A chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   14.7  18.7   1.2e-06      0.02      67     201 ..      30     162 ..       6     163 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 14.7 bits;  conditional E-value: 1.2e-06
+                  HHHHHHHHHHS....STTTTTTHHHHHHHHHHHHHHHHHHHHTHHHHGG..GGHHHHXS..SXTTXHHHHHCCHHH.CHHHHHHHHHHHHHHHHHHHH CS
+   ATP-synt_A  67 filvsNllgli....PglfaatadinvtlalAlivfllvlilgikkkglkgyfkklfvp..plllvplllpielisefarpvsLalRLfgNifAGell 158
+                  f+++s ++gl+    P+++   + +++ +   l +f+  +++ ++   + ++f ++++   p++++p++  +e+is+++rp+   +R f  +  G  l
+  Schistosoma  30 FVMISVFCGLVmtrcPYIYGWIGFFAFLVCCVLPLFISLIVTRLNVSAV-EFFGSMIPEgsPIWILPFIQYVEIISYIIRPFVTVIRPFVKVSVGIRL 126
+                  6777777776666778888888888888888888888888888888766.99999986689**********************************888 PP
+
+                  HHHHHHHHHHHT.SSSSTHHHHHHHHHHHHHHCHHHHHHHHHH CS
+   ATP-synt_A 159 lallagllllllllavllsvlilllavlllllelfvgfiQAfv 201
+                   + +  l++         s++i +++v+l++ e++v fi  f+
+  Schistosoma 127 GVRVGWLCIG-------SSFYIYFFMVFLFIYEILVVFIHWFI 162
+                  7777633212.......23334455788889999999998776 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (173 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       739  (0.0453207); expected 326.1 (0.02)
+Passed bias filter:                      192  (0.0117748); expected 326.1 (0.02)
+Passed Vit filter:                        22  (0.0013492); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.55u 0.39s 00:00:00.94 Elapsed: 00:00:00.78
+# Mc/sec: 634.52
+//
+Query:       Fasciola  [L=172]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+     0.0035   17.2  21.4     0.0054   16.6  21.4    1.3  1  ATP-synt_A  ATP synthase A chain
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_A  ATP synthase A chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   16.6  21.4   3.3e-07    0.0054      58     201 ..      30     161 ..       3     167 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 16.6 bits;  conditional E-value: 3.3e-07
+                 HHHHHHHHHHHHHHHHHHHSSTTTTTTHHHHHHHHHHHHHHHHHHHHTHHHH.GG..GGHHHHXS..SXTTXHHHHHCCHHH.CHHHHHHHHHHHHHHH CS
+  ATP-synt_A  58 fpliltlflfilvsNllgliPglfaatadinvtlalAlivfllvlilgikkk.glkgyfkklfvp..plllvplllpielisefarpvsLalRLfgNif 153
+                 + ++l  fl++ +  l gl+         + + l +++i ++l l+lg     gl+++f+ +++   pl+++p++ + e++s+++rp+ L +R f N++
+    Fasciola  30 LFFLLCCFLYLRMPYLYGLL--------GFGLFLIFSVIPLFLALFLGRLLDvGLFRFFRGFVPSgtPLWIAPFVCLAETLSYVVRPIVLIIRPFVNLT 120
+                 33334444444444444432........256667777777777777775444499999999876588******************************** PP
+
+                 HHHHHHHHHHHHHHHHT.SSSSTHHHHHHHHHHHHHHCHHHHHHHHHH CS
+  ATP-synt_A 154 AGelllallagllllllllavllsvlilllavlllllelfvgfiQAfv 201
+                  G+   +++ +l +  + ++v      +++ v+l++ e+fv+++  f+
+    Fasciola 121 IGSFGGVAIGALGFKYG-FGV------FVFLVVLFFYEVFVALVHWFI 161
+                 *9999888864432222.322......233456666777777776655 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (172 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       670  (0.0410892); expected 326.1 (0.02)
+Passed bias filter:                      200  (0.0122654); expected 326.1 (0.02)
+Passed Vit filter:                        26  (0.00159451); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.53u 0.40s 00:00:00.93 Elapsed: 00:00:00.59
+# Mc/sec: 834.00
+//
+Query:       Trichobilharzia_regenti  [L=171]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (171 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       731  (0.0448301); expected 326.1 (0.02)
+Passed bias filter:                      214  (0.013124); expected 326.1 (0.02)
+Passed Vit filter:                        25  (0.00153318); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.58u 0.27s 00:00:00.85 Elapsed: 00:00:00.54
+# Mc/sec: 905.93
+//
+Query:       Versteria_mustelae  [L=171]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (171 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       901  (0.0552557); expected 326.1 (0.02)
+Passed bias filter:                      211  (0.01294); expected 326.1 (0.02)
+Passed Vit filter:                        29  (0.00177849); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.62u 0.35s 00:00:00.97 Elapsed: 00:00:00.70
+# Mc/sec: 698.86
+//
+Query:       Euseius_nicholsi  [L=221]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    1.7e-27   96.6  37.7      2e-27   96.4  37.7    1.0  1  ATP-synt_A  ATP synthase A chain
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_A  ATP synthase A chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   96.4  37.7   1.2e-31     2e-27       5     210 ..      19     217 ..      13     218 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 96.4 bits;  conditional E-value: 1.2e-31
+                       XXXHHHHHHHH.CHCT.X.TTTSHHHHHHHHHHHHHH.HHHGGGTSS.SSXHHHHHHHHHHHHHHHHHHHHHHSSTTTTTTHHHHHHHHHHHH CS
+        ATP-synt_A   5 livllilllllllatrkkkkklpgklqnlvealvefv.dnlvesvigkkkkkkffpliltlflfilvsNllgliPglfaatadinvtlalAli 96 
+                       +  +++ll lll+++r     + +++  +++ ++ f+ ++l+ ++i+ k ++ +  +ilt+f+fi++sN+l +iP++f++ ++i +tl l+l 
+  Euseius_nicholsi  19 W--IAFLLPLLLITNRFY-F-QTNRINLIIKKIIYFLlNDLFLNNIK-KYNNIINIIILTFFIFIILSNFLRIIPFIFTPISHIRTTLLLSLP 106
+                       3..333333333344422.2.27999***********9********4.3447777899*********************************** PP
+
+                       HHHHHHHHTHHHHGG..GGHHHHXS..SXTTXHHHHHCCHHH.CHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHT.SSSSTHHHH.HHHHHH CS
+        ATP-synt_A  97 vfllvlilgikkkglkgyfkklfvp..plllvplllpielisefarpvsLalRLfgNifAGelllallagllllllllavllsvli.lllavl 186
+                       ++ + ++    k   + +f +l+++  p+++++++++ie+i  ++rp++L +RL++Ni+AG++l+ ll ++l  +     ++++l+  l+  +
+  Euseius_nicholsi 107 IWSALTLKTRFK-TPVTIFIHLVPIrtPIPILIFIVIIETIRILIRPFTLIIRLTANIIAGHVLICLLRQIL-NI----XIFTFLStSLILNI 193
+                       **8876654444.455899899866899****************************************8653.22....22333333444556 PP
+
+                       HHHHCHHHHHHHHHHHHHHHHHHH CS
+        ATP-synt_A 187 llllelfvgfiQAfvFtlLtlvYi 210
+                       l+lle+ v++iQ +vFt+L ++Y+
+  Euseius_nicholsi 194 LILLEVSVAVIQGYVFTILLSLYL 217
+                       677********************8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (221 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       873  (0.0535386); expected 326.1 (0.02)
+Passed bias filter:                      178  (0.0109162); expected 326.1 (0.02)
+Passed Vit filter:                        15  (0.000919907); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.60u 0.35s 00:00:00.95 Elapsed: 00:00:00.56
+# Mc/sec: 1109.20
+//
+Query:       Patiria  [L=230]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    1.6e-32  113.0  26.0    1.8e-32  112.9  26.0    1.0  1  ATP-synt_A  ATP synthase A chain
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_A  ATP synthase A chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  112.9  26.0   1.1e-36   1.8e-32       7     211 .]      23     227 ..      16     227 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 112.9 bits;  conditional E-value: 1.1e-36
+                 XHHHHHHHH.CHCT.X.TTT.SHHHHHHHHHHHHHHHHHGGGTSS.SSXHHHHHHHHHHHHHHHHHHHHHHSSTTTTTTHHHHHHHHHHHHHHHHHHHH CS
+  ATP-synt_A   7 vllilllllllatrkkkkkl.pgklqnlvealvefvdnlvesvigkkkkkkffpliltlflfilvsNllgliPglfaatadinvtlalAlivfllvlil 104
+                 +l  ++l l +++ +k +k  p++   l+  +++ v +++ ++ +  +  ++++ +  +f++i+   +lgl+P+ f+ t++i++t+++++ +++ v il
+     Patiria  23 TLTAVFLNLSWLSISKPSKWlPSRANLLILSFYQEVLKILFQQTN-PNTAPWVSAFTAIFILIFSIKVLGLLPYAFTSTSHISLTYSIGVPLWMSVKIL 120
+                 333333222333332334446*************99888777775.4679************************************************* PP
+
+                 THHHHGG..GGHHHHXS..SXTTXHHHHHCCHHH.CHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHT.SSSSTHHHHHHHHHHHHHHCHHHHHHHHHH CS
+  ATP-synt_A 105 gikkkglkgyfkklfvp..plllvplllpielisefarpvsLalRLfgNifAGelllallagllllllllavllsvlilllavlllllelfvgfiQAfv 201
+                 g+    + + + +l++   p +l+p++++ie+is fa+p++L+lRL +N++AG+ll++ll +++++l+++   ++ ++ll+ ++l+lle+ v++iQA+v
+     Patiria 121 GFYL-AFNSRLGHLVPQgtPSYLIPFMVIIETISLFAQPIALGLRLAANLTAGHLLIFLLSTAIWTLSSS-PSIARITLLIFFFLFLLEIGVACIQAYV 217
+                 **99.57799989876688*****************************************9887555543.4445455555788999************ PP
+
+                 HHHHHHHHHH CS
+  ATP-synt_A 202 FtlLtlvYis 211
+                 Ft L   Y+s
+     Patiria 218 FTALVNFYLS 227
+                 ******9986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (230 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       656  (0.0402306); expected 326.1 (0.02)
+Passed bias filter:                      203  (0.0124494); expected 326.1 (0.02)
+Passed Vit filter:                        24  (0.00147185); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.67u 0.32s 00:00:00.99 Elapsed: 00:00:00.63
+# Mc/sec: 1044.43
+//
+Query:       Daphnia  [L=224]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    2.9e-36  125.3  21.6    3.5e-36  125.0  21.6    1.1  1  ATP-synt_A  ATP synthase A chain
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_A  ATP synthase A chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  125.0  21.6   2.2e-40   3.5e-36       5     210 ..      21     220 ..      14     221 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 125.0 bits;  conditional E-value: 2.2e-40
+                 XXXHHHHHHHH.CHCT.X.TTTSHHHHHHHHHHHHHHHHHGGGTSS..SSXHHHHHHHHHHHHHHHHHHHHHHSSTTTTTTHHHHHHHHHHHHHHHHHH CS
+  ATP-synt_A   5 livllilllllllatrkkkkklpgklqnlvealvefvdnlvesvig.kkkkkkffpliltlflfilvsNllgliPglfaatadinvtlalAlivfllvl 102
+                 ++++++ l+ l +  + +     ++ + ++ ++ + ++  +++ +g    ++  + ++++lflfil++N++gl P++f+a++++++tlalA+ ++l+++
+     Daphnia  21 WLAVFVGLFALPWGFWIR----TNRAAKFFTLVSDQLHREFKTLVGvG-GAQGHTLIFISLFLFILFNNFFGLAPYVFTASSHLAMTLALAFPLWLAFI 114
+                 556666666666666644....46778889999999988889999843.5688899******************************************* PP
+
+                 HHTHHHHGG..GGHHHHXS..SXTTXHHHHHCCHHH.CHHHHHHHHHHHHHHHHHHHHHHHHHHHH.HHHT.SSSSTHHHHHHHHHHHHHHCHHHHHHH CS
+  ATP-synt_A 103 ilgikkkglkgyfkklfvp..plllvplllpielisefarpvsLalRLfgNifAGelllallagll.llllllavllsvlilllavlllllelfvgfiQ 198
+                 ++g+  + + +++ +l++   p +l+p++++ie++s+++rp +La+RL +N++AG+lll+ll     +    l+  l  ++l+ ++lll le  v++iQ
+     Daphnia 115 LYGWLSHTT-HMLAHLVPLgtPPVLIPFMVLIETVSNVIRPGTLAVRLAANMIAGHLLLVLLGNQGpS----LSSSLLRILLVTQILLLTLESAVAIIQ 208
+                 ******998.89989875478999**************************************744321....2222222335579************** PP
+
+                 HHHHHHHHHHHH CS
+  ATP-synt_A 199 AfvFtlLtlvYi 210
+                 ++vF++L+++Y 
+     Daphnia 209 SYVFAVLATLYS 220
+                 **********95 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (224 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       592  (0.0363057); expected 326.1 (0.02)
+Passed bias filter:                      158  (0.00968968); expected 326.1 (0.02)
+Passed Vit filter:                        12  (0.000735925); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.58u 0.34s 00:00:00.92 Elapsed: 00:00:00.56
+# Mc/sec: 1144.33
+//
+Query:       Haplorchis_taichui  [L=171]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    0.00016   21.6  18.1    0.00023   21.0  18.1    1.2  1  ATP-synt_A  ATP synthase A chain
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_A  ATP synthase A chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.0  18.1   1.4e-08   0.00023      42     201 ..      11     160 ..       3     167 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 21.0 bits;  conditional E-value: 1.4e-08
+                         HHHGGGTSS.SSXHHHHHHHHHHHHHHHHHHHHHH.SSTTTTTTHHHHHHHHHHHHHHHHHHHHTHHHHGG..GGHHHHXS..SXTTXHHH CS
+          ATP-synt_A  42 dnlvesvigkkkkkkffpliltlflfilvsNllgl.iPglfaatadinvtlalAlivfllvlilgikkkglkgyfkklfvp..plllvpll 129
+                         +n+++ v+g   +++f    + l+lf+++  +lgl +P+++ + +   + l   + +f+  ++  +    + ++f  +++   pl+++p++
+  Haplorchis_taichui  11 NNVIRYVAGG-LGDRF----YRLLLFMVLLVFLGLrLPYFYGMGGFGIFILIRVFPLFMSLFFSRLIDGSMSAFFCGFVPQgtPLWIAPFV 96 
+                         5555555542.33443....334444555555554348666666666666666666666666666666556667766654489******** PP
+
+                         HHCCHHH.CHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHT.SSSSTHHHHHHHHHHHHHHCHHHHHHHHHH CS
+          ATP-synt_A 130 lpielisefarpvsLalRLfgNifAGelllallagllllllllavllsvlilllavlllllelfvgfiQAfv 201
+                          + e++s+++rpv L++R f N+  G l  a+l +l ++ +        ++l++ vll++ e+fv+++  f+
+  Haplorchis_taichui  97 CLAETLSYVVRPVVLMIRPFVNLSIGALGGAVLGALSMTRG--------WVLFFLVLLFFYEVFVALVHWFI 160
+                         ***********************999999999964421222........22345677777788888887666 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (171 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       610  (0.0374095); expected 326.1 (0.02)
+Passed bias filter:                      218  (0.0133693); expected 326.1 (0.02)
+Passed Vit filter:                        31  (0.00190114); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.53u 0.36s 00:00:00.89 Elapsed: 00:00:00.56
+# Mc/sec: 858.25
+//
+Query:       Lumbricus  [L=230]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    1.2e-30  107.0  16.9    1.5e-30  106.6  16.8    1.2  1  ATP-synt_A     ATP synthase A chain
+  ------ inclusion threshold ------
+       0.19   12.0   1.1         22    5.3   0.2    2.5  2  TraQ           Type-F conjugative transfer system pilin chape
+        4.4    7.5   5.4        2.6    8.3   0.2    2.5  2  zf-LITAF-like  LITAF-like zinc ribbon domain
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_A  ATP synthase A chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  106.6  16.8   2.8e-34   1.5e-30      54     210 ..      69     226 ..      20     227 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 106.6 bits;  conditional E-value: 2.8e-34
+                 XHHHHHHHHHHHHHHHHHHHHHHSSTTTTTTHHHHHHHHHHHHHHHHHHHHTHHHHGG..GGHHHHXS..SXTTXHHHHHCCHHH.CHHHHHHHHHHHH CS
+  ATP-synt_A  54 kkkffpliltlflfilvsNllgliPglfaatadinvtlalAlivfllvlilgikkkglkgyfkklfvp..plllvplllpielisefarpvsLalRLfg 150
+                  k +   + t+f+ +++ Nl+gliP++f ++ ++ +tl+l++ ++l  +i  + +   k+   ++++   p +l p+l++ie+   f+rp++L++RL +
+   Lumbricus  69 LKGLSTPLSTIFFILVIINLMGLIPYMFRTSRHLVFTLSLGFPIWLSLIISTFAHS-PKKRTAHFLPDgaPDWLNPFLVLIETTRVFVRPLTLSFRLAA 166
+                 3445566889**************************************99999996.56777788755789**************************** PP
+
+                 HHHHHHHHHHHHHHHHHHHT.SSSSTHHHHHHHHHHHHHHCHHHHHHHHHHHHHHHHHHH CS
+  ATP-synt_A 151 NifAGelllallagllllllllavllsvlilllavlllllelfvgfiQAfvFtlLtlvYi 210
+                 Ni AG+++l l+   ++++++++v  + l++l a+  +l+e+ +++iQA++F+lL ++Y 
+   Lumbricus 167 NIRAGHIVLRLIGIYCAAAWFSSVSRTALLILTAIGYILFEVAICLIQAYIFCLLLSLYS 226
+                 ************75555666555544544577899**********************995 PP
+
+>> TraQ  Type-F conjugative transfer system pilin chaperone (TraQ)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.9   0.0    0.0058        32      36      62 ..      19      45 ..      13      56 .. 0.87
+   2 ?    5.3   0.2    0.0041        22      29      76 ..     151     200 ..     126     209 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  score: 4.9 bits;  conditional E-value: 0.0058
+       TraQ 36 pwmafflaeliaiilvlsgayrvldaw 62
+               p  ++fl    aiil++  ++ vl+a 
+  Lumbricus 19 PLNSLFLVTNTAIILIIQSSFWVLNAR 45
+               667899******************986 PP
+
+  == domain 2  score: 5.3 bits;  conditional E-value: 0.0041
+       TraQ  29 grlvyrkpwmafflaelia...iilvlsgayrvldawiarvsreerallea 76 
+                 r+  r   ++f la  i    i+l l g y    aw + vsr    +l a
+  Lumbricus 151 TRVFVRPLTLSFRLAANIRaghIVLRLIGIYC-AAAWFSSVSRTALLILTA 200
+                4555555568888887773344899999*997.579*******87766655 PP
+
+>> zf-LITAF-like  LITAF-like zinc ribbon domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    8.3   0.2   0.00048       2.6      14      53 ..      61     100 ..      57     105 .. 0.81
+   2 ?    0.9   0.9     0.094   5.1e+02      28      43 ..     203     219 ..     177     229 .. 0.53
+
+  Alignments for each domain:
+  == domain 1  score: 8.3 bits;  conditional E-value: 0.00048
+  zf-LITAF-like  14 rvvTsveyksgkltwllalllclfgcllccliPfcvdslk 53 
+                     + Ts+++ +g  t l+ ++++l+++ l+ liP+++++ +
+      Lumbricus  61 LSRTSTTHLKGLSTPLSTIFFILVIINLMGLIPYMFRTSR 100
+                    578999*********99988888888566779**998765 PP
+
+  == domain 2  score: 0.9 bits;  conditional E-value: 0.094
+  zf-LITAF-like  28 wlla.lllclfgcllcc 43 
+                    ++l+ +++cl+   ++c
+      Lumbricus 203 YILFeVAICLIQAYIFC 219
+                    23333444444432223 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (230 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       619  (0.0379615); expected 326.1 (0.02)
+Passed bias filter:                      233  (0.0142892); expected 326.1 (0.02)
+Passed Vit filter:                        25  (0.00153318); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.63u 0.39s 00:00:01.02 Elapsed: 00:00:00.62
+# Mc/sec: 1061.28
+//
+Query:       Halocynthia  [L=211]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    1.2e-19   71.0  24.8    1.9e-19   70.3  24.6    1.4  1  ATP-synt_A  ATP synthase A chain
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_A  ATP synthase A chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   70.3  24.6   1.2e-23   1.9e-19      56     210 ..      54     206 ..      17     207 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 70.3 bits;  conditional E-value: 1.2e-23
+                  HHHH...HHHHHHHHHHHHHHHHHSSTTTTTTHHHHHHHHHHHHHHHHHHHHTHHHHGG..GGHHHHXS..SXTTXHHHHHCCHHH.CHHHHHHHHHH CS
+   ATP-synt_A  56 kffp...liltlflfilvsNllgliPglfaatadinvtlalAlivfllvlilgikkkglkgyfkklfvp..plllvplllpielisefarpvsLalRL 148
+                   +fp   +i+ l++ +++ Nl+gl+P++++ t+  ++t++lA+i++ + +i+ + k+ l + + ++++   p++l + l+ ie++s + rp  L++RL
+  Halocynthia  54 YVFPgirFIVFLLIILVFLNLFGLVPIGISYTSLPSITIGLAFIMWGGSYIYCFSKNTL-RCIAHFVPVraPVVLCVALIQIEILSWLCRP--LGVRL 148
+                  44555558999999999***************************************988.899888755899****************999..79*** PP
+
+                  HHHHHHHHHHHHHHHHHHHHHT.SSSSTHHHHHHHHHHHHHHCHHHHHHHHHHHHHHHHHHH CS
+   ATP-synt_A 149 fgNifAGelllallagllllllllavllsvlilllavlllllelfvgfiQAfvFtlLtlvYi 210
+                   +Ni+A +lll+l+ + l++l+++   ++v+  l+ +ll++le+ v fiQ +v++lL ++Y+
+  Halocynthia 149 IANITARHLLLVLIRSRLFSLSGV---FQVFG-LVLILLVFLEIRVRFIQRYVYCLLLSLYV 206
+                  **************7655444444...33333.3468999*********************7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (211 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       842  (0.0516374); expected 326.1 (0.02)
+Passed bias filter:                      304  (0.0186434); expected 326.1 (0.02)
+Passed Vit filter:                        18  (0.00110389); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.63u 0.35s 00:00:00.98 Elapsed: 00:00:00.69
+# Mc/sec: 874.83
+//
+Query:       Limulus  [L=224]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    1.3e-36  126.5  25.1    1.5e-36  126.2  25.1    1.0  1  ATP-synt_A  ATP synthase A chain
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_A  ATP synthase A chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  126.2  25.1   9.2e-41   1.5e-36       5     210 ..      21     220 ..      17     221 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 126.2 bits;  conditional E-value: 9.2e-41
+                 XXXHHHHHHHH.CHCT.X.TTTSHHHHHHHHHHHHHHHHHGGGTSS.SSXHHHHHHHHHHHHHHHHHHHHHHSSTTTTTTHHHHHHHHHHHHHHHHHHH CS
+  ATP-synt_A   5 livllilllllllatrkkkkklpgklqnlvealvefvdnlvesvigkkkkkkffpliltlflfilvsNllgliPglfaatadinvtlalAlivfllvli 103
+                 ++ +l+++l   ++ +     +p++lq l+  +++++++ ++  + ++kk  ++ l+++lf +i ++N lgl+P +f+ t +i +tl+lAl +++++++
+     Limulus  21 WVRTLLIILSTPYLYW----VIPSRLQILIINIFNILNKELSILLSNSKKPGITFLLISLFWLISINNSLGLLPHIFTSTRHIIITLSLALPIWITIIL 115
+                 5555555555555555....23***************888888886457789999******************************************** PP
+
+                 HTHHHHGG..GGHHHHXS..SXTTXHHHHHCCHHH.CHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHT.SSSSTHHHH.HHHHHHHHHHCHHHHHHHH CS
+  ATP-synt_A 104 lgikkkglkgyfkklfvp..plllvplllpielisefarpvsLalRLfgNifAGelllallagllllllllavllsvli.lllavlllllelfvgfiQA 199
+                 +g+ ++ + ++f +l++   p +l++++++ie is+++rp++L++RL +Ni+AG+lll+ll   ++++     l ++l+  +++++ll le+ v++iQA
+     Limulus 116 FGWLNNTT-HIFAHLVPQgtPPALIIFIVCIESISNLIRPITLSVRLAANIIAGHLLLTLLRNRAVMSR----LSTTLTiSIAQIALLTLEIAVALIQA 209
+                 *****876.99999986688999**************************************64432233....223333356799************** PP
+
+                 HHHHHHHHHHH CS
+  ATP-synt_A 200 fvFtlLtlvYi 210
+                 +vF++L+++Y 
+     Limulus 210 YVFVVLSTLYS 220
+                 *********95 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (224 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       625  (0.0383294); expected 326.1 (0.02)
+Passed bias filter:                      151  (0.00926039); expected 326.1 (0.02)
+Passed Vit filter:                        20  (0.00122654); expected 16.3 (0.001)
+Passed Fwd filter:                         1  (6.13271e-05); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.57u 0.53s 00:00:01.10 Elapsed: 00:00:00.74
+# Mc/sec: 865.98
+//
+Query:       Echinococcus_equinus  [L=170]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (170 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       987  (0.0605299); expected 326.1 (0.02)
+Passed bias filter:                      281  (0.0172329); expected 326.1 (0.02)
+Passed Vit filter:                        43  (0.00263707); expected 16.3 (0.001)
+Passed Fwd filter:                        10  (0.000613271); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.59u 0.34s 00:00:00.93 Elapsed: 00:00:00.54
+# Mc/sec: 900.63
+//
+Query:       Taenia_crassiceps  [L=170]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (170 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       950  (0.0582608); expected 326.1 (0.02)
+Passed bias filter:                      252  (0.0154544); expected 326.1 (0.02)
+Passed Vit filter:                        36  (0.00220778); expected 16.3 (0.001)
+Passed Fwd filter:                        10  (0.000613271); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.68u 0.31s 00:00:00.99 Elapsed: 00:00:00.56
+# Mc/sec: 853.23
+//
+Query:       Axinella  [L=244]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    6.9e-47  160.0  32.4    9.1e-47  159.6  32.4    1.1  1  ATP-synt_A  ATP synthase A chain
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_A  ATP synthase A chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  159.6  32.4   5.6e-51   9.1e-47       6     210 ..      33     237 ..      27     238 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 159.6 bits;  conditional E-value: 5.6e-51
+                 XXHHHHHHHH.CHCT.X.TTT.SHHHHHHHHHHHHHHHHHGGGTSS.SSXHHHHHHHHHHHHHHHHHHHHHHSSTTTTTTHHHHHHHHHHHHHHHHHHH CS
+  ATP-synt_A   6 ivllilllllllatrkkkkkl.pgklqnlvealvefvdnlvesvigkkkkkkffpliltlflfilvsNllgliPglfaatadinvtlalAlivfllvli 103
+                 +++ +++++++l+ +    kl p+++q++ve++   ++++v++++gk  ++k+fp++l+lf+fi + N+lgl+P++f++ta+i +t++l+l ++++v++
+    Axinella  33 MMMGLVVTMVWLLLKGD--KLiPNRWQSVVELIHLNIRSVVHDNLGK-XGQKYFPFVLSLFIFIAILNILGLFPYVFTPTAHIVMTFGLSLSILIAVTL 128
+                 55556665555555433..334***********************95.88************************************************* PP
+
+                 HTHHHHGG..GGHHHHXS...SXTTXHHHHHCCHHH.CHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHT.SSSSTHHHH.HHHHHHHHHHCHHHHHHH CS
+  ATP-synt_A 104 lgikkkglkgyfkklfvp...plllvplllpielisefarpvsLalRLfgNifAGelllallagllllllllavllsvli.lllavlllllelfvgfiQ 198
+                 lg+ + +l +++ ++++p   pl+l+p+l+ ie++s+++r +sL++RL +Ni AG+ll+a+l g+++ +l+ ++++  l+ +l+ v+++lle++v++iQ
+    Axinella 129 LGFTTFKL-NFL-SILMPggvPLMLAPFLVGIETLSYMIRAISLGVRLAANISAGHLLFAILSGFTFNMLSNGLVVLSLFpMLILVFITLLEMMVAVIQ 225
+                 *****999.666.66656688*****************************************9999444444444455554779*************** PP
+
+                 HHHHHHHHHHHH CS
+  ATP-synt_A 199 AfvFtlLtlvYi 210
+                 A+vF+lLt++Yi
+    Axinella 226 AYVFCLLTTIYI 237
+                 ***********9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (244 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       964  (0.0591193); expected 326.1 (0.02)
+Passed bias filter:                      250  (0.0153318); expected 326.1 (0.02)
+Passed Vit filter:                        22  (0.0013492); expected 16.3 (0.001)
+Passed Fwd filter:                         5  (0.000306636); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.61u 0.51s 00:00:01.12 Elapsed: 00:00:00.78
+# Mc/sec: 894.93
+//
+Query:       Terebratulina  [L=228]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    1.5e-30  106.6  20.2    1.7e-30  106.4  20.2    1.1  1  ATP-synt_A  ATP synthase A chain
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_A  ATP synthase A chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  106.4  20.2   1.1e-34   1.7e-30      14     210 ..      29     222 ..      16     223 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 106.4 bits;  conditional E-value: 1.1e-34
+                    HH.CHCT.X.TTT.SHHHHHHHHHHHHHHHHHGGGTSS.SSXHHHHHHHHHHHHHHHHHHHHHHSSTTTTTTHHHHHHHHHHHHHHHHHHHHTHHH CS
+     ATP-synt_A  14 llllatrkkkkkl.pgklqnlvealvefvdnlvesvigkkkkkkffpliltlflfilvsNllgliPglfaatadinvtlalAlivfllvlilgikk 108
+                    l+l++t+ +   + p++ q+l     e+++ +++ +   k+    f+l++ lf+ il+ Nl+gl+P++f++t ++ ++++lAl+++ ++++  + +
+  Terebratulina  29 LFLITTKTL--WVfPRQTQTLSRRSKEYIQIQISITKR-KSLPGTFSLFVPLFFRILMVNLFGLLPYVFSPTRHLVLNITLALTLWRIFIFSRLTT 121
+                    333444322..234888888888888888776665553.3558899************************************************99 PP
+
+                    HGG..GGHHHHXS..SXTTXHHHHHCCHHH.CHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHT.SSSSTHHHH.HHHHHHHHHHCHHHHHHHHHH CS
+     ATP-synt_A 109 kglkgyfkklfvp..plllvplllpielisefarpvsLalRLfgNifAGelllallagllllllllavllsvli.lllavlllllelfvgfiQAfv 201
+                    + l+ ++ +l++p  p l+ p+l+++e i  ++rp++L++RL +Ni AG+l+l+ll + l++++   +  s+++ + ++v   l+e++v ++QAf+
+  Terebratulina 122 N-LGLFISHLLPPgaPRLINPFLVIVESIRILVRPITLTIRLAANISAGHLVLSLLSSYLISAS---TSSSFALlFTISVGYSLFEVIVRCVQAFI 213
+                    6.44488888887999****************************************86653333...223344435589***************** PP
+
+                    HHHHHHHHH CS
+     ATP-synt_A 202 FtlLtlvYi 210
+                    F+lL ++Y 
+  Terebratulina 214 FALLLTLYT 222
+                    ********7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (228 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       508  (0.0311542); expected 326.1 (0.02)
+Passed bias filter:                      208  (0.012756); expected 326.1 (0.02)
+Passed Vit filter:                        21  (0.00128787); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.55u 0.36s 00:00:00.91 Elapsed: 00:00:00.57
+# Mc/sec: 1124.60
+//
+Query:       Suberites_domuncula  [L=244]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    2.3e-47  161.6  33.1    2.9e-47  161.2  33.1    1.1  1  ATP-synt_A  ATP synthase A chain
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_A  ATP synthase A chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  161.2  33.1   1.8e-51   2.9e-47       7     210 ..      34     237 ..      28     238 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 161.2 bits;  conditional E-value: 1.8e-51
+                          XHHHHHHHH.CHCT.X.TTTSHHHHHHHHHHHHHHHHHGGGTSS.SSXHHHHHHHHHHHHHHHHHHHHHHSSTTTTTTHHHHHHHHHHHH CS
+           ATP-synt_A   7 vllilllllllatrkkkkklpgklqnlvealvefvdnlvesvigkkkkkkffpliltlflfilvsNllgliPglfaatadinvtlalAli 96 
+                          ++++ ++ ++l+ r   + +p+++q+++e++ + ++++v++++g+ k++k+fp+il lflfi + N+lgl+P++f++ta++ +t++l+l 
+  Suberites_domuncula  34 MMVLAVTAIWLLLRGD-RLIPSRWQSIMELIHSNMRSVVQDNLGQ-KGQKYFPFILCLFLFIAMLNILGLFPYVFTPTAHLVMTFGLSLS 121
+                          2222222233333322.234***********************95.89****************************************** PP
+
+                          HHHHHHHHTHHHHGG..GGHHHHXS...SXTTXHHHHHCCHHH.CHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHT.SSSSTHHHH.HH CS
+           ATP-synt_A  97 vfllvlilgikkkglkgyfkklfvp...plllvplllpielisefarpvsLalRLfgNifAGelllallagllllllllavllsvli.ll 182
+                          ++++v+i g+   +l +++ ++++p   pl+l+p+l++ie++s+++r +sL++RL +Ni AG+ll+a++ g+++ +++ ++++  ++ +l
+  Suberites_domuncula 122 IIIAVTISGFISFKL-NFL-SILMPggvPLALAPVLVLIETMSYMIRAISLGVRLAANISAGHLLFAIISGFAFNMMVNGLMVLSFFpIL 209
+                          ************998.666.66656688*****************************************999955554444445555366 PP
+
+                          HHHHHHHHCHHHHHHHHHHHHHHHHHHH CS
+           ATP-synt_A 183 lavlllllelfvgfiQAfvFtlLtlvYi 210
+                          + v+++lle++v++iQA+vF+lLt++Y+
+  Suberites_domuncula 210 ILVFITLLEIMVAVIQAYVFCLLTTIYL 237
+                          99*************************8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (244 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1017  (0.0623697); expected 326.1 (0.02)
+Passed bias filter:                      275  (0.016865); expected 326.1 (0.02)
+Passed Vit filter:                        25  (0.00153318); expected 16.3 (0.001)
+Passed Fwd filter:                         7  (0.00042929); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.68u 0.37s 00:00:01.05 Elapsed: 00:00:00.57
+# Mc/sec: 1203.52
+//
+Query:       Bfloridae  [L=226]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    1.4e-36  126.3  20.1    1.7e-36  126.0  20.1    1.2  1  ATP-synt_A  ATP synthase A chain
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_A  ATP synthase A chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  126.0  20.1   1.1e-40   1.7e-36      35     210 ..      45     223 ..       9     224 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 126.0 bits;  conditional E-value: 1.1e-40
+                 HHHHHHHHHHGGGTSS...SSXHHHHHHHHHHHHHHHHHHHHHHSSTTTTTTHHHHHHHHHHHHHHHHHHHHTHHHHGG..GGHHHHXS..SXTTXHHH CS
+  ATP-synt_A  35 ealvefvdnlvesvig..kkkkkkffpliltlflfilvsNllgliPglfaatadinvtlalAlivfllvlilgikkkglkgyfkklfvp..plllvpll 129
+                  +++ +++ l+++vi+  +k + +++ l+ +l+l++++ N++gl+P++f++t++++++l+lA+ ++++++++g++++ ++  + +l++   p llvp+l
+   Bfloridae  45 RLVYATIETLISQVIQplNKLGFRWVVLFSSLILMLITLNVIGLFPYTFTPTTQLSINLGLAVPLWFGTVVYGFRNHPVI-ALAHLCPEgaPNLLVPVL 142
+                 45667777777777744555669*******************************************************96.555888668899****** PP
+
+                 HHCCHHH.CHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHT.SSSSTHHHHHHHHHHHHHHCHHHHHHHHHHHHHHHHHHH CS
+  ATP-synt_A 130 lpielisefarpvsLalRLfgNifAGelllallagllllllllavllsvlilllavlllllelfvgfiQAfvFtlLtlvYi 210
+                 +++e++s ++rp++L+lRL++N++AG+ll++l+ +++l l+ l+v+ls ++lll v+l++le+ v++iQ +vF++L ++Y+
+   Bfloridae 143 VVVETLSILIRPLALGLRLTANLTAGHLLIHLISSAVLGLIELSVILSGITLLLLVFLTILEIAVALIQGYVFAILVTLYL 223
+                 *********************************999977777888888888888**************************8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (226 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       701  (0.0429903); expected 326.1 (0.02)
+Passed bias filter:                      228  (0.0139826); expected 326.1 (0.02)
+Passed Vit filter:                        21  (0.00128787); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.61u 0.48s 00:00:01.08 Elapsed: 00:00:00.75
+# Mc/sec: 862.06
+//
+Query:       Katharina  [L=230]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    1.4e-26   93.6  19.7    1.8e-26   93.3  19.7    1.2  1  ATP-synt_A  ATP synthase A chain
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_A  ATP synthase A chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   93.3  19.7   1.1e-30   1.8e-26      27     209 ..      42     224 ..      14     226 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 93.3 bits;  conditional E-value: 1.1e-30
+                 SHHHHHHHHHHHHHHHHHGGGTSS.SSXHHHHHHHHHHHHHHHHHHHHHHSSTTTTTTHHHHHHHHHHHHHHHHHHHHTHHHHGG..GGHHHHXS..SX CS
+  ATP-synt_A  27 pgklqnlvealvefvdnlvesvigkkkkkkffpliltlflfilvsNllgliPglfaatadinvtlalAlivfllvlilgikkkglkgyfkklfvp..pl 123
+                  +++  ++    +f+ ++v    gk + + f+ +++ +fl++++ Nl+gl+P++f++  ++ + + ++l  +l  ++ g  +  + +++ +l++   p+
+   Katharina  42 KSRFYRMILFPKNFMGGQVMRATGK-NIRGFINMVIRIFLLLILVNLSGLLPYVFSLRRHLRFAFCFGLPFWLSLIFSGDLY--VSEVVSHLLPRgaPG 137
+                 5777777777778998888888874.669**************************************************999..5678988885588** PP
+
+                 TTXHHHHHCCHHH.CHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHT.SSSSTHHHH.HHHHHHHHHHCHHHHHHHHHHHHHHHHHH CS
+  ATP-synt_A 124 llvplllpielisefarpvsLalRLfgNifAGelllallagllllllllavllsvli.lllavlllllelfvgfiQAfvFtlLtlvY 209
+                 +l p+l+++e++   +rp++L++RL +Ni AG+++l l+ + l++ l+   +l++ + l+++v+ +l+e+ v +iQA++F+lL  +Y
+   Katharina 138 ILNPFLVLVETVRIRVRPITLSVRLAANIRAGHIILGLIGSYLSVGLFCYPILVLGLlLFVQVFYFLFEIGVRLIQAYIFSLLVRLY 224
+                 **************99***********************8777555555566666665779**********************9999 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (230 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       490  (0.0300503); expected 326.1 (0.02)
+Passed bias filter:                      189  (0.0115908); expected 326.1 (0.02)
+Passed Vit filter:                        14  (0.00085858); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.55u 0.31s 00:00:00.86 Elapsed: 00:00:00.56
+# Mc/sec: 1174.98
+//
+Query:       Geodia  [L=244]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    1.8e-44  152.1  36.6    2.3e-44  151.7  36.6    1.1  1  ATP-synt_A  ATP synthase A chain
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_A  ATP synthase A chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  151.7  36.6   1.4e-48   2.3e-44       5     210 ..      33     237 ..      27     238 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 151.7 bits;  conditional E-value: 1.4e-48
+                 XXXHHHHHHHH.CHCT.X.TTT.SHHHHHHHHHHHHHHHHHGGGTSS.SSXHHHHHHHHHHHHHHHHHHHHHHSSTTTTTTHHHHHHHHHHHHHHHHHH CS
+  ATP-synt_A   5 livllilllllllatrkkkkkl.pgklqnlvealvefvdnlvesvigkkkkkkffpliltlflfilvsNllgliPglfaatadinvtlalAlivfllvl 102
+                 ++++l +++ + l++ +k   l p+++q+++e ++  ++++v++++gk  ++kffp++l lf+fi + N+lgl+P++f +ta+i +tl++++ ++++v+
+      Geodia  33 MMMMLAIIISWSLLEGNK---LiPNRWQFVIEFIYINIHSVVQDNLGK-AGQKFFPFVLCLFIFIAMLNILGLFPYVFVPTAQIVITLGMSVSIIIAVT 127
+                 233333333333344333...34***********************95.88************************************************ PP
+
+                 HHTHHHHGG..GGHHHHXS...SXTTXHHHHHCCHHH.CHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHT.SSSSTHHHH.HHHHHHHHHHCHHHHHH CS
+  ATP-synt_A 103 ilgikkkglkgyfkklfvp...plllvplllpielisefarpvsLalRLfgNifAGelllallagllllllllavllsvli.lllavlllllelfvgfi 197
+                 +lg+ + +l ++f ++++p   pl+l+p+l++ie+ s++++ +sL++RL +Ni AG+ll+a+l g++  +l+ ++++s l+ +l++v+++lle++v++i
+      Geodia 128 LLGLFTFKL-NFF-SILMPggvPLVLAPFLVVIETASYLIKAISLGVRLAANISAGHLLFAILSGFAXNMLSNGMIISSLVpMLIMVFITLLEIMVAII 224
+                 ******999.677.66655688*****************************************9999444444556666665779************** PP
+
+                 HHHHHHHHHHHHH CS
+  ATP-synt_A 198 QAfvFtlLtlvYi 210
+                 QA+vF+lLt++Y+
+      Geodia 225 QAYVFCLLTTIYL 237
+                 ************8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (244 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       990  (0.0607138); expected 326.1 (0.02)
+Passed bias filter:                      221  (0.0135533); expected 326.1 (0.02)
+Passed Vit filter:                        19  (0.00116522); expected 16.3 (0.001)
+Passed Fwd filter:                         6  (0.000367963); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.67u 0.30s 00:00:00.97 Elapsed: 00:00:00.56
+# Mc/sec: 1246.50
+//
+Query:       Metridium  [L=229]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    1.2e-44  152.7  30.2    1.4e-44  152.4  30.2    1.0  1  ATP-synt_A  ATP synthase A chain
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_A  ATP synthase A chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  152.4  30.2   8.8e-49   1.4e-44       4     210 ..      23     222 ..      18     223 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 152.4 bits;  conditional E-value: 8.8e-49
+                 XXXXHHHHHHHH.CHCT.X.TTTSHHHHHHHHHHHHHHHHHGGGTSS.SSXHHHHHHHHHHHHHHHHHHHHHHSSTTTTTTHHHHHHHHHHHHHHHHHH CS
+  ATP-synt_A   4 tlivllilllllllatrkkkkklpgklqnlvealvefvdnlvesvigkkkkkkffpliltlflfilvsNllgliPglfaatadinvtlalAlivfllvl 102
+                 ++++++ ++l+ll  +r +   +p+++q+++e +++ +++lv+++ g     ++fp+++tlf+fi++ N+lgl+P++f++t +i vtl+l++ ++++v+
+   Metridium  23 MMMLAVAVALILLKGNR-L---IPNRWQAVMESIYDHFHGLVKDNSG----PQYFPFVFTLFIFIVFLNILGLFPYVFTVTVHIVVTLGLSFSIVIGVT 113
+                 22222222233323333.2...3***********************6....479********************************************* PP
+
+                 HHTHHHHGG..GGHHHHXS...SXTTXHHHHHCCHHH.CHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHT.SSSSTHHHHHHHHHHHHHHCHHHHHHH CS
+  ATP-synt_A 103 ilgikkkglkgyfkklfvp...plllvplllpielisefarpvsLalRLfgNifAGelllallagllllllllavllsvlilllavlllllelfvgfiQ 198
+                 + g+ k ++ +++ ++++p   pl+l+pll++ie++s+++r +sL++RL +N+ AG+ll+a+lag+ + +l++a+++ ++++l++v++ lle  v++iQ
+   Metridium 114 LGGLWKFKW-NFL-SILMPagaPLALAPLLVLIETVSYISRAISLGVRLAANLSAGHLLFAILAGFGFNMLTTAGVFNIFPVLIMVFISLLEAAVAVIQ 210
+                 ******999.666.66655589******************************************999777777777777778899************** PP
+
+                 HHHHHHHHHHHH CS
+  ATP-synt_A 199 AfvFtlLtlvYi 210
+                 A+vF+lLt++Y+
+   Metridium 211 AYVFSLLTTIYL 222
+                 ***********8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (229 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       905  (0.055501); expected 326.1 (0.02)
+Passed bias filter:                      241  (0.0147798); expected 326.1 (0.02)
+Passed Vit filter:                        16  (0.000981234); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.57u 0.45s 00:00:01.02 Elapsed: 00:00:00.77
+# Mc/sec: 850.82
+//
+Query:       Amphimedon_queenslandica  [L=234]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    1.1e-44  152.8  33.2    1.3e-44  152.5  33.2    1.0  1  ATP-synt_A  ATP synthase A chain
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_A  ATP synthase A chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  152.5  33.2   8.2e-49   1.3e-44       3     210 ..      23     227 ..      21     228 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 152.5 bits;  conditional E-value: 8.2e-49
+                               XXXXXHHHHHHHH.CHCT.X.TTTSHHHHHHHHHHHHHHHHHGGGTSS.SSXHHHHHHHHHHHHHHHHHHHHHHSSTTTTTTHHH CS
+                ATP-synt_A   3 ttlivllilllllllatrkkkkklpgklqnlvealvefvdnlvesvigkkkkkkffpliltlflfilvsNllgliPglfaatadi 87 
+                               ++++ +li++ll+l+ +r     +p+ +q+++e+++  ++++v +++gk  ++k+fp+il+lf+fi+v N lg++P++f++t +i
+  Amphimedon_queenslandica  23 MMMMGALIVILLFLIGKR-V---IPNVWQSIMELAYANIRGMVYDNLGK-PGQKYFPFILSLFMFIVVLNGLGVFPYVFTPTVHI 102
+                               455555555566666665.2...3***********************95.789******************************** PP
+
+                               HHHHHHHHHHHHHHHHHTHHHHGG..GGHHHHXS...SXTTXHHHHHCCHHH.CHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+                ATP-synt_A  88 nvtlalAlivfllvlilgikkkglkgyfkklfvp...plllvplllpielisefarpvsLalRLfgNifAGelllallaglllll 169
+                                +t++++l ++++v++lg+   g    f ++++p   p++l+p+l+++e is+++r +sL++RL +N++AG+ll++++ g+++++
+  Amphimedon_queenslandica 103 IITFGMSLSIIIGVTLLGFWGFGG--NFLSILMPagaPMVLAPFLIVVEAISYVSRAISLGVRLAANLIAGHLLFSIISGFAFSM 185
+                               *******************99775..55577766699*****************************************9999555 PP
+
+                               T.SSSSTHHHH.HHHHHHHHHHCHHHHHHHHHHHHHHHHHHH CS
+                ATP-synt_A 170 lllavllsvli.lllavlllllelfvgfiQAfvFtlLtlvYi 210
+                               l+ +++l  l+ +l++v+++lle+ v+ iQA+vF+lLt++Y+
+  Amphimedon_queenslandica 186 LVGGLALLGLFpMLIMVFITLLEMAVAGIQAYVFCLLTTIYL 227
+                               555555555564779**************************8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (234 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       836  (0.0512695); expected 326.1 (0.02)
+Passed bias filter:                      237  (0.0145345); expected 326.1 (0.02)
+Passed Vit filter:                        31  (0.00190114); expected 16.3 (0.001)
+Passed Fwd filter:                         8  (0.000490617); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.67u 0.32s 00:00:00.99 Elapsed: 00:00:00.56
+# Mc/sec: 1174.45
+//
+Query:       Acropora  [L=232]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    5.2e-47  160.4  28.4    6.1e-47  160.2  28.4    1.0  1  ATP-synt_A  ATP synthase A chain
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_A  ATP synthase A chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  160.2  28.4   3.8e-51   6.1e-47       3     210 ..      23     225 ..      17     226 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 160.2 bits;  conditional E-value: 3.8e-51
+                 XXXXXHHHHHHHH.CHCT.X.TTT.SHHHHHHHHHHHHHHHHHGGGTSS.SSXHHHHHHHHHHHHHHHHHHHHHHSSTTTTTTHHHHHHHHHHHHHHHH CS
+  ATP-synt_A   3 ttlivllilllllllatrkkkkkl.pgklqnlvealvefvdnlvesvigkkkkkkffpliltlflfilvsNllgliPglfaatadinvtlalAlivfll 100
+                 ++++v++++lll+    +    +l p+++q+l+e+++e ++++v++++g+ ++ ++fpli++lf+fi++ N+lgl+P++f++t +i vtl+l++ ++++
+    Acropora  23 MMILVVVVVLLLF----K-G-VQLiPKRWQSLIELIYEHFHGVVKDNLGS-EGLRYFPLIVSLFFFIVFLNVLGLFPYVFTPTVHIVVTLGLSFSIIIG 114
+                 2222222222222....2.2.2334***********************95.889********************************************* PP
+
+                 HHHHTHHHHGG..GGHHHHXS...SXTTXHHHHHCCHHH.CHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHT.SSSSTHHHHHHHHHHHHHHCHHHHH CS
+  ATP-synt_A 101 vlilgikkkglkgyfkklfvp...plllvplllpielisefarpvsLalRLfgNifAGelllallagllllllllavllsvlilllavlllllelfvgf 196
+                 v+++g+ + +  ++f ++f+p   pl l+pll++ie++s ++r +sL++RL +N+ AG+ll+a+lag+ + +l++++ ++v++ll++v+++lle+ v++
+    Acropora 115 VTLAGFWRFKG-DFF-SVFMPsgaPLGLAPLLVLIETVSFISRAISLGVRLAANLSAGHLLFAILAGFGFNMLVASGPVGVFPLLIMVFITLLEVAVAV 211
+                 ********664.566.67756699******************************************999777766666776667789************ PP
+
+                 HHHHHHHHHHHHHH CS
+  ATP-synt_A 197 iQAfvFtlLtlvYi 210
+                 iQA+vF+lL+++Y+
+    Acropora 212 IQAYVFCLLATIYL 225
+                 *************8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (232 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       996  (0.0610818); expected 326.1 (0.02)
+Passed bias filter:                      301  (0.0184595); expected 326.1 (0.02)
+Passed Vit filter:                        39  (0.00239176); expected 16.3 (0.001)
+Passed Fwd filter:                         5  (0.000306636); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.56u 0.37s 00:00:00.93 Elapsed: 00:00:00.55
+# Mc/sec: 1206.75
+//
+Query:       Trichinella  [L=276]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    7.2e-05   22.7  22.4    0.00017   21.5  22.4    1.7  1  ATP-synt_A      ATP synthase A chain
+  ------ inclusion threshold ------
+          2    8.5   3.2        1.7    8.7   1.4    1.8  2  Rod_cone_degen  Progressive rod-cone degeneration
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_A  ATP synthase A chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.5  22.4   2.1e-08   0.00017      38     210 ..      69     224 ..      41     225 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 21.5 bits;  conditional E-value: 2.1e-08
+                  HHHHHHHGGGTSS.SSXHHHHHHHHHHHHHHHHHHHHHHSSTTTTTTHHHHHHHHHHHHHHHHHHHHTHHHH.GG..GGHHHHXS.SXTTXHHHHHCC CS
+   ATP-synt_A  38 vefvdnlvesvigkkkkkkffpliltlflfilvsNllgliPglfaatadinvtlalAlivfllvlilgikkk.glkgyfkklfvp.plllvplllpie 133
+                  ++++++l++s+++  ++++ + +   ++  i++sNl++l+ ++  ++++   t++l  +++ll l   i  + gl + f k ++   +++ + l++++
+  Trichinella  69 YNTIKKLTNSNLN--NQNNSYTITSNILHIIILSNLISLLRYNWIINSQW-WTISLITTLYLLSLWRRILLNrGL-KTFGKNTPLgWIIINISLWIFH 162
+                  6788999999995..34456788999999**********97555555555.455555555555555555444177.5555555433345555788*** PP
+
+                  HHH.CHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHT.SSSSTHHHHHHHHHHHHHHCHHHHHHHHHHHHHHHHHHH CS
+   ATP-synt_A 134 lisefarpvsLalRLfgNifAGelllallagllllllllavllsvlilllavlllllelfvgfiQAfvFtlLtlvYi 210
+                   i + +r vsL +R+  N++ G  l          +           ++ ++l+ l e+fv+++Q+ vF++L+ +Y 
+  Trichinella 163 NIRYAIRFVSLPFRIIINLIVGVFLTEFAK-----SN----------IISTTLISLYEIFVILVQTTVFIILANIYY 224
+                  **********************98887775.....12..........2345688999******************97 PP
+
+>> Rod_cone_degen  Progressive rod-cone degeneration
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.1   0.0      0.99     8e+03      11      23 ..      60      72 ..      51      73 .. 0.73
+   2 ?    8.7   1.4   0.00021       1.7       2      22 ..     122     138 ..     121     140 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: -3.1 bits;  conditional E-value: 0.99
+  Rod_cone_degen 11 LamLWRRRfanRv 23
+                    +   W+ R+ n +
+     Trichinella 60 IDTFWKTRWYNTI 72
+                    5668999998865 PP
+
+  == domain 2  score: 8.7 bits;  conditional E-value: 0.00021
+  Rod_cone_degen   2 CttLfLlstLamLWRRRfanR 22 
+                      ttL+Lls    LWRR   nR
+     Trichinella 122 ITTLYLLS----LWRRILLNR 138
+                     69******....****99998 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (276 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       871  (0.0534159); expected 326.1 (0.02)
+Passed bias filter:                      229  (0.0140439); expected 326.1 (0.02)
+Passed Vit filter:                        20  (0.00122654); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.52u 0.49s 00:00:01.01 Elapsed: 00:00:00.79
+# Mc/sec: 999.48
+//
+Query:       Balanoglossus  [L=227]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    4.5e-37  127.9  19.3    5.3e-37  127.7  19.3    1.0  1  ATP-synt_A  ATP synthase A chain
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_A  ATP synthase A chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  127.7  19.3   3.2e-41   5.3e-37       7     210 ..      20     223 ..      13     224 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 127.7 bits;  conditional E-value: 3.2e-41
+                    XHHHHHHHH.CHCT.X.TTT.SHHHHHHHHHHHHHHHHHGGGTSS.SSXHHHHHHHHHHHHHHHHHHHHHHSSTTTTTTHHHHHHHHHHHHHHHHH CS
+     ATP-synt_A   7 vllilllllllatrkkkkkl.pgklqnlvealvefvdnlvesvigkkkkkkffpliltlflfilvsNllgliPglfaatadinvtlalAlivfllv 101
+                    +l++++   ++ t  ++ +   +++ ++++ lv+ +  ++   +g     +++  i++lf+ +l  Nl+gliP +f++t+++++tl+lAl ++l+v
+  Balanoglossus  20 SLALIAAPSWI-TLLQSPNWlASRIYFAWQSLVTQLPPVILRAAGA-GSAPWAAPIFSLFVVLLSLNLMGLIPHSFTPTSHLSLTLSLALPLWLGV 113
+                    33333322222.222334445799************9999999984.56899******************************************** PP
+
+                    HHHTHHHHGG..GGHHHHXS..SXTTXHHHHHCCHHH.CHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHT.SSSSTHHHHHHHHHHHHHHCHHHH CS
+     ATP-synt_A 102 lilgikkkglkgyfkklfvp..plllvplllpielisefarpvsLalRLfgNifAGelllallagllllllllavllsvlilllavlllllelfvg 195
+                    +ilg++   + + + +l++   p ll+pll+ ie +s +a+p++LalRL +N++AG+ll+ ll ++ +ll+ ++ +++ l++++ vll++le+ v+
+  Balanoglossus 114 TILGFRS-DFNNRLSHLVPQgtPPLLIPLLVWIEALSLLAQPIALALRLAANLTAGHLLIYLLSAARWLLTPMMPIIGSLTAIVLVLLFILEIAVA 208
+                    *******.78899999986688999**************************************8776788888888888887779999******** PP
+
+                    HHHHHHHHHHHHHHH CS
+     ATP-synt_A 196 fiQAfvFtlLtlvYi 210
+                    +iQA+vF+ L++ Y+
+  Balanoglossus 209 CIQAYVFVALASFYL 223
+                    **************8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (227 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       632  (0.0387587); expected 326.1 (0.02)
+Passed bias filter:                      197  (0.0120814); expected 326.1 (0.02)
+Passed Vit filter:                        17  (0.00104256); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.63u 0.33s 00:00:00.96 Elapsed: 00:00:00.57
+# Mc/sec: 1119.67
+//
+Query:       Tetrancistrum_nebulosi  [L=169]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    0.00029   20.7  17.1    0.00045   20.1  17.1    1.4  1  ATP-synt_A  ATP synthase A chain
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_A  ATP synthase A chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   20.1  17.1   2.8e-08   0.00045      86     201 ..      50     158 ..       5     163 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 20.1 bits;  conditional E-value: 2.8e-08
+                             HHHHHHHHHHHHHHHHHHHTHHHHGG..GGHHHHXS..SXTTXHHHHHCCHHH.CHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHT CS
+              ATP-synt_A  86 dinvtlalAlivfllvlilgikkkglkgyfkklfvp..plllvplllpielisefarpvsLalRLfgNifAGelllallagllllll 170
+                              +   + l l+ +++ l++g  +kg+k +f +l++p  pl+++pl+ + e+i +++rp+ L+lR f  i+ G    +++ g +  ++
+  Tetrancistrum_nebulosi  50 LLLYIFIL-LAPMFVSLFVGRLEKGVKTFFSSLLPPgtPLWIAPLVGFAETIRYIVRPIVLMLRPFLKITIGCFAALAIGGGFCKNW 135
+                             44444444.555677889999999*********98899**********************************999999976655555 PP
+
+                             .SSSSTHHHHHHHHHHHHHHCHHHHHHHHHH CS
+              ATP-synt_A 171 llavllsvlilllavlllllelfvgfiQAfv 201
+                             ll+        +  ++l++ e+fv+++  f+
+  Tetrancistrum_nebulosi 136 LLI--------VGLLMLFFYEIFVAMVHWFI 158
+                             332........22234445577777766555 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (169 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       553  (0.0339139); expected 326.1 (0.02)
+Passed bias filter:                      174  (0.0106709); expected 326.1 (0.02)
+Passed Vit filter:                        13  (0.000797253); expected 16.3 (0.001)
+Passed Fwd filter:                         1  (6.13271e-05); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.58u 0.27s 00:00:00.85 Elapsed: 00:00:00.56
+# Mc/sec: 863.36
+//
+Query:       Pseudogarypus_banksi  [L=213]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    2.3e-28   99.5  29.3    2.8e-28   99.2  29.3    1.1  1  ATP-synt_A  ATP synthase A chain
+     0.0059   16.3   0.3     0.0059   16.3   0.3    1.5  2  VIT1        VIT family
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_A  ATP synthase A chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   99.2  29.3   3.4e-32   2.8e-28      10     209 ..      18     208 ..      12     210 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 99.2 bits;  conditional E-value: 3.4e-32
+                           HHHHHH.CHCT.X.TTTSHHHHHHHHHHHHHHHHHGGGTSS.SSXHHHHHHHHHHHHHHHHHHHHHHSSTTTTTTHHHHHHHHHHHHHH CS
+            ATP-synt_A  10 illlllllatrkkkkklpgklqnlvealvefvdnlvesvigkkkkkkffpliltlflfilvsNllgliPglfaatadinvtlalAlivf 98 
+                           i++ ++++++++  +k  + l+  + +l++++++ ++s+i  k++ +++  ++tlf+++++ N++gl+P++f+at+++ +tl+l+l+++
+  Pseudogarypus_banksi  18 IFISFFIFINSQF-IK-NNSLTLNFIVLFKIINKELKSSII-KRRIRIILKAITLFVWVIIFNIIGLFPYIFTATSHLILTLSLSLTLI 103
+                           3333333444322.33.456666667888999666666664.477999***************************************** PP
+
+                           HHHHHHTHHHHGG..GGHHHHXS..SXTTXHHHHHCCHHH.CHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHT.SSSSTHHHHHHHHH CS
+            ATP-synt_A  99 llvlilgikkkglkgyfkklfvp..plllvplllpielisefarpvsLalRLfgNifAGelllallagllllllllavllsvlilllav 185
+                           +++  +g++ +  k  + +l+++  p++l+p+l +ieli+ ++rp++L +RL +Ni++G+l+l+++   l        l  ++ +l   
+  Pseudogarypus_banksi 104 IIIWRFGWNINT-KLLIINLIPKsrPMPLAPFLRLIELIGILIRPLTLRIRLSANIISGHLILSIIRISL------EKLSKII-FLPLS 184
+                           ********9964.457778876689*****************************************7332......2222333.33346 PP
+
+                           HHHHHCHHHHHHHHHHHHHHHHHH CS
+            ATP-synt_A 186 lllllelfvgfiQAfvFtlLtlvY 209
+                           +ll+le+ v++iQ++vF+ L ++Y
+  Pseudogarypus_banksi 185 ILLILEMGVALIQSYVFISLIILY 208
+                           7889*******************9 PP
+
+>> VIT1  VIT family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   16.3   0.3   7.2e-07    0.0059     127     177 ..      56     106 ..      26     114 .. 0.78
+   2 ?   -4.5   1.1       1.7   1.4e+04     150     175 ..     181     205 ..     180     208 .. 0.63
+
+  Alignments for each domain:
+  == domain 1  score: 16.3 bits;  conditional E-value: 7.2e-07
+                  VIT1 127 earelsplkaAlssalsfliGgliPllpylfvssvglalvvsialtllall 177
+                            +r+ + + +A++ ++  +i+ +i l+py+f+++ +l l +s+ ltl++++
+  Pseudogarypus_banksi  56 IKRRIRIILKAITLFVWVIIFNIIGLFPYIFTATSHLILTLSLSLTLIIII 106
+                           3344466779***********************999999999999988764 PP
+
+  == domain 2  score: -4.5 bits;  conditional E-value: 1.7
+                  VIT1 150 iPllpylfvssvglalvvsialtlla 175
+                           +Pl   l+++ +g al+ s ++++l+
+  Pseudogarypus_banksi 181 LPLSILLILE-MGVALIQSYVFISLI 205
+                           6776677777.777777776665554 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (213 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       737  (0.0451981); expected 326.1 (0.02)
+Passed bias filter:                      156  (0.00956703); expected 326.1 (0.02)
+Passed Vit filter:                        16  (0.000981234); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.63u 0.31s 00:00:00.94 Elapsed: 00:00:00.59
+# Mc/sec: 1032.81
+//
+Query:       Benedenia_hoshinai  [L=169]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    0.00012   21.9  18.1    0.00015   21.6  18.1    1.1  1  ATP-synt_A  ATP synthase A chain
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_A  ATP synthase A chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.6  18.1   9.5e-09   0.00015      64     201 ..      27     158 ..       5     165 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 21.6 bits;  conditional E-value: 9.5e-09
+                         HHHHHHHHHHHHH.SSTTTTTTHHHHHHHHHHHHHHHHHHHHTHHHHGG..GGHHHHXS..SXTTXHHHHHCCHHH.CHHHHHHHHHHHHH CS
+          ATP-synt_A  64 lflfilvsNllgl.iPglfaatadinvtlalAlivfllvlilgikkkglkgyfkklfvp..plllvplllpielisefarpvsLalRLfgN 151
+                         l++f+l   +l+l iP+++++   + + + l + +f+ +++  i   g+ ++f +l++p  pl+++p++ + e+is+++rp+ L lR f  
+  Benedenia_hoshinai  27 LVCFLLSLRFLSLrIPYIYKVLEFVGLVIILIFPLFISIFLSRITL-GFNSFFSSLLPPgtPLAIAPFVCLAETISYIVRPLVLKLRPFLK 116
+                         6778888888885579999999999999999999999998888888.********998899****************************** PP
+
+                         HHHHHHHHHHHHHHHHHHT.SSSSTHHHHHHHHHHHHHHCHHHHHHHHHH CS
+          ATP-synt_A 152 ifAGelllallagllllllllavllsvlilllavlllllelfvgfiQAfv 201
+                         i+ G+l  a + g+ ++       + +li  + v+l++ e+fv+++  f+
+  Benedenia_hoshinai 117 ITIGSLAGASIGGMSMA-------INPLI-GFLVFLFMYEVFVALVHWFI 158
+                         ***********866322.......23333.23467777888888887666 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (169 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       692  (0.0424384); expected 326.1 (0.02)
+Passed bias filter:                      265  (0.0162517); expected 326.1 (0.02)
+Passed Vit filter:                        24  (0.00147185); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.56u 0.32s 00:00:00.88 Elapsed: 00:00:00.57
+# Mc/sec: 833.59
+//
+Query:       Myxine  [L=228]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    1.4e-37  129.6  27.7    1.7e-37  129.3  27.7    1.1  1  ATP-synt_A  ATP synthase A chain
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_A  ATP synthase A chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  129.3  27.7   1.1e-41   1.7e-37       5     210 ..      20     223 ..      17     224 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 129.3 bits;  conditional E-value: 1.1e-41
+                 XXXHHHHH.HHH.CHCT.X.TTTSHHHHHHHHHHHHHH.HHHGGGTSS.SSXHHHHHHHHHHHHHHHHHHHHHHSSTTTTTTHHHHHHHHHHHHHHHHH CS
+  ATP-synt_A   5 livllill.lllllatrkkkkklpgklqnlvealvefv.dnlvesvigkkkkkkffpliltlflfilvsNllgliPglfaatadinvtlalAlivfllv 101
+                 +i ++il+ l +++  +++ +   ++   l+ ++++++ +++++++   k+++ ++ l++t ++fi+++N++gl+P++f++t+++++++a+A+ ++l++
+      Myxine  20 IIFIAILIsLTIFIPDNNLLI--KNQSSILASTFLKTItKEIFSPIK--KSGHSWALLLITTLIFIFLNNITGLLPYTFTVTSQLSLNIAMAIPLWLGT 114
+                 444445552333344444434..456667888888888555555555..5889********************************************** PP
+
+                 HHHTHHHHGG..GGHHHHXS..SXTTXHHHHHCCHHH.CHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHT.SSSSTHHHHHHHHHHHHHHCHHHHHHH CS
+  ATP-synt_A 102 lilgikkkglkgyfkklfvp..plllvplllpielisefarpvsLalRLfgNifAGelllallagllllllllavllsvlilllavlllllelfvgfiQ 198
+                 +i+g   +   + + +l++   p+ l+p+l++ie is ++rp++L++RL++Ni+AG+ll++l+ ++l+ l+ ++ ll +++  + +lll+lel v+fiQ
+      Myxine 115 IIIGATSQPS-HSLAHLLPEgtPITLAPFLIVIESISIIIRPLALGVRLTANITAGHLLIHLVSLALINLTKSLPLLFLTF-SVFILLLILELAVSFIQ 211
+                 *******986.88889986688*****************************************766533333333333333.2458999********** PP
+
+                 HHHHHHHHHHHH CS
+  ATP-synt_A 199 AfvFtlLtlvYi 210
+                 A+vF++L ++Y+
+      Myxine 212 AYVFVILVSLYL 223
+                 ***********8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (228 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       788  (0.0483258); expected 326.1 (0.02)
+Passed bias filter:                      195  (0.0119588); expected 326.1 (0.02)
+Passed Vit filter:                        18  (0.00110389); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.60u 0.32s 00:00:00.92 Elapsed: 00:00:00.53
+# Mc/sec: 1230.70
+//
+Query:       Drosophila  [L=224]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    8.3e-36  123.8  21.7      1e-35  123.5  21.7    1.1  1  ATP-synt_A  ATP synthase A chain
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_A  ATP synthase A chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  123.5  21.7   6.2e-40     1e-35      18     210 ..      34     220 ..      15     221 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 123.5 bits;  conditional E-value: 6.2e-40
+                 HCT.X.TTTSHHHHHHHHHHHHHHHHHGGGTSS..SSXHHHHHHHHHHHHHHHHHHHHHHSSTTTTTTHHHHHHHHHHHHHHHHHHHHTHHHHGG..GG CS
+  ATP-synt_A  18 atrkkkkklpgklqnlvealvefvdnlvesvig.kkkkkkffpliltlflfilvsNllgliPglfaatadinvtlalAlivfllvlilgikkkglkgyf 115
+                 + + +   +p++   +++ ++ ++++ +++ +g +  ++  + ++++lf +il++N++gl+P++f+ t ++++tl+lAl ++l+++++g+ ++   ++f
+  Drosophila  34 IYW-L---IPSRYNIIWNSILLTLHKEFKTLLGpS-GHNGSTFIFISLFSLILFNNFIGLFPYIFTRTRHLTLTLSLALPLWLCFILYGWINHTQ-HIF 126
+                 333.2...29999***********999*****854.4455678899**********************************************975.899 PP
+
+                 HHHHXS..SXTTXHHHHHCCHHH.CHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHT.SSSSTHHHHHHHHHHHHHHCHHHHHHHHHHHHHHHHHHH CS
+  ATP-synt_A 116 kklfvp..plllvplllpielisefarpvsLalRLfgNifAGelllallagllllllllavllsvlilllavlllllelfvgfiQAfvFtlLtlvYi 210
+                  +l++   p +l+p++++ie+i +++rp +La+RL++Ni+AG+lll+ll  +    ++++++l++++l+++++ll+le  v++iQ++vF++L ++Y 
+  Drosophila 127 AHLVPQgtPAILIPFIVCIETIRNIIRPGTLAVRLTANIIAGHLLLTLLGNTG---SSISYILITFLLIAQIALLVLESAVAIIQSYVFAVLRTLYS 220
+                 89876688*****************************************8553...22333344444668*************************95 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (224 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       593  (0.036367); expected 326.1 (0.02)
+Passed bias filter:                      187  (0.0114682); expected 326.1 (0.02)
+Passed Vit filter:                        18  (0.00110389); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.57u 0.30s 00:00:00.86 Elapsed: 00:00:00.52
+# Mc/sec: 1232.36
+//
+Query:       Ciona  [L=210]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    1.2e-26   93.9  33.2    1.2e-26   93.9  33.2    1.4  1  ATP-synt_A  ATP synthase A chain
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_A  ATP synthase A chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   93.9  33.2   7.1e-31   1.2e-26      48     210 ..      46     203 ..      23     204 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 93.9 bits;  conditional E-value: 7.1e-31
+                 TSS.SSXHHHHHHHHHHHHHHHHHHHHHHSSTTTTTTHHHHHHHHHHHHHHHHHHHHTHHHHGG..GGHHHHXS..SXTTXHHHHHCCHHH.CHHHHHH CS
+  ATP-synt_A  48 vigkkkkkkffpliltlflfilvsNllgliPglfaatadinvtlalAlivfllvlilgikkkglkgyfkklfvp..plllvplllpielisefarpvsL 144
+                    ++k +++f + +++f+ il+ Nllg+iP+ f++++ + vt+++++i+++ ++i    + ++k  + +l++   p +lv +l+ ie++s+farp++L
+       Ciona  46 F--TSKFSRIFFFYFSVFFVILFINLLGIIPFRFSVSSLLVVTFSFSVILWISTIIRRYSN-NFKYNIAHLLPLrtPYALVLILVWIEIMSQFARPLAL 141
+                 2..346699**********************************************999998.676666677644789********************** PP
+
+                 HHHHHHHHHHHHHHHHHHHHHHHHHT.SSSSTHHHHHHHHHHHHHHCHHHHHHHHHHHHHHHHHHH CS
+  ATP-synt_A 145 alRLfgNifAGelllallagllllllllavllsvlilllavlllllelfvgfiQAfvFtlLtlvYi 210
+                  +RL +Ni+AG+lll+l+ + +++l+ +     +li++l   l++le+ v+fiQ +vF lL ++Yi
+       Ciona 142 RIRLIANITAGHLLLHLISQRFFFLGPM----RILIIFLFSTLVILEIAVSFIQPYVFGLLLSLYI 203
+                 ******************8665455533....3344444566789********************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (210 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       951  (0.0583221); expected 326.1 (0.02)
+Passed bias filter:                      232  (0.0142279); expected 326.1 (0.02)
+Passed Vit filter:                        26  (0.00159451); expected 16.3 (0.001)
+Passed Fwd filter:                         5  (0.000306636); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.66u 0.48s 00:00:01.14 Elapsed: 00:00:00.71
+# Mc/sec: 846.16
+//
+Query:       Epigonichthys  [L=226]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    1.6e-37  129.4  20.9      2e-37  129.1  20.9    1.1  1  ATP-synt_A  ATP synthase A chain
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_A  ATP synthase A chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  129.1  20.9   1.2e-41     2e-37      26     210 ..      38     223 ..      12     224 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 129.1 bits;  conditional E-value: 1.2e-41
+                    T.SHHHHHHHHHHHHHHHHHGGGTSS.SSXHHHHHHHHHHHHHHHHHHHHHHSSTTTTTTHHHHHHHHHHHHHHHHHHHHTHHHHGG..GGHHHHX CS
+     ATP-synt_A  26 l.pgklqnlvealvefvdnlvesvigkkkkkkffpliltlflfilvsNllgliPglfaatadinvtlalAlivfllvlilgikkkglkgyfkklfv 120
+                       ++   l+ al+e + ++v++ +  +k+ +++ l+  l+l i++ N++gl+P++f++t++++++l+lA+ ++l+++++g++++ ++  + +l++
+  Epigonichthys  38 WaGTRSSLLLSALMEGLVSQVSQPLS-RKGTNWVVLFSGLILIIITLNVVGLFPYTFTPTTQLSINLGLAVPLWLGTIVYGFRTHPTV-ALAHLCP 131
+                    23467788889999999888888886.5889******************************************************995.6668886 PP
+
+                    S..SXTTXHHHHHCCHHH.CHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHT.SSSSTHHHHHHHHHHHHHHCHHHHHHHHHHHHHHHHHHH CS
+     ATP-synt_A 121 p..plllvplllpielisefarpvsLalRLfgNifAGelllallagllllllllavllsvlilllavlllllelfvgfiQAfvFtlLtlvYi 210
+                       p ll+p+l+++e++s ++rp++L+lRL++N++AG+ll++l+ ++++ l++l++++s+++l+l v+l+lle+ v++iQ +vF++L ++Y+
+  Epigonichthys 132 EgaPNLLIPMLIVVETLSILIRPLALGLRLTANLTAGHLLMHLISSAVIGLMSLSTIASFVTLVLLVFLTLLEIAVALIQGYVFVILVTLYL 223
+                    68899***************************************999977777778888888888**************************8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (226 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       834  (0.0511468); expected 326.1 (0.02)
+Passed bias filter:                      249  (0.0152705); expected 326.1 (0.02)
+Passed Vit filter:                        24  (0.00147185); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.58u 0.33s 00:00:00.90 Elapsed: 00:00:00.55
+# Mc/sec: 1175.54
+//
+Query:       Strigamia_maritima  [L=221]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    6.1e-36  124.2  15.9    7.9e-36  123.9  15.9    1.2  1  ATP-synt_A  ATP synthase A chain
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_A  ATP synthase A chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  123.9  15.9   4.8e-40   7.9e-36      44     210 ..      57     218 ..      16     219 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 123.9 bits;  conditional E-value: 4.8e-40
+                         HGGGTSS.SSXHHHHHHHHHHHHHHHHHHHHHHSSTTTTTTHHHHHHHHHHHHHHHHHHHHTHHHHGG..GGHHHHXS..SXTTXHHHHHC CS
+          ATP-synt_A  44 lvesvigkkkkkkffpliltlflfilvsNllgliPglfaatadinvtlalAlivfllvlilgikkkglkgyfkklfvp..plllvplllpi 132
+                          ++ ++   k+k f  ++ltlf+ i+++N lgl P++f++t++i +tl+l+l ++l+++i g+ k ++ +++++l++   p++l+p++++i
+  Strigamia_maritima  57 EIKIIV---KRKGFKIILLTLFIIIITNNTLGLAPYVFTPTSHILITLSLSLPLWLAIVIQGWTK-KFNHIITHLVPQgtPGPLIPFIVCI 143
+                         445555...34567799***********************************************9.68899999986688*********** PP
+
+                         CHHH.CHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHT.SSSSTHHHHHHHHHHHHHHCHHHHHHHHHHHHHHHHHHH CS
+          ATP-synt_A 133 elisefarpvsLalRLfgNifAGelllallagllllllllavllsvlilllavlllllelfvgfiQAfvFtlLtlvYi 210
+                         e+i +++rp +La+RL +Ni+AG+lll++l      +    + + ++++l +++ll le  v++iQA+vFt+L ++Yi
+  Strigamia_maritima 144 ETIRNTIRPATLAVRLAANIIAGHLLLTILREQRNKNP---TSVLPALFLSQIALLTLETAVAIIQAYVFTILRALYI 218
+                         ******************************64422222...2233444669**************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (221 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       492  (0.0301729); expected 326.1 (0.02)
+Passed bias filter:                      180  (0.0110389); expected 326.1 (0.02)
+Passed Vit filter:                        11  (0.000674598); expected 16.3 (0.001)
+Passed Fwd filter:                         1  (6.13271e-05); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.53u 0.32s 00:00:00.85 Elapsed: 00:00:00.56
+# Mc/sec: 1129.01
+//
+Query:       Caenorhabditis  [L=199]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    3.8e-17   62.8  22.6      9e-17   61.6  22.6    1.6  1  ATP-synt_A  ATP synthase A chain
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_A  ATP synthase A chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   61.6  22.6   5.5e-21     9e-17      34     210 ..      23     197 ..       3     198 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 61.6 bits;  conditional E-value: 5.5e-21
+                     HHHHHHHH.HHHGGGTSS..SSXHHHHH..HHHHHHHHHHHHH.HHH.HSSTTTTTTHHHHHHHHHHHHHHHHHHHHTHHHHGG..GGHHHHXSS CS
+      ATP-synt_A  34 vealvefv.dnlvesvig.kkkkkkffp..liltlflfilvsN.llg.liPglfaatadinvtlalAlivfllvlilgikkkglkgyfkklfvpp 122
+                      e +++++ +++++  +g   ++ + +p   ++++f+fi++    +g  + ++f + + + +t++ A + +l +l++ i ++++  y++k     
+  Caenorhabditis  23 KESILNTLvKKFLNRLVGvF-RYTNTLPlrSVISIFTFIVLLTcCFGgYFTYSFCPCGMVEFTFVYAAVAWLSTLLTFISREKFSVYIRKP--GD 114
+                     45555555466666666533.455556633578888887654313344899999******************************9999885..34 PP
+
+                     XTTXH.HHHHCCHHH.CHHHHHHHHHHHHHHHHHHHHHHHHHHHH.HHHT.SSSSTHHHHHHHHHHHHHHCHHHHHHHHHHHHHHHHHHH CS
+      ATP-synt_A 123 lllvp.lllpielisefarpvsLalRLfgNifAGelllallagll.llllllavllsvlilllavlllllelfvgfiQAfvFtlLtlvYi 210
+                     ++l+   +l+ie++ ef+rp++L++RL+ Ni+ G+l+ ++l++ l l  +      +   ++l++l +++e fv fiQ+++F+ L ++Y+
+  Caenorhabditis 115 TYLKTlRMLLIEIVREFSRPLALTVRLTVNITVGHLVRIMLYQGLeL-RI------GDQYIWLSILAIIIECFVFFIQSYIFSRLIFLYL 197
+                     444443899********************************965421.11......222356789999*********************8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (199 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       885  (0.0542745); expected 326.1 (0.02)
+Passed bias filter:                      333  (0.0204219); expected 326.1 (0.02)
+Passed Vit filter:                        22  (0.0013492); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.56u 0.54s 00:00:01.10 Elapsed: 00:00:01.78
+# Mc/sec: 319.83
+//
+Query:       Homo  [L=226]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    3.1e-40  138.3  24.5    3.6e-40  138.0  24.5    1.1  1  ATP-synt_A  ATP synthase A chain
+  ------ inclusion threshold ------
+          2    8.7  14.3       0.58   10.4   9.2    2.5  2  DUF2919     Protein of unknown function (DUF2919)
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_A  ATP synthase A chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  138.0  24.5   4.5e-44   3.6e-40      19     210 ..      33     222 ..      13     223 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 138.0 bits;  conditional E-value: 4.5e-44
+                 CT.X.TTT.SHHHHHHHHHHHHHHHHHGGGTSS.SSXHHHHHHHHHHHHHHHHHHHHHHSSTTTTTTHHHHHHHHHHHHHHHHHHHHTHHHHGG..GGH CS
+  ATP-synt_A  19 trkkkkkl.pgklqnlvealvefvdnlvesvigkkkkkkffpliltlflfilvsNllgliPglfaatadinvtlalAlivfllvlilgikkkglkgyfk 116
+                 t  + k l  ++l ++ ++l++   +++  + + +k++++  ++++l++fi + Nllgl+P +f++t++++++la+A+ ++++ +i+g++  ++k+ + 
+        Homo  33 T--S-KYLiNNRLITTQQWLIKLTSKQMIAIHN-TKGRTWSLILVSLIIFIATTNLLGLLPHSFTPTTQLSINLAMAIPLWAGAVIIGFRS-KIKNALA 126
+                 2..2.22237999***********999888886.488******************************************************.6899999 PP
+
+                 HHHXS..SXTTXHHHHHCCHHH.CHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHT.SSSSTHHHH.HHHHHHHHHHCHHHHHHHHHHHHHHHHHHH CS
+  ATP-synt_A 117 klfvp..plllvplllpielisefarpvsLalRLfgNifAGelllallagllllllllavllsvli.lllavlllllelfvgfiQAfvFtlLtlvYi 210
+                 ++++   p++l+p+l++ie+is +++p++La+RL++Ni+AG+ll++l+ +++l++++ ++l s+li + + +ll++le+ v++iQA+vFtlL ++Y+
+        Homo 127 HFLPQgtPTPLIPILVIIETISLLIQPIALAVRLTANITAGHLLMHLIGSATLAIST-INLPSTLIiFTILILLTILEIAVALIQAYVFTLLVSLYL 222
+                 9986688*****************************************877745553.4555666636699*************************8 PP
+
+>> DUF2919  Protein of unknown function (DUF2919)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.5   1.9     0.039   3.2e+02      85     132 ..      35      82 ..       6      86 .. 0.66
+   2 ?   10.4   9.2   7.1e-05      0.58      27     134 ..      66     179 ..      63     222 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 1.5 bits;  conditional E-value: 0.039
+  DUF2919  85 rlwragrplllllllldlllqlyrlalsheafswltaltlllllwall 132
+              + +   r ++   +l++l+ + + +++++   +w+ +l  l+ ++a  
+     Homo  35 KYLINNRLITTQQWLIKLTSKQMIAIHNTKGRTWSLILVSLIIFIATT 82 
+              444445666777788888899999999999999999888888887765 PP
+
+  == domain 2  score: 10.4 bits;  conditional E-value: 7.1e-05
+  DUF2919  27 rawvvFvmagasreqgsaLlalf...YPdkssfylgLalglpalllllligrrkkssewlerlwragr..pllllllll.dlllqlyrlalsheafswltal 122
+              r+w + +++++ +  +++Ll l+   +  ++++ + La+++p    +++ig+r+k ++ l++ + +g   pl+ +l+++ +++l+++ +al    +  +ta 
+     Homo  66 RTWSLILVSLIIFIATTNLLGLLphsFTPTTQLSINLAMAIPLWAGAVIIGFRSKIKNALAHFLPQGTptPLIPILVIIeTISLLIQPIALAVRLTANITAG 167
+              8999999999999999999888543355599************************************97745555555534445555555555566667777 PP
+
+  DUF2919 123 tlllllwallyl 134
+               ll++l+  + l
+     Homo 168 HLLMHLIGSATL 179
+              777777655555 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (226 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       783  (0.0480191); expected 326.1 (0.02)
+Passed bias filter:                      212  (0.0130013); expected 326.1 (0.02)
+Passed Vit filter:                        12  (0.000735925); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.58u 0.47s 00:00:01.04 Elapsed: 00:00:01.75
+# Mc/sec: 369.46
+//
+Query:       Ascidiella_aspersa  [L=211]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+      1e-26   94.1  36.5    2.7e-26   92.7  36.4    1.6  1  ATP-synt_A  ATP synthase A chain
+  ------ inclusion threshold ------
+        0.4   11.5   0.8       0.72   10.7   0.8    1.3  1  WRNPLPNID   Putative WW-binding domain and destruction box
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_A  ATP synthase A chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   92.7  36.4   3.3e-30   2.7e-26      59     209 ..      53     204 ..      10     205 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 92.7 bits;  conditional E-value: 3.3e-30
+                         HHHHHHHHHHHHHHHHHHSSTTTTTTHHHHHHHHHHHHHHHHHHHHTHHHHGG..GGHHHHXS..SXTTXHHHHHCCHHH.CHHHHHHHHH CS
+          ATP-synt_A  59 pliltlflfilvsNllgliPglfaatadinvtlalAlivfllvlilgikkkglkgyfkklfvp..plllvplllpielisefarpvsLalR 147
+                          li+ lf fil  Nl+gl+Pg+f+++a i++tl+ A+i +l  +++ +        + ++++   p++lv++l+ iel+s +arp++L++R
+  Ascidiella_aspersa  53 LLIVGLFYFILGLNLVGLVPGGFSVSALISITLGVAFIFWLSNYMVTFFLSPK-FNVAHFLPVrtPGFLVVFLVWIELVSWLARPLALGVR 142
+                         48999************************************999998888643.35556665579************************** PP
+
+                         HHHHHHHHHHHHHHHHHHHHHHT.SSSSTHHHHHHHHHHHHHHCHHHHHHHHHHHHHHHHHH CS
+          ATP-synt_A 148 LfgNifAGelllallagllllllllavllsvlilllavlllllelfvgfiQAfvFtlLtlvY 209
+                         L++Ni+AG+lll ll + ++++++++v+++++ + l + +++lel v+fiQA+vF+lL ++Y
+  Ascidiella_aspersa 143 LMANITAGHLLLGLLSSGVVFIGTYSVVFGFVGVCLFISIVFLELAVAFIQAYVFSLLLSLY 204
+                         ***************8877666666666666667788999********************99 PP
+
+>> WRNPLPNID  Putative WW-binding domain and destruction box
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.7   0.8   8.8e-05      0.72       3      13 ..       5      15 ..       4      18 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 10.7 bits;  conditional E-value: 8.8e-05
+           WRNPLPNID  3 FnSFlFWRnPL 13
+                        F SF+FWR PL
+  Ascidiella_aspersa  5 FESFVFWRVPL 15
+                        99********9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (211 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       987  (0.0605299); expected 326.1 (0.02)
+Passed bias filter:                      261  (0.0160064); expected 326.1 (0.02)
+Passed Vit filter:                        21  (0.00128787); expected 16.3 (0.001)
+Passed Fwd filter:                         5  (0.000306636); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.63u 0.51s 00:00:01.14 Elapsed: 00:00:01.36
+# Mc/sec: 443.85
+//
+Query:       Blanceolatum  [L=226]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    5.4e-38  130.9  22.9    6.4e-38  130.7  22.9    1.0  1  ATP-synt_A  ATP synthase A chain
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_A  ATP synthase A chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  130.7  22.9   3.9e-42   6.4e-38       6     210 ..      20     223 ..      13     224 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 130.7 bits;  conditional E-value: 3.9e-42
+                   XXHHHHH.HHH.CHCT.X.TTT.SHHHHHHHHHHHHHHHHHGGGTSS.SSXHHHHHHHHHHHHHHHHHHHHHHSSTTTTTTHHHHHHHHHHHHHHHH CS
+    ATP-synt_A   6 ivllill.lllllatrkkkkkl.pgklqnlvealvefvdnlvesvigkkkkkkffpliltlflfilvsNllgliPglfaatadinvtlalAlivfll 100
+                   +vl++l+ + l ++++ ++     ++  +l+e l+ ++ n+v + +  kk+ +++ l+ +l+l++++ N++gl+P++f++t++++++l+lA+ ++l+
+  Blanceolatum  20 VVLALLVpWKL-FVSSGAS--WaGTRSSVLLESLLGMLMNQVMQPLS-KKGFNWVVLLSSLILMLITLNVIGLFPYTFTPTTQLSMNLGLAVPLWLA 112
+                   33333332222.3333332..2358899**********888888886.4889********************************************* PP
+
+                   HHHHTHHHHGG..GGHHHHXS..SXTTXHHHHHCCHHH.CHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHT.SSSSTHHHHHHHHHHHHHHCHHHH CS
+    ATP-synt_A 101 vlilgikkkglkgyfkklfvp..plllvplllpielisefarpvsLalRLfgNifAGelllallagllllllllavllsvlilllavlllllelfvg 195
+                   ++++g++++ ++  + +l++   p ll+p+l+++e++s ++rp++L+lRL++N++AG+ll++l+ +++l l+ l+v+ls ++l+l v+l++le+ v+
+  Blanceolatum 113 TVVYGFRNHPTV-ALAHLCPEgaPNLLIPVLVVVETLSILMRPLALGLRLTANLTAGHLLMHLISSAVLGLMELSVVLSGITLFLLVFLTMLEIAVA 208
+                   *********995.666888668899***************************************999977777888888888888************ PP
+
+                   HHHHHHHHHHHHHHH CS
+    ATP-synt_A 196 fiQAfvFtlLtlvYi 210
+                   +iQ +vF++L ++Y+
+  Blanceolatum 209 LIQGYVFAILVTLYL 223
+                   **************8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (226 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       745  (0.0456887); expected 326.1 (0.02)
+Passed bias filter:                      217  (0.013308); expected 326.1 (0.02)
+Passed Vit filter:                        19  (0.00116522); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.63u 0.45s 00:00:01.08 Elapsed: 00:00:02.00
+# Mc/sec: 323.27
+//
+Query:       Saccoglossus  [L=228]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    3.4e-40  138.1  18.6    4.2e-40  137.8  18.6    1.1  1  ATP-synt_A  ATP synthase A chain
+
+
+Domain annotation for each model (and alignments):
+>> ATP-synt_A  ATP synthase A chain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  137.8  18.6   2.6e-44   4.2e-40       9     210 ..      24     224 ..      17     225 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 137.8 bits;  conditional E-value: 2.6e-44
+                   HHHH..HHH.CHCT.X.TTTSHHHHHHHHHHHHHHHHHGGGTSS.SSXHHHHHHHHHHHHHHHHHHHHHHSSTTTTTTHHHHHHHHHHHHHHHHHHH CS
+    ATP-synt_A   9 lill..lllllatrkkkkklpgklqnlvealvefvdnlvesvigkkkkkkffpliltlflfilvsNllgliPglfaatadinvtlalAlivfllvli 103
+                   l+++  + lll+t    ++ p+++ +l+++l + +  l+  ++g  + ++++pli+ lf+ +l +Nllgl P +f++t+++++tl+lA+ ++l+v+i
+  Saccoglossus  24 LLIAllWTLLLFTP---NQFPTRFSVLWQTLTNLLPPLFLRSAGP-SSSPWAPLIFALFITLLSNNLLGLTPHSFTPTSHFSLTLSLAIPLWLAVTI 116
+                   33331233334443...234***************9999999984.779************************************************ PP
+
+                   HTHHHHGG..GGHHHHXS..SXTTXHHHHHCCHHH.CHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHT.SSSSTHHHHHHHHHHHHHHCHHHHHHH CS
+    ATP-synt_A 104 lgikkkglkgyfkklfvp..plllvplllpielisefarpvsLalRLfgNifAGelllallagllllllllavllsvlilllavlllllelfvgfiQ 198
+                   lg++++ +   + +l++   p +l+pll+ iel+s +a+p++LalRL +N++AG+ll+ ll ++ +ll+ ++ +++ li +  +llllle+ v++iQ
+  Saccoglossus 117 LGFRRN-FNLRLSHLLPQgtPPALIPLLVWIELLSLLAQPLALALRLAANLTAGHLLIYLLSAAGWLLTPTSPIVGGLISITLFLLLLLEIAVAVIQ 212
+                   *****6.555787887668899***************************************87777777788888888866799999********** PP
+
+                   HHHHHHHHHHHH CS
+    ATP-synt_A 199 AfvFtlLtlvYi 210
+                   A+vF++Lt+ Y+
+  Saccoglossus 213 AYVFATLTSFYL 224
+                   ***********8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (228 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       534  (0.0327487); expected 326.1 (0.02)
+Passed bias filter:                      177  (0.0108549); expected 326.1 (0.02)
+Passed Vit filter:                        16  (0.000981234); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.54u 0.50s 00:00:01.04 Elapsed: 00:00:01.05
+# Mc/sec: 621.21
+//
+[ok]

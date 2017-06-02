@@ -44,6 +44,10 @@ FREQUENCY_THRESHOLD = 0.4
 # alignment to be considered
 COUNT_THRESHOLD = 2
 
+# Codon must appear at least CODON_COUNT_THRESHOLD time in the filtered/global alignment
+# to be considered for codon reassignment prediction
+CODON_COUNT_THRESHOLD = 1
+
 # Show codon in non conserved position for its amino acid
 SHOW_MIXTE_CODONS = True
 

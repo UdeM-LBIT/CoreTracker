@@ -1,0 +1,102 @@
+COX2	PF00116.18	Metaseiulus_occidentalis	7.5e-46	154.8	95	207	95	209	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Metaseiulus_occidentalis	9.3e-17	60.8	1	83	1	83	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	Paracentrotus	1.5e-63	211.9	95	214	95	214	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Paracentrotus	2.5e-29	101.1	1	83	1	83	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	Aphrocallistes_vastus	4.2e-55	184.6	107	227	107	228	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Aphrocallistes_vastus	6.6e-22	77.3	14	95	13	95	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	Schistosoma	4e-31	107.3	86	192	85	192	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Schistosoma	5.4e-05	23.1	9	72	2	73	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	Fasciola	1.7e-28	98.7	85	192	83	192	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Fasciola	0.00016	21.6	11	71	4	72	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	Trichobilharzia_regenti	2.2e-30	104.9	84	190	82	190	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Trichobilharzia_regenti	0.00025	21.0	9	69	1	71	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	Versteria_mustelae	4.2e-33	113.6	83	189	82	189	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Versteria_mustelae	5e-06	26.4	9	65	2	70	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+Wzy_C	PF04932.13	Versteria_mustelae	0.087	12.3	14	83	12	136	O-Antigen	ligase
+COX2	PF00116.18	Euseius_nicholsi	1.8e-44	150.4	96	209	95	212	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Euseius_nicholsi	7.3e-12	45.1	1	83	1	83	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	Patiria	1.6e-62	208.6	95	214	95	214	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Patiria	1.3e-28	98.8	1	83	1	83	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	Daphnia	8.3e-63	209.5	95	214	95	214	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Daphnia	5.6e-26	90.4	1	83	1	83	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+FtsX	PF02687.19	Daphnia	0.37	10.7	29	82	20	90	FtsX-like	permease	family
+COX2	PF00116.18	Haplorchis_taichui	8e-28	96.6	87	194	86	195	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Haplorchis_taichui	0.0042	17.1	12	71	5	74	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	Lumbricus	1.2e-61	205.7	51	79	35	90	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2	PF00116.18	Lumbricus	1.2e-61	205.7	95	214	95	214	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Lumbricus	2e-24	85.4	1	83	1	83	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	Halocynthia	3.7e-45	152.6	94	213	94	214	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Halocynthia	1.2e-08	34.9	5	80	2	82	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	Limulus	1.3e-59	199.2	95	214	95	214	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Limulus	1.4e-24	85.9	1	83	1	83	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	Echinococcus_equinus	2.3e-29	101.6	83	189	82	189	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Echinococcus_equinus	2.2e-06	27.6	9	65	2	70	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	Taenia_crassiceps	1e-32	112.4	83	188	82	189	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Taenia_crassiceps	4.7e-06	26.5	8	66	1	71	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	Axinella	4.6e-64	213.5	97	218	97	218	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Axinella	2.1e-28	98.2	4	85	3	85	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	Terebratulina	1.8e-56	189.1	62	82	53	84	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2	PF00116.18	Terebratulina	1.8e-56	189.1	95	217	95	218	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Terebratulina	3.2e-20	71.9	1	83	1	83	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	Suberites_domuncula	1.1e-61	205.9	119	240	119	240	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Suberites_domuncula	1.2e-27	95.7	26	107	25	107	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	Katharina	1.9e-60	201.8	95	214	95	214	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Katharina	2.6e-21	75.4	1	83	1	83	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+Glyco_transf_34	PF05637.10	Katharina	0.091	12.3	49	89	26	92	galactosyl	transferase	GMA12/MNN10	family
+COX2	PF00116.18	Geodia	2.4e-64	214.5	110	231	110	231	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Geodia	1.8e-27	95.2	17	98	16	98	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	Metridium	5.6e-64	213.3	112	233	112	233	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Metridium	7e-27	93.3	19	100	18	100	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	Amphimedon_queenslandica	9e-64	212.6	115	236	115	236	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Amphimedon_queenslandica	1.4e-22	79.5	22	103	21	103	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+DIE2_ALG10	PF04922.10	Amphimedon_queenslandica	0.19	10.9	35	92	34	96	DIE2/ALG10	family
+COX2	PF00116.18	Acropora	1.2e-63	212.2	111	232	111	232	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Acropora	1.8e-24	85.5	18	99	17	99	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	Trichinella	7.6e-47	158.0	97	208	95	210	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Trichinella	4e-05	23.5	3	81	1	82	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+Mem_trans	PF03547.16	Trichinella	0.026	12.8	22	89	15	110	Membrane	transport	protein
+COX2	PF00116.18	Balanoglossus	2.2e-63	211.4	95	214	95	214	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Balanoglossus	1.4e-29	101.9	1	83	1	83	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	Tetrancistrum_nebulosi	6.5e-32	109.8	84	189	83	189	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Tetrancistrum_nebulosi	0.00053	19.9	14	66	2	71	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	Pseudogarypus_banksi	2.4e-51	172.5	95	213	95	214	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Pseudogarypus_banksi	4.7e-09	36.1	7	83	1	83	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+Tiny_TM_bacill	PF09680.8	Pseudogarypus_banksi	0.033	13.7	38	47	37	48	Protein	of	unknown	function	(Tiny_TM_bacill)
+Tiny_TM_bacill	PF09680.8	Pseudogarypus_banksi	0.033	13.7	70	76	70	78	Protein	of	unknown	function	(Tiny_TM_bacill)
+FtsX	PF02687.19	Pseudogarypus_banksi	0.06	13.2	27	87	16	93	FtsX-like	permease	family
+COX2	PF00116.18	Benedenia_hoshinai	6.9e-34	116.2	85	190	84	191	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Benedenia_hoshinai	0.001	19.0	11	67	2	72	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	Myxine	4e-54	181.5	95	214	95	215	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Myxine	1.6e-24	85.7	1	83	1	83	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+TMEM237	PF15383.4	Myxine	0.0069	15.4	7	54	5	83	Transmembrane	protein	237
+COX1	PF00115.18	Myxine	0.22	10.2	30	90	12	110	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+COX1	PF00115.18	Myxine	0.22	10.2	163	187	160	226	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+COX2	PF00116.18	Drosophila	7.8e-60	199.9	96	214	95	214	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Drosophila	6e-26	90.3	1	83	1	83	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	Ciona	4e-49	165.3	95	214	95	214	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Ciona	1.7e-09	37.6	7	82	2	83	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+PRIMA1	PF16101.3	Ciona	0.061	13.2	18	49	7	53	Proline-rich	membrane	anchor	1
+COX2	PF00116.18	Epigonichthys	7.4e-61	203.2	47	73	40	81	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2	PF00116.18	Epigonichthys	7.4e-61	203.2	95	214	95	214	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Epigonichthys	1.2e-21	76.5	1	83	1	83	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	Strigamia_maritima	1.2e-51	173.5	95	213	95	214	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Strigamia_maritima	9.4e-22	76.8	1	83	1	83	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+DUF3270	PF11674.6	Strigamia_maritima	0.053	13.6	13	51	3	56	Protein	of	unknown	function	(DUF3270)
+Tmemb_9	PF05434.9	Strigamia_maritima	0.19	11.4	27	57	16	64	TMEM9
+COX2	PF00116.18	Caenorhabditis	2.3e-45	153.2	98	215	98	217	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Caenorhabditis	0.0016	18.4	18	85	6	85	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+DUF4149	PF13664.4	Caenorhabditis	0.061	13.5	30	89	28	107	Domain	of	unknown	function	(DUF4149)
+COX2	PF00116.18	Homo	4e-61	204.1	95	213	95	214	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Homo	6.2e-25	87.0	1	83	1	83	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+DUF3100	PF11299.6	Homo	0.025	13.8	16	88	16	104	Protein	of	unknown	function	(DUF3100)
+DPM3	PF08285.9	Homo	0.041	13.9	32	81	29	92	Dolichol-phosphate	mannosyltransferase	subunit	3	(DPM3)
+NPCC	PF08058.9	Homo	0.26	11.2	15	98	4	99	Nuclear	pore	complex	component
+COX2	PF00116.18	Ascidiella_aspersa	3.6e-49	165.5	56	71	47	77	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2	PF00116.18	Ascidiella_aspersa	3.6e-49	165.5	97	216	97	216	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Ascidiella_aspersa	5.3e-10	39.2	3	85	1	85	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+MENTAL	PF10457.7	Ascidiella_aspersa	0.23	11.1	20	88	18	92	Cholesterol-capturing	domain
+DUF3671	PF12420.6	Ascidiella_aspersa	1.1	9.3	22	89	14	91	Protein	of	unknown	function
+COX2	PF00116.18	Saccoglossus	1.8e-58	195.5	95	216	95	216	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	Saccoglossus	1.3e-25	89.2	2	83	1	83	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+MpPF26	PF07666.9	Saccoglossus	0.0066	16.4	28	99	20	112	M	penetrans	paralogue	family	26
+NPCC	PF08058.9	Saccoglossus	0.42	10.5	28	98	6	100	Nuclear	pore	complex	component

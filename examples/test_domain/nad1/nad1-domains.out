@@ -1,0 +1,2336 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             examples/out/nad1/nad1.fasta
+# target HMM database:             data/pfam/Pfam-A.hmm
+# output directed to file:         examples/out/nad1/nad1-domains.out
+# per-dom hits tabular output:     examples/out/nad1/nad1-domains.tab
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       Metaseiulus_occidentalis  [L=270]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.9e-48  163.4  21.8      9e-48  163.0  21.8    1.1  1  NADHdh    NADH dehydrogenase
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  163.0  21.8   5.5e-52     9e-48       4     234 ..       6     236 ..       3     262 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 163.0 bits;  conditional E-value: 5.5e-52
+                               HHHHHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS-- CS
+                    NADHdh   4 llllvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPf 88 
+                               lll++++ll +a+ltl+eRk+l+++q R+GPn+++ lGl+qp+ D++Kl++Ke++  k+++k++f++ p+l +il++  +++  f
+  Metaseiulus_occidentalis   6 LLLFFIVLLRIAFLTLIERKILGYIQIRKGPNKISVLGLVQPVLDGMKLFIKESFYIKRVNKFIFNVFPFLFFILIINCWFIYMF 90 
+                               567778999999************************************************************************* PP
+
+                               SSSS---SSHHHHHHHHHHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT..-C CS
+                    NADHdh  89 gevladlnvglllilalsslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeei..wf 171
+                               ++ +  ++++l++++ +s l v  +l   wasnskYallGa R ++q++syEv l++ l+ +vll++ ++l +++   +     f
+  Metaseiulus_occidentalis  91 NK-YHIVSYSLVFFILISGLRVHSVLGVRWASNSKYALLGAYRLVSQTVSYEVGLVFLLINFVLLSKRYNLLDLIVFNNFRliSF 174
+                               *5.4445669*************************************************************99976554333233 PP
+
+                               HHCHHHHHHHHHHHHHHTTTSSS-TTT-STTSS--SSSSS-HCHHHHHHHHHHHHHHHHHHHH CS
+                    NADHdh 172 illqllafiifliallaetnraPFDlpeaesELvaGfhtEYsgmkfalfflaeyanmilvsal 234
+                               +++ + +f+i+l+++lae+nraPF +    +     +++E+++ kfal+flaey n+i++ ++
+  Metaseiulus_occidentalis 175 YII-FNLFLIWLVVILAELNRAPFVFLWERKRAGFWVYIEFGSRKFALLFLAEYGNIIFFFLF 236
+                               444.89******************988877766666789*****************9987654 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (270 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       731  (0.0448301); expected 326.1 (0.02)
+Passed bias filter:                      168  (0.010303); expected 326.1 (0.02)
+Passed Vit filter:                        15  (0.000919907); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.62u 0.26s 00:00:00.88 Elapsed: 00:00:00.54
+# Mc/sec: 1430.41
+//
+Query:       Paracentrotus  [L=323]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   7.7e-104  347.0  18.5     9e-104  346.8  18.5    1.0  1  NADHdh    NADH dehydrogenase
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  346.8  18.5  5.5e-108    9e-104       2     298 ..       9     309 ..       8     310 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 346.8 bits;  conditional E-value: 5.5e-108
+                    HHHHHHHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--SSSS---SS CS
+         NADHdh   2 klllllvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfgevladlnv 97 
+                    +ll +lv++ll+va+ltl+eRkvl++mq R+GP+ vGp+Gllqp+aD+lKl++Ke++ p++a+ +lf+l+p+l ++lall++ ++P+ + + ++++
+  Paracentrotus   9 ELLSFLVPVLLAVAFLTLVERKVLGYMQFRKGPKIVGPYGLLQPFADGLKLFIKETLKPSTASPYLFFLSPLLFMALALLLWKLMPVHTPTLNFQL 104
+                    5678999*********************************************************************************989999** PP
+
+                    HHHHHHHHHHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT-CHHCHHHHHHHHHHHHHHTTTSS CS
+         NADHdh  98 glllilalsslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeeiwfillqllafiifliallaetnra 193
+                    +lll+l lssl+vy+il +Gwa++skY+l+Ga+R++aq+isyE++l+l+ll++++++  ++l+ i++aqe +wf+l  l++f i+++++laet+ra
+  Paracentrotus 105 SLLLVLGLSSLSVYAILGSGWAAKSKYSLIGAIRAVAQTISYEISLALILLSLIIITRRFNLTYIMNAQEFSWFALRCLPLFYIWFVSTLAETKRA 200
+                    **********************************************************************99**9999****************** PP
+
+                    S-TTT-STTSS--SSSSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSS.......HHHHHHHHHHHHHHHHHHHHHC----TTHHHHHH CS
+         NADHdh 194 PFDlpeaesELvaGfhtEYsgmkfalfflaeyanmilvsalavllFlgGwllpfs.......gllwfllKvllllflfiwiratlpRlRydqlmkl 282
+                    PFDl+e+esE+v+G+++EY+g  falff+aeya++il+ ++ v++FlgG   p++       ++l + lK++ll+flf+w+ra++pR+Rydqlm l
+  Paracentrotus 201 PFDLTEGESEIVSGYNVEYAGGPFALFFIAEYAKIILMNLFSVVIFLGG---PWPanelfplKVLTIGLKTTLLVFLFLWVRAAYPRFRYDQLMFL 293
+                    *************************************************...3333377889********************************** PP
+
+                    HCCTHHHHHHHHHHHH CS
+         NADHdh 283 gwkvllplalanlllt 298
+                    +wk  lpl++ +l++t
+  Paracentrotus 294 TWKRYLPLSIGALCAT 309
+                    **********998765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (323 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       622  (0.0381455); expected 326.1 (0.02)
+Passed bias filter:                      217  (0.013308); expected 326.1 (0.02)
+Passed Vit filter:                        13  (0.000797253); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.56u 0.36s 00:00:00.92 Elapsed: 00:00:00.54
+# Mc/sec: 1711.20
+//
+Query:       Aphrocallistes_vastus  [L=316]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+      1e-98  330.2  16.0    1.2e-98  330.0  16.0    1.0  1  NADHdh          NADH dehydrogenase
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  330.0  16.0  7.3e-103   1.2e-98       4     298 ..       8     305 ..       5     306 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 330.0 bits;  conditional E-value: 7.3e-103
+                            HHHHHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--SS. CS
+                 NADHdh   4 llllvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfge. 90 
+                            +l l+++l+++a+ltl+eRk+lA+ q R+GPn vG +Gllqp+aDa+Kl++Ke+i ++k+ k+lfll+p+la+i+al+a+ +iP+   
+  Aphrocallistes_vastus   8 ILTLLTILITTAYLTLIERKILASRQIRKGPNIVGIYGLLQPIADAIKLIIKETIKHHKTTKTLFLLSPALAIIIALTAWSIIPLDYk 95 
+                            566778999999************************************************************************9943 PP
+
+                            .SS---SSHHHHHHHHHHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT-CHHCHHH CS
+                 NADHdh  91 .vladlnvglllilalsslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeeiwfillqll 177
+                                + ++g+++ilalssl +y ill+Gwa nskYallG++R++aqmi yEv +g+++l++v l+  l+l++i   q++iw+il  ++
+  Aphrocallistes_vastus  96 hPQRNPKLGIIIILALSSLRIYTILLSGWARNSKYALLGSIRATAQMIRYEVCIGIIILTIVSLSRRLNLRQIRMCQQKIWYILPLFP 183
+                            44456688**************************************************************************7777** PP
+
+                            HHHHHHHHHHHTTTSSS-TTT-STTSS--SSSSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSS..HHHHHHHHHHHHHHH CS
+                 NADHdh 178 afiifliallaetnraPFDlpeaesELvaGfhtEYsgmkfalfflaeyanmilvsalavllFlgGwllpfs..gllwfllKvllllfl 263
+                            +fi+f i  +aetnr+PFDl+e esELv+Gf++EYs++ f l+flaey+n++l++ ++ +lFl G ++  s  +  ++++K++ + +l
+  Aphrocallistes_vastus 184 IFIMFTIRRIAETNRTPFDLTERESELVSGFNVEYSAILFTLLFLAEYINILLMARIIRILFLRGRTFL-SvsNPRILAIKIIRISYL 270
+                            *****************************************************************7543.2358899*********** PP
+
+                            HHHHHHC----TTHHHHHHHCCTHHHHHHHHHHHH CS
+                 NADHdh 264 fiwiratlpRlRydqlmklgwkvllplalanlllt 298
+                            fi irat++R+Rydqlm+l wk  lpl l  ++l+
+  Aphrocallistes_vastus 271 FICIRATFARIRYDQLMNLLWKRYLPLRLTLIILI 305
+                            ******************************99985 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (316 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       610  (0.0374095); expected 326.1 (0.02)
+Passed bias filter:                      248  (0.0152091); expected 326.1 (0.02)
+Passed Vit filter:                        17  (0.00104256); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.64u 0.44s 00:00:01.08 Elapsed: 00:00:00.66
+# Mc/sec: 1369.73
+//
+Query:       Schistosoma  [L=292]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.1e-49  169.2  26.9    1.5e-49  168.8  26.9    1.1  1  NADHdh    NADH dehydrogenase
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  168.8  26.9   9.5e-54   1.5e-49       7     297 ..      13     288 ..       7     290 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 168.8 bits;  conditional E-value: 9.5e-54
+                  HHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--SSSS---SSHHHHHHH CS
+       NADHdh   7 lvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfgevladlnvglllila 104
+                  l+++ll+v +++l eRk+l+++q R+GPn+vG  Gl+q++aD+lKll K ++   +  +++ +++ ++++++ l+ + +  + +  +d  ++ll++l+
+  Schistosoma  13 LIMILLLVSFYILGERKILSYIQLRKGPNKVGLCGLVQSFADFLKLLRKVKVHGFNFRRWFSVFGCIVMVVCFLVRVEIYGMFQSGIDRWYALLYFLV 110
+                  446888999************************************************************************9998999999******* PP
+
+                  HHHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT-CHHCHHHHHHHHHHHHHHTTTSSS-TTT-STT CS
+       NADHdh 105 lsslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeeiwfillqllafiifliallaetnraPFDlpeaes 202
+                  ++s+  ygill Gw s skY l+  +R +   +++E++++++l+ + +l+  +    i    ++  ++l+ +++f+++l++l+ e nr+P+D  e+es
+  Schistosoma 111 VFSFLGYGILLLGWCSWSKYRLIRCIRVSFSKVMFEMIFMCILILFGYLYFGYGDPGI----RS-VLVLIVPIGFLCWLVVLVSENNRTPLDYGECES 203
+                  ****************************************999999999888877788....22.3455569************************** PP
+
+                  SS--SSSSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSSHHHHHHHHHHHHHHHHHHHHHC----TTHHHHHHHCCTHHHHHHHHHHH CS
+       NADHdh 203 ELvaGfhtEYsgmkfalfflaeyanmilvsalavllFlgGwllpfsgllwfllKvllllflfiwiratlpRlRydqlmklgwkvllplalanlll 297
+                  ELv G+++EY ++ f ++f  eya+m+++  + + +F+g  +         ++ ++l l+lfi++r ++pR+R+d++++l+w++ + + + +l++
+  Schistosoma 204 ELVRGVTVEYRSVLFLVIFACEYAMMFIFRWIRSFVFWGR-R---------CIIIVLHLILFIMMRGSFPRVRFDRFVQLVWEYSVIMVVSYLVV 288
+                  **************************************74.2.........3345667788999*********************9999988887 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (292 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       817  (0.0501043); expected 326.1 (0.02)
+Passed bias filter:                      260  (0.0159451); expected 326.1 (0.02)
+Passed Vit filter:                        22  (0.0013492); expected 16.3 (0.001)
+Passed Fwd filter:                         7  (0.00042929); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.70u 0.28s 00:00:00.98 Elapsed: 00:00:00.55
+# Mc/sec: 1518.84
+//
+Query:       Fasciola  [L=300]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.5e-57  193.5  30.0    5.5e-57  193.2  30.0    1.0  1  NADHdh    NADH dehydrogenase
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  193.2  30.0   3.4e-61   5.5e-57       6     298 ..      17     299 ..      13     300 .] 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 193.2 bits;  conditional E-value: 3.4e-61
+               HHHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--S.SSS---SSHHHHHHHH CS
+    NADHdh   6 llvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfg.evladlnvglllilal 105
+               ++v+++++va+++l eRkvl++mq R+GPn+vG +Gllq +aD++Kl++K +++  +  ++l +++++l+++la+  +++  f    ++ +   +l++l++
+  Fasciola  17 AFVIIMVFVAFFILGERKVLGYMQIRKGPNKVGLWGLLQRFADLMKLVIKFKFVFFQNRSWLSWWGVYLLVLLACGYCVLFFFRfGGVSSV-KFMLWFLVV 116
+               56689999***********************************************************999888876666555552244444.3699999** PP
+
+               HHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT-CHHCHHHHHHHHHHHHHHTTTSSS-TTT-STTSS-- CS
+    NADHdh 106 sslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeeiwfillqllafiifliallaetnraPFDlpeaesELva 206
+               +s++ y +l  Gw   +k+al++ +Rsa   + +E  ++++++ v+l+ gs+ +s +  +  ++w+++  ++++ ++l+ +l e+nr+P+D +eaesELv+
+  Fasciola 117 TSMTGYRLLSVGWGCYNKFALVSCVRSAFGSVRFEACFMCIVVLVALVWGSYGVSCLFGEFGGMWMVV--PVVYGLWLVGILCECNRTPLDYAEAESELVS 215
+               *********************************************************99888889644..799**************************** PP
+
+               SSSSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSSHHHHHHHHHHHHHHHHHHHHHC----TTHHHHHHHCCTHHHHHHHHHHHH CS
+    NADHdh 207 GfhtEYsgmkfalfflaeyanmilvsalavllFlgGwllpfsgllwfllKvllllflfiwiratlpRlRydqlmklgwkvllplalanlllt 298
+               G++tEY  + f  +f  ey+ m+++s + +llF+gG         ++l  +l+ +++f+w ratlpR+Ryd +++++w + l l +++++++
+  Fasciola 216 GLNTEYCNVPFTCLFACEYLIMVIFSWFSSLLFWGGR--------FVLGLALFHVMFFVWARATLPRVRYDYFVSFMWRYALLLLVFSFFFV 299
+               ***********************************94........3556677788889************************9999988875 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (300 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       895  (0.0548878); expected 326.1 (0.02)
+Passed bias filter:                      267  (0.0163743); expected 326.1 (0.02)
+Passed Vit filter:                        26  (0.00159451); expected 16.3 (0.001)
+Passed Fwd filter:                         5  (0.000306636); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.76u 0.22s 00:00:00.98 Elapsed: 00:00:00.54
+# Mc/sec: 1589.35
+//
+Query:       Trichobilharzia_regenti  [L=291]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.6e-54  184.4  20.2    3.4e-54  184.1  20.2    1.0  1  NADHdh    NADH dehydrogenase
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  184.1  20.2   2.1e-58   3.4e-54       7     297 ..      13     287 ..       9     289 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 184.1 bits;  conditional E-value: 2.1e-58
+                              HHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--SSSS CS
+                   NADHdh   7 lvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfgevl 92 
+                              +++++++va+++l+eRk+l+++q R+GP++vG +Gl+q++aD+lKlllK +++  ++ +++  l+ +l+l  al+ +++  ++ + 
+  Trichobilharzia_regenti  13 FLLIMILVAFFILCERKFLGYIQLRKGPKKVGVVGLFQSFADLLKLLLKFNVFGYTVRRWFGGLGCFLLLGGALFFCLLYSITYYG 98 
+                              456899999************************************************************************99766 PP
+
+                              ---SSHHHHHHHHHHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT-CHHCHHHH CS
+                   NADHdh  93 adlnvglllilalsslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeeiwfillqlla 178
+                              + +   +l++l++ss+  yg+l+ Gw s sk+ l+G++R +   + +E ++++ +l++  l+g ++ ++       + ++ll ++ 
+  Trichobilharzia_regenti  99 VLYRNWILWFLVVSSIISYGVLMLGWGSWSKFRLIGGIRRSFSGVRFEAVFMCLVLVLGELYGDYKYQSC------GSVVLLFPIF 178
+                              666779************************************************************9999......3345666999 PP
+
+                              HHHHHHHHHHTTTSSS-TTT-STTSS--SSSSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSSHHHHHHHHHHHHHHHH CS
+                   NADHdh 179 fiifliallaetnraPFDlpeaesELvaGfhtEYsgmkfalfflaeyanmilvsalavllFlgGwllpfsgllwfllKvllllflf 264
+                              + i+++++l e nraP+D+ e+e ELv+Gf+tEY g+ f ++f  ey+ ++++s ++  lF+          + f l vll l+++
+  Trichobilharzia_regenti 179 YYIWWVSILGEKNRAPLDFGESERELVSGFNTEYRGVPFMIIFACEYLGIYIFSWITRGLFM----------VDFSLIVLLHLVMY 254
+                              99************************************************************..........3467778999999* PP
+
+                              HHHHHC----TTHHHHHHHCCTHHHHHHHHHHH CS
+                   NADHdh 265 iwiratlpRlRydqlmklgwkvllplalanlll 297
+                              iw+r t+pR+Ry+  + l w + l ++l+ +l+
+  Trichobilharzia_regenti 255 IWFRGTFPRIRYNDYVFLLWRWGLVISLFGVLV 287
+                              ****************************99987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (291 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       629  (0.0385748); expected 326.1 (0.02)
+Passed bias filter:                      202  (0.0123881); expected 326.1 (0.02)
+Passed Vit filter:                        18  (0.00110389); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.62u 0.35s 00:00:00.97 Elapsed: 00:00:00.60
+# Mc/sec: 1387.50
+//
+Query:       Versteria_mustelae  [L=297]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    8.6e-57  192.6  22.1      1e-56  192.3  22.1    1.0  1  NADHdh    NADH dehydrogenase
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  192.3  22.1   6.3e-61     1e-56       7     298 ..      13     295 ..       8     296 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 192.3 bits;  conditional E-value: 6.3e-61
+                         HHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--SSSS---.S CS
+              NADHdh   7 lvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfgevladl.n 96 
+                         l+v llv+a+++l eRk+l++ q R+GP++vG +Gllq + D+lKl++K ++   ++ +++ l++++l+l+l+++ +++   g + ++  n
+  Versteria_mustelae  13 LLVSLLVIAFFILGERKILGYSQFRKGPKKVGIVGLLQRFSDLLKLIIKFKMYYFQSRNWISLIGVLLLLFLVICYCMIYG-GYYRYNCgN 102
+                         446788999********************************************************9999888888777777.545555568 PP
+
+                         SHHHHHHHHHHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT-C.HHCHHHHHHHHHHHH CS
+              NADHdh  97 vglllilalsslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeeiwf.illqllafiiflial 186
+                         ++ll++l+++s++ y il  Gw s   Y+ll+++R a   + +E  +++ ++   l++ s++l +      ++w+ +l+ +l+++++li++
+  Versteria_mustelae 103 LSLLWVLVIVSISSYSILSVGWGSYKSYSLLSSVRCAFSSVRFESCFMCLVVFSSLCYCSYKLVDYYF---SGWYrLLVFPLVYVLYLICV 190
+                         8**************************************************************99955...46998555699********* PP
+
+                         HHTTTSSS-TTT-STTSS--SSSSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSSHHHHHHHHHHHHHHHHHHHHHC----TTH CS
+              NADHdh 187 laetnraPFDlpeaesELvaGfhtEYsgmkfalfflaeyanmilvsalavllFlgGwllpfsgllwfllKvllllflfiwiratlpRlRyd 277
+                         l e +r+PFD  eaesELv+Gf +EY g+ f  +f  ey+ ++++s l v+l  gG    + g l+++    + l++f+w ratlpR+Ryd
+  Versteria_mustelae 191 LCESSRTPFDYGEAESELVSGFKVEYRGIYFTCLFACEYIVVFIFSWLGVVLVTGGG---IIGGLLLA----FKLLFFMWSRATLPRVRYD 274
+                         *******************************************************94...22444444....5566789************ PP
+
+                         HHHHHHCCTHHHHHHHHHHHH CS
+              NADHdh 278 qlmklgwkvllplalanlllt 298
+                          ++k+ w v l l ++ ++++
+  Versteria_mustelae 275 YFVKFFWGVGLCLLILRFFVV 295
+                         **********99999988775 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (297 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       942  (0.0577701); expected 326.1 (0.02)
+Passed bias filter:                      305  (0.0187048); expected 326.1 (0.02)
+Passed Vit filter:                        29  (0.00177849); expected 16.3 (0.001)
+Passed Fwd filter:                         6  (0.000367963); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.71u 0.28s 00:00:00.99 Elapsed: 00:00:00.53
+# Mc/sec: 1603.14
+//
+Query:       Euseius_nicholsi  [L=298]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      5e-73  245.9  38.3      6e-73  245.6  38.3    1.0  1  NADHdh    NADH dehydrogenase
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  245.6  38.3   3.7e-77     6e-73       4     297 ..       6     289 ..       3     291 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 245.6 bits;  conditional E-value: 3.7e-77
+                       HHHHHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--SSSS---S CS
+            NADHdh   4 llllvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfgevladln 96 
+                       llll++l+l +a++tl+eRk+l+++q+R+GPn+v  +G+lqp+ D++Kl++Ke+  + +  k+l+++ p+l+l+++l+++ +  f+  ++d+ 
+  Euseius_nicholsi   6 LLLLLILFLSIAFFTLFERKLLGYIQMRKGPNKVIIFGVLQPVLDGIKLFMKESRRNFNLIKLLYFIFPFLSLFVILVIWKFYVFA--IIDFF 96 
+                       566778999999*************************************************************************9..88887 PP
+
+                       S.HHHHHHHHHHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT.-CHHCHHHHHHHHHHHHH CS
+            NADHdh  97 v.glllilalsslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeei.wfillqllafiifliall 187
+                       +  +l+++ +ssl vy+++  Gw snskY++lG  R +aq+isyEv +++ +l+++++  ++ +s+i+++ +++ ++++  +++fii+++++l
+  Euseius_nicholsi  97 LnRFLFFILFSSLRVYFTIGRGWVSNSKYSVLGRYRRVAQVISYEVGFVFLILVLIVFLLKYRFSRIISKYDGViYYFMGFIFIFIIWFVVIL 189
+                       779****************************************************************99887774446666899********* PP
+
+                       HTTTSSS-TTT-STTSS--SSSSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSSHHHHHHHHHHHHHHHHHHHHHC----TTHHHH CS
+            NADHdh 188 aetnraPFDlpeaesELvaGfhtEYsgmkfalfflaeyanmilvsalavllFlgGwllpfsgllwfllKvllllflfiwiratlpRlRydqlm 280
+                       ae+nraPFD++e+esELv+Gf++EY+g+kfa++flaey  +il++ +++l+F+  w          ++ ++++++ ++w+r t+pR+Ryd l+
+  Euseius_nicholsi 190 AELNRAPFDFAESESELVSGFNIEYGGLKFAFLFLAEYGYIILIAYVTILMFFNEW----------FIWIIFIIIYIVWVRGTFPRFRYDILI 272
+                       *****************************************************876..........334578888999*************** PP
+
+                       HHHCCTHHHHHHHHHHH CS
+            NADHdh 281 klgwkvllplalanlll 297
+                        l wk+ lp+ l+ +++
+  Euseius_nicholsi 273 YLNWKIYLPIILMIFVI 289
+                       ***********999887 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (298 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1085  (0.0665399); expected 326.1 (0.02)
+Passed bias filter:                      245  (0.0150251); expected 326.1 (0.02)
+Passed Vit filter:                        46  (0.00282105); expected 16.3 (0.001)
+Passed Fwd filter:                        16  (0.000981234); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.78u 0.31s 00:00:01.09 Elapsed: 00:00:00.55
+# Mc/sec: 1550.05
+//
+Query:       Patiria  [L=326]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   3.2e-104  348.3  20.0   3.9e-104  348.0  20.0    1.0  1  NADHdh    NADH dehydrogenase
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  348.0  20.0  2.4e-108  3.9e-104       2     297 ..       9     308 ..       8     310 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 348.0 bits;  conditional E-value: 2.4e-108
+              HHHHHHHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--SSSS---SSHHHHHH CS
+   NADHdh   2 klllllvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfgevladlnvglllil 103
+              k +l++v++ll+valltl+eRkvl++mq R+GPn vGp+Gllqp+aD++Kll+Ke++ p+ka+ +lf+++pvl l +al+++ viP++  ++ ++++l+li+
+  Patiria   9 KSILFIVPVLLAVALLTLVERKVLGYMQLRKGPNIVGPFGLLQPIADGFKLLIKETLKPSKASPYLFFFSPVLFLGIALVLWSVIPVKYSVVRVKLSLMLII 110
+              6688999*********************************************************************************99************ PP
+
+              HHHHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT-CHHCHHHHHHHHHHHHHHTTTSSS-TTT-STTSS- CS
+   NADHdh 104 alsslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeeiwfillqllafiifliallaetnraPFDlpeaesELv 205
+               ls l+vy +l +Gw+sns+Y++lGa+R++aq++syE++lgl+ll+vvl+ag ++++ i ++q+ +w+++  +++f i+++++laetnraPFDl+e+esE+v
+  Patiria 111 GLSRLSVYSLLGSGWSSNSNYSFLGAVRAVAQTVSYEISLGLILLGVVLFAGGFNVEVIESSQSWSWLMFSCFPLFAIWFVSTLAETNRAPFDLTEGESEIV 212
+              ***********************************************************999998899999******************************* PP
+
+              -SSSSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSS.....HHHHHHHHHHHHHHHHHHHHHC----TTHHHHHHHCCTHHHHHHHHHHH CS
+   NADHdh 206 aGfhtEYsgmkfalfflaeyanmilvsalavllFlgGwllpfs.....gllwfllKvllllflfiwiratlpRlRydqlmklgwkvllplalanlll 297
+              +G+ +EY+g  fa+ff+aeyan+i++ +l vllFlgG + p++     ++l++ lK+ +l++lf+w+ra++pR+Rydqlm l+wk  lpl l +l++
+  Patiria 213 SGYKVEYAGGPFAMFFIAEYANIIFIKLLSVLLFLGGSS-PMGeffpvNVLVVSLKAGVLVLLFLWVRASYPRFRYDQLMYLTWKKYLPLRLSFLVF 308
+              *************************************75.55558899********************************************99987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (326 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       704  (0.0431743); expected 326.1 (0.02)
+Passed bias filter:                      283  (0.0173556); expected 326.1 (0.02)
+Passed Vit filter:                        18  (0.00110389); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.64u 0.36s 00:00:01.00 Elapsed: 00:00:00.59
+# Mc/sec: 1580.73
+//
+Query:       Daphnia  [L=311]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.1e-91  307.2  17.4    1.3e-91  306.9  17.4    1.0  1  NADHdh    NADH dehydrogenase
+  ------ inclusion threshold ------
+        1.8    8.3   4.4        4.6    7.0   0.2    2.6  2  ECSCR     Endothelial cell-specific chemotaxis regulator
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  306.9  17.4   1.6e-95   1.3e-91       3     298 ..       7     297 ..       5     298 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 306.9 bits;  conditional E-value: 1.6e-95
+              HHHHHHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--SSSS---SSHHHHHHH CS
+   NADHdh   3 lllllvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfgevladlnvglllila 104
+              +l+++v++l+ va++tl+eRk+l+++q R+GPn+vG  G+lqp+ Da+Kl+ Ke + p++++   fl+ap+++l l+ll+++ iP    l  +n ++l++l 
+  Daphnia   7 FLVVVVCVLVGVAFFTLFERKLLGYIQLRKGPNKVGLGGVLQPFSDAIKLFSKEHVSPSTSNYSAFLIAPCFSLGLSLLIWLRIPSFFNLLSFNKSVLFFLC 108
+              578888999****************************************************************************66579999********* PP
+
+              HHHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT-CHHCHHHHHHHHHHHHHHTTTSSS-TTT-STTSS-- CS
+   NADHdh 105 lsslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeeiwfillqllafiifliallaetnraPFDlpeaesELva 206
+               + +gvyg+l aGw snskY+l+G lR +aq++syEv l+l+l+++++++  ++l ++ + qe+ wfi++ + a +i++i++laetnr+PFD++e+esELv+
+  Daphnia 109 GLGVGVYGLLAAGWRSNSKYSLIGCLRGVAQTVSYEVRLVLILFTPLVVTVGYELGSFSSFQENLWFIFIFPAAGLIWFISCLAETNRTPFDFAEGESELVS 210
+              *******************************************************************99999****************************** PP
+
+              SSSSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSSHHHHHHHHHHHHHHHHHHHHHC----TTHHHHHHHCCTHHHHHHHHHHHH CS
+   NADHdh 207 GfhtEYsgmkfalfflaeyanmilvsalavllFlgGwllpfsgllwfllKvllllflfiwiratlpRlRydqlmklgwkvllplalanlllt 298
+              G++tEY +  fal+ laey++++++s+l++++FlgG        +++l+ + ++ f+f+w+r tlpR+Ryd+l+ l+wk++lp+++ +l+l+
+  Daphnia 211 GYNTEYRSGGFALIILAEYTRILFISFLFSVIFLGGDC-----SFFVLVSFGVIAFIFVWVRGTLPRFRYDKLIYLAWKFFLPFSISYLVLI 297
+              ************************************53.....46899999*************************************9997 PP
+
+>> ECSCR  Endothelial cell-specific chemotaxis regulator
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.0   0.2   0.00057       4.6      28      53 ..       2      27 ..       1      61 [. 0.76
+   2 ?    2.2   0.6     0.018   1.5e+02      21      35 ..     252     266 ..     226     270 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 7.0 bits;  conditional E-value: 0.00057
+    ECSCR 28 isfivilvvvviilvsvvslrfkcrk 53
+             i  i+ lvvvv +lv v  + +  rk
+  Daphnia  2 IQVILFLVVVVCVLVGVAFFTLFERK 27
+             788999*********99877665555 PP
+
+  == domain 2  score: 2.2 bits;  conditional E-value: 0.018
+    ECSCR  21 tvaafgvisfivilv 35 
+               + +fgvi+fi + v
+  Daphnia 252 VLVSFGVIAFIFVWV 266
+              4578*******9876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (311 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       806  (0.0494297); expected 326.1 (0.02)
+Passed bias filter:                      291  (0.0178462); expected 326.1 (0.02)
+Passed Vit filter:                        26  (0.00159451); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.68u 0.31s 00:00:00.99 Elapsed: 00:00:00.57
+# Mc/sec: 1534.00
+//
+Query:       Haplorchis_taichui  [L=301]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.3e-59  200.1  26.4    5.6e-59  199.8  26.4    1.0  1  NADHdh    NADH dehydrogenase
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  199.8  26.4   3.4e-63   5.6e-59       7     298 ..      17     298 ..      12     299 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 199.8 bits;  conditional E-value: 3.4e-63
+                         HHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--SSSS---SS CS
+              NADHdh   7 lvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfgevladlnv 97 
+                         ++v++++va+++l eRkvl++mq R+GPn+vG +Gl+q +aD+lKl++K ++   ++ ++l +++++l+l+lal+ ++v  +    +    
+  Haplorchis_taichui  17 FAVIMIFVAFFILGERKVLGYMQIRKGPNKVGLVGLFQRFADLLKLIIKFKVSLYQVRRWLSWIGVYLLLFLALCYCFVFGLFYGGVSCVK 107
+                         568999*************************************************************************998865555657 PP
+
+                         HHHHHHHHHHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT-C.HHCHHHHHHHHHHHHH CS
+              NADHdh  98 glllilalsslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeeiwf.illqllafiifliall 187
+                         gll++l+++s++ y +l  Gw s  kYal++ +Rsa   + +E  +++++++v ++ g +   +++e   + w+ +l+ +l++ ++l+ +l
+  Haplorchis_taichui 108 GLLWVLVVTSITGYSLLSIGWGSYKKYALVSCVRSAFGSVTFEACFMCIVVIVGVVCGGYFGYSVME---NAWLvLLVRPLGYALWLVGML 195
+                         ***********************************************99999999988887777755...458767778************ PP
+
+                         HTTTSSS-TTT-STTSS--SSSSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSSHHHHHHHHHHHHHHHHHHHHHC----TTHH CS
+              NADHdh 188 aetnraPFDlpeaesELvaGfhtEYsgmkfalfflaeyanmilvsalavllFlgGwllpfsgllwfllKvllllflfiwiratlpRlRydq 278
+                          e++r+P+D +eae ELv G++tEY  + f  +f  ey+ m+++s l +llF+gG l      + f+   ++ +++fiw ratlpR+Ryd 
+  Haplorchis_taichui 196 CECKRTPLDYAEAERELVRGLNTEYCKVPFTCLFACEYLIMFIFSWLGALLFWGGGL------ISFF--RFVHVLFFIWARATLPRVRYDY 278
+                         ******************************************************953......3343..35667789************** PP
+
+                         HHHHHCCTHHHHHHHHHHHH CS
+              NADHdh 279 lmklgwkvllplalanlllt 298
+                         ++ ++wk+ + + +++l+l+
+  Haplorchis_taichui 279 FVAFMWKYSILILVFSLFLV 298
+                         ************99999886 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (301 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       906  (0.0555624); expected 326.1 (0.02)
+Passed bias filter:                      304  (0.0186434); expected 326.1 (0.02)
+Passed Vit filter:                        19  (0.00116522); expected 16.3 (0.001)
+Passed Fwd filter:                         5  (0.000306636); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.68u 0.26s 00:00:00.94 Elapsed: 00:00:00.55
+# Mc/sec: 1565.65
+//
+Query:       Lumbricus  [L=307]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    1.3e-89  300.3  20.1    1.5e-89  300.1  20.1    1.0  1  NADHdh          NADH dehydrogenase
+  ------ inclusion threshold ------
+      0.057   12.7   2.6       0.11   11.7   2.6    1.5  1  Vezatin         Mysoin-binding motif of peroxisomes
+        0.1   12.4   0.0       0.21   11.4   0.0    1.5  1  L_biotic_typeA  Type-A lantibiotic
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  300.1  20.1   2.7e-93   1.5e-89       3     297 ..       9     300 ..       7     302 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 300.1 bits;  conditional E-value: 2.7e-93
+                HHHHHHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--SSSS---SSHHHHH CS
+     NADHdh   3 lllllvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfgevladlnvgllli 102
+                +l+ lv++ll++a++tl+eRk+l++++ R+GPn+vG +Gl qp+aDa+Kl++Ke+  p+ ++++ fl+ap + l+lall++++ P +++   +++ +l++
+  Lumbricus   9 VLIRLVLALLAIAFYTLIERKFLGYFHLRKGPNKVGLMGLPQPFADAIKLFVKEQAKPNPSNQTPFLFAPTIGLVLALLMWVIYPHSHQSFFIQFRVLYF 108
+                5666778999999************************************************************************9988888899***** PP
+
+                HHHHHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT-CHHCHHHHHHHHHHHHHHTTTSSS-TTT-STT CS
+     NADHdh 103 lalsslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeeiwfillqllafiifliallaetnraPFDlpeaes 202
+                l +s ++vy ++laGw snskYallGalR +aq+isyEv + l+ll  +++ +++++++i ++    w++++ ++++++++i+ laetnr+PFD++e+es
+  Lumbricus 109 LCVSRINVYTTFLAGWRSNSKYALLGALRGVAQTISYEVRISLILLRSLIILSTIDFTKIFSYS---WILFIFIPLAVVWFITNLAETNRTPFDFAEGES 205
+                ************************************************************7755...9988889************************** PP
+
+                SS--SSSSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSSHHHHHHHHHHHHHHHHHHHHHC----TTHHHHHHHCCTHHHHHHHHHHH CS
+     NADHdh 203 ELvaGfhtEYsgmkfalfflaeyanmilvsalavllFlgGwllpfsgllwfllKvllllflfiwiratlpRlRydqlmklgwkvllplalanlll 297
+                ELv+Gf++EY +  fal+f+aeyan++++s++++++F+   +  +   l+++l++++l +lf+w+rat+pR+Ryd+l++l+wk +lpl+la l++
+  Lumbricus 206 ELVSGFNVEYRAGLFALIFIAEYANILIMSLFTSVIFIRTCARGIARDLVLILQTITLAMLFVWVRATYPRIRYDHLINLTWKRFLPLSLALLMI 300
+                **************************************99988888999*******************************************998 PP
+
+>> Vezatin  Mysoin-binding motif of peroxisomes
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.7   2.6     2e-05      0.11       2      87 ..      80     162 ..      79     170 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 11.7 bits;  conditional E-value: 2e-05
+    Vezatin   2 ialiifLlkqqqlkksssslvkgfkllliisvklikvlvlwrrqrlqvirqkalnqleefvknsqaldklvrkaLiliqEvelisr 87 
+                i+l+ +Ll++  + +s +s++ +f++l +++v  i+v   + ++     +++    l  +    q++   vr +Lil++ + ++s 
+  Lumbricus  80 IGLVLALLMWVIYPHSHQSFFIQFRVLYFLCVSRINV---YTTFLAGWRSNSKYALLGALRGVAQTISYEVRISLILLRSLIILST 162
+                899**********************************...7777777888888899999999999999999999999998877775 PP
+
+>> L_biotic_typeA  Type-A lantibiotic
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.4   0.0   3.8e-05      0.21      23      43 ..     132     150 ..     130     157 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 11.4 bits;  conditional E-value: 3.8e-05
+  L_biotic_typeA  23 ilGGkgsgvikTiSheCrmnS 43 
+                     +lG+  +gv +TiS+e+r  S
+       Lumbricus 132 LLGA-LRGVAQTISYEVRI-S 150
+                     89**.************97.5 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (307 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       673  (0.0412732); expected 326.1 (0.02)
+Passed bias filter:                      220  (0.013492); expected 326.1 (0.02)
+Passed Vit filter:                        12  (0.000735925); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.58u 0.30s 00:00:00.87 Elapsed: 00:00:00.53
+# Mc/sec: 1657.12
+//
+Query:       Halocynthia  [L=298]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.7e-67  226.3  31.1    5.9e-67  225.9  31.1    1.0  1  NADHdh    NADH dehydrogenase
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  225.9  31.1   3.6e-71   5.9e-67       4     297 ..       6     292 ..       4     294 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 225.9 bits;  conditional E-value: 3.6e-71
+                  HHHHHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--SSSS---SSHHHH CS
+       NADHdh   4 llllvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfgevladlnvglll 101
+                  l+++++lll+va+l+lleRk+    q RlGPn+vG   l+q++ D++KlllK  ++ +k  +++f + p++ +il+++ ++v+Pf + l ++  ++l+
+  Halocynthia   6 LVFVLFLLLLVAFLVLLERKIFRLTQVRLGPNVVGASRLVQTIGDGVKLLLKRFFLFSKL-NFFFRVCPIVGFILSIVHWLVLPFPRSLWHIGWSVLF 102
+                  566778999999*********************************************999.7************************************ PP
+
+                  HHHHHHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT-C.HHCHHHHHHHHHHHHHHTTTSSS-TTT CS
+       NADHdh 102 ilalsslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeeiwf.illqllafiifliallaetnraPFDlp 198
+                   +a+s + vy++l+aGw s s + ll ++R ++q+isyEv++++ +l + + + s+ l+ + e      f i +++l+++++ + +lae+nr+PFDl+
+  Halocynthia 103 TFAVSRVLVYVVLWAGWGSDSVFRLLRSVRRVSQIISYEVVFMFFVLLFSIEVWSYWLRGVCEGTG--VFrIYFKFLLVLVWRVIVLAELNRTPFDLV 198
+                  *************************************************************88664..4458888*********************** PP
+
+                  -STTSS--SSSSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSSHHHHHHHHHHHHHHHHHHHHHC----TTHHHHHHHCCTHHHHHHHHHH CS
+       NADHdh 199 eaesELvaGfhtEYsgmkfalfflaeyanmilvsalavllFlgGwllpfsgllwfllKvllllflfiwiratlpRlRydqlmklgwkvllplalanll 296
+                  e+esELv+ f++EY+g++f l+flaey+n++++s+l +++F+g w+     l+w+ll  ++++ l++++r +lpR+++ ql++l wkvllp   ++l+
+  Halocynthia 199 EGESELVSRFNVEYAGFRFTLLFLAEYINIWFISFLSTIFFFGFWD-----LFWYLLIRIIFVSLCLLVRCVLPRYKFTQLIDLIWKVLLPCISFFLM 291
+                  *******************************************995.....688888889999999*************************9988887 PP
+
+                  H CS
+       NADHdh 297 l 297
+                  +
+  Halocynthia 292 C 292
+                  5 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (298 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       833  (0.0510855); expected 326.1 (0.02)
+Passed bias filter:                      246  (0.0150865); expected 326.1 (0.02)
+Passed Vit filter:                        24  (0.00147185); expected 16.3 (0.001)
+Passed Fwd filter:                         6  (0.000367963); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.64u 0.38s 00:00:01.02 Elapsed: 00:00:00.60
+# Mc/sec: 1420.88
+//
+Query:       Limulus  [L=310]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.6e-89  299.3  19.5    3.1e-89  299.1  19.5    1.0  1  NADHdh    NADH dehydrogenase
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  299.1  19.5   1.9e-93   3.1e-89       4     297 ..      10     297 ..       7     299 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 299.1 bits;  conditional E-value: 1.9e-93
+              HHHHHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--SSSS---SSHHHHHHHH CS
+   NADHdh   4 llllvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfgevladlnvglllilal 105
+              +++l+++l+ va+ltlleR++l+++q R+GPn+vG  G+lqp+ Da++l+++e+  p  ++ ++++++pv+ l lal+++++ P+   ++d+++gll++l +
+  Limulus  10 VVILICVLVGVAFLTLLERRILGYIQIRKGPNKVGVIGVLQPFSDAIRLFCREQSYPFLSNFLFYFVSPVFRLCLALCLWLIFPIFFNMVDFELGLLFFLCV 111
+              6788899*****************************************************************************99889************* PP
+
+              HHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT-CHHCHHHHHHHHHHHHHHTTTSSS-TTT-STTSS--S CS
+   NADHdh 106 sslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeeiwfillqllafiifliallaetnraPFDlpeaesELvaG 207
+              ss+gvy+i+ aGw+snskYa+lGa R++aq+isyEv+l+l++l++v+l+g ++l ++  aq+e w+++  ++++i+++ ++laetnr PFD++e+esELv+G
+  Limulus 112 SSFGVYAIIGAGWSSNSKYAILGAYRAVAQTISYEVSLALIILSCVVLVGGYDLLRFGGAQNEWWMVWGFFPLAIVWFSSCLAETNRSPFDFAEGESELVSG 213
+              **************************************************************99*99999******************************** PP
+
+              SSSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSSHHHHHHHHHHHHHHHHHHHHHC----TTHHHHHHHCCTHHHHHHHHHHH CS
+   NADHdh 208 fhtEYsgmkfalfflaeyanmilvsalavllFlgGwllpfsgllwfllKvllllflfiwiratlpRlRydqlmklgwkvllplalanlll 297
+              f++EY    fal+f+aey n++++ ++ v++FlgG  +      +f+ Kv++l +lf+w+r t+pR+Ryd+lm l+w + lplal +ll+
+  Limulus 214 FNVEYRRGGFALIFIAEYGNILFMRLIRVVIFLGGLGG------MFIGKVVILRILFLWVRGTFPRFRYDRLMGLAWRIYLPLALNYLLF 297
+              ***********************************755......69***************************************99986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (310 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       764  (0.0468539); expected 326.1 (0.02)
+Passed bias filter:                      289  (0.0177235); expected 326.1 (0.02)
+Passed Vit filter:                        31  (0.00190114); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.64u 0.27s 00:00:00.91 Elapsed: 00:00:00.53
+# Mc/sec: 1673.32
+//
+Query:       Echinococcus_equinus  [L=297]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.4e-60  203.1  23.8    6.5e-60  202.8  23.8    1.0  1  NADHdh    NADH dehydrogenase
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  202.8  23.8     4e-64   6.5e-60       8     298 ..      14     295 ..      10     296 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 202.8 bits;  conditional E-value: 4e-64
+                           HHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--SSSS---S CS
+                NADHdh   8 vvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfgevladln 96 
+                           ++ ll++a+++l eRkvl++ q R+GPn+vG lGllq +aD+lKl++K + +  ++ +++ l++++l+++l+++  +v      ++   
+  Echinococcus_equinus  14 LISLLIIAFFVLGERKVLGYSQFRKGPNKVGILGLLQRFADLLKLVIKFKNFYFQSRSYVGLFGVMLLIVLVVIYSFVYGRYYRISYSG 102
+                           35789999************************************************999999999999999999988888554566667 PP
+
+                           SHHHHHHHHHHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT-CHHCHHHHHHHHHHH CS
+                NADHdh  97 vglllilalsslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeeiwfillqllafiiflia 185
+                           +++l++la++ ++ y +l aGw s ++Y++l ++R a   + +E  ++++++ ++l+   ++l ++  +    w +ll +l++ +fl++
+  Echinococcus_equinus 103 LSVLWFLAVARVSRYSLLCAGWGSYNNYSFLRSVRCAFGSVRFEACFMCVVIFCALCCCRYNLVDFYYSC--WWSWLLFPLIYGLFLVC 189
+                           8*****************************************************************6544..35577779999****** PP
+
+                           HHHTTTSSS-TTT-STTSS--SSSSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSSHHHHHHHHHHHHHHHHHHHHHC---- CS
+                NADHdh 186 llaetnraPFDlpeaesELvaGfhtEYsgmkfalfflaeyanmilvsalavllFlgGwllpfsgllwfllKvllllflfiwiratlpRl 274
+                           +l etnr+PFD  e+e ELv+Gf++EYsg+ f  +f  ey+ ++++s l+v+l +gG        ++ ++ +l+ l++f+w+ratlpR+
+  Echinococcus_equinus 190 VLCETNRTPFDYGESERELVSGFNVEYSGIYFTCLFACEYIIIYVFSWLVVVLMVGGG-------FVGMFMLLFNLLFFMWTRATLPRV 271
+                           ********************************************************94.......23344456777889********** PP
+
+                           TTHHHHHHHCCTHHHHHHHHHHHH CS
+                NADHdh 275 Rydqlmklgwkvllplalanlllt 298
+                           Ryd ++k+ w+v+l + ++ ++++
+  Echinococcus_equinus 272 RYDCFVKFFWEVCLCVLILGFFVI 295
+                           ***************999988775 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (297 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1028  (0.0630443); expected 326.1 (0.02)
+Passed bias filter:                      303  (0.0185821); expected 326.1 (0.02)
+Passed Vit filter:                        31  (0.00190114); expected 16.3 (0.001)
+Passed Fwd filter:                         9  (0.000551944); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.71u 0.30s 00:00:01.01 Elapsed: 00:00:00.56
+# Mc/sec: 1490.64
+//
+Query:       Taenia_crassiceps  [L=297]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    8.8e-60  202.4  24.6    1.1e-59  202.1  24.6    1.0  1  NADHdh    NADH dehydrogenase
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  202.1  24.6   6.7e-64   1.1e-59       7     298 ..      13     295 ..       8     296 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 202.1 bits;  conditional E-value: 6.7e-64
+                        HHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--SSSS---.SS CS
+             NADHdh   7 lvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfgevladl.nv 97 
+                        l++ ll++a+++l eRk+l++ q R+GPn+vG  Gl+q++ D+lKl++K +  +  + + + ll+ +l+++l+++  ++   g +  ++ ++
+  Taenia_crassiceps  13 LLISLLIIAFFILGERKILGYSQFRKGPNKVGIIGLFQSFSDLLKLVVKFKNYKFCVRRNYSLLGAFLLVFLVICYSFLYG-GYYRFKFkSF 103
+                        346789999*********************************************999999999988887777766666655.4455666345 PP
+
+                        HHHHHHHHHHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT-C.HHCHHHHHHHHHHHHHH CS
+             NADHdh  98 glllilalsslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeeiwf.illqllafiiflialla 188
+                        ++l++l+lssl  y il  Gw   skY++l+++R a   i +E  ++++++  +l+++s+sl ++       w  ill +l++i++l+++l 
+  Taenia_crassiceps 104 SMLWVLVLSSLCSYSILCVGWGRYSKYSFLSSVRCAFSSIRFEACFMCIVVFSALCFSSYSLVDVYYRD---WSlILLFPLIIIVYLVCILC 192
+                        *****************************************************************5533...75477779999********* PP
+
+                        TTTSSS-TTT-STTSS--SSSSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSSHHHHHHHHHHHHHHHHHHHHHC----TTHHHH CS
+             NADHdh 189 etnraPFDlpeaesELvaGfhtEYsgmkfalfflaeyanmilvsalavllFlgGwllpfsgllwfllKvllllflfiwiratlpRlRydqlm 280
+                        et+r PFD  eaesELv+Gf +EYsg+ f  +f  ey+ m+++s l +++ +gG ll         + ++++l++f+w ratlpR+Ryd ++
+  Taenia_crassiceps 193 ETKRSPFDYGEAESELVSGFKVEYSGIYFTCLFACEYIIMFIFSWLGMIIMFGGGLL-------GRFYLFICLLFFMWSRATLPRVRYDFFV 277
+                        **********************************************98888887432.......233457788999**************** PP
+
+                        HHHCCTHHHHHHHHHHHH CS
+             NADHdh 281 klgwkvllplalanlllt 298
+                        k+ w v+l l ++ l+++
+  Taenia_crassiceps 278 KFFWDVILCLLILGLFFV 295
+                        **********99999876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (297 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       926  (0.0567889); expected 326.1 (0.02)
+Passed bias filter:                      296  (0.0181528); expected 326.1 (0.02)
+Passed Vit filter:                        38  (0.00233043); expected 16.3 (0.001)
+Passed Fwd filter:                         6  (0.000367963); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.67u 0.34s 00:00:01.01 Elapsed: 00:00:00.54
+# Mc/sec: 1573.46
+//
+Query:       Axinella  [L=333]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   3.1e-122  407.4  25.4   3.6e-122  407.2  25.4    1.0  1  NADHdh    NADH dehydrogenase
+  ------ inclusion threshold ------
+      0.018   14.9   3.2      0.018   14.9   3.2    2.0  2  CRPA      Chlamydia 15 kDa cysteine-rich outer membrane prote
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  407.2  25.4  4.4e-126  3.6e-122       1     298 [.       7     320 ..       7     321 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 407.2 bits;  conditional E-value: 4.4e-126
+               HHHHHHHHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--SS..SS---SSHH CS
+    NADHdh   1 lklllllvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfge..vladlnvgl 99 
+               +k+l++l++ll+ +a+ltl+eRkvl+++q+R+GPn+vG +GllqplaD+lKl++Ke iip++a++++++lap+l+l+lal+a+ viP+g+  vl+dl +g+
+  Axinella   7 IKILVILIPLLVSIAYLTLAERKVLGYIQCRKGPNVVGVYGLLQPLADGLKLFTKEIIIPNHANNLIYILAPILSLTLALVAWGVIPYGQgvVLSDLGIGI 107
+               5899*************************************************************************************778********* PP
+
+               HHHHHHHHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT-CHHCHHHHHHHHHHHHHHTTTSSS-TTT-S CS
+    NADHdh 100 llilalsslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeeiwfillqllafiifliallaetnraPFDlpea 200
+               l+++a+ss+ vy++l++Gw+snskYa+lGa+R+aaqmisyEv++gl++++vvl++gsl+l+eiv aq+++wf++  +++ i+f++++laetnr+PFDl+e+
+  Axinella 108 LYLFAVSSIXVYAVLMSGWSSNSKYAFLGAIRAAAQMISYEVSIGLIIISVVLCVGSLNLTEIVLAQNHVWFLIPLFPITIMFFVSALAETNRVPFDLTEG 208
+               ************************************************************************6666************************* PP
+
+               TTSS--SSSSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSS..............HHHHHHHHHHHHHHHHHHHHHC----TTHHHHHHHCCTH CS
+    NADHdh 201 esELvaGfhtEYsgmkfalfflaeyanmilvsalavllFlgGwllpfs..............gllwfllKvllllflfiwiratlpRlRydqlmklgwkvl 287
+               esELv+Gf++EYs+m+fal flaey+++il+s++ v+lFlgGw++                 +++wf +K+++++flfiwira++pR+Rydqlm l wk  
+  Axinella 209 ESELVSGFNVEYSSMSFALXFLAEYCHIILMSTFGVILFLGGWQGITIpfwgyislsdtyfyNFIWFGVKIAVVIFLFIWIRASYPRIRYDQLMALLWKSY 309
+               *******************************************886556779************************************************* PP
+
+               HHHHHHHHHHH CS
+    NADHdh 288 lplalanlllt 298
+               lpl+la+++l+
+  Axinella 310 LPLSLAFVILV 320
+               ********986 PP
+
+>> CRPA  Chlamydia 15 kDa cysteine-rich outer membrane protein (CRPA)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -5.2   2.3         2   1.6e+04      69      80 ..       5      16 ..       2      27 .. 0.48
+   2 ?   14.9   3.2   2.2e-06     0.018      43     101 ..     125     183 ..     109     200 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: -5.2 bits;  conditional E-value: 2
+      CRPA 69 vvlGilLviagl 80
+              +v+ il++++ l
+  Axinella  5 IVIKILVILIPL 16
+              444444433322 PP
+
+  == domain 2  score: 14.9 bits;  conditional E-value: 2.2e-06
+      CRPA  43 gwa...kikiidpireskllqsrafkitlvvlGilLviaglallfilqaqlganafylliPa 101
+               gw+   k  ++  ir++  + s  + i+l+++ ++L + +l l+ i+    ++n +++liP 
+  Axinella 125 GWSsnsKYAFLGAIRAAAQMISYEVSIGLIIISVVLCVGSLNLTEIVL---AQNHVWFLIPL 183
+               67422277899*********************************9985...5699*****96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (333 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       796  (0.0488164); expected 326.1 (0.02)
+Passed bias filter:                      281  (0.0172329); expected 326.1 (0.02)
+Passed Vit filter:                        25  (0.00153318); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.64u 0.31s 00:00:00.95 Elapsed: 00:00:00.54
+# Mc/sec: 1764.18
+//
+Query:       Terebratulina  [L=314]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.9e-90  303.1  15.7    2.3e-90  302.8  15.7    1.0  1  NADHdh    NADH dehydrogenase
+  ------ inclusion threshold ------
+      0.037   13.7   0.1      0.065   12.9   0.1    1.3  1  DUF1495   Winged helix DNA-binding domain (DUF1495)
+       0.45   10.8   6.9       0.68   10.3   0.8    3.1  3  DUF4014   Protein of unknown function (DUF4014)
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  302.8  15.7   4.2e-94   2.3e-90       4     295 ..       9     302 ..       6     306 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 302.8 bits;  conditional E-value: 4.2e-94
+                    HHHHHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--SSSS---SSHH CS
+         NADHdh   4 llllvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfgevladlnvgl 99 
+                    ll +v++l+ va++tl+eRk+l + q R+GPn+v+  G  qplaDalKl++Ke + p+ +  vlfl+ap + l+lal+ +a+    +   ++  g+
+  Terebratulina   9 LLTIVPILVSVAFFTLIERKILRYSQTRKGPNKVSLTGAPQPLADALKLFTKELLKPRYSTGVLFLIAPTIGLALALIPWALYLSPHSSLQIRRGI 104
+                    567889**************************************************************************98764446788888** PP
+
+                    HHHHHHHHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT-CHHCHHHHHHHHHHHHHHTTTSSS- CS
+         NADHdh 100 llilalsslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeeiwfillqllafiifliallaetnraPF 195
+                    ll+l +s l vy++l+aGwasnskYallGa+R +aq+isyEv+++l+l+ +++l++s++++  + +q+  w++l+  +++++++ ++laetnraPF
+  Terebratulina 105 LLFLCISRLRVYVTLIAGWASNSKYALLGAVRGIAQTISYEVSIILILILPLILVQSFNIQAYTGSQKLYWLVLIAAPLALLWITTSLAETNRAPF 200
+                    *******************************************************************999*988889******************* PP
+
+                    TTT-STTSS--SSSSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSS..HHHHHHHHHHHHHHHHHHHHHC----TTHHHHHHHCCTHHH CS
+         NADHdh 196 DlpeaesELvaGfhtEYsgmkfalfflaeyanmilvsalavllFlgGwllpfs..gllwfllKvllllflfiwiratlpRlRydqlmklgwkvllp 289
+                    D++e+esELv+Gf++EY++  fal+f+aeyan++++s+l+++lFlg  ++  +    l +++K +++ f+f+w ratlpRlRyd l++++wk +lp
+  Terebratulina 201 DFAEGESELVSGFNIEYGAATFALLFIAEYANILFLSFLTATLFLGASTPETPltLGLPLWIKSAFIAFVFLWARATLPRLRYDLLIRITWKRFLP 296
+                    *********************************************987554434466779************************************ PP
+
+                    HHHHHH CS
+         NADHdh 290 lalanl 295
+                    +al  l
+  Terebratulina 297 VALTIL 302
+                    **9876 PP
+
+>> DUF1495  Winged helix DNA-binding domain (DUF1495)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.9   0.1   1.2e-05     0.065       9      60 ..      99     149 ..      91     170 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 12.9 bits;  conditional E-value: 1.2e-05
+        DUF1495   9 kvRkkvllyLysiypeksylseisrrvrskpsnvkGaLeGlgkrynsessLi 60 
+                    ++R+ +ll+L+ i + + y++ i+     ++  + Ga+ G ++  ++e s+i
+  Terebratulina  99 QIRRGILLFLC-ISRLRVYVTLIAGWASNSKYALLGAVRGIAQTISYEVSII 149
+                    79*********.99**********************************9988 PP
+
+>> DUF4014  Protein of unknown function (DUF4014)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.7   0.1     0.028   1.5e+02      20      52 ..       4      34 ..       1      42 [. 0.70
+   2 ?   -2.2   0.0      0.94   5.1e+03      63      85 ..     104     126 ..      98     132 .. 0.79
+   3 ?   10.3   0.8   0.00013      0.68      22      81 ..     142     198 ..     128     216 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 2.7 bits;  conditional E-value: 0.028
+        DUF4014 20 flisyllllnlvpispfiyfyfiihfnitdfnn 52
+                   fl   l  l +vpi   + f+ +i  +i  +++
+  Terebratulina  4 FLTYSL--LTIVPILVSVAFFTLIERKILRYSQ 34
+                   443333..3699999989998999888877665 PP
+
+  == domain 2  score: -2.2 bits;  conditional E-value: 0.94
+        DUF4014  63 illfvliyllellakkirkwftk 85 
+                    illf+ i  l + +  i+ w ++
+  Terebratulina 104 ILLFLCISRLRVYVTLIAGWASN 126
+                    78899998899988888888765 PP
+
+  == domain 3  score: 10.3 bits;  conditional E-value: 0.00013
+        DUF4014  22 isyllllnlvpispfiyfyfiihfnitdfnnenkiysfiifillfvliyllellakkirk 81 
+                    isy + + l+ i p+i       fni  +   +k+y ++++   + l+++   la+  r 
+  Terebratulina 142 ISYEVSIILILILPLILV---QSFNIQAYTGSQKLYWLVLIAAPLALLWITTSLAETNRA 198
+                    788888889999997765...99***************************9999887665 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (314 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       613  (0.0375935); expected 326.1 (0.02)
+Passed bias filter:                      229  (0.0140439); expected 326.1 (0.02)
+Passed Vit filter:                        26  (0.00159451); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.57u 0.35s 00:00:00.92 Elapsed: 00:00:00.54
+# Mc/sec: 1663.52
+//
+Query:       Suberites_domuncula  [L=334]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   3.7e-122  407.2  23.8   4.3e-122  407.0  23.8    1.0  1  NADHdh    NADH dehydrogenase
+  ------ inclusion threshold ------
+       0.12   12.2   3.7       0.27   11.1   3.7    1.7  1  CRPA      Chlamydia 15 kDa cysteine-rich outer membrane prote
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  407.0  23.8  5.2e-126  4.3e-122       1     298 [.       6     318 ..       6     319 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 407.0 bits;  conditional E-value: 5.2e-126
+                          HHHHHHHHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--SS CS
+               NADHdh   1 lklllllvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfge 90 
+                          +k+l +lv+ll+ +a+ltl+eRkvl+++q+R+GPn+vG +Gllqp+aD+lKl++Ke iip++a+ ++++lapvl+l+lal+a+ viP++e
+  Suberites_domuncula   6 IKILTILVPLLISIAYLTLAERKVLGYIQCRKGPNVVGVYGLLQPIADGLKLFTKEIIIPNHANLFIYILAPVLSLTLALIAWGVIPYSE 95 
+                          58999************************************************************************************7 PP
+
+                          ..SS---SSHHHHHHHHHHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT-CHHCHHHH CS
+               NADHdh  91 ..vladlnvglllilalsslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeeiwfillqlla 178
+                            vl+dl vgll+++a+ss++vy+il++Gw snskYa+lGa+R+aaqmisyEv++gl++++vvl++gsl+l++iv +q+++wfil  +++
+  Suberites_domuncula  96 gvVLSDLGVGLLYLFAVSSISVYAILMSGWGSNSKYAFLGAIRAAAQMISYEVSIGLIIISVVLCVGSLNLTQIVLTQTTVWFILPLFPI 185
+                          78*********************************************************************************7777*** PP
+
+                          HHHHHHHHHHTTTSSS-TTT-STTSS--SSSSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSS.............HHHHHHH CS
+               NADHdh 179 fiifliallaetnraPFDlpeaesELvaGfhtEYsgmkfalfflaeyanmilvsalavllFlgGwllpfs.............gllwfll 255
+                          +++f++++laetnr+PFDl+e+esELv+Gf++EYs+m+falfflaey+++il+s++ v+lF+gGwl+pf+             +++w+  
+  Suberites_domuncula 186 ALMFFVSALAETNRVPFDLTEGESELVSGFNVEYSSMSFALFFLAEYCHIILMSTFGVILFFGGWLGPFEgyfeysifdanwtHYWWLGG 275
+                          ****************************************************************************************** PP
+
+                          HHHHHHHHHHHHHHC----TTHHHHHHHCCTHHHHHHHHHHHH CS
+               NADHdh 256 KvllllflfiwiratlpRlRydqlmklgwkvllplalanlllt 298
+                          Kv++l+flfiwir t+pR+Rydqlm l wk  lpl+la+++l+
+  Suberites_domuncula 276 KVAFLIFLFIWIRGTYPRIRYDQLMALLWKSYLPLSLAFVVLV 318
+                          ****************************************986 PP
+
+>> CRPA  Chlamydia 15 kDa cysteine-rich outer membrane protein (CRPA)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.1   3.7   3.4e-05      0.27      43      99 ..     124     183 ..     105     200 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 11.1 bits;  conditional E-value: 3.4e-05
+                 CRPA  43 gw...akikiidpireskllqsrafkitlvvlGilLviaglallfilqaqlganafylli 99 
+                          gw   +k  ++  ir++  + s  + i+l+++ ++L + +l l+ i+ +q+++  ++ l 
+  Suberites_domuncula 124 GWgsnSKYAFLGAIRAAAQMISYEVSIGLIIISVVLCVGSLNLTQIVLTQTTVWFILPLF 183
+                          663335788999*********************************998887654444444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (334 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       806  (0.0494297); expected 326.1 (0.02)
+Passed bias filter:                      261  (0.0160064); expected 326.1 (0.02)
+Passed Vit filter:                        21  (0.00128787); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.66u 0.25s 00:00:00.91 Elapsed: 00:00:00.54
+# Mc/sec: 1769.48
+//
+Query:       Bfloridae  [L=313]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   1.7e-103  345.9  18.3     2e-103  345.7  18.3    1.0  1  NADHdh    NADH dehydrogenase
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  345.7  18.3  1.2e-107    2e-103       2     297 ..       8     299 ..       7     301 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 345.7 bits;  conditional E-value: 1.2e-107
+                HHHHHHHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--SSSS---SSHHHH CS
+     NADHdh   2 klllllvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfgevladlnvglll 101
+                +++l++v++ll+va+ltl eRkv++++q R+GPn+vGp+Gllqp+aD++Kl++Ke i p++++  +f++ap+lalilall+++ +P+ +++++ln+++l+
+  Bfloridae   8 HIFLYFVPVLLAVAFLTLTERKVIGYVQLRKGPNVVGPYGLLQPIADGVKLFIKEPIKPSSSNPSVFFFAPMLALILALLLWIPVPLIDAFIELNFAVLF 107
+                5788999*********************************************************************************9*********** PP
+
+                HHHHHHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT-CHHCHHHHHHHHHHHHHHTTTSSS-TTT-ST CS
+     NADHdh 102 ilalsslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeeiwfillqllafiifliallaetnraPFDlpeae 201
+                +la+ssl+vy i+ +Gw+snskYallGalR++aq++syEv+lgl++l+++ l+g ++l ++ +aqee+++il  +++ ii++i+++aetnr PFDl+e+e
+  Bfloridae 108 VLAISSLSVYSIMASGWSSNSKYALLGALRAVAQIVSYEVSLGLIILSLICLVGGFNLAQFFSAQEEVMLILSCWPLGIIWFISTVAETNRSPFDLTEGE 207
+                ******************************************************************99999999************************** PP
+
+                TSS--SSSSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSSHHHHHHHHHHHHHHHHHHHHHC----TTHHHHHHHCCTHHHHHHHHHHH CS
+     NADHdh 202 sELvaGfhtEYsgmkfalfflaeyanmilvsalavllFlgGwllpfsgllwfllKvllllflfiwiratlpRlRydqlmklgwkvllplalanlll 297
+                sELv+Gf++EYsg  falfflaeyan++++ +l +llFl      f +ll +++Kv ll  l++w+ra++pR+Rydql++l+wk +lpl+l  l+l
+  Bfloridae 208 SELVSGFNVEYSGGPFALFFLAEYANILFMNVLSALLFLAA---HF-SLLGVAVKVGLLAGLYLWFRASYPRFRYDQLIHLAWKSFLPLSLGLLIL 299
+                ***************************************65...33.7899****************************************99987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (313 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       682  (0.0418251); expected 326.1 (0.02)
+Passed bias filter:                      248  (0.0152091); expected 326.1 (0.02)
+Passed Vit filter:                        23  (0.00141052); expected 16.3 (0.001)
+Passed Fwd filter:                         1  (6.13271e-05); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.67u 0.32s 00:00:00.99 Elapsed: 00:00:00.57
+# Mc/sec: 1543.86
+//
+Query:       Katharina  [L=316]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    8.3e-91  304.3  18.8    9.6e-91  304.1  18.8    1.0  1  NADHdh    NADH dehydrogenase
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  304.1  18.8   5.9e-95   9.6e-91       4     297 ..       9     302 ..       6     304 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 304.1 bits;  conditional E-value: 5.9e-95
+                HHHHHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--SSSS---SSHHHHHH CS
+     NADHdh   4 llllvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfgevladlnvglllil 103
+                +++ + +ll+va++tlleRk l+++q R+GPn+v  +Gl qplaDalKl+lKe+    +++k+ +++apvl lil l+++ +     +l  +n+g+l++l
+  Katharina   9 VIAYISILLAVAFFTLLERKGLGYIQFRKGPNKVRIFGLAQPLADALKLFLKEENNLYNSNKLPYYTAPVLRLILRLCLWSLYWRDFTLWYFNFGVLFFL 108
+                566668999************************************************************************99755588999******** PP
+
+                HHHHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT-CHHCHHHHHHHHHHHHHHTTTSSS-TTT-STTS CS
+     NADHdh 104 alsslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeeiwfillqllafiifliallaetnraPFDlpeaesE 203
+                  s+l vyg+++aGwasnskYallGalR++aq+isyEv+l+l+ll+ + l++sl+l++i ++q   w+ +l  ++++i+++++laetnraPFD++e+esE
+  Katharina 109 CTSALRVYGTIIAGWASNSKYALLGALRAVAQTISYEVTLFLVLLSRAALSSSLNLNQISSHQLLYWNRILITPLLLIWIVVCLAETNRAPFDFAEGESE 208
+                ***********************************************************9999888*977779*************************** PP
+
+                S--SSSSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSSHHHHHHHHHHHHHHHHHHHHHC----TTHHHHHHHCCTHHHHHHHHHHH CS
+     NADHdh 204 LvaGfhtEYsgmkfalfflaeyanmilvsalavllFlgGwllpfsgllwfllKvllllflfiwiratlpRlRydqlmklgwkvllplalanlll 297
+                Lv+Gf++EY+  +fal+flaeya+++++ +++++lFlg  ++ + + ++f++Kv+++ f+fiw+r t+pRlRyd l+kl+w  +lp++l+ l++
+  Katharina 209 LVSGFNIEYGRGSFALLFLAEYARILFMRIITTILFLGAGDSWILTNFLFWVKVTFIAFVFIWVRGTFPRLRYDLLIKLTWLRFLPVSLIILIW 302
+                **************************************988878899*******************************************9997 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (316 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       634  (0.0388814); expected 326.1 (0.02)
+Passed bias filter:                      221  (0.0135533); expected 326.1 (0.02)
+Passed Vit filter:                        12  (0.000735925); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.59u 0.31s 00:00:00.89 Elapsed: 00:00:00.53
+# Mc/sec: 1705.70
+//
+Query:       Geodia  [L=327]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   2.6e-120  401.1  28.5   3.1e-120  400.9  28.5    1.0  1  NADHdh    NADH dehydrogenase
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  400.9  28.5  1.9e-124  3.1e-120       2     298 ..       7     314 ..       6     315 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 400.9 bits;  conditional E-value: 1.9e-124
+             HHHHHHHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--SS..SS---SSHHHHH CS
+  NADHdh   2 klllllvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfge..vladlnvgllli 102
+             k+++++v ll+ +a+ltl+eRkvl++mq R+GPn+vG +GllqplaD+lKl++Ke iip++a+ +++++ap+l+l+la++a+ viP+g+  vl+dl +g+l++
+  Geodia   7 KIVVIVVSLLISIAYLTLAERKVLGYMQARKGPNVVGVYGLLQPLADGLKLFIKEIIIPNHANMFIYIVAPILSLTLAFIAWGVIPYGPgvVLSDLGIGVLYL 109
+             78999999********************************************************************************889************ PP
+
+             HHHHHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT-CHHCHHHHHHHHHHHHHHTTTSSS-TTT-STTSS- CS
+  NADHdh 103 lalsslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeeiwfillqllafiifliallaetnraPFDlpeaesELv 205
+             +++ss++vy+il++Gw+snskYa+lGa+R+aaqmisyEv++gl+++av+ + gslslseiv  qe++ +il  ++a+i+f++++laetnr+PFDl+e+esELv
+  Geodia 110 FVVSSISVYAILMSGWSSNSKYAFLGAIRAAAQMISYEVSIGLIIIAVIXCXGSLSLSEIVLVQENMPLILPLFPAAIMFFVSVLAETNRVPFDLTEGESELV 212
+             *****************************************************************99776656****************************** PP
+
+             -SSSSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSS.........HHHHHHHHHHHHHHHHHHHHHC----TTHHHHHHHCCTHHHHHHHHHHHH CS
+  NADHdh 206 aGfhtEYsgmkfalfflaeyanmilvsalavllFlgGwllpfs.........gllwfllKvllllflfiwiratlpRlRydqlmklgwkvllplalanlllt 298
+             +Gf++EYs+m+falfflaey+++il+s++avllFlgGwllpf+         +++wf++K+++++flfiwirat+pR+Rydqlm+l wk  lpl+  +++l+
+  Geodia 213 SGFNVEYSSMSFALFFLAEYCHIILMSTFAVLLFLGGWLLPFNifgmtppfyNFVWFAIKIVIIVFLFIWIRATYPRIRYDQLMTLLWKSYLPLSGGFVVLV 314
+             ***********************************************************************************************9988876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (327 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       911  (0.055869); expected 326.1 (0.02)
+Passed bias filter:                      309  (0.0189501); expected 326.1 (0.02)
+Passed Vit filter:                        33  (0.00202379); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.66u 0.27s 00:00:00.93 Elapsed: 00:00:00.53
+# Mc/sec: 1765.08
+//
+Query:       Metridium  [L=327]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   6.6e-121  403.1  27.3   7.6e-121  402.9  27.3    1.0  1  NADHdh    NADH dehydrogenase
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  402.9  27.3  4.6e-125  7.6e-121       2     298 ..      11     314 ..      10     315 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 402.9 bits;  conditional E-value: 4.6e-125
+                HHHHHHHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--SS..SS---SSHH CS
+     NADHdh   2 klllllvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfge..vladlnvgl 99 
+                k+l+++++ll++va+ltl+eRkvl++mq R+GPn+vG +GllqplaD++Kl++Ke +ip+ a+ +++++apvl+++lal+a+ viP+ +  v++dl++g+
+  Metridium  11 KILIIVIPLLVAVAYLTLAERKVLGYMQARKGPNVVGVYGLLQPLADGIKLFTKELVIPHYANLFIYVAAPVLSFTLALIAWGVIPYDKgvVISDLKIGI 110
+                79999***********************************************************************************778********* PP
+
+                HHHHHHHHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT.-CHHCHHHHHHHHHHHHHHTTTSSS-TTT CS
+     NADHdh 100 llilalsslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeei.wfillqllafiifliallaetnraPFDlp 198
+                l+ la+ss++vy+il++Gwas+skYa+lGa+R+aaqmisyEv++gl++++v+l++gsl+++eiv aq+++ wf++  ++++++f+ ++laetnraPFDl+
+  Metridium 111 LFTLAVSSISVYAILMSGWASQSKYAFLGAIRAAAQMISYEVSIGLIIITVILCVGSLNITEIVLAQSSGiWFFFPLFPVAMMFFASALAETNRAPFDLT 210
+                *******************************************************************7666997777*********************** PP
+
+                -STTSS--SSSSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSS....HHHHHHHHHHHHHHHHHHHHHC----TTHHHHHHHCCTHHHHHHHH CS
+     NADHdh 199 eaesELvaGfhtEYsgmkfalfflaeyanmilvsalavllFlgGwllpfs....gllwfllKvllllflfiwiratlpRlRydqlmklgwkvllplalan 294
+                e+esELv+G+++EY++m+falfflaeya++il+s+l+++lFlgGwl+p+     g  wf lK+ ++++lfiw+ra++pR+Rydqlm l wk  lpl+la+
+  Metridium 211 EGESELVSGYNVEYASMSFALFFLAEYAHIILMSCLTTILFLGGWLSPIVffkgGPAWFGLKTSFIILLFIWVRASFPRMRYDQLMALLWKSYLPLSLAF 310
+                ************************************************9999************************************************ PP
+
+                HHHH CS
+     NADHdh 295 lllt 298
+                ++l+
+  Metridium 311 VVLV 314
+                *997 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (327 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       784  (0.0480805); expected 326.1 (0.02)
+Passed bias filter:                      249  (0.0152705); expected 326.1 (0.02)
+Passed Vit filter:                        18  (0.00110389); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.68u 0.34s 00:00:01.02 Elapsed: 00:00:00.56
+# Mc/sec: 1641.21
+//
+Query:       Amphimedon_queenslandica  [L=314]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   3.5e-111  371.2  25.3     4e-111  371.0  25.3    1.0  1  NADHdh    NADH dehydrogenase
+  ------ inclusion threshold ------
+      0.041   13.8   2.0      0.099   12.5   2.0    1.6  1  CRPA      Chlamydia 15 kDa cysteine-rich outer membrane prote
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  371.0  25.3  4.9e-115    4e-111       2     298 ..      11     301 ..      10     302 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 371.0 bits;  conditional E-value: 4.9e-115
+                               HHHHHHHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS CS
+                    NADHdh   2 klllllvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafavi 86 
+                               k+l+++v+ll+ va+ltl+eRkvl+++q+R+GPn  G +G++qp+aD+lKl++Ke i+p++a+ +l++l+p+++l+la++a+ v+
+  Amphimedon_queenslandica  11 KMLAMVVLLLVSVAFLTLAERKVLGYIQSRKGPNIEGVWGVIQPFADGLKLFTKEMIMPNHANIFLYWLSPIFSLTLAFIAWGVM 95 
+                               577888899999************************************************************************* PP
+
+                               --SS..SS---SSHHHHHHHHHHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT CS
+                    NADHdh  87 Pfge..vladlnvglllilalsslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeei 169
+                               P+++  v++dl  gll+i+a+ss++vy++l++Gwasns+Y +lGa+R+aaqmisyEv++gl++++vvl++gsl+l++iv aq  +
+  Amphimedon_queenslandica  96 PYSNgiVFSDLGQGLLYIFAVSSISVYAVLMSGWASNSRYGFLGAIRAAAQMISYEVSIGLIIISVVLCVGSLNLTQIVMAQGYM 180
+                               ***7789****************************************************************************** PP
+
+                               -CHHCHHHHHHHHHHHHHHTTTSSS-TTT-STTSS--SSSSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSSHHHHHH CS
+                    NADHdh 170 wfillqllafiifliallaetnraPFDlpeaesELvaGfhtEYsgmkfalfflaeyanmilvsalavllFlgGwllpfsgllwfl 254
+                               w+i   ++a+++f++++laetnr+PFDl+e+esELv+Gf++EY +m+falfflaeyan+il+sal ++lFlgG         w+ 
+  Amphimedon_queenslandica 181 WYIAPLWPAAMMFFVSALAETNRVPFDLTEGESELVSGFNVEYPSMSFALFFLAEYANIILMSALSAVLFLGG--------GWLG 257
+                               **7777******************************************************************9........49** PP
+
+                               HHHHHHHHHHHHHHHC----TTHHHHHHHCCTHHHHHHHHHHHH CS
+                    NADHdh 255 lKvllllflfiwiratlpRlRydqlmklgwkvllplalanlllt 298
+                               +K+ +++++fiwirat+pR+Rydqlm l wk  lpl+l ++ l+
+  Amphimedon_queenslandica 258 VKTSVIVYIFIWIRATFPRVRYDQLMALLWKSYLPLSLGFVTLV 301
+                               **************************************998875 PP
+
+>> CRPA  Chlamydia 15 kDa cysteine-rich outer membrane protein (CRPA)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.5   2.0   1.2e-05     0.099      41     101 ..     126     189 ..     109     200 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 12.5 bits;  conditional E-value: 1.2e-05
+                      CRPA  41 llgwa...kikiidpireskllqsrafkitlvvlGilLviaglallfilqaqlganafylliPa 101
+                               + gwa   +  ++  ir++  + s  + i+l+++ ++L + +l l+ i+ aq     +  l Pa
+  Amphimedon_queenslandica 126 MSGWAsnsRYGFLGAIRAAAQMISYEVSIGLIIISVVLCVGSLNLTQIVMAQGYMWYIAPLWPA 189
+                               33776322567999***********************************999876655555565 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (314 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       715  (0.0438489); expected 326.1 (0.02)
+Passed bias filter:                      251  (0.0153931); expected 326.1 (0.02)
+Passed Vit filter:                        20  (0.00122654); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.64u 0.28s 00:00:00.92 Elapsed: 00:00:00.56
+# Mc/sec: 1604.11
+//
+Query:       Acropora  [L=327]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   2.2e-119  398.1  25.6   2.5e-119  397.9  25.6    1.0  1  NADHdh    NADH dehydrogenase
+  ------ inclusion threshold ------
+          6    6.7  13.0       0.11   12.4   4.3    2.4  2  CRPA      Chlamydia 15 kDa cysteine-rich outer membrane prote
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  397.9  25.6  3.1e-123  2.5e-119       2     298 ..      11     314 ..      10     315 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 397.9 bits;  conditional E-value: 3.1e-123
+               HHHHHHHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--SS..SS---SSHHH CS
+    NADHdh   2 klllllvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfge..vladlnvgll 100
+               k+l+++v+ll++va+ltl+eRkvl++mq R+GPn+vG  Gl qp+aD+lKl++Ke ++p++++ +++++apvl+++lal+++ v+P+++   ++dl++g+l
+  Acropora  11 KILMVVVPLLITVAYLTLAERKVLGYMQARKGPNVVGVSGLAQPFADGLKLFTKEMVVPHQTNLFIYIVAPVLSFTLALIVWGVVPYERgaLISDLKIGVL 111
+               799*************************************************************************************667********** PP
+
+               HHHHHHHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT.-CHHCHHHHHHHHHHHHHHTTTSSS-TTT-S CS
+    NADHdh 101 lilalsslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeei.wfillqllafiifliallaetnraPFDlpea 200
+               +ila+ss++vy+il++GwasnskYa+lGa+R+aaqmisyEv++gl++++v+l++gsls++eiv aq+++ wf++  +++ i+f++++laetnraPFDl+e+
+  Acropora 112 YILAVSSISVYAILMSGWASNSKYAFLGAIRAAAQMISYEVSIGLIIISVLLCVGSLSVTEIVLAQNSGvWFFFPLFPVTIMFFVSALAETNRAPFDLTEG 212
+               ******************************************************************7777997777************************* PP
+
+               TTSS--SSSSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSS....HHHHHHHHHHHHHHHHHHHHHC----TTHHHHHHHCCTHHHHHHHHHHH CS
+    NADHdh 201 esELvaGfhtEYsgmkfalfflaeyanmilvsalavllFlgGwllpfs....gllwfllKvllllflfiwiratlpRlRydqlmklgwkvllplalanlll 297
+               esELv+G+++EY++m+falfflaeya++il+s+l++++F gGwl+p++    g+ wf lKv+l++flfiw+ra++pR+Rydqlm+l wk  lpl+l ++ +
+  Acropora 213 ESELVSGYNVEYASMSFALFFLAEYAHIILMSCLTIIFFGGGWLSPVKylkgGAGWFGLKVVLIIFLFIWVRASFPRIRYDQLMSLLWKAYLPLSLGVVTF 313
+               ***********************************************9************************************************99987 PP
+
+               H CS
+    NADHdh 298 t 298
+               +
+  Acropora 314 V 314
+               6 PP
+
+>> CRPA  Chlamydia 15 kDa cysteine-rich outer membrane protein (CRPA)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.9   1.5      0.34   2.8e+03      64      82 ..      10      28 ..       6      34 .. 0.86
+   2 ?   12.4   4.3   1.3e-05      0.11      41     102 ..     126     191 ..     107     201 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: -1.9 bits;  conditional E-value: 0.34
+      CRPA 64 fkitlvvlGilLviaglal 82
+              +ki +vv+ +l+ +a l+l
+  Acropora 10 LKILMVVVPLLITVAYLTL 28
+              5899999999999998876 PP
+
+  == domain 2  score: 12.4 bits;  conditional E-value: 1.3e-05
+      CRPA  41 llgwa...kikiidpireskllqsrafkitlvvlGilLviaglallfilqaqlganafyl.liPav 102
+               + gwa   k  ++  ir++  + s  + i+l+++ +lL + +l+++ i+ aq +   f++ l P  
+  Acropora 126 MSGWAsnsKYAFLGAIRAAAQMISYEVSIGLIIISVLLCVGSLSVTEIVLAQNSGVWFFFpLFPVT 191
+               347763337789**********************************99999987766666566654 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (327 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       757  (0.0464246); expected 326.1 (0.02)
+Passed bias filter:                      271  (0.0166196); expected 326.1 (0.02)
+Passed Vit filter:                        21  (0.00128787); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.65u 0.31s 00:00:00.96 Elapsed: 00:00:00.53
+# Mc/sec: 1765.08
+//
+Query:       Trichinella  [L=299]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.5e-68  231.2  13.2    1.9e-68  230.9  13.2    1.0  1  NADHdh    NADH dehydrogenase
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  230.9  13.2   1.1e-72   1.9e-68       3     295 ..       8     290 ..       6     293 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 230.9 bits;  conditional E-value: 1.1e-72
+                  HHHHHHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--SSSS---SSHHH CS
+       NADHdh   3 lllllvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfgevladlnvgll 100
+                  ll +++++ll +a++tl+eR++++  q+RlGPn+v+  Gl+qp+ D+lKl lK +   +k + +++ll p++ l+l  l +  +P+    + ++v+ll
+  Trichinella   8 LLTIIITILLSIAFVTLIERQYIGISQRRLGPNKVSITGLIQPILDGLKLTLKSTKKTNKLNPTFYLLIPIINLTLFTLFWWGLPLLYNPISFQVNLL 105
+                  67788899*****************************************************************************9988889999*** PP
+
+                  HHHHHHHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT-C..HHCHHHHHHHHHHHHHHTTTSSS-T CS
+       NADHdh 101 lilalsslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeeiwf..illqllafiifliallaetnraPFD 196
+                  + + l+ +  +gi+l Gw sn kYa+ G+lRs++q isyEv l ++ll++++l  s++l +    +++ ++  + ++l + i   i +laetnr PFD
+  Trichinella 106 FTITLIGIIRFGIVLRGWVSNRKYATYGSLRSISQSISYEVCLSTTLLIIIILKDSYNLATT---KTGFYYfePTITLALTIPATIIILAETNRRPFD 200
+                  ***********************************************************999...22333357555578889999************* PP
+
+                  TT-STTSS--SSSSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSSHHHHHHHHHHHHHHHHHHHHHC----TTHHHHHHHCCTHHHHHHHH CS
+       NADHdh 197 lpeaesELvaGfhtEYsgmkfalfflaeyanmilvsalavllFlgGwllpfsgllwfllKvllllflfiwiratlpRlRydqlmklgwkvllplalan 294
+                  l+eae ELv Gf++E+s ++fa++f+aey ++il+ +l+++l l  w +p        l +lll+  +i+ r+t+pR+Ryd l++l wk llp+ +  
+  Trichinella 201 LAEAERELVRGFNIEFSRVEFAFLFIAEYGMIILLRTLFSTLLL-PWCSP--------LLTLLLIRRIIISRSTFPRIRYDTLIRLIWKSLLPVIIRI 289
+                  ********************************************.45555........457788889999************************9876 PP
+
+                  H CS
+       NADHdh 295 l 295
+                  l
+  Trichinella 290 L 290
+                  6 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (299 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       582  (0.0356924); expected 326.1 (0.02)
+Passed bias filter:                      223  (0.0136759); expected 326.1 (0.02)
+Passed Vit filter:                        14  (0.00085858); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.59u 0.31s 00:00:00.89 Elapsed: 00:00:00.54
+# Mc/sec: 1584.05
+//
+Query:       Balanoglossus  [L=322]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   5.6e-109  363.9  15.2   6.5e-109  363.7  15.2    1.0  1  NADHdh    NADH dehydrogenase
+  ------ inclusion threshold ------
+       0.14   11.8   0.0       0.25   10.9   0.0    1.4  1  VPS13_C   Vacuolar-sorting-associated 13 protein C-terminal
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  363.7  15.2    8e-113  6.5e-109       2     298 ..       9     309 ..       8     310 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 363.7 bits;  conditional E-value: 8e-113
+                    HHHHHHHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--SSSS---SS CS
+         NADHdh   2 klllllvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfgevladlnv 97 
+                    ++l+l+v++ll+va++tl eRk++++mq R+GPn+vGp+Gllqp+aD++Kl++Ke + p++a+  lf+l p+lal++al++++ iP+  +++ +n+
+  Balanoglossus   9 HALILIVPVLLAVAFITLGERKIIGYMQLRKGPNVVGPYGLLQPIADGVKLFIKEPVKPTTANPQLFILCPILALAIALVLWTPIPLPFQFSSINL 104
+                    5789999*******************************************************************************9989****** PP
+
+                    HHHHHHHHHHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT-CHHCHHHHHHHHHHHHHHTTTSS CS
+         NADHdh  98 glllilalsslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeeiwfillqllafiifliallaetnra 193
+                    +++lilals l+vy il +Gw+snskYal+G++R++aq+isyEv+lgl++l+vv+lag ++ls+iv+ q+ +wfil+  ++++i+++++laetnr+
+  Balanoglossus 105 SIILILALSRLAVYSILGSGWSSNSKYALIGSIRAVAQTISYEVSLGLIVLCVVILAGRFNLSTIVDRQDFSWFILTCTPIAFIWYVSTLAETNRT 200
+                    **********************************************************************99**9999****************** PP
+
+                    S-TTT-STTSS--SSSSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSS....HHHHHHHHHHHHHHHHHHHHHC----TTHHHHHHHCC CS
+         NADHdh 194 PFDlpeaesELvaGfhtEYsgmkfalfflaeyanmilvsalavllFlgGwllpfs....gllwfllKvllllflfiwiratlpRlRydqlmklgwk 285
+                    PFDl+e+esELv+Gf++EY+g  falfflaey n+i++ +l ++lFlgG  + +     ++ +++lK+++l +lf+w+ra++pR+Rydqlm+l+wk
+  Balanoglossus 201 PFDLTEGESELVSGFNVEYAGGPFALFFLAEYSNIIFMNVLSTVLFLGGGGPSILfswaQTPIIALKATFLSLLFLWVRASYPRFRYDQLMHLAWK 296
+                    *************************************************74443355668889********************************* PP
+
+                    THHHHHHHHHHHH CS
+         NADHdh 286 vllplalanlllt 298
+                      lplal  l+l+
+  Balanoglossus 297 SYLPLALGLLILL 309
+                    ********99986 PP
+
+>> VPS13_C  Vacuolar-sorting-associated 13 protein C-terminal
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.9   0.0   3.1e-05      0.25     100     134 ..      43      76 ..      34      78 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 10.9 bits;  conditional E-value: 3.1e-05
+        VPS13_C 100 vlGNPvglfnnissGvkdlfyePiqglvkgpeefg 134
+                    v+G P+gl++ i+ Gvk +++eP++  + +p+ f+
+  Balanoglossus  43 VVG-PYGLLQPIADGVKLFIKEPVKPTTANPQLFI 76 
+                    666.************************9999775 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (322 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       689  (0.0422544); expected 326.1 (0.02)
+Passed bias filter:                      278  (0.0170489); expected 326.1 (0.02)
+Passed Vit filter:                        14  (0.00085858); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.63u 0.40s 00:00:01.03 Elapsed: 00:00:00.62
+# Mc/sec: 1485.79
+//
+Query:       Tetrancistrum_nebulosi  [L=293]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.7e-56  191.6  17.8    2.1e-56  191.3  17.8    1.0  1  NADHdh    NADH dehydrogenase
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  191.3  17.8   1.3e-60   2.1e-56       3     296 ..      10     290 ..       8     292 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 191.3 bits;  conditional E-value: 1.3e-60
+                             HHHHHHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--S CS
+                  NADHdh   3 lllllvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfg 89 
+                             +ll +++++++va+++l eRk+++++q R+GPn+vG  Gllq +aD++Kl++K ++ + +  + l l + +l++il+ll +++  ++
+  Tetrancistrum_nebulosi  10 VLLSFILVMVFVAFFILGERKLIGYIQLRKGPNKVGIAGLLQRFADLIKLVIKFKVKNFQYRRGLALGGTYLLVILSLLYCLLY-WN 95 
+                             56677789999***********************************************************99999998877665.45 PP
+
+                             SSS---SSHHHHHHHHHHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT-CHHCHH CS
+                  NADHdh  90 evladlnvglllilalsslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeeiwfillql 176
+                                   ++g+l++l ++sl+ y +l  G+   +k++l+G+lRs+   + +E  l+++++ + l+ gs+++ ++   +  + f+l  l
+  Tetrancistrum_nebulosi  96 YFKGRKELGILWFLLVTSLTGYSLLGVGLGRYNKFSLFGSLRSSFSSVRFEACLMCIVVLIGLIKGSYKIGSV---RGPSLFLL-LL 178
+                             34445588***************************************************************99...22234455.59 PP
+
+                             HHHHHHHHHHHHTTTSSS-TTT-STTSS--SSSSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSSHHHHHHHHHHHHHHH CS
+                  NADHdh 177 lafiifliallaetnraPFDlpeaesELvaGfhtEYsgmkfalfflaeyanmilvsalavllFlgGwllpfsgllwfllKvllllfl 263
+                             + + i+l+ +l etnr+PFD +e+e +Lv Gf tE+  + f  +f  ey+ ++++  + +++F+        ++l  +l +++ +f+
+  Tetrancistrum_nebulosi 179 PPYYIWLVRILCETNRTPFDYAESERDLVRGFKTEFCNVYFTCLFACEYLIIFIIRWFRSCIFFN-------KFL-WWLSLVFHIFF 257
+                             99**************************************************************3.......344.467889999** PP
+
+                             HHHHHHC----TTHHHHHHHCCTHHHHHHHHHH CS
+                  NADHdh 264 fiwiratlpRlRydqlmklgwkvllplalanll 296
+                             fiw r+tlpR+Ryd ++k++wkv + +  ++ll
+  Tetrancistrum_nebulosi 258 FIWARSTLPRVRYDYFVKFTWKVSILVLAFYLL 290
+                             ***********************9988777766 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (293 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       707  (0.0433583); expected 326.1 (0.02)
+Passed bias filter:                      239  (0.0146572); expected 326.1 (0.02)
+Passed Vit filter:                        16  (0.000981234); expected 16.3 (0.001)
+Passed Fwd filter:                         5  (0.000306636); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.60u 0.32s 00:00:00.92 Elapsed: 00:00:00.52
+# Mc/sec: 1611.97
+//
+Query:       Pseudogarypus_banksi  [L=295]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.5e-57  194.3  31.9      3e-57  194.1  31.9    1.0  1  NADHdh    NADH dehydrogenase
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  194.1  31.9   1.8e-61     3e-57       5     295 ..       7     294 ..       3     295 .] 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 194.1 bits;  conditional E-value: 1.8e-61
+                           HHHHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--SSSS- CS
+                NADHdh   5 lllvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfgevla 93 
+                            l++ +l+ va++ lleRk+l+  q+R+GPn++   G+ qp+ D+lKl+ Ke +  + ++  ++++ p++++il++l++++ P+   + 
+  Pseudogarypus_banksi   7 ELILGVLIRVAFISLLERKILSLGQSRKGPNKALFNGIGQPFSDILKLFRKEYFKFRVVSIKFYYFPPLFIIILSFLSCLIFPVVGGFL 95 
+                           566789999**************************************************************************996444 PP
+
+                           --.SSHHHHHHHHHHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHH.HH--S-HHHHHHHHHTT..-CHHCHHHH CS
+                NADHdh  94 dl.nvglllilalsslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvl.lagslslseiveaqeei..wfillqlla 178
+                           ++ +  +++ l l+s++ y+++ +Gw s skY+llG  R a+++isyEv+l+l +l +++ l  + +l ++ + q+     ++++ + +
+  Pseudogarypus_banksi  96 NIlDELIIYYLCLISVSSYIVIYMGWLSFSKYSLLGRYRGASIIISYEVFLFLLILLILIyLLRKGQLFNFLTFQSVRglVLLIYFFYL 184
+                           443668********************************************998777665526888899999999975543346666889 PP
+
+                           HHHHHHHHHHTTTSSS-TTT-STTSS--SSSSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSSHHHHHHHHHHHHHHHHHHH CS
+                NADHdh 179 fiifliallaetnraPFDlpeaesELvaGfhtEYsgmkfalfflaeyanmilvsalavllFlgGwllpfsgllwfllKvllllflfiwi 267
+                           ++i +i l+ e+nr P Dl e+esELv+Gf+tEY g+ f l+f++ey+++i     + +lFl G+l+ fs l +f++   l++++++++
+  Pseudogarypus_banksi 185 MFIGVIGLVSELNRSPIDLLEGESELVSGFNTEYLGFIFSLIFISEYLMVI-----MGVLFLSGVLVWFSLLGYFVCS--LIIVIVVFF 266
+                           99999******************************************9765.....5689****98776544455544..455566789 PP
+
+                           HHC----TTHHHHHHHCCTHHHHHHHHH CS
+                NADHdh 268 ratlpRlRydqlmklgwkvllplalanl 295
+                           ra++pR+Ryd lm + w+++lp+al+++
+  Pseudogarypus_banksi 267 RAVYPRIRYDILMVIFWEIILPFALIFF 294
+                           *************************976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (295 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1009  (0.0618791); expected 326.1 (0.02)
+Passed bias filter:                      235  (0.0144119); expected 326.1 (0.02)
+Passed Vit filter:                        29  (0.00177849); expected 16.3 (0.001)
+Passed Fwd filter:                        12  (0.000735925); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.73u 0.31s 00:00:01.04 Elapsed: 00:00:00.54
+# Mc/sec: 1562.86
+//
+Query:       Benedenia_hoshinai  [L=297]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      5e-60  203.2  21.2    5.7e-60  203.0  21.2    1.0  1  NADHdh    NADH dehydrogenase
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  203.0  21.2   3.5e-64   5.7e-60       2     297 ..      11     295 ..      10     297 .] 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 203.0 bits;  conditional E-value: 3.5e-64
+                         HHHHHHHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--SSSS CS
+              NADHdh   2 klllllvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfgevl 92 
+                         kll+++++++++va+++l eRkvl+++q R+GPn+vG  Gl+q +aD++Kl++K +i +++   ++ +  ++l++il+++ + +  +    
+  Benedenia_hoshinai  11 KLLICFILVMIFVAFFILSERKVLGYIQIRKGPNKVGLSGLFQRFADLIKLVIKFKIYNTQLRGLISTYRVYLLIILSFCYCGLYSLWLSH 101
+                         678889999***********************************************************************99999988556 PP
+
+                         ---SSHHHHHHHHHHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT-CHHCHHHHHHHHH CS
+              NADHdh  93 adlnvglllilalsslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeeiwfillqllafiifl 183
+                            n++lll+l+++sl+ y +l aGw   +kY+l G+lR++   + +E  l+   l+v +++ s++ls + ++ +  w   l +l++ ++l
+  Benedenia_hoshinai 102 NSSNYSLLLFLVITSLTGYSLLGAGWGRYNKYSLYGSLRASFGSVTFEACLMGLSLIVGVFYYSYNLSLFNSYLSPFW---LCPLLYGLWL 189
+                         66699********************************************99999999999999999999966555445...5578999*** PP
+
+                         HHHHHTTTSSS-TTT-STTSS--SSSSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSSHHHHHHHHHHHHHHHHHHHHHC---- CS
+              NADHdh 184 iallaetnraPFDlpeaesELvaGfhtEYsgmkfalfflaeyanmilvsalavllFlgGwllpfsgllwfllKvllllflfiwiratlpRl 274
+                         + +l et+r+PFD +e+es+Lv Gf+tEY  + f  +f  ey+ ++++  + ++lF+  +l         ++ ++l +f+++wir tlpR+
+  Benedenia_hoshinai 190 VRILCETKRTPFDYAESESDLVRGFNTEYCNVYFTCLFACEYLIIYIMRWVSAILFFKAYLK--------IFIIILNFFFLVWIRGTLPRV 272
+                         *********************************************************77643........333456678899********* PP
+
+                         TTHHHHHHHCCTHHHHHHHHHHH CS
+              NADHdh 275 Rydqlmklgwkvllplalanlll 297
+                         Ryd++++++wk+ l + ++++l+
+  Benedenia_hoshinai 273 RYDHFINFMWKYNLIFLVLFILC 295
+                         ************99998888775 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (297 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       873  (0.0535386); expected 326.1 (0.02)
+Passed bias filter:                      253  (0.0155158); expected 326.1 (0.02)
+Passed Vit filter:                        21  (0.00128787); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.62u 0.36s 00:00:00.98 Elapsed: 00:00:00.59
+# Mc/sec: 1440.11
+//
+Query:       Myxine  [L=318]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   3.7e-105  351.4  23.5   4.3e-105  351.2  23.5    1.0  1  NADHdh    NADH dehydrogenase
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  351.2  23.5  2.7e-109  4.3e-105       4     297 ..       9     303 ..       6     305 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 351.2 bits;  conditional E-value: 2.7e-109
+             HHHHHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--SSSS---SSHHHHHHHHH CS
+  NADHdh   4 llllvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfgevladlnvglllilals 106
+             +l +v++l++va+ltl+eRkvl++mq R+GPn vGp+Gllqp+aD++Kl++Ke + p+ a+ +lf+lap+la+ lal++++ +P+  +l+d+n+gl++ila+s
+  Myxine   9 FLTFVIILIAVAFLTLIERKVLGYMQLRKGPNIVGPFGLLQPFADGIKLFIKEPLQPSYASIFLFILAPALAISLALILWISLPLPLALSDMNLGLIFILAIS 111
+             5667789999**************************************************************************9999*************** PP
+
+             HHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT-CHHCHHHHHHHHHHHHHHTTTSSS-TTT-STTSS--SSS CS
+  NADHdh 107 slgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeeiwfillqllafiifliallaetnraPFDlpeaesELvaGfh 209
+             sl+vy +l +GwasnskYal+GalR++aq+isyEv+lgl+++a+ +l+g ++l+ +++ q++iw+++  +++f++++i++laetnr PFDl+e+esELv+Gf+
+  Myxine 112 SLSVYSLLTSGWASNSKYALIGALRAVAQTISYEVTLGLIIVALTILSGGFDLKLFIDLQNKIWLLFPIWPIFLMWFISTLAETNRSPFDLTEGESELVSGFN 214
+             ****************************************************************97777********************************** PP
+
+             SS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSS.HHHHHHHHHHHHHHHHHHHHHC----TTHHHHHHHCCTHHHHHHHHHHH CS
+  NADHdh 210 tEYsgmkfalfflaeyanmilvsalavllFlgGwllpfs.gllwfllKvllllflfiwiratlpRlRydqlmklgwkvllplalanlll 297
+             +E+sg  falfflaeyan++++ +l+v+lF+g  +l        +++K+++l+flf+w+ra++pR+Rydql++l wk +lp++l  l++
+  Myxine 215 VEFSGGLFALFFLAEYANILFINSLTVVLFIGSSNLSSLyFSASITIKTIFLIFLFLWVRASYPRFRYDQLIHLIWKNFLPITLSLLIF 303
+             ********************************98776544667799**************************************99986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (318 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       775  (0.0475285); expected 326.1 (0.02)
+Passed bias filter:                      246  (0.0150865); expected 326.1 (0.02)
+Passed Vit filter:                        26  (0.00159451); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.62u 0.30s 00:00:00.92 Elapsed: 00:00:00.53
+# Mc/sec: 1716.50
+//
+Query:       Drosophila  [L=312]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.3e-85  286.4  24.8    2.7e-85  286.2  24.8    1.0  1  NADHdh    NADH dehydrogenase
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  286.2  24.8   1.7e-89   2.7e-85       4     297 ..      11     300 ..       8     302 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 286.2 bits;  conditional E-value: 1.7e-89
+                 HHHHHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--SSSS---SSHHHHH CS
+      NADHdh   4 llllvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfgevladlnvgllli 102
+                 lll++++l+ va+ltlleRkvl+++q R+GPn+vG  G+ qp+ Da+Kl++Ke++ p  ++ + ++++p+++l+l+l++++++Pf   l+ +n+g l++
+  Drosophila  11 LLLIICVLVSVAFLTLLERKVLGYIQIRKGPNKVGLIGIPQPFCDAIKLFTKEQTYPLLSNYLRYYISPIFSLFLSLFVWICMPFFVKLYSFNLGGLFF 109
+                 667779********************************************************************************99999******** PP
+
+                 HHHHHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT-CHHCHHHHHHHHHHHHHHTTTSSS-TTT-ST CS
+      NADHdh 103 lalsslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeeiwfillqllafiifliallaetnraPFDlpeae 201
+                 l ++ lgvy +++aGw+sns+YallG+lR++aq+isyEv+l+l+ll++++l gs+++  +  +q  iwf+++ ++++++++  +laetnr PFD++e+e
+  Drosophila 110 LCCTRLGVYTVIVAGWSSNSNYALLGGLRAVAQTISYEVSLALILLSFIFLIGSYNIIYFFFYQVYIWFLIILFPIALVWVSISLAETNRNPFDFAEGE 208
+                 *********************************************************************8888************************** PP
+
+                 TSS--SSSSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSS.HHHHHHHHHHHHHHHHHHHHHC----TTHHHHHHHCCTHHHHHHHHHHH CS
+      NADHdh 202 sELvaGfhtEYsgmkfalfflaeyanmilvsalavllFlgGwllpfs.gllwfllKvllllflfiwiratlpRlRydqlmklgwkvllplalanlll 297
+                 sELv+Gf++EY    +al+f+aeya+++++ +l+ ++Fl      +    l++ +K++++ f+fiw+r tlpR+Ryd+l+ l+wk++l ++l +ll+
+  Drosophila 209 SELVSGFNVEYRRGGLALIFIAEYARILFIRILFCVIFLP-----CDvFNLLIYIKLTFISFVFIWVRGTLPRFRYDKLIYLAWKCFLSFSLNYLLF 300
+                 ***************************************4.....332357889**************************************99886 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (312 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       856  (0.052496); expected 326.1 (0.02)
+Passed bias filter:                      228  (0.0139826); expected 326.1 (0.02)
+Passed Vit filter:                        21  (0.00128787); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.64u 0.29s 00:00:00.93 Elapsed: 00:00:00.53
+# Mc/sec: 1684.11
+//
+Query:       Ciona  [L=302]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.3e-65  221.5  35.7    1.6e-65  221.3  35.7    1.0  1  NADHdh    NADH dehydrogenase
+  ------ inclusion threshold ------
+        1.7    8.9   4.3          4    7.7   4.3    1.6  1  DUF1180   Protein of unknown function (DUF1180)
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  221.3  35.7   1.9e-69   1.6e-65       3     297 ..       8     295 ..       6     297 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 221.3 bits;  conditional E-value: 1.9e-69
+             HHHHHHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--SSSS---SSHHHHHHHH CS
+  NADHdh   3 lllllvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfgevladlnvglllilal 105
+             +ll++++lll+va+l+lleRkvl  +q R+ Pn v  +G++q+++D +Kl+lK+ ++  ++ k++fllap+l++il+l+ +++iP   +l++ ++ +l+ l++
+   Ciona   8 YLLFILILLLIVAFLVLLERKVLRLVQFRKRPNIVRIYGIVQTIVDRVKLILKNLMVLINVRKFFFLLAPILSFILSLINWFFIPTPFILVNSEFRILITLVI 110
+             57788899999**************************************************************************777999************ PP
+
+             HHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT-CHHCHHHHHHHHHHH.HHHTTTSSS-TTT-STTSS--S CS
+  NADHdh 106 sslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeeiwfillqllafiiflia.llaetnraPFDlpeaesELvaG 207
+             ssl vy +l+a w sn+ Y+l+  +R +aq+isyEv+l + +l+++l+ +s++   +v +q+++ f+   +++f++ +i+ +lae+nraPFDl e+esELv+G
+   Ciona 111 SSLLVYSTLWARWRSNNIYSLIRRIRGVAQIISYEVVLRFFILIILLFLNSFNWDIFVYYQKSSLFYRG-FFLFLLSWISiILAELNRAPFDLIEGESELVSG 212
+             *************************************************************98887665.5556655555389******************** PP
+
+             SSSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSSHHHHHHHHHHHHHHHHHHHHHC----TTHHHHHHHCCTHHHHHHHHHHH CS
+  NADHdh 208 fhtEYsgmkfalfflaeyanmilvsalavllFlgGwllpfsgllwfllKvllllflfiwiratlpRlRydqlmklgwkvllplalanlll 297
+             f++EY  + fal+fl ey+n++++s +++l+Fl          + +++  + +++l++ ir+ lpR+++  l+ ++wk+ lpl l++l+l
+   Ciona 213 FNVEYRRFIFALIFLREYINIWFISWITILIFLR-------RNISLVVLSFRVVLLILYIRSLLPRFKFTDLIVITWKIYLPLVLVYLIL 295
+             *********************************4.......234566666777788889****************************998 PP
+
+>> DUF1180  Protein of unknown function (DUF1180)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.7   4.3   0.00049         4     103     146 ..      13      57 ..       6      59 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 7.7 bits;  conditional E-value: 0.00049
+  DUF1180 103 llvlvvvsaaviv.ylvvRtvrlrrrnrktRrYgvldtnienmEl 146
+              l++l++v+ +v++   v+R v+ r+r    R Yg+++t ++++ l
+    Ciona  13 LILLLIVAFLVLLeRKVLRLVQFRKRPNIVRIYGIVQTIVDRVKL 57 
+              44455555555542469*********************9998866 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (302 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1072  (0.0657427); expected 326.1 (0.02)
+Passed bias filter:                      258  (0.0158224); expected 326.1 (0.02)
+Passed Vit filter:                        35  (0.00214645); expected 16.3 (0.001)
+Passed Fwd filter:                         9  (0.000551944); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.62u 0.36s 00:00:00.98 Elapsed: 00:00:00.56
+# Mc/sec: 1542.80
+//
+Query:       Epigonichthys  [L=310]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   2.5e-101  338.8  20.1   2.9e-101  338.6  20.1    1.0  1  NADHdh    NADH dehydrogenase
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  338.6  20.1  1.8e-105  2.9e-101       2     297 ..       6     297 ..       5     299 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 338.6 bits;  conditional E-value: 1.8e-105
+                    HHHHHHHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--SSSS---SS CS
+         NADHdh   2 klllllvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfgevladlnv 97 
+                    ++ll+++++ll+va+ltl eRkv++++q R+GPn+vGp+Gllqp+aDa+Kl++Ke i p+ + + lf++ap+lal lall+++ iP+ e +++ln+
+  Epigonichthys   6 HILLYFAPVLLAVAFLTLTERKVIGYVQLRKGPNVVGPYGLLQPFADAVKLFVKEPINPSFSITSLFFFAPILALSLALLLWTPIPVLESFIELNF 101
+                    6899999***************************************************************************************** PP
+
+                    HHHHHHHHHHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT-CHHCHHHHHHHHHHHHHHTTTSS CS
+         NADHdh  98 glllilalsslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeeiwfillqllafiifliallaetnra 193
+                    ++l++la+ssl+vy i+ +Gw+snskYallGalR++aq++syEv+lgl++l +v l+g + l ++v +qe++++il  ++++ii++i+++aetnr 
+  Epigonichthys 102 AVLFVLAISSLSVYSIIASGWSSNSKYALLGALRAVAQIVSYEVSLGLIILRLVCLVGRFRLIQFVFTQEGTMLILSCWPLAIIWFISTVAETNRS 197
+                    **********************************************************************99999999****************** PP
+
+                    S-TTT-STTSS--SSSSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSSHHHHHHHHHHHHHHHHHHHHHC----TTHHHHHHHCCTHHH CS
+         NADHdh 194 PFDlpeaesELvaGfhtEYsgmkfalfflaeyanmilvsalavllFlgGwllpfsgllwfllKvllllflfiwiratlpRlRydqlmklgwkvllp 289
+                    PFDl+e+esELv+Gf++EYsg  falfflaeyan++++ +l+v+lFl  +     +ll ++ +  +l+ +++w+ra++pR+Rydqlm+l+wk +lp
+  Epigonichthys 198 PFDLTEGESELVSGFNVEYSGGPFALFFLAEYANILFINILTVILFLSYY----LSLLSLVSQGGVLIGIYLWFRASYPRFRYDQLMHLAWKRFLP 289
+                    ***********************************************543....3789************************************** PP
+
+                    HHHHHHHH CS
+         NADHdh 290 lalanlll 297
+                    l+l  ll+
+  Epigonichthys 290 LSLGLLLM 297
+                    ***98875 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (310 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       618  (0.0379002); expected 326.1 (0.02)
+Passed bias filter:                      230  (0.0141052); expected 326.1 (0.02)
+Passed Vit filter:                        15  (0.000919907); expected 16.3 (0.001)
+Passed Fwd filter:                         1  (6.13271e-05); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.61u 0.36s 00:00:00.97 Elapsed: 00:00:00.67
+# Mc/sec: 1323.67
+//
+Query:       Strigamia_maritima  [L=306]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.4e-79  265.8  21.2      5e-79  265.6  21.2    1.0  1  NADHdh    NADH dehydrogenase
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  265.6  21.2   3.1e-83     5e-79       4     298 ..       9     297 ..       6     298 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 265.6 bits;  conditional E-value: 3.1e-83
+                         HHHHHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--SSSS-- CS
+              NADHdh   4 llllvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfgevlad 94 
+                         ++l+v++ll va++tl+eR+ l++ q R GP+rvGp++l+qp+ Da+Kll++e   p++++ + +++ pvl+l+l l+++ v+Pf     +
+  Strigamia_maritima   9 VFLIVCVLLSVAFFTLFERRGLGYAQIRRGPTRVGPRSLFQPFSDAIKLLVREIEQPRGSNFIPYFFCPVLSLFLFLAIWEVVPFLGGGGQ 99 
+                         678889********************************************************************************98899 PP
+
+                         -SSHHHHHHHHHHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT-CHHCHHHHHHHHHHH CS
+              NADHdh  95 lnvglllilalsslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeeiwfillqllafiiflia 185
+                         + ++ll++l ++ +g y+++ +Gw snskYallG lR +aq +syEv+l+l++++++l+ag +s++ +  aq ++++++l +  +  +++ 
+  Strigamia_maritima 100 ITFSLLFFLCIVGVGSYVVMGSGWFSNSKYALLGCLRFIAQAVSYEVSLALVIIILALVAGGYSIRGFLGAQFGGFYFFLFFSPAASWVVI 190
+                         999*********************************************************************888888887999999**** PP
+
+                         HHHTTTSSS-TTT-STTSS--SSSSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSSHHHHHHHHHHHHHHHHHHHHHC----TT CS
+              NADHdh 186 llaetnraPFDlpeaesELvaGfhtEYsgmkfalfflaeyanmilvsalavllFlgGwllpfsgllwfllKvllllflfiwiratlpRlRy 276
+                         +lae nr+PFD++e+esELv+Gf++EY+g  fal+f+aeya+m+++ +++  +F+gG+      + +++l v++++flfiw+r  lpRlRy
+  Strigamia_maritima 191 MLAERNRTPFDFAEGESELVSGFNVEYGGGGFALLFMAEYARMLMMRFFFCGIFIGGV------IELVCLPVIAIVFLFIWVRGLLPRLRY 275
+                         *********************************************************7......456899********************* PP
+
+                         HHHHHHHCCTHHHHHHHHHHHH CS
+              NADHdh 277 dqlmklgwkvllplalanlllt 298
+                         d l+ l+wk llpl++ +++++
+  Strigamia_maritima 276 DVLIYLAWKDLLPLTICYFIFV 297
+                         *****************99986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (306 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       749  (0.045934); expected 326.1 (0.02)
+Passed bias filter:                      248  (0.0152091); expected 326.1 (0.02)
+Passed Vit filter:                        29  (0.00177849); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.62u 0.31s 00:00:00.93 Elapsed: 00:00:00.53
+# Mc/sec: 1651.72
+//
+Query:       Caenorhabditis  [L=291]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.1e-62  210.0  25.5    5.2e-62  209.7  25.5    1.0  1  NADHdh    NADH dehydrogenase
+  ------ inclusion threshold ------
+       0.57   10.5  12.8       0.87    9.9   2.7    3.0  2  DUF1211   Protein of unknown function (DUF1211)
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  209.7  25.5   6.4e-66   5.2e-62       3     298 ..       8     285 ..       5     286 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 209.7 bits;  conditional E-value: 6.4e-66
+                     HHHHHHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--SSSS---SS CS
+          NADHdh   3 lllllvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfgevladlnv 97 
+                     ++l++++++  +a++tl+eR +l+r q+RlGP++v  +Gl q+l D++Kll Ke+i+p ++++v fll p +++++++l ++++P+   ++ +++
+  Caenorhabditis   8 VILMMIFIVQRIAFITLYERHLLGRRQNRLGPTKVTFMGLAQALLDGVKLLKKEQITPLNSSEVSFLLVPGISFVVIYLEWFTLPYFFDFISFEY 102
+                     3455556778888************************************************************************8866788899 PP
+
+                     HHHHHHHHHHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT-CHHCHHHHHHHHHHHHHHTTTS CS
+          NADHdh  98 glllilalsslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeeiwfillqllafiifliallaetnr 192
+                     ++l++l l+ ++vy +l++G+  +skY ++Ga+R+  q isyE+a+ l +l++++  + +++ +  +       + l l+++i fli ++ae+nr
+  Caenorhabditis 103 SVLFFLCLIGFSVYTTLISGIVRKSKYGIIGAIRARRQRISYEIAFSLYVLCIIIHNNVFNFVSKFN-------LRL-LIIYIPFLIIVIAELNR 189
+                     *************************************************************988743.......444.899************** PP
+
+                     SS-TTT-STTSS--SSSSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSSHHHHHHHHHHHHHHHHHHHHHC----TTHHHHHHHCCTH CS
+          NADHdh 193 aPFDlpeaesELvaGfhtEYsgmkfalfflaeyanmilvsalavllFlgGwllpfsgllwfllKvllllflfiwiratlpRlRydqlmklgwkvl 287
+                     aPFD+ e+e ELv Gf++E++ + f+l+fl ey ++i++ +l +++F+         + +f+  ++ ++ l+i+ir+++pR+Ryd +++l w  l
+  Caenorhabditis 190 APFDFSEGERELVRGFNVEFARVAFVLLFLREYGRLIFFRVLSSAIFFK--------FSIFI--AFSIFSLLIFIRSSYPRYRYDLIISLFWFKL 274
+                     ************************************************2........23333..4566678899********************* PP
+
+                     HHHHHHHHHHH CS
+          NADHdh 288 lplalanlllt 298
+                     lp++l+ l+++
+  Caenorhabditis 275 LPISLIILCFY 285
+                     ******99876 PP
+
+>> DUF1211  Protein of unknown function (DUF1211)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.5   3.2    0.0051        42      26      74 ..      60     109 ..       6     121 .. 0.81
+   2 ?    9.9   2.7   0.00011      0.87      36      82 ..     138     184 ..     113     185 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 4.5 bits;  conditional E-value: 0.0051
+         DUF1211  26 eellaall.ellpsllayllsFlvvasfWlnhhrlfrrikkvdrgllwln 74 
+                     +e+++ l  ++++ ll+  +sF+v+   W++   +f++i+   + l++l 
+  Caenorhabditis  60 KEQITPLNsSEVSFLLVPGISFVVIYLEWFTLPYFFDFISFEYSVLFFLC 109
+                     5556666657788888999******************9986666666554 PP
+
+  == domain 2  score: 9.9 bits;  conditional E-value: 0.00011
+         DUF1211  36 lpsllayllsFlvvasfWlnhhrlfrrikkvdrgllwlnlllllliv 82 
+                      ++ ++y ++F + +   + h ++f++++k++ +ll++ + +l++++
+  Caenorhabditis 138 RRQRISYEIAFSLYVLCIIIHNNVFNFVSKFNLRLLIIYIPFLIIVI 184
+                     567899************************************99875 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (291 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       828  (0.0507789); expected 326.1 (0.02)
+Passed bias filter:                      251  (0.0153931); expected 326.1 (0.02)
+Passed Vit filter:                        28  (0.00171716); expected 16.3 (0.001)
+Passed Fwd filter:                         7  (0.00042929); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.67u 0.29s 00:00:00.96 Elapsed: 00:00:00.54
+# Mc/sec: 1541.67
+//
+Query:       Homo  [L=317]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+     4e-105  351.3  17.2   4.6e-105  351.1  17.2    1.0  1  NADHdh    NADH dehydrogenase
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  351.1  17.2  2.8e-109  4.6e-105       3     298 ..       6     304 ..       4     305 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 351.1 bits;  conditional E-value: 2.8e-109
+             HHHHHHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--SSSS---SSHHHHHHHH CS
+  NADHdh   3 lllllvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfgevladlnvglllilal 105
+             llll+v++l+++a+l+l eRk+l+++q R+GPn+vGp+Gllqp+aDa+Kl++Ke + p+++  +l+++ap lal++all+++ +P+ + l++ln+gll+ila 
+    Homo   6 LLLLIVPILIAMAFLMLTERKILGYIQLRKGPNVVGPYGLLQPFADAIKLFTKEPLKPATSTITLYITAPTLALTIALLLWTPLPIPNPLVNLNLGLLFILAT 108
+             788999*********************************************************************************99************** PP
+
+             HHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT-CHHCHHHHHHHHHHHHHHTTTSSS-TTT-STTSS--SS CS
+  NADHdh 106 sslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeeiwfillqllafiifliallaetnraPFDlpeaesELvaGf 208
+             ssl+vy il++Gwasns+Yal+GalR++aq+isyEv+l+++ll+ +l++gs++ls+++++qe+ w++l  ++++ii++i++laetnr+PFDl+e+esELv+Gf
+    Homo 109 SSLAVYSILWSGWASNSNYALIGALRAVAQTISYEVTLAIILLSTLLISGSFNLSTLITTQEHLWLLLPSWPLAIIWFISTLAETNRTPFDLAEGESELVSGF 211
+             *****************************************************************97778********************************* PP
+
+             SSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSS...HHHHHHHHHHHHHHHHHHHHHC----TTHHHHHHHCCTHHHHHHHHHHHH CS
+  NADHdh 209 htEYsgmkfalfflaeyanmilvsalavllFlgGwllpfs...gllwfllKvllllflfiwiratlpRlRydqlmklgwkvllplalanlllt 298
+             ++EY++  falff+aey+n+i++ +l++++Flg     +s    + +f+ K+lll  lf+wir+++pR+Rydql++l wk +lpl+la l+++
+    Homo 212 NIEYAAGPFALFFIAEYTNIIIINTLTTTIFLGTTYDALSpelYTTYFVTKTLLLTSLFLWIRTAYPRFRYDQLIHLLWKNFLPLTLALLIWY 304
+             ********************************987554446679999******************************************9986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (317 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       612  (0.0375322); expected 326.1 (0.02)
+Passed bias filter:                      211  (0.01294); expected 326.1 (0.02)
+Passed Vit filter:                        14  (0.00085858); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.55u 0.33s 00:00:00.88 Elapsed: 00:00:00.52
+# Mc/sec: 1744.01
+//
+Query:       Ascidiella_aspersa  [L=306]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    1.1e-70  238.1  28.6    1.5e-70  237.8  28.6    1.0  1  NADHdh           NADH dehydrogenase
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  237.8  28.6   8.9e-75   1.5e-70       6     297 ..      12     295 ..       8     297 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 237.8 bits;  conditional E-value: 8.9e-75
+                         HHHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--SSSS---S CS
+              NADHdh   6 llvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfgevladln 96 
+                         ++++lll+vall+lleRkvl+  q R+GPn v  +G++q+++D++KlllKe ++ ++   ++f+++pvl ++lal+++++ P      d +
+  Ascidiella_aspersa  12 CVLMLLLLVALLVLLERKVLGLAQIRKGPNIVRIYGIIQTVVDGVKLLLKEMVFVSGERFFFFFVSPVLRFVLALVSWFFFPEI-SGGDSS 101
+                         4557999999************************************************************************44.344443 PP
+
+                         S.HHHHHHHHHHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT.-CHHCHHHHHHHHHHH CS
+              NADHdh  97 v.glllilalsslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeei.wfillqllafiiflia 185
+                           ++l+ila+ssl vy +l+aGw s+s Y+++G +R++aqm+syEv+lgl+ll+++++ gs+ l  +  + ++   ++ + ll++++++ +
+  Ascidiella_aspersa 102 GgSVLFILAISSLLVYTVLWAGWGSGSVYSVVGRIRAVAQMVSYEVVLGLILLVLLYFLGSFRLVGFGFYFDHRlTLVYVALLGLVLWWGV 192
+                         34****************************************************************95544333234666699******** PP
+
+                         HHHTTTSSS-TTT-STTSS--SSSSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSSHHHHHHHHHHHHHHHHHHHHHC----TT CS
+              NADHdh 186 llaetnraPFDlpeaesELvaGfhtEYsgmkfalfflaeyanmilvsalavllFlgGwllpfsgllwfllKvllllflfiwiratlpRlRy 276
+                         +lae+nr+PFDl+e+esELv G+ +EYsg +f lffl+ey+n++++s l +l+F+  w++     lw+   v+l +++++ +r  lpR+++
+  Ascidiella_aspersa 193 VLAELNRVPFDLVEGESELVRGYSVEYSGYRFTLFFLSEYLNIWAISYLSALVFF-SWHC-----LWL---VFLGVVFIVYVRRLLPRYKF 274
+                         *******************************************************.6865.....344...56677778899********* PP
+
+                         HHHHHHHCCTHHHHHHHHHHH CS
+              NADHdh 277 dqlmklgwkvllplalanlll 297
+                           l+ l+w + lp  ++ +ll
+  Ascidiella_aspersa 275 TDLIMLTWRIYLPSVFLGILL 295
+                         **************9999887 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (306 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       930  (0.0570342); expected 326.1 (0.02)
+Passed bias filter:                      310  (0.0190114); expected 326.1 (0.02)
+Passed Vit filter:                        32  (0.00196247); expected 16.3 (0.001)
+Passed Fwd filter:                         8  (0.000490617); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.68u 0.35s 00:00:01.03 Elapsed: 00:00:00.56
+# Mc/sec: 1535.81
+//
+Query:       Blanceolatum  [L=312]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   1.6e-104  349.3  19.2   1.9e-104  349.0  19.2    1.0  1  NADHdh    NADH dehydrogenase
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  349.0  19.2  1.2e-108  1.9e-104       2     297 ..       7     298 ..       6     300 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 349.0 bits;  conditional E-value: 1.2e-108
+                   HHHHHHHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--SSSS---SSH CS
+        NADHdh   2 klllllvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfgevladlnvg 98 
+                   +++l++v++ll+va+ltl eRkv++++q R+GPn+vGp+Gllqp+aDa+Kl++Ke i p++++  +f++apvlal+lall+++ +P+ e +++ln++
+  Blanceolatum   7 HIFLYFVPVLLAVAFLTLTERKVIGYVQLRKGPNVVGPYGLLQPFADAVKLFIKEPIKPSSSNPRVFFFAPVLALVLALLLWMPVPIIESFIELNFA 103
+                   5788999****************************************************************************************** PP
+
+                   HHHHHHHHHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT-CHHCHHHHHHHHHHHHHHTTTSSS- CS
+        NADHdh  99 lllilalsslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeeiwfillqllafiifliallaetnraPF 195
+                   +l++la+ssl+vy i+ +Gw+snskYallGalR++aq++syEv+lgl++l++v l+gs++l ++  aqe++ +i+  ++++++++i+++aetnr PF
+  Blanceolatum 104 VLFVLAISSLSVYSIMASGWSSNSKYALLGALRAVAQIVSYEVSLGLIILSLVCLVGSFNLMQFFLAQEDSLLIFSCWPLAVMWFISTVAETNRSPF 200
+                   *********************************************************************99999999******************** PP
+
+                   TTT-STTSS--SSSSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSSHHHHHHHHHHHHHHHHHHHHHC----TTHHHHHHHCCTHHHHHH CS
+        NADHdh 196 DlpeaesELvaGfhtEYsgmkfalfflaeyanmilvsalavllFlgGwllpfsgllwfllKvllllflfiwiratlpRlRydqlmklgwkvllplal 292
+                   Dl+e+esELv+Gf++EYsg  falfflaeyan++++ +l v+lFl      f +ll + +Kv ll+ l++w+ra++pR+Rydqlm+l+wk +lpl l
+  Blanceolatum 201 DLTEGESELVSGFNVEYSGGPFALFFLAEYANILFINVLSVILFLSA---HF-SLLDMSFKVGLLVGLYLWFRASYPRFRYDQLMHLAWKSFLPLRL 293
+                   *********************************************65...33.7899**************************************** PP
+
+                   HHHHH CS
+        NADHdh 293 anlll 297
+                     l+l
+  Blanceolatum 294 GLLIL 298
+                   99987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (312 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       651  (0.039924); expected 326.1 (0.02)
+Passed bias filter:                      233  (0.0142892); expected 326.1 (0.02)
+Passed Vit filter:                        19  (0.00116522); expected 16.3 (0.001)
+Passed Fwd filter:                         1  (6.13271e-05); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.62u 0.29s 00:00:00.90 Elapsed: 00:00:00.55
+# Mc/sec: 1622.87
+//
+Query:       Saccoglossus  [L=325]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+     1e-106  356.5  17.1   1.2e-106  356.3  17.1    1.0  1  NADHdh    NADH dehydrogenase
+
+
+Domain annotation for each model (and alignments):
+>> NADHdh  NADH dehydrogenase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  356.3  17.1  7.3e-111  1.2e-106       2     298 ..      12     312 ..      11     313 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 356.3 bits;  conditional E-value: 7.3e-111
+                   HHHHHHHHHHHHHHHHHHHHHHHHHHHTTS----SS-SSSTTHHHHHHHHHTTS-----TTS-HHHHHHHHHHHHHHHHTTSTTS--SSSS---SSH CS
+        NADHdh   2 klllllvvlllvvalltlleRkvlArmqdRlGPnrvGplGllqplaDalKlllKediipkkadkvlfllapvlalilallafaviPfgevladlnvg 98 
+                   ++ll++v++ll va++tl eRk l++mq R+GP+ vGp+Gllqp+aD++Kl++Ke i p++a ++lfl++p+lal++al++++ + f ++++ +n++
+  Saccoglossus  12 HILLIIVPVLLSVAFITLGERKALGYMQARKGPTLVGPYGLLQPIADGVKLFIKEPIKPSSAASWLFLATPILALTIALILWVPMTFPHQFSSINLS 108
+                   689999*********************************************************************************99******** PP
+
+                   HHHHHHHHHHHHHHHHHHHHHHTSCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--S-HHHHHHHHHTT-CHHCHHHHHHHHHHHHHHTTTSSS- CS
+        NADHdh  99 lllilalsslgvygillaGwasnskYallGalRsaaqmisyEvalglsllavvllagslslseiveaqeeiwfillqllafiifliallaetnraPF 195
+                   l++il ls l+vy il +GwasnskYallGa+R++aq+isyEv+lgl++l++++lag+++l++i e+q+ +wfil+  ++ i+++i++laetnr PF
+  Saccoglossus 109 LIFILTLSRLAVYTILGSGWASNSKYALLGAIRAVAQTISYEVSLGLTILCIIVLAGNFNLTSIYESQTYSWFILTCAPVSIMWYISTLAETNRSPF 205
+                   ************************************************************************************************* PP
+
+                   TTT-STTSS--SSSSS-HCHHHHHHHHHHHHHHHHHHHHHHHHTS-SS--SSS.....HHHHHHHHHHHHHHHHHHHHHC----TTHHHHHHHCCTH CS
+        NADHdh 196 DlpeaesELvaGfhtEYsgmkfalfflaeyanmilvsalavllFlgGwllpfs.....gllwfllKvllllflfiwiratlpRlRydqlmklgwkvl 287
+                   Dl+e+esELv+Gf++EY+g  falfflaey n+i++ al ++l lgG + p++     ++++++lK+++l f+f+w+ra++pR+Rydqlm+l+wk++
+  Saccoglossus 206 DLAEGESELVSGFNVEYAGGPFALFFLAEYSNIIFMNALSTILLLGGGS-PLEilgwpQTILVALKITFLSFVFLWVRASYPRYRYDQLMHLAWKTF 301
+                   ***********************************************75.5555778899************************************* PP
+
+                   HHHHHHHHHHH CS
+        NADHdh 288 lplalanlllt 298
+                   lpl+l  l ++
+  Saccoglossus 302 LPLSLGLLTFI 312
+                   *****998876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (325 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       713  (0.0437262); expected 326.1 (0.02)
+Passed bias filter:                      251  (0.0153931); expected 326.1 (0.02)
+Passed Vit filter:                        20  (0.00122654); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.60u 0.32s 00:00:00.92 Elapsed: 00:00:00.53
+# Mc/sec: 1754.28
+//
+[ok]

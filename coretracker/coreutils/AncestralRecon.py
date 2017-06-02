@@ -300,11 +300,11 @@ class SingleNaiveRec(object):
             if not l.is_leaf():
                 l.del_feature('reassigned')
                 l.del_feature('rea')
-            elif (l.state == self.dest_aa and l.lost) or l.count < thresh:
+            elif (l.state == self.dest_aa and ('lost' is l.features and l.lost)) or ('count' in l.features and l.count < thresh):
                 l.add_features(reassigned={0})
                 l.add_features(rea=self.corr['0'])
                 l.add_features(state=self.ori_aa)
-            elif ('lost' in l.features and not l.lost) and l.state == self.ori_aa and l.count >= thresh:
+            elif ('lost' in l.features and not l.lost) and l.state == self.ori_aa and ('count' in l.features and l.count >= thresh):
                 l.add_features(reassigned={1})
                 l.add_features(rea=self.corr['1'])
                 l.add_features(state=self.dest_aa)

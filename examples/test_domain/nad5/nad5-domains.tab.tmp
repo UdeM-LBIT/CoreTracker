@@ -1,0 +1,260 @@
+Proton_antipo_M	PF00361.18	Metaseiulus_occidentalis	1.7e-52	178.3	61	99	52	102	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Metaseiulus_occidentalis	1.7e-52	178.3	104	382	103	382	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Paracentrotus	8.2e-69	231.9	72	110	4	140	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Paracentrotus	8.2e-69	231.9	166	439	166	453	Proton-conducting	membrane	transporter
+NADH5_C	PF06455.9	Paracentrotus	8e-42	142.7	4	25	3	35	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Paracentrotus	8e-42	142.7	98	157	66	174	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Paracentrotus	8e-42	142.7	225	248	212	254	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Paracentrotus	8e-42	142.7	309	348	287	378	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Paracentrotus	8e-42	142.7	456	632	456	633	NADH	dehydrogenase	subunit	5	C-terminus
+Proton_antipo_N	PF00662.18	Paracentrotus	6e-10	38.9	10	32	8	44	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Paracentrotus	6e-10	38.9	100	150	97	153	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Paracentrotus	6e-10	38.9	523	544	500	560	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+PK_C	PF02887.14	Paracentrotus	0.058	13.5	319	402	317	417	Pyruvate	kinase,	alpha/beta	domain
+Proton_antipo_M	PF00361.18	Aphrocallistes_vastus	7.1e-73	245.2	84	127	81	133	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Aphrocallistes_vastus	7.1e-73	245.2	132	409	130	412	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Aphrocallistes_vastus	7.1e-73	245.2	577	597	567	610	Proton-conducting	membrane	transporter
+Proton_antipo_N	PF00662.18	Aphrocallistes_vastus	6.2e-16	58.1	61	118	61	118	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Aphrocallistes_vastus	6.2e-16	58.1	584	593	579	596	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+NADH5_C	PF06455.9	Aphrocallistes_vastus	1.2e-14	54.2	19	39	4	50	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Aphrocallistes_vastus	1.2e-14	54.2	98	128	78	131	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Aphrocallistes_vastus	1.2e-14	54.2	267	320	242	335	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Aphrocallistes_vastus	1.2e-14	54.2	415	596	415	598	NADH	dehydrogenase	subunit	5	C-terminus
+Proton_antipo_M	PF00361.18	Schistosoma	2.3e-26	92.5	55	96	49	99	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Schistosoma	2.3e-26	92.5	95	360	95	370	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Schistosoma	2.3e-26	92.5	389	446	362	450	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Fasciola	7e-30	104.1	67	93	39	98	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Fasciola	7e-30	104.1	93	359	93	362	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Trichobilharzia_regenti	1.6e-27	96.3	100	365	99	373	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Trichobilharzia_regenti	1.6e-27	96.3	405	446	387	451	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Versteria_mustelae	1.9e-24	86.3	4	54	1	96	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Versteria_mustelae	1.9e-24	86.3	100	362	98	366	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Versteria_mustelae	1.9e-24	86.3	401	406	372	439	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Versteria_mustelae	1.9e-24	86.3	502	520	501	521	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Euseius_nicholsi	2.3e-56	191.0	103	383	101	383	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Euseius_nicholsi	2.3e-56	191.0	411	460	399	473	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Euseius_nicholsi	2.3e-56	191.0	477	501	466	536	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Patiria	4.1e-64	216.5	48	97	13	99	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Patiria	4.1e-64	216.5	161	447	160	447	Proton-conducting	membrane	transporter
+NADH5_C	PF06455.9	Patiria	8.4e-48	162.2	9	63	2	75	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Patiria	8.4e-48	162.2	115	155	90	169	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Patiria	8.4e-48	162.2	213	232	212	246	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Patiria	8.4e-48	162.2	305	334	281	355	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Patiria	8.4e-48	162.2	338	370	326	378	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Patiria	8.4e-48	162.2	450	629	450	630	NADH	dehydrogenase	subunit	5	C-terminus
+Proton_antipo_N	PF00662.18	Patiria	2.2e-10	40.3	91	147	91	148	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Patiria	2.2e-10	40.3	514	529	513	530	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+MutH	PF02976.13	Patiria	0.32	10.9	182	206	179	226	DNA	mismatch	repair	enzyme	MutH
+MutH	PF02976.13	Patiria	0.32	10.9	470	489	469	490	DNA	mismatch	repair	enzyme	MutH
+MutH	PF02976.13	Patiria	0.32	10.9	528	581	512	589	DNA	mismatch	repair	enzyme	MutH
+Proton_antipo_M	PF00361.18	Daphnia	1.7e-66	224.3	107	384	107	388	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Daphnia	1.7e-66	224.3	444	470	441	480	Proton-conducting	membrane	transporter
+NADH5_C	PF06455.9	Daphnia	8.5e-31	106.8	71	91	59	109	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Daphnia	8.5e-31	106.8	245	311	214	320	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Daphnia	8.5e-31	106.8	392	567	392	568	NADH	dehydrogenase	subunit	5	C-terminus
+Proton_antipo_N	PF00662.18	Daphnia	3e-10	39.9	38	92	37	95	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Daphnia	3e-10	39.9	160	171	158	176	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Daphnia	3e-10	39.9	249	254	231	263	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_M	PF00361.18	Haplorchis_taichui	9.8e-26	90.5	101	358	98	368	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Lumbricus	4.9e-64	216.2	47	100	14	106	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Lumbricus	4.9e-64	216.2	110	384	109	389	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Lumbricus	4.9e-64	216.2	415	437	408	441	Proton-conducting	membrane	transporter
+NADH5_C	PF06455.9	Lumbricus	8.5e-39	132.9	36	94	16	116	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Lumbricus	8.5e-39	132.9	232	267	195	269	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Lumbricus	8.5e-39	132.9	294	310	273	338	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Lumbricus	8.5e-39	132.9	392	572	392	573	NADH	dehydrogenase	subunit	5	C-terminus
+Proton_antipo_N	PF00662.18	Lumbricus	7.2e-08	32.3	40	93	37	106	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Lumbricus	7.2e-08	32.3	561	572	559	573	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_M	PF00361.18	Halocynthia	6.3e-42	143.6	30	73	22	75	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Halocynthia	6.3e-42	143.6	139	414	138	415	Proton-conducting	membrane	transporter
+Proton_antipo_N	PF00662.18	Halocynthia	0.0001	22.2	79	122	74	126	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Halocynthia	0.0001	22.2	190	200	189	200	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Halocynthia	0.0001	22.2	251	260	248	262	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_M	PF00361.18	Limulus	3.2e-74	249.6	5	32	1	74	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Limulus	3.2e-74	249.6	108	387	107	390	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Limulus	3.2e-74	249.6	415	437	399	466	Proton-conducting	membrane	transporter
+NADH5_C	PF06455.9	Limulus	7.9e-37	126.5	243	313	218	323	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Limulus	7.9e-37	126.5	393	568	393	568	NADH	dehydrogenase	subunit	5	C-terminus
+Proton_antipo_N	PF00662.18	Limulus	3.3e-07	30.1	41	91	37	95	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+DUF2783	PF10932.6	Limulus	0.12	12.0	134	154	130	157	Protein	of	unknown	function	(DUF2783)
+Proton_antipo_M	PF00361.18	Echinococcus_equinus	1.4e-22	80.1	48	69	43	94	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Echinococcus_equinus	1.4e-22	80.1	99	363	97	365	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Echinococcus_equinus	1.4e-22	80.1	410	432	374	439	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Echinococcus_equinus	1.4e-22	80.1	501	518	484	521	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Taenia_crassiceps	9.2e-24	84.0	99	358	97	365	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Taenia_crassiceps	9.2e-24	84.0	492	499	463	521	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Axinella	4.3e-83	278.8	80	94	67	129	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Axinella	4.3e-83	278.8	130	419	130	421	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Axinella	4.3e-83	278.8	459	489	445	503	Proton-conducting	membrane	transporter
+Proton_antipo_N	PF00662.18	Axinella	5.5e-20	71.1	61	118	61	118	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Axinella	5.5e-20	71.1	200	222	192	223	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Axinella	5.5e-20	71.1	274	290	271	296	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+NADH5_C	PF06455.9	Axinella	1e-19	70.7	82	124	31	141	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Axinella	1e-19	70.7	276	328	272	352	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Axinella	1e-19	70.7	424	518	424	528	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Axinella	1e-19	70.7	567	653	562	656	NADH	dehydrogenase	subunit	5	C-terminus
+Proton_antipo_M	PF00361.18	Terebratulina	7.8e-59	199.1	116	371	114	405	Proton-conducting	membrane	transporter
+NADH5_C	PF06455.9	Terebratulina	7.6e-35	120.0	41	100	40	119	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Terebratulina	7.6e-35	120.0	227	261	214	281	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Terebratulina	7.6e-35	120.0	395	572	395	573	NADH	dehydrogenase	subunit	5	C-terminus
+Proton_antipo_N	PF00662.18	Terebratulina	6.5e-05	22.8	45	98	42	101	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Terebratulina	6.5e-05	22.8	96	113	95	113	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_M	PF00361.18	Suberites_domuncula	1.2e-83	280.6	68	91	67	128	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Suberites_domuncula	1.2e-83	280.6	130	430	130	431	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Suberites_domuncula	1.2e-83	280.6	433	475	416	487	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Suberites_domuncula	1.2e-83	280.6	645	663	633	666	Proton-conducting	membrane	transporter
+Proton_antipo_N	PF00662.18	Suberites_domuncula	2e-19	69.2	61	118	61	118	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Suberites_domuncula	2e-19	69.2	212	229	205	232	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Suberites_domuncula	2e-19	69.2	285	300	282	302	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+NADH5_C	PF06455.9	Suberites_domuncula	4.6e-19	68.6	113	128	94	131	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Suberites_domuncula	4.6e-19	68.6	287	338	283	359	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Suberites_domuncula	4.6e-19	68.6	434	518	434	527	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Suberites_domuncula	4.6e-19	68.6	581	662	562	666	NADH	dehydrogenase	subunit	5	C-terminus
+Proton_antipo_M	PF00361.18	Bfloridae	6.8e-67	225.6	54	101	49	107	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Bfloridae	6.8e-67	225.6	127	410	127	411	Proton-conducting	membrane	transporter
+NADH5_C	PF06455.9	Bfloridae	3.3e-37	127.7	8	33	5	46	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Bfloridae	3.3e-37	127.7	67	118	55	134	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Bfloridae	3.3e-37	127.7	260	293	235	319	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Bfloridae	3.3e-37	127.7	414	592	414	595	NADH	dehydrogenase	subunit	5	C-terminus
+Proton_antipo_N	PF00662.18	Bfloridae	3.6e-08	33.2	59	114	58	115	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Bfloridae	3.6e-08	33.2	267	280	266	281	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Bfloridae	3.6e-08	33.2	481	492	476	494	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_M	PF00361.18	Katharina	1.8e-62	211.0	110	385	109	389	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Katharina	1.8e-62	211.0	544	564	523	567	Proton-conducting	membrane	transporter
+NADH5_C	PF06455.9	Katharina	6.7e-36	123.4	44	91	19	117	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Katharina	6.7e-36	123.4	369	388	361	390	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Katharina	6.7e-36	123.4	392	567	392	568	NADH	dehydrogenase	subunit	5	C-terminus
+Proton_antipo_N	PF00662.18	Katharina	0.00014	21.7	42	92	39	95	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Katharina	0.00014	21.7	87	108	85	111	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Katharina	0.00014	21.7	221	234	211	236	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Katharina	0.00014	21.7	447	462	437	464	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_M	PF00361.18	Geodia	3.4e-82	275.8	33	69	4	104	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Geodia	3.4e-82	275.8	130	418	130	419	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Geodia	3.4e-82	275.8	429	471	412	476	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Geodia	3.4e-82	275.8	482	505	463	600	Proton-conducting	membrane	transporter
+NADH5_C	PF06455.9	Geodia	3.2e-23	82.1	84	124	26	139	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Geodia	3.2e-23	82.1	273	319	269	338	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Geodia	3.2e-23	82.1	422	601	422	603	NADH	dehydrogenase	subunit	5	C-terminus
+Proton_antipo_N	PF00662.18	Geodia	3.9e-20	71.5	61	118	61	118	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Geodia	3.9e-20	71.5	270	288	268	290	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_M	PF00361.18	Metridium	6e-84	281.6	68	90	67	128	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Metridium	6e-84	281.6	130	419	130	419	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Metridium	6e-84	281.6	440	479	423	510	Proton-conducting	membrane	transporter
+NADH5_C	PF06455.9	Metridium	1.2e-22	80.3	40	87	36	90	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Metridium	1.2e-22	80.3	113	128	87	131	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Metridium	1.2e-22	80.3	272	326	253	346	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Metridium	1.2e-22	80.3	422	599	422	600	NADH	dehydrogenase	subunit	5	C-terminus
+Proton_antipo_N	PF00662.18	Metridium	2.5e-19	69.0	61	118	61	118	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Metridium	2.5e-19	69.0	273	283	269	295	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_C	PF01010.17	Metridium	0.0043	16.6	431	470	415	492	NADH-dehyrogenase	subunit	F,	TMs,	(complex	I)	C-terminus
+Proton_antipo_M	PF00361.18	Amphimedon_queenslandica	2.1e-85	286.3	88	125	80	128	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Amphimedon_queenslandica	2.1e-85	286.3	130	417	130	418	Proton-conducting	membrane	transporter
+NADH5_C	PF06455.9	Amphimedon_queenslandica	2e-25	89.3	113	127	62	139	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Amphimedon_queenslandica	2e-25	89.3	271	320	263	335	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Amphimedon_queenslandica	2e-25	89.3	421	601	421	605	NADH	dehydrogenase	subunit	5	C-terminus
+Proton_antipo_N	PF00662.18	Amphimedon_queenslandica	3.6e-22	78.1	61	118	61	118	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Amphimedon_queenslandica	3.6e-22	78.1	270	287	267	289	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_C	PF01010.17	Amphimedon_queenslandica	0.0031	17.0	440	481	417	492	NADH-dehyrogenase	subunit	F,	TMs,	(complex	I)	C-terminus
+Proton_antipo_M	PF00361.18	Acropora	8.1e-86	287.7	68	89	67	128	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Acropora	8.1e-86	287.7	130	411	130	420	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Acropora	8.1e-86	287.7	433	511	417	531	Proton-conducting	membrane	transporter
+Proton_antipo_N	PF00662.18	Acropora	7e-19	67.5	61	118	61	118	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Acropora	7e-19	67.5	274	289	271	291	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Acropora	7e-19	67.5	372	384	368	408	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+NADH5_C	PF06455.9	Acropora	1.6e-18	66.8	38	83	31	92	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Acropora	1.6e-18	66.8	92	129	70	139	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Acropora	1.6e-18	66.8	274	331	262	340	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Acropora	1.6e-18	66.8	423	606	423	610	NADH	dehydrogenase	subunit	5	C-terminus
+Proton_antipo_M	PF00361.18	Trichinella	2e-34	119.0	55	55	6	96	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Trichinella	2e-34	119.0	102	366	98	375	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Trichinella	2e-34	119.0	428	428	364	475	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Balanoglossus	1.1e-69	234.7	166	442	166	454	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Balanoglossus	1.1e-69	234.7	497	564	444	570	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Balanoglossus	1.1e-69	234.7	618	643	600	645	Proton-conducting	membrane	transporter
+NADH5_C	PF06455.9	Balanoglossus	3e-46	157.1	96	161	91	172	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Balanoglossus	3e-46	157.1	301	350	276	388	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Balanoglossus	3e-46	157.1	457	640	457	641	NADH	dehydrogenase	subunit	5	C-terminus
+Proton_antipo_N	PF00662.18	Balanoglossus	1.1e-09	38.1	98	151	97	154	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_M	PF00361.18	Tetrancistrum_nebulosi	2.2e-21	76.2	106	351	102	371	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Tetrancistrum_nebulosi	2.2e-21	76.2	365	416	354	433	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Pseudogarypus_banksi	2.7e-36	125.2	55	66	3	103	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Pseudogarypus_banksi	2.7e-36	125.2	107	367	106	386	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Pseudogarypus_banksi	2.7e-36	125.2	383	417	373	433	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Pseudogarypus_banksi	2.7e-36	125.2	453	463	438	491	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Benedenia_hoshinai	7.1e-29	100.8	37	51	34	81	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Benedenia_hoshinai	7.1e-29	100.8	94	351	87	355	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Benedenia_hoshinai	7.1e-29	100.8	457	495	452	507	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Myxine	7.2e-65	218.9	56	106	8	123	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Myxine	7.2e-65	218.9	131	416	131	418	Proton-conducting	membrane	transporter
+NADH5_C	PF06455.9	Myxine	9.7e-28	96.8	76	130	57	142	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Myxine	9.7e-28	96.8	191	209	162	219	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Myxine	9.7e-28	96.8	264	294	240	353	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Myxine	9.7e-28	96.8	421	595	421	597	NADH	dehydrogenase	subunit	5	C-terminus
+Proton_antipo_N	PF00662.18	Myxine	0.00041	20.2	71	118	64	119	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Myxine	0.00041	20.2	250	263	242	265	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_M	PF00361.18	Drosophila	6.1e-72	242.2	11	93	7	98	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Drosophila	6.1e-72	242.2	104	387	103	388	Proton-conducting	membrane	transporter
+NADH5_C	PF06455.9	Drosophila	1.5e-55	187.4	8	25	6	28	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Drosophila	1.5e-55	187.4	76	100	63	102	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Drosophila	1.5e-55	187.4	267	274	221	318	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Drosophila	1.5e-55	187.4	391	571	391	572	NADH	dehydrogenase	subunit	5	C-terminus
+Proton_antipo_N	PF00662.18	Drosophila	3.6e-08	33.2	34	88	31	90	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Drosophila	3.6e-08	33.2	260	290	255	293	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_M	PF00361.18	Ciona	2.2e-44	151.7	77	77	21	115	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Ciona	2.2e-44	151.7	118	399	117	400	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Epigonichthys	2.1e-62	210.8	10	39	8	47	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Epigonichthys	2.1e-62	210.8	55	101	53	109	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Epigonichthys	2.1e-62	210.8	127	411	127	411	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Epigonichthys	2.1e-62	210.8	574	594	563	596	Proton-conducting	membrane	transporter
+NADH5_C	PF06455.9	Epigonichthys	2e-34	118.6	65	110	55	129	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Epigonichthys	2e-34	118.6	264	292	238	333	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Epigonichthys	2e-34	118.6	414	593	414	595	NADH	dehydrogenase	subunit	5	C-terminus
+Proton_antipo_N	PF00662.18	Epigonichthys	7.2e-11	41.9	59	114	58	115	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Epigonichthys	7.2e-11	41.9	315	340	304	345	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Epigonichthys	7.2e-11	41.9	582	596	576	596	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_M	PF00361.18	Strigamia_maritima	1.2e-51	175.5	60	81	54	85	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Strigamia_maritima	1.2e-51	175.5	112	386	112	392	Proton-conducting	membrane	transporter
+NADH5_C	PF06455.9	Strigamia_maritima	1.4e-19	70.2	296	308	248	328	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Strigamia_maritima	1.4e-19	70.2	395	562	395	565	NADH	dehydrogenase	subunit	5	C-terminus
+Proton_antipo_N	PF00662.18	Strigamia_maritima	8.3e-10	38.5	44	97	41	100	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Strigamia_maritima	8.3e-10	38.5	266	294	262	294	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_M	PF00361.18	Caenorhabditis	5.2e-38	130.8	96	370	95	372	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Caenorhabditis	5.2e-38	130.8	398	450	387	458	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Homo	9.2e-71	238.3	80	109	61	128	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Homo	9.2e-71	238.3	134	418	134	419	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Homo	9.2e-71	238.3	427	479	424	502	Proton-conducting	membrane	transporter
+NADH5_C	PF06455.9	Homo	2.8e-52	176.8	18	45	1	60	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Homo	2.8e-52	176.8	67	129	19	141	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Homo	2.8e-52	176.8	281	301	242	361	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Homo	2.8e-52	176.8	422	602	422	602	NADH	dehydrogenase	subunit	5	C-terminus
+Proton_antipo_N	PF00662.18	Homo	8.1e-13	48.1	65	121	65	122	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_M	PF00361.18	Ascidiella_aspersa	2.5e-50	171.2	59	74	35	102	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Ascidiella_aspersa	2.5e-50	171.2	105	386	104	386	Proton-conducting	membrane	transporter
+Proton_antipo_N	PF00662.18	Ascidiella_aspersa	0.0041	17.0	20	40	18	42	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Ascidiella_aspersa	0.0041	17.0	47	91	36	92	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Ascidiella_aspersa	0.0041	17.0	374	387	372	392	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+YvrJ	PF12841.5	Ascidiella_aspersa	0.91	9.0	150	160	150	160	YvrJ	protein	family
+YvrJ	PF12841.5	Ascidiella_aspersa	0.91	9.0	221	234	220	235	YvrJ	protein	family
+Proton_antipo_M	PF00361.18	Blanceolatum	1.5e-65	221.2	14	34	5	48	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Blanceolatum	1.5e-65	221.2	55	102	54	104	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Blanceolatum	1.5e-65	221.2	127	408	127	412	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Blanceolatum	1.5e-65	221.2	441	492	403	525	Proton-conducting	membrane	transporter
+NADH5_C	PF06455.9	Blanceolatum	2.6e-38	131.3	56	115	55	131	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Blanceolatum	2.6e-38	131.3	178	212	174	219	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Blanceolatum	2.6e-38	131.3	267	298	243	340	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Blanceolatum	2.6e-38	131.3	414	591	414	595	NADH	dehydrogenase	subunit	5	C-terminus
+Proton_antipo_N	PF00662.18	Blanceolatum	1.3e-10	41.0	59	114	58	115	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Blanceolatum	1.3e-10	41.0	267	280	266	281	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Blanceolatum	1.3e-10	41.0	481	492	458	494	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Blanceolatum	1.3e-10	41.0	582	596	578	598	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_M	PF00361.18	Saccoglossus	4.9e-71	239.2	34	97	11	129	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Saccoglossus	4.9e-71	239.2	134	418	134	422	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Saccoglossus	4.9e-71	239.2	478	510	468	531	Proton-conducting	membrane	transporter
+NADH5_C	PF06455.9	Saccoglossus	1.1e-38	132.5	51	122	11	141	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Saccoglossus	1.1e-38	132.5	269	312	245	357	NADH	dehydrogenase	subunit	5	C-terminus
+NADH5_C	PF06455.9	Saccoglossus	1.1e-38	132.5	425	607	425	607	NADH	dehydrogenase	subunit	5	C-terminus
+Proton_antipo_N	PF00662.18	Saccoglossus	4.3e-09	36.2	66	118	65	122	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Saccoglossus	4.3e-09	36.2	116	134	113	134	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Saccoglossus	4.3e-09	36.2	411	425	405	433	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Saccoglossus	4.3e-09	36.2	490	503	482	507	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus
+Proton_antipo_N	PF00662.18	Saccoglossus	4.3e-09	36.2	586	607	582	610	NADH-Ubiquinone	oxidoreductase	(complex	I),	chain	5	N-terminus

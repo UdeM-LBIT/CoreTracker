@@ -1,5 +1,5 @@
 ### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher pval	Gene frac	N. rea	N. used	Cod. count	Sub. count	G. len	codon_lik	id	prediction	probability
+genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
 Schistosoma	AAC	N	S	0.0	0.125	0.5	0.5	0.5	0.125	0.0625	829.0	2.36956521739	3.0	0.0	0.165
 Fasciola	AAT	N	S	0.0	0.0651495050127	0.2	0.0526315789474	0.473684210526	1.0	0.0526315789474	861.0	0.620767494357	1.0	0.0	0.12
 Halocynthia	AAT	N	S	0.0	0.538461538462	0.2	0.04	0.92	0.925925925926	0.037037037037	937.0	0.972789115646	1.0	0.0	0.005

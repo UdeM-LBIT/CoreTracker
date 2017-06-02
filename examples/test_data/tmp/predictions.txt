@@ -1,0 +1,12 @@
+#Reference Genetic Code : 4 (Mold Mitochondrial)
+#Exception: 
+ATA (I, M)
+	A	0.829	Both
+	B	0.981	Both
+AAA (K, N)
+	G	0.987	Both
+	I	0.829	Both
+AAA (K, I)
+	G	0.567	None
+AAA (K, R)
+	I	0.536	None

@@ -37,6 +37,9 @@ class Settings():
         # this is use to filter out false positive
         self.COUNT_THRESHOLD = kwargs.get(
             'COUNT_THRESHOLD', parameters.COUNT_THRESHOLD)
+        # minimum codon presence in reassigned position to make prediction
+        self.CODON_COUNT_THRESHOLD = kwargs.get(
+            'CODON_COUNT_THRESHOLD', parameters.CODON_COUNT_THRESHOLD)
         # default genetic code to use
         self.GENETIC_CODE = kwargs.get(
             'GENETIC_CODE', parameters.GENETIC_CODE)

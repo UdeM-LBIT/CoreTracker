@@ -1,0 +1,66 @@
+#                                                                                --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name        accession   tlen query name               accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#------------------- ---------- -----     -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+ATP-synt_A           PF00119.18   211 Metaseiulus_occidentalis -            222   2.9e-28   99.1  31.8   1   1   4.5e-32   3.7e-28   98.8  31.8     5   210    21   218    16   219 0.78 ATP synthase A chain
+YqfD                 PF06898.9    379 Metaseiulus_occidentalis -            222         6    5.5   9.6   1   2   0.00024         2    7.0   0.5    65   103    47    85    38    86 0.88 Putative stage IV sporulation protein YqfD
+YqfD                 PF06898.9    379 Metaseiulus_occidentalis -            222         6    5.5   9.6   2   2    0.0058        47    2.5   3.0    53    98   151   196   143   206 0.87 Putative stage IV sporulation protein YqfD
+ATP-synt_A           PF00119.18   211 Paracentrotus        -            232   5.6e-33  114.5  24.5   1   2     0.012     1e+02    2.6   0.4   142   168     3    32     2    45 0.61 ATP synthase A chain
+ATP-synt_A           PF00119.18   211 Paracentrotus        -            232   5.6e-33  114.5  24.5   2   2   8.5e-37     7e-33  114.2  23.5     9   210    27   228    18   229 0.84 ATP synthase A chain
+PspB                 PF06667.10    73 Paracentrotus        -            232     0.029   14.3   0.4   1   3   3.6e-06     0.029   14.3   0.4     3    31    17    45    15    51 0.91 Phage shock protein B
+PspB                 PF06667.10    73 Paracentrotus        -            232     0.029   14.3   0.4   2   3      0.87   7.1e+03   -3.0   0.0    56    69    56    69    53    70 0.80 Phage shock protein B
+PspB                 PF06667.10    73 Paracentrotus        -            232     0.029   14.3   0.4   3   3      0.14   1.1e+03   -0.4   1.0     7    19   194   206   188   210 0.70 Phage shock protein B
+ATP-synt_A           PF00119.18   211 Aphrocallistes_vastus -            242   4.3e-35  121.5  28.6   1   1   3.3e-39   5.3e-35  121.2  28.6     5   211    31   236    28   236 0.83 ATP synthase A chain
+ATP-synt_A           PF00119.18   211 Schistosoma          -            173     0.014   15.3  18.7   1   1   1.2e-06      0.02   14.7  18.7    67   201    30   162     6   163 0.80 ATP synthase A chain
+ATP-synt_A           PF00119.18   211 Fasciola             -            172    0.0035   17.2  21.4   1   1   3.3e-07    0.0054   16.6  21.4    58   201    30   161     3   167 0.67 ATP synthase A chain
+ATP-synt_A           PF00119.18   211 Euseius_nicholsi     -            221   1.7e-27   96.6  37.7   1   1   1.2e-31     2e-27   96.4  37.7     5   210    19   217    13   218 0.79 ATP synthase A chain
+ATP-synt_A           PF00119.18   211 Patiria              -            230   1.6e-32  113.0  26.0   1   1   1.1e-36   1.8e-32  112.9  26.0     7   211    23   227    16   227 0.82 ATP synthase A chain
+ATP-synt_A           PF00119.18   211 Daphnia              -            224   2.9e-36  125.3  21.6   1   1   2.2e-40   3.5e-36  125.0  21.6     5   210    21   220    14   221 0.84 ATP synthase A chain
+ATP-synt_A           PF00119.18   211 Haplorchis_taichui   -            171   0.00016   21.6  18.1   1   1   1.4e-08   0.00023   21.0  18.1    42   201    11   160     3   167 0.66 ATP synthase A chain
+ATP-synt_A           PF00119.18   211 Lumbricus            -            230   1.2e-30  107.0  16.9   1   1   2.8e-34   1.5e-30  106.6  16.8    54   210    69   226    20   227 0.79 ATP synthase A chain
+TraQ                 PF09679.8     97 Lumbricus            -            230      0.19   12.0   1.1   1   2    0.0058        32    4.9   0.0    36    62    19    45    13    56 0.87 Type-F conjugative transfer system pilin chaperone (TraQ)
+TraQ                 PF09679.8     97 Lumbricus            -            230      0.19   12.0   1.1   2   2    0.0041        22    5.3   0.2    29    76   151   200   126   209 0.69 Type-F conjugative transfer system pilin chaperone (TraQ)
+zf-LITAF-like        PF10601.7     70 Lumbricus            -            230       4.4    7.5   5.4   1   2   0.00048       2.6    8.3   0.2    14    53    61   100    57   105 0.81 LITAF-like zinc ribbon domain
+zf-LITAF-like        PF10601.7     70 Lumbricus            -            230       4.4    7.5   5.4   2   2     0.094   5.1e+02    0.9   0.9    28    43   203   219   177   229 0.53 LITAF-like zinc ribbon domain
+ATP-synt_A           PF00119.18   211 Halocynthia          -            211   1.2e-19   71.0  24.8   1   1   1.2e-23   1.9e-19   70.3  24.6    56   210    54   206    17   207 0.85 ATP synthase A chain
+ATP-synt_A           PF00119.18   211 Limulus              -            224   1.3e-36  126.5  25.1   1   1   9.2e-41   1.5e-36  126.2  25.1     5   210    21   220    17   221 0.85 ATP synthase A chain
+ATP-synt_A           PF00119.18   211 Axinella             -            244   6.9e-47  160.0  32.4   1   1   5.6e-51   9.1e-47  159.6  32.4     6   210    33   237    27   238 0.87 ATP synthase A chain
+ATP-synt_A           PF00119.18   211 Terebratulina        -            228   1.5e-30  106.6  20.2   1   1   1.1e-34   1.7e-30  106.4  20.2    14   210    29   222    16   223 0.81 ATP synthase A chain
+ATP-synt_A           PF00119.18   211 Suberites_domuncula  -            244   2.3e-47  161.6  33.1   1   1   1.8e-51   2.9e-47  161.2  33.1     7   210    34   237    28   238 0.85 ATP synthase A chain
+ATP-synt_A           PF00119.18   211 Bfloridae            -            226   1.4e-36  126.3  20.1   1   1   1.1e-40   1.7e-36  126.0  20.1    35   210    45   223     9   224 0.86 ATP synthase A chain
+ATP-synt_A           PF00119.18   211 Katharina            -            230   1.4e-26   93.6  19.7   1   1   1.1e-30   1.8e-26   93.3  19.7    27   209    42   224    14   226 0.83 ATP synthase A chain
+ATP-synt_A           PF00119.18   211 Geodia               -            244   1.8e-44  152.1  36.6   1   1   1.4e-48   2.3e-44  151.7  36.6     5   210    33   237    27   238 0.86 ATP synthase A chain
+ATP-synt_A           PF00119.18   211 Metridium            -            229   1.2e-44  152.7  30.2   1   1   8.8e-49   1.4e-44  152.4  30.2     4   210    23   222    18   223 0.87 ATP synthase A chain
+ATP-synt_A           PF00119.18   211 Amphimedon_queenslandica -            234   1.1e-44  152.8  33.2   1   1   8.2e-49   1.3e-44  152.5  33.2     3   210    23   227    21   228 0.87 ATP synthase A chain
+ATP-synt_A           PF00119.18   211 Acropora             -            232   5.2e-47  160.4  28.4   1   1   3.8e-51   6.1e-47  160.2  28.4     3   210    23   225    17   226 0.86 ATP synthase A chain
+ATP-synt_A           PF00119.18   211 Trichinella          -            276   7.2e-05   22.7  22.4   1   1   2.1e-08   0.00017   21.5  22.4    38   210    69   224    41   225 0.74 ATP synthase A chain
+Rod_cone_degen       PF15201.4     54 Trichinella          -            276         2    8.5   3.2   1   2      0.99     8e+03   -3.1   0.0    11    23    60    72    51    73 0.73 Progressive rod-cone degeneration
+Rod_cone_degen       PF15201.4     54 Trichinella          -            276         2    8.5   3.2   2   2   0.00021       1.7    8.7   1.4     2    22   122   138   121   140 0.91 Progressive rod-cone degeneration
+ATP-synt_A           PF00119.18   211 Balanoglossus        -            227   4.5e-37  127.9  19.3   1   1   3.2e-41   5.3e-37  127.7  19.3     7   210    20   223    13   224 0.86 ATP synthase A chain
+ATP-synt_A           PF00119.18   211 Tetrancistrum_nebulosi -            169   0.00029   20.7  17.1   1   1   2.8e-08   0.00045   20.1  17.1    86   201    50   158     5   163 0.74 ATP synthase A chain
+ATP-synt_A           PF00119.18   211 Pseudogarypus_banksi -            213   2.3e-28   99.5  29.3   1   1   3.4e-32   2.8e-28   99.2  29.3    10   209    18   208    12   210 0.80 ATP synthase A chain
+VIT1                 PF01988.17   214 Pseudogarypus_banksi -            213    0.0059   16.3   0.3   1   2   7.2e-07    0.0059   16.3   0.3   127   177    56   106    26   114 0.78 VIT family
+VIT1                 PF01988.17   214 Pseudogarypus_banksi -            213    0.0059   16.3   0.3   2   2       1.7   1.4e+04   -4.5   1.1   150   175   181   205   180   208 0.63 VIT family
+ATP-synt_A           PF00119.18   211 Benedenia_hoshinai   -            169   0.00012   21.9  18.1   1   1   9.5e-09   0.00015   21.6  18.1    64   201    27   158     5   165 0.83 ATP synthase A chain
+ATP-synt_A           PF00119.18   211 Myxine               -            228   1.4e-37  129.6  27.7   1   1   1.1e-41   1.7e-37  129.3  27.7     5   210    20   223    17   224 0.80 ATP synthase A chain
+ATP-synt_A           PF00119.18   211 Drosophila           -            224   8.3e-36  123.8  21.7   1   1   6.2e-40     1e-35  123.5  21.7    18   210    34   220    15   221 0.85 ATP synthase A chain
+ATP-synt_A           PF00119.18   211 Ciona                -            210   1.2e-26   93.9  33.2   1   1   7.1e-31   1.2e-26   93.9  33.2    48   210    46   203    23   204 0.84 ATP synthase A chain
+ATP-synt_A           PF00119.18   211 Epigonichthys        -            226   1.6e-37  129.4  20.9   1   1   1.2e-41     2e-37  129.1  20.9    26   210    38   223    12   224 0.85 ATP synthase A chain
+ATP-synt_A           PF00119.18   211 Strigamia_maritima   -            221   6.1e-36  124.2  15.9   1   1   4.8e-40   7.9e-36  123.9  15.9    44   210    57   218    16   219 0.81 ATP synthase A chain
+ATP-synt_A           PF00119.18   211 Caenorhabditis       -            199   3.8e-17   62.8  22.6   1   1   5.5e-21     9e-17   61.6  22.6    34   210    23   197     3   198 0.76 ATP synthase A chain
+ATP-synt_A           PF00119.18   211 Homo                 -            226   3.1e-40  138.3  24.5   1   1   4.5e-44   3.6e-40  138.0  24.5    19   210    33   222    13   223 0.85 ATP synthase A chain
+DUF2919              PF11143.6    146 Homo                 -            226         2    8.7  14.3   1   2     0.039   3.2e+02    1.5   1.9    85   132    35    82     6    86 0.66 Protein of unknown function (DUF2919)
+DUF2919              PF11143.6    146 Homo                 -            226         2    8.7  14.3   2   2   7.1e-05      0.58   10.4   9.2    27   134    66   179    63   222 0.80 Protein of unknown function (DUF2919)
+ATP-synt_A           PF00119.18   211 Ascidiella_aspersa   -            211     1e-26   94.1  36.5   1   1   3.3e-30   2.7e-26   92.7  36.4    59   209    53   204    10   205 0.86 ATP synthase A chain
+WRNPLPNID            PF15017.4     59 Ascidiella_aspersa   -            211       0.4   11.5   0.8   1   1   8.8e-05      0.72   10.7   0.8     3    13     5    15     4    18 0.91 Putative WW-binding domain and destruction box
+ATP-synt_A           PF00119.18   211 Blanceolatum         -            226   5.4e-38  130.9  22.9   1   1   3.9e-42   6.4e-38  130.7  22.9     6   210    20   223    13   224 0.86 ATP synthase A chain
+ATP-synt_A           PF00119.18   211 Saccoglossus         -            228   3.4e-40  138.1  18.6   1   1   2.6e-44   4.2e-40  137.8  18.6     9   210    24   224    17   225 0.86 ATP synthase A chain
+#
+# Program:         hmmscan
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SCAN
+# Query file:      examples/out/atp6/atp6.fasta
+# Target file:     data/pfam/Pfam-A.hmm
+# Option settings: hmmscan -o examples/out/atp6/atp6-domains.out --domtblout examples/out/atp6/atp6-domains.tab data/pfam/Pfam-A.hmm examples/out/atp6/atp6.fasta 
+# Current dir:     /home/manu/Documents/Projects/Programmation/GithubRepos/CoreTracker
+# Date:            Fri Mar 17 14:35:50 2017
+# [ok]

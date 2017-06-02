@@ -1,5 +1,5 @@
 ### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher pval	Gene frac	N. rea	N. used	Cod. count	Sub. count	G. len	codon_lik	id	prediction	probability
+genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
 Schistosoma	GGT	G	N	0.0	0.31261460058	0.2	0.0204081632653	0.775510204082	0.636363636364	0.038961038961	829.0	-0.16347826087	41.0	0.0	0.007
 Schistosoma	GGG	G	N	0.0	0.31261460058	0.333333333333	0.0625	0.75	0.207792207792	0.038961038961	829.0	0.167539267016	42.0	0.0	0.013
 Schistosoma	GGA	G	N	0.0	0.31261460058	0.5	0.111111111111	0.555555555556	0.116883116883	0.038961038961	829.0	0.463768115942	40.0	0.0	0.033

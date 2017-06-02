@@ -1,4 +1,4 @@
 ### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher pval	Gene frac	N. rea	N. used	Cod. count	Sub. count	G. len	codon_lik	id	prediction	probability
+genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
 Schistosoma	AAT	N	F	0.0	0.5625	0.25	0.0714285714286	0.428571428571	0.875	0.0625	829.0	-2.00303951368	1.0	0.0	0.014
 Trichinella	AAC	N	F	0.0	0.694444444444	0.25	0.0588235294118	0.588235294118	0.566666666667	0.0333333333333	845.0	-1.92307692308	3.0	0.0	0.022

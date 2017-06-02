@@ -36,7 +36,6 @@ from Bio.Seq import Seq
 from Bio.SeqRecord import SeqRecord, _RestrictedDict
 from ete3 import Tree
 from scipy.cluster.vq import kmeans2
-from sklearn.externals import joblib
 
 from AncestralRecon import SingleNaiveRec, init_back_table
 from corefile import CoreFile
@@ -72,43 +71,16 @@ eps = np.finfo(np.float).eps
 
 alpha = Alphabet.Gapped(IUPAC.protein)
 
-class RefData:
-    def __init__(self, nucfile, protfile, gcode=1, gcodemap={}):
-        self.prot = protfile
-        self.nuc = nucfile
-        self.gcode = gcode
-        self.gcodemap = gcodemap
-
-    def align_new_seq(newseq):pass
-
-
-
-    @classmethod
-    def load_from_file(clc, loadfile):
-        """Load model from a file"""
-        try:
-            clf = joblib.load(loadfile)
-            return clf
-        except IOError:
-            print('Problem with file %s, can not open it' % loadfile)
-        except Exception as e:
-            raise e
-        return None
-
-    def save_model(self, outfile):
-        """Save model to a file"""
-        joblib.dump(self, outfile)
-
-
 class ConsensusKeeper:
+
     def __init__(self, alignment, threshold, ambiguous='X', alphabet=generic_protein):
         self.alignment = alignment
-        self.threshold  = threshold
+        self.threshold = threshold
         self.ambiguous = ambiguous
         self.allen = alignment.get_alignment_length()
         self.number_seq = len(alignment)
         self.aligninfo = AlignInfo.SummaryInfo(alignment)
-        self.consensus = aligninfo.gap_consensus(
+        self.consensus = self.aligninfo.gap_consensus(
             threshold=threshold, ambiguous=ambiguous, consensus_alpha=alphabet)
         self.pssm = self.aligninfo.pos_specific_score_matrix(self.consensus)
 
@@ -119,15 +91,15 @@ class ConsensusKeeper:
         return self.pssm
 
     def get_alt_cons(self):
-        rep_per_pos = ddict(list)
+        rep_per_pos = defaultdict(list)
         for k in range(self.allen):
             added = False
             for aa, aacount in self.pssm[k].items():
-                if (aacount / self.number_seq)>= self.threshold:
-                    rep_per_pos[k].append((aa, aacount/self.number_seq))
-                    added=True
+                if (aacount / self.number_seq) >= self.threshold:
+                    rep_per_pos[k].append((aa, aacount / self.number_seq))
+                    added = True
             if not added:
-                rep_per_pos[k] = ambiguous
+                rep_per_pos[k].append((self.ambiguous, 0))
         return rep_per_pos
 
     def get_maj_aa_pos(self, aa):
@@ -135,17 +107,16 @@ class ConsensusKeeper:
         filt_pos = []
         for pos in range(self.allen):
             aalist = rep_per_pos[pos]
-            aalist =  sorted(aalist, key=lambda x:x[1])
+            aalist = sorted(aalist, key=lambda x: x[1])
             best_aa, score = aalist.pop()
             best_aalist = []
-            aascore = score
-            while(aascore == score):
-                best_aalist.append(best_aa)
-                best_aa, aascore = aalist.pop()
+            best_aalist.append(best_aa)
+            for sup_aa, sc in aalist:
+                if sc == score:
+                    best_aalist.append(sup_aa)
             if aa in best_aalist:
                 filt_pos.append(pos)
-        return filt_pos 
-
+        return filt_pos
 
 
 class SequenceLoader:
@@ -188,6 +159,9 @@ class SequenceLoader:
         try:
             self.dnasequences = self.get_sequences(
                 dnafile, seqformat, generic_nucleotide)
+            if not self.dnasequences:
+                self.dnasequences = self.get_sequences(
+                    dnafile, 'fasta', generic_nucleotide)
             # we got to the end without finding any sequences
         except:
             raise ValueError('Nucleotide is not in the correct format')
@@ -196,6 +170,9 @@ class SequenceLoader:
         self.genes = set(self.dnasequences.keys()).intersection(
             self.sequences.keys())
 
+        if not self.genes:
+            raise ValueError(
+                "Check your input sequence files for genes. Genes not found ")
         common_spec_per_gene = {}
         common_spec_per_gene_len = {}
         max_spec = -np.inf
@@ -250,8 +227,11 @@ class SequenceLoader:
         if fileformat == "core":
             corefile = CoreFile(infile, alphabet)
             return corefile.get_sequences()
+        elif fileformat == 'fasta':
+            return {'0': list(SeqIO.parse(infile, 'fasta', alphabet))}
         else:
-            raise NotImplementedError("Others format are not yet supported")
+            raise NotImplementedError(
+                "Your nucleotide format is not supported")
 
     def save_alignment(self, alignment, outfile, format='fasta'):
         """save alignment in a file """
@@ -531,9 +511,10 @@ class SequenceLoader:
                 try:
                     has_code = codemap.get(s.id, None)
                     if has_code:
-                        seq_code = CodonTable.unambiguous_dna_by_id[abs(has_code)]
+                        seq_code = CodonTable.unambiguous_dna_by_id[
+                            abs(has_code)]
                 except KeyError:
-                    pass
+                    seq_code = codontable
                 if len(s) % 3 != 0:
                     raise ValueError(
                         "Frame-shifting detected in %s : [%s], current version does not supported it." % (s.id, gene))
@@ -635,9 +616,9 @@ class CodonReaData(object):
                 spec_aa = self.dct.forward_table.get(spec_codon, None)
                 cur_pos = self.positions[i]
                 if isinstance(aa, list):
-                    aa = sorted(aa, key=lambda x: x[-1])#.pop()
+                    aa = sorted(aa, key=lambda x: x[-1])  # .pop()
                     aa_b, aa_s = aa.pop()
-                    aa = "".join([aa_b] + [x[0] for x in aa if x[1]==aa_s])
+                    aa = "".join([aa_b] + [x[0] for x in aa if x[1] == aa_s])
                 if(spec_aa):
                     if spec_aa in aa:
                         aa = spec_aa
@@ -734,11 +715,14 @@ class CodonReaData(object):
 class SequenceSet(object):
     """Representation of the current genome set and their sequences"""
 
-    def __init__(self, coreinstance, phylotree, table_num):
+    def __init__(self, coreinstance, phylotree, table_num, codemap={}):
         # using sequence set suppose that the alignment and the protein
         # concatenation was already done
         self.codontable = CodonTable.unambiguous_dna_by_id[abs(table_num)]
-
+        self.codemap = codemap
+        if codemap:
+            logging.debug("Species genetic code passed as input: ")
+            logging.debug("\n"+"\n".join(["\t%s\t%s"%(k,v) for k,v in codemap.items()]))
         self.prot_dict, self.dna_dict, self.gene_limits = coreinstance.concat()
         self.prot_align = MultipleSeqAlignment(self.prot_dict.values())
         self.seqload = coreinstance
@@ -837,8 +821,16 @@ class SequenceSet(object):
         codon_aln = []
         all_undef_codon = {}
         for g in self.dna_dict.keys():
+            seq_code = self.codontable
+            try:
+                has_code = self.codemap.get(g, None)
+                if has_code:
+                    seq_code = CodonTable.unambiguous_dna_by_id[abs(has_code)]
+            except KeyError:
+                seq_code = self.codontable
+            
             codon_rec, undef_c = self._get_codon_record(
-                self.dna_dict[g], self.prot_dict[g], self.codontable, alphabet)
+                self.dna_dict[g], self.prot_dict[g], seq_code, alphabet)
             all_undef_codon[g] = undef_c
             codon_aln.append(codon_rec)
 
@@ -961,9 +953,6 @@ class SequenceSet(object):
                     ((abs(ic_thresh) <= 1 or 0.01) * abs(ic_thresh))
 
             ic_pos = (np.asarray(ic_vector) >= max_val).nonzero()
-
-            logging.debug(
-                "Filtering with ic content, positions to discard is %s" % str(ic_pos[0]))
             # ic_pos here is a tuple, so we should access the first element
             self._ic_alignment = self.filter_align_position(
                 current_alignment, ic_pos[0])
@@ -1102,7 +1091,7 @@ class SequenceSet(object):
         """Get the filtered alignment for an amino acid"""
         aa = aa.upper()
         #cons_array = [i for i, c in enumerate(consensus) if c.upper() == aa]
-        #return cons_array
+        # return cons_array
         return consensus.get_maj_aa_pos(aa)
 
     def get_total_genomes(self):
@@ -1160,10 +1149,12 @@ class ReaGenomeFinder:
         """Compute a distance matrix from the alignment"""
         if not matCalc:
             matCalc = DistanceCalculator(self.settings.MATRIX)
-        self.global_paired_distance = matCalc.get_distance(
-            self.seqset.prot_align)
-        self.filtered_paired_distance = matCalc.get_distance(
-            self.seqset.filt_prot_align)
+        if not self.settings.USE_GLOBAL:
+            self.paired_distance = matCalc.get_distance(
+                self.seqset.filt_prot_align)
+        else:
+            self.paired_distance = matCalc.get_distance(
+                self.seqset.prot_align)
 
     def get_genomes(self, use_similarity=1):
         """ Get suspected genomes """
@@ -1200,20 +1191,15 @@ class ReaGenomeFinder:
         aa2suspect = defaultdict(Counter)
         aa2suspect_dist = makehash(1, list)
         for (j, i) in itertools.combinations(xrange(number_seq), r=2):
-            gpaired = abs(
-                use_similarity - self.global_paired_distance[self.seq_names[i], self.seq_names[j]])
-            fpaired = abs(
-                use_similarity - self.filtered_paired_distance[self.seq_names[i], self.seq_names[j]])
+            paired = abs(
+                use_similarity - self.paired_distance[self.seq_names[i], self.seq_names[j]])
             self.sim_json[self.seq_names[i]].append(
-                {"global": gpaired, "filtered": fpaired, "species": self.seq_names[j]})
-            paired = fpaired
-            if self.settings.USE_GLOBAL:
-                paired = gpaired
+                {"distance": paired, "species": self.seq_names[j]})
             for aa in self.aa_paired_distance.keys():
                 aapaired = abs(
                     use_similarity - self.aa_paired_distance[aa][self.seq_names[i], self.seq_names[j]])
                 self.aa_sim_json[aa_letters_1to3[aa]].append(
-                    {'global': gpaired, 'aafiltered': aapaired, "species": "%s||%s" % (self.seq_names[i], self.seq_names[j])})
+                    {'distance': paired, 'aafiltered': aapaired, "species": "%s||%s" % (self.seq_names[i], self.seq_names[j])})
                 if (paired > aapaired and use_similarity) or (paired < aapaired and not use_similarity):
                     aa2suspect[aa][self.seq_names[i]] = aa2suspect[
                         aa].get(self.seq_names[i], 0) + 1
@@ -1471,24 +1457,22 @@ class ReaGenomeFinder:
 
     def run_analysis(self, codon_align, fcodon_align):
         """ Run the filtering analysis of the current dataset in sequenceset"""
-
         for aa1, aarea in self.aa2aa_rea.items():
             aa_alignment = self.seqset.aa_filt_prot_align[aa_letters_1to3[aa1]]
             gcodon_rea = CodonReaData((aa1, aarea), self.seqset.prot_align, self.global_consensus, codon_align,
                                       self.seqset.codontable, self.seqset.position, self.seqset.gene_limits, self.settings)
             fcodon_rea = CodonReaData((aa1, aarea), self.seqset.filt_prot_align, self.filtered_consensus, fcodon_align,
                                       self.seqset.codontable, self.seqset.filt_position, self.seqset.gene_limits, self.settings)
-
             for aa2, species in aarea.items():
                 # logging.debug("%s to %s" % (aa2, aa1))
-                counts = []
                 t = self.seqset.phylotree.copy("newick")
                 fitch = SingleNaiveRec(t, species, aa_letters_1to3[aa2], aa_letters_1to3[
                     aa1], self.seqset.codontable, (gcodon_rea, fcodon_rea))
                 slist = fitch.get_species_list(
                     self.settings.LIMIT_TO_SUSPECTED_SPECIES)
                 alldata = {}
-                for genome in slist:
+                prediction_data = {}
+                for genome in self.seqset.common_genome:
                     rec = self.seqset.prot_dict[genome]
                     leaf = fitch.tree & genome
                     filt_count = 0
@@ -1503,9 +1487,11 @@ class ReaGenomeFinder:
                     leaf.add_features(lost=True)
                     g_rep_keeper = self.global_consensus.get_alt_cons()
                     for pos in xrange(self.global_consensus.allen):
-                        pos_best_aa = sorted(g_rep_keeper[pos], key=lambda x: x[-1])#.pop()
+                        pos_best_aa = sorted(
+                            g_rep_keeper[pos], key=lambda x: x[-1])  # .pop()
                         aa_b, aa_s = pos_best_aa.pop()
-                        pos_best_aa = [aa_b] + [x[0] for x in pos_best_aa if x[1]==aa_s]
+                        pos_best_aa = [aa_b] + [x[0]
+                                                for x in pos_best_aa if x[1] == aa_s]
                         if aa1 in pos_best_aa and rec[pos] == aa2:
                             leaf.count += 1
 
@@ -1540,6 +1526,11 @@ class ReaGenomeFinder:
                         leaf.lost = False
 
                     gdata = {}
+                    if self.settings.CODON_COUNT_THRESHOLD >1:
+                        if self.settings.USE_GLOBAL:
+                            greacodon = Counter({_cod:_count for _cod,_count in greacodon.iteritems() if _count>self.settings.CODON_COUNT_THRESHOLD})
+                        else:
+                            freacodon = Counter({_cod:_count for _cod,_count in freacodon.iteritems() if _count>self.settings.CODON_COUNT_THRESHOLD})
                     g_rea_dist = gcodon_rea.get_rea_aa_codon_distribution(
                         genome, aa2)
                     g_total_rea_dist = gcodon_rea.get_total_rea_aa_codon_distribution(
@@ -1564,11 +1555,13 @@ class ReaGenomeFinder:
                     gdata['codons'] = {'global': gcodon_rea.get_aa_usage(
                         genome, aa2), 'filtered': fcodon_rea.get_aa_usage(genome, aa2)}
                     alldata[genome] = gdata
+                    if genome in slist:
+                        prediction_data[genome] = gdata
 
                 if(fitch.is_valid(self.settings.COUNT_THRESHOLD) or self.settings.SHOW_ALL):
                     self.reassignment_mapper['aa'][aa2][aa1] = alldata
                     self.interesting_case.append("%s to %s" % (aa2, aa1))
-                    yield (self, fitch, alldata)
+                    yield (self, fitch, prediction_data)
 
 
 def executeCMD(cmd, prog):
@@ -1794,7 +1787,8 @@ def compute_SP_per_col(al1, al2, columns, nspec, scoring_matrix):
             # give 0 to gap event
             score = 0
             try:
-                score = scoring_matrix.get((aa1, aa2), scoring_matrix[(aa2, aa1)])
+                score = scoring_matrix.get(
+                    (aa1, aa2), scoring_matrix[(aa2, aa1)])
             except:
                 pass
             return score
@@ -1973,12 +1967,13 @@ def get_codon_set_and_genome(y, xlabel, trueval=None):
     return result
 
 
-def get_report(fitchtree, gdata, reafinder, codon_align, prediction, output="", pie_size=45):
+def get_report(fitchtree, reafinder, codon_align, prediction, output="", pie_size=45):
     """ Render tree to a pdf"""
 
     settings = reafinder.settings
     OUTDIR = purge_directory(os.path.join(settings.OUTDIR, fitchtree.ori_aa +
                                           "_to_" + fitchtree.dest_aa))
+    gdata = reafinder.reassignment_mapper['aa'][fitchtree.ori_aa1][fitchtree.dest_aa1]
     c_rea = get_rea_genome_list(prediction[1], prediction[3])
     if not output:
         output = os.path.join(OUTDIR, "Codon_data." + settings.IMAGE_FORMAT)
@@ -2563,6 +2558,7 @@ def makehash(depth=None, type=None):
         return defaultdict(type)
     else:
         return defaultdict(partial(makehash, depth - 1, type))
+
 
 def parse_spec_to_code(filename):
     spec_to_code = {}

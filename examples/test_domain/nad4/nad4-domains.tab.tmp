@@ -1,0 +1,166 @@
+Proton_antipo_M	PF00361.18	Metaseiulus_occidentalis	1e-41	143.0	46	69	9	91	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Metaseiulus_occidentalis	1e-41	143.0	98	378	97	383	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Paracentrotus	1.2e-67	228.1	114	405	114	406	Proton-conducting	membrane	transporter
+Oxidored_q5_N	PF01059.15	Paracentrotus	1.7e-22	79.4	1	111	1	111	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Paracentrotus	1.7e-22	79.4	127	176	118	185	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Paracentrotus	1.7e-22	79.4	221	270	199	276	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Paracentrotus	1.7e-22	79.4	352	366	351	372	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Paracentrotus	1.7e-22	79.4	387	403	377	456	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+DUF4713	PF15831.3	Paracentrotus	0.044	14.1	85	109	78	124	Domain	of	unknown	function	(DUF4713)
+Proton_antipo_M	PF00361.18	Aphrocallistes_vastus	5e-63	212.9	124	412	123	412	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Schistosoma	5.9e-21	74.8	59	69	48	81	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Schistosoma	5.9e-21	74.8	91	367	88	371	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Schistosoma	5.9e-21	74.8	395	419	375	419	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Fasciola	9.4e-25	87.3	54	64	25	88	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Fasciola	9.4e-25	87.3	100	369	97	377	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Trichobilharzia_regenti	2.5e-22	79.3	92	363	88	369	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Versteria_mustelae	6.1e-26	91.2	3	62	1	82	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Versteria_mustelae	6.1e-26	91.2	97	364	94	407	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Euseius_nicholsi	6.6e-51	173.1	79	99	58	102	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Euseius_nicholsi	6.6e-51	173.1	102	384	101	387	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Patiria	5.6e-72	242.3	114	405	113	406	Proton-conducting	membrane	transporter
+Oxidored_q5_N	PF01059.15	Patiria	3.5e-18	65.6	1	110	1	110	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Patiria	3.5e-18	65.6	127	197	124	205	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Patiria	3.5e-18	65.6	175	206	161	222	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Patiria	3.5e-18	65.6	292	310	248	337	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Patiria	3.5e-18	65.6	383	448	378	453	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Proton_antipo_M	PF00361.18	Daphnia	5.3e-63	212.8	11	75	6	80	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Daphnia	5.3e-63	212.8	102	373	101	387	Proton-conducting	membrane	transporter
+Oxidored_q5_N	PF01059.15	Daphnia	1.1e-06	28.5	1	97	1	98	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Daphnia	1.1e-06	28.5	116	166	106	192	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Daphnia	1.1e-06	28.5	333	352	325	381	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Proton_antipo_M	PF00361.18	Haplorchis_taichui	1.2e-24	86.9	96	373	94	379	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Lumbricus	3.7e-65	219.9	62	104	42	106	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Lumbricus	3.7e-65	219.9	107	397	107	397	Proton-conducting	membrane	transporter
+Oxidored_q5_N	PF01059.15	Lumbricus	1.5e-09	37.8	1	102	1	104	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Lumbricus	1.5e-09	37.8	121	189	119	203	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Lumbricus	1.5e-09	37.8	290	338	276	359	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Lumbricus	1.5e-09	37.8	374	380	333	417	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Proton_antipo_M	PF00361.18	Halocynthia	5.5e-44	150.4	22	46	7	50	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Halocynthia	5.5e-44	150.4	64	108	40	111	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Halocynthia	5.5e-44	150.4	111	395	109	395	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Limulus	1.9e-68	230.7	8	37	2	50	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Limulus	1.9e-68	230.7	64	101	52	106	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Limulus	1.9e-68	230.7	107	390	105	391	Proton-conducting	membrane	transporter
+Oxidored_q5_N	PF01059.15	Limulus	4.2e-16	58.9	1	101	1	103	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Limulus	4.2e-16	58.9	119	154	117	180	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Limulus	4.2e-16	58.9	180	200	166	210	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Limulus	4.2e-16	58.9	377	426	359	440	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Proton_antipo_M	PF00361.18	Echinococcus_equinus	1.8e-18	66.7	3	62	1	87	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Echinococcus_equinus	1.8e-18	66.7	96	365	93	376	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Taenia_crassiceps	4.1e-21	75.3	2	61	1	77	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Taenia_crassiceps	4.1e-21	75.3	94	358	92	373	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Axinella	1.9e-75	253.7	85	131	77	133	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Axinella	1.9e-75	253.7	130	417	128	417	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Terebratulina	1.1e-59	201.9	59	90	24	105	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Terebratulina	1.1e-59	201.9	107	398	107	398	Proton-conducting	membrane	transporter
+Oxidored_q5_N	PF01059.15	Terebratulina	2.4e-05	24.3	1	104	1	104	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Terebratulina	2.4e-05	24.3	121	152	111	184	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Terebratulina	2.4e-05	24.3	180	206	170	216	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Terebratulina	2.4e-05	24.3	288	319	282	341	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Terebratulina	2.4e-05	24.3	375	414	367	445	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Proton_antipo_M	PF00361.18	Suberites_domuncula	3.7e-77	259.3	83	133	73	133	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Suberites_domuncula	3.7e-77	259.3	130	417	129	417	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Bfloridae	1.1e-66	224.9	62	81	28	106	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Bfloridae	1.1e-66	224.9	111	400	111	400	Proton-conducting	membrane	transporter
+Oxidored_q5_N	PF01059.15	Bfloridae	2.6e-20	72.4	1	108	1	108	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Bfloridae	2.6e-20	72.4	125	156	116	176	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Bfloridae	2.6e-20	72.4	319	365	297	367	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Bfloridae	2.6e-20	72.4	393	413	368	440	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Proton_antipo_M	PF00361.18	Katharina	5.8e-61	206.1	103	387	101	392	Proton-conducting	membrane	transporter
+Oxidored_q5_N	PF01059.15	Katharina	1.7e-12	47.3	4	97	1	98	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Katharina	1.7e-12	47.3	115	186	112	192	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Katharina	1.7e-12	47.3	168	193	146	256	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Katharina	1.7e-12	47.3	369	414	331	436	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+DUF4661	PF15576.4	Katharina	0.64	9.7	251	317	246	322	Domain	of	unknown	function	(DUF4661)
+Proton_antipo_M	PF00361.18	Geodia	1.9e-77	260.2	77	122	71	124	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Geodia	1.9e-77	260.2	124	411	122	411	Proton-conducting	membrane	transporter
+Oxidored_q5_N	PF01059.15	Geodia	0.00037	20.4	30	117	7	121	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Geodia	0.00037	20.4	139	174	128	190	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Geodia	0.00037	20.4	298	327	271	342	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Geodia	0.00037	20.4	339	339	290	402	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Geodia	0.00037	20.4	432	455	426	457	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Proton_antipo_M	PF00361.18	Metridium	3.1e-80	269.4	14	23	3	55	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Metridium	3.1e-80	269.4	136	421	136	425	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Amphimedon_queenslandica	1e-79	267.6	82	91	62	124	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Amphimedon_queenslandica	1e-79	267.6	129	416	127	416	Proton-conducting	membrane	transporter
+Oxidored_q5_N	PF01059.15	Amphimedon_queenslandica	0.009	16.0	59	122	33	124	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Amphimedon_queenslandica	0.009	16.0	142	184	137	198	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Amphimedon_queenslandica	0.009	16.0	309	339	269	347	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Amphimedon_queenslandica	0.009	16.0	361	378	295	399	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Amphimedon_queenslandica	0.009	16.0	365	392	335	424	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Amphimedon_queenslandica	0.009	16.0	450	477	448	482	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Proton_antipo_M	PF00361.18	Acropora	1e-78	264.4	92	135	87	140	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Acropora	1e-78	264.4	138	421	136	425	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Trichinella	2.6e-38	131.8	21	34	8	68	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Trichinella	2.6e-38	131.8	81	356	81	362	Proton-conducting	membrane	transporter
+DUF1517	PF07466.9	Trichinella	0.3	10.1	196	241	182	263	Protein	of	unknown	function	(DUF1517)
+Proton_antipo_M	PF00361.18	Balanoglossus	2.3e-72	243.6	10	33	3	74	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Balanoglossus	2.3e-72	243.6	113	401	113	405	Proton-conducting	membrane	transporter
+Oxidored_q5_N	PF01059.15	Balanoglossus	2e-24	85.6	1	110	1	110	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Balanoglossus	2e-24	85.6	128	197	117	209	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Balanoglossus	2e-24	85.6	296	296	250	340	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Balanoglossus	2e-24	85.6	383	444	377	452	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Proton_antipo_M	PF00361.18	Tetrancistrum_nebulosi	1.8e-19	70.0	84	341	83	357	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Tetrancistrum_nebulosi	1.8e-19	70.0	350	387	348	404	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Pseudogarypus_banksi	2.4e-50	171.3	24	41	3	96	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Pseudogarypus_banksi	2.4e-50	171.3	102	381	100	386	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Benedenia_hoshinai	3.1e-15	56.0	6	52	1	82	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Benedenia_hoshinai	3.1e-15	56.0	144	345	86	356	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Benedenia_hoshinai	3.1e-15	56.0	346	383	342	394	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Myxine	4.9e-65	219.5	115	403	115	403	Proton-conducting	membrane	transporter
+Oxidored_q5_N	PF01059.15	Myxine	3e-24	85.1	1	112	1	112	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Myxine	3e-24	85.1	156	169	113	205	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Myxine	3e-24	85.1	245	345	241	352	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Myxine	3e-24	85.1	350	403	337	414	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+GPR_Gpa2_C	PF11970.6	Myxine	0.085	12.8	64	105	56	116	G	protein-coupled	glucose	receptor	regulating	Gpa2	C-term
+GPR_Gpa2_C	PF11970.6	Myxine	0.085	12.8	187	204	173	211	G	protein-coupled	glucose	receptor	regulating	Gpa2	C-term
+GPR_Gpa2_C	PF11970.6	Myxine	0.085	12.8	437	446	436	453	G	protein-coupled	glucose	receptor	regulating	Gpa2	C-term
+DUF2244	PF10003.7	Myxine	1.6	8.3	96	146	92	149	Integral	membrane	protein	(DUF2244)
+DUF2244	PF10003.7	Myxine	1.6	8.3	295	352	288	357	Integral	membrane	protein	(DUF2244)
+Proton_antipo_M	PF00361.18	Drosophila	1.3e-69	234.5	55	105	33	108	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Drosophila	1.3e-69	234.5	109	390	106	391	Proton-conducting	membrane	transporter
+Oxidored_q5_N	PF01059.15	Drosophila	3.3e-22	78.5	1	103	1	103	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Drosophila	3.3e-22	78.5	121	187	118	201	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Drosophila	3.3e-22	78.5	268	268	231	315	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Drosophila	3.3e-22	78.5	375	402	360	437	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Proton_antipo_M	PF00361.18	Ciona	4.3e-41	140.9	16	67	14	76	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Ciona	4.3e-41	140.9	101	382	101	389	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Epigonichthys	1.2e-63	215.0	111	400	111	400	Proton-conducting	membrane	transporter
+Oxidored_q5_N	PF01059.15	Epigonichthys	1e-18	67.3	1	107	1	108	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Epigonichthys	1e-18	67.3	125	160	114	202	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Proton_antipo_M	PF00361.18	Strigamia_maritima	3.8e-59	200.1	106	383	103	384	Proton-conducting	membrane	transporter
+Oxidored_q5_N	PF01059.15	Strigamia_maritima	0.00034	20.5	1	75	1	79	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Strigamia_maritima	0.00034	20.5	88	133	84	161	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Strigamia_maritima	0.00034	20.5	149	190	144	199	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Strigamia_maritima	0.00034	20.5	248	311	242	314	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Strigamia_maritima	0.00034	20.5	332	343	329	345	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Strigamia_maritima	0.00034	20.5	372	396	352	406	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Proton_antipo_M	PF00361.18	Caenorhabditis	4.7e-41	140.8	10	25	4	79	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Caenorhabditis	4.7e-41	140.8	89	359	87	365	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Homo	1.1e-77	261.0	26	58	22	72	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Homo	1.1e-77	261.0	112	399	112	403	Proton-conducting	membrane	transporter
+Oxidored_q5_N	PF01059.15	Homo	7.7e-28	96.6	1	109	1	109	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Homo	7.7e-28	96.6	166	183	116	217	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Homo	7.7e-28	96.6	254	269	197	281	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Homo	7.7e-28	96.6	293	358	285	374	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Homo	7.7e-28	96.6	388	416	373	449	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+SPC12	PF06645.11	Homo	0.59	10.1	92	136	86	138	Microsomal	signal	peptidase	12	kDa	subunit	(SPC12)
+SPC12	PF06645.11	Homo	0.59	10.1	183	205	181	208	Microsomal	signal	peptidase	12	kDa	subunit	(SPC12)
+SPC12	PF06645.11	Homo	0.59	10.1	291	309	262	310	Microsomal	signal	peptidase	12	kDa	subunit	(SPC12)
+Proton_antipo_M	PF00361.18	Ascidiella_aspersa	1.1e-39	136.2	34	55	9	86	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Ascidiella_aspersa	1.1e-39	136.2	123	410	120	412	Proton-conducting	membrane	transporter
+UPF0370	PF13980.4	Ascidiella_aspersa	2.9	7.9	31	45	29	51	Uncharacterised	protein	family	(UPF0370)
+Proton_antipo_M	PF00361.18	Blanceolatum	1.6e-49	168.6	140	400	105	400	Proton-conducting	membrane	transporter
+Oxidored_q5_N	PF01059.15	Blanceolatum	6.9e-18	64.6	1	108	1	108	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Blanceolatum	6.9e-18	64.6	159	183	141	204	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Blanceolatum	6.9e-18	64.6	401	401	369	439	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Proton_antipo_M	PF00361.18	Saccoglossus	8.9e-73	244.9	26	60	18	65	Proton-conducting	membrane	transporter
+Proton_antipo_M	PF00361.18	Saccoglossus	8.9e-73	244.9	114	407	114	407	Proton-conducting	membrane	transporter
+Oxidored_q5_N	PF01059.15	Saccoglossus	1.1e-24	86.6	1	111	1	111	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Saccoglossus	1.1e-24	86.6	160	182	118	209	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Saccoglossus	1.1e-24	86.6	289	330	264	337	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+Oxidored_q5_N	PF01059.15	Saccoglossus	1.1e-24	86.6	384	443	379	452	NADH-ubiquinone	oxidoreductase	chain	4,	amino	terminus
+DUF3483	PF11982.6	Saccoglossus	2.8	7.4	3	20	2	52	Domain	of	unknown	function	(DUF3483)
+DUF3483	PF11982.6	Saccoglossus	2.8	7.4	47	72	42	82	Domain	of	unknown	function	(DUF3483)
+DUF3483	PF11982.6	Saccoglossus	2.8	7.4	101	173	96	238	Domain	of	unknown	function	(DUF3483)

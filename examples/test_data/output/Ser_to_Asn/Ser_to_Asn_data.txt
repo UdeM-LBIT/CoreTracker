@@ -1,5 +1,5 @@
 ### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher pval	Gene frac	N. rea	N. used	Cod. count	Sub. count	G. len	codon_lik	id	prediction	probability
+genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
 Schistosoma	TCT	S	N	0.0	0.517624513797	0.5	0.148148148148	0.37037037037	0.473684210526	0.0877192982456	829.0	0.620472440945	29.0	0.0	0.05
 Schistosoma	AGT	S	N	0.0	0.517624513797	0.2	0.0833333333333	0.333333333333	0.210526315789	0.0877192982456	829.0	0.670212765957	9.0	0.0	0.051
 Fasciola	TCT	S	N	0.0	0.55693092225	0.2	0.0740740740741	0.481481481481	0.465517241379	0.0862068965517	861.0	0.689547581903	29.0	0.0	0.009

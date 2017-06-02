@@ -1,0 +1,71 @@
+#                                                                                --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name        accession   tlen query name               accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#------------------- ---------- -----     -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+NADHdh               PF00146.19   299 Metaseiulus_occidentalis -            270   6.9e-48  163.4  21.8   1   1   5.5e-52     9e-48  163.0  21.8     4   234     6   236     3   262 0.88 NADH dehydrogenase
+NADHdh               PF00146.19   299 Paracentrotus        -            323  7.7e-104  347.0  18.5   1   1  5.5e-108    9e-104  346.8  18.5     2   298     9   309     8   310 0.97 NADH dehydrogenase
+NADHdh               PF00146.19   299 Aphrocallistes_vastus -            316     1e-98  330.2  16.0   1   1  7.3e-103   1.2e-98  330.0  16.0     4   298     8   305     5   306 0.95 NADH dehydrogenase
+NADHdh               PF00146.19   299 Schistosoma          -            292   1.1e-49  169.2  26.9   1   1   9.5e-54   1.5e-49  168.8  26.9     7   297    13   288     7   290 0.92 NADH dehydrogenase
+NADHdh               PF00146.19   299 Fasciola             -            300   4.5e-57  193.5  30.0   1   1   3.4e-61   5.5e-57  193.2  30.0     6   298    17   299    13   300 0.91 NADH dehydrogenase
+NADHdh               PF00146.19   299 Trichobilharzia_regenti -            291   2.6e-54  184.4  20.2   1   1   2.1e-58   3.4e-54  184.1  20.2     7   297    13   287     9   289 0.94 NADH dehydrogenase
+NADHdh               PF00146.19   299 Versteria_mustelae   -            297   8.6e-57  192.6  22.1   1   1   6.3e-61     1e-56  192.3  22.1     7   298    13   295     8   296 0.90 NADH dehydrogenase
+NADHdh               PF00146.19   299 Euseius_nicholsi     -            298     5e-73  245.9  38.3   1   1   3.7e-77     6e-73  245.6  38.3     4   297     6   289     3   291 0.94 NADH dehydrogenase
+NADHdh               PF00146.19   299 Patiria              -            326  3.2e-104  348.3  20.0   1   1  2.4e-108  3.9e-104  348.0  20.0     2   297     9   308     8   310 0.97 NADH dehydrogenase
+NADHdh               PF00146.19   299 Daphnia              -            311   1.1e-91  307.2  17.4   1   1   1.6e-95   1.3e-91  306.9  17.4     3   298     7   297     5   298 0.97 NADH dehydrogenase
+ECSCR                PF15820.3    103 Daphnia              -            311       1.8    8.3   4.4   1   2   0.00057       4.6    7.0   0.2    28    53     2    27     1    61 0.76 Endothelial cell-specific chemotaxis regulator
+ECSCR                PF15820.3    103 Daphnia              -            311       1.8    8.3   4.4   2   2     0.018   1.5e+02    2.2   0.6    21    35   252   266   226   270 0.87 Endothelial cell-specific chemotaxis regulator
+NADHdh               PF00146.19   299 Haplorchis_taichui   -            301   4.3e-59  200.1  26.4   1   1   3.4e-63   5.6e-59  199.8  26.4     7   298    17   298    12   299 0.92 NADH dehydrogenase
+NADHdh               PF00146.19   299 Lumbricus            -            307   1.3e-89  300.3  20.1   1   1   2.7e-93   1.5e-89  300.1  20.1     3   297     9   300     7   302 0.96 NADH dehydrogenase
+Vezatin              PF12632.5    279 Lumbricus            -            307     0.057   12.7   2.6   1   1     2e-05      0.11   11.7   2.6     2    87    80   162    79   170 0.89 Mysoin-binding motif of peroxisomes
+L_biotic_typeA       PF04604.11    51 Lumbricus            -            307       0.1   12.4   0.0   1   1   3.8e-05      0.21   11.4   0.0    23    43   132   150   130   157 0.87 Type-A lantibiotic
+NADHdh               PF00146.19   299 Halocynthia          -            298   4.7e-67  226.3  31.1   1   1   3.6e-71   5.9e-67  225.9  31.1     4   297     6   292     4   294 0.95 NADH dehydrogenase
+NADHdh               PF00146.19   299 Limulus              -            310   2.6e-89  299.3  19.5   1   1   1.9e-93   3.1e-89  299.1  19.5     4   297    10   297     7   299 0.97 NADH dehydrogenase
+NADHdh               PF00146.19   299 Echinococcus_equinus -            297   5.4e-60  203.1  23.8   1   1     4e-64   6.5e-60  202.8  23.8     8   298    14   295    10   296 0.91 NADH dehydrogenase
+NADHdh               PF00146.19   299 Taenia_crassiceps    -            297   8.8e-60  202.4  24.6   1   1   6.7e-64   1.1e-59  202.1  24.6     7   298    13   295     8   296 0.89 NADH dehydrogenase
+NADHdh               PF00146.19   299 Axinella             -            333  3.1e-122  407.4  25.4   1   1  4.4e-126  3.6e-122  407.2  25.4     1   298     7   320     7   321 0.97 NADH dehydrogenase
+CRPA                 PF05745.9    150 Axinella             -            333     0.018   14.9   3.2   1   2         2   1.6e+04   -5.2   2.3    69    80     5    16     2    27 0.48 Chlamydia 15 kDa cysteine-rich outer membrane protein (CRPA)
+CRPA                 PF05745.9    150 Axinella             -            333     0.018   14.9   3.2   2   2   2.2e-06     0.018   14.9   3.2    43   101   125   183   109   200 0.81 Chlamydia 15 kDa cysteine-rich outer membrane protein (CRPA)
+NADHdh               PF00146.19   299 Terebratulina        -            314   1.9e-90  303.1  15.7   1   1   4.2e-94   2.3e-90  302.8  15.7     4   295     9   302     6   306 0.95 NADH dehydrogenase
+DUF1495              PF07381.9     90 Terebratulina        -            314     0.037   13.7   0.1   1   1   1.2e-05     0.065   12.9   0.1     9    60    99   149    91   170 0.90 Winged helix DNA-binding domain (DUF1495)
+DUF4014              PF13198.4    105 Terebratulina        -            314      0.45   10.8   6.9   1   3     0.028   1.5e+02    2.7   0.1    20    52     4    34     1    42 0.70 Protein of unknown function (DUF4014)
+DUF4014              PF13198.4    105 Terebratulina        -            314      0.45   10.8   6.9   2   3      0.94   5.1e+03   -2.2   0.0    63    85   104   126    98   132 0.79 Protein of unknown function (DUF4014)
+DUF4014              PF13198.4    105 Terebratulina        -            314      0.45   10.8   6.9   3   3   0.00013      0.68   10.3   0.8    22    81   142   198   128   216 0.87 Protein of unknown function (DUF4014)
+NADHdh               PF00146.19   299 Suberites_domuncula  -            334  3.7e-122  407.2  23.8   1   1  5.2e-126  4.3e-122  407.0  23.8     1   298     6   318     6   319 0.98 NADH dehydrogenase
+CRPA                 PF05745.9    150 Suberites_domuncula  -            334      0.12   12.2   3.7   1   1   3.4e-05      0.27   11.1   3.7    43    99   124   183   105   200 0.79 Chlamydia 15 kDa cysteine-rich outer membrane protein (CRPA)
+NADHdh               PF00146.19   299 Bfloridae            -            313  1.7e-103  345.9  18.3   1   1  1.2e-107    2e-103  345.7  18.3     2   297     8   299     7   301 0.98 NADH dehydrogenase
+NADHdh               PF00146.19   299 Katharina            -            316   8.3e-91  304.3  18.8   1   1   5.9e-95   9.6e-91  304.1  18.8     4   297     9   302     6   304 0.96 NADH dehydrogenase
+NADHdh               PF00146.19   299 Geodia               -            327  2.6e-120  401.1  28.5   1   1  1.9e-124  3.1e-120  400.9  28.5     2   298     7   314     6   315 0.98 NADH dehydrogenase
+NADHdh               PF00146.19   299 Metridium            -            327  6.6e-121  403.1  27.3   1   1  4.6e-125  7.6e-121  402.9  27.3     2   298    11   314    10   315 0.98 NADH dehydrogenase
+NADHdh               PF00146.19   299 Amphimedon_queenslandica -            314  3.5e-111  371.2  25.3   1   1  4.9e-115    4e-111  371.0  25.3     2   298    11   301    10   302 0.97 NADH dehydrogenase
+CRPA                 PF05745.9    150 Amphimedon_queenslandica -            314     0.041   13.8   2.0   1   1   1.2e-05     0.099   12.5   2.0    41   101   126   189   109   200 0.79 Chlamydia 15 kDa cysteine-rich outer membrane protein (CRPA)
+NADHdh               PF00146.19   299 Acropora             -            327  2.2e-119  398.1  25.6   1   1  3.1e-123  2.5e-119  397.9  25.6     2   298    11   314    10   315 0.98 NADH dehydrogenase
+CRPA                 PF05745.9    150 Acropora             -            327         6    6.7  13.0   1   2      0.34   2.8e+03   -1.9   1.5    64    82    10    28     6    34 0.86 Chlamydia 15 kDa cysteine-rich outer membrane protein (CRPA)
+CRPA                 PF05745.9    150 Acropora             -            327         6    6.7  13.0   2   2   1.3e-05      0.11   12.4   4.3    41   102   126   191   107   201 0.80 Chlamydia 15 kDa cysteine-rich outer membrane protein (CRPA)
+NADHdh               PF00146.19   299 Trichinella          -            299   1.5e-68  231.2  13.2   1   1   1.1e-72   1.9e-68  230.9  13.2     3   295     8   290     6   293 0.93 NADH dehydrogenase
+NADHdh               PF00146.19   299 Balanoglossus        -            322  5.6e-109  363.9  15.2   1   1    8e-113  6.5e-109  363.7  15.2     2   298     9   309     8   310 0.97 NADH dehydrogenase
+VPS13_C              PF16909.3    178 Balanoglossus        -            322      0.14   11.8   0.0   1   1   3.1e-05      0.25   10.9   0.0   100   134    43    76    34    78 0.89 Vacuolar-sorting-associated 13 protein C-terminal
+NADHdh               PF00146.19   299 Tetrancistrum_nebulosi -            293   1.7e-56  191.6  17.8   1   1   1.3e-60   2.1e-56  191.3  17.8     3   296    10   290     8   292 0.91 NADH dehydrogenase
+NADHdh               PF00146.19   299 Pseudogarypus_banksi -            295   2.5e-57  194.3  31.9   1   1   1.8e-61     3e-57  194.1  31.9     5   295     7   294     3   295 0.88 NADH dehydrogenase
+NADHdh               PF00146.19   299 Benedenia_hoshinai   -            297     5e-60  203.2  21.2   1   1   3.5e-64   5.7e-60  203.0  21.2     2   297    11   295    10   297 0.92 NADH dehydrogenase
+NADHdh               PF00146.19   299 Myxine               -            318  3.7e-105  351.4  23.5   1   1  2.7e-109  4.3e-105  351.2  23.5     4   297     9   303     6   305 0.96 NADH dehydrogenase
+NADHdh               PF00146.19   299 Drosophila           -            312   2.3e-85  286.4  24.8   1   1   1.7e-89   2.7e-85  286.2  24.8     4   297    11   300     8   302 0.96 NADH dehydrogenase
+NADHdh               PF00146.19   299 Ciona                -            302   1.3e-65  221.5  35.7   1   1   1.9e-69   1.6e-65  221.3  35.7     3   297     8   295     6   297 0.93 NADH dehydrogenase
+DUF1180              PF06679.10   169 Ciona                -            302       1.7    8.9   4.3   1   1   0.00049         4    7.7   4.3   103   146    13    57     6    59 0.76 Protein of unknown function (DUF1180)
+NADHdh               PF00146.19   299 Epigonichthys        -            310  2.5e-101  338.8  20.1   1   1  1.8e-105  2.9e-101  338.6  20.1     2   297     6   297     5   299 0.97 NADH dehydrogenase
+NADHdh               PF00146.19   299 Strigamia_maritima   -            306   4.4e-79  265.8  21.2   1   1   3.1e-83     5e-79  265.6  21.2     4   298     9   297     6   298 0.97 NADH dehydrogenase
+NADHdh               PF00146.19   299 Caenorhabditis       -            291   4.1e-62  210.0  25.5   1   1   6.4e-66   5.2e-62  209.7  25.5     3   298     8   285     5   286 0.92 NADH dehydrogenase
+DUF1211              PF06736.9     85 Caenorhabditis       -            291      0.57   10.5  12.8   1   2    0.0051        42    4.5   3.2    26    74    60   109     6   121 0.81 Protein of unknown function (DUF1211)
+DUF1211              PF06736.9     85 Caenorhabditis       -            291      0.57   10.5  12.8   2   2   0.00011      0.87    9.9   2.7    36    82   138   184   113   185 0.86 Protein of unknown function (DUF1211)
+NADHdh               PF00146.19   299 Homo                 -            317    4e-105  351.3  17.2   1   1  2.8e-109  4.6e-105  351.1  17.2     3   298     6   304     4   305 0.97 NADH dehydrogenase
+NADHdh               PF00146.19   299 Ascidiella_aspersa   -            306   1.1e-70  238.1  28.6   1   1   8.9e-75   1.5e-70  237.8  28.6     6   297    12   295     8   297 0.91 NADH dehydrogenase
+NADHdh               PF00146.19   299 Blanceolatum         -            312  1.6e-104  349.3  19.2   1   1  1.2e-108  1.9e-104  349.0  19.2     2   297     7   298     6   300 0.98 NADH dehydrogenase
+NADHdh               PF00146.19   299 Saccoglossus         -            325    1e-106  356.5  17.1   1   1  7.3e-111  1.2e-106  356.3  17.1     2   298    12   312    11   313 0.97 NADH dehydrogenase
+#
+# Program:         hmmscan
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SCAN
+# Query file:      examples/out/nad1/nad1.fasta
+# Target file:     data/pfam/Pfam-A.hmm
+# Option settings: hmmscan -o examples/out/nad1/nad1-domains.out --domtblout examples/out/nad1/nad1-domains.tab data/pfam/Pfam-A.hmm examples/out/nad1/nad1.fasta 
+# Current dir:     /home/manu/Documents/Projects/Programmation/GithubRepos/CoreTracker
+# Date:            Fri Mar 17 14:37:30 2017
+# [ok]

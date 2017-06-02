@@ -1,0 +1,2635 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             examples/out/cox1/cox1.fasta
+# target HMM database:             data/pfam/Pfam-A.hmm
+# output directed to file:         examples/out/cox1/cox1-domains.out
+# per-dom hits tabular output:     examples/out/cox1/cox1-domains.tab
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       Metaseiulus_occidentalis  [L=517]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+     3e-129  431.5  47.0   3.5e-129  431.3  47.0    1.0  1  COX1      Cytochrome C and Quinol oxidase polypeptide I
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  431.3  47.0  2.2e-133  3.5e-129       1     426 []      13     459 ..      13     459 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 431.3 bits;  conditional E-value: 2.2e-133
+                               HHHHHHHHHHHHHHHHHHHHHHHHHHHCTCT......HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHH CS
+                      COX1   1 kigllylivalvlllvggllgllirlqlafp.....dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprln 79 
+                               +ig+ly+i++l+ +++g ++ +lir++l +p     + + yn+l+t H+ + if++++p+ i+gfgn+l+p++i+a+d+afpr+n
+  Metaseiulus_occidentalis  13 DIGTLYFIFGLWSGMLGSAIRALIRIELSQPgsflkNDQIYNVLVTSHAFVIIFFIVIPIiIGGFGNWLIPIIINAPDIAFPRIN 97 
+                               599*************************9997666666*********************************************** PP
+
+                               HHHHHHHHHHHHH.HHHHHH..S.-STTTTTTTC-........SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-H CS
+                      COX1  80 alsfwlvvlglvl.lllsll..a.tqgwteYapls........gvdlwllglllvgvssllgainfivtilkrrapgmtvaklpl 152
+                               ++sfwl++++l l +l+s++  + ++gwt Y+pls         vd+ +++l+l+gvss++gainfi ti++ r +++++++++l
+  Metaseiulus_occidentalis  98 NISFWLLPVSLSLlILSSWVerGaGTGWTVYPPLSsslfhrsvSVDITIFSLHLAGVSSIIGAINFICTIINIRPKNIKLEQISL 182
+                               ***********99677777798569************************************************************ PP
+
+                               HHHHHHHHHHHHHHHCHHHHHHHHHCHHHH..T..SSSC...E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT.SCCC CS
+                      COX1 153 fvwailatailillalpvlalalllllldr..g.kffdp...gdplldqhlfWffgHpeVyililpalgivyyilpkfag.rplf 230
+                               f w+il+ta+l+ll+lpvla a+++ll+dr  +  ffdp   gdp+l+qhlfWffgHpeVyililp++gi++  + +  + ++ f
+  Metaseiulus_occidentalis 183 FSWSILITAVLLLLSLPVLAGAITILLTDRnfNtRFFDPrggGDPVLYQHLFWFFGHPEVYILILPGFGIISQTIFTNRNkKQTF 267
+                               ********************************88***************************************99999878**** PP
+
+                               THHHHHHHHHHHHHHCCCCGGGGCTTSSS-HHHHHHHHHHHHHTHHHHHHCCCHHHHCCTTS-CHCHHHHHHHHHHHHHHHHHHH CS
+                      COX1 231 sykllvlafililflgilvwaHHlfttglpewlkalgsvfslliavPsglkvfnwlatlwrgsirfktpmlfalgfaflfiigGl 315
+                               +   +++a+i+i++lg++vwaHH+ft+g++   +a++++++++iavP+g+k+f+w+at++++ ++++  +++ +gf+flf igG+
+  Metaseiulus_occidentalis 268 GALGIIYAIIAIGLLGFIVWAHHMFTVGIDIDSRAYFTAATIIIAVPTGIKIFSWIATIYGSYFKWNISIIWNIGFIFLFSIGGV 352
+                               ************************************************************************************* PP
+
+                               HHHHHTSHHHHHHHTTBHHHHHHHHHHHTTHHHHHHHHHHHHHHHHHHSB--HHHHHHHHHHHHHHHHHHHHHHHHHHHHTTHBS CS
+                      COX1 316 tGvllalpsvnyvvhgtyfvvaHfHlvllgavvfllfaaiyywlpkltgrmlserlaklhfwllfiGlllmflpmhilGllgmpr 400
+                               tGv+la+ s++ ++h+ty+vvaHfH+vl  ++vf++f ++++w+p +++  ++++l k+hf+l+f+G++++f+p+h+lGl g+pr
+  Metaseiulus_occidentalis 353 TGVILANSSIDTILHDTYYVVAHFHYVLSIGAVFAIFRGVFFWWPIIFSIRFNNNLIKIHFFLIFTGVNITFFPQHFLGLNGIPR 437
+                               ************************************************999********************************** PP
+
+                               SSST-CCCCHHHCHHHHHHHHHHHHH CS
+                      COX1 401 raadyfletvpelqplnvlrtiggvl 426
+                               r+ dy     + + ++n+++++g+++
+  Metaseiulus_occidentalis 438 RYSDY----PDFFYLWNWISSLGSII 459
+                               *****....4579**********976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (517 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       835  (0.0512081); expected 326.1 (0.02)
+Passed bias filter:                      283  (0.0173556); expected 326.1 (0.02)
+Passed Vit filter:                        26  (0.00159451); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.70u 0.44s 00:00:01.13 Elapsed: 00:00:00.66
+# Mc/sec: 2240.98
+//
+Query:       Paracentrotus  [L=517]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   2.4e-143  478.0  57.0     3e-143  477.6  57.0    1.1  1  COX1      Cytochrome C and Quinol oxidase polypeptide I
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  477.6  57.0  1.8e-147    3e-143       1     426 []      14     460 ..      14     460 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 477.6 bits;  conditional E-value: 1.8e-147
+                    HHHHHHHHHHHHHHHHHHHHHHHHHHHCTCT......HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHHHHHHHHHHHHH CS
+           COX1   1 kigllylivalvlllvggllgllirlqlafp.....dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprlnalsfwlvvlgl 90 
+                    +ig+lyli++ ++++vg+++ ++ir++la+p     d + y +++t+H+ +mif++++p+ i+gfgn+l+pl+iga+d+afpr+n++ fwl++ ++
+  Paracentrotus  14 DIGTLYLIFGAWAGMVGTAMRVIIRAELAQPgsllkDDQIYKVVVTAHALVMIFFMVMPImIGGFGNWLIPLMIGAPDMAFPRMNNMRFWLIPPSF 109
+                    599**************************998777777********************************************************** PP
+
+                    HHHHHHHH...S.-STTTTTTTC-........SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-HHHHHHHHHHHHHHHHCHHHHHH CS
+           COX1  91 vllllsll...a.tqgwteYapls........gvdlwllglllvgvssllgainfivtilkrrapgmtvaklplfvwailatailillalpvlala 174
+                    +lll+s     + ++gwt Y+pls         vdl++++l+l+g+ss+l++infi+ti+++r+pgm++ +lplfvw++++ta+l+ll+lpvla a
+  Paracentrotus 110 ILLLASAGverGaGTGWTIYPPLSrkiahaggSVDLAIFSLHLAGASSILASINFITTIINMRTPGMSFDRLPLFVWSVFVTAFLLLLSLPVLAGA 205
+                    **999997787468********************************************************************************** PP
+
+                    HHHCHHHH..T..SSSC...E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT.SCCCTHHHHHHHHHHHHHHCCCCGGGGCTTSSS-HHH CS
+           COX1 175 lllllldr..g.kffdp...gdplldqhlfWffgHpeVyililpalgivyyilpkfag.rplfsykllvlafililflgilvwaHHlfttglpewl 263
+                    +++ll+dr  + +ffdp   gdp+l+qhlfWffgHpeVyililp++g+++++++ ++g r+ f+y  +v+a+i+i++lg+lvwaHH+ft+g+++ +
+  Paracentrotus 206 ITMLLTDRkiNtTFFDPaggGDPILFQHLFWFFGHPEVYILILPGFGMISHVIAHYSGkREPFGYLGMVYAMIAIGVLGFLVWAHHMFTVGMDVDT 301
+                    *********988*********************************************99************************************* PP
+
+                    HHHHHHHHHHTHHHHHHCCCHHHHCCTTS-CHCHHHHHHHHHHHHHHHHHHHHHHHHTSHHHHHHHTTBHHHHHHHHHHHTTHHHHHHHHHHHHHH CS
+           COX1 264 kalgsvfslliavPsglkvfnwlatlwrgsirfktpmlfalgfaflfiigGltGvllalpsvnyvvhgtyfvvaHfHlvllgavvfllfaaiyywl 359
+                    +a++++++++iavP+g+kvf w+atl +++++++tp+l+algf+flf++gGltG++la+ s+++v+h+ty+vvaHfH+vl +++vf++fa++ +w+
+  Paracentrotus 302 RAYFTAATMIIAVPTGIKVFRWMATLQGSNLQWETPLLWALGFVFLFTLGGLTGIVLANSSIDVVLHDTYYVVAHFHYVLSMGAVFAIFAGFTHWF 397
+                    ************************************************************************************************ PP
+
+                    HHHHSB--HHHHHHHHHHHHHHHHHHHHHHHHHHHHTTHBSSSST-CCCCHHHCHHHHHHHHHHHHH CS
+           COX1 360 pkltgrmlserlaklhfwllfiGlllmflpmhilGllgmprraadyfletvpelqplnvlrtiggvl 426
+                    p + g  l+  ++k+hf+++f+G++l+f+p+h+lGl+gmprr+ dy     ++++++n +++ig+++
+  Paracentrotus 398 PLFCGYNLHPLWGKAHFFMMFVGVNLTFFPQHFLGLAGMPRRYSDY----PDAYTLWNTVSSIGSTI 460
+                    **********************************************....579***********975 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (517 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       775  (0.0475285); expected 326.1 (0.02)
+Passed bias filter:                      282  (0.0172942); expected 326.1 (0.02)
+Passed Vit filter:                        24  (0.00147185); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.74u 0.33s 00:00:01.07 Elapsed: 00:00:00.61
+# Mc/sec: 2424.67
+//
+Query:       Aphrocallistes_vastus  [L=522]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   2.4e-142  474.6  50.7   2.8e-142  474.4  50.7    1.0  1  COX1      Cytochrome C and Quinol oxidase polypeptide I
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  474.4  50.7  1.7e-146  2.8e-142       1     426 []      13     459 ..      13     459 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 474.4 bits;  conditional E-value: 1.7e-146
+                            HHHHHHHHHHHHHHHHHHHHHHHHHHHCTCT......HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHHHHH CS
+                   COX1   1 kigllylivalvlllvggllgllirlqlafp.....dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprlnals 82 
+                            +ig+lyli++ ++ ++g+ l  lirl+l +      d + yn+++t+H+ +mif+f++p+ i+gfgn+++pl iga+d+afprln++ 
+  Aphrocallistes_vastus  13 DIGTLYLIFGAFAAFAGTSLRTLIRLELSQTgslleDDHIYNVVVTAHALIMIFFFVMPVlIGGFGNWFLPLCIGAPDMAFPRLNNIR 100
+                            599*************************8655555577************************************************** PP
+
+                            HHHHHHHHHHHHHHHH...S.-STTTTTTTC-........SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-HHHHHHH CS
+                   COX1  83 fwlvvlglvllllsll...a.tqgwteYapls........gvdlwllglllvgvssllgainfivtilkrrapgmtvaklplfvwail 158
+                            fwl++ +l+lll+s l   + ++gwt Y+pls        gvdl++++l+l+g+ss+l +inf++ti+++r+ g+t+ ++plf+wai+
+  Aphrocallistes_vastus 101 FWLLPPALLLLLCSSLveeGvGTGWTLYPPLSriqshsrgGVDLAIFSLHLAGISSILRSINFLTTIINMRTGGITIYRTPLFIWAIF 188
+                            **********777777697689****************************************************************** PP
+
+                            HHHHHHHHHCHHHHHHHHHCHHHH..T..SSSC...E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT.SCCCTHHHHHHHH CS
+                   COX1 159 atailillalpvlalalllllldr..g.kffdp...gdplldqhlfWffgHpeVyililpalgivyyilpkfag.rplfsykllvlaf 239
+                            +ta+l++lalpvla ++++ll+dr  + +ffdp   gdp+l+qhlfWffgHpeVyil++pa+gi+++i+p + g +++f+y  +++a+
+  Aphrocallistes_vastus 189 FTAFLLVLALPVLAGGITMLLTDRnfNtTFFDPaggGDPILFQHLFWFFGHPEVYILVIPAFGIISHIIPYLRGkNQIFGYIGMIYAM 276
+                            **************************88********************************************9899************ PP
+
+                            HHHHHHCCCCGGGGCTTSSS-HHHHHHHHHHHHHTHHHHHHCCCHHHHCCTTS-CHCHHHHHHHHHHHHHHHHHHHHHHHHTSHHHHH CS
+                   COX1 240 ililflgilvwaHHlfttglpewlkalgsvfslliavPsglkvfnwlatlwrgsirfktpmlfalgfaflfiigGltGvllalpsvny 327
+                            ++i+flg++vwaHH+fttg+++ ++a++s+++++ia+P+g+k+f w++t+ +g +r++tp+l+++gf+flf+igGltG++ a +s+++
+  Aphrocallistes_vastus 277 AAIGFLGFIVWAHHMFTTGMDVDTRAYFSAATMIIAIPTGIKIFRWITTIAGGIPRLETPILWVIGFLFLFTIGGLTGIICARASIDL 364
+                            **************************************************999999******************************** PP
+
+                            HHTTBHHHHHHHHHHHTTHHHHHHHHHHHHHHHHHHSB--HHHHHHHHHHHHHHHHHHHHHHHHHHHHTTHBSSSST-CCCCHHHCHH CS
+                   COX1 328 vvhgtyfvvaHfHlvllgavvfllfaaiyywlpkltgrmlserlaklhfwllfiGlllmflpmhilGllgmprraadyfletvpelqp 415
+                            ++h+ty++vaHfH+vl +++vf++fa++y+w+ k+tg +l+e + k+hfw +fiG++l+f+p+h+lGl+g+prr+ad     ++++ +
+  Aphrocallistes_vastus 365 IIHDTYYIVAHFHYVLSMGAVFGIFAGFYFWYGKITGLTLNELYRKIHFWSTFIGVNLTFFPQHFLGLAGFPRRYADF----HDSFLT 448
+                            ****************************************************************************76....679*** PP
+
+                            HHHHHHHHHHH CS
+                   COX1 416 lnvlrtiggvl 426
+                            +n +r+ig+++
+  Aphrocallistes_vastus 449 WNTIRSIGSII 459
+                            ********986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (522 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       713  (0.0437262); expected 326.1 (0.02)
+Passed bias filter:                      294  (0.0180302); expected 326.1 (0.02)
+Passed Vit filter:                        29  (0.00177849); expected 16.3 (0.001)
+Passed Fwd filter:                         5  (0.000306636); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.67u 0.52s 00:00:01.19 Elapsed: 00:00:01.29
+# Mc/sec: 1157.64
+//
+Query:       Schistosoma  [L=510]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   2.6e-108  362.5  52.0     3e-108  362.3  52.0    1.0  1  COX1      Cytochrome C and Quinol oxidase polypeptide I
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  362.3  52.0  1.8e-112    3e-108       1     426 []      13     452 ..      13     452 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 362.3 bits;  conditional E-value: 1.8e-112
+                  HHHHHHHHHHHHHHHHHHHHHHHHHHHCTCT......HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHHHHHHHHHHHHHHH CS
+         COX1   1 kigllylivalvlllvggllgllirlqlafp.....dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprlnalsfwlvvlglvl 92 
+                  +iglly++++l+ +++g  l llirl+l  p     + + yn l+t Hg++mif+f++p+ i+gfgny++p+ +  +dl  prln+l +wl+v +++ 
+  Schistosoma  13 RIGLLYFVFGLWGGFIGLGLRLLIRLNLCDPyyklvSVDVYNYLVTNHGVAMIFFFLMPIlIGGFGNYFLPIFLCLDDLLLPRLNSLRLWLMVPSIFY 110
+                  69**************************9877777777*********************************************************999 PP
+
+                  HHHHHH.S.-STTTTTTTC-.......SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-HHHHHHHHHHHHHHHHCHHHHHHHHHCHHH CS
+         COX1  93 lllsll.a.tqgwteYapls.......gvdlwllglllvgvssllgainfivtilkrrapgmtvaklplfvwailatailillalpvlalalllllld 181
+                  + l l  + + gwt Y+pls       gvd+++++l+l+gvssl+g++nfi ti+ r +      k +++vwa+l+t++l+ll+lpvla ++++ll+d
+  Schistosoma 111 MELRLYyGcGIGWTLYPPLSiwegsgfGVDYLMFSLHLAGVSSLIGSVNFISTIFSRLRF-----KCSIIVWAYLFTSVLLLLSLPVLARGITMLLFD 203
+                  9888887789**********************************************8844.....67899**************************** PP
+
+                  H..T..SSSC...E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT.SCCCTHHHHHHHHHHHHHHCCCCGGGGCTTSSS-HHHHHHHHHHHH CS
+         COX1 182 r..g.kffdp...gdplldqhlfWffgHpeVyililpalgivyyilpkfag.rplfsykllvlafililflgilvwaHHlfttglpewlkalgsvfsl 272
+                  r  g  ff+p   gdp+l+qhlfWffgHpeVy+lilp++giv +i + + +    f+y  l+ a+++i+ lg +vw+HH+f++g +  + +++s +++
+  Schistosoma 204 RkfGtAFFEPsggGDPILFQHLFWFFGHPEVYVLILPGFGIVRHICMSLRNkDSSFGYYGLICAMASIVCLGRVVWGHHMFMVGFDSLTGVFFSSITM 301
+                  ***99***999**************************************87899******************************************** PP
+
+                  HTHHHHHHCCCHHHHCCTTS-CHC.HHHHHHHHHHHHHHHHHHHHHHHHTSHHHHHHHTTBHHHHHHHHHHHTTHHHHHHHHHHHHHHHHHHSB--HH CS
+         COX1 273 liavPsglkvfnwlatlwrgsirf.ktpmlfalgfaflfiigGltGvllalpsvnyvvhgtyfvvaHfHlvllgavvfllfaaiyywlpkltgrmlse 369
+                  +i vP+g+kvf+wl+ l +  +r+ +  +++++gf+flf++gG+tGv l++ ++++++h+t fvvaHfH+vl ++    ++ ++++w+p + g  l++
+  Schistosoma 302 IIGVPTGIKVFSWLYMLNSCGMRVlDPIVWWLVGFIFLFTVGGVTGVALSASALDILFHDTWFVVAHFHYVLSLGSYRRIVIMLVWWWPFIVGYSLNK 399
+                  *****************999***76************************************************************************* PP
+
+                  HHHHHHHHHHHHHHHHHHHHHHHHHHTTHBSSSST-CCCCHHHCHHHHHHHHHHHHH CS
+         COX1 370 rlaklhfwllfiGlllmflpmhilGllgmprraadyfletvpelqplnvlrtiggvl 426
+                   l + h+ l ++G++l+f+pmh+lG+ g+prr+  y     +e+ ++nv+r iggvl
+  Schistosoma 400 YLLQGHWLLSMVGFNLCFFPMHYLGIHGLPRRVSCY----DQEYYWVNVIRRIGGVL 452
+                  **********************************99....3699**********986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (510 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       592  (0.0363057); expected 326.1 (0.02)
+Passed bias filter:                      232  (0.0142279); expected 326.1 (0.02)
+Passed Vit filter:                        19  (0.00116522); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.73u 0.37s 00:00:01.10 Elapsed: 00:00:00.70
+# Mc/sec: 2084.32
+//
+Query:       Fasciola  [L=510]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   3.9e-112  375.1  61.4   4.8e-112  374.8  61.4    1.1  1  COX1      Cytochrome C and Quinol oxidase polypeptide I
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  374.8  61.4  2.9e-116  4.8e-112       1     426 []      11     455 ..      11     455 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 374.8 bits;  conditional E-value: 2.9e-116
+               HHHHHHHHHHHHHHHHHHHHHHHHHHHCTCT......HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHHHHHHHHHHHHHHHHHH CS
+      COX1   1 kigllylivalvlllvggllgllirlqlafp.....dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprlnalsfwlvvlglvllll 95 
+               ++gl y++++l+ +++g  l +l+rl++  p     ++e yn ++t Hg++mif+f++p+ i+gfgnyl+pll+g +dl  prlnals wl++ + v+l +
+  Fasciola  11 RVGLIYMVIGLWGGFFGLSLRVLVRLNYLDPyfnlvSPEVYNYVVTGHGIIMIFFFLMPVlIGGFGNYLLPLLLGIPDLNLPRLNALSAWLLFPACVCLPF 111
+               68999***********************9877778889*************************************************************** PP
+
+               HHH.S.-STTTTTTTC-.......SHHHHHHHHHHHHHHHHHHHHHHHHHHHH.HHHHTT.CCGS-HHHHHHHHHHHHHHHHCHHHHHHHHHCHHHH..T. CS
+      COX1  96 sll.a.tqgwteYapls.......gvdlwllglllvgvssllgainfivtilk.rrapgmtvaklplfvwailatailillalpvlalalllllldr..g. 183
+               +l+ + ++gwt+Y+pls       gvd+++++l+l+gvssllg+i fi til+ +  +g    + +++vwa+l+t++l+ll+lpvla+a+++ll+dr  g 
+  Fasciola 112 GLIgGvGVGWTFYPPLSrldysrwGVDFLMFSLHLAGVSSLLGSIKFICTILEvMLDEGT--GRHSILVWAYLFTSVLLLLSLPVLAAAITMLLFDRkfGs 210
+               **9768***********************************************8666655..678**********************************99 PP
+
+               .SSSC...E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT.SCCCTHHHHHHHHHHHHHHCCCCGGGGCTTSSS-HHHHHHHHHHHHHTHHHHHH CS
+      COX1 184 kffdp...gdplldqhlfWffgHpeVyililpalgivyyilpkfag.rplfsykllvlafililflgilvwaHHlfttglpewlkalgsvfslliavPsgl 280
+                ffdp   gdp+l+qhlfWffgHpeVy+lilp++g++++i +++++   lf+y  l+la+++i+ lg +vwaHH+f++gl++ + +++s ++++i +P+g+
+  Fasciola 211 AFFDPmggGDPVLFQHLFWFFGHPEVYVLILPGFGVISHICVTLTNnDSLFGYYGLILAMAAIVCLGSVVWAHHMFMVGLDVHTAVFFSSVTMVIGIPTGI 311
+               *********************************************98****************************************************** PP
+
+               CCCHHHHCC.TTS-CHC.HHHHHHHHHHHHHHHHHHHHHHHHTSHHHHHHHTTBHHHHHHHHHHHTTHHHHHHHHHHHHHHHHHHSB--HHHHHHHHHHHH CS
+      COX1 281 kvfnwlatl.wrgsirf.ktpmlfalgfaflfiigGltGvllalpsvnyvvhgtyfvvaHfHlvllgavvfllfaaiyywlpkltgrmlserlaklhfwll 379
+               kvf+wl+ l  ++s+r+ + ++++++gf++lf+igG+tG++l++  ++ ++h+t fvvaHfH+vl ++    ++  +++w+p +tg  l+  + + h+++ 
+  Fasciola 312 KVFSWLIMLgGGSSVRIwDPVVWWIIGFIVLFTIGGVTGIMLSASLLDTLLHDTWFVVAHFHYVLSLGSYRSVVISFIWWWPVVTGYSLNLFMLQGHWVVS 412
+               *********556678866*********************************************************************************** PP
+
+               HHHHHHHHHHHHHHHHTTHBSSSST-CCCCHHHCHHHHHHHHHHHHH CS
+      COX1 380 fiGlllmflpmhilGllgmprraadyfletvpelqplnvlrtiggvl 426
+               +iG++++f+pmh+lG++g+prr+  y     p + +l v++++g+++
+  Fasciola 413 MIGFNMCFFPMHYLGMAGLPRRVCVY----DPDFYWLSVVSSLGALV 455
+               ************************99....47999*******99975 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (510 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       729  (0.0447075); expected 326.1 (0.02)
+Passed bias filter:                      234  (0.0143505); expected 326.1 (0.02)
+Passed Vit filter:                        21  (0.00128787); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.70u 0.45s 00:00:01.14 Elapsed: 00:00:00.78
+# Mc/sec: 1870.54
+//
+Query:       Trichobilharzia_regenti  [L=511]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   1.5e-110  369.9  58.2   1.8e-110  369.6  58.2    1.1  1  COX1      Cytochrome C and Quinol oxidase polypeptide I
+  ------ inclusion threshold ------
+       0.65    9.2   4.0        3.4    6.9   1.5    2.3  2  TMEM126   Transmembrane protein 126
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  369.6  58.2  2.2e-114  1.8e-110       1     426 []      16     455 ..      16     455 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 369.6 bits;  conditional E-value: 2.2e-114
+                              HHHHHHHHHHHHHHHHHHHHHHHHHHHCTCT......HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHHH CS
+                     COX1   1 kigllylivalvlllvggllgllirlqlafp.....dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprlna 80 
+                              +ig+ y++++l+ +++g  l+llirl++  p      +e yn l+t Hg++mif+f++p+ i+gfgnyl+p l+g +dla prln+
+  Trichobilharzia_regenti  16 RIGVIYFLLGLWGGFIGLGLSLLIRLKFCEPyynlvPSEIYNYLITNHGIAMIFFFLMPVlIGGFGNYLLPFLLGLDDLALPRLNS 101
+                              699*************************9877666556************************************************ PP
+
+                              HHHHHHHHHHHHHHHHHH.S.-STTTTTTTC-.......SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-HHHHHH CS
+                     COX1  81 lsfwlvvlglvllllsll.a.tqgwteYapls.......gvdlwllglllvgvssllgainfivtilkrrapgmtvaklplfvwai 157
+                              l +wl+v +++ + lsl+ + ++gwt+Y+pls       gvd+++++l+l+gvssllg++ fi+til   +     ++++++vw++
+  Trichobilharzia_regenti 102 LRVWLMVPSMFYMELSLVyGaGVGWTFYPPLSiqssmgvGVDYLMFSLHLAGVSSLLGSVKFITTILLNLS-----FRVSVIVWSY 182
+                              ************999999866**********************************************9874.....477799**** PP
+
+                              HHHHHHHHHHCHHHHHHHHHCHHHH..T..SSSC...E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT.SCCCTHHHHH CS
+                     COX1 158 latailillalpvlalalllllldr..g.kffdp...gdplldqhlfWffgHpeVyililpalgivyyilpkfag.rplfsykllv 236
+                              l+t+il+ll+lpvla+++++ll+dr  g  ff+p   gdp+l+qhlfWffgHpeVy+lilp++g+v++i +++++    f+y  lv
+  Trichobilharzia_regenti 183 LFTSILLLLSLPVLAAGITMLLFDRkfGtAFFEPcggGDPILFQHLFWFFGHPEVYVLILPGFGVVSHICMNLSNkDSSFGYYGLV 268
+                              ***************************99*********************************************9899******** PP
+
+                              HHHHHHHHHCCCCGGGGCTTSSS-HHHHHHHHHHHHHTHHHHHHCCCHHHHCCTTS-CH.CHHHHHHHHHHHHHHHHHHHHHHHHT CS
+                     COX1 237 lafililflgilvwaHHlfttglpewlkalgsvfslliavPsglkvfnwlatlwrgsir.fktpmlfalgfaflfiigGltGvlla 321
+                               a+ +i+ lg +vwaHH+f++gl++ + +++s ++++i +P+g+kvf+wl+ l  + +r ++  +l++lgf+flf++gG+tG++l+
+  Trichobilharzia_regenti 269 CAMGSIVCLGSVVWAHHMFMVGLDVKTAVFFSSVTMVIGIPTGIKVFSWLYMLGTSYLRgVEPIVLWVLGFIFLFTVGGVTGIVLS 354
+                              *****************************************************99999977************************* PP
+
+                              SHHHHHHHTTBHHHHHHHHHHHTTHHHHHHHHHHHHHHHHHHSB--HHHHHHHHHHHHHHHHHHHHHHHHHHHHTTHBSSSST-CC CS
+                     COX1 322 lpsvnyvvhgtyfvvaHfHlvllgavvfllfaaiyywlpkltgrmlserlaklhfwllfiGlllmflpmhilGllgmprraadyfl 407
+                              +  ++ ++h+t fv+aHfH+vl ++   +++  +++w+p + g  l++ l   h++l ++G++l+f+pmh+lG+ g+prr+  y  
+  Trichobilharzia_regenti 355 ASVLDSLFHDTWFVIAHFHYVLSLGSYSTVVISLIWWWPVIIGYSLNKYLLYGHWFLSMVGFNLCFFPMHYLGMHGLPRRVCCY-- 438
+                              **********************************************************************************99.. PP
+
+                              CCHHHCHHHHHHHHHHHHH CS
+                     COX1 408 etvpelqplnvlrtiggvl 426
+                                 pe+ ++nv++++ggvl
+  Trichobilharzia_regenti 439 --DPEFYWVNVVCSVGGVL 455
+                              ..589************86 PP
+
+>> TMEM126  Transmembrane protein 126
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    6.9   1.5   0.00041       3.4      28      72 ..     157     201 ..     148     207 .. 0.88
+   2 ?    2.2   0.0     0.011        94      11      63 ..     252     306 ..     245     316 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 6.9 bits;  conditional E-value: 0.00041
+                  TMEM126  28 ylgtnaalsgliaNslfRrilkVkqaalksslplavlPflstvva 72 
+                              +lg+   ++ ++ N  fR ++ V    ++s l l  lP+l++ ++
+  Trichobilharzia_regenti 157 LLGSVKFITTILLNLSFRVSVIVWSYLFTSILLLLSLPVLAAGIT 201
+                              6788888999******************************98766 PP
+
+  == domain 2  score: 2.2 bits;  conditional E-value: 0.011
+                  TMEM126  11 leqlpkkdrklfeygsly.lgtnaalsg.liaNslfRrilkVkqaalksslplav 63 
+                                +l++kd ++  yg ++ +g+   l   + a  +f   l Vk a + ss+ +++
+  Trichobilharzia_regenti 252 CMNLSNKDSSFGYYGLVCaMGSIVCLGSvVWAHHMFMVGLDVKTAVFFSSVTMVI 306
+                              5678899999999998762555555544255899*****************9975 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (511 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       717  (0.0439715); expected 326.1 (0.02)
+Passed bias filter:                      250  (0.0153318); expected 326.1 (0.02)
+Passed Vit filter:                        28  (0.00171716); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.66u 0.42s 00:00:01.08 Elapsed: 00:00:00.59
+# Mc/sec: 2477.77
+//
+Query:       Versteria_mustelae  [L=539]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   9.1e-106  354.1  55.5   1.1e-105  353.9  55.5    1.0  1  COX1      Cytochrome C and Quinol oxidase polypeptide I
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  353.9  55.5  6.6e-110  1.1e-105       1     426 []      17     461 ..      17     461 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 353.9 bits;  conditional E-value: 6.6e-110
+                         HHHHHHHHHHHHHHHHHHHHHHHHHHHCTCT......HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHHHHHHHH CS
+                COX1   1 kigllylivalvlllvggllgllirlqlafp.....dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprlnalsfwl 85 
+                         +ig+ y++++++ ++vg  + llir+++  p      l+ y  l+t Hg++mif+f++p+ i+gfgnyl+pl+ g +dl  prlnals wl
+  Versteria_mustelae  17 RIGVIYILLGVWSGFVGLSFRLLIRIKFLEPyynviPLDCYKFLITNHGIIMIFFFLMPIlIGGFGNYLLPLIGGLSDLNLPRLNALSAWL 107
+                         699*************************9887766667***************************************************** PP
+
+                         HHHHHHHHHHHHH.S.-STTTTTTTC-........SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-HHHHHHHHHHHHHHH CS
+                COX1  86 vvlglvllllsll.a.tqgwteYapls........gvdlwllglllvgvssllgainfivtilkrrapgmtvaklplfvwailatailill 166
+                         ++ ++++ll+s++ + + gwt+Y+pls        gvd+++++l+l+gvs ++g+i fi t++   + ++ ++++++++w++l+t+il+l 
+  Versteria_mustelae 108 LIPSIIFLLISMClGaGIGWTFYPPLSsslfsrrhGVDFLMFSLHLAGVSRIFGSIKFICTLYSIFSTKI-FSRTSIVLWSYLFTSILLLA 197
+                         ************9866************************************************777777.899***************** PP
+
+                         HCHHHHHHHHHCHHHH..T..SSSC...E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT..SCCCTHHHHHHHHHHHHHHCCCC CS
+                COX1 167 alpvlalalllllldr..g.kffdp...gdplldqhlfWffgHpeVyililpalgivyyilpkfag..rplfsykllvlafililflgilv 249
+                         +lpvla+a+++ll+dr     ffdp   gdp+l+qh+fWffgHpeVy+lilp++gi+ +i   + +     f+   l++a+++i+ lg  v
+  Versteria_mustelae 198 TLPVLAAAITMLLFDRkfSsAFFDPlggGDPVLFQHMFWFFGHPEVYVLILPGFGIIGHICLSI-RmcSDAFGFYGLLFAMFSIVCLGSRV 287
+                         *****************9779****************************************999.559*********************** PP
+
+                         GGGGCTTSSS-HHHHHHHHHHHHHTHHHHHHCCCHHHHCCTTS-CHC.HHHHHHHHHHHHHHHHHHHHHHHHTSHHHHHHHTTBHHHHHHH CS
+                COX1 250 waHHlfttglpewlkalgsvfslliavPsglkvfnwlatlwrgsirf.ktpmlfalgfaflfiigGltGvllalpsvnyvvhgtyfvvaHf 339
+                         w+HH+ft+gl++ + +++s ++++i vP+g+kvf wl+ l ++s++  + ++++++ f+flf++gG+tG++l++  ++ v+h+t fvvaHf
+  Versteria_mustelae 288 WGHHMFTVGLDVKTAVFFSSVTMIIGVPTGIKVFTWLYMLLNSSVNKrDPVLWWIVSFIFLFTFGGVTGIVLSACVLDNVLHDTWFVVAHF 378
+                         **********************************************74777888889999******************************* PP
+
+                         HHHHTTHHHHHHHHHHHHHHHHHHSB--HHHHHHHHHHHHHHHHHHHHHHHHHHHHTTHBSSSST-CCCCHHHCHHHHHHHHHHHHH CS
+                COX1 340 HlvllgavvfllfaaiyywlpkltgrmlserlaklhfwllfiGlllmflpmhilGllgmprraadyfletvpelqplnvlrtiggvl 426
+                         H+v+ ++  + ++ ++++w+p +tg  l++ l + + ++ +iG++l+f+pmh+ Gl g+prr+  y+     +++++n+++tig+++
+  Versteria_mustelae 379 HYVMSLGSYVSIIIMFIWWWPLMTGLSLNKCLLQCQCIMSNIGFNLCFFPMHYFGLCGLPRRVCIYE----CTYNWVNMISTIGSFI 461
+                         ****************************************************************993....489**********986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (539 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       874  (0.0535999); expected 326.1 (0.02)
+Passed bias filter:                      271  (0.0166196); expected 326.1 (0.02)
+Passed Vit filter:                        28  (0.00171716); expected 16.3 (0.001)
+Passed Fwd filter:                         6  (0.000367963); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.79u 0.38s 00:00:01.17 Elapsed: 00:00:00.65
+# Mc/sec: 2372.29
+//
+Query:       Euseius_nicholsi  [L=512]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   3.9e-129  431.1  56.2   4.6e-129  430.9  56.2    1.0  1  COX1      Cytochrome C and Quinol oxidase polypeptide I
+  ------ inclusion threshold ------
+       0.11   12.1   4.2       0.35   10.5   4.2    1.9  1  DUF3789   Protein of unknown function (DUF3789)
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  430.9  56.2  5.6e-133  4.6e-129       1     425 [.      13     458 ..      13     459 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 430.9 bits;  conditional E-value: 5.6e-133
+                       HHHHHHHHHHHHHHHHHHHHHHHHHHHCTCT......HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHHHHHHHHHH CS
+              COX1   1 kigllylivalvlllvggllgllirlqlafp.....dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprlnalsfwlvv 87 
+                       +ig+ly+i++l++ ++g+ l+ lirl+la+p     + + yn+++tlH+ + if++++p+ i+gfgn+lvpl++ga+d+afpr+n++ fwl++
+  Euseius_nicholsi  13 DIGTLYFIFSLWAAILGTSLSFLIRLELAQPgslliEDQIYNVIVTLHAFVIIFYMVMPAiIGGFGNWLVPLIVGAPDIAFPRINNIRFWLLP 105
+                       599**************************997666666******************************************************* PP
+
+                       HHHHH.HHHHHH..S.-STTTTTTTC-........SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-HHHHHHHHHHHHHHHHC CS
+              COX1  88 lglvl.lllsll..a.tqgwteYapls........gvdlwllglllvgvssllgainfivtilkrrapgmtvaklplfvwailatailillal 168
+                        +l l l++s++  + ++gwt Y+pls         vdl+++ l+l+g+ss++gainfi+til++r   ++++++plfvw++l+ta+l+ll+l
+  Euseius_nicholsi 106 PSLRLlLIFSFVegGaGTGWTVYPPLSrifyhrtiSVDLVIFRLHLAGISSIIGAINFIRTILNMRPVYIKLEQMPLFVWSVLITAVLLLLSL 198
+                       ***99788888897569**************************************************************************** PP
+
+                       HHHHHHHHHCHHHH..T..SSSC...E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT.SCCCTHHHHHHHHHHHHHHCCCCGGGGC CS
+              COX1 169 pvlalalllllldr..g.kffdp...gdplldqhlfWffgHpeVyililpalgivyyilpkfag.rplfsykllvlafililflgilvwaHHl 254
+                       pvla a+++ll+dr  + +ffdp   gdp+l+qhlfWffgHpeVyililp++gi+++ +  + g  + f+   +++a+ +i+flg++vwaHH+
+  Euseius_nicholsi 199 PVLAGAITMLLTDRnfNtSFFDPsggGDPVLYQHLFWFFGHPEVYILILPGFGIISHTILSQRGkIQTFGALGIIYAISAIGFLGFIVWAHHM 291
+                       ***************9889**************************************9999988789************************** PP
+
+                       TTSSS-HHHHHHHHHHHHHTHHHHHHCCCHHHHCCTTS-CHCHHHHHHHHHHHHHHHHHHHHHHHHTSHHHHHHHTTBHHHHHHHHHHHTTHH CS
+              COX1 255 fttglpewlkalgsvfslliavPsglkvfnwlatlwrgsirfktpmlfalgfaflfiigGltGvllalpsvnyvvhgtyfvvaHfHlvllgav 347
+                       ft+g+++  +a++++++++ia+P+g+k+f+w+ t+ ++ ++++t++l+ +gf+flf igG+tGv+la+  v++v+h+ty+vvaHfH+vl +++
+  Euseius_nicholsi 292 FTVGIDVDSRAYFTAATIIIAIPTGIKIFSWVSTVFGSILKWNTVILWNIGFIFLFSIGGFTGVILANSRVDIVLHDTYYVVAHFHYVLSMGA 384
+                       ***********************************998888**************************************************** PP
+
+                       HHHHHHHHHHHHHHHHSB--HHHHHHHHHHHHHHHHHHHHHHHHHHHHTTHBSSSST-CCCCHHHCHHHHHHHHHHHH CS
+              COX1 348 vfllfaaiyywlpkltgrmlserlaklhfwllfiGlllmflpmhilGllgmprraadyfletvpelqplnvlrtiggv 425
+                       vf++f +++yw+p ++   ++ +  k hfw++f+G++++f+p+h+lGl g+prr+ dy     + + ++n+++++g +
+  Euseius_nicholsi 385 VFAIFSGLFYWWPIFYNIYYRSTFSKRHFWIIFLGVNFTFFPQHFLGLNGIPRRYSDY----IDYYYFWNFFSSFGRM 458
+                       *********************************************************9....4578999999999976 PP
+
+>> DUF3789  Protein of unknown function (DUF3789)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.5   4.2   4.2e-05      0.35       2      18 ..     341     357 ..     340     357 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 10.5 bits;  conditional E-value: 4.2e-05
+           DUF3789   2 vkdfllvsvGsgiGVvl 18 
+                       +++++l+s G+++GV+l
+  Euseius_nicholsi 341 IGFIFLFSIGGFTGVIL 357
+                       79*************97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (512 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       782  (0.0479578); expected 326.1 (0.02)
+Passed bias filter:                      253  (0.0155158); expected 326.1 (0.02)
+Passed Vit filter:                        27  (0.00165583); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.66u 0.49s 00:00:01.14 Elapsed: 00:00:00.83
+# Mc/sec: 1764.75
+//
+Query:       Patiria  [L=517]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   5.9e-142  473.3  55.6   7.2e-142  473.1  55.6    1.1  1  COX1      Cytochrome C and Quinol oxidase polypeptide I
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  473.1  55.6  4.4e-146  7.2e-142       1     425 [.      14     459 ..      14     460 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 473.1 bits;  conditional E-value: 4.4e-146
+              HHHHHHHHHHHHHHHHHHHHHHHHHHHCTCT......HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHHHHHHHHHHHHHHHHHHH CS
+     COX1   1 kigllylivalvlllvggllgllirlqlafp.....dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprlnalsfwlvvlglvlllls 96 
+              +ig+lyli++ +++++g++++++ir++la+p     d + y +++t+H+ +mif++++p+ i+gfgn+l+pl+iga+d+afpr+n++ fwl++ +++lll+s
+  Patiria  14 DIGTLYLIFGAWAGMAGTAMSVIIRTELAQPgsllqDDQIYKVIVTAHALVMIFFMVMPImIGGFGNWLIPLMIGAPDMAFPRMNNMRFWLIPPSFLLLLAS 115
+              599**************************998777777************************************************************9999 PP
+
+              HH...S.-STTTTTTTC-........SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-HHHHHHHHHHHHHHHHCHHHHHHHHHCHHHH..T. CS
+     COX1  97 ll...a.tqgwteYapls........gvdlwllglllvgvssllgainfivtilkrrapgmtvaklplfvwailatailillalpvlalalllllldr..g. 183
+                   + ++gwt Y+pls         vdl++++l+l+g+ss+l++i fi+t++++r+pg+++ +lplfvw++++ta+l+ll+lpvla a+++ll+dr  + 
+  Patiria 116 AGverGaGTGWTIYPPLSrglahaggSVDLAIFSLHLAGASSILASIKFITTVINMRTPGISFDRLPLFVWSVFVTAFLLLLSLPVLAGAITMLLTDRkvNt 217
+              97787468*******************************************************************************************988 PP
+
+              .SSSC...E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT.SCCCTHHHHHHHHHHHHHHCCCCGGGGCTTSSS-HHHHHHHHHHHHHTHHHHHHC CS
+     COX1 184 kffdp...gdplldqhlfWffgHpeVyililpalgivyyilpkfag.rplfsykllvlafililflgilvwaHHlfttglpewlkalgsvfslliavPsglk 281
+              +ffdp   gdp+l+qhlfWffgHpeVyililp++g+++++++ +ag r+ f+y  +v+a+++i++lg+lvwaHH+ft+g+++ ++a++++++++iavP+g+k
+  Patiria 218 TFFDPaggGDPILFQHLFWFFGHPEVYILILPGFGMISHVIAHYAGkREPFGYLGMVYAIVSIGILGFLVWAHHMFTVGMDVDTRAYFTAATMIIAVPTGIK 319
+              *********************************************99******************************************************* PP
+
+              CCHHHHCCTTS-CHCHHHHHHHHHHHHHHHHHHHHHHHHTSHHHHHHHTTBHHHHHHHHHHHTTHHHHHHHHHHHHHHHHHHSB--HHHHHHHHHHHHHHHH CS
+     COX1 282 vfnwlatlwrgsirfktpmlfalgfaflfiigGltGvllalpsvnyvvhgtyfvvaHfHlvllgavvfllfaaiyywlpkltgrmlserlaklhfwllfiGl 383
+              vf+w+atl + ++r++tp+l+algf+flf+igGltGv+la  s+++++h+ty+vvaHfH+vl +++vf++fa++ +w+p + g  l+  ++++hf l+fiG+
+  Patiria 320 VFSWMATLQGRNLRWDTPLLWALGFVFLFTIGGLTGVILAKSSIDVILHDTYYVVAHFHYVLSMGAVFAIFAGFTHWFPLFSGVGLHPLWGNIHFTLMFIGV 421
+              ****************************************************************************************************** PP
+
+              HHHHHHHHHHHHTTHBSSSST-CCCCHHHCHHHHHHHHHHHH CS
+     COX1 384 llmflpmhilGllgmprraadyfletvpelqplnvlrtiggv 425
+              +l+f+p+h+lGl+gmprr+ dy     ++++++n +++ig +
+  Patiria 422 NLTFFPQHFLGLAGMPRRYSDY----PDAYTLWNTVSSIGRT 459
+              **********************....569**********976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (517 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       742  (0.0455047); expected 326.1 (0.02)
+Passed bias filter:                      288  (0.0176622); expected 326.1 (0.02)
+Passed Vit filter:                        24  (0.00147185); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.77u 0.35s 00:00:01.12 Elapsed: 00:00:00.62
+# Mc/sec: 2385.56
+//
+Query:       Daphnia  [L=511]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   1.7e-133  445.5  51.3   2.2e-133  445.1  51.3    1.1  1  COX1      Cytochrome C and Quinol oxidase polypeptide I
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  445.1  51.3  1.3e-137  2.2e-133       1     426 []      13     459 ..      13     459 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 445.1 bits;  conditional E-value: 1.3e-137
+              HHHHHHHHHHHHHHHHHHHHHHHHHHHCTCT......HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHHHHHHHHHHHHHHHHHHH CS
+     COX1   1 kigllylivalvlllvggllgllirlqlafp.....dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprlnalsfwlvvlglvlllls 96 
+              +ig+ly+i++++ ++vg++l llir++l +      d + yn+++t+H+ + if++++p+ i+gfgn+lvpl++ga+d+afprln+l fw+++ +l+lll++
+  Daphnia  13 DIGTLYFIFGIWSGIVGTALRLLIRAELGQSgsligDDQIYNVIVTAHAFVIIFFIVMPIiIGGFGNWLVPLILGAPDMAFPRLNNLRFWFLPPALTLLLVG 114
+              599*************************8655556677************************************************************7777 PP
+
+              HH...S.-STTTTTTTC-........SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-HHHHHHHHHHHHHHHHCHHHHHHHHHCHHHH..T. CS
+     COX1  97 ll...a.tqgwteYapls........gvdlwllglllvgvssllgainfivtilkrrapgmtvaklplfvwailatailillalpvlalalllllldr..g. 183
+               +   + ++gwt Y+pls         vdl +++l+l+g+ss+lga+nfi+ti++ r+ g+++ ++plfvwa+ +ta+l+ll+lpvla a+++ll+dr  + 
+  Daphnia 115 GAvesGaGTGWTVYPPLSagiahagaSVDLRIFSLHLAGISSILGAVNFITTIINIRSAGISLDRIPLFVWAVGITALLLLLSLPVLAGAITMLLTDRnlNt 216
+              76697569*******************************************************************************************988 PP
+
+              .SSSC...E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT.SCCCTHHHHHHHHHHHHHHCCCCGGGGCTTSSS-HHHHHHHHHHHHHTHHHHHHC CS
+     COX1 184 kffdp...gdplldqhlfWffgHpeVyililpalgivyyilpkfag.rplfsykllvlafililflgilvwaHHlfttglpewlkalgsvfslliavPsglk 281
+              +ffdp   gdp+l+qhlfWffgHpeVyililp++gi+++i++   g ++ f++  +++a+++i++lg++vwaHH ft+g+++ ++a++++++++iavP+g+k
+  Daphnia 217 SFFDPaggGDPILYQHLFWFFGHPEVYILILPGFGIISHIISHERGkKEAFGTLGIIYAILAIGVLGFVVWAHHIFTVGMDVDTRAYFTAATMIIAVPTGIK 318
+              9*******************************************989******************************************************* PP
+
+              CCHHHHCCTTS-CHCHHHHHHHHHHHHHHHHHHHHHHHHTSHHHHHHHTTBHHHHHHHHHHHTTHHHHHHHHHHHHHHHHHHSB--HHHHHHHHHHHHHHHH CS
+     COX1 282 vfnwlatlwrgsirfktpmlfalgfaflfiigGltGvllalpsvnyvvhgtyfvvaHfHlvllgavvfllfaaiyywlpkltgrmlserlaklhfwllfiGl 383
+              +f wl tl++ ++ f+  +l+a gf+flf++gGltGv+la+  +++++h+ty+vvaHfH+vl  ++vf++fa++ +w+p +tg +l+ r+ k+hf+++f+G+
+  Daphnia 319 IFRWLGTLHGTQLVFTPSLLWAAGFVFLFTVGGLTGVVLANSRIDIILHDTYYVVAHFHYVLSIGAVFAIFAGVAHWFPLFTGLTLQARWLKIHFFTIFVGV 420
+              ****************************************************************************************************** PP
+
+              HHHHHHHHHHHHTTHBSSSST-CCCCHHHCHHHHHHHHHHHHH CS
+     COX1 384 llmflpmhilGllgmprraadyfletvpelqplnvlrtiggvl 426
+              +l+f+p+h+lGl+g+prr+ dy     +++ ++nv++++g+v+
+  Daphnia 421 NLTFFPQHFLGLAGIPRRYSDY----PDAYMTWNVISSVGSVI 459
+              **********************....579***********986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (511 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       743  (0.045566); expected 326.1 (0.02)
+Passed bias filter:                      253  (0.0155158); expected 326.1 (0.02)
+Passed Vit filter:                        21  (0.00128787); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.63u 0.39s 00:00:01.02 Elapsed: 00:00:00.59
+# Mc/sec: 2477.77
+//
+Query:       Haplorchis_taichui  [L=513]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   8.6e-112  374.0  53.7   1.1e-111  373.7  53.7    1.1  1  COX1      Cytochrome C and Quinol oxidase polypeptide I
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  373.7  53.7  6.5e-116  1.1e-111       1     425 [.      12     454 ..      12     455 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 373.7 bits;  conditional E-value: 6.5e-116
+                         HHHHHHHHHHHHHHHHHHHHHHHHHHHCTCT......HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHHHHHHHH CS
+                COX1   1 kigllylivalvlllvggllgllirlqlafp.....dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprlnalsfwl 85 
+                         +igl y+iv+++ +++g  l  lir+++  p     ++e yn ++t Hg++mif+f++p+ i+gfg yl+pll+g +dl  prlnal  wl
+  Haplorchis_taichui  12 RIGLIYMIVGVWGGFLGLSLRFLIRVNYLDPyynvvSPEVYNYVITRHGIAMIFFFLMPVlIGGFGKYLLPLLLGLPDLNLPRLNALRAWL 102
+                         699*************************9877788899***************************************************** PP
+
+                         HHHHHHHHHHHHH.S.-STTTTTTTC-.......SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-HHHHHHHHHHHHHHHH CS
+                COX1  86 vvlglvllllsll.a.tqgwteYapls.......gvdlwllglllvgvssllgainfivtilkrrapgmtvaklplfvwailataililla 167
+                         ++ ++v++ ls++ + ++gwt+Y+pls       gvd+++++l+l+g+ssl+g++nfi ti++  ++  t ++ +++vwa+l+t+il+ll+
+  Haplorchis_taichui 103 MIPSAVCFGLSMFgGsGVGWTFYPPLSsrdyrgwGVDFLMFSLHLAGLSSLFGSLNFICTIMRAMSN-DTRERYSIVVWAYLFTSILLLLS 192
+                         *************8579*********************************************95433.3468999**************** PP
+
+                         CHHHHHHHHHCHHHH..T..SSSC...E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT.SCCCTHHHHHHHHHHHHHHCCCCGG CS
+                COX1 168 lpvlalalllllldr..g.kffdp...gdplldqhlfWffgHpeVyililpalgivyyilpkfag.rplfsykllvlafililflgilvwa 251
+                         lpvla+++++ll+dr    +ffdp   gdp+l+qh+fWffgHpeVy+lilp++giv +i  ++++   lf+y  lvla+++i+ lg +vwa
+  Haplorchis_taichui 193 LPVLAAGITMLLFDRkfSsSFFDPlggGDPVLFQHMFWFFGHPEVYVLILPGFGIVRHICRTLTNkDSLFGYGGLVLAMFSIVCLGSVVWA 283
+                         ****************97799*******************************************9899*********************** PP
+
+                         GGCTTSSS-HHHHHHHHHHHHHTHHHHHHCCCHHHHCCTTS-CHC.HHHHHHHHHHHHHHHHHHHHHHHHTSHHHHHHHTTBHHHHHHHHH CS
+                COX1 252 HHlfttglpewlkalgsvfslliavPsglkvfnwlatlwrgsirf.ktpmlfalgfaflfiigGltGvllalpsvnyvvhgtyfvvaHfHl 341
+                         HH+f++gl++ + +++s ++++i vP+g+kvf+wl+ l +++ rf +  m+++lgf++lf+igG+tG++l++ +++ ++h+t fv+aHfH+
+  Haplorchis_taichui 284 HHMFMVGLDVKTAVFFSSVTMVIGVPTGIKVFSWLYMLAGSRGRFwDPIMWWILGFIVLFTIGGVTGIVLSSSIMDTLLHDTWFVIAHFHY 374
+                         ********************************************88********************************************* PP
+
+                         HHTTHHHHHHHHHHHHHHHHHHSB--HHHHHHHHHHHHHHHHHHHHHHHHHHHHTTHBSSSST-CCCCHHHCHHHHHHHHHHHH CS
+                COX1 342 vllgavvfllfaaiyywlpkltgrmlserlaklhfwllfiGlllmflpmhilGllgmprraadyfletvpelqplnvlrtiggv 425
+                         vl ++    ++  +++w+p + g  l++ l ++h+ + ++G++l+f+pmh+lG++g+prr+  y     p +q+l+ ++ +gg+
+  Haplorchis_taichui 375 VLSLGSYRSVVISMIWWWPVIVGYRLKKYLLMAHWGVSMVGFNLCFFPMHFLGFQGLPRRVCVY----EPCFQWLKTMARLGGL 454
+                         **************************************************************99....3678888888888886 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (513 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       714  (0.0437876); expected 326.1 (0.02)
+Passed bias filter:                      268  (0.0164357); expected 326.1 (0.02)
+Passed Vit filter:                        20  (0.00122654); expected 16.3 (0.001)
+Passed Fwd filter:                         1  (6.13271e-05); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.65u 0.51s 00:00:01.16 Elapsed: 00:00:01.11
+# Mc/sec: 1322.17
+//
+Query:       Lumbricus  [L=512]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+     1e-130  436.3  48.0   1.2e-130  436.0  48.0    1.1  1  COX1      Cytochrome C and Quinol oxidase polypeptide I
+  ------ inclusion threshold ------
+      0.023   14.5   0.2      0.046   13.6   0.2    1.5  1  ENOD40    ENOD40 protein
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  436.0  48.0  1.5e-134  1.2e-130       1     425 [.      11     456 ..      11     457 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 436.0 bits;  conditional E-value: 1.5e-134
+                HHHHHHHHHHHHHHHHHHHHHHHHHHHCTCT......HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHHHHHHHHHHHHHHHHH CS
+       COX1   1 kigllylivalvlllvggllgllirlqlafp.....dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprlnalsfwlvvlglvlll 94 
+                +ig+ly+i+++++++vg  + llir++l +p     + + yn+++t+H  + if++++p+ i+gfgn+l+pl++ga+d+afprln++ fwl++ +l+ll+
+  Lumbricus  11 DIGTLYFILGVWAGMVGAGIRLLIRIELRQPgaflgSDQLYNTIVTAHXFVIIFFLVIPVfIGGFGNWLLPLILGAPDIAFPRLNNIRFWLLPPSLILLV 110
+                599*************************9986666666**********************9*************************************99 PP
+
+                HHHH...S.-STTTTTTTC-........SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-HHHHHHHHHHHHHHHHCHHHHHHHHHCHHHH CS
+       COX1  95 lsll...a.tqgwteYapls........gvdlwllglllvgvssllgainfivtilkrrapgmtvaklplfvwailatailillalpvlalalllllldr 182
+                +s +   + ++gwt Y+pl+         vdl++++l+l+g+ss+lgainfi+t+++ r +g+ ++++plfvwa+l+t++l+ll+lpvla a+++ll+dr
+  Lumbricus 111 SSAAvekGaGTGWTVYPPLArnlahagpSVDLAIFSLHLAGASSILGAINFITTVINIRWSGLRLERIPLFVWAVLITVVLLLLSLPVLAGAITILLTDR 210
+                9998897469****************************************************************************************** PP
+
+                ..T..SSSC...E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT.SCCCTHHHHHHHHHHHHHHCCCCGGGGCTTSSS-HHHHHHHHHHHHHTH CS
+       COX1 183 ..g.kffdp...gdplldqhlfWffgHpeVyililpalgivyyilpkfag.rplfsykllvlafililflgilvwaHHlfttglpewlkalgsvfsllia 275
+                  + +ffdp   gdp+l+qhlfWffgHpeVyililp++g++++i+  ++   + f+   +++a++ i++lg++vwaHH ft+gl++ ++a++++++++ia
+  Lumbricus 211 nlNtSFFDPaggGDPILYQHLFWFFGHPEVYILILPGFGAISHIVRHYTAkLEPFGALGIIYAILGIAVLGFIVWAHHIFTVGLDVDTRAYFTAVTIIIA 310
+                *9889*******************************************976899********************************************** PP
+
+                HHHHHCCCHHHHCCTTS-CHCHHHHHHHHHHHHHHHHHHHHHHHHTSHHHHHHHTTBHHHHHHHHHHHTTHHHHHHHHHHHHHHHHHHSB--HHHHHHHH CS
+       COX1 276 vPsglkvfnwlatlwrgsirfktpmlfalgfaflfiigGltGvllalpsvnyvvhgtyfvvaHfHlvllgavvfllfaaiyywlpkltgrmlserlaklh 375
+                vP+g+kvf+wlat+++++i+++tp+l+algf+flf+ gGltG++l++ s+++++h+ty+vvaHfH+vl +++vf++faa+ +w+p ltg +l++r+a+++
+  Lumbricus 311 VPTGIKVFSWLATIHGSKIKYETPVLWALGFIFLFTTGGLTGIILSNSSLDIILHDTYYVVAHFHYVLRMGAVFAIFAAFTHWFPLLTGLTLHHRWANAQ 410
+                **************************************************************************************************** PP
+
+                HHHHHHHHHHHHHHHHHHHHTTHBSSSST-CCCCHHHCHHHHHHHHHHHH CS
+       COX1 376 fwllfiGlllmflpmhilGllgmprraadyfletvpelqplnvlrtiggv 425
+                f+l+f+G++ +f+p+h+lGl g+prr+ dy     +++  +nv++++g++
+  Lumbricus 411 FFLIFLGVNTTFFPQHFLGLSGIPRRYSDY----PDAFIKWNVVSSFGSL 456
+                ******************************....579**********987 PP
+
+>> ENOD40  ENOD40 protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   13.6   0.2   5.7e-06     0.046       3      12 .]     318     327 ..     317     327 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 13.6 bits;  conditional E-value: 5.7e-06
+     ENOD40   3 LCWqkSIHGS 12 
+                ++W+ +IHGS
+  Lumbricus 318 FSWLATIHGS 327
+                8********9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (512 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       779  (0.0477738); expected 326.1 (0.02)
+Passed bias filter:                      279  (0.0171103); expected 326.1 (0.02)
+Passed Vit filter:                        31  (0.00190114); expected 16.3 (0.001)
+Passed Fwd filter:                         5  (0.000306636); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.72u 0.38s 00:00:01.10 Elapsed: 00:00:00.56
+# Mc/sec: 2615.62
+//
+Query:       Halocynthia  [L=517]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   1.2e-108  363.6  53.6   1.5e-108  363.3  53.6    1.0  1  COX1      Cytochrome C and Quinol oxidase polypeptide I
+  ------ inclusion threshold ------
+       0.16   11.4   0.0       0.36   10.3   0.0    1.5  1  Cupin_1   Cupin
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  363.3  53.6  1.8e-112  1.5e-108       2     422 ..      17     459 ..      16     469 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 363.3 bits;  conditional E-value: 1.8e-112
+                  HHHHHHHHHHHHHHHHHHHHHHHHHHCTCT......HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHHHHHHHHHHHHHHHH CS
+         COX1   2 igllylivalvlllvggllgllirlqlafp.....dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprlnalsfwlvvlglvll 93 
+                  i +ly+++++++++vg+ ++++ir++l +      d + yn+++t+H+ + if+f++p+ i+ f n+l+pl++g +d+afprln++sfwl++ +l++l
+  Halocynthia  17 IRTLYFLFGVWAGFVGTGISVFIRIELSQVgqvigDGQLYNVVVTAHAFVIIFFFVMPViIGRFRNWLLPLILGCPDMAFPRLNNMSFWLLPPALFML 114
+                  6689***********************8655556677**********************8999**********************************5 PP
+
+                  HHHHH...S.-STTTTTTTC-........SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-HHHHHHHHHHHHHHHHCHHHHHHHHHCH CS
+         COX1  94 llsll...a.tqgwteYapls........gvdlwllglllvgvssllgainfivtilkrrapgmtvaklplfvwailatailillalpvlalalllll 179
+                  lls +   +  +gwt Y+pls        ++d ++++l+l+ vss+lg++nfi+ti+++  +   ++ +plf+w++l+t++l+ll+lpvla+a+++ll
+  Halocynthia 115 LLSSViesGvRTGWTVYPPLSrnlahsgpALDCAIFSLHLARVSSILGSLNFITTIFNMGLKRGGLFIIPLFCWSVLITTLLLLLSLPVLAAAITMLL 212
+                  55555586578***********************************************999988999******************************* PP
+
+                  HHH..T..SSSC...E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT.SCCCTHHHHHHHHHHHHHHCCCCGGGGCTTSSS-HHHHHHHHHH CS
+         COX1 180 ldr..g.kffdp...gdplldqhlfWffgHpeVyililpalgivyyilpkfag.rplfsykllvlafililflgilvwaHHlfttglpewlkalgsvf 270
+                  + r  + +ffdp    dp+l+qhlfW f Hpe yililp++ i+++i++ +++   +f+   +v+a+i i flg+lvwaHH ft+ +++  +a+++++
+  Halocynthia 213 FGRnlNtSFFDPaggRDPVLYQHLFWLFRHPEAYILILPGFRIISHIIVFYTNkEVVFGFYGIVWAIIRIRFLGFLVWAHHIFTVRMDVDSRAYFTAA 310
+                  ****9889****9999************************************96778***************************************** PP
+
+                  HHHTHHHHHHCCCHHHHCCTTS-CHCHHHHHHHHHHHHHHHHHHHHHHHHTSHHHHHHHTTBHHHHHHHHHHHTTHHHHHHHHHHHHHHHHHHSB--H CS
+         COX1 271 slliavPsglkvfnwlatlwrgsirfktpmlfalgfaflfiigGltGvllalpsvnyvvhgtyfvvaHfHlvllgavvfllfaaiyywlpkltgrmls 368
+                  +++iavP+ +kvf+w+ tl++ +i ++ +m++++ f+flf++g ltG++l++ s+++v+h+ty+vvaHfH+vl  ++vf++fa++ +w+  +t+ ++s
+  Halocynthia 311 TMVIAVPTRIKVFSWVSTLVGAKIVWHIAMYWVCRFLFLFTLGRLTGIILSNCSLDLVLHDTYYVVAHFHYVLSIGAVFAIFAGFAHWYSLFTRLQIS 408
+                  *****************************************************************************************88889999* PP
+
+                  HHHHHHHHHHHHHHHHHHHHHHHHHHHTTHB.SSSST-.CCCCHHHCHHHHHHHHH CS
+         COX1 369 erlaklhfwllfiGlllmflpmhilGllgmp.rraady.fletvpelqplnvlrti 422
+                  + l+ ++fw++fiG++l+f+p+h+l l+ mp rr+ d  +      + +++v+++i
+  Halocynthia 409 HYLGLVQFWVIFIGVNLTFFPQHFLRLARMPpRRYNDFsD-----FYLFWKVASSI 459
+                  ****************************665388886541.....34444444444 PP
+
+>> Cupin_1  Cupin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.3   0.0   4.4e-05      0.36      62      98 ..     352     398 ..     346     400 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 10.3 bits;  conditional E-value: 4.4e-05
+                  ESEEEEEEEETTSS............EEEEEEEETTEEEEE-TT-EEE CS
+      Cupin_1  62 qGegrvgfvvpgng...........nrdfhkklreGdvfvvPaglvhf 98 
+                   G+++ g+++++++              fh +l+ G vf++ ag++h+
+  Halocynthia 352 LGRLT-GIILSNCSldlvlhdtyyvVAHFHYVLSIGAVFAIFAGFAHW 398
+                  69999.*****************999999999***************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (517 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       759  (0.0465473); expected 326.1 (0.02)
+Passed bias filter:                      273  (0.0167423); expected 326.1 (0.02)
+Passed Vit filter:                        26  (0.00159451); expected 16.3 (0.001)
+Passed Fwd filter:                         5  (0.000306636); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.78u 0.38s 00:00:01.16 Elapsed: 00:00:00.93
+# Mc/sec: 1590.38
+//
+Query:       Limulus  [L=511]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   2.3e-136  454.9  46.0     3e-136  454.5  46.0    1.1  1  COX1      Cytochrome C and Quinol oxidase polypeptide I
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  454.5  46.0  1.9e-140    3e-136       1     425 [.      12     457 ..      12     458 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 454.5 bits;  conditional E-value: 1.9e-140
+              HHHHHHHHHHHHHHHHHHHHHHHHHHHCTCT......HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHHHHHHHHHHHHHHHHHHH CS
+     COX1   1 kigllylivalvlllvggllgllirlqlafp.....dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprlnalsfwlvvlglvlllls 96 
+              +ig+ yli+++++ +vg++l +lir++l +p     d + yn+++t+H+ + if++++p+ i+gfgn+l+pl++ga+d+afprln++sfwl++ +++lll s
+  Limulus  12 DIGTIYLIFGIWAAIVGTALRILIRAELGQPgsligDDQIYNVIVTAHAFVIIFFIVIPViIGGFGNWLIPLILGAPDIAFPRLNNISFWLLPPSFLLLLRS 113
+              5899*************************997777777************************************************************8888 PP
+
+              HH...S.-STTTTTTTC-........SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-HHHHHHHHHHHHHHHHCHHHHHHHHHCHHHH..T. CS
+     COX1  97 ll...a.tqgwteYapls........gvdlwllglllvgvssllgainfivtilkrrapgmtvaklplfvwailatailillalpvlalalllllldr..g. 183
+               +   + ++gwt Y+pl+         vdl +++l+l+gvss+lgainfi+ti++ r++g+ ++++plfvw++ +tail+ll+lpvla a+++ll+dr  + 
+  Limulus 114 AAverGaGTGWTVYPPLAsgiahagaSVDLTIFSLHLAGVSSILGAINFITTIINIRTSGIVLERIPLFVWSVKITAILLLLSLPVLAGAITILLTDRnfNt 215
+              87797569*******************************************************************************************988 PP
+
+              .SSSC...E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT.SCCCTHHHHHHHHHHHHHHCCCCGGGGCTTSSS-HHHHHHHHHHHHHTHHHHHHC CS
+     COX1 184 kffdp...gdplldqhlfWffgHpeVyililpalgivyyilpkfag.rplfsykllvlafililflgilvwaHHlfttglpewlkalgsvfslliavPsglk 281
+              +ffdp   gdp+l+qhlfWffgHpeVyililp++gi+++i++ ++g ++ f++  +++a+++i++lg++vwaHH ft+g+++ ++a++++++++iavP+g+k
+  Limulus 216 SFFDPaggGDPVLYQHLFWFFGHPEVYILILPGFGIISHIISHQTGkKEPFGTLGIIYAILAIGILGFIVWAHHIFTVGIDVDTRAYFTAATIIIAVPTGIK 317
+              9********************************************99******************************************************* PP
+
+              CCHHHHCCTTS-CHCHHHHHHHHHHHHHHHHHHHHHHHHTSHHHHHHHTTBHHHHHHHHHHHTTHHHHHHHHHHHHHHHHHHSB--HHHHHHHHHHHHHHHH CS
+     COX1 282 vfnwlatlwrgsirfktpmlfalgfaflfiigGltGvllalpsvnyvvhgtyfvvaHfHlvllgavvfllfaaiyywlpkltgrmlserlaklhfwllfiGl 383
+              +f wlatl++++++++ p+l+algf+flf+igGltGv+la+ s+++++h+ty+vvaHfH+vl  ++vf+++a++ +w+p ++g  ++ ++ k+hf ++fiG+
+  Limulus 318 IFRWLATLHGSQLSYDPPLLWALGFVFLFTIGGLTGVILANSSIDIILHDTYYVVAHFHYVLSIGAVFAILAGVTHWFPLFFGIAINPKWLKIHFLVIFIGV 419
+              ****************************************************************************************************** PP
+
+              HHHHHHHHHHHHTTHBSSSST-CCCCHHHCHHHHHHHHHHHH CS
+     COX1 384 llmflpmhilGllgmprraadyfletvpelqplnvlrtiggv 425
+              +++f+p+h+lGl g+prr+ dy     ++++++nvl+++g++
+  Limulus 420 NVTFFPQHFLGLSGIPRRYSDY----PDAFTTWNVLSSLGSL 457
+              **********************....579**********987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (511 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       744  (0.0456274); expected 326.1 (0.02)
+Passed bias filter:                      267  (0.0163743); expected 326.1 (0.02)
+Passed Vit filter:                        32  (0.00196247); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.68u 0.34s 00:00:01.02 Elapsed: 00:00:00.57
+# Mc/sec: 2520.49
+//
+Query:       Echinococcus_equinus  [L=535]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   1.3e-109  366.7  54.2   1.6e-109  366.5  54.2    1.0  1  COX1      Cytochrome C and Quinol oxidase polypeptide I
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  366.5  54.2  9.6e-114  1.6e-109       1     426 []      17     461 ..      17     461 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 366.5 bits;  conditional E-value: 9.6e-114
+                           HHHHHHHHHHHHHHHHHHHHHHHHHHHCTCT......HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHHHHHH CS
+                  COX1   1 kigllylivalvlllvggllgllirlqlafp.....dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprlnalsf 83 
+                           +ig+ y +++++ ++vg  ++llir+++  p      l+ yn l+t Hg++mif+f++p+ i+gfgnyl+pll g +dl  prlnals 
+  Echinococcus_equinus  17 RIGVIYSLLGVWSGFVGLRFSLLIRVNFLEPyynviPLDCYNFLVTNHGIIMIFFFLMPIlIGGFGNYLLPLLGGLSDLNLPRLNALSA 105
+                           699*************************9887766667*************************************************** PP
+
+                           HHHHHHHHHHHHHHH.S.-STTTTTTTC-........SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-HHHHHHHHHHH CS
+                  COX1  84 wlvvlglvllllsll.a.tqgwteYapls........gvdlwllglllvgvssllgainfivtilkrrapgmtvaklplfvwailatai 162
+                           wl++ +lvlll+ ++ + ++gwt+Y+pls        gvd+++++l+l+gvss++ +infi t+++   +++ ++++++++w++l+t+i
+  Echinococcus_equinus 106 WLLIPSLVLLLVRMClGaGVGWTFYPPLSssyfssgcGVDFLMFSLHLAGVSSVFSSINFICTLYRVFMNKV-FSRTSIVLWSYLFTSI 193
+                           **************9866************************************************665545.889************* PP
+
+                           HHHHHCHHHHHHHHHCHHHH..T..SSSC...E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT.SCCCTHHHHHHHHHHHHH CS
+                  COX1 163 lillalpvlalalllllldr..g.kffdp...gdplldqhlfWffgHpeVyililpalgivyyilpkfag.rplfsykllvlafililf 244
+                           l+l++lpvla+a+++ll+dr     ffdp   gdp+l+qh+fWffgHpeVy+lilp++gi+++i  +++    +f+   l++a+++i+ 
+  Echinococcus_equinus 194 LLLVTLPVLAAAITMLLFDRnfCsAFFDPlggGDPILFQHMFWFFGHPEVYVLILPGFGIISHICLRISAnLDVFGFYGLLFAMFSIVC 282
+                           *********************966999*9***************************************9669***************** PP
+
+                           HCCCCGGGGCTTSSS-HHHHHHHHHHHHHTHHHHHHCCCHHHHCCTTS-CHC.HHHHHHHHHHHHHHHHHHHHHHHHTSHHHHHHHTTB CS
+                  COX1 245 lgilvwaHHlfttglpewlkalgsvfslliavPsglkvfnwlatlwrgsirf.ktpmlfalgfaflfiigGltGvllalpsvnyvvhgt 332
+                           lg  vw+HH+ft+gl++ + +++s ++++i vP+g+kvf wl+ l +++++  + ++++++ f++lf++gG+tG++l++  ++ v+h+t
+  Echinococcus_equinus 283 LGSRVWGHHMFTVGLDVKTAVFFSSVTMIIGVPTGIKVFTWLYMLLNSNVNKsDPVLWWVVSFIVLFTFGGVTGIVLSACVLDNVLHDT 371
+                           ***************************************************7588888899999999********************** PP
+
+                           HHHHHHHHHHHTTHHHHHHHHHHHHHHHHHHSB--HHHHHHHHHHHHHHHHHHHHHHHHHHHHTTHBSSSST-CCCCHHHCHHHHHHHH CS
+                  COX1 333 yfvvaHfHlvllgavvfllfaaiyywlpkltgrmlserlaklhfwllfiGlllmflpmhilGllgmprraadyfletvpelqplnvlrt 421
+                            fvvaHfH+v+ ++  ++++ ++++w+p +tg  l++ l + + ++ ++G++l+f+pmh+ Gl g+prr+  y+     +++++nv++t
+  Echinococcus_equinus 372 WFVVAHFHYVMSLGSYIGIIVMFIWWWPLITGLRLNKCLLQCQCIISNVGFNLCFFPMHYFGLCGLPRRVCIYE----YSYNWVNVVCT 456
+                           ***********************************************************************883....3899******* PP
+
+                           HHHHH CS
+                  COX1 422 iggvl 426
+                           +g+++
+  Echinococcus_equinus 457 VGSFI 461
+                           **986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (535 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       864  (0.0529866); expected 326.1 (0.02)
+Passed bias filter:                      287  (0.0176009); expected 326.1 (0.02)
+Passed Vit filter:                        27  (0.00165583); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.76u 0.37s 00:00:01.12 Elapsed: 00:00:00.64
+# Mc/sec: 2391.48
+//
+Query:       Taenia_crassiceps  [L=537]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   2.9e-105  352.5  53.2   3.5e-105  352.2  53.2    1.1  1  COX1      Cytochrome C and Quinol oxidase polypeptide I
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  352.2  53.2  2.1e-109  3.5e-105       1     426 []      17     461 ..      17     461 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 352.2 bits;  conditional E-value: 2.1e-109
+                        HHHHHHHHHHHHHHHHHHHHHHHHHHHCTCT......HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHHHHHHHHH CS
+               COX1   1 kigllylivalvlllvggllgllirlqlafp.....dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprlnalsfwlv 86 
+                        ++g+ y++++l+ ++vg  ++llir+++  p     + + y  l+t Hg+lmif+f++p+ i+gfgnyl+pl++g +dl  prlnals wl+
+  Taenia_crassiceps  17 RVGIIYTLIGLWSGFVGLRFSLLIRIKFLEPyfnviSIDCYKFLITNHGILMIFFFLMPIlIGGFGNYLIPLISGLSDLKLPRLNALSAWLL 108
+                        6899************************9887777777****************************************************** PP
+
+                        HHHHHHHHHHHH.S.-STTTTTTTC-........SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-HHHHHHHHHHHHHHHHC CS
+               COX1  87 vlglvllllsll.a.tqgwteYapls........gvdlwllglllvgvssllgainfivtilkrrapgmtvaklplfvwailatailillal 168
+                        + +l++ll+s+  + + gwt+Y+pls        gvd+++++l+l+g+ss++ +infi t+++    ++ ++++++++w++l+t+il++++l
+  Taenia_crassiceps 109 IPSLFFLLISMSlGaGIGWTFYPPLSsymfsnskGVDYLMFSLHLAGLSSIFRSINFICTLYTVFMTKI-FSRTSIILWSYLFTSILLIVTL 199
+                        ******9999977569***********************************************666666.889******************* PP
+
+                        HHHHHHHHHCHHHH..T..SSSC...E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT.SCCCTHHHHHHHHHHHHHHCCCCGGGG CS
+               COX1 169 pvlalalllllldr..g.kffdp...gdplldqhlfWffgHpeVyililpalgivyyilpkfag.rplfsykllvlafililflgilvwaHH 253
+                        pvla+a+++ll+dr     ffdp   gdp+l+qh+fWffgHpeVy+lilp++gi+ +i  k++     f+   l++a+++i+ lg  vw+HH
+  Taenia_crassiceps 200 PVLAAAITMLLFDRkfSsAFFDPlggGDPVLFQHMFWFFGHPEVYVLILPGFGIIRHICLKISMnCDSFGFYGLLFAMFSIVCLGRSVWGHH 291
+                        ***************9779*******************************************9669************************** PP
+
+                        CTTSSS-HHHHHHHHHHHHHTHHHHHHCCCHHHHCCTTS-CHC.HHHHHHHHHHHHHHHHHHHHHHHHTSHHHHHHHTTBHHHHHHHHHHHT CS
+               COX1 254 lfttglpewlkalgsvfslliavPsglkvfnwlatlwrgsirf.ktpmlfalgfaflfiigGltGvllalpsvnyvvhgtyfvvaHfHlvll 344
+                        +ft+gl++ + +++s ++++i vP+g+kvf wl+ l +++++  +  +++++ f++lf++gG+tG++l++  ++ v+h+t fvvaHfH+v+ 
+  Taenia_crassiceps 292 MFTVGLDVKTAVFFSSVTMIIGVPTGIKVFTWLYMLLNSRVNKsDPILWWIVSFIVLFTFGGVTGIVLSACVLDKVLHDTWFVVAHFHYVMS 383
+                        ******************************************7477777888899999********************************** PP
+
+                        THHHHHHHHHHHHHHHHHHSB--HHHHHHHHHHHHHHHHHHHHHHHHHHHHTTHBSSSST-CCCCHHHCHHHHHHHHHHHHH CS
+               COX1 345 gavvfllfaaiyywlpkltgrmlserlaklhfwllfiGlllmflpmhilGllgmprraadyfletvpelqplnvlrtiggvl 426
+                        ++  + ++ ++++w+p +tg  l++ l + + ++  iG++l+f+pmh+ Gl g+prr+  y+      +++++v++t+g+++
+  Taenia_crassiceps 384 LGSYISIIIMFIWWWPLITGLRLNKCLLQCQCIISKIGFNLCFFPMHYFGLCGLPRRVCIYE----CRYKWVKVVCTVGSFI 461
+                        ***********************************************************993....4899999999999986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (537 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       915  (0.0561143); expected 326.1 (0.02)
+Passed bias filter:                      287  (0.0176009); expected 326.1 (0.02)
+Passed Vit filter:                        27  (0.00165583); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.65u 0.55s 00:00:01.20 Elapsed: 00:00:00.87
+# Mc/sec: 1765.82
+//
+Query:       Axinella  [L=525]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   6.1e-152  506.2  58.3   7.4e-152  506.0  58.3    1.0  1  COX1      Cytochrome C and Quinol oxidase polypeptide I
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  506.0  58.3  4.6e-156  7.4e-152       1     426 []      16     462 ..      16     462 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 506.0 bits;  conditional E-value: 4.6e-156
+               HHHHHHHHHHHHHHHHHHHHHHHHHHHCTCT......HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHHHHHHHHHHHHHHHHHH CS
+      COX1   1 kigllylivalvlllvggllgllirlqlafp.....dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprlnalsfwlvvlglvllll 95 
+               +ig+lyl+++ + +++g+++++lirl+l +p     d + yn+++t+H+ +mif++++p+ i+gfgn++vpl+iga+d+afprln++sfwl++ +l+lll+
+  Axinella  16 DIGTLYLLLGAFSGMIGTAFSVLIRLELSAPgsmlgDDQLYNVIVTAHAFVMIFFLVMPVlIGGFGNWFVPLYIGAPDMAFPRLNNISFWLLPPSLTLLLG 116
+               599**************************998777777************************************************************999 PP
+
+               HHH...S.-STTTTTTTC-........SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-HHHHHHHHHHHHHHHHCHHHHHHHHHCHHHH.. CS
+      COX1  96 sll...a.tqgwteYapls........gvdlwllglllvgvssllgainfivtilkrrapgmtvaklplfvwailatailillalpvlalalllllldr.. 182
+               s +   + ++gwt Y+pl+         vd+++++l+l+g+ss+lga+nfi+ti+++rapg+t+ ++plfvw+il+t++l+ll+lpvla a+++ll+dr  
+  Axinella 117 SAFveqGaGTGWTVYPPLAsiqahsggSVDMVIFSLHLAGISSILGAMNFITTIFNMRAPGITMDRMPLFVWSILVTVFLLLLSLPVLAGAITMLLTDRnf 217
+               999997569******************************************************************************************** PP
+
+               T..SSSC...E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT.SCCCTHHHHHHHHHHHHHHCCCCGGGGCTTSSS-HHHHHHHHHHHHHTHHHH CS
+      COX1 183 g.kffdp...gdplldqhlfWffgHpeVyililpalgivyyilpkfag.rplfsykllvlafililflgilvwaHHlfttglpewlkalgsvfslliavPs 278
+               + +ffdp   gdp+l+qhlfWffgHpeVyililp++gi++ i+p+fa  +++f+y  +v+a+++i++lg++vwaHH+ft+g+++ ++a++++++++iavP+
+  Axinella 218 NtTFFDPaggGDPILYQHLFWFFGHPEVYILILPGFGIISQIIPTFAAkKQIFGYLGMVYAIVSIGILGFIVWAHHMFTVGMDVDTRAYFTAATMIIAVPT 318
+               88********************************************977**************************************************** PP
+
+               HHCCCHHHHCCTTS-CHCHHHHHHHHHHHHHHHHHHHHHHHHTSHHHHHHHTTBHHHHHHHHHHHTTHHHHHHHHHHHHHHHHHHSB--HHHHHHHHHHHH CS
+      COX1 279 glkvfnwlatlwrgsirfktpmlfalgfaflfiigGltGvllalpsvnyvvhgtyfvvaHfHlvllgavvfllfaaiyywlpkltgrmlserlaklhfwll 379
+               g+k+f+w+at+ +gs++++tpml+a+gf+flf++gGltG++la+ s+++v+h+ty+vvaHfH+vl +++vf++f+++yyw+ k+ g  ++e ++k+hfwl+
+  Axinella 319 GIKIFSWVATMFGGSLKLETPMLWAIGFVFLFTLGGLTGIVLANSSLDIVLHDTYYVVAHFHYVLSMGAVFAMFGGFYYWFGKISGYCYNEVYGKIHFWLM 419
+               ***************************************************************************************************** PP
+
+               HHHHHHHHHHHHHHHHTTHBSSSST-CCCCHHHCHHHHHHHHHHHHH CS
+      COX1 380 fiGlllmflpmhilGllgmprraadyfletvpelqplnvlrtiggvl 426
+               fiG++l+f+p+h+lGl+g+prr+ d     +++++ +n+++++g+++
+  Axinella 420 FIGVNLTFFPQHFLGLAGLPRRYSDF----HDTFAGWNQISSLGSMI 462
+               ************************76....679***********986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (525 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       752  (0.046118); expected 326.1 (0.02)
+Passed bias filter:                      285  (0.0174782); expected 326.1 (0.02)
+Passed Vit filter:                        28  (0.00171716); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.66u 0.54s 00:00:01.20 Elapsed: 00:00:02.46
+# Mc/sec: 610.54
+//
+Query:       Terebratulina  [L=513]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   1.9e-131  438.7  45.3   2.4e-131  438.4  45.3    1.1  1  COX1      Cytochrome C and Quinol oxidase polypeptide I
+  ------ inclusion threshold ------
+          2    7.9   8.6       0.91    8.9   0.1    3.0  2  NapE      Periplasmic nitrate reductase protein NapE
+        2.6    7.7   5.6         11    5.7   5.6    2.2  1  DUF3789   Protein of unknown function (DUF3789)
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  438.4  45.3  4.4e-135  2.4e-131       1     426 []      11     457 ..      11     477 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 438.4 bits;  conditional E-value: 4.4e-135
+                    HHHHHHHHHHHHHHHHHHHHHHHHHHHCTCT......HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHHHHHHHHHHHHH CS
+           COX1   1 kigllylivalvlllvggllgllirlqlafp.....dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprlnalsfwlvvlgl 90 
+                    +ig+ly++++++ +l+g++l+llir++l +p     d + yn+++t+H+ + if++++p+ i+gfgn+l+pl+iga+d+afpr+n++ fwl++ +l
+  Terebratulina  11 DIGTLYFLLGIWSGLAGTALSLLIRAELGQPgallgDDQLYNVIVTAHAFVIIFFLVIPIiIGGFGNWLIPLIIGAPDIAFPRINNIRFWLLPPAL 106
+                    599**************************997777777********************************************************** PP
+
+                    HHHHHHHH...S.-STTTTTTTC-........SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-HHHHHHHHHHHHHHHHCHHHHHH CS
+           COX1  91 vllllsll...a.tqgwteYapls........gvdlwllglllvgvssllgainfivtilkrrapgmtvaklplfvwailatailillalpvlala 174
+                    +lll+s +   + ++gwt Y+pl+         vdl++++l+l+g+ss+lga+nfi+ +++ r++g+t+++lpl+vwa+ +t+il+ll+lpvla a
+  Terebratulina 107 TLLLASAAvesGaGTGWTVYPPLAsitshagaSVDLAIFSLHLAGASSILGAVNFITSVINLRTRGLTMERLPLLVWAVKITVILLLLSLPVLAGA 202
+                    **999998887469********************************************************************************** PP
+
+                    HHHCHHHH..T..SSSC...E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT.SCCCTHHHHHHHHHHHHHHCCCCGGGGCTTSSS-HHH CS
+           COX1 175 lllllldr..g.kffdp...gdplldqhlfWffgHpeVyililpalgivyyilpkfag.rplfsykllvlafililflgilvwaHHlfttglpewl 263
+                    +++ll+dr  + +ffdp   gdp+l+qhlfWffgHpeVyililp++gi+++i++++++ ++ f++  +++a+++i++lg++vwaHH ft+g+++ +
+  Terebratulina 203 ITMLLTDRnfNtSFFDPaggGDPVLFQHLFWFFGHPEVYILILPGFGIISHIVTRHSRkKEAFGHLGIIYAMLSIGLLGFIVWAHHIFTVGMDVDT 298
+                    *********9889********************************************99************************************* PP
+
+                    HHHHHHHHHHTHHHHHHCCCHHHHCCTTS-CHCHHHHHHHHHHHHHHHHHHHHHHHHTSHHHHHHHTTBHHHHHHHHHHHTTHHHHHHHHHHHHHH CS
+           COX1 264 kalgsvfslliavPsglkvfnwlatlwrgsirfktpmlfalgfaflfiigGltGvllalpsvnyvvhgtyfvvaHfHlvllgavvfllfaaiyywl 359
+                    +a+++ ++++ia+P+g+kvf wlat+ +++ +++  +++algf+flf++gGltG++l++ s++ ++h+ty+v+aHfH+vl  ++vf+lfa++++w+
+  Terebratulina 299 RAYFTSATIVIAIPTGIKVFRWLATIFGSRNKLSPQIYWALGFIFLFTVGGLTGIVLSNSSLDTLLHDTYYVTAHFHYVLRIGAVFALFAGFIHWY 394
+                    ****************************9999**************************************************************** PP
+
+                    HHHHSB--HHHHHHHHHHHHHHHHHHHHHHHHHHHHTTHBSSSST-CCCCHHHCHHHHHHHHHHHHH CS
+           COX1 360 pkltgrmlserlaklhfwllfiGlllmflpmhilGllgmprraadyfletvpelqplnvlrtiggvl 426
+                    p ltg +l+ r+ k+hf+++fiG++l+f+p+h+lGl g+prr+ dy     + ++ +n l+++g+++
+  Terebratulina 395 PLLTGVTLQPRWLKAHFITIFIGVNLTFFPQHFLGLGGIPRRYSDY----PDCYTGWNTLSSMGSII 457
+                    **********************************************....45788999999988865 PP
+
+>> NapE  Periplasmic nitrate reductase protein NapE
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.1   5.1      0.23   1.2e+03      18      52 ..      59      87 ..      57      88 .. 0.77
+   2 ?    8.9   0.1   0.00017      0.91      31      50 ..     273     293 ..     256     295 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: -1.1 bits;  conditional E-value: 0.23
+           NapE 18 aflfltvvlfPiLsVavVggYGfivWmlQlifGpp 52
+                   af+++ ++++Pi+    +gg+G   W++ li+G p
+  Terebratulina 59 AFVIIFFLVIPII----IGGFG--NWLIPLIIGAP 87
+                   8999999999985....88777..48888887766 PP
+
+  == domain 2  score: 8.9 bits;  conditional E-value: 0.00017
+           NapE  31 sVavVggYGfivWmlQli.fG 50 
+                    +   +g  GfivW   ++ +G
+  Terebratulina 273 AMLSIGLLGFIVWAHHIFtVG 293
+                    55679*********9999555 PP
+
+>> DUF3789  Protein of unknown function (DUF3789)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    5.7   5.6     0.002        11       2      18 ..     339     355 ..     338     355 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 5.7 bits;  conditional E-value: 0.002
+        DUF3789   2 vkdfllvsvGsgiGVvl 18 
+                    +++++l+ vG+++G+vl
+  Terebratulina 339 LGFIFLFTVGGLTGIVL 355
+                    79*************97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (513 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       699  (0.0428677); expected 326.1 (0.02)
+Passed bias filter:                      290  (0.0177849); expected 326.1 (0.02)
+Passed Vit filter:                        25  (0.00153318); expected 16.3 (0.001)
+Passed Fwd filter:                         6  (0.000367963); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.74u 0.39s 00:00:01.12 Elapsed: 00:00:00.69
+# Mc/sec: 2126.96
+//
+Query:       Suberites_domuncula  [L=524]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   2.8e-153  510.7  59.7   3.7e-153  510.3  59.7    1.1  1  COX1      Cytochrome C and Quinol oxidase polypeptide I
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  510.3  59.7  2.3e-157  3.7e-153       1     426 []      16     462 ..      16     462 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 510.3 bits;  conditional E-value: 2.3e-157
+                          HHHHHHHHHHHHHHHHHHHHHHHHHHHCTCT......HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHHHHHHH CS
+                 COX1   1 kigllylivalvlllvggllgllirlqlafp.....dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprlnalsfw 84 
+                          +ig+lyl+++ +++++g+++++lirl+l +p     d + yn+++t+H+ +mif++++p+ i+gfgn++vpl+iga+d+afprln+lsfw
+  Suberites_domuncula  16 DIGTLYLLFGAFAGMIGTAFSMLIRLELSAPgsmlgDDHLYNVIVTAHAFVMIFFLVMPVlIGGFGNWFVPLYIGAPDMAFPRLNNLSFW 105
+                          599**************************998777777**************************************************** PP
+
+                          HHHHHHHHHHHHHH...S.-STTTTTTTC-........SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-HHHHHHHHHHH CS
+                 COX1  85 lvvlglvllllsll...a.tqgwteYapls........gvdlwllglllvgvssllgainfivtilkrrapgmtvaklplfvwailatai 162
+                          l++ +l+lll+s +   + ++gwt Y+pls         vd+++++l+l+g+ss+lga+nfi+ti+++rapg+t+ ++plfvw++l+tai
+  Suberites_domuncula 106 LLPPALTLLLGSAFveqGaGTGWTVYPPLSsiqahsggSVDMAIFSLHLAGISSILGAMNFITTIINMRAPGITMDRMPLFVWSVLVTAI 195
+                          ********999999997569********************************************************************** PP
+
+                          HHHHHCHHHHHHHHHCHHHH..T..SSSC...E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT.SCCCTHHHHHHHHHHHHHH CS
+                 COX1 163 lillalpvlalalllllldr..g.kffdp...gdplldqhlfWffgHpeVyililpalgivyyilpkfag.rplfsykllvlafililfl 245
+                          l+ll+lpvla a+++ll+dr  +  ffdp   gdp+l+qhlfWffgHpeVyililp++gi++ i+p+f+  +++f+y  +v+a+++i++l
+  Suberites_domuncula 196 LLLLSLPVLAGAITMLLTDRnfNtAFFDPaggGDPILYQHLFWFFGHPEVYILILPGFGIISQIIPTFSAkKQIFGYLGMVYAMVSIGIL 285
+                          *********************9889***9***************************************977******************* PP
+
+                          CCCCGGGGCTTSSS-HHHHHHHHHHHHHTHHHHHHCCCHHHHCCTTS-CHCHHHHHHHHHHHHHHHHHHHHHHHHTSHHHHHHHTTBHHH CS
+                 COX1 246 gilvwaHHlfttglpewlkalgsvfslliavPsglkvfnwlatlwrgsirfktpmlfalgfaflfiigGltGvllalpsvnyvvhgtyfv 335
+                          g++vwaHH+ft+g+++ ++a++++++++iavP+g+k+f+w+at+ +gs+r++tpml+a+gf+flf++gGltGv+la+ ++++v+h+ty+v
+  Suberites_domuncula 286 GFIVWAHHMFTVGMDVDTRAYFTAATMIIAVPTGIKIFSWVATMFGGSLRLDTPMLWAIGFVFLFTMGGLTGVVLANSALDIVLHDTYYV 375
+                          ****************************************************************************************** PP
+
+                          HHHHHHHHTTHHHHHHHHHHHHHHHHHHSB--HHHHHHHHHHHHHHHHHHHHHHHHHHHHTTHBSSSST-CCCCHHHCHHHHHHHHHHHH CS
+                 COX1 336 vaHfHlvllgavvfllfaaiyywlpkltgrmlserlaklhfwllfiGlllmflpmhilGllgmprraadyfletvpelqplnvlrtiggv 425
+                          vaHfH+vl +++vf lfa++yyw+ k+tg  ++e ++k+hfw++fiG++l+f+p+h+lGl+g+prr+ d     +++++ +n++++ig++
+  Suberites_domuncula 376 VAHFHYVLSMGAVFSLFAGFYYWFGKITGYSYNEVYGKIHFWIMFIGVNLTFFPQHFLGLAGLPRRYSDF----HDSFAGWNQISSIGSM 461
+                          ********************************************************************76....679***********98 PP
+
+                          H CS
+                 COX1 426 l 426
+                          +
+  Suberites_domuncula 462 I 462
+                          6 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (524 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       792  (0.0485711); expected 326.1 (0.02)
+Passed bias filter:                      289  (0.0177235); expected 326.1 (0.02)
+Passed Vit filter:                        30  (0.00183981); expected 16.3 (0.001)
+Passed Fwd filter:                         6  (0.000367963); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.72u 0.50s 00:00:01.22 Elapsed: 00:00:00.88
+# Mc/sec: 1703.49
+//
+Query:       Bfloridae  [L=0]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (0 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                         0  (0); expected 326.1 (0.02)
+Passed bias filter:                        0  (0); expected 326.1 (0.02)
+Passed Vit filter:                         0  (0); expected 16.3 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.39u 0.22s 00:00:00.61 Elapsed: 00:00:00.47
+# Mc/sec: 0.00
+//
+Query:       Katharina  [L=515]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+   1.2e-137  459.2  42.8   1.6e-137  458.8  42.8    1.2  1  COX1          Cytochrome C and Quinol oxidase polypeptide I
+  ------ inclusion threshold ------
+        2.4    7.8   5.6         11    5.7   5.6    2.2  1  DUF3789       Protein of unknown function (DUF3789)
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  458.8  42.8    2e-141  1.6e-137       1     426 []      11     457 ..      11     457 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 458.8 bits;  conditional E-value: 2e-141
+                HHHHHHHHHHHHHHHHHHHHHHHHHHHCTCT......HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHHHHHHHHHHHHHHHHH CS
+       COX1   1 kigllylivalvlllvggllgllirlqlafp.....dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprlnalsfwlvvlglvlll 94 
+                +ig+ly++++++++lvg++l llir++l +p     d + yn+++t+H+ + if++++p+ i+gfgn+lvpl++g +d+afprln++sfwl++ +l lll
+  Katharina  11 DIGTLYILFGIWAGLVGTALRLLIRAELGQPgallgDDQLYNVIVTAHAFVIIFFLVMPIiIGGFGNWLVPLMLGVPDMAFPRLNNISFWLLPPALCLLL 110
+                599**************************997777777************************************************************77 PP
+
+                HHHH...S.-STTTTTTTC-........SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-HHHHHHHHHHHHHHHHCHHHHHHHHHCHHHH CS
+       COX1  95 lsll...a.tqgwteYapls........gvdlwllglllvgvssllgainfivtilkrrapgmtvaklplfvwailatailillalpvlalalllllldr 182
+                +s +   + ++gwt Y+pl+         vdl++++l+l+gvss+lga+nfi+ti++ r++g+++++lplfvw++ +tail+ll+lpvla ++++ll+dr
+  Katharina 111 ASGAverGaGTGWTVYPPLAgnvghaggSVDLAIFSLHLAGVSSILGAVNFITTIVNIRREGIQLERLPLFVWSVKITAILLLLSLPVLAGGITILLTDR 210
+                7666697569****************************************************************************************** PP
+
+                ..T..SSSC...E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT.SCCCTHHHHHHHHHHHHHHCCCCGGGGCTTSSS-HHHHHHHHHHHHHTH CS
+       COX1 183 ..g.kffdp...gdplldqhlfWffgHpeVyililpalgivyyilpkfag.rplfsykllvlafililflgilvwaHHlfttglpewlkalgsvfsllia 275
+                  + +ffdp   gdp+l+qhlfWffgHpeVyililp++gi+++i++ +   ++ f++  +++a+++i++lg++vwaHH+f++g+++ ++a++++++++ia
+  Katharina 211 nfNtSFFDPxggGDPILYQHLFWFFGHPEVYILILPGFGIISHIVIHYRSkKETFGTLGIIYAILAIGLLGFIVWAHHMFVVGMDVDTRAYFTAATMIIA 310
+                *9889******************************************9657************************************************* PP
+
+                HHHHHCCCHHHHCCTTS-CHCHHHHHHHHHHHHHHHHHHHHHHHHTSHHHHHHHTTBHHHHHHHHHHHTTHHHHHHHHHHHHHHHHHHSB--HHHHHHHH CS
+       COX1 276 vPsglkvfnwlatlwrgsirfktpmlfalgfaflfiigGltGvllalpsvnyvvhgtyfvvaHfHlvllgavvfllfaaiyywlpkltgrmlserlaklh 375
+                vP+g+k+f wlat+++ +i  +tp+++algf+flf++gGltG++l++ s+++++h+ y+vvaHfH+vl  ++vf+lf+a+ yw+p +tg  l+er+ k h
+  Katharina 311 VPTGIKIFRWLATIYGARIGRETPIMWALGFIFLFTVGGLTGIVLSNSSLDIMLHDRYYVVAHFHYVLSIGAVFALFGAFNYWYPLMTGLSLHERWTKRH 410
+                **************************************************************************************************** PP
+
+                HHHHHHHHHHHHHHHHHHHHTTHBSSSST-CCCCHHHCHHHHHHHHHHHHH CS
+       COX1 376 fwllfiGlllmflpmhilGllgmprraadyfletvpelqplnvlrtiggvl 426
+                f+++f+G++l+f+p+h+lGl gmprr+ dy     + +  +nv+++ig+++
+  Katharina 411 FVVIFLGVNLTFFPQHFLGLRGMPRRYSDY----PDCYIKWNVVSSIGSLI 457
+                ******************************....46899*********975 PP
+
+>> DUF3789  Protein of unknown function (DUF3789)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    5.7   5.6    0.0013        11       2      18 ..     339     355 ..     338     355 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 5.7 bits;  conditional E-value: 0.0013
+    DUF3789   2 vkdfllvsvGsgiGVvl 18 
+                +++++l+ vG+++G+vl
+  Katharina 339 LGFIFLFTVGGLTGIVL 355
+                79*************97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (515 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       735  (0.0450754); expected 326.1 (0.02)
+Passed bias filter:                      281  (0.0172329); expected 326.1 (0.02)
+Passed Vit filter:                        29  (0.00177849); expected 16.3 (0.001)
+Passed Fwd filter:                         5  (0.000306636); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.74u 0.42s 00:00:01.15 Elapsed: 00:00:00.66
+# Mc/sec: 2232.31
+//
+Query:       Geodia  [L=520]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   3.4e-152  507.1  54.5     4e-152  506.8  54.5    1.0  1  COX1      Cytochrome C and Quinol oxidase polypeptide I
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  506.8  54.5  2.5e-156    4e-152       1     426 []      15     461 ..      15     461 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 506.8 bits;  conditional E-value: 2.5e-156
+             HHHHHHHHHHHHHHHHHHHHHHHHHHHCTCT......HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHHHHHHHHHHHHHHHHHHHH CS
+    COX1   1 kigllylivalvlllvggllgllirlqlafp.....dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprlnalsfwlvvlglvllllsl 97 
+             +ig+lyl+++ + +++g+ ++ lirl+l +p     d + yn+++t+Hg +mif++++p+ i+gfgn++vpl+iga+d+afprln++sfw+++ +l+lll+s 
+  Geodia  15 DIGTLYLLFGAFSGMIGTGFSFLIRLELSAPgsmlgDDHLYNVIITAHGLIMIFFLVMPVmIGGFGNWFVPLYIGAPDMAFPRLNNISFWVLPPSLILLLGSA 117
+             599**************************998777777************************************************************99999 PP
+
+             H...S.-STTTTTTTC-........SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-HHHHHHHHHHHHHHHHCHHHHHHHHHCHHHH..T..S CS
+    COX1  98 l...a.tqgwteYapls........gvdlwllglllvgvssllgainfivtilkrrapgmtvaklplfvwailatailillalpvlalalllllldr..g.kf 185
+             +   + ++gwt Y+pls         vd ++++l+l+g+ss+lg++nfi+ti+++rapg+t+ +lplfvw+il+t+ l++l+lpvla a+++ll+dr  + +f
+  Geodia 118 FveqGvGAGWTVYPPLSsvqahsggSVDAAIFSLHLAGISSILGSMNFITTIFNMRAPGITMDRLPLFVWSILVTTYLLILSLPVLAGAITMLLTDRnfNtTF 220
+             9997589********************************************************************************************88** PP
+
+             SSC...E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT.SCCCTHHHHHHHHHHHHHHCCCCGGGGCTTSSS-HHHHHHHHHHHHHTHHHHHHCCCH CS
+    COX1 186 fdp...gdplldqhlfWffgHpeVyililpalgivyyilpkfag.rplfsykllvlafililflgilvwaHHlfttglpewlkalgsvfslliavPsglkvfn 284
+             fdp   gdp+l+qhlfWffgHpeVyililp++giv+ i+p+fa  +++f+y  +v+a+++i++lg++vwaHH+ft+g+++  +a++s+++++iavP+g+k+f+
+  Geodia 221 FDPaggGDPILFQHLFWFFGHPEVYILILPGFGIVSQIIPTFAAkKQIFGYLGMVYAMVSIGILGFIVWAHHMFTVGMDVDSRAYFSAATMIIAVPTGIKIFS 323
+             ******************************************977********************************************************** PP
+
+             HHHCCTTS-CHCHHHHHHHHHHHHHHHHHHHHHHHHTSHHHHHHHTTBHHHHHHHHHHHTTHHHHHHHHHHHHHHHHHHSB--HHHHHHHHHHHHHHHHHHHH CS
+    COX1 285 wlatlwrgsirfktpmlfalgfaflfiigGltGvllalpsvnyvvhgtyfvvaHfHlvllgavvfllfaaiyywlpkltgrmlserlaklhfwllfiGlllmf 387
+             w+at+++gs+r +tpml+algf+flf++gGltG++la  s+++++h+ty+vvaHfH+vl +++vf+lf+++yyw+ k+tg  ++e l+k+hfwl+fiG++++f
+  Geodia 324 WIATVVGGSLRTDTPMLWALGFVFLFTVGGLTGIVLACSSLDVLLHDTYYVVAHFHYVLSMGAVFALFGGFYYWFGKITGYCYNEVLGKIHFWLMFIGVNITF 426
+             ******************************************************************************************************* PP
+
+             HHHHHHHHTTHBSSSST-CCCCHHHCHHHHHHHHHHHHH CS
+    COX1 388 lpmhilGllgmprraadyfletvpelqplnvlrtiggvl 426
+             +p+h+lGl+g+prr+ dy    +++++ +n+++++g+++
+  Geodia 427 FPQHFLGLAGLPRRYSDY----HDSFAGWNQISSVGSLI 461
+             ****************99....679***********975 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (520 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       718  (0.0440329); expected 326.1 (0.02)
+Passed bias filter:                      276  (0.0169263); expected 326.1 (0.02)
+Passed Vit filter:                        30  (0.00183981); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.70u 0.49s 00:00:01.19 Elapsed: 00:00:00.72
+# Mc/sec: 2066.16
+//
+Query:       Metridium  [L=530]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+     2e-151  504.5  61.2   2.6e-151  504.2  61.2    1.1  1  COX1      Cytochrome C and Quinol oxidase polypeptide I
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  504.2  61.2  1.6e-155  2.6e-151       1     426 []      17     463 ..      17     463 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 504.2 bits;  conditional E-value: 1.6e-155
+                HHHHHHHHHHHHHHHHHHHHHHHHHHHCTCT......HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHHHHHHHHHHHHHHHHH CS
+       COX1   1 kigllylivalvlllvggllgllirlqlafp.....dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprlnalsfwlvvlglvlll 94 
+                +ig+lyl++++  +++g++l++lirl+l +p     d + yn+++t+H+ +mif++++p+ i+gfgn+lvpl+iga+d+afprln++sfwl++ +l+lll
+  Metridium  17 DIGTLYLVFGIGSGMIGTALSMLIRLELSAPgtmlgDDHLYNVIVTAHAFIMIFFLVMPVmIGGFGNWLVPLYIGAPDMAFPRLNNISFWLLPPALILLL 116
+                599**************************998777777************************************************************99 PP
+
+                HHHH...S.-STTTTTTTC-........SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-HHHHHHHHHHHHHHHHCHHHHHHHHHCHHHH CS
+       COX1  95 lsll...a.tqgwteYapls........gvdlwllglllvgvssllgainfivtilkrrapgmtvaklplfvwailatailillalpvlalalllllldr 182
+                +s +   + ++gwt Y+pls        +vd+++++l+l+g+ss+lga+nfi+ti+++rapgmt+ +lplfvw+il+ta+l+ll+lpvla a+++ll+dr
+  Metridium 117 GSAFveqGvGTGWTVYPPLSaiqahsggAVDMAIFSLHLAGASSILGAMNFITTIFNMRAPGMTMDRLPLFVWSILITAFLLLLSLPVLAGAITMLLTDR 216
+                9999997689****************************************************************************************** PP
+
+                ..T..SSSC...E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT.SCCCTHHHHHHHHHHHHHHCCCCGGGGCTTSSS-HHHHHHHHHHHHHTH CS
+       COX1 183 ..g.kffdp...gdplldqhlfWffgHpeVyililpalgivyyilpkfag.rplfsykllvlafililflgilvwaHHlfttglpewlkalgsvfsllia 275
+                  + +ffdp   gdp+l+qhlfWffgHpeVyililp++g+v+ i+p+f+  +++f+y  +v+a+++i++lg++vwaHH+ft+g+++ ++a++++++++ia
+  Metridium 217 nfNtTFFDPaggGDPILFQHLFWFFGHPEVYILILPGFGMVSQIIPTFSAkNQIFGYLGMVYAMLSIGILGFIVWAHHMFTVGMDVDTRAYFTAATMIIA 316
+                **88********************************************9779************************************************ PP
+
+                HHHHHCCCHHHHCCTTS-CHCHHHHHHHHHHHHHHHHHHHHHHHHTSHHHHHHHTTBHHHHHHHHHHHTTHHHHHHHHHHHHHHHHHHSB--HHHHHHHH CS
+       COX1 276 vPsglkvfnwlatlwrgsirfktpmlfalgfaflfiigGltGvllalpsvnyvvhgtyfvvaHfHlvllgavvfllfaaiyywlpkltgrmlserlaklh 375
+                vP+g+kvf+wlat+++g++r++tpml+a+gf+flf+igGltGv+la+ s+++v+h+ty+vvaHfH+vl ++++f++fa++y+w+ k+tg  ++e ++k+h
+  Metridium 317 VPTGIKVFSWLATIYGGAVRLDTPMLWAIGFVFLFTIGGLTGVILANSSLDIVLHDTYYVVAHFHYVLSMGAIFAIFAGFYFWFGKITGYCYNELYGKIH 416
+                **************************************************************************************************** PP
+
+                HHHHHHHHHHHHHHHHHHHHTTHBSSSST-CCCCHHHCHHHHHHHHHHHHH CS
+       COX1 376 fwllfiGlllmflpmhilGllgmprraadyfletvpelqplnvlrtiggvl 426
+                fw++fiG++l+f+p+h+lGl+g+prr+ d     v+ ++ +n+++++g+++
+  Metridium 417 FWIMFIGVNLTFFPQHFLGLAGFPRRYSDF----VDGFAGWNLVSSLGSTI 463
+                ****************************76....789**********9875 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (530 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       785  (0.0481418); expected 326.1 (0.02)
+Passed bias filter:                      275  (0.016865); expected 326.1 (0.02)
+Passed Vit filter:                        26  (0.00159451); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.76u 0.30s 00:00:01.06 Elapsed: 00:00:00.62
+# Mc/sec: 2445.55
+//
+Query:       Amphimedon_queenslandica  [L=530]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+   2.1e-151  504.5  58.1   2.6e-151  504.2  58.1    1.1  1  COX1            Cytochrome C and Quinol oxidase polypeptide I
+  ------ inclusion threshold ------
+        1.6    9.1   0.0        1.6    9.1   0.0    2.4  4  G0-G1_switch_2  G0/G1 switch protein 2
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  504.2  58.1  3.2e-155  2.6e-151       1     426 []      15     461 ..      15     461 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 504.2 bits;  conditional E-value: 3.2e-155
+                               HHHHHHHHHHHHHHHHHHHHHHHHHHHCTCT......HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHH CS
+                      COX1   1 kigllylivalvlllvggllgllirlqlafp.....dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprln 79 
+                               +ig+lyl+++ +++++g+++++lirl+l +p     + + yn+++t+H+ +mif++++p+ i+gfgn+lvpl+iga+d+afprln
+  Amphimedon_queenslandica  15 DIGTLYLLFGGFAGMIGTAFSMLIRLELSAPgpmlgNDQLYNVIVTAHAFVMIFFMVMPVmIGGFGNWLVPLYIGAPDMAFPRLN 99 
+                               599*************************9995555555*********************************************** PP
+
+                               HHHHHHHHHHHHHHHHHHH...S.-STTTTTTTC-........SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-H CS
+                      COX1  80 alsfwlvvlglvllllsll...a.tqgwteYapls........gvdlwllglllvgvssllgainfivtilkrrapgmtvaklpl 152
+                               ++sfwl++ +l+lll+s +   + ++gwt Y+pl+         vdl++++l+l+g+ss+lga+nfi+ti+++rapgmt+ ++pl
+  Amphimedon_queenslandica 100 NISFWLLPPALALLLGSAFveqGaGTGWTVYPPLAsiqahsggSVDLVIFSLHLAGISSILGAMNFITTIFNMRAPGMTLDRVPL 184
+                               *************999999997569************************************************************ PP
+
+                               HHHHHHHHHHHHHHHCHHHHHHHHHCHHHH..T..SSSC...E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT.SCCC CS
+                      COX1 153 fvwailatailillalpvlalalllllldr..g.kffdp...gdplldqhlfWffgHpeVyililpalgivyyilpkfag.rplf 230
+                               fvw++l+ta+l+ll+lpvla a+++ll+dr  + +ffdp   gdp+l+qhlfWffgHpeVyililp++g+++ i+p++a   ++f
+  Amphimedon_queenslandica 185 FVWSVLVTAFLLLLSLPVLAGAITMLLTDRnfNtTFFDPaggGDPILYQHLFWFFGHPEVYILILPGFGMISQIIPVYAAkEQIF 269
+                               ********************************88********************************************9769*** PP
+
+                               THHHHHHHHHHHHHHCCCCGGGGCTTSSS-HHHHHHHHHHHHHTHHHHHHCCCHHHHCCTTS-CHCHHHHHHHHHHHHHHHHHHH CS
+                      COX1 231 sykllvlafililflgilvwaHHlfttglpewlkalgsvfslliavPsglkvfnwlatlwrgsirfktpmlfalgfaflfiigGl 315
+                               +y  +v+a+++i++lg++vwaHH+ft+g+++ ++a++++++++iavP+g+k+f+w+at+++g ++f+tpml+a+gf+flf+igGl
+  Amphimedon_queenslandica 270 GYLGMVYAMVSIGVLGFIVWAHHMFTVGMDVDTRAYFTAATMIIAVPTGIKIFSWVATIYGGVLKFDTPMLWAIGFVFLFTIGGL 354
+                               ************************************************************************************* PP
+
+                               HHHHHTSHHHHHHHTTBHHHHHHHHHHHTTHHHHHHHHHHHHHHHHHHSB--HHHHHHHHHHHHHHHHHHHHHHHHHHHHTTHBS CS
+                      COX1 316 tGvllalpsvnyvvhgtyfvvaHfHlvllgavvfllfaaiyywlpkltgrmlserlaklhfwllfiGlllmflpmhilGllgmpr 400
+                               tG++la+ s+++v+h+ty+vvaHfH+vl +++vf++f+++y+w+ k+tg  ++e ++++hfw++f+G++l+f+p+h+lGl+g+pr
+  Amphimedon_queenslandica 355 TGIVLANSSLDIVLHDTYYVVAHFHYVLSMGAVFAIFGGFYFWFGKITGYRYREEYGRMHFWIMFVGVNLTFFPQHFLGLAGLPR 439
+                               ************************************************************************************* PP
+
+                               SSST-CCCCHHHCHHHHHHHHHHHHH CS
+                      COX1 401 raadyfletvpelqplnvlrtiggvl 426
+                               r+ dy    +++++ +n +++ig+++
+  Amphimedon_queenslandica 440 RYSDY----HDSFAGWNKISSIGSII 461
+                               ***99....679***********976 PP
+
+>> G0-G1_switch_2  G0/G1 switch protein 2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -4.2   0.8         2   1.6e+04      30      48 ..      17      35 ..      16      37 .. 0.66
+   2 ?   -3.0   0.4       1.1     9e+03      33      45 ..     269     281 ..     267     289 .. 0.74
+   3 ?   -3.2   0.6       1.3   1.1e+04      29      37 ..     384     392 ..     380     394 .. 0.82
+   4 ?    9.1   0.0    0.0002       1.6      25      58 ..     453     485 ..     448     495 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: -4.2 bits;  conditional E-value: 2
+            G0-G1_switch_2 30 GsvLallGvviglvetvcs 48
+                              G    l+G   g++ t++s
+  Amphimedon_queenslandica 17 GTLYLLFGGFAGMIGTAFS 35
+                              5666677777777777665 PP
+
+  == domain 2  score: -3.0 bits;  conditional E-value: 1.1
+            G0-G1_switch_2  33 LallGvviglvet 45 
+                               +  lG+v ++v +
+  Amphimedon_queenslandica 269 FGYLGMVYAMVSI 281
+                               5678999999876 PP
+
+  == domain 3  score: -3.2 bits;  conditional E-value: 1.3
+            G0-G1_switch_2  29 lGsvLallG 37 
+                               +G+v+a++G
+  Amphimedon_queenslandica 384 MGAVFAIFG 392
+                               69******9 PP
+
+  == domain 4  score: 9.1 bits;  conditional E-value: 0.0002
+            G0-G1_switch_2  25 klYvlGsvLallGvviglvetvcspFssesrlre 58 
+                               k+  +Gs+++++Gvv+ +v +vc+ F+ ++  + 
+  Amphimedon_queenslandica 453 KISSIGSIISIVGVVL-FVYIVCEAFTRAEAYKV 485
+                               78889*********98.799*******9987654 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (530 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       821  (0.0503496); expected 326.1 (0.02)
+Passed bias filter:                      320  (0.0196247); expected 326.1 (0.02)
+Passed Vit filter:                        30  (0.00183981); expected 16.3 (0.001)
+Passed Fwd filter:                         7  (0.00042929); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.80u 0.34s 00:00:01.14 Elapsed: 00:00:00.61
+# Mc/sec: 2485.64
+//
+Query:       Acropora  [L=533]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   2.7e-151  504.1  61.4   3.3e-151  503.8  61.4    1.1  1  COX1      Cytochrome C and Quinol oxidase polypeptide I
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  503.8  61.4    2e-155  3.3e-151       1     426 []      17     463 ..      17     463 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 503.8 bits;  conditional E-value: 2e-155
+               HHHHHHHHHHHHHHHHHHHHHHHHHHHCTCT......HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHHHHHHHHHHHHHHHHHH CS
+      COX1   1 kigllylivalvlllvggllgllirlqlafp.....dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprlnalsfwlvvlglvllll 95 
+               +ig+lyl++++ ++++g+++++lirl+l +p     d + yn+++t+H+ +mif++++p+ i+gfgn+lvpl+iga+d+afprln++sfwl++ +l+lll+
+  Acropora  17 DIGTLYLVFGIGAGMIGTAFSMLIRLELSAPgamlgDDHLYNVIVTAHAFIMIFFLVMPVmIGGFGNWLVPLYIGAPDMAFPRLNNISFWLLPPALILLLG 117
+               599**************************997777777************************************************************999 PP
+
+               HHH...S.-STTTTTTTC-........SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-HHHHHHHHHHHHHHHHCHHHHHHHHHCHHHH.. CS
+      COX1  96 sll...a.tqgwteYapls........gvdlwllglllvgvssllgainfivtilkrrapgmtvaklplfvwailatailillalpvlalalllllldr.. 182
+               s +   + ++gwt Y+pls        +vd+++++l+l+gvss+lga+nfi+til++rapgmt++k+plfvw+il+ta+l+ll+lpvla a+++ll+dr  
+  Acropora 118 SAFveqGvGTGWTVYPPLSsiqahsggAVDMAIFSLHLAGVSSILGAMNFITTILNMRAPGMTLNKMPLFVWSILITAFLLLLSLPVLAGAITMLLTDRnf 218
+               999997689******************************************************************************************** PP
+
+               T..SSSC...E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT.SCCCTHHHHHHHHHHHHHHCCCCGGGGCTTSSS-HHHHHHHHHHHHHTHHHH CS
+      COX1 183 g.kffdp...gdplldqhlfWffgHpeVyililpalgivyyilpkfag.rplfsykllvlafililflgilvwaHHlfttglpewlkalgsvfslliavPs 278
+               + +ffdp   gdp+l+qhlfWffgHpeVyililp++g+++ i+p+f+  +++f+y  +v+a+++i++lg++vwaHH+ft+g+++ ++a++++++++iavP+
+  Acropora 219 NtTFFDPaggGDPILFQHLFWFFGHPEVYILILPGFGMISQIIPTFVAkKQIFGYLGMVYAMLSIGILGFIVWAHHMFTVGMDVDTRAYFTAATMIIAVPT 319
+               88********************************************977**************************************************** PP
+
+               HHCCCHHHHCCTTS-CHCHHHHHHHHHHHHHHHHHHHHHHHHTSHHHHHHHTTBHHHHHHHHHHHTTHHHHHHHHHHHHHHHHHHSB--HHHHHHHHHHHH CS
+      COX1 279 glkvfnwlatlwrgsirfktpmlfalgfaflfiigGltGvllalpsvnyvvhgtyfvvaHfHlvllgavvfllfaaiyywlpkltgrmlserlaklhfwll 379
+               g+kvf+wlat+ +g +r++tpml+a+gf+flf++gGltGv+la+ s+++v+h+ty+vvaHfH+vl +++vf++f+++yyw+ k+tg  ++e ++k+hfwl+
+  Acropora 320 GIKVFSWLATIFGGTLRLDTPMLWAMGFVFLFTLGGLTGVVLANSSLDVVLHDTYYVVAHFHYVLSMGAVFAIFGGFYYWVGKITGYCYNELYGKAHFWLM 420
+               ***************************************************************************************************** PP
+
+               HHHHHHHHHHHHHHHHTTHBSSSST-CCCCHHHCHHHHHHHHHHHHH CS
+      COX1 380 fiGlllmflpmhilGllgmprraadyfletvpelqplnvlrtiggvl 426
+               fiG++l+f+p+h+lGl+g+prr+ d      + ++ +n+++++g+++
+  Acropora 421 FIGVNLTFFPQHFLGLTGFPRRYSDF----ADCFAGWNLVSSLGSTI 463
+               ************************76....4689*********9875 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (533 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       793  (0.0486324); expected 326.1 (0.02)
+Passed bias filter:                      296  (0.0181528); expected 326.1 (0.02)
+Passed Vit filter:                        27  (0.00165583); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.71u 0.50s 00:00:01.21 Elapsed: 00:00:00.77
+# Mc/sec: 1980.29
+//
+Query:       Trichinella  [L=514]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   8.7e-113  377.2  51.5   1.1e-112  376.9  51.5    1.0  1  COX1      Cytochrome C and Quinol oxidase polypeptide I
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  376.9  51.5  6.6e-117  1.1e-112       1     425 [.      12     460 ..      12     461 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 376.9 bits;  conditional E-value: 6.6e-117
+                  HHHHHHHHHHHHHHHHHHHHHHHHHHHCTCT.........HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHHHHHHHHHHHH CS
+         COX1   1 kigllylivalvlllvggllgllirlqlafp........dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprlnalsfwlvvlg 89 
+                  kig+ly++++++ +++g+ l++lir+ l +p         +e yn+++t+H+ + if++++p+ + gfgn+l+p++ ga d++fprln+l+fwl++ +
+  Trichinella  12 KIGTLYILFGIIGGILGISLSALIRIILSSPwtfnvnglISEYYNVIVTAHALAIIFFIVIPIlLRGFGNWLIPIIAGAADISFPRLNNLGFWLLPPA 109
+                  699*************************9887666655444**********************99********************************* PP
+
+                  HHHHHHHHH...S.-STTTTTTTC-........SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-HHHHHHHHHHHHHHHHCHHHHHHH CS
+         COX1  90 lvllllsll...a.tqgwteYapls........gvdlwllglllvgvssllgainfivtilkrrapgmtvaklplfvwailatailillalpvlalal 175
+                  l+ll +s+l   + ++gwt Y+pls         vdl++++l+l+g+ss+ g infi+t +  r    t+++l++fvw +l+t+++++++lpvla ++
+  Trichinella 110 LILLSSSILiniGaGTGWTIYPPLStwlghpnhSVDLVIFSLHLAGISSITGRINFITTCFLSRPIIYTLERLSMFVWRVLITSFILIISLPVLAGGI 207
+                  *******99998569*************************************************9999999*************************** PP
+
+                  HHCHHHH..T..SSSC...E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT.SCCCTHHHHHHHHHHHHHHCCCCGGGGCTTSSS-HHHHHH CS
+         COX1 176 llllldr..g.kffdp...gdplldqhlfWffgHpeVyililpalgivyyilpkfag.rplfsykllvlafililflgilvwaHHlfttglpewlkal 266
+                  ++ll+dr  g +ff++   gdp+l+qh+fWffgHpeVyil+lpa+g+v++ l+ ++g  ++f+   +++a+  i++lg  vw+HH +t+g++  ++a+
+  Trichinella 208 TILLTDRnfGtTFFETsggGDPILFQHIFWFFGHPEVYILVLPAFGVVSEALIFISGkFKVFGPLGIIYAITRIGILGCFVWGHHIYTVGIDIDTRAY 305
+                  *********99***8899**************************************978*************************************** PP
+
+                  HHHHHHHTHHHHHHCCCHHHHCCTTS-CHCHHHHHHHHHHHHHHHHHHHHHHHHTSHHHHHHHTTBHHHHHHHHHHHTTHHHHHHHHHHHHHHHHHHS CS
+         COX1 267 gsvfslliavPsglkvfnwlatlwrgsirfktpmlfalgfaflfiigGltGvllalpsvnyvvhgtyfvvaHfHlvllgavvfllfaaiyywlpkltg 364
+                  +++++++i +P+g+k+f wlatl++ +i+++ ++l++lgf++lf+igGltGv l+++s+++++h+ty+vv+HfH+vl  +vvf+++ a+ +w p + g
+  Trichinella 306 FTAATIIIGIPTGVKIFRWLATLYGTHIKITPAILWVLGFLLLFTIGGLTGVRLSNASLDLLLHDTYYVVGHFHFVLSIGVVFAIIIAVTLWTPWILG 403
+                  ************************************************************************************************** PP
+
+                  B--HHHHHHHHHHHHHHHHHHHHHHHHHHHHTTHBSSSST-.CCCCHHHCHHHHHHHHHHHH CS
+         COX1 365 rmlserlaklhfwllfiGlllmflpmhilGllgmprraady.fletvpelqplnvlrtiggv 425
+                    +++ ++k++f l+fiG +l+f+p+h+lGl g+prr++dy +      + +++ l+++g++
+  Trichinella 404 FSFNTIIQKTQFNLIFIGANLTFIPQHFLGLNGIPRRYVDYrD-----IYSLIHTLSSFGSL 460
+                  ****************************************944.....67777777777765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (514 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       726  (0.0445235); expected 326.1 (0.02)
+Passed bias filter:                      279  (0.0171103); expected 326.1 (0.02)
+Passed Vit filter:                        20  (0.00122654); expected 16.3 (0.001)
+Passed Fwd filter:                         1  (6.13271e-05); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.63u 0.46s 00:00:01.09 Elapsed: 00:00:00.71
+# Mc/sec: 2071.08
+//
+Query:       Balanoglossus  [L=519]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   1.3e-143  478.8  60.8   1.5e-143  478.6  60.8    1.0  1  COX1      Cytochrome C and Quinol oxidase polypeptide I
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  478.6  60.8  9.4e-148  1.5e-143       1     426 []      14     460 ..      14     460 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 478.6 bits;  conditional E-value: 9.4e-148
+                    HHHHHHHHHHHHHHHHHHHHHHHHHHHCTCT......HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHHHHHHHHHHHHH CS
+           COX1   1 kigllylivalvlllvggllgllirlqlafp.....dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprlnalsfwlvvlgl 90 
+                    +ig+ly++++ +++++g+ l++lir++la+p     d + yn+++t+H+ +mif++++p+ i+gfgn+l+pl++ga+d+afprln++sfwl++ ++
+  Balanoglossus  14 DIGTLYFLLGAWAGMIGTGLSILIRAELAQPgpllgDDQIYNVIVTAHAFVMIFFMVMPImIGGFGNWLLPLMLGAPDMAFPRLNNMSFWLLPPSF 109
+                    599**************************996666666********************************************************** PP
+
+                    HHHHHHHH...S.-STTTTTTTC-........SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-HHHHHHHHHHHHHHHHCHHHHHH CS
+           COX1  91 vllllsll...a.tqgwteYapls........gvdlwllglllvgvssllgainfivtilkrrapgmtvaklplfvwailatailillalpvlala 174
+                    +lll+s     + ++gwt Y+pl+         vdl++++l+l+g+ss+lgainf++t++++rapg+ + +lplfvw++++t+il+ll+lpvla a
+  Balanoglossus 110 LLLLSSAGverGvGTGWTVYPPLAgnmahaggSVDLAIFSLHLAGISSILGAINFMTTVINMRAPGVRFDRLPLFVWSVFITVILLLLSLPVLAGA 205
+                    ****9997786578********************************************************************************** PP
+
+                    HHHCHHHH..T..SSSC...E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT.SCCCTHHHHHHHHHHHHHHCCCCGGGGCTTSSS-HHH CS
+           COX1 175 lllllldr..g.kffdp...gdplldqhlfWffgHpeVyililpalgivyyilpkfag.rplfsykllvlafililflgilvwaHHlfttglpewl 263
+                    +++ll+dr  + +ffdp   gdp+l+qhlfWffgHpeVyililpa+g+++++++ ++g ++ f+y  +v+a+i+i++lg+lvwaHH+ft+g+++ +
+  Balanoglossus 206 ITMLLTDRnlNtSFFDPaggGDPILYQHLFWFFGHPEVYILILPAFGMISHVIAFYSGkKEPFGYLGMVYAMIAIGILGFLVWAHHMFTVGMDVDT 301
+                    *********9889********************************************99************************************* PP
+
+                    HHHHHHHHHHTHHHHHHCCCHHHHCCTTS-CHCHHHHHHHHHHHHHHHHHHHHHHHHTSHHHHHHHTTBHHHHHHHHHHHTTHHHHHHHHHHHHHH CS
+           COX1 264 kalgsvfslliavPsglkvfnwlatlwrgsirfktpmlfalgfaflfiigGltGvllalpsvnyvvhgtyfvvaHfHlvllgavvfllfaaiyywl 359
+                    +a++++++++iavP+g+k+f+wlatl+++++++++p+l+algf+flf++gGltG++l++ s+++v+h+ty+vvaHfH+vl +++vf++fa++++w+
+  Balanoglossus 302 RAYFTAATMVIAVPTGIKIFSWLATLHGSALQWEAPLLWALGFVFLFTVGGLTGIVLSNSSLDVVMHDTYYVVAHFHYVLSMGAVFGIFAGFIHWF 397
+                    ************************************************************************************************ PP
+
+                    HHHHSB--HHHHHHHHHHHHHHHHHHHHHHHHHHHHTTHBSSSST-CCCCHHHCHHHHHHHHHHHHH CS
+           COX1 360 pkltgrmlserlaklhfwllfiGlllmflpmhilGllgmprraadyfletvpelqplnvlrtiggvl 426
+                    p +tg +l+  + k+hfw++f+G++l+f+p+h+lGl+gmprr+ dy     ++++++nvl+++g+++
+  Balanoglossus 398 PLFTGLTLHPVWTKFHFWTMFLGVNLTFFPQHFLGLAGMPRRYSDY----PDAYTTWNVLSSVGSIV 460
+                    **********************************************....579***********975 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (519 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       758  (0.046486); expected 326.1 (0.02)
+Passed bias filter:                      287  (0.0176009); expected 326.1 (0.02)
+Passed Vit filter:                        28  (0.00171716); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.75u 0.28s 00:00:01.03 Elapsed: 00:00:00.56
+# Mc/sec: 2651.38
+//
+Query:       Tetrancistrum_nebulosi  [L=519]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   6.6e-109  364.5  48.6     8e-109  364.2  48.6    1.1  1  COX1      Cytochrome C and Quinol oxidase polypeptide I
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  364.2  48.6  4.9e-113    8e-109       1     425 [.      16     461 ..      16     469 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 364.2 bits;  conditional E-value: 4.9e-113
+                             HHHHHHHHHHHHHHHHHHHHHHHHHHHCTCT......HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHHHH CS
+                    COX1   1 kigllylivalvlllvggllgllirlqlafp.....dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprlnal 81 
+                             +ig+ y+++++++++vg  l  lir+q+        + + y  ++t Hg +mif+f++p+ i+gfg yl+pll+  +dl  prlnal
+  Tetrancistrum_nebulosi  16 RIGVIYTLIGVWFGFVGLGLRFLIRIQMLDSydnvvSTDVYKNIITRHGLIMIFFFLMPVlIGGFGKYLIPLLLCLPDLNLPRLNAL 102
+                             699************************97434445567************************************************* PP
+
+                             HHHHHHHHHHHHHHHHH..S.-STTTTTTTC-........SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-HHHHHH CS
+                    COX1  82 sfwlvvlglvllllsll..a.tqgwteYapls........gvdlwllglllvgvssllgainfivtilkrrapgmtvaklplfvwai 157
+                               wl++ ++++l++sll  + ++gwt+Y+pls        g+d+++++l+l+gvs ++ +infi ti      +++ +++++++wa+
+  Tetrancistrum_nebulosi 103 RAWLLLPSGICLIISLLvgKsGVGWTFYPPLSgvmfragkGTDFLMFSLHLAGVSRIFSSINFICTIQSAIFYEVNHEHISIVIWAY 189
+                             ****************998679***********************************************888888888999****** PP
+
+                             HHHHHHHHHHCHHHHHHHHHCHHHH..T..SSSC...E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT.SCCCTHHHHHH CS
+                    COX1 158 latailillalpvlalalllllldr..g.kffdp...gdplldqhlfWffgHpeVyililpalgivyyilpkfag.rplfsykllvl 237
+                             l+t+il+ll+lpvla+++++ll+dr  g  ffdp   gdp+l+qh+fWffgHpeVy+lilp++giv +i +++ + ++ f+y  lv+
+  Tetrancistrum_nebulosi 190 LFTSILLLLSLPVLAAGITMLLFDRkfGsAFFDPmggGDPVLFQHMFWFFGHPEVYVLILPGFGIVRHICIRVRKrKEAFGYLGLVF 276
+                             ***************************99********************************************868*********** PP
+
+                             HHHHHHHHCCCCGGGGCTTSSS-HHHHHHHHHHHHHTHHHHHHCCCHHHHCCTTS-CHC.HHHHHHHHHHHHHHHHHHHHHHHHTSH CS
+                    COX1 238 afililflgilvwaHHlfttglpewlkalgsvfslliavPsglkvfnwlatlwrgsirf.ktpmlfalgfaflfiigGltGvllalp 323
+                             a+++i+ lg +vwaHH+ft+g++  + +++  ++++i vP+g+kvf+wl+ l ++++r  + +++++l+f++lf+ gG+tG++l++ 
+  Tetrancistrum_nebulosi 277 AIFAIVCLGCVVWAHHMFTVGMDIKTTVFFRSVTMIIGVPTGIKVFSWLYMLSSSKVRRrDPVIWWILAFIILFTTGGVTGIILSSS 363
+                             **********************************************************7699999999******************* PP
+
+                             HHHHHHTTBHHHHHHHHHHHTTHHHHHHHHHHHHHHHHHHSB--HHHHHHHHHHHHHHHHHHHHHHHHHHHHTTHBSSSST-.CCCC CS
+                    COX1 324 svnyvvhgtyfvvaHfHlvllgavvfllfaaiyywlpkltgrmlserlaklhfwllfiGlllmflpmhilGllgmprraady.flet 409
+                              ++ ++h+t fvvaHfH+v+ ++    ++  +++w+p +tg +l++ l k+h +l ++G++l+f+pmh+ G+ g+prr+  y     
+  Tetrancistrum_nebulosi 364 VMDRLLHDTWFVVAHFHYVFSLGSYTRVVISFIWWWPIITGYTLNKVLLKAHCVLSMTGFNLCFFPMHYFGICGLPRRVCVYdR--- 447
+                             ********************************************************************************9951... PP
+
+                             HHHCHHHHHHHHHHHH CS
+                    COX1 410 vpelqplnvlrtiggv 425
+                               ++ ++  l+t+g v
+  Tetrancistrum_nebulosi 448 --SFSFVSKLCTVGRV 461
+                             ..56666666666654 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (519 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       828  (0.0507789); expected 326.1 (0.02)
+Passed bias filter:                      300  (0.0183981); expected 326.1 (0.02)
+Passed Vit filter:                        32  (0.00196247); expected 16.3 (0.001)
+Passed Fwd filter:                         1  (6.13271e-05); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.70u 0.48s 00:00:01.18 Elapsed: 00:00:00.91
+# Mc/sec: 1631.62
+//
+Query:       Pseudogarypus_banksi  [L=511]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   2.5e-127  425.1  47.8     3e-127  424.9  47.8    1.0  1  COX1      Cytochrome C and Quinol oxidase polypeptide I
+  ------ inclusion threshold ------
+        1.9    8.1  10.7       0.42   10.2   6.1    2.4  2  DUF3789   Protein of unknown function (DUF3789)
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  424.9  47.8  3.7e-131    3e-127       1     426 []      12     458 ..      12     458 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 424.9 bits;  conditional E-value: 3.7e-131
+                           HHHHHHHHHHHHHHHHHHHHHHHHHHHCTCT......HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHHHHHH CS
+                  COX1   1 kigllylivalvlllvggllgllirlqlafp.....dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprlnalsf 83 
+                           +ig+lyli++++  ++g+++ ++ir++l +p     + + yn+++t H+ + if++++pf i+gfgn+lvpl+ig++d+afprln+l f
+  Pseudogarypus_banksi  12 DIGTLYLIIGTWSAFIGTAFRIIIRMELSQPgsfigKDHIYNVIVTTHAFIIIFFIVIPFiIGGFGNWLVPLIIGSPDIAFPRLNNLRF 100
+                           599**************************997666656*************************************************** PP
+
+                           HHHHHHHHHHHHHHH...S.-STTTTTTTC-........SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-HHHHHHHHH CS
+                  COX1  84 wlvvlglvllllsll...a.tqgwteYapls........gvdlwllglllvgvssllgainfivtilkrrapgmtvaklplfvwailat 160
+                           w+++ +l+lll+s     + ++gwt Y+pl+        ++d+++++l+l+g+ss+lgainfi ti++ + +g+t+  +plfvw+il+t
+  Pseudogarypus_banksi 101 WFLPPSLLLLLVSSGieiGxGTGWTIYPPLAgrevhptgAIDIVIFSLHLAGASSILGAINFISTIINIKIEGITIISTPLFVWSILVT 189
+                           *********888886687668******************************************************************** PP
+
+                           HHHHHHHCHHHHHHHHHCHHHH..T..SSSC...E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT.SCCCTHHHHHHHHHHH CS
+                  COX1 161 ailillalpvlalalllllldr..g.kffdp...gdplldqhlfWffgHpeVyililpalgivyyilpkfag.rplfsykllvlafili 242
+                           +ililla+pvla a+++ll+dr  + +ffdp   gdp+l+qhlfWffgHpeVyili+p++gi+++i + ++g ++ f+   +v+a+++i
+  Pseudogarypus_banksi 190 TILILLAIPVLAGAITILLTDRnfNtSFFDPaggGDPILFQHLFWFFGHPEVYILIIPGFGIISHITSFYSGkKEPFAPIGIVYAILTI 278
+                           ***********************9889********************************************999*************** PP
+
+                           HHHCCCCGGGGCTTSSS-HHHHHHHHHHHHHTHHHHHHCCCHHHHCCTTS-CHC.HHHHHHHHHHHHHHHHHHHHHHHHTSHHHHHHHT CS
+                  COX1 243 lflgilvwaHHlfttglpewlkalgsvfslliavPsglkvfnwlatlwrgsirf.ktpmlfalgfaflfiigGltGvllalpsvnyvvh 330
+                           +flg++vw+HH ft+g+++  +a++++++++iavP+g+k+f w+ tl  g  ++ + p+++++gf+flf +gG+tGv+l++ s+++ +h
+  Pseudogarypus_banksi 279 GFLGFIVWGHHIFTVGIDVDSRAYFTTATIIIAVPTGIKIFRWISTL-AGTKNVnNPPIIWTIGFIFLFSLGGFTGVILSNSSFDISLH 366
+                           ***********************************************.5566666********************************** PP
+
+                           TBHHHHHHHHHHHTTHHHHHHHHHHHHHHHHHHSB--HHHHHHHHHHHHHHHHHHHHHHHHHHHHTTHBSSSST-CCCCHHHCHHHHHH CS
+                  COX1 331 gtyfvvaHfHlvllgavvfllfaaiyywlpkltgrmlserlaklhfwllfiGlllmflpmhilGllgmprraadyfletvpelqplnvl 419
+                           +ty+vvaHfH+vl  ++vf++fa+i +w+p +++  +++++ k++f+++f+G++l+f+p+h+lGl+g+prr+ dy     ++l ++n +
+  Pseudogarypus_banksi 367 DTYYVVAHFHYVLSIGAVFTIFAGITHWFPIFFSTPINTKWIKIQFFTIFVGVNLTFFPQHFLGLIGIPRRYSDY----LDQLLFYNSI 451
+                           **************************************************************************9....5699****** PP
+
+                           HHHHHHH CS
+                  COX1 420 rtiggvl 426
+                           +++g+++
+  Pseudogarypus_banksi 452 SSLGSII 458
+                           ***9975 PP
+
+>> DUF3789  Protein of unknown function (DUF3789)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.2   6.1   5.1e-05      0.42       2      18 ..     340     356 ..     339     356 .. 0.94
+   2 ?   -2.3   0.1      0.43   3.5e+03       9      16 ..     453     460 ..     451     461 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 10.2 bits;  conditional E-value: 5.1e-05
+               DUF3789   2 vkdfllvsvGsgiGVvl 18 
+                           +++++l+s+G+++GV+l
+  Pseudogarypus_banksi 340 IGFIFLFSLGGFTGVIL 356
+                           89*************97 PP
+
+  == domain 2  score: -2.3 bits;  conditional E-value: 0.43
+               DUF3789   9 svGsgiGV 16 
+                           s+Gs i+V
+  Pseudogarypus_banksi 453 SLGSIISV 460
+                           89****99 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (511 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       725  (0.0444622); expected 326.1 (0.02)
+Passed bias filter:                      231  (0.0141666); expected 326.1 (0.02)
+Passed Vit filter:                        22  (0.0013492); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.72u 0.41s 00:00:01.12 Elapsed: 00:00:00.65
+# Mc/sec: 2249.05
+//
+Query:       Benedenia_hoshinai  [L=529]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   5.2e-112  374.7  52.2   5.2e-112  374.7  52.2    1.5  2  COX1      Cytochrome C and Quinol oxidase polypeptide I
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  374.7  52.2  3.2e-116  5.2e-112       1     425 [.      18     462 ..      18     463 .. 0.96
+   2 ?   -2.7   0.2      0.11   1.9e+03     250     264 ..     503     517 ..     498     520 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 374.7 bits;  conditional E-value: 3.2e-116
+                         HHHHHHHHHHHHHHHHHHHHHHHHHHHCTCT......HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHHHHHHHH CS
+                COX1   1 kigllylivalvlllvggllgllirlqlafp.....dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprlnalsfwl 85 
+                         +ig+ y++v+++ +++g  l +lir+++  p       e ynq++t Hg++mif+f++p+ i+gfgnyl+pll++ +dl  prlnals wl
+  Benedenia_hoshinai  18 RIGMIYTLVGVWSGFLGLGLRILIRTNMGDPynniiPTEVYNQVITSHGIIMIFFFLMPVlIGGFGNYLIPLLLNLPDLNLPRLNALSAWL 108
+                         699*************************8665555445***************************************************** PP
+
+                         HHHHHHHHHHHHH.S.-STTTTTTTC-........SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-HHHHHHHHHHHHHHH CS
+                COX1  86 vvlglvllllsll.a.tqgwteYapls........gvdlwllglllvgvssllgainfivtilkrrapgmtvaklplfvwailatailill 166
+                         ++ ++++l+ sl+ + ++gwt+Y+pls        g+d+++++l+l+g+ss+l +i fi ti      +++ + +++++w++l+t++l+ll
+  Benedenia_hoshinai 109 LMPSMICLITSLFkGtGVGWTFYPPLSgglfssgrGTDYLMFSLHLAGISSILSSIKFICTINSAIYFNINHEYISVVIWSYLFTSVLLLL 199
+                         *************7579***********************************************999999999999*************** PP
+
+                         HCHHHHHHHHHCHHHH..T..SSSC...E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT.SCCCTHHHHHHHHHHHHHHCCCCG CS
+                COX1 167 alpvlalalllllldr..g.kffdp...gdplldqhlfWffgHpeVyililpalgivyyilpkfag.rplfsykllvlafililflgilvw 250
+                         +lpvla+++++ll+dr    +ffdp   gdp+l+qh+fWffgHpeVy+lilp++giv++i ++f++  + f+y  lv+a+++i+ lg +vw
+  Benedenia_hoshinai 200 SLPVLAAGITMLLFDRkfSsSFFDPmggGDPVLFQHMFWFFGHPEVYVLILPGFGIVSHICMRFSNkSEPFGYLGLVFAMFAIVCLGCVVW 290
+                         *****************97799**9****************************************9899********************** PP
+
+                         GGGCTTSSS-HHHHHHHHHHHHHTHHHHHHCCCHHHHCCTTS-CHC.HHHHHHHHHHHHHHHHHHHHHHHHTSHHHHHHHTTBHHHHHHHH CS
+                COX1 251 aHHlfttglpewlkalgsvfslliavPsglkvfnwlatlwrgsirf.ktpmlfalgfaflfiigGltGvllalpsvnyvvhgtyfvvaHfH 340
+                         aHH+ft+g+++ + +++s ++++i vP+g+kvf+wl+ l++++++  +  m+++l+f++lf+igG+tG++l++  ++ ++h+t fv+aHfH
+  Benedenia_hoshinai 291 AHHMFTIGMDVKTTVFFSSVTMIIGVPTGIKVFSWLYMLIGSNFSRrDPIMWWILAFIILFTIGGVTGIVLSASVLDSLLHDTWFVIAHFH 381
+                         *********************************************7699999*************************************** PP
+
+                         HHHTTHHHHHHHHHHHHHHHHHHSB--HHHHHHHHHHHHHHHHHHHHHHHHHHHHTTHBSSSST-CCCCHHHCHHHHHHHHHHHH CS
+                COX1 341 lvllgavvfllfaaiyywlpkltgrmlserlaklhfwllfiGlllmflpmhilGllgmprraadyfletvpelqplnvlrtiggv 425
+                         +v  ++    ++  i++w+p +tg  l++ l + h +l +iG++++f+pmh+ Gl g+prr+  y     +++ ++  ++t+g++
+  Benedenia_hoshinai 382 YVSSLGSYTRVIISIIWWWPIITGYNLNKILLQSHCILRMIGVNMCFFPMHYFGLCGLPRRVCVY----DATFRWISKVCTYGSL 462
+                         ***************************************************************99....3478888888888776 PP
+
+  == domain 2  score: -2.7 bits;  conditional E-value: 0.11
+                         GGGGCTTSSS-HHHH CS
+                COX1 250 waHHlfttglpewlk 264
+                          +HH  +t  ++w+ 
+  Benedenia_hoshinai 503 LPHHITYTNSTNWWS 517
+                         68********99997 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (529 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       835  (0.0512081); expected 326.1 (0.02)
+Passed bias filter:                      282  (0.0172942); expected 326.1 (0.02)
+Passed Vit filter:                        26  (0.00159451); expected 16.3 (0.001)
+Passed Fwd filter:                         1  (6.13271e-05); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.71u 0.46s 00:00:01.17 Elapsed: 00:00:00.94
+# Mc/sec: 1609.98
+//
+Query:       Myxine  [L=517]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   5.4e-141  470.2  50.3   6.6e-141  469.9  50.3    1.1  1  COX1      Cytochrome C and Quinol oxidase polypeptide I
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  469.9  50.3  4.1e-145  6.6e-141       1     426 []      14     460 ..      14     460 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 469.9 bits;  conditional E-value: 4.1e-145
+             HHHHHHHHHHHHHHHHHHHHHHHHHHHCTCT......HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHHHHHHHHHHHHHHHHHHHH CS
+    COX1   1 kigllylivalvlllvggllgllirlqlafp.....dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprlnalsfwlvvlglvllllsl 97 
+             +ig+lyli++ +++++g++l+++ir++l +p     + + yn+++t+H+ + if++++p+ i+gfgn+lvp++iga+d+afpr+n++sfwl++ +l+lll+s 
+  Myxine  14 DIGTLYLIFGAWAGIIGTALSVIIRTELSQPgslinNDQLYNTIITAHAFVIIFFIVIPIiIGGFGNWLVPIIIGAPDIAFPRINNISFWLLPPSLILLLSSS 116
+             599**************************997666666************************************************************88888 PP
+
+             H...S.-STTTTTTTC-........SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-HHHHHHHHHHHHHHHHCHHHHHHHHHCHHHH..T..S CS
+    COX1  98 l...a.tqgwteYapls........gvdlwllglllvgvssllgainfivtilkrrapgmtvaklplfvwailatailillalpvlalalllllldr..g.kf 185
+             l   + ++gwt Y+pls         vdl++++l+l+gvss+lgainfi+ti++ +++ + + ++plfvw+il+tail+ll+lpvla+a+++ll+dr  + +f
+  Myxine 117 LvssGaGTGWTVYPPLSnhishigpSVDLAIFSLHLAGVSSILGAINFITTIINIKTRSIEIYHIPLFVWSILITAILLLLSLPVLAAAITILLTDRnlNtTF 219
+             8797569********************************************************************************************88** PP
+
+             SSC...E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT.SCCCTHHHHHHHHHHHHHHCCCCGGGGCTTSSS-HHHHHHHHHHHHHTHHHHHHCCCH CS
+    COX1 186 fdp...gdplldqhlfWffgHpeVyililpalgivyyilpkfag.rplfsykllvlafililflgilvwaHHlfttglpewlkalgsvfslliavPsglkvfn 284
+             fdp   gdp+l+qhlfWffgHpeVyililp++gi++++++ ++g ++ f+y  +++a+i+i+flg++vwaHH ft+g+++ ++a+++ ++++ia+P+g+kvf+
+  Myxine 220 FDPsggGDPILYQHLFWFFGHPEVYILILPGFGIISHVVTFYSGkKEPFGYIGIAWAIIAIGFLGFIVWAHHIFTVGIDVDTRAYFTSATIIIAIPTGVKVFS 322
+             *******************************************99********************************************************** PP
+
+             HHHCCTTS-CHCHHHHHHHHHHHHHHHHHHHHHHHHTSHHHHHHHTTBHHHHHHHHHHHTTHHHHHHHHHHHHHHHHHHSB--HHHHHHHHHHHHHHHHHHHH CS
+    COX1 285 wlatlwrgsirfktpmlfalgfaflfiigGltGvllalpsvnyvvhgtyfvvaHfHlvllgavvfllfaaiyywlpkltgrmlserlaklhfwllfiGlllmf 387
+             wlat+++g+i+++ p+l+algf+flf++gGltG++l++ s+++v+h+ty+vvaHfH+vl +++vf+++a++++w+p + g  +++++ak+hfw++f+G++l+f
+  Myxine 323 WLATIHGGDIKWEPPILWALGFIFLFTVGGLTGIVLSNSSLDVVLHDTYYVVAHFHYVLSMGAVFAIIAGLIHWFPLFSGYSINKTWAKIHFWIMFTGVNLTF 425
+             ******************************************************************************************************* PP
+
+             HHHHHHHHTTHBSSSST-CCCCHHHCHHHHHHHHHHHHH CS
+    COX1 388 lpmhilGllgmprraadyfletvpelqplnvlrtiggvl 426
+             +p+h+lGl+g+prr+ dy     +++ ++nvl++ig+++
+  Myxine 426 FPQHFLGLAGIPRRYSDY----PDAYSTWNVLSSIGSIV 460
+             ******************....579***********975 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (517 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       889  (0.0545198); expected 326.1 (0.02)
+Passed bias filter:                      335  (0.0205446); expected 326.1 (0.02)
+Passed Vit filter:                        23  (0.00141052); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.77u 0.44s 00:00:01.21 Elapsed: 00:00:00.65
+# Mc/sec: 2275.46
+//
+Query:       Drosophila  [L=512]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   4.8e-135  450.6  46.4   5.8e-135  450.3  46.4    1.1  1  COX1      Cytochrome C and Quinol oxidase polypeptide I
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  450.3  46.4  3.5e-139  5.8e-135       1     426 []      13     459 ..      13     459 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 450.3 bits;  conditional E-value: 3.5e-139
+                 HHHHHHHHHHHHHHHHHHHHHHHHHHHCTCT......HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHHHHHHHHHHHHHHHH CS
+        COX1   1 kigllylivalvlllvggllgllirlqlafp.....dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprlnalsfwlvvlglvll 93 
+                 +ig+ly+i++ ++++vg+ l +lir++l  p     d + yn+++t+H+ + if++++p+ i+gfgn+lvpl++ga+d+afpr+n++ fwl++ +l ll
+  Drosophila  13 DIGTLYFIFGAWAGIVGTSLRILIRAELGHPgaligDDQIYNVIVTAHAFIIIFFMVIPIiIGGFGNWLVPLILGAPDIAFPRINNIRFWLLPPALSLL 111
+                 599*************************9997777777************************************************************8 PP
+
+                 HHHHH...S.-STTTTTTTC-........SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-HHHHHHHHHHHHHHHHCHHHHHHHHHCHH CS
+        COX1  94 llsll...a.tqgwteYapls........gvdlwllglllvgvssllgainfivtilkrrapgmtvaklplfvwailatailillalpvlalallllll 180
+                 l+s +   + ++gwt Y+pls         vdl++++l+l+g+ss+lga+nfi+t+++ r+ g+++ ++plfvw++++ta+l+ll+lpvla a+++ll+
+  Drosophila 112 LVSRIvenGaGTGWTVYPPLSagiahggaSVDLAIFSLHLAGISSILGAVNFITTVINIRSTGISLDRIPLFVWSVVITALLLLLSLPVLAGAITILLT 210
+                 88887797569**************************************************************************************** PP
+
+                 HH..T..SSSC...E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT.SCCCTHHHHHHHHHHHHHHCCCCGGGGCTTSSS-HHHHHHHHHHHH CS
+        COX1 181 dr..g.kffdp...gdplldqhlfWffgHpeVyililpalgivyyilpkfag.rplfsykllvlafililflgilvwaHHlfttglpewlkalgsvfsl 272
+                 dr  + +ffdp   gdp+l+qhlfWffgHpeVyililp++gi+++i+ + +g ++ f+   +++a+++i++lg++vwaHH ft+g+++ ++a+++ +++
+  Drosophila 211 DRnlNtSFFDPaggGDPILYQHLFWFFGHPEVYILILPGFGIISHIIRQESGkKETFGSLGIIYAILAIGLLGFIVWAHHIFTVGIDVDTRAYFTSATI 309
+                 ***9889********************************************99********************************************** PP
+
+                 HTHHHHHHCCCHHHHCCTTS-CHCHHHHHHHHHHHHHHHHHHHHHHHHTSHHHHHHHTTBHHHHHHHHHHHTTHHHHHHHHHHHHHHHHHHSB--HHHH CS
+        COX1 273 liavPsglkvfnwlatlwrgsirfktpmlfalgfaflfiigGltGvllalpsvnyvvhgtyfvvaHfHlvllgavvfllfaaiyywlpkltgrmlserl 371
+                 +iavP+g+k+f+wlatl++ +++++ ++l+algf+flf++gGltGv+la+ sv++++h+ty+vvaHfH+vl  ++vf+++a++++w+p +tg +l++++
+  Drosophila 310 IIAVPTGIKIFSWLATLHGTQLSYSPAILWALGFVFLFTVGGLTGVVLANSSVDIILHDTYYVVAHFHYVLSIGAVFAIIAGFIHWYPLFTGLTLNNKW 408
+                 *************************************************************************************************** PP
+
+                 HHHHHHHHHHHHHHHHHHHHHHHHTTHBSSSST-CCCCHHHCHHHHHHHHHHHHH CS
+        COX1 372 aklhfwllfiGlllmflpmhilGllgmprraadyfletvpelqplnvlrtiggvl 426
+                  k hf+++fiG++l+f+p+h+lGl+g+prr+ dy     ++++++n+++tig+++
+  Drosophila 409 LKSHFIIIFIGVNLTFFPQHFLGLAGIPRRYSDY----PDAYTTWNIVSTIGSTI 459
+                 **********************************....579***********975 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (512 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       793  (0.0486324); expected 326.1 (0.02)
+Passed bias filter:                      289  (0.0177235); expected 326.1 (0.02)
+Passed Vit filter:                        22  (0.0013492); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.70u 0.32s 00:00:01.02 Elapsed: 00:00:00.56
+# Mc/sec: 2615.62
+//
+Query:       Ciona  [L=520]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   8.8e-109  364.1  32.4   1.1e-108  363.7  32.4    1.0  1  COX1      Cytochrome C and Quinol oxidase polypeptide I
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  363.7  32.4  6.9e-113  1.1e-108       2     424 ..      23     467 ..      22     469 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 363.7 bits;  conditional E-value: 6.9e-113
+            HHHHHHHHHHHHHHHHHHHHHHHHHHCTCT......HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHHHHHHHHHHHHHHHHHHHHH. CS
+   COX1   2 igllylivalvlllvggllgllirlqlafp.....dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprlnalsfwlvvlglvllllsll. 98 
+            i +ly+i+ ++  ++ + l+++ir++l +      + + yn+++t H+ + if+f++p+ i  f n+l+pl+++a+d+afpr+n++sfwl++ +++lll s + 
+  Ciona  23 IRTLYFIFRTWSRIIRTSLSVIIRIELSQRrrvinNRQIYNVVVTSHAFVIIFFFVIPIiIRRFRNWLIPLIVRAPDMAFPRINNISFWLLPPSFFLLLKSRFs 126
+            6679***********************8645555577**********************9999**********************************9999998 PP
+
+            ...S.-STTTTTTTC-........SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-HHHHHHHHHHHHHHHHCHHHHHHHHHCHHHH..T..SSS CS
+   COX1  99 ...a.tqgwteYapls........gvdlwllglllvgvssllgainfivtilkrrapgmtvaklplfvwailatailillalpvlalalllllldr..g.kffd 187
+               +  + wt Y+pls         vd+++++l+l+gvss+l ++nf+vt+++ +++  ++++l+lf+w++++t+il++l+lpvla+a+++ll+dr  + +ffd
+  Ciona 127 gsaRvRTRWTVYPPLSsnighsnsRVDIAIFSLHLAGVSSILRSVNFLVTLFNIKNKRKSISNLSLFCWSLIVTTILLVLSLPVLAAAITILLFDRnfNtTFFD 230
+            875467***********************************************999999***************************************88***9 PP
+
+            C...E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT.SCCCTHHHHHHHHHHHHHHCCCCGGGGCTTSSS-HHHHHHHHHHHHHTHHHHHHCCCHHHH CS
+   COX1 188 p...gdplldqhlfWffgHpeVyililpalgivyyilpkfag.rplfsykllvlafililflgilvwaHHlfttglpewlkalgsvfslliavPsglkvfnwla 287
+            p    dp+l+qhlfWff HpeVyililp + i++++++ +++  ++f y  +v+a+  i fl +lvwaHH+f +g+++  +a+++ ++++iavP+ +kvf+w+ 
+  Ciona 231 PnrrRDPILYQHLFWFFRHPEVYILILPRFRIISHVIVFYSRkDNIFRYYRMVWAIRGIRFLRFLVWAHHMFSVGIDVDSRAYFTSATIIIAVPTRIKVFSWVS 334
+            99***************************************989************************************************************ PP
+
+            CCTTS-CHCHHHHHHHHHHHHHHHHHHHHHHHHTSHHHHHHHTTBHHHHHHHHHHHTTHHHHHHHHHHHHHHHHHHSB--HHHHHHHHHHHHHHHHHHHHHHHH CS
+   COX1 288 tlwrgsirfktpmlfalgfaflfiigGltGvllalpsvnyvvhgtyfvvaHfHlvllgavvfllfaaiyywlpkltgrmlserlaklhfwllfiGlllmflpmh 391
+            tl r +i +  p+l+a gf+flf+i  lt ++la+ s+++v+h+ty+vvaHfH+vl + +vf++f ++++w+p +tg  +++ l +lhf+++f+ ++l+f+p+h
+  Ciona 335 TLLRANIYWGLPLLWAYGFLFLFTIRRLTRIILANCSLDLVLHDTYYVVAHFHYVLSMRAVFAIFSGFFHWFPLFTGLSFNKILRQLHFFIIFVRVNLTFFPQH 438
+            ******************************************************************************************************** PP
+
+            HHHHTTHBSSSST-.CCCCHHHCHHHHHHHHHHH CS
+   COX1 392 ilGllgmprraady.fletvpelqplnvlrtigg 424
+            +l l  +prr+ dy +      + ++nv+++i +
+  Ciona 439 FLRLSRIPRRYNDYpD-----FYLTWNVVSSIRS 467
+            **************52.....5788888888755 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (520 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       808  (0.0495523); expected 326.1 (0.02)
+Passed bias filter:                      293  (0.0179688); expected 326.1 (0.02)
+Passed Vit filter:                        28  (0.00171716); expected 16.3 (0.001)
+Passed Fwd filter:                         1  (6.13271e-05); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.72u 0.50s 00:00:01.22 Elapsed: 00:00:00.89
+# Mc/sec: 1671.50
+//
+Query:       Epigonichthys  [L=515]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   6.8e-135  450.1  56.1     8e-135  449.8  56.1    1.0  1  COX1      Cytochrome C and Quinol oxidase polypeptide I
+  ------ inclusion threshold ------
+        1.7    8.3   5.6         11    5.7   5.6    2.5  1  DUF3789   Protein of unknown function (DUF3789)
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  449.8  56.1  9.8e-139    8e-135       1     426 []      14     460 ..      14     460 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 449.8 bits;  conditional E-value: 9.8e-139
+                    HHHHHHHHHHHHHHHHHHHHHHHHHHHCTCT......HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHHHHHHHHHHHHH CS
+           COX1   1 kigllylivalvlllvggllgllirlqlafp.....dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprlnalsfwlvvlgl 90 
+                    +ig+ly++++ ++ +vg++++llir++l +p     d +  n+++t+H+ + if++++p+ i+gfgn+lvp++iga+d+afpr+n++sfw+++ ++
+  Epigonichthys  14 DIGTLYFVFGAWAAMVGTAISLLIRAELSQPgallgDDHLNNVIVTAHAFVIIFFIVMPIiIGGFGNWLVPIIIGAPDIAFPRINNISFWILPPSF 109
+                    599**************************99777776699******************************************************** PP
+
+                    HHHHHHHH...S.-STTTTTTTC-........SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-HHHHHHHHHHHHHHHHCHHHHHH CS
+           COX1  91 vllllsll...a.tqgwteYapls........gvdlwllglllvgvssllgainfivtilkrrapgmtvaklplfvwailatailillalpvlala 174
+                     lll+s +   + ++gwt Y+pls         vdl++++l+l+gvss+lgainfi+ti+++ra+ + ++++plfvw+i++ta l+ll+lpvla a
+  Epigonichthys 110 SLLLASSAveaGvGTGWTVYPPLSsniahagaSVDLAIFSLHLAGVSSILGAINFITTIHNMRAR-IEWNRVPLFVWSIWVTAYLLLLSLPVLAGA 204
+                    **777776686589*************************************************88.99**************************** PP
+
+                    HHHCHHHH..T..SSSC...E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT.SCCCTHHHHHHHHHHHHHHCCCCGGGGCTTSSS-HHH CS
+           COX1 175 lllllldr..g.kffdp...gdplldqhlfWffgHpeVyililpalgivyyilpkfag.rplfsykllvlafililflgilvwaHHlfttglpewl 263
+                    +++ll+dr  + +ffdp   gdp+l++hlfWffgHpeVyililp++gi+++i++ +ag  + f+y  + +a+++i++lg++vwaHH ft+g+++ +
+  Epigonichthys 205 ITMLLTDRniNtTFFDPsggGDPILYEHLFWFFGHPEVYILILPGFGIISHIIIHYAGkLRSFGYLGITWAMFTIGLLGFWVWAHHIFTVGMDVDT 300
+                    *********988*********************************************9889*********************************** PP
+
+                    HHHHHHHHHHTHHHHHHCCCHHHHCC.TTS-CHCHHHHHHHHHHHHHHHHHHHHHHHHTSHHHHHHHTTBHHHHHHHHHHHTTHHHHHHHHHHHHH CS
+           COX1 264 kalgsvfslliavPsglkvfnwlatl.wrgsirfktpmlfalgfaflfiigGltGvllalpsvnyvvhgtyfvvaHfHlvllgavvfllfaaiyyw 358
+                    ++++++++++iavP+g+kvf+wlatl  +++++++tp+l+algf+flf++gGltG++la+ s+++v+h+ty+vvaHfH+vl +++vf +++++ yw
+  Epigonichthys 301 RSYFTAATIVIAVPTGIKVFSWLATLsGSKQLKWETPLLWALGFIFLFTVGGLTGIVLANSSLDIVLHDTYYVVAHFHYVLSMGAVFSILGGLTYW 396
+                    **************************33445668************************************************************** PP
+
+                    HHHHHSB--HHHHHHHHHHHHHHHHHHHHHHHHHHHHTTHBSSSST-CCCCHHHCHHHHHHHHHHHHH CS
+           COX1 359 lpkltgrmlserlaklhfwllfiGlllmflpmhilGllgmprraadyfletvpelqplnvlrtiggvl 426
+                    +p +tg +l+e++ k+hf+++f+G++l+f+p+h+lGl+g+prr+ dy     ++++ +nv++++g+++
+  Epigonichthys 397 FPLFTGFTLQETWTKIHFFVMFVGVNLTFFPQHFLGLAGIPRRYSDY----PDAYTIWNVVSSLGSII 460
+                    ***********************************************....579***********976 PP
+
+>> DUF3789  Protein of unknown function (DUF3789)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    5.7   5.6    0.0013        11       2      18 ..     342     358 ..     341     358 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 5.7 bits;  conditional E-value: 0.0013
+        DUF3789   2 vkdfllvsvGsgiGVvl 18 
+                    +++++l+ vG+++G+vl
+  Epigonichthys 342 LGFIFLFTVGGLTGIVL 358
+                    79*************97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (515 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       712  (0.0436649); expected 326.1 (0.02)
+Passed bias filter:                      266  (0.016313); expected 326.1 (0.02)
+Passed Vit filter:                        27  (0.00165583); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.68u 0.33s 00:00:01.01 Elapsed: 00:00:00.57
+# Mc/sec: 2540.22
+//
+Query:       Strigamia_maritima  [L=518]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   9.1e-134  446.4  42.3   1.1e-133  446.1  42.3    1.1  1  COX1      Cytochrome C and Quinol oxidase polypeptide I
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  446.1  42.3  6.7e-138  1.1e-133       1     426 []      11     457 ..      11     457 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 446.1 bits;  conditional E-value: 6.7e-138
+                         HHHHHHHHHHHHHHHHHHHHHHHHHHHCTCT......HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHHHHHHHH CS
+                COX1   1 kigllylivalvlllvggllgllirlqlafp.....dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprlnalsfwl 85 
+                         +ig+ yli+++++ ++g++l l++r++l +p     d + yn+++t+H+ + if++++p+ i+gfgn+++pl++ga+d+afpr+n+l fwl
+  Strigamia_maritima  11 DIGTIYLIFGTWAAIAGTALRLIVRIELRQPgsligDDQIYNVVVTAHAFVIIFFIVIPIiIGGFGNWILPLILGAPDIAFPRINNLRFWL 101
+                         5899************************9997777777***************************************************** PP
+
+                         HHHHHHHHHHHHH...S.-STTTTTTTC-........SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-HHHHHHHHHHHHH CS
+                COX1  86 vvlglvllllsll...a.tqgwteYapls........gvdlwllglllvgvssllgainfivtilkrrapgmtvaklplfvwailataili 164
+                         ++ +l ll++s++   + ++gwt Y+pl+         vd+ +++l+l+gvss+lg+infi+ti++ r++g+ ++++plfvw + +ta+l+
+  Strigamia_maritima 102 LPPSLSLLIASIAverGaGTGWTVYPPLAtnishsgpSVDITIFSLHLAGVSSILGSINFITTIINIRSSGIIIERIPLFVWRVKITAVLL 192
+                         ************9897569************************************************************************ PP
+
+                         HHHCHHHHHHHHHCHHHH..T..SSSC...E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT.SCCCTHHHHHHHHHHHHHHCCC CS
+                COX1 165 llalpvlalalllllldr..g.kffdp...gdplldqhlfWffgHpeVyililpalgivyyilpkfag.rplfsykllvlafililflgil 248
+                         ll+lpvla a+++ll+dr  +  ffdp   gdp+l+qhlfWffgHpeVyililp++gi+++i++++ag ++ f++  +++a+++i++lg+l
+  Strigamia_maritima 193 LLSLPVLAGAITILLTDRniNtRFFDPtggGDPILYQHLFWFFGHPEVYILILPGFGIISHIISQQAGkKEPFGTLGIIYAIVAIGVLGFL 283
+                         *******************988*********************************************99********************** PP
+
+                         CGGGGCTTSSS-HHHHHHHHHHHHHTHHHHHHCCCHHHHCCTTS-CHCHHHHHHHHHHHHHHHHHHHHHHHHTSHHHHHHHTTBHHHHHHH CS
+                COX1 249 vwaHHlfttglpewlkalgsvfslliavPsglkvfnwlatlwrgsirfktpmlfalgfaflfiigGltGvllalpsvnyvvhgtyfvvaHf 339
+                         vwaHH ft+g+++ ++a++s+++++iavP+g+k+f wlatl++++++f++p+l+algf+flf+igGltG++la+ s+++++h+ty+vvaHf
+  Strigamia_maritima 284 VWAHHIFTVGIDVDTRAYFSAATIIIAVPTGIKIFRWLATLHGSQFSFDAPLLWALGFVFLFTIGGLTGIILANSSLDIILHDTYYVVAHF 374
+                         ******************************************************************************************* PP
+
+                         HHHHTTHHHHHHHHHHHHHHHHHHSB--HHHHHHHHHHHHHHHHHHHHHHHHHHHHTTHBSSSST-CCCCHHHCHHHHHHHHHHHHH CS
+                COX1 340 HlvllgavvfllfaaiyywlpkltgrmlserlaklhfwllfiGlllmflpmhilGllgmprraadyfletvpelqplnvlrtiggvl 426
+                         H+vl +++vf+++a+i++w+p + g +++ ++ k++f+++f+G++l+f+p+h+lGl g+prr+ dy     ++++++n+++++g+++
+  Strigamia_maritima 375 HYVLSMGAVFAIIAGIVHWFPLFSGVTINAKWLKIQFIVIFLGVNLTFFPQHFLGLGGIPRRYSDY----PDTYTTWNIISSLGSII 457
+                         ******************************************************************....5699**********975 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (518 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       802  (0.0491843); expected 326.1 (0.02)
+Passed bias filter:                      308  (0.0188888); expected 326.1 (0.02)
+Passed Vit filter:                        27  (0.00165583); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.74u 0.30s 00:00:01.04 Elapsed: 00:00:00.55
+# Mc/sec: 2694.38
+//
+Query:       Caenorhabditis  [L=525]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   9.5e-120  400.2  47.2   1.1e-119  399.9  47.2    1.1  1  COX1      Cytochrome C and Quinol oxidase polypeptide I
+     0.0042   17.0   0.1      0.015   15.2   0.1    1.9  1  DUF645    Protein of unknown function, DUF645
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  399.9  47.2  1.4e-123  1.1e-119       1     426 []      22     467 ..      22     467 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 399.9 bits;  conditional E-value: 1.4e-123
+                     HHHHHHHHHHHHHHHHHHHHHHHHHHHCTCT......HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHHHHHHHHHHHH CS
+            COX1   1 kigllylivalvlllvggllgllirlqlafp.....dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprlnalsfwlvvlg 89 
+                     +ig+ly+i++l+ ++vg+ ++llirl+la p     + + yn ++t+H++l if++++p  i+gfgn+l+pl++ga+d+ fprln+l fwl++ +
+  Caenorhabditis  22 DIGTLYFIFGLWSGMVGTRFSLLIRLELAKPgfflrNGQLYNSVITAHAILIIFFMVIPTiIGGFGNWLLPLMLGAPDIRFPRLNNLRFWLLPTS 116
+                     599**************************997666666**********************9********************************** PP
+
+                     HHHHHHHHH...S.-STTTTTTTC-.......SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-HHHHHHHHHHHHHHHHCHHHHH CS
+            COX1  90 lvllllsll...a.tqgwteYapls.......gvdlwllglllvgvssllgainfivtilkrrapgmtvaklplfvwailatailillalpvlal 173
+                     ++l+l + +   + ++ wt Y+pl         vdl++++l+ +g+ s+lg+inf+ t  + r++ ++++++ lfvw++++t++l++l+lpvla 
+  Caenorhabditis 117 ILLILDACFvdiGcGTRWTVYPPLRtmghpgsRVDLAIFSLHAAGLRSILGGINFMCTTKNLRRSSISLEHITLFVWTVFVTVFLLVLSLPVLAG 211
+                     ***888888898789******************************************************************************** PP
+
+                     HHHHCHHHH..T..SSSC...E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT.SCCCTHHHHHHHHHHHHHHCCCCGGGGCTTSSS-H CS
+            COX1 174 alllllldr..g.kffdp...gdplldqhlfWffgHpeVyililpalgivyyilpkfag.rplfsykllvlafililflgilvwaHHlfttglpe 261
+                     a+++ll+dr  + +ffdp   g+pl++qhlfWffgHpeVyililpa+giv      ++g +++f+   +v+a++ i+++g +vwaHH++t+g++ 
+  Caenorhabditis 212 AITMLLTDRnlNtSFFDPrtgGNPLIYQHLFWFFGHPEVYILILPAFGIVRQSTLYLTGkKEVFGALGIVYAILRIGLIGCVVWAHHMYTVGIDL 306
+                     **********9889**99****************************************99*********************************** PP
+
+                     HHHHHHHHHHHHTHHHHHHCCCHHHHCCTTS-CHCHHHHHHHHHHHHHHHHHHHHHHHHTSHHHHHHHTTBHHHHHHHHHHHTTHHHHHHHHHHH CS
+            COX1 262 wlkalgsvfslliavPsglkvfnwlatlwrgsirfktpmlfalgfaflfiigGltGvllalpsvnyvvhgtyfvvaHfHlvllgavvfllfaaiy 356
+                       +a++s+++++iavP+g+kvf wlatl + ++ f+  +l++lgf+flf++gGltGv+l++  +++++h+ty+vv HfH+vl +++vf++f+++ 
+  Caenorhabditis 307 DSRAYFSAATIVIAVPTGVKVFRWLATLFGIKMVFNPLLLWVLGFIFLFTLGGLTGVVLSNSRLDIILHDTYYVVRHFHYVLSLGAVFGIFTGVT 401
+                     ******************************9999************************************************************* PP
+
+                     HHHHHHHSB--HHHHHHHHHHHHHHHHHHHHHHHHHHHHTTHBSSSST-CCCCHHHCHHHHHHHHHHHHH CS
+            COX1 357 ywlpkltgrmlserlaklhfwllfiGlllmflpmhilGllgmprraadyfletvpelqplnvlrtiggvl 426
+                     +w+  +tg  l++ +  + f+llfiG++l+f+p+h++Gl g+pr++ dy     + + ++n+++++g+++
+  Caenorhabditis 402 LWWRFITGYVLDKLMISAVFILLFIGVNLTFFPLHFAGLHGFPRKYLDY----PDVYSVWNIIASYGSII 467
+                     ***9999******************************************....468999*******9975 PP
+
+>> DUF645  Protein of unknown function, DUF645
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   15.2   0.1   1.8e-06     0.015      35      56 ..     105     127 ..     103     129 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 15.2 bits;  conditional E-value: 1.8e-06
+          DUF645  35 LdrFeFWq.ptsqLLvLDvClfD 56 
+                     L+  +FW+ pts LL+LD C++D
+  Caenorhabditis 105 LNNLRFWLlPTSILLILDACFVD 127
+                     77889**549***********99 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (525 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       777  (0.0476512); expected 326.1 (0.02)
+Passed bias filter:                      302  (0.0185208); expected 326.1 (0.02)
+Passed Vit filter:                        23  (0.00141052); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.66u 0.62s 00:00:01.28 Elapsed: 00:00:00.83
+# Mc/sec: 1809.56
+//
+Query:       Homo  [L=513]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   3.9e-139  464.1  53.0   4.6e-139  463.8  53.0    1.1  1  COX1      Cytochrome C and Quinol oxidase polypeptide I
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  463.8  53.0  2.8e-143  4.6e-139       1     426 []      14     460 ..      14     460 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 463.8 bits;  conditional E-value: 2.8e-143
+           HHHHHHHHHHHHHHHHHHHHHHHHHHHCTCT......HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHHHHHHHHHHHHHHHHHHHHH. CS
+  COX1   1 kigllylivalvlllvggllgllirlqlafp.....dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprlnalsfwlvvlglvllllsll. 98 
+           +ig+lyl+++ +++++g++l+llir++l +p     + + yn+++t+H+ + if++++p+ i+gfgn+lvpl+iga+d+afpr+n++sfwl++ +l+lll+s + 
+  Homo  14 DIGTLYLLFGAWAGVLGTALSLLIRAELGQPgnllgNDHIYNVIVTAHAFVIIFFIVIPIiIGGFGNWLVPLIIGAPDMAFPRINNISFWLLPPSLLLLLASAIv 118
+           599**************************997666666************************************************************8888877 PP
+
+           ..S.-STTTTTTTC-........SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-HHHHHHHHHHHHHHHHCHHHHHHHHHCHHHH..T..SSSC. CS
+  COX1  99 ..a.tqgwteYapls........gvdlwllglllvgvssllgainfivtilkrrapgmtvaklplfvwailatailillalpvlalalllllldr..g.kffdp. 188
+             + ++gwt Y+pl+         vdl +++l+l+gvss+lgainfi+ti++ + p +t  ++plfvw++l+ta+l+ll+lpvla+++++ll+dr  + +ffdp 
+  Homo 119 eaGaGTGWTVYPPLAgnyshpgaSVDLTIFSLHLAGVSSILGAINFITTIINIKPPAITQYQTPLFVWSVLITAVLLLLSLPVLAAGITILLTDRnlNtTFFDPa 223
+           97569********************************************************************************************88****** PP
+
+           ..E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT.SCCCTHHHHHHHHHHHHHHCCCCGGGGCTTSSS-HHHHHHHHHHHHHTHHHHHHCCCHHHHCCT CS
+  COX1 189 ..gdplldqhlfWffgHpeVyililpalgivyyilpkfag.rplfsykllvlafililflgilvwaHHlfttglpewlkalgsvfslliavPsglkvfnwlatlw 290
+             gdp+l+qhlfWffgHpeVyililp++gi+++i++ ++g ++ f+y  +v+a+i+i+flg++vwaHH ft+g+++ ++a+++ ++++ia+P+g+kvf+wlatl+
+  Homo 224 ggGDPILYQHLFWFFGHPEVYILILPGFGIISHIVTYYSGkKEPFGYIGMVWAMISIGFLGFIVWAHHIFTVGIDVDTRAYFTSATIIIAIPTGVKVFSWLATLH 328
+           ***************************************99**************************************************************** PP
+
+           TS-CHCHHHHHHHHHHHHHHHHHHHHHHHHTSHHHHHHHTTBHHHHHHHHHHHTTHHHHHHHHHHHHHHHHHHSB--HHHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+  COX1 291 rgsirfktpmlfalgfaflfiigGltGvllalpsvnyvvhgtyfvvaHfHlvllgavvfllfaaiyywlpkltgrmlserlaklhfwllfiGlllmflpmhilGl 395
+           ++++++++++l+algf+flf++gGltG++la+ s+++v+h+ty+vvaHfH+vl  ++vf++++++++w+p + g +l++++ak+hf ++fiG++l+f+p+h+lGl
+  Homo 329 GSNMKWSAAVLWALGFIFLFTVGGLTGIVLANSSLDIVLHDTYYVVAHFHYVLSIGAVFAIIGGFIHWFPLFSGYTLDQTYAKIHFTIIFIGVNLTFFPQHFLGL 433
+           ********************************************************************************************************* PP
+
+           TTHBSSSST-CCCCHHHCHHHHHHHHHHHHH CS
+  COX1 396 lgmprraadyfletvpelqplnvlrtiggvl 426
+            gmprr+ dy     ++++++n+l+++g+++
+  Homo 434 SGMPRRYSDY----PDAYTTWNILSSVGSFI 460
+           **********....579***********986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (513 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       841  (0.0515761); expected 326.1 (0.02)
+Passed bias filter:                      289  (0.0177235); expected 326.1 (0.02)
+Passed Vit filter:                        34  (0.00208512); expected 16.3 (0.001)
+Passed Fwd filter:                         5  (0.000306636); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.75u 0.33s 00:00:01.08 Elapsed: 00:00:00.56
+# Mc/sec: 2574.75
+//
+Query:       Ascidiella_aspersa  [L=524]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   1.4e-130  435.9  64.5   1.9e-130  435.5  64.5    1.1  1  COX1      Cytochrome C and Quinol oxidase polypeptide I
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  435.5  64.5  1.1e-134  1.9e-130       1     424 [.      16     460 ..      16     462 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 435.5 bits;  conditional E-value: 1.1e-134
+                         HHHHHHHHHHHHHHHHHHHHHHHHHHHCTCT......HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHHHHHHHH CS
+                COX1   1 kigllylivalvlllvggllgllirlqlafp.....dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprlnalsfwl 85 
+                         +ig+ly+i+ ++++++g++++++ir++l +p     d + yn+++t+H+ +mif+f++p+ i+gfgn+l+p+++ga+d+afpr+n++sfwl
+  Ascidiella_aspersa  16 DIGTLYFIFRILAGVIGTAMSIIIRVELSQPgqvigDGQVYNVVVTAHAFVMIFFFVMPIiIGGFGNWLLPIIVGAPDMAFPRMNNMSFWL 106
+                         599**************************997777777****************************************************9 PP
+
+                         HHHHHHH.HHHHHH..S.-STTTTTTTC-........SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-HHHHHHHHHHHHH CS
+                COX1  86 vvlglvl.lllsll..a.tqgwteYapls........gvdlwllglllvgvssllgainfivtilkrrapgmtvaklplfvwailataili 164
+                         ++ ++++ +++s++  + ++gwt Y+pls        +vd ++++l+l+gvss+lg+inf+vt++ ++a g ++ +l+lf+w++++t+il+
+  Ascidiella_aspersa 107 LPPAFFIlIISSMIrtRaGTGWTVYPPLSgnlahagpAVDCAIFSLHLAGVSSILGSINFLVTMMGMKAGGFSYLNLSLFCWSVIFTTILL 197
+                         9999999455555598569************************************************************************ PP
+
+                         HHHCHHHHHHHHHCHHHH..T..SSSC...E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT.SCCCTHHHHHHHHHHHHHHCCC CS
+                COX1 165 llalpvlalalllllldr..g.kffdp...gdplldqhlfWffgHpeVyililpalgivyyilpkfag.rplfsykllvlafililflgil 248
+                         +l+lpvla+a+++ll+dr  + +ffdp   gdp+l+qhlfWffgHpeVyililp++g+++++++ ++g   +f+y  +v+a+ +i+flg+l
+  Ascidiella_aspersa 198 VLSLPVLAAAITMLLFDRnfNtSFFDPggrGDPILYQHLFWFFGHPEVYILILPGFGLISHVIVYYSGkSTIFGYYGMVWAIRSIGFLGFL 288
+                         *******************9889********************************************9899******************** PP
+
+                         CGGGGCTTSSS-HHHHHHHHHHHHHTHHHHHHCCCHHHHCCTTS-CHCHHHHHHHHHHHHHHHHHHHHHHHHTSHHHHHHHTTBHHHHHHH CS
+                COX1 249 vwaHHlfttglpewlkalgsvfslliavPsglkvfnwlatlwrgsirfktpmlfalgfaflfiigGltGvllalpsvnyvvhgtyfvvaHf 339
+                         vwaHH f +g+++  +a++++++++iavP+g+kvf+wl tl+rg+i +  +m++++gf+flf++ GltG+ la+ s+++v+h+ty+vvaHf
+  Ascidiella_aspersa 289 VWAHHIFSVGMDVDSRAYFTAATMVIAVPTGIKVFSWLRTLVRGRIYWGIAMYWVFGFLFLFTVRGLTGIALANCSLDLVLHDTYYVVAHF 379
+                         ******************************************************************************************* PP
+
+                         HHHHTTHHHHHHHHHHHHHHHHHHSB--HHHHHHHHHHHHHHHHHHHHHHHHHHHHTTHBSSSST-CCCCHHHCHHHHHHHHHHH CS
+                COX1 340 HlvllgavvfllfaaiyywlpkltgrmlserlaklhfwllfiGlllmflpmhilGllgmprraadyfletvpelqplnvlrtigg 424
+                         H+vl  ++vf+++a++y+w+p +tg  +++ l+ +hf+++f+ ++l+f+p+h+lGl+g+prr+ dy     + ++++n +++ig+
+  Ascidiella_aspersa 380 HYVLSIGAVFAIIAGFYHWFPLFTGWSFNHYLGLAHFYVMFVSVNLTFFPQHFLGLMGIPRRYNDY----PDFYATWNYISSIGS 460
+                         ******************************************************************....35689********97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (524 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       817  (0.0501043); expected 326.1 (0.02)
+Passed bias filter:                      296  (0.0181528); expected 326.1 (0.02)
+Passed Vit filter:                        32  (0.00196247); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.69u 0.47s 00:00:01.15 Elapsed: 00:00:00.66
+# Mc/sec: 2271.33
+//
+Query:       Blanceolatum  [L=0]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (0 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                         0  (0); expected 326.1 (0.02)
+Passed bias filter:                        0  (0); expected 326.1 (0.02)
+Passed Vit filter:                         0  (0); expected 16.3 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.37u 0.24s 00:00:00.61 Elapsed: 00:00:00.48
+# Mc/sec: 0.00
+//
+Query:       Saccoglossus  [L=517]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   9.2e-144  479.3  64.1   1.1e-143  479.1  64.1    1.1  1  COX1      Cytochrome C and Quinol oxidase polypeptide I
+
+
+Domain annotation for each model (and alignments):
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  479.1  64.1  6.7e-148  1.1e-143       1     426 []      15     461 ..      15     461 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 479.1 bits;  conditional E-value: 6.7e-148
+                   HHHHHHHHHHHHHHHHHHHHHHHHHHHCTCT......HHCHHHHHHHHHHHHHHHHHHHH.CHHHHHHHHHHHHCTSS-S-HHHHHHHHHHHHHHHH CS
+          COX1   1 kigllylivalvlllvggllgllirlqlafp.....dletynqlrtlHgnlmifwfatpf.ilgfgnylvplligardlafprlnalsfwlvvlglv 91 
+                   +ig+ly+i++ +++++g+ l+llir++la+p     d + yn+++t+H+ +mif++++p+ i+gfgn+l+pl++ga+d+afprln++sfwl++ +++
+  Saccoglossus  15 DIGTLYFIFGAWAGMIGTGLSLLIRIELAQPgpflgDDQIYNVIVTAHAFVMIFFMVMPImIGGFGNWLIPLMLGAPDMAFPRLNNMSFWLLPPAFL 111
+                   599**************************996666666*********************************************************** PP
+
+                   HHHHHHH...S.-STTTTTTTC-........SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-HHHHHHHHHHHHHHHHCHHHHHHHH CS
+          COX1  92 llllsll...a.tqgwteYapls........gvdlwllglllvgvssllgainfivtilkrrapgmtvaklplfvwailatailillalpvlalall 176
+                   lll+s +   + ++gwt Y+pls         vdl++++l+l+g+ss+lgainf++t++++ra g+t+++lplfvw+i++t+il+ll+lpvla +++
+  Saccoglossus 112 LLLSSAAvesGaGTGWTVYPPLSgnlahgggSVDLAIFSLHLAGISSILGAINFMTTVINMRAAGITWSRLPLFVWSIFITVILLLLSLPVLAGGIT 208
+                   *999998887469************************************************************************************ PP
+
+                   HCHHHH..T..SSSC...E-HHHHHHHHHHHHTHHHHHHHHHHHHHHHHHHHHHHT.SCCCTHHHHHHHHHHHHHHCCCCGGGGCTTSSS-HHHHHH CS
+          COX1 177 lllldr..g.kffdp...gdplldqhlfWffgHpeVyililpalgivyyilpkfag.rplfsykllvlafililflgilvwaHHlfttglpewlkal 266
+                   +ll+dr  + +ffdp   gdp+l+qhlfWffgHpeVyililp++gi++++++ ++g ++ f+y  +v+a+++i++lg+lvwaHH+ft+g+++ ++a+
+  Saccoglossus 209 MLLTDRnlNtTFFDPaggGDPILYQHLFWFFGHPEVYILILPGFGIISHVIAFYSGkKETFGYLGMVYAMLAIGILGFLVWAHHMFTVGMDVDTRAY 305
+                   ********88*********************************************99**************************************** PP
+
+                   HHHHHHHTHHHHHHCCCHHHHCCTTS-CHCHHHHHHHHHHHHHHHHHHHHHHHHTSHHHHHHHTTBHHHHHHHHHHHTTHHHHHHHHHHHHHHHHHH CS
+          COX1 267 gsvfslliavPsglkvfnwlatlwrgsirfktpmlfalgfaflfiigGltGvllalpsvnyvvhgtyfvvaHfHlvllgavvfllfaaiyywlpklt 363
+                   +++++++iavP+g+k+f+wlatl++++++++tp+l+algf+flf++gGltG++l++ s+++v+h+ty+vvaHfH+vl +++vf++fa++++w+p +t
+  Saccoglossus 306 FTAATMVIAVPTGIKIFSWLATLHGSALQWETPLLWALGFVFLFTLGGLTGIVLSNSSLDVVLHDTYYVVAHFHYVLSMGAVFAIFAGFIHWFPLFT 402
+                   ************************************************************************************************* PP
+
+                   SB--HHHHHHHHHHHHHHHHHHHHHHHHHHHHTTHBSSSST-CCCCHHHCHHHHHHHHHHHHH CS
+          COX1 364 grmlserlaklhfwllfiGlllmflpmhilGllgmprraadyfletvpelqplnvlrtiggvl 426
+                   g  l+  + k+hfw++f+G++++f+p+h+lGl+gmprr+ d      ++++++nv++++g+++
+  Saccoglossus 403 GYGLHPVWTKVHFWTMFLGVNVTFFPQHFLGLAGMPRRYSDF----PDAYTTWNVVSSVGSII 461
+                   ****************************************76....679***********986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (517 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       796  (0.0488164); expected 326.1 (0.02)
+Passed bias filter:                      286  (0.0175396); expected 326.1 (0.02)
+Passed Vit filter:                        27  (0.00165583); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.70u 0.50s 00:00:01.20 Elapsed: 00:00:00.77
+# Mc/sec: 1920.84
+//
+[ok]

@@ -1,0 +1,90 @@
+Oxidored_q4	PF00507.17	Paracentrotus	1.8e-26	92.0	16	114	13	114	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Aphrocallistes_vastus	4.6e-33	113.2	3	15	1	25	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Aphrocallistes_vastus	4.6e-33	113.2	22	119	19	119	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Schistosoma	1.4e-08	34.7	10	22	2	32	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Schistosoma	1.4e-08	34.7	38	119	21	119	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+vMSA	PF00695.17	Schistosoma	0.26	10.2	50	111	44	115	Major	surface	antigen	from	hepadnavirus
+Oxidored_q4	PF00507.17	Fasciola	4.2e-13	49.1	8	28	1	34	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Fasciola	4.2e-13	49.1	35	116	23	116	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Trichobilharzia_regenti	4.7e-11	42.6	8	24	1	33	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Trichobilharzia_regenti	4.7e-11	42.6	40	118	27	118	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Versteria_mustelae	7.3e-10	38.8	8	26	2	32	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Versteria_mustelae	7.3e-10	38.8	36	113	15	113	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Euseius_nicholsi	8.8e-21	73.8	2	15	1	19	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Euseius_nicholsi	8.8e-21	73.8	15	109	11	109	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+PufQ	PF05398.9	Euseius_nicholsi	0.098	12.7	3	27	1	34	PufQ	cytochrome	subunit
+PufQ	PF05398.9	Euseius_nicholsi	0.098	12.7	63	73	43	86	PufQ	cytochrome	subunit
+Oxidored_q4	PF00507.17	Patiria	8.1e-25	86.7	7	23	2	27	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Patiria	8.1e-25	86.7	19	108	16	108	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Daphnia	4.6e-27	93.9	17	115	15	115	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Haplorchis_taichui	5.2e-11	42.4	3	23	1	31	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Haplorchis_taichui	5.2e-11	42.4	43	117	33	117	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+SecD_SecF	PF02355.14	Haplorchis_taichui	0.76	9.0	4	30	1	37	Protein	export	membrane	protein
+SecD_SecF	PF02355.14	Haplorchis_taichui	0.76	9.0	47	114	39	116	Protein	export	membrane	protein
+Oxidored_q4	PF00507.17	Lumbricus	5.3e-30	103.4	16	115	15	115	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+DuoxA	PF10204.7	Lumbricus	0.64	8.8	10	24	2	33	Dual	oxidase	maturation	factor
+DuoxA	PF10204.7	Lumbricus	0.64	8.8	50	113	43	116	Dual	oxidase	maturation	factor
+DUF2070	PF09843.7	Lumbricus	0.74	7.9	3	106	1	113	Predicted	membrane	protein	(DUF2070)
+Oxidored_q4	PF00507.17	Halocynthia	2.8e-16	59.3	2	24	1	26	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Halocynthia	2.8e-16	59.3	54	131	30	131	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Limulus	4e-29	100.6	17	112	15	112	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Ninjurin	PF04923.10	Limulus	2	8.2	5	71	2	102	Ninjurin
+Oxidored_q4	PF00507.17	Echinococcus_equinus	3.3e-10	39.9	5	26	1	28	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Echinococcus_equinus	3.3e-10	39.9	35	113	20	113	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Taenia_crassiceps	4.9e-09	36.1	5	21	1	28	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Taenia_crassiceps	4.9e-09	36.1	32	113	16	113	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Axinella	5.1e-36	122.7	8	14	2	23	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Axinella	5.1e-36	122.7	21	117	18	117	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Terebratulina	2.3e-24	85.3	19	115	8	115	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Suberites_domuncula	6.3e-37	125.6	8	14	3	24	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Suberites_domuncula	6.3e-37	125.6	21	117	18	117	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Bfloridae	1.9e-29	101.6	16	115	11	115	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+MttA_Hcf106	PF02416.14	Bfloridae	3.7	6.8	11	20	8	31	mttA/Hcf106	family
+MttA_Hcf106	PF02416.14	Bfloridae	3.7	6.8	91	103	88	104	mttA/Hcf106	family
+UPF0370	PF13980.4	Bfloridae	8.2	6.4	15	26	13	37	Uncharacterised	protein	family	(UPF0370)
+UPF0370	PF13980.4	Bfloridae	8.2	6.4	89	99	85	111	Uncharacterised	protein	family	(UPF0370)
+Oxidored_q4	PF00507.17	Katharina	2.7e-26	91.5	18	115	9	115	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Geodia	5e-36	122.7	21	117	19	117	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Metridium	1.1e-34	118.4	21	117	19	117	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Amphimedon_queenslandica	9.3e-34	115.4	7	19	3	30	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Amphimedon_queenslandica	9.3e-34	115.4	25	117	12	117	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+MaAIMP_sms	PF16951.3	Amphimedon_queenslandica	8.8	6.0	12	36	6	49	Putative	methionine	and	alanine	importer,	small	subunit
+MaAIMP_sms	PF16951.3	Amphimedon_queenslandica	8.8	6.0	65	69	61	91	Putative	methionine	and	alanine	importer,	small	subunit
+MaAIMP_sms	PF16951.3	Amphimedon_queenslandica	8.8	6.0	94	108	91	111	Putative	methionine	and	alanine	importer,	small	subunit
+Oxidored_q4	PF00507.17	Acropora	3.8e-32	110.2	21	117	19	117	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Trichinella	1.7e-17	63.2	6	17	2	32	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Trichinella	1.7e-17	63.2	22	114	15	114	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Balanoglossus	2e-28	98.3	17	114	11	114	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Claudin_3	PF06653.9	Balanoglossus	0.036	13.9	1	66	1	105	Tight	junction	protein,	Claudin-like
+zf-DHHC	PF01529.18	Balanoglossus	1.8	8.5	4	66	1	108	DHHC	palmitoyltransferase
+Oxidored_q4	PF00507.17	Tetrancistrum_nebulosi	2.1e-11	43.7	36	114	15	114	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+SpoIISA_toxin	PF14171.4	Tetrancistrum_nebulosi	0.0068	16.0	59	116	57	117	Toxin	SpoIISA,	type	II	toxin-antitoxin	system
+Herpes_LMP1	PF05297.9	Tetrancistrum_nebulosi	3.3	6.7	52	99	2	113	Herpesvirus	latent	membrane	protein	1	(LMP1)
+Oxidored_q4	PF00507.17	Pseudogarypus_banksi	8.3e-20	70.7	13	23	1	29	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Pseudogarypus_banksi	8.3e-20	70.7	19	114	14	114	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Benedenia_hoshinai	2.6e-12	46.6	11	20	2	29	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Benedenia_hoshinai	2.6e-12	46.6	34	115	16	115	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Myxine	5.2e-32	109.8	16	113	6	113	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+DUF3149	PF11346.6	Myxine	0.0088	15.5	2	16	1	21	Protein	of	unknown	function	(DUF3149)
+DUF3149	PF11346.6	Myxine	0.0088	15.5	85	103	85	107	Protein	of	unknown	function	(DUF3149)
+DUF2427	PF10348.7	Myxine	0.022	14.4	6	12	1	27	Domain	of	unknown	function	(DUF2427)
+DUF2427	PF10348.7	Myxine	0.022	14.4	63	104	42	107	Domain	of	unknown	function	(DUF2427)
+Oxidored_q4	PF00507.17	Drosophila	1.5e-28	98.7	11	14	1	30	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Drosophila	1.5e-28	98.7	17	115	15	115	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Ciona	6.8e-09	35.7	8	23	1	31	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Ciona	6.8e-09	35.7	32	110	14	113	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Epigonichthys	1.9e-28	98.4	16	115	14	115	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+UPF0370	PF13980.4	Epigonichthys	5.4	7.0	15	28	10	35	Uncharacterised	protein	family	(UPF0370)
+UPF0370	PF13980.4	Epigonichthys	5.4	7.0	89	99	86	111	Uncharacterised	protein	family	(UPF0370)
+Oxidored_q4	PF00507.17	Strigamia_maritima	1.1e-28	99.1	21	115	8	115	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Caenorhabditis	1.1e-15	57.5	4	19	1	21	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Caenorhabditis	1.1e-15	57.5	17	109	14	109	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Homo	3.7e-27	94.3	15	113	14	113	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+ELF	PF03317.11	Homo	0.67	9.3	51	103	43	109	ELF	protein
+Oxidored_q4	PF00507.17	Ascidiella_aspersa	1.2e-13	50.9	34	114	8	115	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Blanceolatum	1.1e-28	99.2	18	115	7	115	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Saccoglossus	1.4e-27	95.6	5	17	2	23	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+Oxidored_q4	PF00507.17	Saccoglossus	1.4e-27	95.6	17	114	11	114	NADH-ubiquinone/plastoquinone	oxidoreductase,	chain	3
+DUF4234	PF14018.4	Saccoglossus	0.085	12.9	4	21	1	24	Domain	of	unknown	function	(DUF4234)
+DUF4234	PF14018.4	Saccoglossus	0.085	12.9	43	63	27	74	Domain	of	unknown	function	(DUF4234)
+DUF4234	PF14018.4	Saccoglossus	0.085	12.9	90	107	77	109	Domain	of	unknown	function	(DUF4234)

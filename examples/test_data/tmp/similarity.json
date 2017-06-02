@@ -1,0 +1,162 @@
+{
+    "C": [
+        {
+            "distance": 0.684044233807267, 
+            "species": "A"
+        }
+    ], 
+    "B": [
+        {
+            "distance": 0.8657187993680885, 
+            "species": "A"
+        }, 
+        {
+            "distance": 0.7440758293838863, 
+            "species": "C"
+        }
+    ], 
+    "E": [
+        {
+            "distance": 0.6097946287519748, 
+            "species": "A"
+        }, 
+        {
+            "distance": 0.7851500789889415, 
+            "species": "C"
+        }, 
+        {
+            "distance": 0.6619273301737757, 
+            "species": "B"
+        }
+    ], 
+    "D": [
+        {
+            "distance": 0.593996840442338, 
+            "species": "A"
+        }, 
+        {
+            "distance": 0.7898894154818326, 
+            "species": "C"
+        }, 
+        {
+            "distance": 0.6382306477093207, 
+            "species": "B"
+        }, 
+        {
+            "distance": 0.669826224328594, 
+            "species": "E"
+        }
+    ], 
+    "G": [
+        {
+            "distance": 0.5545023696682464, 
+            "species": "A"
+        }, 
+        {
+            "distance": 0.5908372827804107, 
+            "species": "C"
+        }, 
+        {
+            "distance": 0.6003159557661928, 
+            "species": "B"
+        }, 
+        {
+            "distance": 0.5134281200631912, 
+            "species": "E"
+        }, 
+        {
+            "distance": 0.5055292259083728, 
+            "species": "D"
+        }
+    ], 
+    "F": [
+        {
+            "distance": 0.627172195892575, 
+            "species": "A"
+        }, 
+        {
+            "distance": 0.7266982622432859, 
+            "species": "C"
+        }, 
+        {
+            "distance": 0.6714060031595577, 
+            "species": "B"
+        }, 
+        {
+            "distance": 0.6524486571879937, 
+            "species": "E"
+        }, 
+        {
+            "distance": 0.617693522906793, 
+            "species": "D"
+        }, 
+        {
+            "distance": 0.5308056872037915, 
+            "species": "G"
+        }
+    ], 
+    "I": [
+        {
+            "distance": 0.5560821484992101, 
+            "species": "A"
+        }, 
+        {
+            "distance": 0.5797788309636651, 
+            "species": "C"
+        }, 
+        {
+            "distance": 0.6003159557661928, 
+            "species": "B"
+        }, 
+        {
+            "distance": 0.5134281200631912, 
+            "species": "E"
+        }, 
+        {
+            "distance": 0.48973143759873616, 
+            "species": "D"
+        }, 
+        {
+            "distance": 0.7393364928909952, 
+            "species": "G"
+        }, 
+        {
+            "distance": 0.5276461295418642, 
+            "species": "F"
+        }
+    ], 
+    "H": [
+        {
+            "distance": 0.5592417061611374, 
+            "species": "A"
+        }, 
+        {
+            "distance": 0.5955766192733017, 
+            "species": "C"
+        }, 
+        {
+            "distance": 0.6145339652448657, 
+            "species": "B"
+        }, 
+        {
+            "distance": 0.5213270142180095, 
+            "species": "E"
+        }, 
+        {
+            "distance": 0.49921011058451814, 
+            "species": "D"
+        }, 
+        {
+            "distance": 0.7756714060031595, 
+            "species": "G"
+        }, 
+        {
+            "distance": 0.5371248025276462, 
+            "species": "F"
+        }, 
+        {
+            "distance": 0.7266982622432859, 
+            "species": "I"
+        }
+    ]
+}

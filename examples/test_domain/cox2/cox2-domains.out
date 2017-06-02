@@ -1,0 +1,2445 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             examples/out/cox2/cox2.fasta
+# target HMM database:             data/pfam/Pfam-A.hmm
+# output directed to file:         examples/out/cox2/cox2-domains.out
+# per-dom hits tabular output:     examples/out/cox2/cox2-domains.tab
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       Metaseiulus_occidentalis  [L=221]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    7.5e-46  154.8   0.0    1.1e-45  154.3   0.0    1.2  1  COX2      Cytochrome C oxidase subunit II, periplasmic domain
+    9.3e-17   60.8   4.5    1.5e-16   60.1   4.5    1.4  1  COX2_TM   Cytochrome C oxidase subunit II, transmembrane doma
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  154.3   0.0   1.3e-49   1.1e-45       1     118 [.      95     207 ..      95     209 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 154.3 bits;  conditional E-value: 1.3e-49
+                      COX2   1 ltikaiGhqwywsyeysdfedlefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpGrl 85 
+                               ltik iGhqwywsyey df+   fds++ ++    + ++rl+e+dn++ +p++t  rll+t++dv+hs+++  +gvk+da+pGrl
+  Metaseiulus_occidentalis  95 LTIKIIGHQWYWSYEYRDFN-CRFDSFIENR----KEKFRLIETDNKIYIPINTFTRLLITSADVIHSWTIQRIGVKTDAIPGRL 174
+                               79*****************9.9*****8554....568*********************************************** PP
+
+                      COX2  86 nqvsllvereGvfyGqcselcGvnhssmpivve 118
+                               nq+ l+ +r+G+fyGqcse+cG+nh ++pi ++
+  Metaseiulus_occidentalis 175 NQINLYPSRPGIFYGQCSEICGANHRFIPICLK 207
+                               ******************************876 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   60.1   4.5   1.9e-20   1.5e-16       1      89 []       1      83 [.       1      83 [. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 60.1 bits;  conditional E-value: 1.9e-20
+                   COX2_TM  1 vatpaglgfqdaasplmeeleelhdyilliltlililVlyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililialpSl 87
+                              ++ +  ++fq+a sp++e+l  +hd+ ++++  i+ + l  l++i+       n++ + +l+++q++E+iWT+iP l+li+ialpSl
+  Metaseiulus_occidentalis  1 MSHWNRIYFQNANSPIIEQLLFFHDHSIIVISRIIRFLLINLLRIMYL-----NSV-NLNLNENQTLELIWTLIPILLLIFIALPSL 81
+                              68899**********************999999988888888877776.....344.45699************************* PP
+
+                   COX2_TM 88 kl 89
+                              +l
+  Metaseiulus_occidentalis 82 RL 83
+                              87 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (221 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       471  (0.0288851); expected 326.1 (0.02)
+Passed bias filter:                      255  (0.0156384); expected 326.1 (0.02)
+Passed Vit filter:                        17  (0.00104256); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.71u 0.84s 00:00:01.54 Elapsed: 00:00:11.05
+# Mc/sec: 57.22
+//
+Query:       Paracentrotus  [L=229]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.5e-63  211.9   0.0    2.3e-63  211.3   0.0    1.3  1  COX2      Cytochrome C oxidase subunit II, periplasmic domain
+    2.5e-29  101.1   2.5    3.8e-29  100.5   2.5    1.3  1  COX2_TM   Cytochrome C oxidase subunit II, transmembrane doma
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  211.3   0.0   2.8e-67   2.3e-63       1     120 []      95     214 ..      95     214 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 211.3 bits;  conditional E-value: 2.8e-67
+           COX2   1 ltikaiGhqwywsyeysdfedlefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpGrlnqvsllvereG 96 
+                    ltikaiGhqwyw yey+d++dlefdsy+vp++d++ g+ rllevdnr+++p+++++r+lv+++dvlhs+avpslgvk+davpGrlnq++++++r G
+  Paracentrotus  95 LTIKAIGHQWYWRYEYTDYKDLEFDSYMVPTSDVSLGKPRLLEVDNRLILPMQNPIRVLVSSADVLHSWAVPSLGVKMDAVPGRLNQTTFFAARAG 190
+                    79********************************************************************************************** PP
+
+           COX2  97 vfyGqcselcGvnhssmpivveav 120
+                    +fyGqcse+cG+nhs+mpi +e+v
+  Paracentrotus 191 LFYGQCSEICGANHSFMPILIESV 214
+                    **********************97 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  100.5   2.5   4.7e-33   3.8e-29       1      89 []       1      83 [.       1      83 [. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 100.5 bits;  conditional E-value: 4.7e-33
+        COX2_TM  1 vatpaglgfqdaasplmeeleelhdyilliltlililVlyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililialpSlkl 89
+                   +at+a++g+qda+splmeel+++hdy+l++ltli+ilV+y lv++l++      + t++++++gqe+E+iWT++Pa+ili+ialpSl+l
+  Paracentrotus  1 MATWAQFGLQDASSPLMEELTYFHDYALIVLTLITILVFYGLVSLLLS------SRTNRFFLEGQELETIWTVVPAFILIFIALPSLQL 83
+                   79**********************************************......899******************************97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (229 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       517  (0.0317061); expected 326.1 (0.02)
+Passed bias filter:                      324  (0.01987); expected 326.1 (0.02)
+Passed Vit filter:                        34  (0.00208512); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.59u 0.63s 00:00:01.22 Elapsed: 00:00:05.03
+# Mc/sec: 130.24
+//
+Query:       Aphrocallistes_vastus  [L=246]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.2e-55  184.6   0.0    6.2e-55  184.1   0.0    1.2  1  COX2      Cytochrome C oxidase subunit II, periplasmic domain
+    6.6e-22   77.3   5.2    1.3e-21   76.4   5.2    1.5  1  COX2_TM   Cytochrome C oxidase subunit II, transmembrane doma
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  184.1   0.0   7.6e-59   6.2e-55       1     119 [.     107     227 ..     107     228 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 184.1 bits;  conditional E-value: 7.6e-59
+                   COX2   1 ltikaiGhqwywsyeysdfed..lefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpGrln 86 
+                            ltik+ G+qwyw+yeysd+e+  +e +sy+ p +dle  + +llev+n+++vp++t++r+l+ta+dvlhsf+vpslg+k+da+pGrln
+  Aphrocallistes_vastus 107 LTIKTTGNQWYWTYEYSDYENnkIEIESYMTPIDDLEMRDNSLLEVNNQLLVPTNTNIRILITAADVLHSFTVPSLGIKADAIPGRLN 194
+                            79*****************9989***************************************************************** PP
+
+                   COX2  87 qvsllvereGvfyGqcselcGvnhssmpivvea 119
+                            qv +l++r+G+fyGqcselcG+nhs+mpi+++ 
+  Aphrocallistes_vastus 195 QVNFLISRPGIFYGQCSELCGANHSFMPIAIQG 227
+                            ******************************985 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   76.4   5.2   1.6e-25   1.3e-21       2      89 .]      14      95 ..      13      95 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 76.4 bits;  conditional E-value: 1.6e-25
+                COX2_TM  2 atpaglgfqdaasplmeeleelhdyilliltlililVlyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililialpSlkl 89
+                           +++++++fqd asp+me++  lhdy +++lt il+++++i+++i++       +  +k+++++ ++E+iWT +Pa+il++ia+pSlkl
+  Aphrocallistes_vastus 14 PEKSQINFQDPASPTMEQIILLHDYSMFFLTNILLFITWIIIKIMTI------APYNKNITENIKLETIWTTLPAFILLTIAFPSLKL 95
+                           7889**************************************99988......445577999************************97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (246 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       627  (0.0384521); expected 326.1 (0.02)
+Passed bias filter:                      354  (0.0217098); expected 326.1 (0.02)
+Passed Vit filter:                        33  (0.00202379); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.52u 0.62s 00:00:01.14 Elapsed: 00:00:03.64
+# Mc/sec: 193.34
+//
+Query:       Schistosoma  [L=197]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      4e-31  107.3   2.8    3.7e-30  104.1   2.8    2.2  1  COX2      Cytochrome C oxidase subunit II, periplasmic domain
+    5.4e-05   23.1   3.9    8.5e-05   22.5   3.9    1.3  1  COX2_TM   Cytochrome C oxidase subunit II, transmembrane doma
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  104.1   2.8   4.5e-34   3.7e-30       3     120 .]      86     192 ..      85     192 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 104.1 bits;  conditional E-value: 4.5e-34
+         COX2   3 ikaiGhqwywsyeysdfedlefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpGrlnqvsllvereGvfyG 100
+                  +k iGhqwywsye+s     ++ds++ +      g      v++ + + ++ +  llvt+ dv+hsf+vp l +k+davpGr+n + ++ +r Gvf G
+  Schistosoma  86 VKVIGHQWYWSYELSRGA--KYDSFMTDLI---GG------VNKPLRLLMKVPYSLLVTSRDVIHSFSVPDLYIKMDAVPGRINCLGVILSRLGVFTG 172
+                  799***********9876..9*****7543...33......455555667778899****************************************** PP
+
+         COX2 101 qcselcGvnhssmpivveav 120
+                   cselcGv h++mpivve v
+  Schistosoma 173 YCSELCGVGHAYMPIVVEVV 192
+                  *****************976 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.5   3.9     1e-08   8.5e-05      24      88 ..       9      72 ..       2      73 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 22.5 bits;  conditional E-value: 1e-08
+      COX2_TM 24 hdyilliltlililVlyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililialpSlk 88
+                  d il++l + +++ l++++++  +  +++ +++   + ++  +E++WT++P++i++++ ++ lk
+  Schistosoma  9 YDLILYVLGMRVFIPLWCVIVMCYQ-IYESFQVSIIIPSESRLLEFVWTLVPSFIVLVLCFFNLK 72
+                 5667777766556666666555555.5678888888999**********************9886 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (197 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       509  (0.0312155); expected 326.1 (0.02)
+Passed bias filter:                      241  (0.0147798); expected 326.1 (0.02)
+Passed Vit filter:                        16  (0.000981234); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.55u 0.51s 00:00:01.06 Elapsed: 00:00:02.54
+# Mc/sec: 221.88
+//
+Query:       Fasciola  [L=200]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.7e-28   98.7   3.1    1.1e-27   96.2   3.1    2.0  1  COX2      Cytochrome C oxidase subunit II, periplasmic domain
+    0.00016   21.6   2.6    0.00027   20.9   2.6    1.3  1  COX2_TM   Cytochrome C oxidase subunit II, transmembrane doma
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   96.2   3.1   1.3e-31   1.1e-27       3     120 .]      85     192 ..      83     192 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 96.2 bits;  conditional E-value: 1.3e-31
+      COX2   3 ikaiGhqwywsyeysdfedlefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpGrlnqvsllvereGvfyGqcs 103
+               ik +G+qwywsy+  + ed efds + +          ++ vd+ + +   +  +l+vt++dv+hsf+vp + +k+da+pGrln vs +  + G++ G c+
+  Fasciola  85 IKVVGRQWYWSYDV-EVEDEEFDSVMSD---------FVMGVDKPLRMVRGNFHQLMVTSSDVIHSFSVPEFNIKTDAIPGRLNCVSYCPGHLGIYVGYCT 175
+               899*********97.567789***9854.........356799999999999999********************************************** PP
+
+      COX2 104 elcGvnhssmpivveav 120
+               elcG+ h++mpivve v
+  Fasciola 176 ELCGAGHAYMPIVVEVV 192
+               **************976 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   20.9   2.6   3.3e-08   0.00027      26      88 ..      11      71 ..       4      72 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 20.9 bits;  conditional E-value: 3.3e-08
+   COX2_TM 26 yilliltlililVlyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililialpSlk 88
+               i++il++  ++ ++++v++ ++    +n ++++   + +++E+ WT++P+  +i++  + lk
+  Fasciola 11 LIVYILLVCAFIPIWVFVVLAWQL-FGSNTVASH-KKERDVVEFFWTVVPSSCVIVLCYYNLK 71
+              344444444444456666666663.335555533.6999****************99999876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (200 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       719  (0.0440942); expected 326.1 (0.02)
+Passed bias filter:                      431  (0.026432); expected 326.1 (0.02)
+Passed Vit filter:                        44  (0.00269839); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.60u 0.52s 00:00:01.12 Elapsed: 00:00:03.37
+# Mc/sec: 169.78
+//
+Query:       Trichobilharzia_regenti  [L=197]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.2e-30  104.9   2.3    2.8e-29  101.3   2.3    2.1  1  COX2      Cytochrome C oxidase subunit II, periplasmic domain
+    0.00025   21.0   6.4    0.00038   20.4   6.4    1.3  1  COX2_TM   Cytochrome C oxidase subunit II, transmembrane doma
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  101.3   2.3   3.5e-33   2.8e-29       3     120 .]      84     190 ..      82     190 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 101.3 bits;  conditional E-value: 3.5e-33
+                     COX2   3 ikaiGhqwywsyeysdfedlefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpGrlnqv 88 
+                              ik +Ghqwyw+ye++      +dsy+ +             v + + +  + +  +l+t++dv+hsf+vp lg+k d vpGr+n +
+  Trichobilharzia_regenti  84 IKVVGHQWYWTYELPRGC--IYDSYMTDFV---G------GVKKPLRLTFNLPYSFLITSADVIHSFSVPDLGIKLDGVPGRINCL 158
+                              899***********9765..9*****7643...3......355666677888899******************************* PP
+
+                     COX2  89 sllvereGvfyGqcselcGvnhssmpivveav 120
+                              + +++r Gv+ G c+elcG+ h +mpivve v
+  Trichobilharzia_regenti 159 MSMIDRLGVYVGYCTELCGAGHGYMPIVVEVV 190
+                              *****************************976 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   20.4   6.4   4.7e-08   0.00038      25      87 ..       9      69 ..       1      71 [. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: 20.4 bits;  conditional E-value: 4.7e-08
+                  COX2_TM 25 dyilliltlililVlyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililialpSl 87
+                             d +++i+ l +++ +++++++  +    k  +    +++  ++E++WT+iP+++++++ ++ l
+  Trichobilharzia_regenti  9 DLVVYIIGLCIFIPCWCMIIMYYQVYMYKGVV--CLPNEEAVLELLWTLIPSILVLVLCFFNL 69
+                             44555555555555888877777744444444..4689*********************9987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (197 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       581  (0.0356311); expected 326.1 (0.02)
+Passed bias filter:                      304  (0.0186434); expected 326.1 (0.02)
+Passed Vit filter:                        29  (0.00177849); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.53u 0.53s 00:00:01.06 Elapsed: 00:00:02.49
+# Mc/sec: 226.34
+//
+Query:       Versteria_mustelae  [L=192]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.2e-33  113.6   4.2    2.1e-32  111.4   4.2    1.9  1  COX2      Cytochrome C oxidase subunit II, periplasmic domain
+      5e-06   26.4   3.4    1.1e-05   25.3   3.4    1.5  1  COX2_TM   Cytochrome C oxidase subunit II, transmembrane doma
+  ------ inclusion threshold ------
+      0.087   12.3   0.5       0.11   12.0   0.5    1.2  1  Wzy_C     O-Antigen ligase
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  111.4   4.2   3.8e-36   2.1e-32       2     120 .]      83     189 ..      82     189 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 111.4 bits;  conditional E-value: 3.8e-36
+                COX2   2 tikaiGhqwywsyeysdfedlefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpGrlnqvsllv 92 
+                         tik +Ghqwywsyeysd +   +dsy+ ++            vd+ + +   t+ +l+vt++dv+hsf+vpsl +k+da+pGrln++ ++ 
+  Versteria_mustelae  83 TIKVVGHQWYWSYEYSDGS---YDSYITKDCF---------VVDKPMRMVYGTPYHLVVTSADVIHSFSVPSLNLKMDAIPGRLNHLFFTP 161
+                         79**************987...****987755.........46777777789999************************************ PP
+
+                COX2  93 ereGvfyGqcselcGvnhssmpivveav 120
+                         +++G f G c+elcGvnh +mpiv+e v
+  Versteria_mustelae 162 SQHGSFIGYCAELCGVNHGIMPIVIEVV 189
+                         *************************976 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.3   3.4   2.1e-09   1.1e-05      26      83 ..       9      65 ..       2      70 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  score: 25.3 bits;  conditional E-value: 2.1e-09
+             COX2_TM 26 yilliltlililVlyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililia 83
+                        +i+++++++++++++ +  il+ ++      + k+  ++q iE++WTi+P++i++++ 
+  Versteria_mustelae  9 DIVCYIIAVCVFIVFFVY-ILLCWNIFLGGGSVKFGGENQFIELLWTIVPTMIVLVLC 65
+                        555666666665554433.333335566778889999**************9998875 PP
+
+>> Wzy_C  O-Antigen ligase
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.0   0.5     2e-05      0.11      19      70 ..      14      83 ..      12     136 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 12.0 bits;  conditional E-value: 2e-05
+               Wzy_C 19 iigllvalivlliifykrri..................pfllllgilvgvilliilfvlstnletlknit 70
+                        ii+++v +++++ i++ + i                  ++ +++ ++v+v++++ + ++ + l  + ++t
+  Versteria_mustelae 14 IIAVCVFIVFFVYILLCWNIflgggsvkfggenqfielLWTIVPTMIVLVLCALNVNFITRDLDCFSRET 83
+                        8999******************************************************999999998876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (192 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       865  (0.053048); expected 326.1 (0.02)
+Passed bias filter:                      433  (0.0265546); expected 326.1 (0.02)
+Passed Vit filter:                        40  (0.00245308); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.67u 0.44s 00:00:01.11 Elapsed: 00:00:02.33
+# Mc/sec: 235.74
+//
+Query:       Euseius_nicholsi  [L=222]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.8e-44  150.4   0.1    2.7e-44  149.8   0.1    1.2  1  COX2      Cytochrome C oxidase subunit II, periplasmic domain
+    7.3e-12   45.1   9.8    1.2e-11   44.5   9.8    1.3  1  COX2_TM   Cytochrome C oxidase subunit II, transmembrane doma
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  149.8   0.1   3.3e-48   2.7e-44       2     117 ..      96     209 ..      95     212 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 149.8 bits;  conditional E-value: 3.3e-48
+              COX2   2 tikaiGhqwywsyeysdfedlefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpGrlnqvsllver 94 
+                        ik iG+qwywsy+y dfe l+fdsy     +    ++rlle d ++ +pv+ +vr+lv+ +dv+hs++vp +gvk+da+pGrlnqv l+  r
+  Euseius_nicholsi  96 RIKVIGYQWYWSYDYIDFE-LDFDSYYRRGVE-YVDRFRLLENDLSLALPVNCTVRFLVSRADVIHSWTVPVFGVKTDAIPGRLNQVNLYSYR 186
+                       69****************9.******876554.4568******************************************************** PP
+
+              COX2  95 eGvfyGqcselcGvnhssmpivv 117
+                       +G+++Gqcse+cG+nh ++pi +
+  Euseius_nicholsi 187 PGIYFGQCSEICGINHRFIPISL 209
+                       *********************76 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   44.5   9.8   1.5e-15   1.2e-11       1      89 []       1      83 [.       1      83 [. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 44.5 bits;  conditional E-value: 1.5e-15
+           COX2_TM  1 vatpaglgfqdaasplmeeleelhdyilliltlililVlyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililialpSlkl 89
+                      +a +++ +f +  +p+m+ +  +hd+ + il+ ili+ ++i+++ +        ki + +l+++q++EiiWT++P ++l++ia+ Sl+l
+  Euseius_nicholsi  1 MAFWIDTYFIEVIAPTMDYIVIFHDFSMRILFSILIFLFLIIISGVKF------KILDLNLIENQTVEIIWTVMPMFLLVFIAFSSLRL 83
+                      67899999999*************************999888887655......999999***************************86 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (222 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       618  (0.0379002); expected 326.1 (0.02)
+Passed bias filter:                      256  (0.0156997); expected 326.1 (0.02)
+Passed Vit filter:                        24  (0.00147185); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.59u 0.47s 00:00:01.06 Elapsed: 00:00:01.63
+# Mc/sec: 389.63
+//
+Query:       Patiria  [L=228]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.6e-62  208.6   0.0    2.3e-62  208.1   0.0    1.3  1  COX2      Cytochrome C oxidase subunit II, periplasmic domain
+    1.3e-28   98.8   2.8    2.1e-28   98.2   2.8    1.3  1  COX2_TM   Cytochrome C oxidase subunit II, transmembrane doma
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  208.1   0.0   2.9e-66   2.3e-62       1     120 []      95     214 ..      95     214 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 208.1 bits;  conditional E-value: 2.9e-66
+     COX2   1 ltikaiGhqwywsyeysdfedlefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpGrlnqvsllvereGvfyGqc 102
+              ltikaiGhqwyw yey+d+++lefdsy++p++dl++g+ rllevdnr+ +p++t++r+lv+++dvlhs+a+pslg+k+davpGrlnqv+++++r G+fyGqc
+  Patiria  95 LTIKAIGHQWYWRYEYADYRELEFDSYMIPTSDLTSGKPRLLEVDNRLTLPAQTPIRVLVSSADVLHSWAIPSLGIKMDAVPGRLNQVKFFISRCGLFYGQC 196
+              79**************************************************************************************************** PP
+
+     COX2 103 selcGvnhssmpivveav 120
+              se+cG++hs+mpiv+e+v
+  Patiria 197 SEICGAKHSFMPIVIESV 214
+              ****************97 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   98.2   2.8   2.5e-32   2.1e-28       1      89 []       1      83 [.       1      83 [. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 98.2 bits;  conditional E-value: 2.5e-32
+  COX2_TM  1 vatpaglgfqdaasplmeeleelhdyilliltlililVlyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililialpSlkl 89
+             +a++++lg+qda+splmeel ++hdy+l+iltli+ilV+y l ++l++      + t++++++gq +E++WTiiPa+ili+ialpSl+l
+  Patiria  1 MANWTQLGLQDASSPLMEELIYFHDYTLIILTLITILVFYGLASLLFS------SKTNRFFLEGQGLETVWTIIPAVILIFIALPSLQL 83
+             799********************************************9......8899*****************************97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (228 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       500  (0.0306636); expected 326.1 (0.02)
+Passed bias filter:                      289  (0.0177235); expected 326.1 (0.02)
+Passed Vit filter:                        26  (0.00159451); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.59u 0.49s 00:00:01.08 Elapsed: 00:00:01.18
+# Mc/sec: 552.77
+//
+Query:       Daphnia  [L=225]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    8.3e-63  209.5   0.0    1.2e-62  209.0   0.0    1.2  1  COX2      Cytochrome C oxidase subunit II, periplasmic domain
+    5.6e-26   90.4   5.3    1.1e-25   89.5   5.3    1.5  1  COX2_TM   Cytochrome C oxidase subunit II, transmembrane doma
+  ------ inclusion threshold ------
+       0.37   10.7   6.7       0.58   10.0   6.7    1.2  1  FtsX      FtsX-like permease family
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  209.0   0.0   2.2e-66   1.2e-62       1     120 []      95     214 ..      95     214 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 209.0 bits;  conditional E-value: 2.2e-66
+     COX2   1 ltikaiGhqwywsyeysdfedlefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpGrlnqvsllvereGvfyGqc 102
+              +t+k++Ghqwywsyeysdf+d+efdsy++p++dle+g++rllevdnrv++p  t+vrllvta dv+hs+++pslg+k+davpGrlnq+ ++ +r+GvfyGqc
+  Daphnia  95 ITLKTVGHQWYWSYEYSDFKDIEFDSYMMPSNDLEKGQFRLLEVDNRVILPYLTQVRLLVTAGDVIHSWTIPSLGIKADAVPGRLNQLNVFFNRPGVFYGQC 196
+              689*************************************************************************************************** PP
+
+     COX2 103 selcGvnhssmpivveav 120
+              se+cG+nhs++pi veav
+  Daphnia 197 SEICGANHSFIPITVEAV 214
+              ****************97 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   89.5   5.3   1.9e-29   1.1e-25       1      89 []       1      83 [.       1      83 [. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 89.5 bits;  conditional E-value: 1.9e-29
+  COX2_TM  1 vatpaglgfqdaasplmeeleelhdyilliltlililVlyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililialpSlkl 89
+             +at+a++gfq+ aspl+e+l  +hd++llil+li++lV y +++++++      k+ ++yl++gq+iEiiWT++Pa+ili++alpSl+l
+  Daphnia  1 MATWAQIGFQNRASPLIEQLIFFHDHALLILILITTLVGYFILSLVTN------KFVNRYLLDGQIIEIIWTVLPAVILIILALPSLRL 83
+             79********************************************99......9********************************87 PP
+
+>> FtsX  FtsX-like permease family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.0   6.7   0.00011      0.58      52     108 ..      29      82 ..      20      90 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 10.0 bits;  conditional E-value: 0.00011
+     FtsX  52 llialvglliG.lllglllaqlisdvllsinssslpitlslitiliilllllllalla 108
+              l+++l+ +l+G ++l+l++ ++++++ll     +  i + + ++ +++l++l+l +l 
+  Daphnia  29 LILILITTLVGyFILSLVTNKFVNRYLL----DGQIIEIIWTVLPAVILIILALPSLR 82 
+              7889999999988888888888888888....55566666666666666666665555 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (225 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       600  (0.0367963); expected 326.1 (0.02)
+Passed bias filter:                      338  (0.0207286); expected 326.1 (0.02)
+Passed Vit filter:                        42  (0.00257574); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.55u 0.53s 00:00:01.08 Elapsed: 00:00:01.66
+# Mc/sec: 387.76
+//
+Query:       Haplorchis_taichui  [L=207]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      8e-28   96.6   0.4    4.8e-27   94.1   0.4    2.0  1  COX2      Cytochrome C oxidase subunit II, periplasmic domain
+     0.0042   17.1   1.8     0.0076   16.2   1.8    1.3  1  COX2_TM   Cytochrome C oxidase subunit II, transmembrane doma
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   94.1   0.4   5.9e-31   4.8e-27       2     119 ..      87     194 ..      86     195 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 94.1 bits;  conditional E-value: 5.9e-31
+                COX2   2 tikaiGhqwywsyeysdfedlefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpGrlnqvsllv 92 
+                         ++k  G+qw wsye    e   +ds + +  d          vd+ + + +++  +l+vt++dv+hsfa+p l +k+da+pGrlnq  +++
+  Haplorchis_taichui  87 VVKVTGRQWLWSYEIRGEE-RGYDSIMTDFVD---------SVDKPLRLVLKNYYHLVVTSSDVIHSFALPELNLKMDAIPGRLNQRIMYA 167
+                         6899***********9876.79***9976544.........478888888899999*********************************** PP
+
+                COX2  93 ereGvfyGqcselcGvnhssmpivvea 119
+                         ++ G f G c elcG+ h++mpiv+e 
+  Haplorchis_taichui 168 DHLGCFVGYCRELCGAGHAYMPIVLEV 194
+                         ************************986 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   16.2   1.8   9.3e-07    0.0076      25      85 ..      12      71 ..       5      74 .. 0.65
+
+  Alignments for each domain:
+  == domain 1  score: 16.2 bits;  conditional E-value: 9.3e-07
+             COX2_TM 25 dyilliltlililV.lyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililialp 85
+                        + +l +l+l++ ++  ++++++ ++  + k ++     ++ ++iE  WT++P+++++ + + 
+  Haplorchis_taichui 12 EGLLWYLVLLVAFIpAWVFLVLGWQI-TGKYNLR-IAANEKNVIEWAWTLVPTFMVFYLCFL 71
+                        55666666655555245544444553.2233333.3468999***************99876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (207 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       551  (0.0337912); expected 326.1 (0.02)
+Passed bias filter:                      378  (0.0231817); expected 326.1 (0.02)
+Passed Vit filter:                        29  (0.00177849); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.61u 0.49s 00:00:01.10 Elapsed: 00:00:02.37
+# Mc/sec: 249.87
+//
+Query:       Lumbricus  [L=227]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.2e-61  205.7   0.5    3.1e-61  204.4   0.1    1.7  2  COX2      Cytochrome C oxidase subunit II, periplasmic domain
+      2e-24   85.4   5.5    3.3e-24   84.7   5.5    1.3  1  COX2_TM   Cytochrome C oxidase subunit II, transmembrane doma
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.1   0.0      0.19   1.5e+03      55      82 ..      51      79 ..      35      90 .. 0.69
+   2 !  204.4   0.1   3.8e-65   3.1e-61       1     120 []      95     214 ..      95     214 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: -1.1 bits;  conditional E-value: 0.19
+       COX2 55 kvrllvtaedvlhsfav.pslgvkvdavp 82
+                 r+++ a+ v   +++ p+l + v a p
+  Lumbricus 51 VNRYIIEAQTVETIWTIlPALILLVLALP 79
+               34677777777777775466666555555 PP
+
+  == domain 2  score: 204.4 bits;  conditional E-value: 3.8e-65
+       COX2   1 ltikaiGhqwywsyeysdfedlefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpGrlnqvsllvereGvfyG 100
+                +t+k+iGhqwyw yey+df ++e dsy++p++dl  g++rllevdnr+vvp++ ++r+l+ta+dv+hs++vp+lgvkvdavpGrlnq+ ++++++GvfyG
+  Lumbricus  95 ITVKTIGHQWYWRYEYTDFLNVEIDSYMLPTSDLLPGDYRLLEVDNRMVVPIQLEIRILITAADVIHSWTVPALGVKVDAVPGRLNQIGFTTTQPGVFYG 194
+                69************************************************************************************************** PP
+
+       COX2 101 qcselcGvnhssmpivveav 120
+                qcse+cG+nhs+mpi+vea+
+  Lumbricus 195 QCSEICGANHSFMPIAVEAI 214
+                *****************985 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   84.7   5.5     4e-28   3.3e-24       1      89 []       1      83 [.       1      83 [. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 84.7 bits;  conditional E-value: 4e-28
+    COX2_TM  1 vatpaglgfqdaasplmeeleelhdyilliltlililVlyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililialpSlkl 89
+               ++++ ++ fqdaas  m +l  +hd++ll+ltl+l++V y+l+ ++++      k+ ++y++++q++E+iWTi+Palil+++alpSl++
+  Lumbricus  1 MPNWGQVIFQDAASSVMLQLVSFHDHALLVLTLVLTVVGYALLALILN------KQVNRYIIEAQTVETIWTILPALILLVLALPSLRI 83
+               799********************************************9......9999*****************************87 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (227 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       667  (0.0409052); expected 326.1 (0.02)
+Passed bias filter:                      376  (0.023059); expected 326.1 (0.02)
+Passed Vit filter:                        36  (0.00220778); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.56u 0.54s 00:00:01.10 Elapsed: 00:00:01.53
+# Mc/sec: 424.45
+//
+Query:       Halocynthia  [L=225]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.7e-45  152.6   0.0    5.4e-45  152.0   0.0    1.2  1  COX2      Cytochrome C oxidase subunit II, periplasmic domain
+    1.2e-08   34.9   0.2      3e-08   33.5   0.2    1.7  1  COX2_TM   Cytochrome C oxidase subunit II, transmembrane doma
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  152.0   0.0   6.6e-49   5.4e-45       1     119 [.      94     213 ..      94     214 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 152.0 bits;  conditional E-value: 6.6e-49
+         COX2   1 ltikaiGhqwywsyeysdfed.lefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpGrlnqvsllvereGv 97 
+                  lt+ka+ hqwywsye  d+++ +efdsy+v  +dl     rll+vdn++v+p  tk+r+lv + dvlh++a+ps  +k+da+p rln +sl v r+  
+  Halocynthia  94 LTVKAVRHQWYWSYEIGDYREgIEFDSYMVGLDDLVVEIHRLLNVDNSLVLPYLTKIRVLVGSRDVLHAWALPSRRLKADACPRRLNVLSLRVCRPRS 191
+                  79*****************988**************************************************************************** PP
+
+         COX2  98 fyGqcselcGvnhssmpivvea 119
+                   yGqcse+cGvnhs+mpi ve 
+  Halocynthia 192 IYGQCSEICGVNHSFMPIHVEW 213
+                  *******************986 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   33.5   0.2   3.7e-12     3e-08       7      87 ..       5      80 ..       2      82 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 33.5 bits;  conditional E-value: 3.7e-12
+      COX2_TM  7 lgfqdaasplmeeleelhdyilliltlililVlyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililialpSl 87
+                 lg+qd    +  e+  +hdy +li+++ili V++ +++il +       +  k    ++ +E+ WT++P ++l+ +++pSl
+  Halocynthia  5 LGLQDCFNYIGIEVYLFHDYSMLIVLFILIGVILSVLVILGS----GGYMV-KGYRSSEFLELTWTVVPGFLLMSLGVPSL 80
+                 6778888888889999****************9999999888....34444.44677889********************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (225 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       637  (0.0390654); expected 326.1 (0.02)
+Passed bias filter:                      376  (0.023059); expected 326.1 (0.02)
+Passed Vit filter:                        51  (0.00312768); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.57u 0.51s 00:00:01.08 Elapsed: 00:00:01.58
+# Mc/sec: 407.40
+//
+Query:       Limulus  [L=226]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.3e-59  199.2   0.0    2.1e-59  198.5   0.0    1.4  1  COX2      Cytochrome C oxidase subunit II, periplasmic domain
+    1.4e-24   85.9   7.6    2.4e-24   85.2   7.6    1.4  1  COX2_TM   Cytochrome C oxidase subunit II, transmembrane doma
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  198.5   0.0   2.6e-63   2.1e-59       1     120 []      95     214 ..      95     214 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 198.5 bits;  conditional E-value: 2.6e-63
+     COX2   1 ltikaiGhqwywsyeysdfedlefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpGrlnqvsllvereGvfyGqc 102
+              lt+k+iGhqwywsyeysdf+++efdsy++p+++   +++rll+vdnr ++p++t++r+++ta dv+h+++vp+lg+k+da+pGrlnq s++++r+G+f+Gqc
+  Limulus  95 LTVKTIGHQWYWSYEYSDFSSIEFDSYIIPRRENLPSSFRLLDVDNRTILPINTQIRIIITAGDVIHAWTVPALGIKIDAIPGRLNQSSIIINRPGLFFGQC 196
+              79**************************************************************************************************** PP
+
+     COX2 103 selcGvnhssmpivveav 120
+              se+cG+nhs++pivve+v
+  Limulus 197 SEICGANHSFIPIVVESV 214
+              ****************97 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   85.2   7.6   2.9e-28   2.4e-24       1      89 []       1      83 [.       1      83 [. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 85.2 bits;  conditional E-value: 2.9e-28
+  COX2_TM  1 vatpaglgfqdaasplmeeleelhdyilliltlililVlyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililialpSlkl 89
+             +at++ l fqd asp++e++  +hd++++iltli++lV+yi++  + +      ++t++ l++gqeiE+ WTiiPalili+ialpSl+l
+  Limulus  1 MATWSHLLFQDRASPTIEQIIFFHDHTIIILTLITTLVVYIIINTIYN------SFTNRVLLEGQEIETFWTIIPALILIFIALPSLRL 83
+             799*******************************************99......9********************************87 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (226 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       686  (0.0420704); expected 326.1 (0.02)
+Passed bias filter:                      344  (0.0210965); expected 326.1 (0.02)
+Passed Vit filter:                        31  (0.00190114); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.58u 0.52s 00:00:01.10 Elapsed: 00:00:01.03
+# Mc/sec: 627.72
+//
+Query:       Echinococcus_equinus  [L=193]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.3e-29  101.6   5.6    5.2e-28   97.2   5.6    2.2  1  COX2      Cytochrome C oxidase subunit II, periplasmic domain
+    2.2e-06   27.6   4.3    3.9e-06   26.8   4.3    1.3  1  COX2_TM   Cytochrome C oxidase subunit II, transmembrane doma
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   97.2   5.6   6.4e-32   5.2e-28       2     120 .]      83     189 ..      82     189 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 97.2 bits;  conditional E-value: 6.4e-32
+                  COX2   2 tikaiGhqwywsyeysdfedlefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpGrlnqvsl 90 
+                           t+k +Ghqwyw+yeys      +ds+ v       g++ ++  d+ + +    + +l+vt+ dv+hsf vpsl +k+da+pGrln++ +
+  Echinococcus_equinus  83 TVKIVGHQWYWTYEYSGGC---YDSLPV-------GDYFMV--DKPLRMVYGLPYHLVVTSGDVIHSFFVPSLNLKMDAIPGRLNHLFF 159
+                           799************9877...787655.......565554..555555556677899******************************* PP
+
+                  COX2  91 lvereGvfyGqcselcGvnhssmpivveav 120
+                           + +++G f G c+elcGvnh +mpivve v
+  Echinococcus_equinus 160 CPSQHGSFVGYCAELCGVNHGVMPIVVEVV 189
+                           ***************************976 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.8   4.3   4.8e-10   3.9e-06      26      83 ..       9      65 ..       2      70 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 26.8 bits;  conditional E-value: 4.8e-10
+               COX2_TM 26 yilliltlililVlyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililia 83
+                          +i++++++++++++  + ++l+ ++  +   t k+  ++q+iE++WT++P++i++++ 
+  Echinococcus_equinus  9 DIVCYIVAVCVFIICFV-YVLLCWNVVEGVGTVKFGGESQVIELVWTVVPTVIVLVLC 65
+                          55666666666554433.333334566688899999****************998875 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (193 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       848  (0.0520054); expected 326.1 (0.02)
+Passed bias filter:                      431  (0.026432); expected 326.1 (0.02)
+Passed Vit filter:                        61  (0.00374095); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.57u 0.54s 00:00:01.10 Elapsed: 00:00:04.30
+# Mc/sec: 128.11
+//
+Query:       Taenia_crassiceps  [L=194]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      1e-32  112.4   5.5    1.1e-31  109.1   5.5    2.1  1  COX2      Cytochrome C oxidase subunit II, periplasmic domain
+    4.7e-06   26.5   3.2    9.2e-06   25.6   3.2    1.6  1  COX2_TM   Cytochrome C oxidase subunit II, transmembrane doma
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  109.1   5.5   1.4e-35   1.1e-31       2     119 ..      83     188 ..      82     189 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 109.1 bits;  conditional E-value: 1.4e-35
+               COX2   2 tikaiGhqwywsyeysdfedlefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpGrlnqvsllve 93 
+                        tik iGhqwywsyey+d     +dsy         g+   + vd+ + +    + +l+vt++dv+hsf+vpsl +k+da+pGrln++ ++ +
+  Taenia_crassiceps  83 TIKIIGHQWYWSYEYPDGC---YDSY---------GSSDCFIVDKPMTMIYGVPYHLVVTSADVIHSFSVPSLNLKMDAIPGRLNHLFFCPS 162
+                        89***************98...9999.........6667788999999999***************************************** PP
+
+               COX2  94 reGvfyGqcselcGvnhssmpivvea 119
+                        ++Gvf G c+elcGvnhs+mpi++e 
+  Taenia_crassiceps 163 QHGVFLGYCAELCGVNHSVMPIMIEV 188
+                        ************************96 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.6   3.2   1.1e-09   9.2e-06      25      84 ..       8      66 ..       1      71 [. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 25.6 bits;  conditional E-value: 1.1e-09
+            COX2_TM 25 dyilliltlililVlyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililial 84
+                        +i+++++++++++l  + ++l+  +    k   k+  ++q +E++WTi+P+++++++ +
+  Taenia_crassiceps  8 YDIVCYIVAVCMFILCFVYIMLFW-KLFVGKGRVKFGRDNQLVELLWTIVPTMVVLVLCA 66
+                       556666666666665544444433.3444555567889**************99887754 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (194 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       874  (0.0535999); expected 326.1 (0.02)
+Passed bias filter:                      415  (0.0254508); expected 326.1 (0.02)
+Passed Vit filter:                        34  (0.00208512); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.55u 0.55s 00:00:01.10 Elapsed: 00:00:09.61
+# Mc/sec: 57.69
+//
+Query:       Axinella  [L=234]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.6e-64  213.5   0.1    7.1e-64  212.9   0.1    1.3  1  COX2      Cytochrome C oxidase subunit II, periplasmic domain
+    2.1e-28   98.2   5.0    3.5e-28   97.4   5.0    1.4  1  COX2_TM   Cytochrome C oxidase subunit II, transmembrane doma
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  212.9   0.1   8.7e-68   7.1e-64       1     120 []      97     218 ..      97     218 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 212.9 bits;  conditional E-value: 8.7e-68
+      COX2   1 ltikaiGhqwywsyeysdfed..lefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpGrlnqvsllvereGvfy 99 
+               ltikaiGhqwywsyeysd+    +efdsy+vp++dl++g+lrllevdnr++vp++t+vr+lvta+dvlhsfavps +vk+davpGrlnq+s++++r+Gvfy
+  Axinella  97 LTIKAIGHQWYWSYEYSDYGAetIEFDSYMVPTSDLNNGDLRLLEVDNRLIVPIQTQVRVLVTAADVLHSFAVPSXSVKIDAVPGRLNQTSFFIKRPGVFY 197
+               79*****************8777****************************************************************************** PP
+
+      COX2 100 GqcselcGvnhssmpivveav 120
+               Gqcse+cG+nhs+mpiv+eav
+  Axinella 198 GQCSEICGANHSFMPIVIEAV 218
+               *******************97 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   97.4   5.0   4.3e-32   3.5e-28       2      89 .]       4      85 ..       3      85 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 97.4 bits;  conditional E-value: 4.3e-32
+   COX2_TM  2 atpaglgfqdaasplmeeleelhdyilliltlililVlyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililialpSlkl 89
+              ++p+++gfqdaasp mee+  +hd+i++ilt+il++V++++v++l++      k  +kyl++g+ iEiiWT+iPa il++ia+pSlkl
+  Axinella  4 PEPWQIGFQDAASPVMEEIIFFHDQIMFILTIILTTVFWVIVRALTT------KHYHKYLFEGTLIEIIWTLIPAGILVFIAFPSLKL 85
+              789********************************************......8899*****************************97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (234 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       669  (0.0410278); expected 326.1 (0.02)
+Passed bias filter:                      353  (0.0216485); expected 326.1 (0.02)
+Passed Vit filter:                        29  (0.00177849); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.51u 0.56s 00:00:01.07 Elapsed: 00:00:05.40
+# Mc/sec: 123.97
+//
+Query:       Terebratulina  [L=229]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.8e-56  189.1   0.0    3.6e-56  188.1   0.0    1.5  2  COX2      Cytochrome C oxidase subunit II, periplasmic domain
+    3.2e-20   71.9   3.8    5.2e-20   71.3   3.8    1.3  1  COX2_TM   Cytochrome C oxidase subunit II, transmembrane doma
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.1   0.0      0.79   6.4e+03      55      75 ..      62      82 ..      53      84 .. 0.72
+   2 !  188.1   0.0   4.4e-60   3.6e-56       1     119 [.      95     217 ..      95     218 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: -3.1 bits;  conditional E-value: 0.79
+           COX2 55 kvrllvtaedvlhsfavpslg 75
+                   ++ + +  + +l s a+psl 
+  Terebratulina 62 EISWTILPSIILISLALPSLR 82
+                   566666777778888888886 PP
+
+  == domain 2  score: 188.1 bits;  conditional E-value: 4.4e-60
+           COX2   1 ltikaiGhqwywsyeysdfed....lefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpGrlnqvsllv 92 
+                    lt+kaiGhqwywsyeysd +     lefdsy+ p  dl++g++rlle+d+r ++p +t++r+lvt++dv+h+++vps+gvk+da+pGrlnqv l+ 
+  Terebratulina  95 LTLKAIGHQWYWSYEYSDIKRnlksLEFDSYMTPPLDLKTGRFRLLETDHRTIIPSQTHIRVLVTGADVIHAWTVPSMGVKADAIPGRLNQVNLFP 190
+                    799***************9877888*********************************************************************** PP
+
+           COX2  93 ereGvfyGqcselcGvnhssmpivvea 119
+                    +++Gv+yGqcse+cG+nhs++pi +e 
+  Terebratulina 191 TKTGVYYGQCSEICGANHSFIPISLEV 217
+                    ***********************9986 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   71.3   3.8   6.4e-24   5.2e-20       1      89 []       1      83 [.       1      83 [. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 71.3 bits;  conditional E-value: 6.4e-24
+        COX2_TM  1 vatpaglgfqdaasplmeeleelhdyilliltlililVlyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililialpSlkl 89
+                   ++++   gfqda+sp +e+l  +hdy+++il+li+i+V y+  l++++      k+t ++l++ +++Ei WTi+P++ili +alpSl++
+  Terebratulina  1 MTSWNTWGFQDASSPVIEQLVFFHDYAIIILVLIIIMVGYATALLIRN------KLTCRNLLERHQLEISWTILPSIILISLALPSLRI 83
+                   56788899*********************************9988888......9********************************87 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (229 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       609  (0.0373482); expected 326.1 (0.02)
+Passed bias filter:                      399  (0.0244695); expected 326.1 (0.02)
+Passed Vit filter:                        37  (0.0022691); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.56u 0.52s 00:00:01.08 Elapsed: 00:00:01.28
+# Mc/sec: 511.82
+//
+Query:       Suberites_domuncula  [L=256]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.1e-61  205.9   0.1    1.6e-61  205.4   0.1    1.2  1  COX2      Cytochrome C oxidase subunit II, periplasmic domain
+    1.2e-27   95.7   4.3    2.2e-27   94.9   4.3    1.4  1  COX2_TM   Cytochrome C oxidase subunit II, transmembrane doma
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  205.4   0.1   1.9e-65   1.6e-61       1     120 []     119     240 ..     119     240 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 205.4 bits;  conditional E-value: 1.9e-65
+                 COX2   1 ltikaiGhqwywsyeysdfed..lefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpGrlnqv 88 
+                          ltikaiGhqwywsyeysd+    +efdsy+vp++dl++g+lrllevdn ++vp++t+vr+lvt++dvlhsfavp+l+vk+davpGrln++
+  Suberites_domuncula 119 LTIKAIGHQWYWSYEYSDYGPetIEFDSYMVPTSDLNNGDLRLLEVDNILIVPIQTQVRVLVTGADVLHSFAVPCLSVKIDAVPGRLNHT 208
+                          79*****************7666******************************************************************* PP
+
+                 COX2  89 sllvereGvfyGqcselcGvnhssmpivveav 120
+                          s++++r+G+fyGqcse+cG+nhs+mpiv+eav
+  Suberites_domuncula 209 SFFIKRPGIFYGQCSEICGANHSFMPIVIEAV 240
+                          ******************************97 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   94.9   4.3   2.7e-31   2.2e-27       2      89 .]      26     107 ..      25     107 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 94.9 bits;  conditional E-value: 2.7e-31
+              COX2_TM   2 atpaglgfqdaasplmeeleelhdyilliltlililVlyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililialpSlkl 89 
+                          ++p++lgfqdaasp mee+  +hd+i++il++i+++Vl++l+++l++      k  +kyl++g+ iEiiWT+iPa +l++ia+pSlkl
+  Suberites_domuncula  26 PEPWQLGFQDAASPVMEEIIFFHDQIMFILIIIITTVLWLLTRVLTT------KRYHKYLFEGTLIEIIWTLIPAGVLVFIAFPSLKL 107
+                          789********************************************......8889*****************************97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (256 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       752  (0.046118); expected 326.1 (0.02)
+Passed bias filter:                      403  (0.0247148); expected 326.1 (0.02)
+Passed Vit filter:                        40  (0.00245308); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.51u 0.56s 00:00:01.07 Elapsed: 00:00:01.25
+# Mc/sec: 585.90
+//
+Query:       Bfloridae  [L=0]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (0 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                         0  (0); expected 326.1 (0.02)
+Passed bias filter:                        0  (0); expected 326.1 (0.02)
+Passed Vit filter:                         0  (0); expected 16.3 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.34u 0.25s 00:00:00.59 Elapsed: 00:00:00.46
+# Mc/sec: 0.00
+//
+Query:       Katharina  [L=229]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    1.9e-60  201.8   0.0      3e-60  201.3   0.0    1.3  1  COX2             Cytochrome C oxidase subunit II, periplasmic
+    2.6e-21   75.4   3.5    4.1e-21   74.8   3.5    1.3  1  COX2_TM          Cytochrome C oxidase subunit II, transmembra
+  ------ inclusion threshold ------
+      0.091   12.3   0.0       0.13   11.8   0.0    1.2  1  Glyco_transf_34  galactosyl transferase GMA12/MNN10 family
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  201.3   0.0   5.5e-64     3e-60       1     120 []      95     214 ..      95     214 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 201.3 bits;  conditional E-value: 5.5e-64
+       COX2   1 ltikaiGhqwywsyeysdfedlefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpGrlnqvsllvereGvfyG 100
+                ltik +Ghqwyw yeysdf +lefdsy++  edleeg++rllevd+r vvp++tkvr+lvta+dvlhs++vpslgvk+davpGrlnq+ ++++ +GvfyG
+  Katharina  95 LTIKVVGHQWYWRYEYSDFLNLEFDSYMISLEDLEEGDYRLLEVDHRRVVPMKTKVRVLVTAADVLHSWTVPSLGVKADAVPGRLNQLRFFANYPGVFYG 194
+                79************************************************************************************************** PP
+
+       COX2 101 qcselcGvnhssmpivveav 120
+                qcse+cG+nhs++piv+e v
+  Katharina 195 QCSEICGANHSFIPIVLEVV 214
+                ****************9976 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   74.8   3.5   7.5e-25   4.1e-21       1      89 []       1      83 [.       1      83 [. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 74.8 bits;  conditional E-value: 7.5e-25
+    COX2_TM  1 vatpaglgfqdaasplmeeleelhdyilliltlililVlyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililialpSlkl 89
+               +a + + gfqd+asp++e+l  +hd+++lil++i++l +y  v+++ +      ++ ++++++ qeiEi+WTi+Pa++li++a+pSl+l
+  Katharina  1 MAFWRQWGFQDGASPIIEQLIFFHDHAILILIIIISLLSYGAVSLINN------SFLSRSTLERQEIEIVWTILPAVVLIFLAFPSLQL 83
+               68899**************************************99988......788899***************************97 PP
+
+>> Glyco_transf_34  galactosyl transferase GMA12/MNN10 family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.8   0.0   2.5e-05      0.13      45      85 ..      49      89 ..      26      92 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 11.8 bits;  conditional E-value: 2.5e-05
+  Glyco_transf_34 45 fykkvsallaeemnsvWaklpairaamkkyPeaewiWwlDq 85
+                      + + s+l+++e++ vW  lpa+  ++ ++P+ + +++lD+
+        Katharina 49 SFLSRSTLERQEIEIVWTILPAVVLIFLAFPSLQLLYLLDE 89
+                     5667788999*****************************95 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (229 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       533  (0.0326874); expected 326.1 (0.02)
+Passed bias filter:                      327  (0.020054); expected 326.1 (0.02)
+Passed Vit filter:                        32  (0.00196247); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.54u 0.55s 00:00:01.09 Elapsed: 00:00:01.54
+# Mc/sec: 425.41
+//
+Query:       Geodia  [L=247]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.4e-64  214.5   0.0    4.1e-64  213.7   0.0    1.4  1  COX2      Cytochrome C oxidase subunit II, periplasmic domain
+    1.8e-27   95.2   5.3    3.4e-27   94.3   5.3    1.5  1  COX2_TM   Cytochrome C oxidase subunit II, transmembrane doma
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  213.7   0.0   5.1e-68   4.1e-64       1     120 []     110     231 ..     110     231 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 213.7 bits;  conditional E-value: 5.1e-68
+    COX2   1 ltikaiGhqwywsyeysdfed..lefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpGrlnqvsllvereGvfyGq 101
+             ltikaiGhqwywsyeysd+ +  +efdsy+vp++dl++g+lrllevdnr++vp++t+vr+lvta+dvlh+favpslgvkvdavpGrlnq+s++ +r+GvfyGq
+  Geodia 110 LTIKAIGHQWYWSYEYSDYGTntIEFDSYMVPTSDLNKGDLRLLEVDNRLIVPIQTQVRVLVTAADVLHAFAVPSLGVKVDAVPGRLNQTSFFLKRPGVFYGQ 212
+             79*****************8778******************************************************************************** PP
+
+    COX2 102 cselcGvnhssmpivveav 120
+             cselcG+nhs+mpiv+e v
+  Geodia 213 CSELCGANHSFMPIVIEGV 231
+             ****************976 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   94.3   5.3   4.2e-31   3.4e-27       2      89 .]      17      98 ..      16      98 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 94.3 bits;  conditional E-value: 4.2e-31
+  COX2_TM  2 atpaglgfqdaasplmeeleelhdyilliltlililVlyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililialpSlkl 89
+             ++p++lgfqdaasp mee+  +hd+i++ilt+i+++Vl++l+++l+       k   kyl++g+ iEiiWT++Pa +li+ia+pSlkl
+   Geodia 17 PEPWQLGFQDAASPVMEEIIFFHDQIMFILTIIVTIVLWLLIRALTL------KHYYKYLFEGTLIEIIWTLVPACVLIFIAFPSLKL 98
+             899******************************************99......77889****************************97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (247 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       762  (0.0467313); expected 326.1 (0.02)
+Passed bias filter:                      380  (0.0233043); expected 326.1 (0.02)
+Passed Vit filter:                        37  (0.0022691); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.59u 0.46s 00:00:01.05 Elapsed: 00:00:00.75
+# Mc/sec: 942.17
+//
+Query:       Metridium  [L=248]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.6e-64  213.3   0.0    8.4e-64  212.7   0.0    1.3  1  COX2      Cytochrome C oxidase subunit II, periplasmic domain
+      7e-27   93.3   6.0    1.2e-26   92.5   6.0    1.4  1  COX2_TM   Cytochrome C oxidase subunit II, transmembrane doma
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  212.7   0.0     1e-67   8.4e-64       1     120 []     112     233 ..     112     233 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 212.7 bits;  conditional E-value: 1e-67
+       COX2   1 ltikaiGhqwywsyeysdfed..lefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpGrlnqvsllvereGvf 98 
+                ltikaiGhqwywsyeysd+++  lefdsy+vp+++l++g++rllevdnr+vvp++t+vr+lvt++dvlhsfavp+l+vk+da+pGrlnq+ ++++r+G+f
+  Metridium 112 LTIKAIGHQWYWSYEYSDYQTetLEFDSYMVPTSELNKGDFRLLEVDNRLVVPINTHVRVLVTGADVLHSFAVPALAVKMDAIPGRLNQTGFFIKRPGIF 211
+                79*****************9888***************************************************************************** PP
+
+       COX2  99 yGqcselcGvnhssmpivveav 120
+                yGqcse+cG+nhs+mpiv+eav
+  Metridium 212 YGQCSEICGANHSFMPIVIEAV 233
+                ********************97 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   92.5   6.0   1.4e-30   1.2e-26       2      89 .]      19     100 ..      18     100 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 92.5 bits;  conditional E-value: 1.4e-30
+    COX2_TM   2 atpaglgfqdaasplmeeleelhdyilliltlililVlyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililialpSlkl 89 
+                ++p++lg+qdaa p mee+  +hd++++il++i+++Vl+++v++l        k  ++ylv+g+ +EiiWTi+Pa+ililia+pSlkl
+  Metridium  19 PEPWQLGLQDAAHPVMEEIIFFHDQVMFILIIIITTVLWLIVKALSG------KAYHRYLVDGTLLEIIWTIVPAIILILIAFPSLKL 100
+                799******************************************99......999******************************97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (248 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       699  (0.0428677); expected 326.1 (0.02)
+Passed bias filter:                      391  (0.0239789); expected 326.1 (0.02)
+Passed Vit filter:                        43  (0.00263707); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.58u 0.49s 00:00:01.06 Elapsed: 00:00:00.88
+# Mc/sec: 806.23
+//
+Query:       Amphimedon_queenslandica  [L=251]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+      9e-64  212.6   0.1    1.6e-63  211.8   0.1    1.4  1  COX2        Cytochrome C oxidase subunit II, periplasmic doma
+    1.4e-22   79.5   4.1    2.4e-22   78.7   4.1    1.4  1  COX2_TM     Cytochrome C oxidase subunit II, transmembrane do
+  ------ inclusion threshold ------
+       0.19   10.9   3.8       0.27   10.4   3.8    1.1  1  DIE2_ALG10  DIE2/ALG10 family
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  211.8   0.1   2.9e-67   1.6e-63       1     120 []     115     236 ..     115     236 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 211.8 bits;  conditional E-value: 2.9e-67
+                      COX2   1 ltikaiGhqwywsyeysdfed..lefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpG 83 
+                               ltika+Ghqwywsyeysd+ +  +efdsy++p++dl++g+lrllevdnr+vvp++t+vr+lvt++dvlhsfavpsl+vk+davpG
+  Amphimedon_queenslandica 115 LTIKAVGHQWYWSYEYSDYGNstVEFDSYMIPTSDLNSGDLRLLEVDNRLVVPIHTQVRVLVTGADVLHSFAVPSLAVKIDAVPG 199
+                               79*****************9989************************************************************** PP
+
+                      COX2  84 rlnqvsllvereGvfyGqcselcGvnhssmpivveav 120
+                               rlnq+ +l++r+Gv+yGqcse+cG+nhs+mpiv+e v
+  Amphimedon_queenslandica 200 RLNQTNFLIKRPGVYYGQCSEICGANHSFMPIVIEGV 236
+                               **********************************976 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   78.7   4.1   4.4e-26   2.4e-22       2      89 .]      22     103 ..      21     103 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 78.7 bits;  conditional E-value: 4.4e-26
+                   COX2_TM   2 atpaglgfqdaasplmeeleelhdyilliltlililVlyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililialpS 86 
+                               ++p++lg+qd    lme++ ++hd i++il+lil++Vl+++v++l++      + t+ ylv++ +iEiiWT+iPa +l++ialpS
+  Amphimedon_queenslandica  22 PEPWQLGLQDPGCYLMEDIVQFHDWIMYILVLILSFVLWLIVRALTT------NSTNMYLVDAPVIEIIWTLIPAGVLMFIALPS 100
+                               899********************************************......8999**************************** PP
+
+                   COX2_TM  87 lkl 89 
+                               lkl
+  Amphimedon_queenslandica 101 LKL 103
+                               *97 PP
+
+>> DIE2_ALG10  DIE2/ALG10 family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.4   3.8     5e-05      0.27     308     365 ..      35      92 ..      34      96 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 10.4 bits;  conditional E-value: 5e-05
+                DIE2_ALG10 308 YiwrrllkrhelikyllvpvYllslwlvlealakskstvllvlllllatllslvpapL 365
+                               Y+   +++ h +i y+lv +  + lwl+++al+++++++ lv + ++ ++ +l+pa  
+  Amphimedon_queenslandica  35 YLMEDIVQFHDWIMYILVLILSFVLWLIVRALTTNSTNMYLVDAPVIEIIWTLIPAGV 92 
+                               99999***************************988888999999999999***99865 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (251 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       688  (0.0421931); expected 326.1 (0.02)
+Passed bias filter:                      404  (0.0247762); expected 326.1 (0.02)
+Passed Vit filter:                        40  (0.00245308); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.55u 0.53s 00:00:01.08 Elapsed: 00:00:00.85
+# Mc/sec: 844.79
+//
+Query:       Acropora  [L=247]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.2e-63  212.2   0.0    1.8e-63  211.6   0.0    1.2  1  COX2      Cytochrome C oxidase subunit II, periplasmic domain
+    1.8e-24   85.5   3.9    3.1e-24   84.8   3.9    1.4  1  COX2_TM   Cytochrome C oxidase subunit II, transmembrane doma
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  211.6   0.0   2.2e-67   1.8e-63       1     120 []     111     232 ..     111     232 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 211.6 bits;  conditional E-value: 2.2e-67
+      COX2   1 ltikaiGhqwywsyeysdfed..lefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpGrlnqvsllvereGvfy 99 
+               ltikaiGhqwywsyeysd+++  lefdsy+vp++dl++g++rllevdnr+vvp++t+vr+lvt++dvlhsfavp+lg+k+davpGrlnq+ ++++r+G+fy
+  Acropora 111 LTIKAIGHQWYWSYEYSDYQEetLEFDSYMVPTSDLNSGDFRLLEVDNRLVVPINTHVRILVTGADVLHSFAVPALGIKTDAVPGRLNQAGIFIKRPGTFY 211
+               79*****************9889****************************************************************************** PP
+
+      COX2 100 GqcselcGvnhssmpivveav 120
+               Gqcse+cG+nhs+mpiv+eav
+  Acropora 212 GQCSEICGANHSFMPIVIEAV 232
+               *******************97 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   84.8   3.9   3.9e-28   3.1e-24       2      89 .]      18      99 ..      17      99 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 84.8 bits;  conditional E-value: 3.9e-28
+   COX2_TM  2 atpaglgfqdaasplmeeleelhdyilliltlililVlyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililialpSlkl 89
+              ++++ lgfq+aa+p mee+  +hd+i+++l++i+i+Vl++lv +l        k  ++ l++g+ +Ei+WT+iPa+il++ia pSlkl
+  Acropora 18 PESWHLGFQEAAAPVMEEIVFFHDQIMFLLVIIVIVVLWLLVEALNG------KYYDRDLIDGTLLEIVWTLIPAVILVFIASPSLKL 99
+              889******************************************99......899999***************************97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (247 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       802  (0.0491843); expected 326.1 (0.02)
+Passed bias filter:                      491  (0.0301116); expected 326.1 (0.02)
+Passed Vit filter:                        39  (0.00239176); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.61u 0.50s 00:00:01.10 Elapsed: 00:00:01.06
+# Mc/sec: 666.63
+//
+Query:       Trichinella  [L=225]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------  -----------
+    7.6e-47  158.0   0.0    1.2e-46  157.4   0.0    1.3  1  COX2       Cytochrome C oxidase subunit II, periplasmic domai
+      4e-05   23.5   7.1    6.9e-05   22.8   7.1    1.4  1  COX2_TM    Cytochrome C oxidase subunit II, transmembrane dom
+  ------ inclusion threshold ------
+      0.026   12.8   2.0      0.033   12.5   2.0    1.1  1  Mem_trans  Membrane transport protein
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  157.4   0.0   2.1e-50   1.2e-46       3     118 ..      97     208 ..      95     210 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 157.4 bits;  conditional E-value: 2.1e-50
+         COX2   3 ikaiGhqwywsyeysdfedlefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpGrlnqvsllvereGvfyG 100
+                  +k  Ghqwyw+y+y+df+ lefdsy+    + e+ ++rll+ dnrvv+p++ ++r+ vt++dv+h +++pslg+k+da+pGr+n +++  + +Gv yG
+  Trichinella  97 LKITGHQWYWTYNYPDFN-LEFDSYIK---EWESQDFRLLDCDNRVVLPTQVPIRISVTSADVIHRWTIPSLGIKIDAIPGRINSTTTESTLPGVIYG 190
+                  7899*************9.******95...567889************************************************************** PP
+
+         COX2 101 qcselcGvnhssmpivve 118
+                  qcselcGvnh ++pi +e
+  Trichinella 191 QCSELCGVNHRFIPITIE 208
+                  ****************98 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.8   7.1   1.3e-08   6.9e-05       3      88 ..       3      81 ..       1      82 [. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 22.8 bits;  conditional E-value: 1.3e-08
+      COX2_TM  3 tpaglgfqdaasplmeeleelhdyilliltlililVlyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililialpSlk 88
+                 ++++++ qd        l ++ d +++i++ ililVl+i +  l++         ++ +++ + +E++WTi P  +l+ ia  S+k
+  Trichinella  3 KWTAMYTQDRYNHRSLLLINFIDWVIIIILSILILVLWIYIGTLFT-------SRNSLILDHKWLEFLWTISPLGVLLSIASISIK 81
+                 57788888888888888999*******************9999999.......3455788999******************99976 PP
+
+>> Mem_trans  Membrane transport protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.5   2.0   6.1e-06     0.033      59     124 ..      22      89 ..      15     110 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 12.5 bits;  conditional E-value: 6.1e-06
+    Mem_trans  59 mllrfiladvlvklivlillllgallsk..ifkgslewtitlfslstlpNtlvlgipllkalygeygv 124
+                  ++++++++++l++li ++ + +g+l+++   + ++++w ++l  +s l+ +l++  + +kaly+e+g+
+  Trichinella  22 NFIDWVIIIILSILILVLWIYIGTLFTSrnSLILDHKWLEFLWTISPLGVLLSIASISIKALYTEEGL 89 
+                  6799**********************997788899*****************************9885 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (225 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       762  (0.0467313); expected 326.1 (0.02)
+Passed bias filter:                      401  (0.0245922); expected 326.1 (0.02)
+Passed Vit filter:                        44  (0.00269839); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.55u 0.55s 00:00:01.10 Elapsed: 00:00:01.14
+# Mc/sec: 559.73
+//
+Query:       Balanoglossus  [L=228]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.2e-63  211.4   0.0    3.5e-63  210.7   0.0    1.3  1  COX2      Cytochrome C oxidase subunit II, periplasmic domain
+    1.4e-29  101.9   5.1    2.1e-29  101.4   5.1    1.3  1  COX2_TM   Cytochrome C oxidase subunit II, transmembrane doma
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  210.7   0.0   4.3e-67   3.5e-63       1     120 []      95     214 ..      95     214 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 210.7 bits;  conditional E-value: 4.3e-67
+           COX2   1 ltikaiGhqwywsyeysdfedlefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpGrlnqvsllvereG 96 
+                    ltikaiGhqwywsyey+d++dlefdsy+vp++dl+ g+ rllevdnr+v p++++vr+lvt++dvlhs+a+p+lg+k+davpGrlnq+++++ r+G
+  Balanoglossus  95 LTIKAIGHQWYWSYEYTDYQDLEFDSYMVPTQDLTPGQPRLLEVDNRLVAPTHSPVRVLVTSADVLHSWAIPALGLKMDAVPGRLNQLTFFAPRSG 190
+                    79********************************************************************************************** PP
+
+           COX2  97 vfyGqcselcGvnhssmpivveav 120
+                    vfyGqcse+cG+nhs+mpiv+e+v
+  Balanoglossus 191 VFYGQCSEICGANHSFMPIVLESV 214
+                    *********************997 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  101.4   5.1   2.6e-33   2.1e-29       1      89 []       1      83 [.       1      83 [. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 101.4 bits;  conditional E-value: 2.6e-33
+        COX2_TM  1 vatpaglgfqdaasplmeeleelhdyilliltlililVlyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililialpSlkl 89
+                   vat+a+lgfqdaasp+meel ++hd++l+iltl++i+V+y l++++++      ++t+++l++gqeiE+iWTiiPa+ili++alpSl+l
+  Balanoglossus  1 VATWAQLGFQDAASPIMEELIYFHDHALVILTLVTIIVFYGLISLITN------SFTNRFLLEGQEIETIWTIIPAIILIFLALPSLRL 83
+                   689*******************************************99......9********************************87 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (228 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       570  (0.0349565); expected 326.1 (0.02)
+Passed bias filter:                      348  (0.0213418); expected 326.1 (0.02)
+Passed Vit filter:                        35  (0.00214645); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.59u 0.49s 00:00:01.08 Elapsed: 00:00:00.85
+# Mc/sec: 767.38
+//
+Query:       Tetrancistrum_nebulosi  [L=192]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.5e-32  109.8   5.0      7e-31  106.5   5.0    2.0  1  COX2      Cytochrome C oxidase subunit II, periplasmic domain
+    0.00053   19.9   5.6    0.00087   19.3   5.6    1.3  1  COX2_TM   Cytochrome C oxidase subunit II, transmembrane doma
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  106.5   5.0   8.6e-35     7e-31       3     120 .]      84     189 ..      83     189 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 106.5 bits;  conditional E-value: 8.6e-35
+                    COX2   3 ikaiGhqwywsyeysdfedlefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpGrlnqvs 89 
+                             +k +G+qwyw y+y+  e   +ds++ +          + +vdn + +    + r+lvt++dvlhsf+vp lg+kvda+pGr+n+++
+  Tetrancistrum_nebulosi  84 VKVVGRQWYWRYDYEGEE---YDSFISK---------IVNKVDNPLQISYGIPTRILVTSSDVLHSFSVPDLGIKVDAIPGRINKTV 158
+                             899*********998876...8998743.........23479********************************************* PP
+
+                    COX2  90 llvereGvfyGqcselcGvnhssmpivveav 120
+                             ++ +r Gvf G c elcG+ hs+mpivve v
+  Tetrancistrum_nebulosi 159 IIPDRVGVFVGYCRELCGTGHSYMPIVVEVV 189
+                             ****************************976 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   19.3   5.6   1.1e-07   0.00087      27      84 ..      14      66 ..       2      71 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: 19.3 bits;  conditional E-value: 1.1e-07
+                 COX2_TM 27 illiltlililVlyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililial 84
+                             +++ ++i+++V+ +l+++l       ++ t  + ++++ +E++WT++P+l +i++ +
+  Tetrancistrum_nebulosi 14 GIVLCVFIFFVVFTVLMYLLYF-----SSGTFMPKTESSLLEFLWTLLPTLSVIILCI 66
+                            4455566666666666666654.....444555568**************98888865 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (192 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1034  (0.0634122); expected 326.1 (0.02)
+Passed bias filter:                      557  (0.0341592); expected 326.1 (0.02)
+Passed Vit filter:                        77  (0.00472219); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.67u 0.49s 00:00:01.16 Elapsed: 00:00:02.13
+# Mc/sec: 257.88
+//
+Query:       Pseudogarypus_banksi  [L=227]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    2.4e-51  172.5   0.1      4e-51  171.8   0.1    1.3  1  COX2            Cytochrome C oxidase subunit II, periplasmic 
+    4.7e-09   36.1   7.1    8.7e-09   35.3   7.1    1.5  1  COX2_TM         Cytochrome C oxidase subunit II, transmembran
+  ------ inclusion threshold ------
+      0.033   13.7   0.3      0.033   13.7   0.3    1.9  2  Tiny_TM_bacill  Protein of unknown function (Tiny_TM_bacill)
+       0.06   13.2   7.9       0.11   12.4   7.9    1.4  1  FtsX            FtsX-like permease family
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  171.8   0.1   9.9e-55     4e-51       1     119 [.      95     213 ..      95     214 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 171.8 bits;  conditional E-value: 9.9e-55
+                  COX2   1 ltikaiGhqwywsyeysdfedlefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpGrlnqvs 89 
+                           +tik i hqw+wsyeysdf ++efdsyl   ++ +  ++rll+vdnr+++p ++ +r+++t++dvlhs+avp+l+vk+da+pGrlnq+ 
+  Pseudogarypus_banksi  95 ITIKVIAHQWFWSYEYSDFINIEFDSYLNSINNENFNQIRLLDVDNRLILPYNSLIRIIITSQDVLHSWAVPALAVKIDAIPGRLNQTL 183
+                           69*************************************************************************************** PP
+
+                  COX2  90 llvereGvfyGqcselcGvnhssmpivvea 119
+                           +++++ G+ +Gqcse+cG nh ++pi +e+
+  Pseudogarypus_banksi 184 FSITKIGLNFGQCSEICGLNHRFIPICLET 213
+                           **************************9986 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   35.3   7.1   2.1e-12   8.7e-09       7      89 .]       7      83 ..       1      83 [. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 35.3 bits;  conditional E-value: 2.1e-12
+               COX2_TM  7 lgfqdaasplmeeleelhdyilliltlililVlyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililialpSlkl 89
+                            +q+  sp++  + +++d++ li+t+i +++l+i++ + ++      k+ +k+ + ++++Ei W  iP +i i+ialpS+++
+  Pseudogarypus_banksi  7 YSLQERESPIIIYISQFNDHVTLIITTISFTILLIIIGATFN------KFIDKSQLINETLEIFWSSIPIIICIFIALPSITI 83
+                          5699999************************99999988887......88888899999*********************976 PP
+
+>> Tiny_TM_bacill  Protein of unknown function (Tiny_TM_bacill)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   13.7   0.3     8e-06     0.033      14      23 ..      38      47 ..      37      48 .. 0.96
+   2 ?   -4.0   1.7       2.8   1.2e+04       8      14 ..      70      76 ..      70      78 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 13.7 bits;  conditional E-value: 8e-06
+        Tiny_TM_bacill 14 ILLIIvGaaw 23
+                          ILLII+Ga++
+  Pseudogarypus_banksi 38 ILLIIIGATF 47
+                          9*******98 PP
+
+  == domain 2  score: -4.0 bits;  conditional E-value: 2.8
+        Tiny_TM_bacill  8 LIVVLFI 14
+                          +I+ +FI
+  Pseudogarypus_banksi 70 IIICIFI 76
+                          5888898 PP
+
+>> FtsX  FtsX-like permease family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.4   7.9   2.6e-05      0.11      54     113 ..      27      87 ..      16      93 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 12.4 bits;  conditional E-value: 2.6e-05
+                  FtsX  54 ialvglliG.lllglllaqlisdvllsinssslpitlslitiliilllllllallagllpi 113
+                           ++l+ + i+ ++l+++++  +++++ +++++++++ + +++i ii+++ ++l ++++l++i
+  Pseudogarypus_banksi  27 VTLIITTISfTILLIIIGATFNKFIDKSQLINETLEIFWSSIPIIICIFIALPSITILYLI 87 
+                           588889999899999999*******99*******************************988 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (227 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       741  (0.0454434); expected 326.1 (0.02)
+Passed bias filter:                      297  (0.0182142); expected 326.1 (0.02)
+Passed Vit filter:                        30  (0.00183981); expected 16.3 (0.001)
+Passed Fwd filter:                         5  (0.000306636); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.53u 0.55s 00:00:01.08 Elapsed: 00:00:01.82
+# Mc/sec: 356.82
+//
+Query:       Benedenia_hoshinai  [L=193]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.9e-34  116.2   3.6    7.2e-33  112.9   3.6    2.1  1  COX2      Cytochrome C oxidase subunit II, periplasmic domain
+      0.001   19.0   1.0     0.0017   18.3   1.0    1.3  1  COX2_TM   Cytochrome C oxidase subunit II, transmembrane doma
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  112.9   3.6   8.9e-37   7.2e-33       2     119 ..      85     190 ..      84     191 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 112.9 bits;  conditional E-value: 8.9e-37
+                COX2   2 tikaiGhqwywsyeysdfedlefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpGrlnqvsllv 92 
+                         t+k iG+qwywsyey +   le+dsy+ +   +        +v+  + +    + rll+t++dv+hsf+vp lg+k da+pGr+nqv+ + 
+  Benedenia_hoshinai  85 TVKIIGRQWYWSYEYDE---LEYDSYMNQ--LI-------NNVELPLELSYLDSYRLLITSSDVIHSFSVPDLGIKRDAIPGRINQVVYVP 163
+                         79************976...67****943..33.......345666778888999************************************ PP
+
+                COX2  93 ereGvfyGqcselcGvnhssmpivvea 119
+                         +r Gvf G cselcG+ hs+mpivve 
+  Benedenia_hoshinai 164 DRLGVFIGYCSELCGAGHSYMPIVVEV 190
+                         *************************95 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   18.3   1.0   2.1e-07    0.0017      24      83 ..      11      67 ..       2      72 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 18.3 bits;  conditional E-value: 2.1e-07
+             COX2_TM 24 hdyilliltlililVlyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililia 83
+                         +y++++ + i+ lV+  l   +++f  +k  i    + +++++E+ WT +P+l+++ + 
+  Benedenia_hoshinai 11 VHYAIILCISITPLVSIYLGF-IMRF--NKGIIFLGVPSENSVLEFFWTFLPTLLVLGLC 67
+                        577777888888888877765.4565..788899999*****************998765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (193 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       475  (0.0291304); expected 326.1 (0.02)
+Passed bias filter:                      345  (0.0211579); expected 326.1 (0.02)
+Passed Vit filter:                        39  (0.00239176); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.54u 0.55s 00:00:01.09 Elapsed: 00:00:01.55
+# Mc/sec: 356.22
+//
+Query:       Myxine  [L=229]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      4e-54  181.5   0.0    6.9e-54  180.7   0.0    1.4  1  COX2      Cytochrome C oxidase subunit II, periplasmic domain
+    1.6e-24   85.7   6.3    2.4e-24   85.1   6.3    1.3  1  COX2_TM   Cytochrome C oxidase subunit II, transmembrane doma
+     0.0069   15.4   1.9      0.013   14.5   1.9    1.4  1  TMEM237   Transmembrane protein 237
+  ------ inclusion threshold ------
+       0.22   10.2   4.7       0.11   11.2   2.9    1.4  2  COX1      Cytochrome C and Quinol oxidase polypeptide I
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  180.7   0.0   1.7e-57   6.9e-54       1     119 [.      95     214 ..      95     215 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 180.7 bits;  conditional E-value: 1.7e-57
+    COX2   1 ltikaiGhqwywsyeysdfed.lefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpGrlnqvsllvereGvfyGqc 102
+             +tik++Ghqwyw+ye+sd ++  e +sy++p+ dl++g++rllevdnr+ vp+++k+r+l+t+edvlh++++ps+g+kvdavpGrlnqv+++ + +G+f+Gqc
+  Myxine  95 ITIKTVGHQWYWTYEFSDLSKeSEIESYILPTADLQNGDFRLLEVDNRISVPIDSKIRILITSEDVLHAWTLPSMGIKVDAVPGRLNQVTFSSSLPGLFFGQC 197
+             69****************976599******************************************************************************* PP
+
+    COX2 103 selcGvnhssmpivvea 119
+             se+cG+nhs++pi++e 
+  Myxine 198 SEICGANHSFIPIAIEV 214
+             **************996 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   85.1   6.3     6e-28   2.4e-24       1      89 []       1      83 [.       1      83 [. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 85.1 bits;  conditional E-value: 6e-28
+  COX2_TM  1 vatpaglgfqdaasplmeeleelhdyilliltlililVlyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililialpSlkl 89
+             +a++ +++fqda+splm+el ++hd+ l+il++i  l+ly+l++  ++      k+t+k+++++qeiEi+WT+iPa+ili++alpS+++
+   Myxine  1 MANHLQFNFQDATSPLMQELVKFHDHSLTILFFISALILYVLMITSLS------KLTNKNILDSQEIEIVWTVIPAFILIILALPSIQI 83
+             78999*************************************999998......9*******************************987 PP
+
+>> TMEM237  Transmembrane protein 237
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   14.5   1.9   3.2e-06     0.013     157     204 ..       7      54 ..       5      83 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 14.5 bits;  conditional E-value: 3.2e-06
+  TMEM237 157 ldlakastallrkllkldngalaiilYflaLvlslsaqmtddrlnlys 204
+              ++++ a++ l+++l+k++  +l+i+++++aL+l + +    ++l+ ++
+   Myxine   7 FNFQDATSPLMQELVKFHDHSLTILFFISALILYVLMITSLSKLTNKN 54 
+              7899999999***********************999987776766543 PP
+
+>> COX1  Cytochrome C and Quinol oxidase polypeptide I
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.2   2.9   2.7e-05      0.11     120     180 ..      30      90 ..      12     110 .. 0.73
+   2 ?   -3.1   0.0      0.59   2.4e+03     208     232 ..     163     187 ..     160     226 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 11.2 bits;  conditional E-value: 2.7e-05
+             HHHHHHHHHHHHHHHHHHHHHHHHTT.CCGS-HHHHHHHHHHHHHHHHCHHHHHHHHHCHH CS
+    COX1 120 llvgvssllgainfivtilkrrapgmtvaklplfvwailatailillalpvlalallllll 180
+             +l+ +s+l+  + +i+ + k  ++++  ++   +vw+++ ++ili+lalp + +  l+  +
+  Myxine  30 ILFFISALILYVLMITSLSKLTNKNILDSQEIEIVWTVIPAFILIILALPSIQILYLMDEI 90 
+             34446777799999999999999988776444455******************99888654 PP
+
+  == domain 2  score: -3.1 bits;  conditional E-value: 0.59
+             HHHHHHHHHHHHHHHHHHTSCCCTH CS
+    COX1 208 ililpalgivyyilpkfagrplfsy 232
+              ++lp +gi    +p  +++  fs 
+  Myxine 163 AWTLPSMGIKVDAVPGRLNQVTFSS 187
+             5666666666666655555544443 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (229 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       706  (0.0432969); expected 326.1 (0.02)
+Passed bias filter:                      398  (0.0244082); expected 326.1 (0.02)
+Passed Vit filter:                        46  (0.00282105); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.61u 0.49s 00:00:01.10 Elapsed: 00:00:01.15
+# Mc/sec: 564.77
+//
+Query:       Drosophila  [L=228]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    7.8e-60  199.9   0.0    1.1e-59  199.4   0.0    1.2  1  COX2      Cytochrome C oxidase subunit II, periplasmic domain
+      6e-26   90.3   5.5    9.7e-26   89.6   5.5    1.3  1  COX2_TM   Cytochrome C oxidase subunit II, transmembrane doma
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  199.4   0.0   1.3e-63   1.1e-59       2     120 .]      96     214 ..      95     214 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 199.4 bits;  conditional E-value: 1.3e-63
+        COX2   2 tikaiGhqwywsyeysdfedlefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpGrlnqvsllvereGvfyG 100
+                 t+k iGhqwywsyeysdf+++efdsy++p+++l +  +rll+vdnrvv+p+++++r+lvta+dv+hs++vp+lgvkvd +pGrlnq+ ++++r+G+fyG
+  Drosophila  96 TLKRIGHQWYWSYEYSDFNNIEFDSYIIPTNELITDGFRLLDVDNRVVLPINSQIRILVTAADVIHSWTVPALGVKVDGTPGRLNQTNFFINRPGLFYG 194
+                 899************************************************************************************************ PP
+
+        COX2 101 qcselcGvnhssmpivveav 120
+                 qcse+cG+nh ++piv+e+v
+  Drosophila 195 QCSEICGANHRFIPIVIESV 214
+                 ******************97 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   89.6   5.5   1.2e-29   9.7e-26       1      89 []       1      83 [.       1      83 [. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 89.6 bits;  conditional E-value: 1.2e-29
+     COX2_TM  1 vatpaglgfqdaasplmeeleelhdyilliltlililVlyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililialpSlkl 89
+                ++t+a+lg+qd aspl+e+l  +hd++llil++i++lV y+++++ ++      +  +++l+hgq iEiiWTi+Pa+il++ialpSl+l
+  Drosophila  1 MSTWANLGLQDRASPLIEQLIFFHDHALLILVIITVLVGYLIFILFFN------NYVNRFLLHGQLIEIIWTILPAIILLFIALPSLRL 83
+                799****************************************99999......8899*****************************87 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (228 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       755  (0.046302); expected 326.1 (0.02)
+Passed bias filter:                      359  (0.0220164); expected 326.1 (0.02)
+Passed Vit filter:                        34  (0.00208512); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.58u 0.43s 00:00:01.01 Elapsed: 00:00:00.82
+# Mc/sec: 795.45
+//
+Query:       Ciona  [L=229]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      4e-49  165.3   0.1    5.8e-49  164.8   0.1    1.2  1  COX2      Cytochrome C oxidase subunit II, periplasmic domain
+    1.7e-09   37.6   1.4    3.2e-09   36.7   1.4    1.5  1  COX2_TM   Cytochrome C oxidase subunit II, transmembrane doma
+  ------ inclusion threshold ------
+      0.061   13.2   0.1        0.1   12.5   0.1    1.3  1  PRIMA1    Proline-rich membrane anchor 1
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  164.8   0.1   1.1e-52   5.8e-49       1     120 []      95     214 ..      95     214 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 164.8 bits;  conditional E-value: 1.1e-52
+   COX2   1 ltikaiGhqwywsyeysdfedlefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpGrlnqvsllvereGvfyGqcse 104
+            lt k + hqwywsye  df d +  sy++p+edl e ++rllevdn +v+p +t++rl++t+ dv+hs+++psl +kvdavpGrln + ++  ++  fyGqcse
+  Ciona  95 LTFKVVRHQWYWSYERRDFCDFDISSYMIPSEDLVERQFRLLEVDNTIVLPYSTNIRLIITSYDVIHSWTLPSLKMKVDAVPGRLNTINIFSFQPRSFYGQCSE 198
+            688999************************************************************************************************** PP
+
+   COX2 105 lcGvnhssmpivveav 120
+            +cG +hs+mpi ve v
+  Ciona 199 ICGLLHSFMPIHVEFV 214
+            ************9965 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   36.7   1.4   5.9e-13   3.2e-09       7      88 ..       7      82 ..       2      83 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 36.7 bits;  conditional E-value: 5.9e-13
+  COX2_TM  7 lgfqdaasplmeeleelhdyilliltlililVlyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililialpSlk 88
+             +++ d+ +   +e+  +hd+ l  l++il+ Vl+i+ ++l +     +k+       ++++E++WT +P++ili i+lpSl 
+    Ciona  7 IQLTDSNTFFGHEIVLFHDFSLASLIFILTAVLLIF-KALKK-----KKFVVLAYKRSNMLEFLWTFFPVFILISIGLPSLY 82
+             457888899999***************999998654.44444.....45555667899**********************96 PP
+
+>> PRIMA1  Proline-rich membrane anchor 1
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.5   0.1   1.9e-05       0.1      59      90 ..      18      49 ..       7      53 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 12.5 bits;  conditional E-value: 1.9e-05
+  PRIMA1 59 selviiiavvcaslvfllvlviicykaikrkp 90
+            +e+v+    + asl+f+l +v++ +ka+k+k 
+   Ciona 18 HEIVLFHDFSLASLIFILTAVLLIFKALKKKK 49
+            6799999999*******************995 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (229 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       602  (0.0369189); expected 326.1 (0.02)
+Passed bias filter:                      309  (0.0189501); expected 326.1 (0.02)
+Passed Vit filter:                        24  (0.00147185); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.56u 0.51s 00:00:01.07 Elapsed: 00:00:01.08
+# Mc/sec: 606.60
+//
+Query:       Epigonichthys  [L=229]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    7.4e-61  203.2   0.2    7.4e-61  203.2   0.2    1.5  2  COX2      Cytochrome C oxidase subunit II, periplasmic domain
+    1.2e-21   76.5   7.4    2.1e-21   75.7   7.4    1.4  1  COX2_TM   Cytochrome C oxidase subunit II, transmembrane doma
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.2   0.1      0.84   6.9e+03      52      76 ..      47      73 ..      40      81 .. 0.51
+   2 !  203.2   0.2   9.1e-65   7.4e-61       1     120 []      95     214 ..      95     214 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: -3.2 bits;  conditional E-value: 0.84
+           COX2 52 vetkvrllvtaedvlhs.fa.vpslgv 76
+                    ++ +   +t   v+ + ++ +p++ +
+  Epigonichthys 47 SSKYIYRFLTDGHVIETvWTiIPAVIL 73
+                   444555556666666532542355544 PP
+
+  == domain 2  score: 203.2 bits;  conditional E-value: 9.1e-65
+           COX2   1 ltikaiGhqwywsyeysdfedlefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpGrlnqvsllvereG 96 
+                    ltika+Ghqwywsyey+d+ d+efdsy+ p  d++ g+ rllevdnrvv+pv+t++r+lvta+dv+h+++vp+lg+k+davpGrlnq++l ++r G
+  Epigonichthys  95 LTIKAVGHQWYWSYEYTDYYDIEFDSYIQPVGDITVGDARLLEVDNRVVLPVDTSIRMLVTAADVIHAWTVPTLGLKMDAVPGRLNQLALQCSRVG 190
+                    79********************************************************************************************** PP
+
+           COX2  97 vfyGqcselcGvnhssmpivveav 120
+                    +fyGqcse+cG+nhs+mpiv+eav
+  Epigonichthys 191 TFYGQCSEICGANHSFMPIVIEAV 214
+                    **********************97 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   75.7   7.4   2.6e-25   2.1e-21       1      89 []       1      83 [.       1      83 [. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 75.7 bits;  conditional E-value: 2.6e-25
+        COX2_TM  1 vatpaglgfqdaasplmeeleelhdyilliltlililVlyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililialpSlkl 89
+                   +atpa+lg+ daasp +ee+ ++hd+++l+++li++l++y +v+++ +      k   ++l++g++iE++WTiiPa+il+++alpSlkl
+  Epigonichthys  1 MATPAQLGLIDAASPVIEEIIYFHDHVILVVILITCLIFYSIVVLISS------KYIYRFLTDGHVIETVWTIIPAVILVVVALPSLKL 83
+                   799****************************************99998......8999*****************************97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (229 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       824  (0.0505335); expected 326.1 (0.02)
+Passed bias filter:                      436  (0.0267386); expected 326.1 (0.02)
+Passed Vit filter:                        42  (0.00257574); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.66u 0.43s 00:00:01.09 Elapsed: 00:00:01.13
+# Mc/sec: 574.68
+//
+Query:       Strigamia_maritima  [L=227]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.2e-51  173.5   0.0    1.9e-51  172.9   0.0    1.3  1  COX2      Cytochrome C oxidase subunit II, periplasmic domain
+    9.4e-22   76.8   8.4    1.7e-21   76.0   8.4    1.4  1  COX2_TM   Cytochrome C oxidase subunit II, transmembrane doma
+  ------ inclusion threshold ------
+      0.053   13.6   0.8       0.11   12.5   0.8    1.5  1  DUF3270   Protein of unknown function (DUF3270)
+       0.19   11.4   2.9       0.32   10.7   2.9    1.3  1  Tmemb_9   TMEM9
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  172.9   0.0   4.6e-55   1.9e-51       1     119 [.      95     213 ..      95     214 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 172.9 bits;  conditional E-value: 4.6e-55
+                COX2   1 ltikaiGhqwywsyeysdfedlefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpGrlnqvsll 91 
+                         +tik+iGhqwyw yeysdf +++fd+++ p+e+l    +rll+vdnr ++p++tk r+l+ta+dv+ +++v +l+vk davpGrlnqvsl+
+  Strigamia_maritima  95 ITIKTIGHQWYWRYEYSDFLNIQFDAHITPQEELPLRGFRLLDVDNRTLIPTNTKTRVLITAADVIQAWTVLALAVKSDAVPGRLNQVSLY 185
+                         69***************************************************************************************** PP
+
+                COX2  92 vereGvfyGqcselcGvnhssmpivvea 119
+                         ++r+G++ Gqcse+cG+nh ++pi++e+
+  Strigamia_maritima 186 ITRPGLYTGQCSEICGANHRFIPIIIET 213
+                         **************************96 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   76.0   8.4   4.1e-25   1.7e-21       1      89 []       1      83 [.       1      83 [. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 76.0 bits;  conditional E-value: 4.1e-25
+             COX2_TM  1 vatpaglgfqdaasplmeeleelhdyilliltlililVlyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililialpSlkl 89
+                        ++t+a l  qd +splme+l  +hd++++ilt+i+i+V+yi++ +  +      ++ ++++++gqe+E++WTi+P + l++ia+pSl+l
+  Strigamia_maritima  1 MSTWASLLNQDCSSPLMEQLIFFHDHVIIILTIITIIVIYIILALSYS------PLINRFTTEGQEVEVMWTILPIITLVFIAFPSLRL 83
+                        7899**************************************999988......*********************************87 PP
+
+>> DUF3270  Protein of unknown function (DUF3270)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.5   0.8   2.7e-05      0.11      32      68 ..      13      51 ..       3      56 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 12.5 bits;  conditional E-value: 2.7e-05
+             DUF3270 32 nsaklkeLlFFan..iAvFsvitvlvsfifLalklatfl 68
+                        +s+ ++ L+FF    i +  +it++v +i Lal+ ++++
+  Strigamia_maritima 13 SSPLMEQLIFFHDhvIIILTIITIIVIYIILALSYSPLI 51
+                        5667889****7555999****************99987 PP
+
+>> Tmemb_9  TMEM9
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.7   2.9   7.9e-05      0.32      54      84 ..      27      57 ..      16      64 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 10.7 bits;  conditional E-value: 7.9e-05
+             Tmemb_9 54 viivivvislLviYmlfLllldpllnkrkks 84
+                        vii++++i+++viY++  l  +pl+n+ +++
+  Strigamia_maritima 27 VIIILTIITIIVIYIILALSYSPLINRFTTE 57
+                        99************************87444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (227 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       780  (0.0478352); expected 326.1 (0.02)
+Passed bias filter:                      413  (0.0253281); expected 326.1 (0.02)
+Passed Vit filter:                        48  (0.0029437); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.59u 0.43s 00:00:01.02 Elapsed: 00:00:00.65
+# Mc/sec: 999.09
+//
+Query:       Caenorhabditis  [L=231]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.3e-45  153.2   0.0    3.3e-45  152.7   0.0    1.2  1  COX2      Cytochrome C oxidase subunit II, periplasmic domain
+     0.0016   18.4   0.3     0.0029   17.6   0.3    1.4  1  COX2_TM   Cytochrome C oxidase subunit II, transmembrane doma
+  ------ inclusion threshold ------
+      0.061   13.5   1.0       0.11   12.8   1.0    1.3  1  DUF4149   Domain of unknown function (DUF4149)
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  152.7   0.0   6.1e-49   3.3e-45       1     118 [.      98     215 ..      98     217 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 152.7 bits;  conditional E-value: 6.1e-49
+            COX2   1 ltikaiGhqwywsyeysdfedlefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpGrlnqvsllvere 95 
+                     lt+k  Ghqwyw yey d   lefdsy+   ++l+ ge rllevdnr v+p +t++r+ +t++dv+h++a+ sl+vk da+ G l   s      
+  Caenorhabditis  98 LTVKVTGHQWYWRYEYRDIPGLEFDSYIKSLDQLSLGEPRLLEVDNRCVIPCDTNIRFCITSADVIHAWALNSLSVKLDAIRGILRTFSYRFPIV 192
+                     79********************************************************************************************* PP
+
+            COX2  96 GvfyGqcselcGvnhssmpivve 118
+                     GvfyGqcse+cG+nhs++pi++e
+  Caenorhabditis 193 GVFYGQCSEICGANHSFIPIALE 215
+                     ********************988 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   17.6   0.3   5.4e-07    0.0029      17      89 .]      18      85 ..       6      85 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 17.6 bits;  conditional E-value: 5.4e-07
+         COX2_TM 17 meeleelhdyilliltlililVlyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililialpSlkl 89
+                    +  ++++h +   +l+ +l++V++++ ++++          ++  ++ q  E++  i+P++il++  +pSl+l
+  Caenorhabditis 18 ASYIDWFHRFNCSLLLGVLVFVTLLFGYLIFG-----TFYFKRKKIEYQFGELLCSIFPTIILLIQIVPSLRL 85
+                    456899********************999986.....23334446677889*******************986 PP
+
+>> DUF4149  Domain of unknown function (DUF4149)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.8   1.0     2e-05      0.11       4      57 ..      30      89 ..      28     107 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 12.8 bits;  conditional E-value: 2e-05
+         DUF4149  4 glllGsqlwvtfvvapvlfrsL......prhqfgelqsklFplyfglglalsvlllltev 57
+                    +lllG++++vt   ++ +f +        + qfgel   +Fp    l  ++++l ll++ 
+  Caenorhabditis 30 SLLLGVLVFVTLLFGYLIFGTFyfkrkkIEYQFGELLCSIFPTIILLIQIVPSLRLLYYY 89
+                    689******************66787777789************9999888888888876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (231 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       518  (0.0317674); expected 326.1 (0.02)
+Passed bias filter:                      307  (0.0188274); expected 326.1 (0.02)
+Passed Vit filter:                        32  (0.00196247); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.55u 0.47s 00:00:01.02 Elapsed: 00:00:00.84
+# Mc/sec: 786.73
+//
+Query:       Homo  [L=227]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      4e-61  204.1   0.0    5.7e-61  203.6   0.0    1.2  1  COX2      Cytochrome C oxidase subunit II, periplasmic domain
+    6.2e-25   87.0   6.8    9.2e-25   86.5   6.8    1.3  1  COX2_TM   Cytochrome C oxidase subunit II, transmembrane doma
+  ------ inclusion threshold ------
+      0.025   13.8   1.3      0.035   13.4   1.3    1.2  1  DUF3100   Protein of unknown function (DUF3100)
+      0.041   13.9   1.7      0.085   12.9   1.7    1.4  1  DPM3      Dolichol-phosphate mannosyltransferase subunit 3 (D
+       0.26   11.2   2.4       0.44   10.5   2.4    1.3  1  NPCC      Nuclear pore complex component
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  203.6   0.0   1.7e-64   5.7e-61       1     119 [.      95     213 ..      95     214 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 203.6 bits;  conditional E-value: 1.7e-64
+  COX2   1 ltikaiGhqwywsyeysdfedlefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpGrlnqvsllvereGvfyGqcsel 105
+           ltik+iGhqwyw+yey+d+  l f+sy++p   le g+lrll+vdnrvv+p+e+++r+++t++dvlhs+avp+lg+k+da+pGrlnq++++++r+Gv+yGqcse+
+  Homo  95 LTIKSIGHQWYWTYEYTDYGGLIFNSYILPPLFLEPGDLRLLDVDNRVVLPIEAPIRIIITSQDVLHSWAVPTLGLKTDAIPGRLNQTTFTATRPGVYYGQCSEI 199
+           79******************************************************************************************************* PP
+
+  COX2 106 cGvnhssmpivvea 119
+           cG+nhs+mpiv+e 
+  Homo 200 CGANHSFMPIVLEL 213
+           ***********986 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   86.5   6.8   2.8e-28   9.2e-25       1      89 []       1      83 [.       1      83 [. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 86.5 bits;  conditional E-value: 2.8e-28
+  COX2_TM  1 vatpaglgfqdaasplmeeleelhdyilliltlililVlyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililialpSlkl 89
+             +a  a++g+qda+sp++eel ++hd++l+i++li++lVly+l+l l++      k+t++++ ++qeiE++WTi+Pa+il+lialpSl++
+     Homo  1 MAHAAQVGLQDATSPIIEELITFHDHALIIIFLICFLVLYALFLTLTT------KLTNTNISDAQEIETVWTILPAIILVLIALPSLRI 83
+             67889*******************************************......9********************************87 PP
+
+>> DUF3100  Protein of unknown function (DUF3100)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   13.4   1.3   1.1e-05     0.035       1      73 [.      16      88 ..      16     104 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 13.4 bits;  conditional E-value: 1.1e-05
+  DUF3100  1 viaeligtlkikigkgkivllpllyalvlglllslkklkvlkkkevkaaskllsvalllliaklgltvgpslk 73
+             +i eli  +   +  + ++ + +lyal+l+l ++l+ +++ + +e+++  ++l  ++l+lia  +l +    +
+     Homo 16 IIEELITFHDHALIIIFLICFLVLYALFLTLTTKLTNTNISDAQEIETVWTILPAIILVLIALPSLRILYITD 88
+             5789999999999999999999***************************************987777655555 PP
+
+>> DPM3  Dolichol-phosphate mannosyltransferase subunit 3 (DPM3)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.9   1.7   2.6e-05     0.085       7      54 ..      32      81 ..      29      92 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 12.9 bits;  conditional E-value: 2.6e-05
+  DPM3  7 tlalallllalwlalllrlvslpl..skvqdevvpvlPfwalvlfGaYal 54
+          +l+++l+l al+l+l+++l+++++   ++ ++v  +lP ++lvl+++ +l
+  Homo 32 FLICFLVLYALFLTLTTKLTNTNIsdAQEIETVWTILPAIILVLIALPSL 81
+          6889999999**********999767888889999*********998776 PP
+
+>> NPCC  Nuclear pore complex component
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.5   2.4   0.00014      0.44      24     103 ..      15      98 ..       4      99 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 10.5 bits;  conditional E-value: 0.00014
+  NPCC  24 riiaNvllllvfnlikklvklllklye....lkkksseeslasalyaelveklirllfllniviallkLlrkqdkiaDlpLtek 103
+            ii  ++++  ++li  ++  +l ly     l++k  ++++++a  +e v++++  ++l+ i ++ l++l   d+++D  Lt k
+  Homo  15 PIIEELITFHDHALIIIFLICFLVLYAlfltLTTKLTNTNISDAQEIETVWTILPAIILVLIALPSLRILYITDEVNDPSLTIK 98 
+           56777777777777777777777555544445666668999*************************************999965 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (227 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       781  (0.0478965); expected 326.1 (0.02)
+Passed bias filter:                      478  (0.0293144); expected 326.1 (0.02)
+Passed Vit filter:                        72  (0.00441555); expected 16.3 (0.001)
+Passed Fwd filter:                         5  (0.000306636); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 0.55u 0.56s 00:00:01.11 Elapsed: 00:00:02.50
+# Mc/sec: 258.73
+//
+Query:       Ascidiella_aspersa  [L=228]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.6e-49  165.5   0.3    5.6e-49  164.9   0.1    1.4  2  COX2      Cytochrome C oxidase subunit II, periplasmic domain
+    5.3e-10   39.2   0.6    9.1e-10   38.4   0.6    1.4  1  COX2_TM   Cytochrome C oxidase subunit II, transmembrane doma
+  ------ inclusion threshold ------
+       0.23   11.1   3.1        0.4   10.3   3.1    1.3  1  MENTAL    Cholesterol-capturing domain
+        1.1    9.3   3.1        1.9    8.5   3.1    1.3  1  DUF3671   Protein of unknown function
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.6   0.0       2.2   8.9e+03      15      30 ..      56      71 ..      47      77 .. 0.57
+   2 !  164.9   0.1   1.4e-52   5.6e-49       1     120 []      97     216 ..      97     216 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: -3.6 bits;  conditional E-value: 2.2
+                COX2 15 eysdfedlefdsylvp 30
+                        +ys  + lef   ++p
+  Ascidiella_aspersa 56 RYSSSNYLEFSWTMLP 71
+                        4555555666655555 PP
+
+  == domain 2  score: 164.9 bits;  conditional E-value: 1.4e-52
+                COX2   1 ltikaiGhqwywsyeysdfedlefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpGrlnqvsll 91 
+                         lt k+iGhqwywsye  df+d   dsy+vp+edle  ++rllevdn++v+p  tkvr++ +++dv+h +a+p++g+kvd+vp rln + l+
+  Ascidiella_aspersa  97 LTFKSIGHQWYWSYESGDFVDYGIDSYIVPTEDLEVRDFRLLEVDNSLVLPYLTKVRMVTSSTDVIHRWALPAIGLKVDSVPRRLNVLNLF 187
+                         689**************************************************************************************** PP
+
+                COX2  92 vereGvfyGqcselcGvnhssmpivveav 120
+                           ++  +yGqcse+cG+nhs+mpi ve v
+  Ascidiella_aspersa 188 SYKPRSYYGQCSEICGINHSFMPIHVEFV 216
+                         *************************9965 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   38.4   0.6   2.2e-13   9.1e-10       3      89 .]       3      85 ..       1      85 [. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 38.4 bits;  conditional E-value: 2.2e-13
+             COX2_TM  3 tpaglgfqdaasplmeeleelhdyilliltlililVlyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililialpSlkl 89
+                        t +g+ +qda s +   +  +hd+ l+il++il++V +++ +i+    +   + +      ++ +E+ WT++P+++l ++ lpSl l
+  Ascidiella_aspersa  3 TYSGVSLQDAISFEGVRVVVFHDFSLVILVFILCIVGGMFWIIVEG-GY---NYAVVRYSSSNYLEFSWTMLPVVVLAVLRLPSLIL 85
+                        667899******************************9998877765.22...233333567899********************965 PP
+
+>> MENTAL  Cholesterol-capturing domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.3   3.1   9.9e-05       0.4       9      69 ..      20      88 ..      18      92 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 10.3 bits;  conditional E-value: 9.9e-05
+              MENTAL  9 llvtFDllltillWliclvisge..nikkalekeilkYk......iktSlFDivllavlRflvLllaya 69
+                        ++v+ D++l+il+ ++c+v       ++  ++  +++Y+      ++  +  +v+lavlR+  L+l+y 
+  Ascidiella_aspersa 20 VVVFHDFSLVILVFILCIVGGMFwiIVEGGYNYAVVRYSssnyleFSWTMLPVVVLAVLRLPSLILIYI 88
+                        67899************9977665467778999999998777767888999*****************7 PP
+
+>> DUF3671  Protein of unknown function
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    8.5   3.1   0.00047       1.9      40     108 ..      22      89 ..      14      91 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 8.5 bits;  conditional E-value: 0.00047
+             DUF3671  40 vlkkyglllilpvllpliglivpilfeakskkslkkkelevlatsieklytiffiilvviillv.......liYil 108
+                         v+  + l++++++l  + g+  +i+++ +        +  v+ +s  ++    + +l+v++l v       liYi+
+  Ascidiella_aspersa  22 VFHDFSLVILVFILCIVGGMFWIIVEGGY--------NYAVVRYSSSNYLEFSWTMLPVVVLAVlrlpsliLIYIM 89 
+                         77888898888888888888888886654........456778888888888888888998888888887788886 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (228 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       529  (0.032442); expected 326.1 (0.02)
+Passed bias filter:                      292  (0.0179075); expected 326.1 (0.02)
+Passed Vit filter:                        27  (0.00165583); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.57u 0.48s 00:00:01.04 Elapsed: 00:00:00.86
+# Mc/sec: 758.45
+//
+Query:       Blanceolatum  [L=0]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (0 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                         0  (0); expected 326.1 (0.02)
+Passed bias filter:                        0  (0); expected 326.1 (0.02)
+Passed Vit filter:                         0  (0); expected 16.3 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.35u 0.24s 00:00:00.59 Elapsed: 00:00:00.47
+# Mc/sec: 0.00
+//
+Query:       Saccoglossus  [L=230]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.8e-58  195.5   0.0    2.9e-58  194.9   0.0    1.3  1  COX2      Cytochrome C oxidase subunit II, periplasmic domain
+    1.3e-25   89.2   7.9    2.2e-25   88.5   7.9    1.3  1  COX2_TM   Cytochrome C oxidase subunit II, transmembrane doma
+     0.0066   16.4   3.0     0.0098   15.9   3.0    1.2  1  MpPF26    M penetrans paralogue family 26
+  ------ inclusion threshold ------
+       0.42   10.5   2.9       0.65    9.9   2.9    1.2  1  NPCC      Nuclear pore complex component
+
+
+Domain annotation for each model (and alignments):
+>> COX2  Cytochrome C oxidase subunit II, periplasmic domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  194.9   0.0     7e-62   2.9e-58       1     120 []      95     216 ..      95     216 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 194.9 bits;  conditional E-value: 7e-62
+          COX2   1 ltikaiGhqwywsyeysdfed..lefdsylvpeedleegelrllevdnrvvvpvetkvrllvtaedvlhsfavpslgvkvdavpGrlnqvsllvere 95 
+                   ltika Ghqwywsyey+d+e+  l+fd+y++p++dle  e rlle+d r++ p+++++r+lvt++dvlhs+++p+lg+k+da+pGrlnq+++++ r+
+  Saccoglossus  95 LTIKATGHQWYWSYEYTDYESddLSFDAYMIPTSDLEPWEPRLLETDARIIAPTHSPIRILVTSDDVLHSWTIPALGLKMDAIPGRLNQITFYAPRS 191
+                   79*****************9777************************************************************************** PP
+
+          COX2  96 GvfyGqcselcGvnhssmpivveav 120
+                   GvfyGqcse+cG+nhs+mpiv+e+v
+  Saccoglossus 192 GVFYGQCSEICGANHSFMPIVLETV 216
+                   **********************986 PP
+
+>> COX2_TM  Cytochrome C oxidase subunit II, transmembrane domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   88.5   7.9   5.3e-29   2.2e-25       2      89 .]       2      83 ..       1      83 [. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 88.5 bits;  conditional E-value: 5.3e-29
+       COX2_TM  2 atpaglgfqdaasplmeeleelhdyilliltlililVlyilvlilvefrrrknkitakylvhgqeiEiiWTiiPalililialpSlkl 89
+                  at+a++ +qdaasp+meel ++hd++l+iltli+++V+y+l ++l +       +t+++l+++q+iE+ WT+iPa+ili+ialpSl+l
+  Saccoglossus  2 ATWAQISLQDAASPIMEELIYFHDHTLIILTLIITVVFYVLASLLHN------TFTNRFLLESQQIETAWTLIPAIILIFIALPSLRL 83
+                  89*******************************************99......9********************************87 PP
+
+>> MpPF26  M penetrans paralogue family 26
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   15.9   3.0   2.4e-06    0.0098      21      86 ..      28      99 ..      20     112 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 15.9 bits;  conditional E-value: 2.4e-06
+        MpPF26 21 latvlllvsllayivllskskllskeyeeesslleael.ligvllillidi.....fyivnfileiiLiiKv 86
+                  l +++l+++++ y+ +++  + + + + +es+++e+ + li ++++++i++     +y++  i    L+iK 
+  Saccoglossus 28 LIILTLIITVVFYVLASLLHNTFTNRFLLESQQIETAWtLIPAIILIFIALpslrlLYLMDEINDPHLTIKA 99
+                  4567999*****************************994355566666666665777777777777788775 PP
+
+>> NPCC  Nuclear pore complex component
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    9.9   2.9   0.00016      0.65      32     103 ..      28      98 ..       6     100 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 9.9 bits;  conditional E-value: 0.00016
+          NPCC  32 llvfnlikklvklll.klyelkkksseeslasalyaelveklirllfllniviallkLlrkqdkiaDlpLtek 103
+                   l++++li ++v ++l +l++  ++  ++ l ++  +e +++li  ++l+ i ++ l+Ll   d+i+D  Lt k
+  Saccoglossus  28 LIILTLIITVVFYVLaSLLH--NTFTNRFLLESQQIETAWTLIPAIILIFIALPSLRLLYLMDEINDPHLTIK 98 
+                   44666666666666533333..33345567888999*******************************999975 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (230 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       711  (0.0436036); expected 326.1 (0.02)
+Passed bias filter:                      403  (0.0247148); expected 326.1 (0.02)
+Passed Vit filter:                        52  (0.00318901); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.61u 0.55s 00:00:01.16 Elapsed: 00:00:01.23
+# Mc/sec: 534.95
+//
+[ok]

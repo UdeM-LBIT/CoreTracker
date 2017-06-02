@@ -1,3 +1,3 @@
 ### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher pval	Gene frac	N. rea	N. used	Cod. count	Sub. count	G. len	codon_lik	id	prediction	probability
+genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
 Fasciola	GGT	G	F	0.0	0.724999905055	0.2	0.0238095238095	0.761904761905	0.53164556962	0.0126582278481	861.0	-2.57551020408	41.0	0.0	0.005

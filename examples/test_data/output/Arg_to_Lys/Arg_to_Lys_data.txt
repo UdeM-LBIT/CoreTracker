@@ -1,4 +1,4 @@
 ### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher pval	Gene frac	N. rea	N. used	Cod. count	Sub. count	G. len	codon_lik	id	prediction	probability
+genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
 Lumbricus	CGA	R	K	0.0	0.732142764664	0.2	0.0666666666667	0.933333333333	0.394736842105	0.0263157894737	947.0	1.96176470588	56.0	0.0	0.005
 Ciona	CGG	R	K	0.0	0.136363589284	0.25	0.142857142857	0.714285714286	0.0736842105263	0.0105263157895	935.0	1.74691358025	58.0	0.0	0.051

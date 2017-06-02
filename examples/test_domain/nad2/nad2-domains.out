@@ -1,0 +1,2318 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             examples/out/nad2/nad2.fasta
+# target HMM database:             data/pfam/Pfam-A.hmm
+# output directed to file:         examples/out/nad2/nad2-domains.out
+# per-dom hits tabular output:     examples/out/nad2/nad2-domains.tab
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       Metaseiulus_occidentalis  [L=326]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    6.1e-07   28.8  34.2    6.1e-07   28.8  34.2    2.6  2  Proton_antipo_M  Proton-conducting membrane transporter
+
+
+Domain annotation for each model (and alignments):
+>> Proton_antipo_M  Proton-conducting membrane transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -5.0   2.4      0.74   1.2e+04      37      58 ..       2      23 ..       1      25 [. 0.84
+   2 !   28.8  34.2   3.7e-11   6.1e-07      29     287 ..      56     277 ..      30     284 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: -5.0 bits;  conditional E-value: 0.74
+           Proton_antipo_M 37 klflltllgsliLLlgilllyn 58
+                               +f++  l+ l +L +i+++++
+  Metaseiulus_occidentalis  2 VYFIIIQLSFLKILTSIFYIFT 23
+                              5899999999999999999987 PP
+
+  == domain 2  score: 28.8 bits;  conditional E-value: 3.7e-11
+           Proton_antipo_M  29 pksleAslklflltllgsliLLlgilllynltgtlefeelskalelglnslelllllllllvgllvKsaqvplhlWlpdayveaP 113
+                               +  +++ + +f+l++l   ++L+g++                   + +n++ ++  ++l+++ + +K++ +p+h W  +  ++  
+  Metaseiulus_occidentalis  56 VFMVNSLISYFILQRLTRNFILIGFVC------------------FQINKIWIFEYEVLIFLCFWLKLGFFPFHSWYYQIRENIC 122
+                               444555555555555555555555443..................3445556677799*************************** PP
+
+           Proton_antipo_M 114 tpvsallAatlvkagvlllirlllllavssneisqlllilaiismllgslvalaqtdiKrllAySsishlGymlialavatqygv 198
+                               + +  ll  t +k+ ++  + + +l +        +l +++i+ +++  +  ++q++++ ++  Ss++h  ++li +   +++  
+  Metaseiulus_occidentalis 123 WDIWFLL-NTFQKLVIIWGLSFYMLKI-------FFLQLIIILNAFYSLFEVINQNSLRWMINRSSLNHYRWVLISITYIGII-- 197
+                               *******.99***98887775544444.......46677788888999999*************************9995555.. PP
+
+           Proton_antipo_M 199 eaaiihllthalfkallFllagsviyerektrdirayggLak.kmPilalvllvlllslaGlPptagFlskfliLeaavavslil 282
+                                 + i+ l + ++ + l  l+        k ++++++  L+     i++l+++++++   G+Pp+agFl+kfl+L  + ++ +++
+  Metaseiulus_occidentalis 198 --WEIYWLYYLFIRIVLLFLI--------KIKNLNRLFTLRVgGSLIFKLLVFIVIIRFLGVPPLAGFLPKFLVLLRVNNIFVLI 272
+                               ..99***********999999........66899999999995566889999***********************9998888877 PP
+
+           Proton_antipo_M 283 lvlav 287
+                               l+l+v
+  Metaseiulus_occidentalis 273 LLLIV 277
+                               77773 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (326 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1078  (0.0661106); expected 326.1 (0.02)
+Passed bias filter:                      222  (0.0136146); expected 326.1 (0.02)
+Passed Vit filter:                        22  (0.0013492); expected 16.3 (0.001)
+Passed Fwd filter:                         1  (6.13271e-05); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.62u 0.33s 00:00:00.95 Elapsed: 00:00:00.54
+# Mc/sec: 1727.09
+//
+Query:       Paracentrotus  [L=352]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    3.7e-33  114.8  28.7    3.7e-33  114.8  28.7    1.8  2  Proton_antipo_M  Proton-conducting membrane transporter
+    3.3e-09   37.0   5.2    3.3e-09   37.0   5.2    3.6  3  NADH_dehy_S2_C   NADH dehydrogenase subunit 2 C-terminus
+
+
+Domain annotation for each model (and alignments):
+>> Proton_antipo_M  Proton-conducting membrane transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  114.8  28.7   4.6e-37   3.7e-33       1     291 [.      23     287 ..      23     289 .. 0.92
+   2 ?   -2.5   0.1      0.25     2e+03     239     262 ..     319     345 ..     300     350 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 114.8 bits;  conditional E-value: 4.6e-37
+  Proton_antipo_M   1 andLlllylglElvllplylLiglwkkkpksleAslklflltllgsliLLlgilllynltgtlefeelskalelglnslelllllllllvgllv 94 
+                      a+ ++ ++lglEl  l+l+ +  + ++  +++eA++k+fl++++   +LL + l+  +++g  +  +l+ +           + +l l v+l++
+    Paracentrotus  23 AEKWFVIWLGLELRTLALIPILWFCFTP-RKIEATIKYFLVQAFRAALLLKSALIQAWFSG--SWSALIPM---------ERFPSLCLRVALAF 104
+                      67899*******************9876.********************************..44555555.........88999********* PP
+
+  Proton_antipo_M  95 KsaqvplhlWlpdayveaPtpvsallAatlvkagvlllirlllllavssneisqlllilaiismllgslvalaqtdiKrllAySsishlGymli 188
+                       ++++  h+Wlpd+ ++ P   ++++ at++k++ l l+    +++  + + s+++++ a+is+l+g+ ++l+qt+ +++lA+Ssi+ +G++++
+    Paracentrotus 105 NLGLAACHFWLPDVLQGLPFIQGLII-ATWQKIAPLFLL----FYF-NQLKFSYFIILAALISILVGGWGGLNQTQTRKILAFSSIGNMGWIVV 192
+                      **************************.9*******9998....333.57889****************************************** PP
+
+  Proton_antipo_M 189 alavatqygveaaiihllthalfkallFllagsviyerektrdirayggLakkmPilalvllvlllslaGlPptagFlskfliLeaavavslil 282
+                        a     ++  a + l+++ ++k ++Fl+   +     +  ++  +++ ++  Pi  +++++++lsl+GlPp++gF+ kf+ L+ +++ + i+
+    Paracentrotus 193 TSAF----SLGTAAMMLFIYLVIKTSIFLILDFL-----RIFTLGHLKNTSQLSPIRITLVILTILSLGGLPPLTGFILKFSSLYRLINKGFIF 277
+                      9999....6667777899************9444.....788899999999999***************************************9 PP
+
+  Proton_antipo_M 283 lvla.vvasv 291
+                      +  + +++s+
+    Paracentrotus 278 FSSVmIIGSL 287
+                      9988666665 PP
+
+  == domain 2  score: -2.5 bits;  conditional E-value: 0.25
+  Proton_antipo_M 239 akkmPilalvllvlllsla...GlPpt 262
+                       ++ P++a ++lv  +s+    ++P+t
+    Paracentrotus 319 TEAEPLMAKTWLVSSFSVLrilAIPLT 345
+                      557788888888888876555577776 PP
+
+>> NADH_dehy_S2_C  NADH dehydrogenase subunit 2 C-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.1   0.4      0.32   2.6e+03      32      48 ..     202     218 ..     173     224 .. 0.72
+   2 ?   -0.6   4.7      0.22   1.8e+03      35      49 ..     238     255 ..     205     262 .. 0.72
+   3 !   37.0   5.2   4.1e-13   3.3e-09       1      51 [.     290     345 ..     290     349 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: -1.1 bits;  conditional E-value: 0.32
+  NADH_dehy_S2_C  32 kptlllatltvlStllL 48 
+                      ++l++ + + +S++l+
+   Paracentrotus 202 AMMLFIYLVIKTSIFLI 218
+                     34445555555666655 PP
+
+  == domain 2  score: -0.6 bits;  conditional E-value: 0.22
+  NADH_dehy_S2_C  35 l...llatltvlStllLp 49 
+                         +l +lt+lS+ +Lp
+   Paracentrotus 238 PiriTLVILTILSLGGLP 255
+                     223378889999999987 PP
+
+  == domain 3  score: 37.0 bits;  conditional E-value: 4.1e-13
+  NADH_dehy_S2_C   1 LFFYLRLsYstsLTlfPntnnskmkwrlsst.kptl....llatltvlStllLplt 51 
+                     LFFYLR++++t+L lfP++ +    wr+ +  +p++    l++  +vl +l++plt
+   Paracentrotus 290 LFFYLRIAFNTTLILFPQHLIRLTAWRNRTEaEPLMaktwLVSSFSVLRILAIPLT 345
+                     9*****************************96666677778888888888888888 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (352 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       656  (0.0402306); expected 326.1 (0.02)
+Passed bias filter:                      183  (0.0112229); expected 326.1 (0.02)
+Passed Vit filter:                        23  (0.00141052); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.52u 0.39s 00:00:00.91 Elapsed: 00:00:00.53
+# Mc/sec: 1900.02
+//
+Query:       Aphrocallistes_vastus  [L=466]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    4.3e-35  121.2  11.9    4.3e-35  121.2  11.9    2.1  3  Proton_antipo_M  Proton-conducting membrane transporter
+
+
+Domain annotation for each model (and alignments):
+>> Proton_antipo_M  Proton-conducting membrane transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.0   0.1      0.18   2.9e+03     133     154 ..      22      43 ..       5      62 .. 0.47
+   2 ?   -2.2   0.6      0.11   1.7e+03      43      65 ..      70      92 ..      41     105 .. 0.72
+   3 !  121.2  11.9   2.6e-39   4.3e-35       3     285 ..     111     375 ..     110     382 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: -3.0 bits;  conditional E-value: 0.18
+        Proton_antipo_M 133 irlllllavssneisqlllila 154
+                            i lll ++v +  i++ ++ + 
+  Aphrocallistes_vastus  22 IILLLTIIVRTIRIKNKIISIC 43 
+                            2222222234444444444444 PP
+
+  == domain 2  score: -2.2 bits;  conditional E-value: 0.11
+        Proton_antipo_M 43 llgsliLLlgilllynltgtlef 65
+                           +l  +iLLlgi+ll + + ++ +
+  Aphrocallistes_vastus 70 RLQLIILLLGIILLITTQEEIII 92
+                           44456677777777666555544 PP
+
+  == domain 3  score: 121.2 bits;  conditional E-value: 2.6e-39
+        Proton_antipo_M   3 dLlllylglElvllplylLiglwkkkpksleAslklflltllgsliLLlgilllynltgtlefeelskalelglnslelllllllllv 90 
+                            +L lly+ lE + + ++l+i+l+ +++ + eA+lk+f l  ++s++L+  il+ y+l + ++++   +          +   + +++ 
+  Aphrocallistes_vastus 111 NLTLLYITLEFQTIITLLIIRLNASNAFTKEAGLKYFTLRIFASILLIARILISYHLINHTNIRHNTRR-------KPQIYYSSFIIR 191
+                            89*********************************************************9999876666.......555666667778 PP
+
+        Proton_antipo_M  91 gllvKsaqvplhlWlpdayveaPtpvsallAatlvkagvlllirlllllavssneisqlllilaiismllgslvalaqtdiKrllAyS 178
+                             ll+K+a  p+h+Wlpd ++        +l + lv +  +++ir++  ++    + s l+li +++s+ +g+++al+q++iKrllAy 
+  Aphrocallistes_vastus 192 ILLFKLASRPFHTWLPDIFERTTN---HFL-SYLVLIPKIAIIRIIASFK----NNSLLILIRGLLSITIGTIGALNQIKIKRLLAYR 271
+                            899***************766543...344.4455555555555555555....7789999*************************** PP
+
+        Proton_antipo_M 179 sishlGymlialavatqygveaaiihllthalfkallFllagsviyerektrdirayggLakkmPilalvllvlllslaGlPptagFl 266
+                             i+  G++li+l ++t+ +++++++h +++   +a + l+     +++ + + i ++ +  k++    + + +lllsl+GlPp+ gFl
+  Aphrocallistes_vastus 272 RINNTGIILIGLYMHTIPSIQGSFAHTIIYTTRTAIILLIL---HHKKLQKNLISEIIEKDKTQNKQNISISLLLLSLSGLPPLPGFL 356
+                            ********************************999999998...445555566666666666667778899999************** PP
+
+        Proton_antipo_M 267 skfliLeaavavslillvl 285
+                             k+li+  a++ ++ill +
+  Aphrocallistes_vastus 357 RKWLIIRRAINKNSILLPI 375
+                            *********9999888755 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (466 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       857  (0.0525573); expected 326.1 (0.02)
+Passed bias filter:                      182  (0.0111615); expected 326.1 (0.02)
+Passed Vit filter:                         9  (0.000551944); expected 16.3 (0.001)
+Passed Fwd filter:                         1  (6.13271e-05); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.64u 0.39s 00:00:01.03 Elapsed: 00:00:00.81
+# Mc/sec: 1645.86
+//
+Query:       Schistosoma  [L=279]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (279 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       892  (0.0547038); expected 326.1 (0.02)
+Passed bias filter:                      181  (0.0111002); expected 326.1 (0.02)
+Passed Vit filter:                        16  (0.000981234); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.64u 0.33s 00:00:00.97 Elapsed: 00:00:00.56
+# Mc/sec: 1425.31
+//
+Query:       Fasciola  [L=288]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (288 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       861  (0.0528026); expected 326.1 (0.02)
+Passed bias filter:                      190  (0.0116522); expected 326.1 (0.02)
+Passed Vit filter:                        19  (0.00116522); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.63u 0.32s 00:00:00.95 Elapsed: 00:00:00.53
+# Mc/sec: 1554.56
+//
+Query:       Trichobilharzia_regenti  [L=274]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (274 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       906  (0.0555624); expected 326.1 (0.02)
+Passed bias filter:                      157  (0.00962836); expected 326.1 (0.02)
+Passed Vit filter:                        17  (0.00104256); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.68u 0.27s 00:00:00.95 Elapsed: 00:00:00.53
+# Mc/sec: 1479.00
+//
+Query:       Versteria_mustelae  [L=291]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (291 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       892  (0.0547038); expected 326.1 (0.02)
+Passed bias filter:                      177  (0.0108549); expected 326.1 (0.02)
+Passed Vit filter:                        23  (0.00141052); expected 16.3 (0.001)
+Passed Fwd filter:                         7  (0.00042929); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.76u 0.28s 00:00:01.04 Elapsed: 00:00:00.55
+# Mc/sec: 1513.64
+//
+Query:       Euseius_nicholsi  [L=315]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (315 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1096  (0.0672145); expected 326.1 (0.02)
+Passed bias filter:                      233  (0.0142892); expected 326.1 (0.02)
+Passed Vit filter:                        23  (0.00141052); expected 16.3 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.60u 0.38s 00:00:00.98 Elapsed: 00:00:00.57
+# Mc/sec: 1553.73
+//
+Query:       Patiria  [L=354]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    5.2e-32  111.1  22.4    5.2e-32  111.1  22.4    1.7  2  Proton_antipo_M  Proton-conducting membrane transporter
+    8.5e-09   35.7   0.4    3.8e-08   33.6   0.4    2.2  1  NADH_dehy_S2_C   NADH dehydrogenase subunit 2 C-terminus
+
+
+Domain annotation for each model (and alignments):
+>> Proton_antipo_M  Proton-conducting membrane transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  111.1  22.4   6.3e-36   5.2e-32       3     288 ..      25     284 ..      24     288 .. 0.91
+   2 ?   -2.5   0.0      0.26   2.1e+03     230     262 ..     317     349 ..     291     353 .. 0.68
+
+  Alignments for each domain:
+  == domain 1  score: 111.1 bits;  conditional E-value: 6.3e-36
+  Proton_antipo_M   3 dLlllylglElvllplylLiglwkkkpksleAslklflltllgsliLLlgilllynltgtlefeelskalelglnslelllllllllvgllvKs 96 
+                      ++++l++glE++ l+++ +  + ++  +++e+s+k+fl++++   i L  +++  +l ++ ++ e +k+           + ++l++++l +K+
+          Patiria  25 HWFTLWVGLEMNTLSILPILSYQFTP-RKVESSVKYFLVQSVRAGIVLNVVIIQAWLYSSWSLMEPLKQ-----------ATSFLMTLALGLKL 106
+                      799******************99876.***************999988888777777776666665555...........6899********** PP
+
+  Proton_antipo_M  97 aqvplhlWlpdayveaPtpvsallAatlvkagvlllirlllllavssneisqlllilaiismllgslvalaqtdiKrllAySsishlGymlial 190
+                      +++p h W+pd+ ++     ++ l +t++k++ ++++    ++  ++    +ll+ l+++s+l+g+ ++l+qt+++++ A+Ssi+h+G++ + +
+          Patiria 107 GLFPCHYWFPDVIQGVGFIQGLVL-STWQKIAPFAVL----VYV-VERLNISLLASLGVLSVLVGGWGGLNQTQMRKIFAFSSIAHIGWICSTV 194
+                      ************999999******.**********99....333.3455567999*************************************99 PP
+
+  Proton_antipo_M 191 avatqygveaaiihllthalfkallFllagsviyerektrdirayggLakkmPilalvllvlllslaGlPptagFlskfliLeaavavslillv 284
+                      +     +v  a + l++++++++++F +a s+     + +++  +g+L+ ++ +  + l++ +lsl+GlPp+ gFl+kf  L+++v+ + ++l+
+          Patiria 195 GY----SVRVACVMLVAYIIINSSVFFMAKSF-----DLKSLSHVGRLSLYNFVGGAGLVLRILSLGGLPPLFGFLIKFISLKCLVEKGCFILA 279
+                      99....899***********************.....999***********************************************9999998 PP
+
+  Proton_antipo_M 285 la.vv 288
+                       + v+
+          Patiria 280 GVlVM 284
+                      87444 PP
+
+  == domain 2  score: -2.5 bits;  conditional E-value: 0.26
+  Proton_antipo_M 230 rdirayggLakkmPilalvllvlllslaGlPpt 262
+                      r+ +++gg+     +l++ + +  l+l+ lP++
+          Patiria 317 RNRNQTGGFTSEGVLLRVRFGIRSLGLVCLPVF 349
+                      566677777777778888888888888888765 PP
+
+>> NADH_dehy_S2_C  NADH dehydrogenase subunit 2 C-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   33.6   0.4   4.7e-12   3.8e-08       1      33 [.     290     322 ..     290     327 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 33.6 bits;  conditional E-value: 4.7e-12
+  NADH_dehy_S2_C   1 LFFYLRLsYstsLTlfPntnnskmkwrlsstkp 33 
+                     LFFYLR+++  sLTlfP++    + wr + +++
+         Patiria 290 LFFYLRIAFKRSLTLFPQHSLVVFRWRRNRNQT 322
+                     9***************************99975 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (354 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       471  (0.0288851); expected 326.1 (0.02)
+Passed bias filter:                      169  (0.0103643); expected 326.1 (0.02)
+Passed Vit filter:                        12  (0.000735925); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.61u 0.29s 00:00:00.89 Elapsed: 00:00:00.53
+# Mc/sec: 1910.82
+//
+Query:       Daphnia  [L=329]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    1.4e-27   96.6  30.2    4.9e-25   88.2  30.2    2.3  1  Proton_antipo_M  Proton-conducting membrane transporter
+
+
+Domain annotation for each model (and alignments):
+>> Proton_antipo_M  Proton-conducting membrane transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   88.2  30.2     3e-29   4.9e-25       1     284 [.      24     269 ..      24     280 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 88.2 bits;  conditional E-value: 3e-29
+  Proton_antipo_M   1 andLlllylglElvllplylLiglwkkkpksleAslklflltllgsliLLlgilllynltgtlefeelskalelglnslelllllllllvgllv 94 
+                      + +L+  ++glEl+ l+++ L   +k+k  + eAs+k+fl++ l+s+++L+g l++++  g                     l++l ll+gl +
+          Daphnia  24 SPSLFISWIGLELNTLAFLPLLLSKKSK-LAREASIKYFLTQTLASVLILVGGLWFLAPWG-----G---------------LATLTLLLGLRI 96 
+                      5689999***************999665.99***************************999.....2...............4567999***** PP
+
+  Proton_antipo_M  95 KsaqvplhlWlpdayve.aPtpvsallAatlvkagvlllirlllllavssneisqlllilaiismllgslvalaqtdiKrllAySsishlGyml 187
+                      K++++p+h+W+    ++ + +p  all  t++k+  ll++ ++  l       + +++++ + s+++g+l++l+qt ++++l +Ssi+h+G+++
+          Daphnia  97 KLGAAPFHRWVLSIAEArGWVPLFALL--TIQKINPLLILWIFCHLR------MPFFYVVVLSSLIIGGLAGLTQTRVRSILTFSSINHVGWLM 182
+                      **********99874441556888888..9********996666666......89*************************************** PP
+
+  Proton_antipo_M 188 ialavatqygveaaiihllthalfkallFllagsviyerektrdirayggLakkmPilalvllvlllslaGlPptagFlskfliLeaavavsli 281
+                       al  +   g    +i+l+   l+++l+F ++ +v         i+++  L  ++P  +++l+++llsl+GlPp++gFl+k+ iL+  v++sl+
+          Daphnia 183 TALRFSLRVGAYYFLIYLT-TLLCSILIFHIF-NV-------SHINQL-PLLSFKPSNQMLLFFALLSLGGLPPFLGFLPKWIILQLTVSYSLL 266
+                      *****55555555555544.478899999998.55.......456665.577899***********************************9987 PP
+
+  Proton_antipo_M 282 llv 284
+                      l+ 
+          Daphnia 267 LVG 269
+                      754 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (329 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       828  (0.0507789); expected 326.1 (0.02)
+Passed bias filter:                      246  (0.0150865); expected 326.1 (0.02)
+Passed Vit filter:                        24  (0.00147185); expected 16.3 (0.001)
+Passed Fwd filter:                         7  (0.00042929); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.65u 0.34s 00:00:00.99 Elapsed: 00:00:00.56
+# Mc/sec: 1680.74
+//
+Query:       Haplorchis_taichui  [L=289]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (289 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1005  (0.0616338); expected 326.1 (0.02)
+Passed bias filter:                      226  (0.0138599); expected 326.1 (0.02)
+Passed Vit filter:                        31  (0.00190114); expected 16.3 (0.001)
+Passed Fwd filter:                         9  (0.000551944); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.74u 0.32s 00:00:01.06 Elapsed: 00:00:00.56
+# Mc/sec: 1476.39
+//
+Query:       Lumbricus  [L=334]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    4.1e-33  114.7  29.6    7.9e-32  110.5  29.6    2.1  1  Proton_antipo_M  Proton-conducting membrane transporter
+  ------ inclusion threshold ------
+        8.2    6.4  13.4        3.6    7.5   5.0    2.9  2  NPCC             Nuclear pore complex component
+
+
+Domain annotation for each model (and alignments):
+>> Proton_antipo_M  Proton-conducting membrane transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  110.5  29.6   9.7e-36   7.9e-32       3     291 ..      28     284 ..      26     286 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 110.5 bits;  conditional E-value: 9.7e-36
+  Proton_antipo_M   3 dLlllylglElvllplylLiglwkkkpksleAslklflltllgsliLLlgilllynltgtlefeelskalelglnslelllllllllvgllvKs 96 
+                      +++ l+ ++El+ll ++ +i    ++ +++e ++k+fl ++lgs +LL++   +     ++ f  +s++            + l l++++++K+
+        Lumbricus  28 NWIFLWGAIELNLLRFIPIIIQSNNN-QETEGAVKYFLAQALGSALLLMSRTSI-----WITFSIISNF------------IPLTLMAAIILKL 103
+                      89999**************9988666.999**************9999776555.....5666677766............999********** PP
+
+  Proton_antipo_M  97 aqvplhlWlpdayveaPtpvsallAatlvkagvlllirlllllavssneisqlllilaiismllgslvalaqtdiKrllAySsishlGymlial 190
+                      + vp h+W p +    +++  ++l + ++k++ l ++++ll+ +       +++l +a+i +llg++++++qt+++ ++AySsi+h+G+m+  +
+        Lumbricus 104 GRVPCHFWYPSVIASISWVSCLIL-SSWQKLAPLSILAFLLPQK-----NINFILSIAAINALLGGVIGINQTQLRTIIAYSSIGHIGWMIRLA 191
+                      ************555555555555.66**********8777766.....5689999**********************************9999 PP
+
+  Proton_antipo_M 191 avatqygveaaiihllthalfkallFllagsviyerektrdirayggLakkmPilalvllvlllslaGlPptagFlskfliLeaavavslillv 284
+                      av   y  ++ ii+++++ ++   lF+ +g +     +  + + +++L+ +++++ ++ll++llsl+GlPp++gF++k+ ++  +++   i+l+
+        Lumbricus 192 AV---YKPSSCIIYFVVYCILITPLFITMGYL-----NIFSTKHIRKLSSYRRTVHIALLIVLLSLGGLPPFTGFMPKLITIILLMQSIKIILL 277
+                      99...889*********************999.....889999999****************************************99999888 PP
+
+  Proton_antipo_M 285 lavvasv 291
+                      +++ +s+
+        Lumbricus 278 ILIAGSI 284
+                      8876665 PP
+
+>> NPCC  Nuclear pore complex component
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.6   1.2     0.015   1.2e+02      40      84 ..      39     102 ..       6     106 .. 0.71
+   2 ?    7.5   5.0   0.00044       3.6      56      99 ..     258     313 ..     136     317 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 2.6 bits;  conditional E-value: 0.015
+       NPCC  40 klvklllklyelkkkss...................eeslasalyaelveklirllfllnivia 84 
+                +l+++++ +++ +++++                    ++++ ++++++++ +i l +++ i++ 
+  Lumbricus  39 NLLRFIPIIIQSNNNQEtegavkyflaqalgsalllMSRTSIWITFSIISNFIPLTLMAAIILK 102
+                4444555555533333356777888888888888888889999***********9999999986 PP
+
+  == domain 2  score: 7.5 bits;  conditional E-value: 0.00044
+       NPCC  56 s..........eeslasalyaelveklirllfllniviallkLlrk..qdkiaDlp 99 
+                            +s+   l + ++  +i l f lni+i+ ++L  +  +++ +D++
+  Lumbricus 258 FmpklitiillMQSIKIILLILIAGSIINLFFYLNIIISSMPLPPHlkNVDSTDIK 313
+                033333334446678888999999*******************8776678888887 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (334 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       833  (0.0510855); expected 326.1 (0.02)
+Passed bias filter:                      260  (0.0159451); expected 326.1 (0.02)
+Passed Vit filter:                        14  (0.00085858); expected 16.3 (0.001)
+Passed Fwd filter:                         5  (0.000306636); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.63u 0.35s 00:00:00.98 Elapsed: 00:00:00.59
+# Mc/sec: 1619.52
+//
+Query:       Halocynthia  [L=333]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    3.2e-09   36.3  19.3      4e-09   35.9  18.6    1.5  1  Proton_antipo_M  Proton-conducting membrane transporter
+
+
+Domain annotation for each model (and alignments):
+>> Proton_antipo_M  Proton-conducting membrane transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   35.9  18.6   2.5e-13     4e-09       5     277 ..      19     265 ..      16     284 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 35.9 bits;  conditional E-value: 2.5e-13
+  Proton_antipo_M   5 lllylglElvllplylLiglwkkkpksleAslklflltllgsliLLlgilllynltgtlefeelskalelglnslelllllllllvgllvKsaq 98 
+                      l +++ lE+++l +++++  +  +  ++   +++fl++ +  ++L +g+++ +++ g+ ++           + +   l+   ++v l +K+ +
+      Halocynthia  19 LVIWVVLEVFSLYVLFVVLRYNLRDINIIGVVYYFLVQGVRGVVLAFGVIYELSVFGNCYVF----------QCPVSYLGVRCIIVRLFLKLRV 102
+                      789*********9999998888888************************9888888844433..........44556799999*********** PP
+
+  Proton_antipo_M  99 vplhlWlpdayveaPtpvsallAatlvkagvlllirlllllavssneisqlllilaiismllgslvalaqtdiKrllAySsishlGymlialav 192
+                      +p+ +W++ ay     +    l a+ +k+  +l++  ++l+    +   +++l+++++s++l  +  l+ +di++ + +Ssi h G++l  +  
+      Halocynthia 103 FPFYFWVVWAYKLLDGVQCYYL-AVYPKIFPFLFL--FSLFR---QVGVSVFLFVGLASIFLSRVERLFASDIREFMRFSSIRHGGWILFCFYG 190
+                      **********************.99****999988..44444...566788999*********************************9987777 PP
+
+  Proton_antipo_M 193 atqygveaaiihllthalfkallFllagsviyerektrdirayggLakkmPilalvllvlllslaGlPptagFlskfliLeaava 277
+                          g+ + +++ +++ +++  +F ++     +r  ++ ++  ++ + +++i + +l++++l l G  p +gF  k+ iL++++ 
+      Halocynthia 191 ----GIILFVLYYVIYYVCNYVVFNII---YGRR--FNIFFGFRRRRLVVRIGF-ILFIIILNLRGFRPSLGFRLKLIILSSVYL 265
+                      ....888***************99888...2333..333333333333444443.4556678889999************99875 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (333 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       917  (0.056237); expected 326.1 (0.02)
+Passed bias filter:                      260  (0.0159451); expected 326.1 (0.02)
+Passed Vit filter:                        31  (0.00190114); expected 16.3 (0.001)
+Passed Fwd filter:                         6  (0.000367963); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.65u 0.38s 00:00:01.03 Elapsed: 00:00:00.56
+# Mc/sec: 1701.17
+//
+Query:       Limulus  [L=338]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    2.9e-37  128.3  33.6    5.6e-37  127.4  33.6    1.5  1  Proton_antipo_M  Proton-conducting membrane transporter
+  ------ inclusion threshold ------
+      0.011   16.1   7.5      0.011   16.1   7.5    4.8  6  NADH_dehy_S2_C   NADH dehydrogenase subunit 2 C-terminus
+       0.16   11.8   1.2        3.6    7.4   0.0    2.4  2  Phage_holin_2_4  Bacteriophage holin family, superfamily II-l
+
+
+Domain annotation for each model (and alignments):
+>> Proton_antipo_M  Proton-conducting membrane transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  127.4  33.6     1e-40   5.6e-37       1     292 [.      24     284 ..      24     285 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 127.4 bits;  conditional E-value: 1e-40
+  Proton_antipo_M   1 andLlllylglElvllplylLiglwkkkpksleAslklflltllgsliLLlgilllynltgtlefeelskalelglnslelllllllllvgllv 94 
+                      ++++l  ++glE++l++++ Li   ++k +++eAslk+fl++ ++s+ +L+++ll  ++ + ++f+ +              ++ ++++++l v
+          Limulus  24 SSSWLIAWIGLEINLIGFIPLISTHSNK-RASEASLKYFLIQTIASSTFLFSFLLSSSF-SIIQFTIITPW-----------IIPFIVILTLRV 104
+                      6899*******************99666.***********************8765544.45777777766...........9999999***** PP
+
+  Proton_antipo_M  95 KsaqvplhlWlpdayveaPtpvsallAatlvkagvlllirlllllavssneisqlllilaiismllgslvalaqtdiKrllAySsishlGymli 188
+                      K++++p+h Wlp + ++ ++ + ++l   ++k++ l +i ++++          l++i+a++s++ gs+++l+qt+++++lA+Ssish++++l+
+          Limulus 105 KLGAAPFHIWLPTVAEGLSWTNCLIL-ISWQKIAPLSIISIIFPKN-------PLIIIIATLSAIRGSIGGLNQTSLRKILAFSSISHIAWILS 190
+                      **************************.66**********6555554.......99*************************************** PP
+
+  Proton_antipo_M 189 alavatqygveaaiihllthalfkallFllagsviyerektrdirayggLak.kmPilalvllvlllslaGlPptagFlskfliLeaavavsli 281
+                       +++    +  ++++++++++++ +++ l++  +        +i  +++ ++  +  l  +++++llsl+GlPp++gFl+k+li+  +++++ +
+          Limulus 191 SILI----SKILWLFYIFIYSIIISSIILCFAPF--------NILHINQVSTnQNKKLNSLITINLLSLGGLPPFLGFLPKWLIIFYLLQINIF 272
+                      ****....5579*******************666........555555555547888999********************************** PP
+
+  Proton_antipo_M 282 llvla.vvasvl 292
+                      l+v + ++++++
+          Limulus 273 LIVSIlIISTLI 284
+                      ****97777665 PP
+
+>> NADH_dehy_S2_C  NADH dehydrogenase subunit 2 C-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.7   1.9         3   1.6e+04      39      50 ..       3      14 ..       1      19 [. 0.51
+   2 ?   -1.5   0.5      0.65   3.5e+03      40      47 ..      65      72 ..      45      94 .. 0.59
+   3 ?   -1.8   0.2      0.81   4.4e+03      40      44 ..     191     195 ..     171     215 .. 0.54
+   4 ?   10.1   1.1   0.00015      0.81      10      49 ..     212     251 ..     203     256 .. 0.91
+   5 ?   -3.0   0.7       1.8     1e+04      35      45 ..     272     282 ..     264     284 .. 0.46
+   6 ?   16.1   7.5     2e-06     0.011       1      51 [.     286     331 ..     286     335 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: -3.7 bits;  conditional E-value: 3
+  NADH_dehy_S2_C 39 tltvlStllLpl 50
+                    tl ++ ++ Lpl
+         Limulus  3 TLPIINLFSLPL 14
+                    444444555555 PP
+
+  == domain 2  score: -1.5 bits;  conditional E-value: 0.65
+  NADH_dehy_S2_C 40 ltvlStll 47
+                    ++  St+l
+         Limulus 65 TIASSTFL 72
+                    33333332 PP
+
+  == domain 3  score: -1.8 bits;  conditional E-value: 0.81
+  NADH_dehy_S2_C  40 ltvlS 44 
+                     ++ +S
+         Limulus 191 SILIS 195
+                     33333 PP
+
+  == domain 4  score: 10.1 bits;  conditional E-value: 0.00015
+  NADH_dehy_S2_C  10 stsLTlfPntnnskmkwrlsstkptlllatltvlStllLp 49 
+                     s+ L   P ++ +  +++++++k+++ l t+  lS+ +Lp
+         Limulus 212 SIILCFAPFNILHINQVSTNQNKKLNSLITINLLSLGGLP 251
+                     7789999*******************************99 PP
+
+  == domain 5  score: -3.0 bits;  conditional E-value: 1.8
+  NADH_dehy_S2_C  35 lllatltvlSt 45 
+                     +l+  ++++St
+         Limulus 272 FLIVSILIIST 282
+                     33333334444 PP
+
+  == domain 6  score: 16.1 bits;  conditional E-value: 2e-06
+  NADH_dehy_S2_C   1 LFFYLRLsYstsLTlfPntnnskmkwrlsstkptlllatltvlStllLplt 51 
+                     L++Y+R+sYs+ L      +ns  kw  ++t p++  ++l+++S+++L+ +
+         Limulus 286 LYYYTRISYSSLL-----LINSNNKWIKTKTPPLTKQLPLSIISLFGLITS 331
+                     9***********9.....456666777777778888888888999988765 PP
+
+>> Phage_holin_2_4  Bacteriophage holin family, superfamily II-like
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.4   0.0   0.00065       3.6      28      48 ..      22      42 ..      16      56 .. 0.76
+   2 ?    2.4   0.4     0.024   1.3e+02      40      54 ..     275     289 ..     265     293 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 7.4 bits;  conditional E-value: 0.00065
+  Phage_holin_2_4 28 wlassnliglvGvlvAviGll 48
+                     + +ss li+++G+ + +iG++
+          Limulus 22 MRSSSWLIAWIGLEINLIGFI 42
+                     4567888************94 PP
+
+  == domain 2  score: 2.4 bits;  conditional E-value: 0.024
+  Phage_holin_2_4  40 vlvAviGllvnwyYk 54 
+                      v + +i  l+n+yY 
+          Limulus 275 VSILIISTLINLYYY 289
+                      668899*******96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (338 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       986  (0.0604685); expected 326.1 (0.02)
+Passed bias filter:                      257  (0.0157611); expected 326.1 (0.02)
+Passed Vit filter:                        24  (0.00147185); expected 16.3 (0.001)
+Passed Fwd filter:                         7  (0.00042929); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.64u 0.45s 00:00:01.09 Elapsed: 00:00:00.87
+# Mc/sec: 1111.45
+//
+Query:       Echinococcus_equinus  [L=293]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (293 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       783  (0.0480191); expected 326.1 (0.02)
+Passed bias filter:                      158  (0.00968968); expected 326.1 (0.02)
+Passed Vit filter:                         9  (0.000551944); expected 16.3 (0.001)
+Passed Fwd filter:                         1  (6.13271e-05); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.60u 0.33s 00:00:00.93 Elapsed: 00:00:00.55
+# Mc/sec: 1524.04
+//
+Query:       Taenia_crassiceps  [L=292]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (292 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       876  (0.0537226); expected 326.1 (0.02)
+Passed bias filter:                      142  (0.00870845); expected 326.1 (0.02)
+Passed Vit filter:                        14  (0.00085858); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.62u 0.32s 00:00:00.94 Elapsed: 00:00:00.53
+# Mc/sec: 1576.16
+//
+Query:       Axinella  [L=525]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    8.4e-67  225.3  25.1    8.4e-67  225.3  25.1    2.2  2  Proton_antipo_M  Proton-conducting membrane transporter
+
+
+Domain annotation for each model (and alignments):
+>> Proton_antipo_M  Proton-conducting membrane transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.4   2.7     0.059   9.6e+02     139     159 ..      70      91 ..      10      97 .. 0.48
+   2 !  225.3  25.1   5.2e-71   8.4e-67       1     292 [.     180     454 ..     180     455 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: -1.4 bits;  conditional E-value: 0.059
+  Proton_antipo_M 139 la.vssneisqlllilaiisml 159
+                      l+  s  +is++++i+++is+l
+         Axinella  70 LMvNSWIIISKIIIIIGSISIL 91 
+                      2213333444555555555554 PP
+
+  == domain 2  score: 225.3 bits;  conditional E-value: 5.2e-71
+  Proton_antipo_M   1 andLlllylglElvllplylLiglwkkkpksleAslklflltllgsliLLlgilllynltgtlefeelskalelglnslelllllllllvgllv 94 
+                      + ++l++ l++El+ l l++L++l+++++ s+eA+lk+f l++++s ++L+g++lly+ltg+++++ + ++       l++ ++ +l++++ll+
+         Axinella 180 SVNWLSIXLAIELQTLTLFILAALKRDSAYSTEAGLKYFXLGAVSSGVFLFGCALLYGLTGETSIQGINSI-------LTADVGKILITISLLF 266
+                      569********************************************************************.......9999************ PP
+
+  Proton_antipo_M  95 KsaqvplhlWlpdayveaPtpvsallAatlvkagvlllirlllllavssneisqlllilaiismllgslvalaqtdiKrllAySsishlGymli 188
+                      K++++p+h+W pd+y +aPt  +all a+++k+gv+ +++         + i++++l++ai s+++g+++al+qt+iKrllAyS i+h+G++  
+         Axinella 267 KLSAAPFHMWAPDVYDGAPTTTTALL-AIVPKVGVFSILV-------QIGPITNVVLLCAIFSIIYGAIGALNQTKIKRLLAYSGIGHIGFIXF 352
+                      **************************.*********9993.......467788***************************************** PP
+
+  Proton_antipo_M 189 alavatqygveaaiihllthalfkallFllagsviyerektrdirayggLakkmPilalvllvlllslaGlPptagFlskfliLeaavavslil 282
+                      ++a++++++++a++i+l++++++++  F +++s+   +   + i +++gL+  +P++al+l+++lls+aG+Pp+agFlsk+liL + v+ + +l
+         Axinella 353 GVAIGSFESIQASLIYLIIYVIMSICSFSIILSL---KLTKDLIIEVSGLSRDNPVMALTLALTLLSTAGVPPLAGFLSKWLILLSGVSNGYYL 443
+                      *******************************999...446699**********************************************99998 PP
+
+  Proton_antipo_M 283 lvla.vvasvl 292
+                        ++ vv+sv+
+         Axinella 444 TCIVaVVSSVI 454
+                      88777999998 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (525 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       835  (0.0512081); expected 326.1 (0.02)
+Passed bias filter:                      239  (0.0146572); expected 326.1 (0.02)
+Passed Vit filter:                        16  (0.000981234); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.76u 0.38s 00:00:01.14 Elapsed: 00:00:00.61
+# Mc/sec: 2462.19
+//
+Query:       Terebratulina  [L=328]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    1.3e-20   73.6  28.5    1.6e-16   60.2  18.0    2.3  2  Proton_antipo_M  Proton-conducting membrane transporter
+
+
+Domain annotation for each model (and alignments):
+>> Proton_antipo_M  Proton-conducting membrane transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   18.9   2.8   3.8e-08   0.00063       1      55 [.      21      74 ..      21      79 .. 0.87
+   2 !   60.2  18.0     1e-20   1.6e-16      85     290 ..      86     279 ..      79     281 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 18.9 bits;  conditional E-value: 3.8e-08
+  Proton_antipo_M  1 andLlllylglElvllplylLiglwkkkpksleAslklflltllgsliLLlgill 55
+                     ++ ++ +++g+E++l++++++ + +k++ +++  ++++fl + +gs +LL+g++l
+    Terebratulina 21 SSTWFFIWIGIEINLISFVIILTQAKAR-QENFIAFIYFLFQEVGSYLLLVGVIL 74
+                     567999**********999999999888.55556799***************985 PP
+
+  == domain 2  score: 60.2 bits;  conditional E-value: 1e-20
+  Proton_antipo_M  85 lllllvgllvKsaqvplhlWlpdayveaPtpvsallAatlvkagvlllirlllllavssneisqlllilaiismllgslvalaqtdiKrllAyS 178
+                        +++  l +K++++plh W+  a+   ++ + ++l  + +k++ + +++ ++ll       ++++ i+a++s+l g+ + ++ t i++++AyS
+    Terebratulina  86 HWIVITRLSLKIGLIPLHYWVLPAFSSISWFNCLFL-IIPQKLAPIFILAQVPLLR----SRKIVISICALTSILWGAQAIINITLIRQIIAYS 174
+                      556677799***************************.9***************999....677899**************************** PP
+
+  Proton_antipo_M 179 sishlGymlialavatqygveaaiihllthalfkallFllagsviyerektrdirayggLakkmPil.alvllvlllslaGlPptagFlskfli 271
+                      si++ G+++i ++     + ++   ++l+++ ++++l   ++++     k+r  ++ +++  ++     + l+++llsl+GlPp  gF +k+l 
+    Terebratulina 175 SINQTGWITILIVS----SPQSFPPYFLIYSTITVALLYPMSQT-----KARARFSQSNMPDTIDKRsLIFLALALLSLSGLPPAFGFTIKWLA 259
+                      ********999888....7799************9999988555.....4444444444444333330344568899***************** PP
+
+  Proton_antipo_M 272 Leaavavslillvla.vvas 290
+                      L++a++  + ll ++ ++a+
+    Terebratulina 260 LSSAISSLSPLLTVLiIIAA 279
+                      **999887766666646665 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (328 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       730  (0.0447688); expected 326.1 (0.02)
+Passed bias filter:                      255  (0.0156384); expected 326.1 (0.02)
+Passed Vit filter:                        20  (0.00122654); expected 16.3 (0.001)
+Passed Fwd filter:                         1  (6.13271e-05); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.60u 0.37s 00:00:00.97 Elapsed: 00:00:00.56
+# Mc/sec: 1675.63
+//
+Query:       Suberites_domuncula  [L=512]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    2.1e-60  204.3  30.5    2.1e-60  204.3  30.5    2.0  2  Proton_antipo_M  Proton-conducting membrane transporter
+  ------ inclusion threshold ------
+      0.092   12.6   1.3        1.1    9.2   0.3    2.7  2  ACT_6            ACT domain
+
+
+Domain annotation for each model (and alignments):
+>> Proton_antipo_M  Proton-conducting membrane transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.8   2.3      0.33   2.7e+03      80     133 ..      21      77 ..       6      92 .. 0.63
+   2 !  204.3  30.5   2.6e-64   2.1e-60       1     292 [.     164     438 ..     164     439 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: -2.8 bits;  conditional E-value: 0.33
+      Proton_antipo_M  80 elllllllllvgllvKsaqvplhlWlpdayveaPtp...vsallAatlvkagvllli 133
+                          +++l ++ + vg+l+ +++++ +lW    y+  ++    +++ll   +  ++ l++i
+  Suberites_domuncula  21 GINLSTFKISVGALFIIGVILAQLWADVLYMSDSLMwgtGGLLLTNSWIVISKLIII 77 
+                          567777888888888888888888876666665553111334444445555555444 PP
+
+  == domain 2  score: 204.3 bits;  conditional E-value: 2.6e-64
+      Proton_antipo_M   1 andLlllylglElvllplylLiglwkkkpksleAslklflltllgsliLLlgilllynltgtlefeelskalelglnslelllllllllv 90 
+                          + ++l++yl++El+ l l++L++++++++ s+e +lk+f+l++++s ++L+g++lly+l+g++ ++ l +        l++ ++ +l++v
+  Suberites_domuncula 164 SVNWLSIYLAIELQTLTLFILVAIKRESAYSTEGGLKYFVLGAVSSGLFLFGCALLYGLSGQTGVQGLNSC-------LTADVGKILITV 246
+                          569******************************************************************99.......9999******** PP
+
+      Proton_antipo_M  91 gllvKsaqvplhlWlpdayveaPtpvsallAatlvkagvlllirlllllavssneisqlllilaiismllgslvalaqtdiKrllAySsi 180
+                          +ll+K++++p+h+W pd+y ++ t + a l at++k+g++ +++ + +++       +++li+ai+s++ gs++al+qt+iKrllAyS i
+  Suberites_domuncula 247 SLLFKLSVAPFHMWAPDVYDGSATIIAATL-ATVSKIGIFSVLVQIGPVI-------NVVLICAILSIICGSIGALNQTKIKRLLAYSGI 328
+                          ******************************.99*******9996555555.......99******************************* PP
+
+      Proton_antipo_M 181 shlGymlialavatqygveaaiihllthalfkallFllagsviyerektrdirayggLakkmPilalvllvlllslaGlPptagFlskfl 270
+                          +h+G++l ++a+++ ++++a++i++++++++++  F +++s+   +     i +++g +  + +lal+l++ +ls+aG+Pp+agFlsk+l
+  Suberites_domuncula 329 GHMGFVLFGVAIGSLESIQASLIYMIVYVVMTICSFSIILSL---KLTKILIVEVSGASRENSVLALTLALSFLSIAGIPPLAGFLSKWL 415
+                          ***************************************999...44557899************************************* PP
+
+      Proton_antipo_M 271 iLeaavavslillvla.vvasvl 292
+                          iL a v+ + + + ++ v++sv+
+  Suberites_domuncula 416 ILLAGVSSGYYSICILiVLSSVI 438
+                          ***********999998999887 PP
+
+>> ACT_6  ACT domain
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    9.2   0.3   0.00013       1.1      19      53 ..     156     190 ..     152     199 .. 0.89
+   2 ?    1.1   0.0     0.045   3.6e+02       2      24 ..     375     397 ..     374     400 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 9.2 bits;  conditional E-value: 0.00013
+                ACT_6  19 LtavlaefgcnildirqavihgrlsLgmlvsgped 53 
+                          L+++l ++ +n+l i +a+  ++l+L++lv +  +
+  Suberites_domuncula 156 LSSLLLVSSVNWLSIYLAIELQTLTLFILVAIKRE 190
+                          8999**************************99854 PP
+
+  == domain 2  score: 1.1 bits;  conditional E-value: 0.045
+                ACT_6   2 illitvtGpdrpGltasLtavla 24 
+                          il++ v+G+ r + + +Lt +l+
+  Suberites_domuncula 375 ILIVEVSGASRENSVLALTLALS 397
+                          89*********999999997765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (512 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1008  (0.0618177); expected 326.1 (0.02)
+Passed bias filter:                      276  (0.0169263); expected 326.1 (0.02)
+Passed Vit filter:                        23  (0.00141052); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.77u 0.39s 00:00:01.16 Elapsed: 00:00:00.64
+# Mc/sec: 2288.66
+//
+Query:       Bfloridae  [L=346]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    5.5e-37  127.4  26.3    1.7e-36  125.8  26.3    1.8  1  Proton_antipo_M  Proton-conducting membrane transporter
+      3e-05   24.3   0.0      3e-05   24.3   0.0    3.3  3  NADH_dehy_S2_C   NADH dehydrogenase subunit 2 C-terminus
+
+
+Domain annotation for each model (and alignments):
+>> Proton_antipo_M  Proton-conducting membrane transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  125.8  26.3   2.1e-40   1.7e-36       1     292 [.      23     288 ..      23     289 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 125.8 bits;  conditional E-value: 2.1e-40
+  Proton_antipo_M   1 andLlllylglElvllplylLiglwkkkpksleAslklflltllgsliLLlgilllynltgtlefeelskalelglnslelllllllllvgllv 94 
+                      +++++ ++lglEl  l+++ +   w ++  ++eA++k+f++++++  +++lg +   +l g  +f  +      g+n+l  +++ +++++++++
+        Bfloridae  23 SGHWVFIWLGLELGTLAFIPILVWWHSS-LEVEATVKYFIVQAIAAAVFFLGGI--VSLRG--DF--I-----GGVNQLIGNIGDIMIILAVVT 104
+                      6799******************999777.99**************999998854..45666..22..2.....246778889************ PP
+
+  Proton_antipo_M  95 KsaqvplhlWlpdayveaP.tpvsallAatlvkagvlllirlllllavssneisqlllilaiismllgslvalaqtdiKrllAySsishlGyml 187
+                      K++++p+h W++d+ ++   +p+ +ll  t++k+ +l++++ l      + + s++ll+ +++s+l+g+l++l qt+i++llA+SsishlG+++
+        Bfloridae 105 KLGLAPFHYWVVDVVQGLNyIPGAVLL--TWQKVPGLAVLTQLA-----TCNNSSILLLFGMVSALVGGLGGLGQTQIRKLLAFSSISHLGWLV 191
+                      **************8888725666666..*********995444.....4568999************************************** PP
+
+  Proton_antipo_M 188 ialavatqygveaaiihllthalfkallFllagsviyerektrdirayggLakkmPilalvllvlllslaGlPptagFlskfliLeaa.vavsl 280
+                      +++++    g  + + ++++++++++ lF +      +      +++++   +++P+++++l v++lsl+GlPp+ gF++k+l+L+   v+  l
+        Bfloridae 192 VGCVA----GSLLGLSYFTLYVILSIPLFSILHI--LNG---GHLNQLRTGLMFNPLMSVLLGVGFLSLGGLPPFFGFFGKWLLLTHFvVQLLL 276
+                      *****....5558899**************9933..444...445666666789*******************************875145555 PP
+
+  Proton_antipo_M 281 illvlavvasvl 292
+                       + v++++++++
+        Bfloridae 277 GVSVVLITGTLI 288
+                      555555666665 PP
+
+>> NADH_dehy_S2_C  NADH dehydrogenase subunit 2 C-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.0   1.5       0.3   2.4e+03      35      48 ..       7      20 ..       2      23 .. 0.83
+   2 ?   -0.9   0.2      0.27   2.2e+03      26      49 ..     133     157 ..     128     159 .. 0.72
+   3 !   24.3   0.0   3.7e-09     3e-05       1      50 [.     290     337 ..     290     339 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: -1.0 bits;  conditional E-value: 0.3
+  NADH_dehy_S2_C 35 lllatltvlStllL 48
+                     l+++++++S++l+
+       Bfloridae  7 PLFSITIIISVMLI 20
+                    58899999999987 PP
+
+  == domain 2  score: -0.9 bits;  conditional E-value: 0.27
+  NADH_dehy_S2_C  26 wrlsst.kptlllatltvlStllLp 49 
+                     w+  +    ++ lat    S+llL+
+       Bfloridae 133 WQKVPGlAVLTQLATCNNSSILLLF 157
+                     5555554456778999999999996 PP
+
+  == domain 3  score: 24.3 bits;  conditional E-value: 3.7e-09
+  NADH_dehy_S2_C   1 LFFYLRLsYstsLTlfPntnnskmkwrlsstkptlllatltvlStllLpl 50 
+                     LF+YLR+sY     l P++++s ++wr ++   + l+  l+vl +l+L+l
+       Bfloridae 290 LFYYLRVSYLCIVVLGPQQIISGLNWRKTQ--LSGLICGLLVLNILGLFL 337
+                     9**************************855..588999999999999987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (346 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       646  (0.0396173); expected 326.1 (0.02)
+Passed bias filter:                      177  (0.0108549); expected 326.1 (0.02)
+Passed Vit filter:                        19  (0.00116522); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.64u 0.32s 00:00:00.96 Elapsed: 00:00:00.57
+# Mc/sec: 1706.63
+//
+Query:       Katharina  [L=338]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    1.2e-36  126.4  27.0    3.5e-36  124.8  27.0    1.7  1  Proton_antipo_M  Proton-conducting membrane transporter
+
+
+Domain annotation for each model (and alignments):
+>> Proton_antipo_M  Proton-conducting membrane transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  124.8  27.0   2.2e-40   3.5e-36       2     292 ..      25     288 ..      24     289 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 124.8 bits;  conditional E-value: 2.2e-40
+  Proton_antipo_M   2 ndLlllylglElvllplylLiglwkkkpksleAslklflltllgsliLLlgilllynltgtlefeelskalelglnslelllllllllvgllvK 95 
+                       +++ ++lglEl+l++++ +i  ++++ +++e+++k+fl++++gs ++L+g++l+ ++    e++               +    l+++gll+K
+        Katharina  25 IHWFGVWLGLELNLIGFIPVIVQKSTS-EETESGVKYFLVQAVGSALFLFGLMLINWNFCCWELN-----------FFRGFSXRGLIFFGLLIK 106
+                      58999*****************99888.99*************************9998833332...........223346689********* PP
+
+  Proton_antipo_M  96 saqvplhlWlpdayveaPtpvsallAatlvkagvlllirlllllavssneisqlllilaiismllgslvalaqtdiKrllAySsishlGymlia 189
+                      ++++p+h+W+p +  + ++    ll  t++k++ l ++   l      n  + lllil ++s l+g++++++qt+++ l+AySsi h+G+ml +
+        Katharina 107 LGAAPFHFWVPRVVAGLSWISNFLL-LTVQKIAPLFMVCWYL------NLSRFLLLILVFLSSLFGGVGGVNQTSVRALIAYSSILHIGWMLXG 193
+                      *************888898888888.9******998884444......4458899999************************************ PP
+
+  Proton_antipo_M 190 lavatqygveaaiihllthalfkallFllagsviyerektrdirayggLakkmPilalvllvlllslaGlPptagFlskfliLeaavavslill 283
+                      + +    g+++++++++++ ++   +  l+     +  +  ++   ++ +  +   +  l+++llsl+GlPp++gF++k+l+L  +++ + ++l
+        Katharina 194 ARA----GWSSIFFYFFFYCFILGFIAYLM---GLD--ERFNMSCFRRVYVWNSYSRNFLVFILLSLGGLPPLLGFFGKWLVLVRLLSLGNLVL 278
+                      ***....99**********99865544444...333..5789999999999999999999999******************************* PP
+
+  Proton_antipo_M 284 vla.vvasvl 292
+                       ++ v++s++
+        Katharina 279 RIIlVCGSII 288
+                      9998999876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (338 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       793  (0.0486324); expected 326.1 (0.02)
+Passed bias filter:                      261  (0.0160064); expected 326.1 (0.02)
+Passed Vit filter:                        21  (0.00128787); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.75u 0.29s 00:00:01.04 Elapsed: 00:00:00.55
+# Mc/sec: 1758.11
+//
+Query:       Geodia  [L=465]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    1.3e-68  231.2  26.0    1.3e-68  231.2  26.0    2.0  2  Proton_antipo_M  Proton-conducting membrane transporter
+
+
+Domain annotation for each model (and alignments):
+>> Proton_antipo_M  Proton-conducting membrane transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.3   0.4      0.11   1.8e+03     148     163 ..      77      92 ..      59      96 .. 0.78
+   2 !  231.2  26.0   7.9e-73   1.3e-68       2     292 ..     122     395 ..     121     396 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: -2.3 bits;  conditional E-value: 0.11
+  Proton_antipo_M 148 qlllilaiismllgsl 163
+                      +l++i+++is+ll s+
+           Geodia  77 KLIIIIGTISILLMSV 92 
+                      6789999999999875 PP
+
+  == domain 2  score: 231.2 bits;  conditional E-value: 7.9e-73
+  Proton_antipo_M   2 ndLlllylglElvllplylLiglwkkkpksleAslklflltllgsliLLlgilllynltgtlefeelskalelglnslelllllllllvgllvK 95 
+                       +++++yl++El+ l l++L++l+++++ s+eAslk+f+l++++s ++L+g++lly++tgt++++e+ ++       l++ ++ +l++++ll+K
+           Geodia 122 INWFSIYLAIELQTLTLFILVALKRDSAYSTEASLKFFVLGAVSSGLFLFGCVLLYGVTGTTSVQEINSN-------LTVDVGKILVTISLLFK 208
+                      69*****************************************************************999.......9999************* PP
+
+  Proton_antipo_M  96 saqvplhlWlpdayveaPtpvsallAatlvkagvlllirlllllavssneisqlllilaiismllgslvalaqtdiKrllAySsishlGymlia 189
+                      +++vp+h+W pd+y+++Pt ++all  t++k+gv+ +++         + +++++li+a++s+++g+++al+qt++KrllAyS i+h+G++l++
+           Geodia 209 LSAVPFHMWAPDVYEGSPTIITALL-TTVPKIGVFSILV-------QIGPVTNVVLICAVLSIVYGAIGALNQTKVKRLLAYSGIGHMGFILLG 294
+                      *************************.*********9993.......356677****************************************** PP
+
+  Proton_antipo_M 190 lavatqygveaaiihllthalfkallFllagsviyerektrdirayggLakkmPilalvllvlllslaGlPptagFlskfliLeaavavslill 283
+                      +a++++++++a +i+l++++++++  F + +s++      + + ++++L+ k+P++ ++l++++ls+aG+Pp+agFlsk+l+L + v+ + +++
+           Geodia 295 VAIGSFESIQAGLIYLIVYVIMSICSFSILLSLNL---TKDFLIEVKELSRKNPVIGVTLALTFLSTAGIPPLAGFLSKWLVLLSGVSSGYYII 385
+                      ******************************99944...4588999************************************************* PP
+
+  Proton_antipo_M 284 vla.vvasvl 292
+                       l+ vv+sv+
+           Geodia 386 SLIvVVSSVI 395
+                      ***9999987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (465 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       926  (0.0567889); expected 326.1 (0.02)
+Passed bias filter:                      231  (0.0141666); expected 326.1 (0.02)
+Passed Vit filter:                        17  (0.00104256); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.74u 0.35s 00:00:01.08 Elapsed: 00:00:00.56
+# Mc/sec: 2333.84
+//
+Query:       Metridium  [L=385]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    1.2e-64  218.2  23.4    1.2e-64  218.2  23.4    1.4  2  Proton_antipo_M  Proton-conducting membrane transporter
+
+
+Domain annotation for each model (and alignments):
+>> Proton_antipo_M  Proton-conducting membrane transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  218.2  23.4   7.3e-69   1.2e-64       1     291 [.      28     314 ..      28     316 .. 0.94
+   2 ?   -3.8   0.1      0.32   5.2e+03      83      97 ..     356     370 ..     334     376 .. 0.59
+
+  Alignments for each domain:
+  == domain 1  score: 218.2 bits;  conditional E-value: 7.3e-69
+  Proton_antipo_M   1 andLlllylglElvllplylLiglwkkkpksleAslklflltllgsliLLlgilllynltgtlefeelskal......elglnslellllllll 88 
+                      a+++l++yl++El  l+l++L++ ++ +  s+eA+lk+f+l++l+s ++L+g++ll +ltg ++++ + ++l       l  +   + +++ll+
+        Metridium  28 ASNWLSVYLAIELPTLSLFILVAQKRGSGFSAEAGLKYFVLGALASGLFLFGCALLCGLTGGTSIPCIDLVLnqgrgpALDPSGVITPIGSLLI 121
+                      78******************************************************************99998888866666777788999*** PP
+
+  Proton_antipo_M  89 lvgllvKsaqvplhlWlpdayveaPtpvsallAatlvkagvlllirlllllavssneisqlllilaiismllgslvalaqtdiKrllAySsish 182
+                      + +ll+K++++p+h+W pd+y +aPt  +all at++k+gv+ ++       vs + ++++lli  i sm++g+l+al+qt+iKrllAyS i+h
+        Metridium 122 TGALLFKLSAAPFHMWAPDVYDGAPTTTTALL-ATVPKVGVFSIL-------VSIGPVANVLLIATIFSMVVGALGALNQTKIKRLLAYSGIAH 207
+                      ********************************.9*********99.......45666779********************************** PP
+
+  Proton_antipo_M 183 lGymlialavatqygveaaiihllthalfkallFllagsviyerektrdirayggLakkmPilalvllvlllslaGlPptagFlskfliLeaav 276
+                      +G++l ++ ++t+++v+a++i++++++++++  F++++++       + i + +gL+ k P la++l++++ls+aG+Pp+ gF+sk+ iL + +
+        Metridium 208 MGFVLWGIEIGTFESVQASLIYMILYVIMSVCAFAMVLAL---GGLKNLIVEFSGLSRKEPALAITLALTFLSIAGVPPLIGFFSKWWILLSGI 298
+                      *************************************888...4556889******************************************** PP
+
+  Proton_antipo_M 277 avslillvla.vvasv 291
+                       ++ +l+ ++ v+ sv
+        Metridium 299 TYQYYLVSILaVICSV 314
+                      *999999888777665 PP
+
+  == domain 2  score: -3.8 bits;  conditional E-value: 0.32
+  Proton_antipo_M  83 lllllllvgllvKsa 97 
+                      +++ + l+g+++ s+
+        Metridium 356 IGASFYLMGFMIISP 370
+                      333334444444444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (385 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       834  (0.0511468); expected 326.1 (0.02)
+Passed bias filter:                      238  (0.0145959); expected 326.1 (0.02)
+Passed Vit filter:                        23  (0.00141052); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.69u 0.37s 00:00:01.06 Elapsed: 00:00:00.97
+# Mc/sec: 1135.48
+//
+Query:       Amphimedon_queenslandica  [L=454]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    3.1e-64  216.9  27.0    5.1e-64  216.2  27.0    1.3  1  Proton_antipo_M  Proton-conducting membrane transporter
+
+
+Domain annotation for each model (and alignments):
+>> Proton_antipo_M  Proton-conducting membrane transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  216.2  27.0   3.1e-68   5.1e-64       1     291 [.     106     387 ..     106     389 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 216.2 bits;  conditional E-value: 3.1e-68
+           Proton_antipo_M   1 andLlllylglElvllplylLiglwkkkpksleAslklflltllgsliLLlgilllynltgtlefeelskalelglnslell..l 83 
+                               + ++l++yl++El+ l+l++L++l+++++ s+eA+lk+f+l++++  ++Llg++++y+ +g++++ +  ++ + ++n++ +   +
+  Amphimedon_queenslandica 106 SVNWLSIYLAMELQTLSLFILVALKRESAYSTEAGLKYFVLGAISTGLFLLGCAMIYGGSGEMSVLAGNTI-SETINQWLIRggV 189
+                               569**********************************************************9999877777.6667777765125 PP
+
+           Proton_antipo_M  84 llllllvgllvKsaqvplhlWlpdayveaPtpvsallAatlvkagvlllirlllllavssneisqlllilaiismllgslvalaq 168
+                               +  l++++ll+K++++p+h+W pd+y++aPt  +all at++k+gv++++       v  + +s++++i a++sm+ g+l+al+q
+  Amphimedon_queenslandica 190 GKALITISLLFKISAAPFHMWAPDVYEGAPTITTALL-ATVPKIGVFAIL-------VQIGSLSNIVFISATMSMIWGALGALNQ 266
+                               6789*********************************.9**********9.......3478899********************* PP
+
+           Proton_antipo_M 169 tdiKrllAySsishlGymlialavatqygveaaiihllthalfkallFllagsviyerektrdirayggLakkmPilalvllvll 253
+                               ++iKrllAyS i+h+G+++ +++++t+++++a++i++ +++ +++ +F +++ ++ +r     +++  +L+ k+ il   l++++
+  Amphimedon_queenslandica 267 SKIKRLLAYSGIGHMGFVIFGAGMGTMESIQASLIYMAIYVAMSVCVFSIILTINERR---GLVADFHSLSRKNAILGGSLALVF 348
+                               ***************************************************8885555...7789999***************** PP
+
+           Proton_antipo_M 254 lslaGlPptagFlskfliLeaavavslillvla.vvasv 291
+                               ls+aG+Pp++gFlsk+ iL+a v+ + +l+ +  v++sv
+  Amphimedon_queenslandica 349 LSIAGVPPLSGFLSKWFILWAGVSNGYYLICVGaVLSSV 387
+                               **************************9999887566665 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (454 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       658  (0.0403532); expected 326.1 (0.02)
+Passed bias filter:                      234  (0.0143505); expected 326.1 (0.02)
+Passed Vit filter:                        18  (0.00110389); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.70u 0.31s 00:00:01.01 Elapsed: 00:00:00.56
+# Mc/sec: 2278.63
+//
+Query:       Acropora  [L=365]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    3.2e-64  216.8  28.1    4.7e-64  216.3  28.1    1.2  1  Proton_antipo_M  Proton-conducting membrane transporter
+
+
+Domain annotation for each model (and alignments):
+>> Proton_antipo_M  Proton-conducting membrane transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  216.3  28.1   2.9e-68   4.7e-64       1     290 [.      12     293 ..      12     297 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 216.3 bits;  conditional E-value: 2.9e-68
+  Proton_antipo_M   1 andLlllylglElvllplylLiglwkkkpksleAslklflltllgsliLLlgilllynltgtlefeelskal..elglnslelllllllllvgl 92 
+                      ++++l++yl++El  l+l++L++ ++ + +s+eA+lk+f+l++l+s ++L+g++ll ++tg +++ ++ ++l   lg+++l + +++ll++v+l
+         Acropora  12 SSNWLSVYLAIELSTLSLFILVAQKGGSGQSAEAGLKYFVLGALSSGLFLFGCALLCGFTGGTHISYINLVLnpGLGFSELRIPIGSLLIVVSL 105
+                      789*****************************************************************99998899999*************** PP
+
+  Proton_antipo_M  93 lvKsaqvplhlWlpdayveaPtpvsallAatlvkagvlllirlllllavssneisqlllilaiismllgslvalaqtdiKrllAySsishlGym 186
+                      l+K++++p+h+W pd+y +aPt  +all at++k+g + ++       vs + + ++ll+ a+ sm++g+++al+qt++KrllAyS ++h+G++
+         Acropora 106 LFKLSAAPFHMWAPDVYDGAPTTTTALL-ATVPKVGYFSIL-------VSIGSAVNILLVGALFSMVVGAIGALNQTKVKRLLAYSGVGHMGFV 191
+                      ****************************.9********999.......5788999*************************************** PP
+
+  Proton_antipo_M 187 lialavatqygveaaiihllthalfkallFllagsviyerektrdirayggLakkmPilalvllvlllslaGlPptagFlskfliLeaavavsl 280
+                      l ++ v+++++++a++i++++++++++ +F++++ +       + i + +gL+ +  +lal+l++++ls+aG+Pp+ gF++k+l+L + v ++ 
+         Acropora 192 LWGIEVGSFESIQASLIYVVLYVVMSICVFAIILTL---GAAKNLIVEFSGLSRRLSVLALTLALTFLSIAGIPPLVGFWGKWLVLLSGVVYQY 282
+                      *********************************777...445689*****************************************99888777 PP
+
+  Proton_antipo_M 281 illvla.vvas 290
+                      +l+ l+ v+ s
+         Acropora 283 YLVFLLaVMCS 293
+                      76666655544 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (365 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       880  (0.0539679); expected 326.1 (0.02)
+Passed bias filter:                      240  (0.0147185); expected 326.1 (0.02)
+Passed Vit filter:                        15  (0.000919907); expected 16.3 (0.001)
+Passed Fwd filter:                         1  (6.13271e-05); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.65u 0.31s 00:00:00.96 Elapsed: 00:00:00.56
+# Mc/sec: 1864.65
+//
+Query:       Trichinella  [L=295]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (295 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1090  (0.0668466); expected 326.1 (0.02)
+Passed bias filter:                      202  (0.0123881); expected 326.1 (0.02)
+Passed Vit filter:                        14  (0.00085858); expected 16.3 (0.001)
+Passed Fwd filter:                         6  (0.000367963); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.73u 0.40s 00:00:01.12 Elapsed: 00:00:00.67
+# Mc/sec: 1259.62
+//
+Query:       Balanoglossus  [L=349]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    1.7e-42  145.5  27.1    3.9e-42  144.3  27.1    1.6  1  Proton_antipo_M  Proton-conducting membrane transporter
+    2.3e-09   37.5   4.4    2.3e-09   37.5   4.4    5.2  8  NADH_dehy_S2_C   NADH dehydrogenase subunit 2 C-terminus
+
+
+Domain annotation for each model (and alignments):
+>> Proton_antipo_M  Proton-conducting membrane transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  144.3  27.1   4.8e-46   3.9e-42       1     292 [.      23     287 ..      23     288 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 144.3 bits;  conditional E-value: 4.8e-46
+  Proton_antipo_M   1 andLlllylglElvllplylLiglwkkkpksleAslklflltllgsliLLlgilllynltgtlefeelskalelglnslelllllllllvgllv 94 
+                      a++++ ++lglE++ l+++ L   + ++p+++eA+ k+fl+++l+s +LL+g ll  ++ ++ +            +   l + ++ll++++ +
+    Balanoglossus  23 ASNWFFIWLGLEINTLAFLPLLIST-HHPRATEATTKYFLIQALASALLLFGGLLQASQFNSWNT-----------DTQLLPATTILLIAAVTL 104
+                      789******************9999.778**********************97765554443333...........33344568999******* PP
+
+  Proton_antipo_M  95 KsaqvplhlWlpdayveaPtpvsallAatlvkagvlllirlllllavssneisqlllilaiismllgslvalaqtdiKrllAySsishlGymli 188
+                      K+a +p h Wlpd+ ++ P  ++++l +t++k++ + ++ ll+     ++  + ++++l+++s+++g+ ++l+qt i++llAySsi+hlG+++ 
+    Balanoglossus 105 KMAIAPCHGWLPDVLQGLPFRIGLIL-STWQKIAPFSILLLLPT----QP--TWVFFTLGLLSVIIGGWGGLNQTHIRKLLAYSSIAHLGWIIT 191
+                      **************************.***********943333....34..55899************************************* PP
+
+  Proton_antipo_M 189 alavatqygveaaiihllthalfkallFllagsviyerektrdirayggLakkmPilalvllvlllslaGlPptagFlskfliLeaavavslil 282
+                         +    + +   + l+++ +++ +lFl+   +     +t +++++g++++  P l ++ l+++lsl+GlPp++gFlsk+liL+ +     ++
+    Balanoglossus 192 IYPL----SSQIRTLTLVLYFFLTGTLFLALHFL-----NTPSLADLGNIVNLAPWLTTLTLFTTLSLGGLPPLTGFLSKWLILQELSLNTNLV 276
+                      **99....45568899999**********99555.....899*******************************************998888888 PP
+
+  Proton_antipo_M 283 lvla.vvasvl 292
+                      ++++ ++as++
+    Balanoglossus 277 IATTlIMASLI 287
+                      88886777777 PP
+
+>> NADH_dehy_S2_C  NADH dehydrogenase subunit 2 C-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.3   0.7      0.75   6.1e+03      37      51 ..       8      22 ..       3      28 .. 0.71
+   2 ?   -3.3   0.4       1.5   1.2e+04      21      40 ..      25      44 ..      17      47 .. 0.56
+   3 ?   -1.8   0.3      0.53   4.4e+03      35      43 ..      89      97 ..      79     108 .. 0.50
+   4 ?   -1.9   0.2      0.56   4.6e+03      36      49 ..     144     146 ..     131     162 .. 0.56
+   5 ?   -1.5   0.8      0.43   3.5e+03      30      52 ..     196     218 ..     184     221 .. 0.67
+   6 ?    0.3   0.6      0.12   9.4e+02      35      49 ..     240     254 ..     230     260 .. 0.65
+   7 ?   -2.9   0.4       1.2   9.6e+03      34      42 ..     275     283 ..     267     287 .. 0.44
+   8 !   37.5   4.4   2.8e-13   2.3e-09       1      52 [.     289     342 ..     289     345 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: -2.3 bits;  conditional E-value: 0.75
+  NADH_dehy_S2_C 37 latltvlStllLplt 51
+                    l+ ltv+  +lL lt
+   Balanoglossus  8 LLSLTVIAGTLLVLT 22
+                    556777777777776 PP
+
+  == domain 2  score: -3.3 bits;  conditional E-value: 1.5
+  NADH_dehy_S2_C 21 nskmkwrlsstkptlllatl 40
+                    n+ + w   ++ ++++l++l
+   Balanoglossus 25 NWFFIWLGLEINTLAFLPLL 44
+                    55555655555455555554 PP
+
+  == domain 3  score: -1.8 bits;  conditional E-value: 0.53
+  NADH_dehy_S2_C 35 lllatltvl 43
+                     ll+ +t+l
+   Balanoglossus 89 QLLPATTIL 97
+                    233333332 PP
+
+  == domain 4  score: -1.9 bits;  conditional E-value: 0.56
+  NADH_dehy_S2_C  36 llatltvlStllLp 49 
+                     l           Lp
+   Balanoglossus 144 L-----------LP 146
+                     2...........22 PP
+
+  == domain 5  score: -1.5 bits;  conditional E-value: 0.43
+  NADH_dehy_S2_C  30 stkptlllatltvlStllLpltp 52 
+                     s +  +l+++l ++ t +L+l++
+   Balanoglossus 196 SSQIRTLTLVLYFFLTGTLFLAL 218
+                     55566777778887777887776 PP
+
+  == domain 6  score: 0.3 bits;  conditional E-value: 0.12
+  NADH_dehy_S2_C  35 lllatltvlStllLp 49 
+                     ++l++ t+lS+ +Lp
+   Balanoglossus 240 TTLTLFTTLSLGGLP 254
+                     345555666666665 PP
+
+  == domain 7  score: -2.9 bits;  conditional E-value: 1.2
+  NADH_dehy_S2_C  34 tlllatltv 42 
+                     + + +tl++
+   Balanoglossus 275 LVIATTLIM 283
+                     223333333 PP
+
+  == domain 8  score: 37.5 bits;  conditional E-value: 2.8e-13
+  NADH_dehy_S2_C   1 LFFYLRLsYstsLTlfPntnnskmkwrlsstkptl..llatltvlStllLpltp 52 
+                     LFFYLR++Y + LTl+P++++ +++wr+ +  +++  lla l+++ + +L l p
+   Balanoglossus 289 LFFYLRITYIILLTLSPQHTTISLTWRTAQRARLAniLLAALLTIRIAGLALPP 342
+                     9*****************************977665688888888777776655 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (349 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       599  (0.0367349); expected 326.1 (0.02)
+Passed bias filter:                      177  (0.0108549); expected 326.1 (0.02)
+Passed Vit filter:                        19  (0.00116522); expected 16.3 (0.001)
+Passed Fwd filter:                         5  (0.000306636); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.67u 0.28s 00:00:00.95 Elapsed: 00:00:00.55
+# Mc/sec: 1815.33
+//
+Query:       Tetrancistrum_nebulosi  [L=279]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (279 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       661  (0.0405372); expected 326.1 (0.02)
+Passed bias filter:                      145  (0.00889243); expected 326.1 (0.02)
+Passed Vit filter:                        13  (0.000797253); expected 16.3 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.61u 0.30s 00:00:00.90 Elapsed: 00:00:00.57
+# Mc/sec: 1376.16
+//
+Query:       Pseudogarypus_banksi  [L=324]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    2.2e-19   69.7  28.8    6.7e-19   68.0  28.8    1.8  1  Proton_antipo_M  Proton-conducting membrane transporter
+  ------ inclusion threshold ------
+      0.033   14.2   1.9      0.033   14.2   1.9    3.7  4  DUF2107          Predicted membrane protein (DUF2107)
+
+
+Domain annotation for each model (and alignments):
+>> Proton_antipo_M  Proton-conducting membrane transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   68.0  28.8   8.3e-23   6.7e-19       1     291 [.      17     269 ..      17     271 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 68.0 bits;  conditional E-value: 8.3e-23
+       Proton_antipo_M   1 andLlllylglElvllplylLiglwkkkpksleAslklflltllgsliLLlgilllynltgtlefeelskalelglnslelllllllll 89 
+                           +++++  ++glE++ l+++l+   +++    + + lk+f+++ + s +LL++il++ nl++      +++     + +++      l++
+  Pseudogarypus_banksi  17 SKSWIVAWVGLEINTLGFILILIKYSN---YYDSPLKYFIVQTFTSNLLLISILYFRNLNN-----IILNL----FPNPN-----TLIT 88 
+                           689**************9988777744...699*********************9999988.....33333....22233.....3344 PP
+
+       Proton_antipo_M  90 vgllvKsaqvplhlWlpdayveaPtpvsallAatlvkagvlllirlllllavssneisqlllilaiismllgslvalaqtdiKrllAyS 178
+                           + + +K++ +p+h W+ +   +  +    ++  t++k++ ++l+ ++  l+         +++l ++  + g++++  q +i +++ yS
+  Pseudogarypus_banksi  89 AIISIKLGIIPFHYWILEILKKINWITYFII-ITWQKLAPIILLFRTTTLI--------TVYFLRLLNRIGGAILGTIQKNIIKVILYS 168
+                           44679**************888888888888.9******999985555555........678888888899****************** PP
+
+       Proton_antipo_M 179 sishlGymlialavatqygveaaiihllthalfkallFllagsviyerektrdirayggLakkmPilalvllvlllslaGlPptagFls 267
+                           sish+G++++ +++      e ++i+l ++ l   l+F+++ +++y + + +++     La+k  +l ++l++ +lsl G Pp++gF+s
+  Pseudogarypus_banksi 169 SISHIGWIISPILI----KREFWLIYLAIYRL---LTFVVIKNFVYTKFSNETF----ILANKF-LLIIILIISILSLRGFPPFSGFIS 245
+                           **************....34789999999976...6899999998877554444....444433.6778889999************** PP
+
+       Proton_antipo_M 268 kfliLeaavavslillvlavvasv 291
+                           k+ ++  +   + +l++++v +s 
+  Pseudogarypus_banksi 246 KWVVIRILAPSEIFLILILVSSST 269
+                           *****9887777666666677765 PP
+
+>> DUF2107  Predicted membrane protein (DUF2107)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   14.2   1.9   4.1e-06     0.033       5      48 ..       4      44 ..       1      70 [. 0.81
+   2 ?   -0.5   2.0      0.15   1.2e+03      40      71 ..     117     148 ..     112     150 .. 0.85
+   3 ?   -0.7   0.4      0.17   1.4e+03      53      66 ..     189     202 ..     149     208 .. 0.53
+   4 ?   -3.6   0.8       1.4   1.1e+04      55      66 ..     216     228 ..     214     234 .. 0.44
+
+  Alignments for each domain:
+  == domain 1  score: 14.2 bits;  conditional E-value: 4.1e-06
+               DUF2107  5 lilliiGtlaaaiGPrekdplvrllnlEvpavGvllilLaynet 48
+                           i+++iG+l++     +k  +v  + lE+ ++G +lil+ y + 
+  Pseudogarypus_banksi  4 SIIIVIGSLITLS---SKSWIVAWVGLEINTLGFILILIKYSNY 44
+                          699********99...9***********************9765 PP
+
+  == domain 2  score: -0.5 bits;  conditional E-value: 0.15
+               DUF2107  40 lilLaynetlALlTfiavtaiitlvlvraiir 71 
+                           +i+++++++  ++ +  +t++it+ ++r + r
+  Pseudogarypus_banksi 117 FIIITWQKLAPIILLFRTTTLITVYFLRLLNR 148
+                           6888888888888899999********99887 PP
+
+  == domain 3  score: -0.7 bits;  conditional E-value: 0.17
+               DUF2107  53 Tfiavtaiitlvlv 66 
+                            ++a+  ++t+v++
+  Pseudogarypus_banksi 189 IYLAIYRLLTFVVI 202
+                           34455555555544 PP
+
+  == domain 4  score: -3.6 bits;  conditional E-value: 1.4
+               DUF2107  55 iavta.iitlvlv 66 
+                           i ++  +++++l+
+  Pseudogarypus_banksi 216 ILANKfLLIIILI 228
+                           4444303344444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (324 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       843  (0.0516988); expected 326.1 (0.02)
+Passed bias filter:                      180  (0.0110389); expected 326.1 (0.02)
+Passed Vit filter:                        15  (0.000919907); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.64u 0.31s 00:00:00.95 Elapsed: 00:00:00.73
+# Mc/sec: 1269.74
+//
+Query:       Benedenia_hoshinai  [L=286]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (286 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       820  (0.0502882); expected 326.1 (0.02)
+Passed bias filter:                      171  (0.0104869); expected 326.1 (0.02)
+Passed Vit filter:                        21  (0.00128787); expected 16.3 (0.001)
+Passed Fwd filter:                         1  (6.13271e-05); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.56u 0.32s 00:00:00.88 Elapsed: 00:00:00.54
+# Mc/sec: 1515.18
+//
+Query:       Myxine  [L=348]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    1.2e-34  119.7  35.5    2.2e-34  118.9  35.5    1.4  1  Proton_antipo_M  Proton-conducting membrane transporter
+    2.4e-09   37.4  11.2    2.4e-09   37.4  11.2    5.1  7  NADH_dehy_S2_C   NADH dehydrogenase subunit 2 C-terminus
+
+
+Domain annotation for each model (and alignments):
+>> Proton_antipo_M  Proton-conducting membrane transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  118.9  35.5   2.7e-38   2.2e-34       1     292 [.      20     286 ..      20     287 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 118.9 bits;  conditional E-value: 2.7e-38
+  Proton_antipo_M   1 andLlllylglElvllplylLiglwkkkpksleAslklflltllgsliLLlgilllynltgtlefeelskalelglnslelllllllllvgllv 94 
+                      +++++  +lglE++ ++++ ++ +  ++ ++le+s+k+f+ ++++s+ ++l+ ++ y  +g+  +  +s +           l++ l++++ll+
+           Myxine  20 SSSWFFAWLGLEINIIAIIPIMLFPLSQ-RALESSIKYFISQAVASSTIILASSWNYFSSGQWTISFMSDN-----------LAITLIILALLL 101
+                      678999*****************99777.********************************8877777777...........99999******* PP
+
+  Proton_antipo_M  95 KsaqvplhlWlpdayveaPtpvsallAatlvkagvlllirlllllavssneisqlllilaiismllgslvalaqtdiKrllAySsishlGymli 188
+                      K++++plh+Wlp++ ++  + +++++ +t++k++ l l+  ++    s+ +  ++l+ +++is+l g++++l+qt++++llAySsish+G+++ 
+           Myxine 102 KLGLAPLHFWLPEVLQGVNLHIGLII-STWQKLAPLTLLIQVS----SNLNNIYILISISVISVLAGGFGGLNQTQLRKLLAYSSISHIGWIVG 190
+                      **************************.*********9982222....344556788899********************************876 PP
+
+  Proton_antipo_M 189 alavatqygveaaiihllthalfkallFllagsviyerektrdirayggLakkmPilalvllvlllslaGlPptagFlskfliLeaavavslil 282
+                       +av    + +++ +  +++ ++++++F +   +     ++++i ++   + k     +  +++llsl+GlPp++gF+ k++i +a+++ slil
+           Myxine 191 VIAV----SASLSWVTTVIYLIINFSIFTILIEL-----NSTKISDLILSWSKTSWSHTKCILVLLSLGGLPPFTGFFLKLSISNALISNSLIL 275
+                      6666....7789999999************9666.....444555544334455555566677889**************************** PP
+
+  Proton_antipo_M 283 lvla.vvasvl 292
+                      + ++ + +s++
+           Myxine 276 MTILlIAGSLI 286
+                      99995556655 PP
+
+>> NADH_dehy_S2_C  NADH dehydrogenase subunit 2 C-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.6   0.3      0.94   7.7e+03      39      51 ..      34      46 ..      30      47 .. 0.75
+   2 ?   -0.7   0.8      0.24   1.9e+03      19      53 ..      66     100 ..      55     102 .. 0.74
+   3 ?   -1.1   0.4      0.33   2.7e+03      28      43 ..     142     158 ..     127     162 .. 0.50
+   4 ?   -2.2   0.1      0.72   5.8e+03      35      50 ..     203     218 ..     196     222 .. 0.71
+   5 ?   -1.5   0.2      0.42   3.4e+03      25      46 ..     231     250 ..     218     254 .. 0.58
+   6 ?   -2.1   1.3      0.66   5.4e+03      33      48 ..     266     281 ..     261     286 .. 0.57
+   7 !   37.4  11.2   2.9e-13   2.4e-09       1      55 []     288     341 ..     288     341 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: -2.6 bits;  conditional E-value: 0.94
+  NADH_dehy_S2_C 39 tltvlStllLplt 51
+                    +++++ ++l pl+
+          Myxine 34 IIAIIPIMLFPLS 46
+                    6677888888886 PP
+
+  == domain 2  score: -0.7 bits;  conditional E-value: 0.24
+  NADH_dehy_S2_C  19 tnnskmkwrlsstkptlllatltvlStllLpltpl 53 
+                     t++   +w++ s  + +++ ++  l ++l++l++l
+          Myxine  66 TIILASSWNYFSSGQWTISFMSDNLAITLIILALL 100
+                     66667778877777777777777788888887765 PP
+
+  == domain 3  score: -1.1 bits;  conditional E-value: 0.33
+  NADH_dehy_S2_C  28 lsst.kptlllatltvl 43 
+                     +ss+  ++++l  ++v+
+          Myxine 142 VSSNlNNIYILISISVI 158
+                     33332333344444444 PP
+
+  == domain 4  score: -2.2 bits;  conditional E-value: 0.72
+  NADH_dehy_S2_C  35 lllatltvlStllLpl 50 
+                     +++ +++ +S++++++
+          Myxine 203 TVIYLIINFSIFTILI 218
+                     5566667778887765 PP
+
+  == domain 5  score: -1.5 bits;  conditional E-value: 0.42
+  NADH_dehy_S2_C  25 kwrlsstkptlllatltvlStl 46 
+                     +w+ +s ++t    +l+ lS+ 
+          Myxine 231 SWSKTSWSHTKC--ILVLLSLG 250
+                     444444444444..44445555 PP
+
+  == domain 6  score: -2.1 bits;  conditional E-value: 0.66
+  NADH_dehy_S2_C  33 ptlllatltvlStllL 48 
+                     + l++  l+ +++ll+
+          Myxine 266 NALISNSLILMTILLI 281
+                     4455555555555554 PP
+
+  == domain 7  score: 37.4 bits;  conditional E-value: 2.9e-13
+  NADH_dehy_S2_C   1 LFFYLRLsYstsLTlfPntnnskmkwrlsstkptlllatltvlStllLpltplil 55 
+                     LFFYLRLs+ t+L l P++ + k +w+  +   +ll+ ++  +S+llLpl+p i+
+          Myxine 288 LFFYLRLSFMTALLLAPTNLQIKGTWKSPHY-SNLLFNLIFLFSILLLPLSPFII 341
+                     9***************************999.8888999999**********986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (348 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       835  (0.0512081); expected 326.1 (0.02)
+Passed bias filter:                      217  (0.013308); expected 326.1 (0.02)
+Passed Vit filter:                        20  (0.00122654); expected 16.3 (0.001)
+Passed Fwd filter:                         7  (0.00042929); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.69u 0.34s 00:00:01.03 Elapsed: 00:00:00.56
+# Mc/sec: 1746.61
+//
+Query:       Drosophila  [L=341]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    4.6e-45  153.9  31.9    4.6e-45  153.9  31.9    1.9  2  Proton_antipo_M  Proton-conducting membrane transporter
+    3.4e-12   46.6  10.1    3.4e-12   46.6  10.1    5.0  7  NADH_dehy_S2_C   NADH dehydrogenase subunit 2 C-terminus
+
+
+Domain annotation for each model (and alignments):
+>> Proton_antipo_M  Proton-conducting membrane transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  153.9  31.9   5.6e-49   4.6e-45       1     293 []      24     285 ..      24     285 .. 0.94
+   2 ?   -3.7   0.9      0.59   4.8e+03     146     162 ..     319     335 ..     308     339 .. 0.50
+
+  Alignments for each domain:
+  == domain 1  score: 153.9 bits;  conditional E-value: 5.6e-49
+  Proton_antipo_M   1 andLlllylglElvllplylLiglwkkkpksleAslklflltllgsliLLlgilllynltgtlefeelskalelglnslelllllllllvgllv 94 
+                      +n++l  ++glE++ll+++ L + + ++  s+eAslk+fl++ l+s +LL++ +ll   ++               n+++ ++ +++++ +ll+
+       Drosophila  24 SNSWLGAWIGLEINLLSFIPLLRDN-NNLISTEASLKYFLTQVLASTVLLFSSILLILKNN-------------INNEINESFTSIIIISALLL 103
+                      799*********************9.788***********************999877766.............34577889************ PP
+
+  Proton_antipo_M  95 KsaqvplhlWlpdayveaPtpvsallAatlvkagvlllirlllllavssneisqlllilaiismllgslvalaqtdiKrllAySsishlGymli 188
+                      Ks+++p+h+W+p+  ++  + + ++l  t++k++ l+li        s+ +i++llli  i+s+++g++++l+qt++++l+A+Ssi+hlG++l 
+       Drosophila 104 KSGAAPFHFWFPNIIEGLTWINALIL-ITWQKIAPLILI--------SYLNIKYLLLIRVILSVIIGAIGGLNQTSLRKLIAFSSINHLGWILR 188
+                      **************999999999999.***********9........67799****************************************** PP
+
+  Proton_antipo_M 189 alavatqygveaaiihllthalfkallFllagsviyerektrdirayggLakkmPilalvllvlllslaGlPptagFlskfliLeaavavslil 282
+                       l++      + ++i++++++++++ l  +++ +     k   ++++ + +  + il+ +l++++lsl+GlPp++gFl+k+l+++ ++ +++++
+       Drosophila 189 SLII----RESIWLILFFFYSFLSFVLTFIFNIF-----KLFHLNQLFSWFVNRKILKFTLFINFLSLGGLPPFLGFLPKWLVIQQLTLCNQYF 273
+                      ****....34679************999999666.....999**************************************************** PP
+
+  Proton_antipo_M 283 lvla.vvasvlt 293
+                      ++++ ++++++t
+       Drosophila 274 ILTIiIISTLIT 285
+                      ****89999887 PP
+
+  == domain 2  score: -3.7 bits;  conditional E-value: 0.59
+  Proton_antipo_M 146 isqlllilaiismllgs 162
+                      i++++ + +i +++l s
+       Drosophila 319 IYIIITFFSIFGLFLIS 335
+                      33334444444444443 PP
+
+>> NADH_dehy_S2_C  NADH dehydrogenase subunit 2 C-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.1   0.4       1.3   1.1e+04      31      42 ..       5      16 ..       2      23 .. 0.45
+   2 ?   -0.2   1.3      0.16   1.3e+03      33      48 ..      64      79 ..      46      84 .. 0.55
+   3 ?   -1.8   1.6      0.52   4.2e+03       9      30 ..      73      94 ..      69     103 .. 0.49
+   4 ?   -3.1   0.5       1.4   1.1e+04      34      50 ..     135     151 ..     127     157 .. 0.53
+   5 ?   -2.7   4.2      0.97   7.9e+03       2      49 ..     202     251 ..     201     254 .. 0.69
+   6 ?   -1.1   0.4      0.31   2.5e+03      33      46 ..     270     283 ..     262     284 .. 0.74
+   7 !   46.6  10.1   4.1e-16   3.4e-12       1      55 []     286     338 ..     286     338 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: -3.1 bits;  conditional E-value: 1.3
+  NADH_dehy_S2_C 31 tkptlllatltv 42
+                     +++l+++++++
+      Drosophila  5 SSKILFITIIII 16
+                    333444433333 PP
+
+  == domain 2  score: -0.2 bits;  conditional E-value: 0.16
+  NADH_dehy_S2_C 33 ptlllatltvlStllL 48
+                    + l +++l++ S+ll+
+      Drosophila 64 QVLASTVLLFSSILLI 79
+                    3344455555555554 PP
+
+  == domain 3  score: -1.8 bits;  conditional E-value: 0.52
+  NADH_dehy_S2_C  9 YstsLTlfPntnnskmkwrlss 30
+                    +s+ L +  n++n+ ++ +++s
+      Drosophila 73 FSSILLILKNNINNEINESFTS 94
+                    4444545555555554444444 PP
+
+  == domain 4  score: -3.1 bits;  conditional E-value: 1.4
+  NADH_dehy_S2_C  34 tlllatltvlStllLpl 50 
+                     +++l +++ l +  L+l
+      Drosophila 135 IAPLILISYLNIKYLLL 151
+                     44444444444444444 PP
+
+  == domain 5  score: -2.7 bits;  conditional E-value: 0.97
+  NADH_dehy_S2_C   2 FFYLRLsYstsLTlf...PntnnskmkwrlsstkptlllatltvlStllLp 49 
+                     FFY  Ls+  ++  +     + n  ++w ++ +  + +++ + +lS+ +Lp
+      Drosophila 202 FFYSFLSFVLTFIFNifkLFHLNQLFSWFVNRK-ILKFTLFINFLSLGGLP 251
+                     666666666555333111357788889988777.88899999999999998 PP
+
+  == domain 6  score: -1.1 bits;  conditional E-value: 0.31
+  NADH_dehy_S2_C  33 ptlllatltvlStl 46 
+                     + ++++t++++Stl
+      Drosophila 270 NQYFILTIIIISTL 283
+                     45678889999987 PP
+
+  == domain 7  score: 46.6 bits;  conditional E-value: 4.1e-16
+  NADH_dehy_S2_C   1 LFFYLRLsYstsLTlfPntnnskmkwrlsstkptlllatltvlStllLpltplil 55 
+                     LFFYLR++Ys+++ +++ +nn+ +k++ +s+ +++++ ++t++S+++L+l++l++
+      Drosophila 286 LFFYLRICYSAFI-INYFENNWIIKININSI-NYNIYIIITFFSIFGLFLISLFY 338
+                     9************.*****************.********************986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (341 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       893  (0.0547651); expected 326.1 (0.02)
+Passed bias filter:                      161  (0.00987367); expected 326.1 (0.02)
+Passed Vit filter:                        15  (0.000919907); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.62u 0.36s 00:00:00.98 Elapsed: 00:00:00.60
+# Mc/sec: 1625.91
+//
+Query:       Ciona  [L=357]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    6.9e-11   41.8  23.7    1.2e-10   41.0  23.7    1.3  1  Proton_antipo_M  Proton-conducting membrane transporter
+
+
+Domain annotation for each model (and alignments):
+>> Proton_antipo_M  Proton-conducting membrane transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   41.0  23.7   7.3e-15   1.2e-10       3     290 ..      24     301 ..      23     304 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 41.0 bits;  conditional E-value: 7.3e-15
+  Proton_antipo_M   3 dLlllylglElvllplylLiglwkkkpksleAslklflltllgsliLLlgilllynltg...tlefeelskal....elglnslelllllllll 89 
+                      d + l++ +E+++l ++ +i l+k+   +    +k+ +l     l ++ gi++l++++     l+f ++ ++l    +  + ++ + + +++++
+            Ciona  24 DFFPLWVRIEIISLLIMRIIFLKKATRIRRIGFQKFRVLIKYIFLQIFSGIIILFSFSLsnlLLDFSKIGLNLglhtQYYRINMIIEIFSFMFI 117
+                      6667788888888888888888877766555555555555555555555555555554422456788888887776333344444456667788 PP
+
+  Proton_antipo_M  90 vgllvKsaqvplhlWlpdayveaPtpvsallAatlvkagvlllirlllllavssneisqlllilaiismllgslvalaqtdiKrllAySsishl 183
+                      +++++K++++p hlW++d++         +l  t++k + +ll+ +       + e ++ll++l  +s+ll s+  l+ +di++++  Ssi   
+            Ciona 118 FSIALKLGLFPGHLWVVDVFSRLTFHECFIL-RTIPKYAPFLLLNR------DYCESNNLLILLRGLSILLRSFQRLNYSDIRQIIRRSSIINT 204
+                      9******************************.***********944......445789************************************ PP
+
+  Proton_antipo_M 184 GymlialavatqygveaaiihllthalfkallFllagsviyerektrdirayggLakkmPilalvllvlllslaGlPptagFlskfliLeaava 277
+                      G++++ ++         + i ++++ + + +l +l++ +  +  + +++ray+  + +    ++++ ++++ +  +P    F+ k+ +++ + +
+            Ciona 205 GWLILRFLF------RRLNIFFMIYLIYSYTLWVLFNLI--RVLNIQTLRAYKTWFSYTD--KILFSFAIFIMIRIPCRVIFFYKIFLIMRSNN 288
+                      *********......456677778888888888888666..66699******98777544..55566666666778****************** PP
+
+  Proton_antipo_M 278 vslillvlavvas 290
+                      vsl+++++++  +
+            Ciona 289 VSLFFFLILSGYT 301
+                      ******9996655 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (357 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       707  (0.0433583); expected 326.1 (0.02)
+Passed bias filter:                      135  (0.00827916); expected 326.1 (0.02)
+Passed Vit filter:                         6  (0.000367963); expected 16.3 (0.001)
+Passed Fwd filter:                         1  (6.13271e-05); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.57u 0.36s 00:00:00.93 Elapsed: 00:00:00.55
+# Mc/sec: 1856.94
+//
+Query:       Epigonichthys  [L=344]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+      5e-33  114.4  25.8    1.3e-32  113.0  25.8    1.7  1  Proton_antipo_M  Proton-conducting membrane transporter
+
+
+Domain annotation for each model (and alignments):
+>> Proton_antipo_M  Proton-conducting membrane transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  113.0  25.8     8e-37   1.3e-32       1     289 [.      23     283 ..      23     288 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 113.0 bits;  conditional E-value: 8e-37
+  Proton_antipo_M   1 andLlllylglElvllplylLiglwkkkpksleAslklflltllgsliLLlgilllynltgtlefeelskalelglnslelllllllllvgllv 94 
+                      +++++ l++glEl  l+++ + + w ++  ++eA++k+f++++l+   +++g l+  n+         s +     + +   ++++++l++++v
+    Epigonichthys  23 SSHWIFLWIGLELGTLAFVPILAWWHTS-LEVEATVKYFIVQALAAATFFFGGLININVVY------TSDV-----SHWFGGVGEIIILLAVAV 104
+                      689**********************998.99*******************99765443333......3333.....66666799********** PP
+
+  Proton_antipo_M  95 KsaqvplhlWlpdayveaPtpvsallAatlvkagvlllirlllllavssneisqlllilaiismllgslvalaqtdiKrllAySsishlGymli 188
+                      K++ +p+h W++d+ ++     ++ l  t++k+ +l+++  l      +     l+++l+ +s+l+g+l++l qt++++llA+Ssi hlG+++ 
+    Epigonichthys 105 KLGIAPFHYWVVDVVQGLNYIPGLVL-LTWQKLPGLAVFIQL------GCSNPTLIAVLGCLSALVGGLGGLGQTQLRKLLAFSSIVHLGWLVT 191
+                      **************888876555544.5*******9999333......33446799************************************** PP
+
+  Proton_antipo_M 189 alavatqygveaaiihllthalfkallFllagsviyerektrdirayggLakkmPilalvllvlllslaGlPptagFlskfliLeaavavslil 282
+                      +++v    +  + ++++++++ +++ +Fl+   +     ++  ++++++     P++ ++l +++lslaGlPp+ gFl+k+l+L+ +v+   +l
+    Epigonichthys 192 GVGV----NSLLGMTYFVLYVSVSLPIFLFLHII-----NVVHVNQLRSGIVGSPVVTALLSLGVLSLAGLPPFVGFLGKWLVLTELVSQTIVL 276
+                      ****....345789****************9555.....455566666667899********************************99877666 PP
+
+  Proton_antipo_M 283 lvlavva 289
+                      + +++++
+    Epigonichthys 277 VSAVLIS 283
+                      5555443 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (344 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       580  (0.0355697); expected 326.1 (0.02)
+Passed bias filter:                      167  (0.0102416); expected 326.1 (0.02)
+Passed Vit filter:                        22  (0.0013492); expected 16.3 (0.001)
+Passed Fwd filter:                         1  (6.13271e-05); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.63u 0.28s 00:00:00.91 Elapsed: 00:00:00.54
+# Mc/sec: 1822.45
+//
+Query:       Strigamia_maritima  [L=320]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    9.8e-31  106.9  22.8    8.8e-29  100.5  22.8    2.4  1  Proton_antipo_M  Proton-conducting membrane transporter
+
+
+Domain annotation for each model (and alignments):
+>> Proton_antipo_M  Proton-conducting membrane transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  100.5  22.8   5.4e-33   8.8e-29       1     290 [.      21     270 ..      21     275 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 100.5 bits;  conditional E-value: 5.4e-33
+     Proton_antipo_M   1 andLlllylglElvllplylLiglwkkkpksleAslklflltllgsliLLlgilllynltgtlefeelskalelglnslelllllllllvg 91 
+                         ++++++ ++glE++ l+++ +i+  ++k  ++eA lk+fl+  l+s iLL+  +   +         ++++   +     ++    +++++
+  Strigamia_maritima  21 SSSWFTSWIGLEINTLAFIPIIADQSNK-ITNEAILKYFLTHTLASTILLIPTITTTS---------MIST---W-----INPPNTIIFIA 93 
+                         6799********************9666.*********************97664322.........2223...2.....3445567999* PP
+
+     Proton_antipo_M  92 llvKsaqvplhlWlpdayveaPtpvsallAatlvkagvlllirlllllavssneisqlllilaiismllgslvalaqtdiKrllAySsish 182
+                         l++K++++p h+Wlp++ ++ ++   + l at++k+  + +i+l+          s +    ai+s+l g++++ +qt +++l+AySsish
+  Strigamia_maritima  94 LAIKIGAAPQHFWLPQVIEGLSWQLNMVL-ATIQKINPIFIITLTK---------SRINRRAAILSLLSGAIGGYNQTRLRKLIAYSSISH 174
+                         *****************************.9********9994433.........33344567888999********************** PP
+
+     Proton_antipo_M 183 lGymlialavatqygveaaiihllthalfkallFllagsviyerektrdirayggLakkmPilalvllvlllslaGlPptagFlskfliLe 273
+                         +G ++ia++     +  ++++++++++ +++++ ++++ +     k  + +++ +L     il +++++++lsl+GlPp++gF++k+ +++
+  Strigamia_maritima 175 IGGIIIAIMK----STRLVLVYITIYITISVSTIIVFLKT-----KISTTTQTPQL---TTILIILIILNILSLGGLPPFLGFVPKWILIK 253
+                         *********9....7789*******************666.....44555555555...569999************************** PP
+
+     Proton_antipo_M 274 aavavslillvlavvas 290
+                           ++ + ++ ++++ +s
+  Strigamia_maritima 254 QFTETNILITLILIRTS 270
+                         *9999987766664444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (320 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1031  (0.0632283); expected 326.1 (0.02)
+Passed bias filter:                      250  (0.0153318); expected 326.1 (0.02)
+Passed Vit filter:                        22  (0.0013492); expected 16.3 (0.001)
+Passed Fwd filter:                         5  (0.000306636); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.68u 0.36s 00:00:01.04 Elapsed: 00:00:00.63
+# Mc/sec: 1453.12
+//
+Query:       Caenorhabditis  [L=282]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (282 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                      1012  (0.062063); expected 326.1 (0.02)
+Passed bias filter:                      190  (0.0116522); expected 326.1 (0.02)
+Passed Vit filter:                        20  (0.00122654); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.71u 0.30s 00:00:01.01 Elapsed: 00:00:00.61
+# Mc/sec: 1322.55
+//
+Query:       Homo  [L=346]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+      8e-38  130.2  24.0    1.3e-37  129.4  24.0    1.3  1  Proton_antipo_M  Proton-conducting membrane transporter
+    9.9e-20   70.7  10.6    9.9e-20   70.7  10.6    6.8  6  NADH_dehy_S2_C   NADH dehydrogenase subunit 2 C-terminus
+
+
+Domain annotation for each model (and alignments):
+>> Proton_antipo_M  Proton-conducting membrane transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  129.4  24.0   1.6e-41   1.3e-37       1     286 [.      23     281 ..      23     288 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 129.4 bits;  conditional E-value: 1.6e-41
+  Proton_antipo_M   1 andLlllylglElvllplylLiglwkkkpksleAslklflltllgsliLLlgilllynltgtlefeelskalelglnslelllllllllvgllv 94 
+                      +++++  ++glE++ l+++ + + +  +p+s+eA++k+fl+++ +s+iLL++il    l+g+  +++  ++             +l++++++++
+             Homo  23 SSHWFFTWVGLEINMLAFIPVLTKK-INPRSTEAAIKYFLTQATASIILLIAILFNNILSGQWTITNTTNQ-----------YSSLIIIMAIAI 104
+                      679999**************98877.788************************998888997777777666...........89999******* PP
+
+  Proton_antipo_M  95 KsaqvplhlWlpdayveaPtpvsallAatlvkagvlllirlllllavssneisqlllilaiismllgslvalaqtdiKrllAySsishlGymli 188
+                      K++ +p+h+W+p++ ++ P+  ++ll  t++k++ + +i     +++s     +lll+l+i+s++ gs ++l+qt+++++lAySsi h+G+++ 
+             Homo 105 KLGIAPFHFWVPEVTQGTPLTSGLLL-LTWQKLAPISII-----YQISPSLNVSLLLTLSILSIIAGSWGGLNQTQLRKILAYSSITHIGWIIA 192
+                      **************************.9********999.....44333335578999*********************************998 PP
+
+  Proton_antipo_M 189 alavatqygveaaiihllthalfkallFllagsviyerektrdirayggLakkmPilalvllvlllslaGlPptagFlskfliLeaavavslil 282
+                       l      + +  i+ l+++++++ + Fll  +++++++     r  ++L +  P++  +    llsl+GlPp++gFl+k++i+e  ++ ++++
+             Homo 193 VLPY----NPNITILNLTIYIILTTTAFLLL-NLNSSTTTLLLSRTWNKLTWLTPLIPST----LLSLGGLPPLTGFLPKWAIIEEFTKNNSLI 277
+                      8888....55679******************.8888888888889999999999998876....68********************99998877 PP
+
+  Proton_antipo_M 283 lvla 286
+                      + ++
+             Homo 278 VPTI 281
+                      7666 PP
+
+>> NADH_dehy_S2_C  NADH dehydrogenase subunit 2 C-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.6   0.2      0.23   1.9e+03      34      51 ..      57      74 ..      42      77 .. 0.70
+   2 ?   -0.5   2.2      0.21   1.7e+03      19      40 ..      77     100 ..      71     110 .. 0.65
+   3 ?    0.9   0.6     0.077   6.3e+02      30      46 ..     147     163 ..     135     164 .. 0.64
+   4 ?   -9.9  15.3         2   1.6e+04      18      49 ..     220     255 ..     191     261 .. 0.54
+   5 ?    0.8   0.2     0.082   6.7e+02      31      48 ..     271     288 ..     263     289 .. 0.77
+   6 !   70.7  10.6   1.2e-23   9.9e-20       1      54 [.     290     343 ..     290     344 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: -0.6 bits;  conditional E-value: 0.23
+  NADH_dehy_S2_C 34 tlllatltvlStllLplt 51
+                    +  ++t ++ S++lL+ +
+            Homo 57 IKYFLTQATASIILLIAI 74
+                    446778888899998766 PP
+
+  == domain 2  score: -0.5 bits;  conditional E-value: 0.21
+  NADH_dehy_S2_C  19 tnnskmkwrlsstkptl..llatl 40 
+                     +n+ + +w  ++t + +  l+ ++
+            Homo  77 NNILSGQWTITNTTNQYssLIIIM 100
+                     677788888888855442233333 PP
+
+  == domain 3  score: 0.9 bits;  conditional E-value: 0.077
+  NADH_dehy_S2_C  30 stkptlllatltvlStl 46 
+                     +  +  ll+tl++lS++
+            Homo 147 PSLNVSLLLTLSILSII 163
+                     34445577777777765 PP
+
+  == domain 4  score: -9.9 bits;  conditional E-value: 2
+  NADH_dehy_S2_C  18 ntnnskmkwrlsst.kptl...llatltvlStllLp 49 
+                     n n+s+ +  ls t  +++   +l ++t lS+ +Lp
+            Homo 220 NLNSSTTTLLLSRTwNKLTwltPLIPSTLLSLGGLP 255
+                     333333333333332222223366667777776665 PP
+
+  == domain 5  score: 0.8 bits;  conditional E-value: 0.082
+  NADH_dehy_S2_C  31 tkptlllatltvlStllL 48 
+                     tk++ l+ ++++ +++lL
+            Homo 271 TKNNSLIVPTIIATITLL 288
+                     578888888888888887 PP
+
+  == domain 6  score: 70.7 bits;  conditional E-value: 1.2e-23
+  NADH_dehy_S2_C   1 LFFYLRLsYstsLTlfPntnnskmkwrlsstkptlllatltvlStllLpltpli 54 
+                     L+FYLRL+Ysts+Tl P +nn k+kw++++tkpt +l+tl+ l+tllLp++p i
+            Homo 290 LYFYLRLIYSTSITLLPISNNVKIKWQFEHTKPTPFLPTLIALTTLLLPISPFI 343
+                     9***************************************************88 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (346 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       589  (0.0361217); expected 326.1 (0.02)
+Passed bias filter:                      175  (0.0107322); expected 326.1 (0.02)
+Passed Vit filter:                        20  (0.00122654); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.66u 0.26s 00:00:00.92 Elapsed: 00:00:00.53
+# Mc/sec: 1867.64
+//
+Query:       Ascidiella_aspersa  [L=358]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    1.6e-12   47.2  20.7    6.2e-12   45.2  20.7    1.9  1  Proton_antipo_M  Proton-conducting membrane transporter
+
+
+Domain annotation for each model (and alignments):
+>> Proton_antipo_M  Proton-conducting membrane transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   45.2  20.7   3.8e-16   6.2e-12       6     291 ..      26     301 ..      22     303 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 45.2 bits;  conditional E-value: 3.8e-16
+     Proton_antipo_M   6 llylglElvllplylLiglwkkkpksleAslklflltllgsliLLlgilllynltgtlefeelskal.elglnslelllllllllvgllvK 95 
+                          ++lg Elv+l++++L+   ++    ++ +l +  ++ +   iL+       ++ g l +  ++k + +   +s + + l+l l+v l vK
+  Ascidiella_aspersa  26 IIWLGAELVSLVVIMLVISGGNG--ITQGGLVVRKMNTMIKYILVQ-----MTIGGVLLILIMVKEFgSVFTSSGGSVYLSLGLIVILSVK 109
+                         67777777777777777666554..445555555555554444432.....23344444444444444446678999999*********** PP
+
+     Proton_antipo_M  96 saqvplhlWlpdayveaPtpvsallAatlvkagvlllirlllllavssneisqlllilaiismllgslvalaqtdiKrllAySsishlGym 186
+                         ++++p h+W++d++ + ++    l+  +l+k g+++l+  ++   +s + + +++l ++++s+l+ ++++ + +d++ +++ Ssi   G++
+  Ascidiella_aspersa 110 IGVFPGHTWVVDVFSGLSLFECFLI-RVLPKFGLYVLLFNFFD--FSHEGLCYVVLSVGFLSVLVRGVLGCSYSDVRCVMGCSSIVGGGWL 197
+                         *************************.***********944433..46999***************************************** PP
+
+     Proton_antipo_M 187 lialavatqygveaaiihllthalfkallFllagsviye.re....ktrdirayggLakkmPilalvllvlllslaGlPptagFlskfliL 272
+                         +i+l+   +y      i ll +++  + +F+l   + ++ r+       ++ +++g +    + + vl++lll+ +G+P  + F+ k+ + 
+  Ascidiella_aspersa 198 MIGLGG-CYY-----WIFLLRFSYYIIVVFVLLEYLTRAlRVfevfGPAQLGRTSGVRGQLGVESGVLNLLLLGFVGVPCSLVFFFKLIMV 282
+                         ****98.333.....445566666667777776655555333666788999*************************************999 PP
+
+     Proton_antipo_M 273 eaavavslillvlavvasv 291
+                          +   v+++l+v ++++ v
+  Ascidiella_aspersa 283 VSGAVVGPWLVVCTMIGGV 301
+                         9999999999998877766 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (358 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       751  (0.0460567); expected 326.1 (0.02)
+Passed bias filter:                      211  (0.01294); expected 326.1 (0.02)
+Passed Vit filter:                        17  (0.00104256); expected 16.3 (0.001)
+Passed Fwd filter:                         5  (0.000306636); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.64u 0.34s 00:00:00.98 Elapsed: 00:00:00.56
+# Mc/sec: 1828.89
+//
+Query:       Blanceolatum  [L=346]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    1.1e-35  123.1  28.5    1.6e-35  122.6  28.5    1.2  1  Proton_antipo_M  Proton-conducting membrane transporter
+     0.0057   17.0   0.1      0.019   15.4   0.1    1.9  1  NADH_dehy_S2_C   NADH dehydrogenase subunit 2 C-terminus
+
+
+Domain annotation for each model (and alignments):
+>> Proton_antipo_M  Proton-conducting membrane transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  122.6  28.5   1.9e-39   1.6e-35       1     290 [.      23     286 ..      23     289 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 122.6 bits;  conditional E-value: 1.9e-39
+  Proton_antipo_M   1 andLlllylglElvllplylLiglwkkkpksleAslklflltllgsliLLlgilllynltgtlefeelskalelglnslelllllllllvgllv 94 
+                      +++++ ++lglEl  l+++ + + w ++  ++eA++k+f++++++  i+++g l+    tgt ++  l ++          + +++++++++++
+     Blanceolatum  23 SSHWVFMWLGLELGTLAFVPILTWWHSS-LEVEATVKYFIVQAIAAAIFFFGGLV---STGTEYISSLNQI--------VGNTGEVIIMLAVAM 104
+                      689**********************777.99*********************875...7887777666666........7788999******** PP
+
+  Proton_antipo_M  95 KsaqvplhlWlpdayveaPtpvsallAatlvkagvlllirlllllavssneisqlllilaiismllgslvalaqtdiKrllAySsishlGymli 188
+                      K++++p+h W++d+ ++     ++ l  t++k+ +l++++ l  +       + +ll+ +++s+llg+l++l qt++++llA+Ssi+hlG++++
+     Blanceolatum 105 KLGLAPFHYWVVDVVQGLNYIPGIVL-LTWQKVPGLIVLTQLGTIY-----NRFFLLTFGVLSALLGGLGGLGQTQVRKLLAFSSIAHLGWLVS 192
+                      **************888876555555.5*****9999986555554.....56788999*********************************** PP
+
+  Proton_antipo_M 189 alavatqygveaaiihllthalfkallFllagsviyerektrdirayggLakkmPilalvllvlllslaGlPptagFlskfliLeaavavslil 282
+                      ++++    g  + i+++ +++++++ +Fl+   +     ++  ++ ++    ++P   +++ +++lsl+GlPp++gF++k+l+L+ +v+  l+ 
+     Blanceolatum 193 GCVI----GSLLGITYFALYVVLSLPVFLFLHLL-----NAVHLNHLRISLIFNPASGMLVGIGFLSLGGLPPFLGFFGKWLLLTHLVDGFLLG 277
+                      ****....56689******************777.....444555555556799*********************************9998888 PP
+
+  Proton_antipo_M 283 lvla.vvas 290
+                      l+++ +v++
+     Blanceolatum 278 LAIIlIVGT 286
+                      877755555 PP
+
+>> NADH_dehy_S2_C  NADH dehydrogenase subunit 2 C-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   15.4   0.1   2.3e-06     0.019       1      37 [.     290     324 ..     290     338 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 15.4 bits;  conditional E-value: 2.3e-06
+  NADH_dehy_S2_C   1 LFFYLRLsYstsLTlfPntnnskmkwrlsstkptlll 37 
+                     LF+YLR+sY     l P++    ++wr   +  t+l+
+    Blanceolatum 290 LFYYLRVSYLCLVILGPQQVMIGLSWRKIYI--TNLV 324
+                     9*************************98666..4444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (346 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       662  (0.0405986); expected 326.1 (0.02)
+Passed bias filter:                      171  (0.0104869); expected 326.1 (0.02)
+Passed Vit filter:                        18  (0.00110389); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.65u 0.30s 00:00:00.95 Elapsed: 00:00:00.65
+# Mc/sec: 1522.84
+//
+Query:       Saccoglossus  [L=351]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    4.9e-40  137.4  25.6    1.7e-39  135.6  25.6    1.9  1  Proton_antipo_M  Proton-conducting membrane transporter
+      1e-13   51.4  10.6      1e-13   51.4  10.6    5.0  5  NADH_dehy_S2_C   NADH dehydrogenase subunit 2 C-terminus
+
+
+Domain annotation for each model (and alignments):
+>> Proton_antipo_M  Proton-conducting membrane transporter
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  135.6  25.6   2.1e-43   1.7e-39       1     292 [.      26     291 ..      26     292 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 135.6 bits;  conditional E-value: 2.1e-43
+  Proton_antipo_M   1 andLlllylglElvllplylLiglwkkkpksleAslklflltllgsliLLlgilllynltgtlefeelskalelglnslelllllllllvgllv 94 
+                      +++++ ++lglE++ l+++ L     ++p+s+eA+ k+fl+++l+s +LLlg ll  +++      ++ +      +s+ + l l lll+++++
+     Saccoglossus  26 SSHWFFIWLGLEINTLAFLPLLVAS-YNPRSTEAATKYFLIQALASALLLLGGLL--HAA------TINSW---DPSSPLTPLPLTLLLIAIAL 107
+                      6899***************998776.688**********************9543..333......34455...6789999999********** PP
+
+  Proton_antipo_M  95 KsaqvplhlWlpdayveaPtpvsallAatlvkagvlllirlllllavssneisqlllilaiismllgslvalaqtdiKrllAySsishlGymli 188
+                      K+a  p h Wlpd+ ++ P+  +++l +t++k++ + ++     ++ s +  + l+++ ++ ++l+g+ ++l+qt+i++llA+Ssi+h+G+ + 
+     Saccoglossus 108 KMAIPPCHNWLPDVLQGLPLLTGLIL-STWQKLAPFYILI---TIQESIP--TWLIVTAGFFAALVGGWGGLNQTQIRKLLAFSSIAHIGWTIA 195
+                      **************************.********99993...2332344..4578899*********************************99 PP
+
+  Proton_antipo_M 189 alavatqygveaaiihllthalfkallFllagsviyerektrdirayggLakkmPilalvllvlllslaGlPptagFlskfliLeaavav.sli 281
+                       +      + ++a + l+++  ++++lFl++  +     +t +++++++  ++ P l ++ l+++lslaGlPp++gFl+k+li++ +    ++ 
+     Saccoglossus 196 IIPF----SPQLATLNLIIYFTITSTLFLAFHTL-----HTLNLANLRNSTNFAPWLTTLTLITTLSLAGLPPLTGFLGKWLIIQELALNtNTP 280
+                      9999....789********************666.....999******************************************9765550555 PP
+
+  Proton_antipo_M 282 llvlavvasvl 292
+                      +++++v++ +l
+     Saccoglossus 281 AILILVLGNLL 291
+                      55555776655 PP
+
+>> NADH_dehy_S2_C  NADH dehydrogenase subunit 2 C-terminus
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.2   1.9      0.35   2.9e+03      33      48 ..       3      18 ..       1      25 [. 0.82
+   2 ?   -2.1   0.4      0.66   5.3e+03      48      54 ..      96     102 ..      83     108 .. 0.60
+   3 ?   -0.5   1.8      0.21   1.7e+03      32      48 ..     204     220 ..     192     227 .. 0.78
+   4 ?   -4.6  10.1         2   1.6e+04      11      49 ..     216     258 ..     209     263 .. 0.55
+   5 !   51.4  10.6   1.2e-17     1e-13       1      52 [.     293     344 ..     293     347 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: -1.2 bits;  conditional E-value: 0.35
+  NADH_dehy_S2_C 33 ptlllatltvlStllL 48
+                    ++++l+ l +lSt+ L
+    Saccoglossus  3 KMNPLLYLFMLSTVIL 18
+                    7899999999999988 PP
+
+  == domain 2  score: -2.1 bits;  conditional E-value: 0.66
+  NADH_dehy_S2_C  48 Lpltpli 54 
+                     Lplt+l+
+    Saccoglossus  96 LPLTLLL 102
+                     4444433 PP
+
+  == domain 3  score: -0.5 bits;  conditional E-value: 0.21
+  NADH_dehy_S2_C  32 kptlllatltvlStllL 48 
+                      +++l+   t++Stl+L
+    Saccoglossus 204 ATLNLIIYFTITSTLFL 220
+                     45678999999999988 PP
+
+  == domain 4  score: -4.6 bits;  conditional E-value: 2
+  NADH_dehy_S2_C  11 tsLTlfPntnns..kmkwrlsst.kptl.llatltvlStllLp 49 
+                     ++L+l  +t  +   ++ r+s++  p l +l+++t+lS+ +Lp
+    Saccoglossus 216 STLFLAFHTLHTlnLANLRNSTNfAPWLtTLTLITTLSLAGLP 258
+                     5666666655441145555555533322255555666666665 PP
+
+  == domain 5  score: 51.4 bits;  conditional E-value: 1.2e-17
+  NADH_dehy_S2_C   1 LFFYLRLsYstsLTlfPntnnskmkwrlsstkptlllatltvlStllLpltp 52 
+                     LF+YLR++Y +sLTl+P++++s++ wr+s+ + +++la+l++lSt++L+++p
+    Saccoglossus 293 LFYYLRIAYVISLTLSPQHTTSTLAWRTSPSSSNFPLALLIILSTCTLLISP 344
+                     9**************************************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (351 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       559  (0.0342819); expected 326.1 (0.02)
+Passed bias filter:                      164  (0.0100576); expected 326.1 (0.02)
+Passed Vit filter:                        17  (0.00104256); expected 16.3 (0.001)
+Passed Fwd filter:                         6  (0.000367963); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.62u 0.35s 00:00:00.97 Elapsed: 00:00:00.54
+# Mc/sec: 1859.54
+//
+[ok]

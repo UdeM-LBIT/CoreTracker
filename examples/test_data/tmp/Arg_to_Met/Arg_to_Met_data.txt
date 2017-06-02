@@ -1,0 +1,4 @@
+### Random Forest prediction
+genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
+D	AGG	R	M	0.0	0.374999978422	1.0	0.5	0.5	0.1	0.05	386.0	1.8125	10.0	0.0	0.133
+F	CGA	R	M	4.0	0.324999974106	1.0	0.333333333333	0.666666666667	0.130434782609	0.0434782608696	413.0	0.478260869565	56.0	0.0	0.15

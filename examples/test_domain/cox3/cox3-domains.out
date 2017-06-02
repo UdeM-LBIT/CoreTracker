@@ -1,0 +1,2210 @@
+# hmmscan :: search sequence(s) against a profile database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query sequence file:             examples/out/cox3/cox3.fasta
+# target HMM database:             data/pfam/Pfam-A.hmm
+# output directed to file:         examples/out/cox3/cox3-domains.out
+# per-dom hits tabular output:     examples/out/cox3/cox3-domains.tab
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       Metaseiulus_occidentalis  [L=275]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.1e-96  322.6  25.4    2.4e-96  322.4  25.4    1.0  1  COX3      Cytochrome c oxidase subunit III
+  ------ inclusion threshold ------
+      0.028   14.3   1.1      0.028   14.3   1.1    3.1  4  DUF843    Baculovirus protein of unknown function (DUF843)
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  322.4  25.4  2.9e-100   2.4e-96       1     256 [.      16     272 ..      16     274 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 322.4 bits;  conditional E-value: 2.9e-100
+                               SSS------SHHHHHHHHHHHHHHHHHHHHHSS-...-HHHHHHHHHHHHHHHHHHHHHHHHHTTT----HHHHHHHHHHHHHHH CS
+                      COX3   1 hpfhlvsaspwplvlsvalllltsalvlflhgyke.sstllilallslllvmllwfrdivaeatllGehtlavqkGlklGlilfi 84 
+                               h fh+v+  pwpl++s+ l++l++ +++ +++ ++ + +++ + l  l++ m+ w+rdi +e++++G ht+ v +Glk+ ++lfi
+  Metaseiulus_occidentalis  16 HIFHIVDLRPWPLITSLRLINLITQSIILIKNRTSsNIKIIFILLALLIICMFNWWRDICREGSFQGCHTQKVVTGLKFRILLFI 100
+                               89*******************999998888876641556666667777889********************************** PP
+
+                               HHHHHHHHHHHHHHHHHHHS--GGGTSSSS-TT-----TTSHHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHHHHHHH CS
+                      COX3  85 isevllflalfwaffhsalsPtvelGatwpPvGikavnPlevPllntiillssGvtvtyahhsliegnrkkalkgllltillavl 169
+                               + e+++f+++fw ffh +lsP++e+G twpP  i  +nP+++Pllnt illssG+tvt++hhs++++n ++ +  l lt++l+vl
+  Metaseiulus_occidentalis 101 LREIIFFFSFFWGFFHFSLSPEIEIGRTWPPYQIYIFNPYQIPLLNTLILLSSGITVTWCHHSVLNRNYNNRIFRLWLTLTLGVL 185
+                               ************************************************************************************* PP
+
+                               HHHHHHHHHHH-SS-TTSHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT--BSSB-HHHHHHHHHHHHHHHHHHHHHHHTT CS
+                      COX3 170 ftllqaveyleasftisdgvyGsvfylatGlhglhviigtillavallrllkyhltknhhlGfeaailywhfvdvvwlflyvsvy 254
+                               f llq++ey ea f+i d vyGs+f+++tG+hglhv igt++l v l+rl k  ++++hh+G+eaai+ywhfvdvvwl+ly ++y
+  Metaseiulus_occidentalis 186 FRLLQVYEYREAKFSINDRVYGSTFFITTGFHGLHVTIGTLFLFVILIRLNKIEINNKHHFGLEAAIWYWHFVDVVWLYLYTFIY 270
+                               ************************************************************************************* PP
+
+                               TT CS
+                      COX3 255 ww 256
+                               ww
+  Metaseiulus_occidentalis 271 WW 272
+                               ** PP
+
+>> DUF843  Baculovirus protein of unknown function (DUF843)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   14.3   1.1   3.4e-06     0.028       4      43 ..      31      70 ..      28      90 .. 0.88
+   2 ?   -4.1   1.5       1.9   1.6e+04      26      37 ..      96     107 ..      91     112 .. 0.53
+   3 ?   -0.9   0.0      0.19   1.6e+03      17      45 ..     165     193 ..     156     203 .. 0.57
+   4 ?    0.2   0.3     0.086     7e+02      26      46 ..     221     241 ..     209     245 .. 0.64
+
+  Alignments for each domain:
+  == domain 1  score: 14.3 bits;  conditional E-value: 3.4e-06
+                    DUF843  4 illlialivlafildkneklsellltllllfvlFiillnv 43
+                               l li li+ ++il kn+++s++ ++ +ll +l i++ n 
+  Metaseiulus_occidentalis 31 SLRLINLITQSIILIKNRTSSNIKIIFILLALLIICMFNW 70
+                              567999*****************99999999*****9885 PP
+
+  == domain 2  score: -4.1 bits;  conditional E-value: 1.9
+                    DUF843  26 llltllllfvlF 37 
+                               +ll++l  ++ F
+  Metaseiulus_occidentalis  96 ILLFILREIIFF 107
+                               444444333333 PP
+
+  == domain 3  score: -0.9 bits;  conditional E-value: 0.19
+                    DUF843  17 ldkneklsellltllllfvlFiillnvyy 45 
+                               l++n +   + l+l l + + + ll+vy 
+  Metaseiulus_occidentalis 165 LNRNYNNRIFRLWLTLTLGVLFRLLQVYE 193
+                               55554333333333333334445577774 PP
+
+  == domain 4  score: 0.2 bits;  conditional E-value: 0.086
+                    DUF843  26 llltllllfvlFiillnvyyi 46 
+                               + +  l lfv+ i l ++ ++
+  Metaseiulus_occidentalis 221 VTIGTLFLFVILIRLNKIEIN 241
+                               455567788887775555444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (275 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       692  (0.0424384); expected 326.1 (0.02)
+Passed bias filter:                      213  (0.0130627); expected 326.1 (0.02)
+Passed Vit filter:                        18  (0.00110389); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.54u 0.53s 00:00:01.07 Elapsed: 00:00:01.30
+# Mc/sec: 605.18
+//
+Query:       Paracentrotus  [L=260]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+   4.8e-114  380.4  25.5   5.4e-114  380.3  25.5    1.0  1  COX3          Cytochrome c oxidase subunit III
+  ------ inclusion threshold ------
+      0.075   13.1   0.2        0.1   12.6   0.2    1.1  1  SnAPC_2_like  Small nuclear RNA activating complex subunit 2,
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  380.3  25.5  6.6e-118  5.4e-114       1     258 []       5     260 .]       5     260 .] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 380.3 bits;  conditional E-value: 6.6e-118
+                    SSS------SHHHHHHHHHHHHHHHHHHHHHSS-..-HHHHHHHHHHHHHHHHHHHHHHHHHTTT----HHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+           COX3   1 hpfhlvsaspwplvlsvalllltsalvlflhgykesstllilallslllvmllwfrdivaeatllGehtlavqkGlklGlilfiisevllflalfw 96 
+                    hp++lv++spwpl+++++ l++ ++lvl++h+ k    ll  +ll l+l+ + w+rdiv+eat++G+ht  v+kGl++ +ilfi+sev +f+a+fw
+  Paracentrotus   5 HPYYLVEQSPWPLTGAISGLMMNLGLVLWFHTGK--IILLFTGLLLLILTLVNWWRDIVREATFQGRHTAIVEKGLRYPMILFITSEVCFFFAFFW 98 
+                    9*******************************99..899999****************************************************** PP
+
+                    HHHHHHHS--GGGTSSSS-TT-----TTSHHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHHHHHHHHHHHHHHHHHH-SS-TTSHHHHH CS
+           COX3  97 affhsalsPtvelGatwpPvGikavnPlevPllntiillssGvtvtyahhsliegnrkkalkgllltillavlftllqaveyleasftisdgvyGs 192
+                    affh  l+P+ve+G twpP Gi ++nP+ vPll t++llssGvt+t++hh +++g+r++a+++l+lt++l+++ft+lqa ey++a+fti+d vyGs
+  Paracentrotus  99 AFFHRRLAPAVEIGVTWPPSGITPLNPFLVPLLKTAVLLSSGVTITWSHHRILAGKRNEAIQALFLTVVLGIYFTILQAWEYIDAPFTIADRVYGS 194
+                    ************************************************************************************************ PP
+
+                    HHHHHHHHHHHHHHHHHHHHHHHHHHHHTT--BSSB-HHHHHHHHHHHHHHHHHHHHHHHTTTTT- CS
+           COX3 193 vfylatGlhglhviigtillavallrllkyhltknhhlGfeaailywhfvdvvwlflyvsvywwgs 258
+                    +f++atG+hglhviigt++l+v+l+rl  +h++++hh+Gfeaa++ywhfvdvvwlflyv +ywwgs
+  Paracentrotus 195 TFFVATGFHGLHVIIGTTFLLVCLIRLSGHHFSTHHHFGFEAAAWYWHFVDVVWLFLYVCIYWWGS 260
+                    ****************************************************************96 PP
+
+>> SnAPC_2_like  Small nuclear RNA activating complex subunit 2, SNAP190 Myb
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.6   0.2   1.3e-05       0.1     312     329 ..     113     130 ..     103     135 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 12.6 bits;  conditional E-value: 1.3e-05
+   SnAPC_2_like 312 sdwqaagicPLNpflvPl 329
+                     +w  +gi PLNpflvPl
+  Paracentrotus 113 VTWPPSGITPLNPFLVPL 130
+                    57999************8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (260 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       747  (0.0458114); expected 326.1 (0.02)
+Passed bias filter:                      292  (0.0179075); expected 326.1 (0.02)
+Passed Vit filter:                        32  (0.00196247); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.62u 0.48s 00:00:01.10 Elapsed: 00:00:01.14
+# Mc/sec: 646.80
+//
+Query:       Aphrocallistes_vastus  [L=260]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+     4e-113  377.4  26.1   4.5e-113  377.2  26.1    1.0  1  COX3      Cytochrome c oxidase subunit III
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  377.2  26.1  2.7e-117  4.5e-113       1     257 [.       5     259 ..       5     260 .] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 377.2 bits;  conditional E-value: 2.7e-117
+                            SSS------SHHHHHHHHHHHHHHHHHHHHHSS-..-HHHHHHHHHHHHHHHHHHHHHHHHHTTT----HHHHHHHHHHHHHHHHHHH CS
+                   COX3   1 hpfhlvsaspwplvlsvalllltsalvlflhgykesstllilallslllvmllwfrdivaeatllGehtlavqkGlklGlilfiisev 88 
+                            hp+hl ++ pwp+++ v+++++t++ vl++h++   + lli+++++++++m+ w+rdi++e++++G+ht+ vq+Glk+G+ilfi se+
+  Aphrocallistes_vastus   5 HPYHLAEQRPWPIIGRVSAFSITTGRVLYFHFSY--KPLLIIGFIIMIVIMITWWRDITRESSFQGHHTVLVQTGLKYGMILFISSEI 90 
+                            9*******************************99..99************************************************** PP
+
+                            HHHHHHHHHHHHHHHS--GGGTSSSS-TT-----TTSHHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHHHHHHHHHHHHHH CS
+                   COX3  89 llflalfwaffhsalsPtvelGatwpPvGikavnPlevPllntiillssGvtvtyahhsliegnrkkalkgllltillavlftllqav 176
+                            l+f+++fwaffhs l+P++e+Ga wpP Gi+++nP+ +Pllnt +ll sG+t+t++hhs+i+gn+++ +  l ltill+++ft+lqa+
+  Aphrocallistes_vastus  91 LFFFSFFWAFFHSRLVPVIEIGAIWPPEGINPLNPIAIPLLNTLVLLRSGITITWSHHSIISGNKNERIIRLGLTILLGIFFTFLQAF 178
+                            **************************************************************************************** PP
+
+                            HHHH-SS-TTSHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT--BSSB-HHHHHHHHHHHHHHHHHHHHHHHTTTTT CS
+                   COX3 177 eyleasftisdgvyGsvfylatGlhglhviigtillavallrllkyhltknhhlGfeaailywhfvdvvwlflyvsvywwg 257
+                            ey+e++fti+d++yGs+f++atG+hglhv+igt++l+v+++rl  +h+t++hh+Gfe+  +ywhfvdvvwlfly+ +ywwg
+  Aphrocallistes_vastus 179 EYIESPFTIADSIYGSTFFVATGFHGLHVLIGTVFLLVCFIRLNLNHFTTKHHIGFETRSWYWHFVDVVWLFLYICIYWWG 259
+                            ********************************************************************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (260 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       889  (0.0545198); expected 326.1 (0.02)
+Passed bias filter:                      322  (0.0197473); expected 326.1 (0.02)
+Passed Vit filter:                        35  (0.00214645); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.57u 0.52s 00:00:01.08 Elapsed: 00:00:00.80
+# Mc/sec: 929.77
+//
+Query:       Schistosoma  [L=217]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.7e-07   31.2  32.7    5.4e-06   26.3  32.7    2.5  1  COX3      Cytochrome c oxidase subunit III
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.3  32.7   3.3e-10   5.4e-06      77     255 ..      54     214 ..       4     216 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 26.3 bits;  conditional E-value: 3.3e-10
+                  HHHHHHHHHHHHHHHHHH.HHHHHHHHHS--GGGTSSSS-TT-----TTSHHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHHHHHHHHHHH CS
+         COX3  77 klGlilfiisevllflal.fwaffhsalsPtvelGatwpPvGikavnPlevPllntiillssGvtvtyahhsliegnrkkalkgllltillavlftll 173
+                  k+ + lf+  e+++fl++ f++f+                  ++   Pl +P+l+t +l+ s   ++  h  l + + +     ++l+++ ++lf+++
+  Schistosoma  54 KMAFWLFLARELIVFLTIiFCCFWYIK------------GSSVAISYPLGIPILETYLLIMSSFFISAFHRNLASVKGRIF---VYLSLVCSLLFIFF 136
+                  555556666665555543144444322............112344579*******************99999988544433...45555666667777 PP
+
+                  HHHHHHH-SS.-TTSHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT--BSSB-HHHHHHHHHHHHHHHHHHHHHHHTTT CS
+         COX3 174 qaveyleasf.tisdgvyGsvfylatGlhglhviigtillavallrllkyhltknhhlGfeaailywhfvdvvwlflyvsvyw 255
+                   + e+l++   +++d  y s+f l  Glh  hvi+g     + l++l  + l++      ++ i+ywhfvd +wl++y++vy+
+  Schistosoma 137 AVDEFLNSVVnSLCDPYYASCFML-VGLHLRHVILGR----FGLYELSGFQLSRFIRWKNKMLIVYWHFVDYIWLLVYLVVYI 214
+                  77888888653799****999866.7********996....6889999*****9999999**********************7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (217 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       794  (0.0486937); expected 326.1 (0.02)
+Passed bias filter:                      199  (0.0122041); expected 326.1 (0.02)
+Passed Vit filter:                        28  (0.00171716); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.61u 0.52s 00:00:01.12 Elapsed: 00:00:00.81
+# Mc/sec: 766.42
+//
+Query:       Fasciola  [L=213]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+    2.6e-16   60.1  25.5    1.6e-15   57.5  25.5    2.1  1  COX3             Cytochrome c oxidase subunit III
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   57.5  25.5   9.9e-20   1.6e-15      80     255 ..      56     212 ..       4     213 .] 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 57.5 bits;  conditional E-value: 9.9e-20
+               HHHHHHHHHHHHHHHHHHHHHHHHS--GGGTSSSS-TT-----TTSHHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+      COX3  80 lilfiisevllflalfwaffhsalsPtvelGatwpPvGikavnPlevPllntiillssGvtvtyahhsliegnrkkalkgllltillavlftllqaveyle 180
+               + +fi+ ev++f +lf+         ++++    +P+      Ple+Pll   il  s +tvt  hh l +         lllti+l+  f++lqa+e+++
+  Fasciola  56 FWVFILREVIVFGTLFCLC-------VITVEDDLAPL----SSPLELPLLGCFILTGSSITVTTYHHYLGSYY---SRPFLLLTIVLGCSFLVLQAFEFYD 142
+               4555555555555555532.......22222333343....379***********************998844...445689******************* PP
+
+               -SS-TTSHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT--BSSB-HHHHHHHHHHHHHHHHHHHHHHHTTT CS
+      COX3 181 asftisdgvyGsvfylatGlhglhviigtillavallrllkyhltknhhlGfeaailywhfvdvvwlflyvsvyw 255
+               +   ++ +vyG+v + + Glh+lhv  g + l + ++   +     n     ++ ++ywhfvd +wl++y+++y 
+  Fasciola 143 CECDLTFCVYGAVCFSTVGLHFLHVFGGLVALCFLYFSGDAV---PN--SNVDFVVWYWHFVDYIWLLVYLIIYL 212
+               ************************998766665555544332...33..346779******************95 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (213 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       598  (0.0366736); expected 326.1 (0.02)
+Passed bias filter:                      181  (0.0111002); expected 326.1 (0.02)
+Passed Vit filter:                        20  (0.00122654); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.62u 0.43s 00:00:01.05 Elapsed: 00:00:00.71
+# Mc/sec: 858.25
+//
+Query:       Trichobilharzia_regenti  [L=216]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.8e-10   40.3  16.8    2.8e-10   40.3  16.8    2.3  2  COX3      Cytochrome c oxidase subunit III
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.8   8.4      0.02   3.3e+02      46      96 ..      26      73 ..       2      82 .. 0.73
+   2 !   40.3  16.8   1.7e-14   2.8e-10     126     255 ..      92     214 ..      86     215 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 0.8 bits;  conditional E-value: 0.02
+                             HHHHHHHHHHHHHHHHHTTT----HHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+                     COX3 46 slllvmllwfrdivaeatllGehtlavqkGlklGlilfiisevllflalfw 96
+                             +ll+  + wf       ++ G    +++   k+G+ lf++sev++f +l+ 
+  Trichobilharzia_regenti 26 ILLVGLVTWFFVFL---KFVGGDLCSIKFYYKIGFWLFLLSEVIVFGSLLT 73
+                             55555556654333...46677778888889***************98864 PP
+
+  == domain 2  score: 40.3 bits;  conditional E-value: 1.7e-14
+                              HHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHHHHHHHHHHHHHHHHHH-SS-TTSHHHHHHHHHHHHHHHHHHHHHHHH CS
+                     COX3 126 vPllntiillssGvtvtyahhsliegnrkkalkgllltillavlftllqaveyleasftisdgvyGsvfylatGlhglhviigtil 211
+                              +Pl++t++l+ s   ++ a+h+l+++ r   +  l++t++ a+lf++l  +e l    +     + ++ +++ Glh+ hv+ig++l
+  Trichobilharzia_regenti  92 IPLVETVLLVGSSFFIS-AYHCLVSSAR--GVLYLYITLFSALLFMFLAIYEILGRVTSSLFNPHAACCFMTVGLHFRHVLIGSVL 174
+                              8********99998876.8999*99554..4556999***************99888777788899******************98 PP
+
+                              HHHHHHHHHTT--BSSB-HHHHHHHHHHHHHHHHHHHHHHHTTT CS
+                     COX3 212 lavallrllkyhltknhhlGfeaailywhfvdvvwlflyvsvyw 255
+                              l+  l+   ++ + +      ++ i+ywhfvd vwlf++ +vy 
+  Trichobilharzia_regenti 175 LVQLLY-FSSFRYVRRN---RDMYIIYWHFVDYVWLFVFSIVYL 214
+                              865544.4555554443...3677***************99995 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (216 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       765  (0.0469152); expected 326.1 (0.02)
+Passed bias filter:                      183  (0.0112229); expected 326.1 (0.02)
+Passed Vit filter:                        25  (0.00153318); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.60u 0.44s 00:00:01.04 Elapsed: 00:00:00.91
+# Mc/sec: 679.05
+//
+Query:       Versteria_mustelae  [L=215]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+      7e-11   42.3  29.5      7e-11   42.3  29.5    2.6  2  COX3      Cytochrome c oxidase subunit III
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.4   0.7      0.19   3.1e+03      87      98 ..      24      35 ..      12      49 .. 0.58
+   2 !   42.3  29.5   4.3e-15     7e-11      79     255 ..      56     214 ..      47     215 .] 0.82
+
+  Alignments for each domain:
+  == domain 1  score: -2.4 bits;  conditional E-value: 0.19
+                        HHHHHHHHHHHH CS
+                COX3 87 evllflalfwaf 98
+                          l++l lf+ f
+  Versteria_mustelae 24 MWLFLLFLFCVF 35
+                        333333333333 PP
+
+  == domain 2  score: 42.3 bits;  conditional E-value: 4.3e-15
+                         HHHHHHHHHHHHHHH.HHHHHHHHHHS--GGGTSSSS-TT-----TTSHHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHHHHHH CS
+                COX3  79 Glilfiisevllfla.lfwaffhsalsPtvelGatwpPvGikavnPlevPllntiillssGvtvtyahhsliegnrkkalkgllltillav 168
+                          + lfi+se+++f + lf++ f            +w+   ++    le+P++   +ll s +tvt  hh l     k +   lllt++l++
+  Versteria_mustelae  56 AFWLFIFSEAVIFGTlLFCCLFY----------DCWSYENLS--SSLEIPFIGCFVLLGSSITVTAFHHLLGW---KYCDFFLLLTVILGM 131
+                         56789999988886525666665..........467766554..579******************99987755...7888999******** PP
+
+                         HHHHHHHHHHHH-SS-TTSHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH.HHTT--BSSB-HHHHHHHHHHHHHHHHHHHHHHHTTT CS
+                COX3 169 lftllqaveyleasftisdgvyGsvfylatGlhglhviigtillavallr.llkyhltknhhlGfeaailywhfvdvvwlflyvsvyw 255
+                          f++lq++e  + s  i d+ + +  + + Glh+ hv++g + l++ ll   +k+ + +       +  +ywhfvd +wl++y +vy 
+  Versteria_mustelae 132 SFVVLQVYEMDDISVNIVDTRFHARSFCTVGLHFSHVLLGVLGLTILLLVgSVKFGVYR-----CRVLTWYWHFVDYIWLLVYTVVYV 214
+                         ****************************************9888876653144444433.....35668*****************96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (215 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       870  (0.0533546); expected 326.1 (0.02)
+Passed bias filter:                      269  (0.016497); expected 326.1 (0.02)
+Passed Vit filter:                        35  (0.00214645); expected 16.3 (0.001)
+Passed Fwd filter:                        10  (0.000613271); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.67u 0.39s 00:00:01.06 Elapsed: 00:00:00.67
+# Mc/sec: 918.03
+//
+Query:       Euseius_nicholsi  [L=262]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.6e-87  292.8  23.8      3e-87  292.6  23.8    1.0  1  COX3      Cytochrome c oxidase subunit III
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  292.6  23.8   1.8e-91     3e-87       1     257 [.       5     260 ..       5     261 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 292.6 bits;  conditional E-value: 1.8e-91
+                       SSS------SHHHHHHHHHHHHHHHHHHHHHSS-..-HHHHHHHHHHHHHHHHHHHHHHHHHTTT----HHHHHHHHHHHHHHHHHHHHHHHH CS
+              COX3   1 hpfhlvsaspwplvlsvalllltsalvlflhgykesstllilallslllvmllwfrdivaeatllGehtlavqkGlklGlilfiisevllfla 93 
+                       hpfh+v+  pwpl+ s+ l++++     f+++ +   ++ i+ l++l+++ +lw+rdi +e+ ++G+ht+ v  G+k+ +i+fi  e+++f++
+  Euseius_nicholsi   5 HPFHIVDLRPWPLINSLNLFNTVFLYLKFFKTPN-DINMCIFILTILIFTRFLWWRDICREGCYQGHHTFKVYLGIKIRIIIFISREIIFFFS 96 
+                       9*****************9999988888888877.778899999999********************************************** PP
+
+                       HHHHHHHHHHS--GGGTSSSS-TT-----TTSHHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHHHHHHHHHHHHHHHHHH-SS-TT CS
+              COX3  94 lfwaffhsalsPtvelGatwpPvGikavnPlevPllntiillssGvtvtyahhsliegnrkkalkgllltillavlftllqaveyleasftis 186
+                       +fwa+fh  lsP++e+ +twpP+Gi+ vnP+++P+ln iil+ sG++vt++h+s+++++  + + +l lti++++lf ++q +ey    f + 
+  Euseius_nicholsi  97 FFWAYFHFRLSPEFEIRNTWPPTGISVVNPYQIPILNRIILIRSGASVTWCHFSILHKKYYSSIFSLALTIFIGALFRGIQIIEYKIKDFVLN 189
+                       ********************************************************************************************* PP
+
+                       SHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT--BSSB-HHHHHHHHHHHHHHHHHHHHHHHTTTTT CS
+              COX3 187 dgvyGsvfylatGlhglhviigtillavallrllkyhltknhhlGfeaailywhfvdvvwlflyvsvywwg 257
+                       d vyGsvfy  tG+hg hv igti+l+++ +rl++  ++++hh+ +eaa++ywhfvdvvw++ly+++yww 
+  Euseius_nicholsi 190 DNVYGSVFYKLTGFHGAHVTIGTIFLIINQIRLINRQINNKHHFRLEAAAWYWHFVDVVWIYLYIFLYWWY 260
+                       **********************************************************************5 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (262 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       679  (0.0416411); expected 326.1 (0.02)
+Passed bias filter:                      251  (0.0153931); expected 326.1 (0.02)
+Passed Vit filter:                         9  (0.000551944); expected 16.3 (0.001)
+Passed Fwd filter:                         1  (6.13271e-05); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.61u 0.42s 00:00:01.03 Elapsed: 00:00:00.80
+# Mc/sec: 936.92
+//
+Query:       Patiria  [L=260]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   8.3e-120  399.3  24.1   9.4e-120  399.1  24.1    1.0  1  COX3      Cytochrome c oxidase subunit III
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  399.1  24.1  5.7e-124  9.4e-120       1     258 []       5     260 .]       5     260 .] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 399.1 bits;  conditional E-value: 5.7e-124
+              SSS------SHHHHHHHHHHHHHHHHHHHHHSS-..-HHHHHHHHHHHHHHHHHHHHHHHHHTTT----HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+     COX3   1 hpfhlvsaspwplvlsvalllltsalvlflhgykesstllilallslllvmllwfrdivaeatllGehtlavqkGlklGlilfiisevllflalfwaffhsa 102
+              hp+hlv++spwpl++++ +l++ts+l+l++h+++  ++ll  + + lll+++ w+rd+++eat++G+htl v++Gl++G+ilfi+sev +f+a+fwaffh +
+  Patiria   5 HPYHLVDQSPWPLTGAIRALMMTSGLILWFHTNR--NHLLLAGTILLLLTVINWWRDVIREATFQGRHTLPVNTGLRYGMILFITSEVCFFFAFFWAFFHRS 104
+              9*******************************99..88999999********************************************************** PP
+
+              HS--GGGTSSSS-TT-----TTSHHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHHHHHHHHHHHHHHHHHH-SS-TTSHHHHHHHHHHHHHHHHH CS
+     COX3 103 lsPtvelGatwpPvGikavnPlevPllntiillssGvtvtyahhsliegnrkkalkgllltillavlftllqaveyleasftisdgvyGsvfylatGlhglh 204
+              l+PtvelG  wpP+Gi+++nP+ vPllnt++llssGvtvt+ahh ++++nr +a++gl+lt++l+++ft+lqa ey++++fti+d vyGs f++atG+hglh
+  Patiria 105 LAPTVELGVSWPPTGISPINPFLVPLLNTAVLLSSGVTVTWAHHRILTQNRTEAIQGLFLTVILGIYFTGLQAWEYYDSPFTIADRVYGSRFFVATGFHGLH 206
+              ****************************************************************************************************** PP
+
+              HHHHHHHHHHHHHHHHTT--BSSB-HHHHHHHHHHHHHHHHHHHHHHHTTTTT- CS
+     COX3 205 viigtillavallrllkyhltknhhlGfeaailywhfvdvvwlflyvsvywwgs 258
+              v+igt++l +++lrl+++h+++nhh+Gfeaa++ywhfvdvvwlfly+ + wwgs
+  Patiria 207 VLIGTTFLFICFLRLITFHFSNNHHFGFEAAAWYWHFVDVVWLFLYICICWWGS 260
+              ****************************************************96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (260 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       651  (0.039924); expected 326.1 (0.02)
+Passed bias filter:                      259  (0.0158837); expected 326.1 (0.02)
+Passed Vit filter:                        18  (0.00110389); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.64u 0.47s 00:00:01.10 Elapsed: 00:00:00.81
+# Mc/sec: 918.29
+//
+Query:       Daphnia  [L=262]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   2.5e-117  391.2  28.0   2.8e-117  391.0  28.0    1.0  1  COX3      Cytochrome c oxidase subunit III
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  391.0  28.0  1.7e-121  2.8e-117       1     257 [.       7     261 ..       7     262 .] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 391.0 bits;  conditional E-value: 1.7e-121
+              SSS------SHHHHHHHHHHHHHHHHHHHHHSS-..-HHHHHHHHHHHHHHHHHHHHHHHHHTTT----HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+     COX3   1 hpfhlvsaspwplvlsvalllltsalvlflhgykesstllilallslllvmllwfrdivaeatllGehtlavqkGlklGlilfiisevllflalfwaffhsa 102
+              hpfhlv++spwp+  ++ ++ l+ +l+ ++h+++    l il++ls+ lv+++w+rd+v+e+t++G ht  v  Gl++G+ilfi sevl+f+++fwaffhs+
+  Daphnia   7 HPFHLVDKSPWPILRAFRVIRLVRGLAKWFHTFN--IDLAILGILSTTLVIIQWWRDVVREGTFQGLHTSKVGVGLRWGIILFIASEVLFFVSFFWAFFHSS 106
+              9********************************9..9***************************************************************** PP
+
+              HS--GGGTSSSS-TT-----TTSHHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHHHHHHHHHHHHHHHHHH-SS-TTSHHHHHHHHHHHHHHHHH CS
+     COX3 103 lsPtvelGatwpPvGikavnPlevPllntiillssGvtvtyahhsliegnrkkalkgllltillavlftllqaveyleasftisdgvyGsvfylatGlhglh 204
+              l+P+velG +wpP+Gik++nP+++Pllnt+ill+sGvtvt+ahh+l+e+n+ +a +gl+lt++l+++ft lqa+ey ea+f+i+d+vyG++f++atG+hglh
+  Daphnia 107 LAPAVELGRAWPPLGIKPFNPFQIPLLNTAILLASGVTVTWAHHALMENNHTQAFQGLFLTVFLGFYFTSLQALEYFEAPFSIADAVYGTTFFVATGFHGLH 208
+              ****************************************************************************************************** PP
+
+              HHHHHHHHHHHHHHHHTT--BSSB-HHHHHHHHHHHHHHHHHHHHHHHTTTTT CS
+     COX3 205 viigtillavallrllkyhltknhhlGfeaailywhfvdvvwlflyvsvywwg 257
+              viigt++l+++l+r++ +h++ +hh+Gfeaa++ywhfvdvvwlfl++s+ywwg
+  Daphnia 209 VIIGTTFLLICLIRHTLHHFSFTHHFGFEAAAWYWHFVDVVWLFLFISIYWWG 261
+              ****************************************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (262 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       684  (0.0419477); expected 326.1 (0.02)
+Passed bias filter:                      253  (0.0155158); expected 326.1 (0.02)
+Passed Vit filter:                        22  (0.0013492); expected 16.3 (0.001)
+Passed Fwd filter:                         1  (6.13271e-05); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.58u 0.48s 00:00:01.06 Elapsed: 00:00:00.78
+# Mc/sec: 960.95
+//
+Query:       Haplorchis_taichui  [L=218]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.6e-09   37.9  28.9    3.4e-09   36.8  28.9    1.7  1  COX3      Cytochrome c oxidase subunit III
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   36.8  28.9   2.1e-13   3.4e-09      83     255 ..      44     217 ..      13     218 .] 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 36.8 bits;  conditional E-value: 2.1e-13
+                         HHHHHHHH.....HHHHHHHHHHH..HHS--GGGTSSSS-TT-..----TTSHHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHH CS
+                COX3  83 fiisevll.....flalfwaffhs..alsPtvelGatwpPvGi..kavnPlevPllntiillssGvtvtyahhsliegnrkkalkglllti 164
+                         f++ ev++     ++  fw f  s  a+     l   w   G   +  + le+P+l   +ll+s  t t  hh++           ll++i
+  Haplorchis_taichui  44 FLVWEVFFphlrrYAMAFWLFIVSevAIFGRLLLTVLWKDDGGegALSDSLELPFLGCFLLLTSSLTATVYHHCFGL---PYSWVFLLISI 131
+                         6777777655555678899999872245567788999*999873345689***********************9865...45666799*** PP
+
+                         HHHHHHHHHHHHHHHH-SS-TTSHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT--BSSB-HHHHHHHHHHHHHHHHHHHHHHHTTT CS
+                COX3 165 llavlftllqaveyleasftisdgvyGsvfylatGlhglhviigtillavallrllkyhltknhhlGfeaailywhfvdvvwlflyvsvyw 255
+                         +l++ f+ lq  e+ ++   +  + y  + + + Glh+ hv+ g   ++v l r  +     + h+   + ++ywh vd vwl++y+ +y+
+  Haplorchis_taichui 132 FLGFGFVCLQLWEFFDCECDVLYCTYFGAAFCTVGLHFSHVVAGVGAMTVLLVRGWD-----TNHFYARVVVWYWHSVDYVWLWVYLLIYY 217
+                         *******************99999988888999***********9999999998753.....456677899*******************8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (218 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       693  (0.0424997); expected 326.1 (0.02)
+Passed bias filter:                      172  (0.0105483); expected 326.1 (0.02)
+Passed Vit filter:                        16  (0.000981234); expected 16.3 (0.001)
+Passed Fwd filter:                         5  (0.000306636); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.61u 0.39s 00:00:01.00 Elapsed: 00:00:00.81
+# Mc/sec: 769.95
+//
+Query:       Lumbricus  [L=258]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   7.9e-112  373.1  23.7   8.9e-112  373.0  23.7    1.0  1  COX3      Cytochrome c oxidase subunit III
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  373.0  23.7  5.5e-116  8.9e-112       2     257 ..       5     258 .]       4     258 .] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 373.0 bits;  conditional E-value: 5.5e-116
+                SS------SHHHHHHHHHHHHHHHHHHHHHSS-..-HHHHHHHHHHHHHHHHHHHHHHHHHTTT----HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+       COX3   2 pfhlvsaspwplvlsvalllltsalvlflhgykesstllilallslllvmllwfrdivaeatllGehtlavqkGlklGlilfiisevllflalfwaffhs 101
+                pfhlv++spwpl+ s+ +++l+ +l+ ++h++      l+la + +++++++w+rd+v+e+t+ G+ht  v++Gl++G+ilfi+sev++fla+fwaffh 
+  Lumbricus   5 PFHLVEYSPWPLTSSIGAFTLAIGLARWFHNHG--FLCLTLAAFLIIVSIIQWWRDVVREGTYMGHHTSLVTTGLRWGIILFITSEVIFFLAFFWAFFHR 102
+                8*****************************988..7788999999999**************************************************** PP
+
+                HHS--GGGTSSSS-TT-----TTSHHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHHHHHHHHHHHHHHHHHH-SS-TTSHHHHHHHHHHHHHH CS
+       COX3 102 alsPtvelGatwpPvGikavnPlevPllntiillssGvtvtyahhsliegnrkkalkgllltillavlftllqaveyleasftisdgvyGsvfylatGlh 201
+                +lsPt e+G  wpP+Gi+++nP+ vPllnt++ll+sGvtvt+ahh li+g+r +a+++l+lt++l+++ft+lqa ey+ a+f+i+d vyG++f++atG+h
+  Lumbricus 103 SLSPTPEIGCSWPPTGIHPLNPFRVPLLNTAVLLASGVTVTWAHHRLIRGKRIDATQALILTVCLGAYFTFLQAGEYIAAPFSIADRVYGTTFFVATGFH 202
+                **************************************************************************************************** PP
+
+                HHHHHHHHHHHHHHHHHHHTT--BSSB-HHHHHHHHHHHHHHHHHHHHHHHTTTTT CS
+       COX3 202 glhviigtillavallrllkyhltknhhlGfeaailywhfvdvvwlflyvsvywwg 257
+                glhv+ig+++la++l r+ ++h+++ hh+Gfeaa++ywhfvdvvw+ ly+ +ywwg
+  Lumbricus 203 GLHVLIGSSFLAICLARTWSHHFSAGHHFGFEAAAWYWHFVDVVWICLYLCIYWWG 258
+                *******************************************************8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (258 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       690  (0.0423157); expected 326.1 (0.02)
+Passed bias filter:                      291  (0.0178462); expected 326.1 (0.02)
+Passed Vit filter:                        22  (0.0013492); expected 16.3 (0.001)
+Passed Fwd filter:                         1  (6.13271e-05); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.54u 0.45s 00:00:00.99 Elapsed: 00:00:00.71
+# Mc/sec: 1039.57
+//
+Query:       Halocynthia  [L=264]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.4e-95  318.6  28.5    3.9e-95  318.4  28.5    1.0  1  COX3      Cytochrome c oxidase subunit III
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  318.4  28.5   2.4e-99   3.9e-95       3     257 ..       7     259 ..       5     260 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 318.4 bits;  conditional E-value: 2.4e-99
+                  S------SHHHHHHHHHHHHHHHHHHHHHSS-..-HHHHHHHHHHHHHHHHHHHHHHHHHTTT----HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+         COX3   3 fhlvsaspwplvlsvalllltsalvlflhgykesstllilallslllvmllwfrdivaeatllGehtlavqkGlklGlilfiisevllflalfwaffh 100
+                  fhlv+aspwp+ ++ + l+l+++lv ++hg      ++ ++l   +  ++ w+rd+v+e+++lG ht  v++Gl++ ++lfi+sev++fl++fwaffh
+  Halocynthia   7 FHLVDASPWPILGANVGLMLVLGLVRWFHGGG--FIVVEIGLWLCVGCVFFWWRDVVRESSFLGFHTSGVRRGLQIRIVLFILSEVFFFLGFFWAFFH 102
+                  9*****************************99..8999************************************************************ PP
+
+                  HHHS--GGGTSSSS-TT-----TTSHHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHHHHHHHHHHHHHHHHHH-SS-TTSHHHHHHHHHHH CS
+         COX3 101 salsPtvelGatwpPvGikavnPlevPllntiillssGvtvtyahhsliegnrkkalkgllltillavlftllqaveyleasftisdgvyGsvfylat 198
+                  s+l+ + ++G+twpP G++ ++P+ v llnt++ll sGv vty+h+sl+ g+    +  l++t++l v+ftllq +eyl+asf+i+d+vy svf++at
+  Halocynthia 103 SSLVSSSDVGNTWPPYGLEVMDPMAVILLNTVVLLGSGVFVTYSHYSLVIGDYTGSVLRLFFTLCLRVFFTLLQLIEYLDASFSIADSVYRSVFFIAT 200
+                  ************************************************************************************************** PP
+
+                  HHHHHHHHHHHHHHHHHHHHHHTT--BSSB-HHHHHHHHHHHHHHHHHHHHHHHTTTTT CS
+         COX3 199 GlhglhviigtillavallrllkyhltknhhlGfeaailywhfvdvvwlflyvsvywwg 257
+                  G+h +hv++g+++l v+l+rl+   ++++hh+G+e+ai+ywhfvdvvw+fly+s+yww 
+  Halocynthia 201 GFHRFHVLVGSAFLFVCLFRLVLREFSSSHHVGYECAIWYWHFVDVVWIFLYLSIYWWR 259
+                  **********************************************************6 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (264 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       660  (0.0404759); expected 326.1 (0.02)
+Passed bias filter:                      247  (0.0151478); expected 326.1 (0.02)
+Passed Vit filter:                        18  (0.00110389); expected 16.3 (0.001)
+Passed Fwd filter:                         1  (6.13271e-05); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.61u 0.39s 00:00:01.00 Elapsed: 00:00:00.64
+# Mc/sec: 1180.09
+//
+Query:       Limulus  [L=260]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   1.1e-118  395.7  26.4   1.2e-118  395.5  26.4    1.0  1  COX3      Cytochrome c oxidase subunit III
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  395.5  26.4  7.4e-123  1.2e-118       1     257 [.       6     260 .]       6     260 .] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 395.5 bits;  conditional E-value: 7.4e-123
+              SSS------SHHHHHHHHHHHHHHHHHHHHHSS-..-HHHHHHHHHHHHHHHHHHHHHHHHHTTT----HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+     COX3   1 hpfhlvsaspwplvlsvalllltsalvlflhgykesstllilallslllvmllwfrdivaeatllGehtlavqkGlklGlilfiisevllflalfwaffhsa 102
+              hpfh+v++spwpl++++ +l+lt +l+ ++h+ +   +llila++++l+++++w+rdi++e+t++G+ht  v +Gl++G+ilfi+se+l+f+++fwaffh  
+  Limulus   6 HPFHIVDQSPWPLTGALRALTLTIGLIKWFHKIN--PNLLILAIFITLVTIIQWWRDIIRESTFQGNHTSIVISGLRWGIILFIVSEILFFASFFWAFFHRR 105
+              9*******************************99..99**************************************************************** PP
+
+              HS--GGGTSSSS-TT-----TTSHHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHHHHHHHHHHHHHHHHHH-SS-TTSHHHHHHHHHHHHHHHHH CS
+     COX3 103 lsPtvelGatwpPvGikavnPlevPllntiillssGvtvtyahhsliegnrkkalkgllltillavlftllqaveyleasftisdgvyGsvfylatGlhglh 204
+              lsP++elG+ wpP Gi+++nP+++Pllnt+illssGvt+t+ahh ++e+n+ + l++l+lti+l+++ft lqa ey+ea+f+i+d++yG++f++atG+hglh
+  Limulus 106 LSPSIELGSSWPPSGISPFNPFQIPLLNTAILLSSGVTITWAHHRIMENNHPQSLQALFLTIILGLYFTSLQAWEYWEAPFSIADSAYGTTFFVATGFHGLH 207
+              ****************************************************************************************************** PP
+
+              HHHHHHHHHHHHHHHHTT--BSSB-HHHHHHHHHHHHHHHHHHHHHHHTTTTT CS
+     COX3 205 viigtillavallrllkyhltknhhlGfeaailywhfvdvvwlflyvsvywwg 257
+              viigt++l ++++rl+ +h++ nhh+Gfeaa++ywhfvdvvwlfl++s+ywwg
+  Limulus 208 VIIGTSFLSICFIRLIFFHFSPNHHFGFEAAAWYWHFVDVVWLFLFISIYWWG 260
+              ****************************************************8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (260 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       757  (0.0464246); expected 326.1 (0.02)
+Passed bias filter:                      275  (0.016865); expected 326.1 (0.02)
+Passed Vit filter:                        21  (0.00128787); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.59u 0.52s 00:00:01.10 Elapsed: 00:00:00.87
+# Mc/sec: 854.96
+//
+Query:       Echinococcus_equinus  [L=215]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.5e-12   47.8  25.1    1.5e-12   47.8  25.1    2.3  2  COX3      Cytochrome c oxidase subunit III
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -5.0   6.3         1   1.6e+04      79      94 ..      56      71 ..       6      83 .. 0.64
+   2 !   47.8  25.1   9.1e-17   1.5e-12     123     255 ..      89     214 ..      47     215 .] 0.84
+
+  Alignments for each domain:
+  == domain 1  score: -5.0 bits;  conditional E-value: 1
+                          HHHHHHHHHHHHHHHH CS
+                  COX3 79 Glilfiisevllflal 94
+                           + lf++ ev++f  +
+  Echinococcus_equinus 56 AFWLFVLREVIIFGRF 71
+                          4556666666666444 PP
+
+  == domain 2  score: 47.8 bits;  conditional E-value: 9.1e-17
+                           TTSHHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHHHHHHHHHHHHHHHHHH-SS-TTSHHHHHHHHHHHHHHHHHHHHHHHH CS
+                  COX3 123 PlevPllntiillssGvtvtyahhsliegnrkkalkgllltillavlftllqaveyleasftisdgvyGsvfylatGlhglhviigtil 211
+                            le+P++   +ll s +tvt  hh +     + +   l++ti+l++ f++lq++e  e sf i dg + s+ + + Glh+ hv++g i 
+  Echinococcus_equinus  89 SLEIPFVGCFVLLGSRITVTGFHHLFGW---RYCDLFLFMTIVLGLSFVVLQVLEMEEISFNIVDGRFYSSSFCTVGLHFRHVVLGVIG 174
+                           68******************99996644...5677789***********************************************9988 PP
+
+                           HHHHHHHHHTT--BSSB-HHHHHH..HHHHHHHHHHHHHHHHHTTT CS
+                  COX3 212 lavallrllkyhltknhhlGfeaa..ilywhfvdvvwlflyvsvyw 255
+                           l+  +l   +  +       + ++   +ywhfvd +wl++y +vy 
+  Echinococcus_equinus 175 LITLFLVGRD-SFG-----VYRCTvlTWYWHFVDYIWLLVYTVVYV 214
+                           7665554332.232.....244441169****************96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (215 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       908  (0.055685); expected 326.1 (0.02)
+Passed bias filter:                      295  (0.0180915); expected 326.1 (0.02)
+Passed Vit filter:                        38  (0.00233043); expected 16.3 (0.001)
+Passed Fwd filter:                         6  (0.000367963); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.58u 0.43s 00:00:01.01 Elapsed: 00:00:00.61
+# Mc/sec: 1008.33
+//
+Query:       Taenia_crassiceps  [L=214]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.9e-14   53.4  27.2    2.9e-14   53.4  27.2    2.4  2  COX3      Cytochrome c oxidase subunit III
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.7   0.8      0.23   3.7e+03      86     100 ..      18      32 ..       8      41 .. 0.54
+   2 !   53.4  27.2   1.8e-18   2.9e-14      79     255 ..      55     213 ..      38     214 .] 0.84
+
+  Alignments for each domain:
+  == domain 1  score: -2.7 bits;  conditional E-value: 0.23
+                        HHHHHHHHHHHHHHH CS
+               COX3  86 sevllflalfwaffh 100
+                          +l  ++ f+ ff 
+  Taenia_crassiceps  18 GLFLWKFTYFCIFFT 32 
+                        333333444444443 PP
+
+  == domain 2  score: 53.4 bits;  conditional E-value: 1.8e-18
+                        HHHHHHHHHHHHHHHHHHHHHHHHHS--GGGTSSSS-TT-----TTSHHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHHHHHHHH CS
+               COX3  79 GlilfiisevllflalfwaffhsalsPtvelGatwpPvGikavnPlevPllntiillssGvtvtyahhsliegnrkkalkgllltillavlf 170
+                         + lf++sev++f +++ +     l     +  +w+        Ple+P++   ill s +t+t  hh l     k +   l+ltill++lf
+  Taenia_crassiceps  55 AFWLFVFSEVMIFGSFLLCC----L-----IFDCWSYRK--LSSPLEIPFVGCFILLGSRITITAFHHLLGW---KYCDFFLFLTILLGLLF 132
+                        57789999998887765442....2.....457898765..457********************99987755...888899*********** PP
+
+                        HHHHHHHHHH-SS-TTSHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT--BSSB-HHHHHHHHHHHHHHHHHHHHHHHTTT CS
+               COX3 171 tllqaveyleasftisdgvyGsvfylatGlhglhviigtillavallrllkyhltknhhlGfeaailywhfvdvvwlflyvsvyw 255
+                        + lq++e +e    + d+ + s+ + + Glh+ hv++g i ++v l+ + ++ ++  h +   +  +ywhfvd +wl++y +vy 
+  Taenia_crassiceps 133 VCLQVFELCEIDVNLFDTRFYSSRFCTVGLHFSHVLLGVIGMVVMLY-IGSNKFSMYHCT---VLTWYWHFVDYIWLLVYTIVYV 213
+                        **************************************988877766.667788877765...457*****************95 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (214 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       816  (0.0500429); expected 326.1 (0.02)
+Passed bias filter:                      184  (0.0112842); expected 326.1 (0.02)
+Passed Vit filter:                        23  (0.00141052); expected 16.3 (0.001)
+Passed Fwd filter:                         6  (0.000367963); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.65u 0.38s 00:00:01.03 Elapsed: 00:00:00.57
+# Mc/sec: 1055.55
+//
+Query:       Axinella  [L=262]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   5.8e-118  393.3  28.0   6.5e-118  393.1  28.0    1.0  1  COX3      Cytochrome c oxidase subunit III
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  393.1  28.0    4e-122  6.5e-118       1     258 []       7     262 .]       7     262 .] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 393.1 bits;  conditional E-value: 4e-122
+               SSS------SHHHHHHHHHHHHHHHHHHHHHSS-..-HHHHHHHHHHHHHHHHHHHHHHHHHTTT----HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+      COX3   1 hpfhlvsaspwplvlsvalllltsalvlflhgykesstllilallslllvmllwfrdivaeatllGehtlavqkGlklGlilfiisevllflalfwaffhs 101
+               hp+hlv++spwp++++  ++++t ++v+++h+++  s +lil+l+++l++m+ w+rd+++e+t++G+htl v++Glk+G+ilfi+sev lf+++fwaffhs
+  Axinella   7 HPYHLVEPSPWPYIGACGAFFTTVGSVMYFHYSQ--SWVLILGLITILFTMVVWWRDVIRESTYQGHHTLIVKQGLKYGMILFILSEVCLFFSFFWAFFHS 105
+               9*******************************99..8999************************************************************* PP
+
+               HHS--GGGTSSSS-TT-----TTSHHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHHHHHHHHHHHHHHHHHH-SS-TTSHHHHHHHHHHHHHHH CS
+      COX3 102 alsPtvelGatwpPvGikavnPlevPllntiillssGvtvtyahhsliegnrkkalkgllltillavlftllqaveyleasftisdgvyGsvfylatGlhg 202
+               +l+Pt+e+Ga+wpP G++++nP+ vPllnt++llssG+tvt+ahh +i+g+rk+a+ +l lt++l+++ft+lqa+ey+ea+ftisd+vyGs+f+++tG hg
+  Axinella 106 SLAPTIEIGAVWPPKGVDPLNPFSVPLLNTAVLLSSGATVTWAHHGIISGKRKEAIISLALTVVLGFIFTALQAMEYYEAPFTISDSVYGSTFFVTTGAHG 206
+               ***************************************************************************************************** PP
+
+               HHHHHHHHHHHHHHHHHHTT--BSSB-HHHHHHHHHHHHHHHHHHHHHHHTTTTT- CS
+      COX3 203 lhviigtillavallrllkyhltknhhlGfeaailywhfvdvvwlflyvsvywwgs 258
+                hv+ig+++l+v+l+rl+++ +t++hh+Gfeaa++ywhfvdvvwlfl+ ++ywwgs
+  Axinella 207 GHVLIGSTFLLVCLYRLINHQFTRHHHFGFEAAAWYWHFVDVVWLFLFTFMYWWGS 262
+               ******************************************************96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (262 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       939  (0.0575862); expected 326.1 (0.02)
+Passed bias filter:                      358  (0.0219551); expected 326.1 (0.02)
+Passed Vit filter:                        36  (0.00220778); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.57u 0.56s 00:00:01.12 Elapsed: 00:00:01.03
+# Mc/sec: 727.71
+//
+Query:       Terebratulina  [L=259]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+   4.7e-110  367.3  20.9   5.2e-110  367.2  20.9    1.0  1  COX3          Cytochrome c oxidase subunit III
+  ------ inclusion threshold ------
+       0.39   10.8   0.4       0.51   10.4   0.4    1.1  1  SnAPC_2_like  Small nuclear RNA activating complex subunit 2,
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  367.2  20.9  6.4e-114  5.2e-110       2     258 .]       5     259 .]       4     259 .] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 367.2 bits;  conditional E-value: 6.4e-114
+                    SS------SHHHHHHHHHHHHHHHHHHHHHSS-..-HHHHHHHHHHHHHHHHHHHHHHHHHTTT----HHHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+           COX3   2 pfhlvsaspwplvlsvalllltsalvlflhgykesstllilallslllvmllwfrdivaeatllGehtlavqkGlklGlilfiisevllflalfwa 97 
+                    pfhlv++spwp+++sv +l+lts+++ ++hg++++  l   +l  ++l++++w+rd+++e t++G ht  v kGl++G+ilfi+sev +f+a+fwa
+  Terebratulina   5 PFHLVEVSPWPITGSVGALALTSGTAAWIHGFSTIPALCGATL--IILTIIQWWRDVSRERTFQGFHTSKVGKGLRWGIILFITSEVCFFFAFFWA 98 
+                    8********************************7777766555..578899********************************************* PP
+
+                    HHHHHHS--GGGTSSSS-TT-----TTSHHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHHHHHHHHHHHHHHHHHH-SS-TTSHHHHHH CS
+           COX3  98 ffhsalsPtvelGatwpPvGikavnPlevPllntiillssGvtvtyahhsliegnrkkalkgllltillavlftllqaveyleasftisdgvyGsv 193
+                    +f+s+l+Pt e+G +wpP G+ ++nP+ vPllnt++ll+sGv+vt+ahhsli++n   +++gl+ t ll+v+ft+lqa+ey+easf+i+d vyG+v
+  Terebratulina  99 YFQSSLAPTPEIGGVWPPSGVFPLNPFSVPLLNTAVLLASGVSVTWAHHSLIKSNWAGITQGLTATALLGVYFTILQATEYIEASFSIADRVYGAV 194
+                    ************************************************************************************************ PP
+
+                    HHHHHHHHHHHHHHHHHHHHHHHHHHHTT--BSSB-HHHHHHHHHHHHHHHHHHHHHHHTTTTT- CS
+           COX3 194 fylatGlhglhviigtillavallrllkyhltknhhlGfeaailywhfvdvvwlflyvsvywwgs 258
+                    fy+atG+hg hv+ig ++l+++l r+l++ ++  hh+Gfeaa++ywhfvdvvw+fly+ +ywwgs
+  Terebratulina 195 FYVATGFHGAHVLIGRTFLIICLCRHLTHQFSPAHHFGFEAAAWYWHFVDVVWIFLYLCIYWWGS 259
+                    ***************************************************************96 PP
+
+>> SnAPC_2_like  Small nuclear RNA activating complex subunit 2, SNAP190 Myb
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.4   0.4   6.3e-05      0.51     313     329 ..     113     129 ..     101     134 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 10.4 bits;  conditional E-value: 6.3e-05
+   SnAPC_2_like 313 dwqaagicPLNpflvPl 329
+                     w  +g++PLNpf+vPl
+  Terebratulina 113 VWPPSGVFPLNPFSVPL 129
+                    59999***********8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (259 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       629  (0.0385748); expected 326.1 (0.02)
+Passed bias filter:                      283  (0.0173556); expected 326.1 (0.02)
+Passed Vit filter:                        21  (0.00128787); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.57u 0.47s 00:00:01.04 Elapsed: 00:00:00.66
+# Mc/sec: 1122.66
+//
+Query:       Suberites_domuncula  [L=262]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------        -----------
+   3.6e-114  380.8  26.0     4e-114  380.7  26.0    1.0  1  COX3             Cytochrome c oxidase subunit III
+  ------ inclusion threshold ------
+       0.15   12.0   3.1       0.71    9.9   0.2    2.5  2  Myco_arth_vir_N  Mycoplasma virulence signal region (Myco_art
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  380.7  26.0    5e-118    4e-114       1     258 []       7     262 .]       7     262 .] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 380.7 bits;  conditional E-value: 5e-118
+                          SSS------SHHHHHHHHHHHHHHHHHHHHHSS-..-HHHHHHHHHHHHHHHHHHHHHHHHHTTT----HHHHHHHHHHHHHHHHHHHHH CS
+                 COX3   1 hpfhlvsaspwplvlsvalllltsalvlflhgykesstllilallslllvmllwfrdivaeatllGehtlavqkGlklGlilfiisevll 90 
+                          hp+hlv++spwp++++  ++++t + v+++h+++  s  lil+l+++ l+m+ w+rd+++eat++G+ht  v++Glk+G+ilfi+se+ l
+  Suberites_domuncula   7 HPYHLVEPSPWPYIGACGAFFTTVGGVMYFHYSQ--SWGLILGLTTIALTMVIWWRDVIREATYQGHHTIIVKQGLKYGMILFIVSEICL 94 
+                          9*******************************99..667789999999****************************************** PP
+
+                          HHHHHHHHHHHHHS--GGGTSSSS-TT-----TTSHHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+                 COX3  91 flalfwaffhsalsPtvelGatwpPvGikavnPlevPllntiillssGvtvtyahhsliegnrkkalkgllltillavlftllqaveyle 180
+                          ++++fwaffhs+l+Pt+e+Ga+wpP G++++ P+ +Pllnt+il+ssG+tvt+ahh +i+g+rk+a+ +l lt++l+++ft+lqa+ey e
+  Suberites_domuncula  95 LFSFFWAFFHSSLVPTIEIGAVWPPRGVEPLGPFSIPLLNTAILVSSGATVTWAHHGIISGKRKEAIVSLALTVTLGLIFTALQAMEYFE 184
+                          ****************************************************************************************** PP
+
+                          -SS-TTSHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT--BSSB-HHHHHHHHHHHHHHHHHHHHHHHTTTTT- CS
+                 COX3 181 asftisdgvyGsvfylatGlhglhviigtillavallrllkyhltknhhlGfeaailywhfvdvvwlflyvsvywwgs 258
+                          a+f+isd+vyGs+f+++tG hg hv+ig+++l+v+l+rl+++ +t++hhlGfeaa++ywhfvdvvwlfl++++ywwgs
+  Suberites_domuncula 185 APFAISDSVYGSTFFMTTGAHGAHVLIGSSFLLVCLFRLINHQFTRHHHLGFEAAAWYWHFVDVVWLFLFIFMYWWGS 262
+                          ****************************************************************************96 PP
+
+>> Myco_arth_vir_N  Mycoplasma virulence signal region (Myco_arth_vir_N)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.1   0.2     0.023   1.9e+02      25      31 ..      29      35 ..      22      36 .. 0.88
+   2 ?    9.9   0.2   8.7e-05      0.71       6      20 ..     156     170 ..     154     177 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 2.1 bits;  conditional E-value: 0.023
+      Myco_arth_vir_N 25 tfgGViY 31
+                         t+gGV+Y
+  Suberites_domuncula 29 TVGGVMY 35
+                         99***** PP
+
+  == domain 2  score: 9.9 bits;  conditional E-value: 8.7e-05
+      Myco_arth_vir_N   6 KKKikIltlalvaaL 20 
+                          K K +I+ lal+++L
+  Suberites_domuncula 156 KRKEAIVSLALTVTL 170
+                          99************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (262 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       802  (0.0491843); expected 326.1 (0.02)
+Passed bias filter:                      309  (0.0189501); expected 326.1 (0.02)
+Passed Vit filter:                        34  (0.00208512); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.61u 0.43s 00:00:01.04 Elapsed: 00:00:00.88
+# Mc/sec: 851.75
+//
+Query:       Bfloridae  [L=0]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (0 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                         0  (0); expected 326.1 (0.02)
+Passed bias filter:                        0  (0); expected 326.1 (0.02)
+Passed Vit filter:                         0  (0); expected 16.3 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.34u 0.25s 00:00:00.59 Elapsed: 00:00:00.46
+# Mc/sec: 0.00
+//
+Query:       Katharina  [L=259]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+   2.1e-114  381.6  25.2   2.3e-114  381.4  25.2    1.0  1  COX3         Cytochrome c oxidase subunit III
+  ------ inclusion threshold ------
+      0.032   13.9   6.7      0.079   12.7   6.7    2.0  1  Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase cha
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  381.4  25.2  2.9e-118  2.3e-114       2     258 .]       5     259 .]       4     259 .] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 381.4 bits;  conditional E-value: 2.9e-118
+                SS------SHHHHHHHHHHHHHHHHHHHHHSS-..-HHHHHHHHHHHHHHHHHHHHHHHHHTTT----HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+       COX3   2 pfhlvsaspwplvlsvalllltsalvlflhgykesstllilallslllvmllwfrdivaeatllGehtlavqkGlklGlilfiisevllflalfwaffhs 101
+                pfhlv+ spwplv+s+ ++ lt +l+ ++hg++    l+ ++++ +ll+m++w+rd+++e+t++G+htl v +Gl++G+ilfi+sevl+f+a+fwa+fhs
+  Katharina   5 PFHLVEFSPWPLVGSIGAFCLTVGLAAWFHGFS--LFLVWVGVILILLTMVQWWRDVIREGTFQGYHTLRVSRGLRWGIILFITSEVLFFFAFFWAYFHS 102
+                8********************************..99*************************************************************** PP
+
+                HHS--GGGTSSSS-TT-----TTSHHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHHHHHHHHHHHHHHHHHH-SS-TTSHHHHHHHHHHHHHH CS
+       COX3 102 alsPtvelGatwpPvGikavnPlevPllntiillssGvtvtyahhsliegnrkkalkgllltillavlftllqaveyleasftisdgvyGsvfylatGlh 201
+                 l+P  e+G++wpP G++++nP++vPllnt++ll+sGv+vt+ahhsli+g++  a  +ll t++l+++ft+lqa eyle+sfti+d+ yGs+f++atG+h
+  Katharina 103 RLAPCLEIGSCWPPQGVAPLNPFQVPLLNTAVLLASGVSVTWAHHSLIDGDQGGANISLLTTVILGAYFTFLQAGEYLETSFTIADSCYGSTFFVATGFH 202
+                **************************************************************************************************** PP
+
+                HHHHHHHHHHHHHHHHHHHTT--BSSB-HHHHHHHHHHHHHHHHHHHHHHHTTTTT- CS
+       COX3 202 glhviigtillavallrllkyhltknhhlGfeaailywhfvdvvwlflyvsvywwgs 258
+                g+hv++g ++l+v+l+r ++ h++++hh+Gfeaa++ywhfvdvvwlfly+s+ywwgs
+  Katharina 203 GFHVLVGRLFLLVTLWRNFSCHFSRSHHFGFEAAAWYWHFVDVVWLFLYISIYWWGS 259
+                *******************************************************96 PP
+
+>> Oxidored_q3  NADH-ubiquinone/plastoquinone oxidoreductase chain 6
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.7   6.7   9.7e-06     0.079      19      91 ..      16     145 ..       1     255 [. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 12.7 bits;  conditional E-value: 9.7e-06
+                  HHHHHHHHHHHHHTT-HHHHHHHHHIIIIIHHHHHHHHHHH............TS----TTCHHHHHHHHHHHHHHHHHHHTT-.............. CS
+  Oxidored_q3  19 ilvflgiaglfillgaeFlalvqilvYvGAilvLflFviml............eeeeekeklkkslplaalligllllallllv.............. 90 
+                  ++  +g+ +l + l a F +++++lv vG il+L+  v               ++ +  ++l+++++l+ ++  +l+++ ++++              
+    Katharina  16 LVGSIGAFCLTVGLAAWFHGFSLFLVWVGVILILLTMVQWWrdviregtfqgyHTLRVSRGLRWGIILF-ITSEVLFFFAFFWAyfhsrlapcleigs 112
+                  44457788899999********************9999888*****99998874444444444444444.7777777777777788888888877777 PP
+
+                  ................................. CS
+  Oxidored_q3  91 ................................a 91 
+                                                  a
+    Katharina 113 cwppqgvaplnpfqvpllntavllasgvsvtwA 145
+                  777777766666666666666666666665543 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (259 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       740  (0.0453821); expected 326.1 (0.02)
+Passed bias filter:                      272  (0.016681); expected 326.1 (0.02)
+Passed Vit filter:                        31  (0.00190114); expected 16.3 (0.001)
+Passed Fwd filter:                         5  (0.000306636); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.66u 0.36s 00:00:01.02 Elapsed: 00:00:00.64
+# Mc/sec: 1157.74
+//
+Query:       Geodia  [L=262]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   2.2e-116  388.1  28.5   2.5e-116  387.9  28.5    1.0  1  COX3      Cytochrome c oxidase subunit III
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  387.9  28.5  1.5e-120  2.5e-116       1     258 []       7     262 .]       7     262 .] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 387.9 bits;  conditional E-value: 1.5e-120
+             SSS------SHHHHHHHHHHHHHHHHHHHHHSS-..-HHHHHHHHHHHHHHHHHHHHHHHHHTTT----HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+    COX3   1 hpfhlvsaspwplvlsvalllltsalvlflhgykesstllilallslllvmllwfrdivaeatllGehtlavqkGlklGlilfiisevllflalfwaffhsal 103
+             hp+hlv++spwp+++   +ll+t ++++++h++     +l ++l++++++m+ w+rd+++eat++G+htl v++Glk+G+ilfi+sev lf+++fwaffhs+l
+  Geodia   7 HPYHLVKPSPWPYIGGCGALLTTVGAIVYFHYSP--AWVLSFGLVIIVVTMVVWWRDVIREATYQGHHTLIVKQGLKYGMILFILSEVCLFFSFFWAFFHSSL 107
+             9*******************************99..8999*************************************************************** PP
+
+             S--GGGTSSSS-TT-----TTSHHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHHHHHHHHHHHHHHHHHH-SS-TTSHHHHHHHHHHHHHHHHHHH CS
+    COX3 104 sPtvelGatwpPvGikavnPlevPllntiillssGvtvtyahhsliegnrkkalkgllltillavlftllqaveyleasftisdgvyGsvfylatGlhglhvi 206
+             +Ptve+Ga+wpP G++++nP+ vPllnt++llssG+tvt++hh++i+g+rk+a+ gl++t++l++lft+lqa+ey+ea+ftisd+vyGs+f+l+tG hg hv+
+  Geodia 108 VPTVEIGAVWPPRGVDPLNPFSVPLLNTVVLLSSGATVTWTHHAIISGKRKEAIIGLVFTVFLGILFTGLQAMEYYEAPFTISDSVYGSTFFLTTGAHGAHVL 210
+             ******************************************************************************************************* PP
+
+             HHHHHHHHHHHHHHTT--BSSB-HHHHHHHHHHHHHHHHHHHHHHHTTTTT- CS
+    COX3 207 igtillavallrllkyhltknhhlGfeaailywhfvdvvwlflyvsvywwgs 258
+             ig+++l+v+l+rl+ y +t++hh+Gfeaa++ywhfvdvvwlfl++++ywwgs
+  Geodia 211 IGSSFLLVCLIRLIYYQFTRHHHFGFEAAVWYWHFVDVVWLFLFIFMYWWGS 262
+             **************************************************96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (262 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       947  (0.0580768); expected 326.1 (0.02)
+Passed bias filter:                      345  (0.0211579); expected 326.1 (0.02)
+Passed Vit filter:                        33  (0.00202379); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.66u 0.41s 00:00:01.07 Elapsed: 00:00:00.77
+# Mc/sec: 973.43
+//
+Query:       Metridium  [L=262]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   1.1e-119  398.9  27.5   1.2e-119  398.8  27.5    1.0  1  COX3      Cytochrome c oxidase subunit III
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  398.8  27.5  7.4e-124  1.2e-119       1     258 []       7     262 .]       7     262 .] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 398.8 bits;  conditional E-value: 7.4e-124
+                SSS------SHHHHHHHHHHHHHHHHHHHHHSS-..-HHHHHHHHHHHHHHHHHHHHHHHHHTTT----HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+       COX3   1 hpfhlvsaspwplvlsvalllltsalvlflhgykesstllilallslllvmllwfrdivaeatllGehtlavqkGlklGlilfiisevllflalfwaffh 100
+                hp+hlv++spwp+v++  +l++t ++v+++h+++  + +l ++ ++l l+m+ w+rd+++eat++G ht++v++Glk+G++lfi+sevl+f+++fwaffh
+  Metridium   7 HPYHLVDPSPWPYVGACGALFITVGSVVYFHYSQ--TWVLLMGAITLSLTMIVWWRDVIREATFQGLHTMVVKQGLKYGMLLFILSEVLFFFSFFWAFFH 104
+                9*******************************99..8888999********************************************************* PP
+
+                HHHS--GGGTSSSS-TT-----TTSHHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHHHHHHHHHHHHHHHHHH-SS-TTSHHHHHHHHHHHHH CS
+       COX3 101 salsPtvelGatwpPvGikavnPlevPllntiillssGvtvtyahhsliegnrkkalkgllltillavlftllqaveyleasftisdgvyGsvfylatGl 200
+                s+++P++elGa+wpP Gi+++nP+ vPllnt++llssG+tvt+ahh+li+g++ +a++gl++t++l+++ft+lqa+ey+ea+f+isd+vyGs+f++atG+
+  Metridium 105 SSIAPNIELGAVWPPQGINPLNPFSVPLLNTAVLLSSGATVTWAHHALISGKKTEAINGLTITVVLGLIFTGLQAMEYYEAPFAISDSVYGSTFFVATGF 204
+                **************************************************************************************************** PP
+
+                HHHHHHHHHHHHHHHHHHHHTT--BSSB-HHHHHHHHHHHHHHHHHHHHHHHTTTTT- CS
+       COX3 201 hglhviigtillavallrllkyhltknhhlGfeaailywhfvdvvwlflyvsvywwgs 258
+                hg+hviigt++lav+l rl+ + +t++hhlGfeaa +ywhfvdvvwlfly+ +ywwgs
+  Metridium 205 HGMHVIIGTTFLAVCLARLVYHQFTRHHHLGFEAASWYWHFVDVVWLFLYICIYWWGS 262
+                ********************************************************96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (262 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       865  (0.053048); expected 326.1 (0.02)
+Passed bias filter:                      314  (0.0192567); expected 326.1 (0.02)
+Passed Vit filter:                        32  (0.00196247); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.62u 0.38s 00:00:01.00 Elapsed: 00:00:00.62
+# Mc/sec: 1208.93
+//
+Query:       Amphimedon_queenslandica  [L=259]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   1.7e-114  381.9  16.7   1.8e-114  381.8  16.7    1.0  1  COX3      Cytochrome c oxidase subunit III
+  ------ inclusion threshold ------
+      0.063   13.6   0.9      0.063   13.6   0.9    3.1  4  TraL      TraL protein
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  381.8  16.7  2.3e-118  1.8e-114       1     258 []       4     259 .]       4     259 .] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 381.8 bits;  conditional E-value: 2.3e-118
+                               SSS------SHHHHHHHHHHHHHHHHHHHHHSS-..-HHHHHHHHHHHHHHHHHHHHHHHHHTTT----HHHHHHHHHHHHHHHH CS
+                      COX3   1 hpfhlvsaspwplvlsvalllltsalvlflhgykesstllilallslllvmllwfrdivaeatllGehtlavqkGlklGlilfii 85 
+                               hp+hlv++spwp v++  +l++ts++v ++h+++    +lil+ll+++ +m+ w+rd+++e+++ G +t++v++GlklG+ilfi+
+  Amphimedon_queenslandica   4 HPYHLVNPSPWPCVGACGALFTTSGAVAYFHYSM--PWVLILGLLVIVGTMVGWWRDVIREGSVDGCYTQVVRRGLKLGMILFIV 86 
+                               9******************************999..8899********************************************* PP
+
+                               HHHHHHHHHHHHHHHHHHS--GGGTSSSS-TT-----TTSHHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHHHHHHHH CS
+                      COX3  86 sevllflalfwaffhsalsPtvelGatwpPvGikavnPlevPllntiillssGvtvtyahhsliegnrkkalkgllltillavlf 170
+                               sev lf+++fwaffhs+l+P++e+Ga+wpP Gi+++nP+ vPllnt++llssG+tvt+ahh++i+g+r++a++gl lt+ll+++f
+  Amphimedon_queenslandica  87 SEVCLFFSFFWAFFHSSLAPAIEIGAVWPPKGIEPLNPFSVPLLNTAVLLSSGATVTWAHHAIISGQREEAIRGLSLTVLLGIIF 171
+                               ************************************************************************************* PP
+
+                               HHHHHHHHHH-SS-TTSHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT--BSSB-HHHHHHHHHHHHHHHHHHHHHHHTTT CS
+                      COX3 171 tllqaveyleasftisdgvyGsvfylatGlhglhviigtillavallrllkyhltknhhlGfeaailywhfvdvvwlflyvsvyw 255
+                               t+lqa+ey+ea+f+isd+vyG++f+++tG hg hviig+++l v+l rl+ + +++  hlGfeaa++ywhfvdvvwlfly+++yw
+  Amphimedon_queenslandica 172 TGLQAMEYYEAPFAISDSVYGATFFVTTGAHGAHVIIGSTFLGVCLVRLAYNQFSRGRHLGFEAAAWYWHFVDVVWLFLYIFMYW 256
+                               ************************************************************************************* PP
+
+                               TT- CS
+                      COX3 256 wgs 258
+                               wgs
+  Amphimedon_queenslandica 257 WGS 259
+                               *96 PP
+
+>> TraL  TraL protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.8   0.1      0.24   1.9e+03      40      50 ..      46      56 ..      24      73 .. 0.57
+   2 ?   -2.4   0.5      0.77   6.3e+03      24      38 ..      91     105 ..      77     114 .. 0.52
+   3 ?   -1.6   0.0      0.43   3.5e+03      39      64 ..     134     159 ..     129     173 .. 0.75
+   4 ?   13.6   0.9   7.7e-06     0.063      20      71 ..     189     242 ..     184     249 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: -0.8 bits;  conditional E-value: 0.24
+                      TraL 40 glvlglvlvkl 50
+                              ++++g ++ ++
+  Amphimedon_queenslandica 46 LVIVGTMVGWW 56
+                              23344444444 PP
+
+  == domain 2  score: -2.4 bits;  conditional E-value: 0.77
+                      TraL  24 illllvvgillgqfv 38 
+                               +++ +++ ++ +++ 
+  Amphimedon_queenslandica  91 LFFSFFWAFFHSSLA 105
+                               234444544444444 PP
+
+  == domain 3  score: -1.6 bits;  conditional E-value: 0.43
+                      TraL  39 iglvlglvlvkllrklkkgrgsgfll 64 
+                               ++l  g++++++ + + +g+++++++
+  Amphimedon_queenslandica 134 VLLSSGATVTWAHHAIISGQREEAIR 159
+                               56677888888888887777777665 PP
+
+  == domain 4  score: 13.6 bits;  conditional E-value: 7.7e-06
+                      TraL  20 ealvillllvvgillgqfviglv.lglvlvk.llrklkkgrgsgfllhllYWyl 71 
+                                +  + + +++g   ++++ig + lg+ lv+ ++ ++ +gr+ gf   + YW++
+  Amphimedon_queenslandica 189 SVYGATFFVTTGAHGAHVIIGSTfLGVCLVRlAYNQFSRGRHLGFEAAAWYWHF 242
+                               555566777788888899998887999888626889****************97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (259 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       710  (0.0435423); expected 326.1 (0.02)
+Passed bias filter:                      311  (0.0190727); expected 326.1 (0.02)
+Passed Vit filter:                        27  (0.00165583); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.66u 0.32s 00:00:00.98 Elapsed: 00:00:00.60
+# Mc/sec: 1234.92
+//
+Query:       Acropora  [L=262]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   9.9e-114  379.4  26.9   1.1e-113  379.2  26.9    1.0  1  COX3      Cytochrome c oxidase subunit III
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  379.2  26.9  6.8e-118  1.1e-113       1     258 []       7     262 .]       7     262 .] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 379.2 bits;  conditional E-value: 6.8e-118
+               SSS------SHHHHHHHHHHHHHHHHHHHHHSS-..-HHHHHHHHHHHHHHHHHHHHHHHHHTTT----HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+      COX3   1 hpfhlvsaspwplvlsvalllltsalvlflhgykesstllilallslllvmllwfrdivaeatllGehtlavqkGlklGlilfiisevllflalfwaffhs 101
+               hp+hlv++spwp  ++  ++++t ++v+++h+    +++++l++l+++++m+ w++d+++e+t++G h+l+v++G+k+G++lfi+sevl+f+++fwaffhs
+  Acropora   7 HPYHLVEPSPWPCLGAGGAFFITVGSVMYFHYGL--VQIMYLGVLVVVIIMFVWWQDVIRESTFQGFHSLVVKQGIKYGMLLFILSEVLFFFSFFWAFFHS 105
+               9*******************************99..99*************************************************************** PP
+
+               HHS--GGGTSSSS-TT-----TTSHHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHHHHHHHHHHHHHHHHHH-SS-TTSHHHHHHHHHHHHHHH CS
+      COX3 102 alsPtvelGatwpPvGikavnPlevPllntiillssGvtvtyahhsliegnrkkalkgllltillavlftllqaveyleasftisdgvyGsvfylatGlhg 202
+               +l+P+velG +wpP G++++n + vPllnt++llssG+tvt+ahh++i+g+r++a+ gl lt++l+vlft+lq +ey+ea+ftisd+vyGs+f++atG+hg
+  Acropora 106 SLAPAVELGVVWPPQGVNPLNSFSVPLLNTAVLLSSGATVTWAHHAIISGKREEAILGLSLTVFLGVLFTGLQGIEYYEAPFTISDSVYGSTFFMATGFHG 206
+               ***************************************************************************************************** PP
+
+               HHHHHHHHHHHHHHHHHHTT--BSSB-HHHHHHHHHHHHHHHHHHHHHHHTTTTT- CS
+      COX3 203 lhviigtillavallrllkyhltknhhlGfeaailywhfvdvvwlflyvsvywwgs 258
+               +hv+igt++l+++l rl  + +t+  h+Gfeaa +ywhfvdvvwlfly+ vywwgs
+  Acropora 207 FHVLIGTTFLIICLVRLKLNQFTSRQHVGFEAASWYWHFVDVVWLFLYLCVYWWGS 262
+               ******************************************************96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (262 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       915  (0.0561143); expected 326.1 (0.02)
+Passed bias filter:                      320  (0.0196247); expected 326.1 (0.02)
+Passed Vit filter:                        27  (0.00165583); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.61u 0.43s 00:00:01.04 Elapsed: 00:00:00.68
+# Mc/sec: 1102.26
+//
+Query:       Trichinella  [L=257]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    8.9e-62  209.1  14.9    1.1e-61  208.8  14.9    1.0  1  COX3         Cytochrome c oxidase subunit III
+  ------ inclusion threshold ------
+        6.3    5.7   8.6         11    5.0   0.1    2.3  2  Herpes_LMP1  Herpesvirus latent membrane protein 1 (LMP1)
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  208.8  14.9   1.3e-65   1.1e-61       8     257 ..       8     256 ..       4     257 .] 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 208.8 bits;  conditional E-value: 1.3e-65
+                  --SHHHHHHHHHHHHHHHHHHHHHSS-..-HH....HHHHHHHHHHHHHHHHHHHHHHHTTT----HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+         COX3   8 aspwplvlsvalllltsalvlflhgykesstl....lilallslllvmllwfrdivaeatllGehtlavqkGlklGlilfiisevllflalfwaffhs 101
+                  ++pwp+ + +++l  ++ l+  +++++++ +     l l  ++++++ + w rd ++++  +G+ t+  ++ +kl +ilf+++e+++f+++fw f  s
+  Trichinella   8 TTPWPILTRITILRACLRLIASINYTENTPNSswlgLKLRTIIIIITLFYWGRDTIRDT-TTGTLTNNTRTNIKLAIILFLTTEAFFFITFFWIFLRS 104
+                  579************999999988877654431112456678889999*********98.68************************************ PP
+
+                  HHS--GGGTSSSS-TT-----TTSHHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHHHHHHHHHHHHHHHHHH-SS-TTSHHHHHHHHHHHH CS
+         COX3 102 alsPtvelGatwpPvGikavnPlevPllntiillssGvtvtyahhsliegnrkkalkgllltillavlftllqaveyleasftisdgvyGsvfylatG 199
+                  al P++    twpP+ ++   Pl vP lnti+l++s +tvt +h+      + k l+ lllt++l ++f+++q+vey+ ++ftis gv G +f+++tG
+  Trichinella 105 ALIPEQ---GTWPPTSLNIPRPLGVPRLNTILLITSSATVTISHFQTSL-PNGKPLNWLLLTLILRIIFITIQYVEYHTSTFTISRGVNGRIFFITTG 198
+                  ****86...59*********************************98766.567789****************************************** PP
+
+                  HHHHHHHHHHHHHHHHHHHHHTT--BSSB-HHHHHHHHHHHHHHHHHHHHHHHTTTTT CS
+         COX3 200 lhglhviigtillavallrllkyhltknhhlGfeaailywhfvdvvwlflyvsvywwg 257
+                  lhglhv++g+i l+ +ll + +y ++++  + +e++i+ywhfvd vwl ly ++y wg
+  Trichinella 199 LHGLHVLLGSIALTTCLLLINQYKYSNTSLNRYEISIWYWHFVDAVWLILYTTFYCWG 256
+                  *********************************************************9 PP
+
+>> Herpes_LMP1  Herpesvirus latent membrane protein 1 (LMP1)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    5.0   0.1    0.0013        11      19      67 ..      36      86 ..      31     112 .. 0.74
+   2 ?    2.9   4.4    0.0058        47      60     143 ..     159     240 ..     114     255 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 5.0 bits;  conditional E-value: 0.0013
+                 XXXXXXXXXXX..XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CS
+  Herpes_LMP1 19 pplssslglal..lllllallfwlyivmsdwtggallvlysfallliiiil 67
+                  p ss lgl l  ++++++l++w    + d t g+l       + l ii++
+  Trichinella 36 TPNSSWLGLKLrtIIIIITLFYWGRDTIRDTTTGTLTNNTRTNIKLAIILF 86
+                 68899999887436778899999999******9999877666665555543 PP
+
+  == domain 2  score: 2.9 bits;  conditional E-value: 0.0058
+                  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CS
+  Herpes_LMP1  60 llliiiiliififrrdllcplgalcllllmitlllialwnlhgqalylgivlfifgcllvlglwiyllellwrlgatiwqllaf 143
+                  lll +i+ iifi  + +     ++ +   +   ++     lhg  + lg +  +  cll++  + y    l r   +iw    f
+  Trichinella 159 LLLTLILRIIFITIQYVEYHTSTFTISRGVNGRIFFITTGLHGLHVLLGSIA-LTTCLLLINQYKYSNTSLNRYEISIWYW-HF 240
+                  6777888899999999999999999999888888888999****99999765.5789**********999***99999964.33 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (257 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       647  (0.0396786); expected 326.1 (0.02)
+Passed bias filter:                      235  (0.0144119); expected 326.1 (0.02)
+Passed Vit filter:                        14  (0.00085858); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.59u 0.45s 00:00:01.04 Elapsed: 00:00:00.74
+# Mc/sec: 993.56
+//
+Query:       Balanoglossus  [L=260]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   7.1e-122  406.1  24.6   7.9e-122  405.9  24.6    1.0  1  COX3      Cytochrome c oxidase subunit III
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  405.9  24.6  4.9e-126  7.9e-122       1     258 []       5     260 .]       5     260 .] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 405.9 bits;  conditional E-value: 4.9e-126
+                    SSS------SHHHHHHHHHHHHHHHHHHHHHSS-..-HHHHHHHHHHHHHHHHHHHHHHHHHTTT----HHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+           COX3   1 hpfhlvsaspwplvlsvalllltsalvlflhgykesstllilallslllvmllwfrdivaeatllGehtlavqkGlklGlilfiisevllflalfw 96 
+                    hp+h+v++spwpl ++  +ll+t +lvl++h+++    l++l+l+ +l++m++w+rd+++e+t++G ht+ v  Gl+ G+ilfi+sevl+f+a+fw
+  Balanoglossus   5 HPYHIVDQSPWPLAGATGALLTTVGLVLWFHFNN--FILMTLGLILILITMYQWWRDVARESTYQGCHTVPVGVGLREGMILFITSEVLFFFAFFW 98 
+                    9*******************************99..99********************************************************** PP
+
+                    HHHHHHHS--GGGTSSSS-TT-----TTSHHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHHHHHHHHHHHHHHHHHH-SS-TTSHHHHH CS
+           COX3  97 affhsalsPtvelGatwpPvGikavnPlevPllntiillssGvtvtyahhsliegnrkkalkgllltillavlftllqaveyleasftisdgvyGs 192
+                    affhs+l+PtvelGa+wpP+Gi+++nP++vPllnt++ll+sGvtvt+ahh l++ nr +a+++l lt++l+++ft+lq +ey +a+ft++d++yGs
+  Balanoglossus  99 AFFHSSLAPTVELGACWPPTGIEPINPFHVPLLNTAVLLASGVTVTWAHHRLLAANRAEATQALALTVTLGLYFTALQLFEYGQAPFTLADAAYGS 194
+                    ************************************************************************************************ PP
+
+                    HHHHHHHHHHHHHHHHHHHHHHHHHHHHTT--BSSB-HHHHHHHHHHHHHHHHHHHHHHHTTTTT- CS
+           COX3 193 vfylatGlhglhviigtillavallrllkyhltknhhlGfeaailywhfvdvvwlflyvsvywwgs 258
+                    +f++atG+hglhviig+++l+v+llr++++h+++nhh+Gfeaa++ywhfvdvvwlfl+vs+ywwgs
+  Balanoglossus 195 TFFVATGFHGLHVIIGSSFLTVCLLRQIRFHFSNNHHFGFEAAAWYWHFVDVVWLFLFVSIYWWGS 260
+                    ****************************************************************96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (260 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       798  (0.048939); expected 326.1 (0.02)
+Passed bias filter:                      295  (0.0180915); expected 326.1 (0.02)
+Passed Vit filter:                        25  (0.00153318); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.59u 0.36s 00:00:00.95 Elapsed: 00:00:00.60
+# Mc/sec: 1239.69
+//
+Query:       Tetrancistrum_nebulosi  [L=215]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.2e-15   57.1  28.3      4e-15   56.2  23.5    2.5  3  COX3      Cytochrome c oxidase subunit III
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.5   0.1       0.1   1.7e+03      12      51 ..       5      39 ..       2      49 .. 0.50
+   2 !    2.4   0.3    0.0064     1e+02     239     256 ..      51      68 ..      44      70 .. 0.79
+   3 !   56.2  23.5   2.5e-19     4e-15     123     255 ..      89     214 ..      57     215 .] 0.88
+
+  Alignments for each domain:
+  == domain 1  score: -1.5 bits;  conditional E-value: 0.1
+                            HHHHHHHHHHHHHHHHHH.HHSS-..-HHHHHHHHHHHHHH CS
+                    COX3 12 plvlsvalllltsalvlf.lhgykesstllilallslllvm 51
+                            p++ ++++l+ ++++ l+ ++g k    +l l   ++l++ 
+  Tetrancistrum_nebulosi  5 PIFKAFVALSFLASSFLWsMEGLK---LFLAL---TTLASL 39
+                            666666666666655555133333...22222...233333 PP
+
+  == domain 2  score: 2.4 bits;  conditional E-value: 0.0064
+                             HHHHHHHHHHHHHHTTTT CS
+                    COX3 239 whfvdvvwlflyvsvyww 256
+                              hfvd  wlf+   v  +
+  Tetrancistrum_nebulosi  51 LHFVDRFWLFILREVMAF 68 
+                             6*********98766655 PP
+
+  == domain 3  score: 56.2 bits;  conditional E-value: 2.5e-19
+                             TTSHHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHHHHHHHHHHHHHHHHHH-SS-TTSHHHHHHHHHHHHHHHHHHHHHH CS
+                    COX3 123 PlevPllntiillssGvtvtyahhsliegnrkkalkgllltillavlftllqaveyleasftisdgvyGsvfylatGlhglhviigt 209
+                               e+Pll   +l+ s +tvt  hh l      k ++ l+ ti+l++ f++lq+ve++e+   +   vy ++ + + Glh+ hv+ig 
+  Tetrancistrum_nebulosi  89 YDEIPLLGCFLLIGSSITVTAYHHVLHL---AKGTYHLVGTIILGIGFVMLQMVEFSECDRGLIRRVYHASCFCTVGLHFSHVVIGL 172
+                             459*****************99999976...677899999*********************************************** PP
+
+                             HHHHHHHHHHHTT--BSSB-HHHHHHHHHHHHHHHHHHHHHHHTTT CS
+                    COX3 210 illavallrllkyhltknhhlGfeaailywhfvdvvwlflyvsvyw 255
+                             +ll+v l++ ++     ++++     ++ywhfvd vwlf+y +vy 
+  Tetrancistrum_nebulosi 173 SLLIVLLIKGAEVI-G-EYYT--TLFVWYWHFVDYVWLFVYTIVYL 214
+                             *****999887653.3.3333..3469*****************95 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (215 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       496  (0.0304183); expected 326.1 (0.02)
+Passed bias filter:                      175  (0.0107322); expected 326.1 (0.02)
+Passed Vit filter:                        20  (0.00122654); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.57u 0.44s 00:00:01.01 Elapsed: 00:00:00.80
+# Mc/sec: 768.85
+//
+Query:       Pseudogarypus_banksi  [L=257]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    7.3e-82  274.9  28.4    8.2e-82  274.8  28.4    1.0  1  COX3      Cytochrome c oxidase subunit III
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  274.8  28.4     5e-86   8.2e-82       1     255 [.       6     257 .]       6     257 .] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 274.8 bits;  conditional E-value: 5e-86
+                           SSS------SHHHHHHHHHHHHHHHHHHHHHSS-..-HHHHHHHHHHHHHHHHHHHHHHHHHTTT----HHHHHHHHHHHHHHHHHHHH CS
+                  COX3   1 hpfhlvsaspwplvlsvalllltsalvlflhgykesstllilallslllvmllwfrdivaeatllGehtlavqkGlklGlilfiisevl 89 
+                           hpfh+vs  pwpl++ + + ll++++ l++h +     +l + l+ +++++++w+rd+  ea++ Ge++ +    lk+G+++fii ev+
+  Pseudogarypus_banksi   6 HPFHIVSNRPWPLIIRIETPLLLLGILLYFHIKY--PLILLIRLILIISSSYQWWRDVRLEASYIGEYSSFRIYNLKIGVLIFIIREVM 92 
+                           9******************************988..7888999999******************************************* PP
+
+                           HHHHHHHHHHHHHHS--GGGTSSSS-TT-----TTSHHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+                  COX3  90 lflalfwaffhsalsPtvelGatwpPvGikavnPlevPllntiillssGvtvtyahhsliegnrkkalkgllltillavlftllqavey 178
+                           +fl++fw  fh  l+P +  Ga wpP+ + ++nP+++Pllnt ill+sG t t ah+ l + n+kk ++ ++l+i+l+++ft+lq  ey
+  Pseudogarypus_banksi  93 FFLSFFWGLFHIKLAPPFIGGALWPPFIVIPFNPVDIPLLNTLILLTSGLTATLAHFFL-KINKKKFITFIFLSIILGLYFTTLQSWEY 180
+                           ********************************************************976.669************************** PP
+
+                           HH-SS-TTSHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT--BSSB-HHHHHHHHHHHHHHHHHHHHHHHTTT CS
+                  COX3 179 leasftisdgvyGsvfylatGlhglhviigtillavallrllkyhltknhhlGfeaailywhfvdvvwlflyvsvyw 255
+                            +a fti+d+vyGs+f+ atG+hglhvi+g+++l++ l+r + +h +k +h+Gfea+++ywhfvdvvwlfl+ ++y+
+  Pseudogarypus_banksi 181 FNAKFTITDSVYGSIFFTATGFHGLHVILGSSFLIIILYRSYIFHTNKIYHIGFEASLWYWHFVDVVWLFLFTFLYI 257
+                           **************************************************************************995 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (257 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       771  (0.0472832); expected 326.1 (0.02)
+Passed bias filter:                      243  (0.0149025); expected 326.1 (0.02)
+Passed Vit filter:                        19  (0.00116522); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.63u 0.33s 00:00:00.96 Elapsed: 00:00:00.60
+# Mc/sec: 1225.39
+//
+Query:       Benedenia_hoshinai  [L=215]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.6e-20   72.7  19.1    3.6e-20   72.7  19.1    2.3  2  COX3      Cytochrome c oxidase subunit III
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.5   4.6      0.21   3.4e+03     230     249 ..      41      60 ..      10      69 .. 0.74
+   2 !   72.7  19.1   2.2e-24   3.6e-20     124     255 ..      89     214 ..      76     215 .] 0.89
+
+  Alignments for each domain:
+  == domain 1  score: -2.5 bits;  conditional E-value: 0.21
+                         HHHHHHHHHHHHHHHHHHHH CS
+                COX3 230 lGfeaailywhfvdvvwlfl 249
+                         l +e+  + +h++d  wlf+
+  Benedenia_hoshinai  41 LWLETVSIKFHYLDSYWLFI 60 
+                         55788888899999999997 PP
+
+  == domain 2  score: 72.7 bits;  conditional E-value: 2.2e-24
+                         TSHHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHHHHHHHHHHHHHHHHHH-SS-TTSHHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+                COX3 124 levPllntiillssGvtvtyahhsliegnrkkalkgllltillavlftllqaveyleasftisdgvyGsvfylatGlhglhviigtillav 214
+                          ++Pl+   +llss vtvt  hh l    ++k+   lllti+l++ f+llq +e+ e+ +ti  + y ++ + + Glh+ hv+ig ill+ 
+  Benedenia_hoshinai  89 SDIPLFGCFLLLSSSVTVTAYHHKLGV--NSKIKFNLLLTIILGIGFVLLQGFEFNECDLTILKSSYHASCFCTVGLHFTHVVIGLILLLG 177
+                         689*********************955..7888899*****************************************************99 PP
+
+                         HHHHHHTT--BSSB-HHHHHHHHHHHHHHHHHHHHHHHTTT CS
+                COX3 215 allrllkyhltknhhlGfeaailywhfvdvvwlflyvsvyw 255
+                         +ll    y + + +++     i+ywhfvd +wl++y++vy+
+  Benedenia_hoshinai 178 CLLI--GYNVLTAYYT--TLIIWYWHFVDYIWLLVYLIVYI 214
+                         9974..4444444444..4579******************7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (215 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       716  (0.0439102); expected 326.1 (0.02)
+Passed bias filter:                      193  (0.0118361); expected 326.1 (0.02)
+Passed Vit filter:                        19  (0.00116522); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.60u 0.38s 00:00:00.98 Elapsed: 00:00:00.62
+# Mc/sec: 992.06
+//
+Query:       Myxine  [L=260]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   9.7e-116  386.0  28.9   1.1e-115  385.8  28.9    1.0  1  COX3      Cytochrome c oxidase subunit III
+     0.0061   16.1   2.0     0.0061   16.1   2.0    3.3  4  DUF4131   Domain of unknown function (DUF4131)
+  ------ inclusion threshold ------
+      0.092   12.5   2.2       0.25   11.1   2.2    1.7  1  DUF1980   Domain of unknown function (DUF1980)
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  385.8  28.9    2e-119  1.1e-115       1     257 [.       6     260 .]       6     260 .] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 385.8 bits;  conditional E-value: 2e-119
+             SSS------SHHHHHHHHHHHHHHHHHHHHHSS-..-HHHHHHHHHHHHHHHHHHHHHHHHHTTT----HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+    COX3   1 hpfhlvsaspwplvlsvalllltsalvlflhgykesstllilallslllvmllwfrdivaeatllGehtlavqkGlklGlilfiisevllflalfwaffhsal 103
+             h+fh+v++spwpl+++ ++++lts+l++++h+++  +tl+ l+++ +ll++++w+rdi++e+t++G+ht  vqk l++G+ilfi+sev +f+++fw+f+hs+l
+  Myxine   6 HAFHIVNPSPWPLTGAASAFMLTSGLAIWFHKHS--NTLIFLSIILILLTIYQWWRDITREGTFQGHHTSLVQKSLRYGIILFIVSEVCFFFGFFWTFYHSSL 106
+             9******************************998..99***************************************************************** PP
+
+             S--GGGTSSSS-TT-----TTSHHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHHHHHHHHHHHHHHHHHH-SS-TTSHHHHHHHHHHHHHHHHHHH CS
+    COX3 104 sPtvelGatwpPvGikavnPlevPllntiillssGvtvtyahhsliegnrkkalkgllltillavlftllqaveyleasftisdgvyGsvfylatGlhglhvi 206
+             sP+ +lG+ wpP G+ +++P+e+Pllnt+ill sGv+vt+ahhslie+ +k+++ +l +ti+l+++ftllq +ey +++f isd +yGs+f++atG+hg hvi
+  Myxine 107 SPSPDLGMIWPPKGVIPLDPFEIPLLNTAILLGSGVSVTWAHHSLIEKTHKDIVISLSITIILGIYFTLLQGIEYFNSTFNISDNAYGSTFFVATGFHGGHVI 209
+             ******************************************************************************************************* PP
+
+             HHHHHHHHHHHHHHTT--BSSB-HHHHHHHHHHHHHHHHHHHHHHHTTTTT CS
+    COX3 207 igtillavallrllkyhltknhhlGfeaailywhfvdvvwlflyvsvywwg 257
+             igt++l+v+llr+l +h+t++hh+Gfeaa++ywhfvdvvwlfl++s+ywwg
+  Myxine 210 IGTLFLTVCLLRQLMFHFTSSHHFGFEAAAWYWHFVDVVWLFLFISIYWWG 260
+             **************************************************8 PP
+
+>> DUF4131  Domain of unknown function (DUF4131)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   16.1   2.0   1.1e-06    0.0061       9      66 ..      11      66 ..       6      85 .. 0.85
+   2 ?    1.4   0.1     0.035   1.9e+02      47      72 ..      91     116 ..      67     124 .. 0.66
+   3 ?   -1.0   0.0      0.19     1e+03      22      57 ..     135     174 ..     111     183 .. 0.53
+   4 ?   -3.4   4.1       1.1   5.9e+03      17      54 ..     208     254 ..     192     260 .] 0.45
+
+  Alignments for each domain:
+  == domain 1  score: 16.1 bits;  conditional E-value: 1.1e-06
+  DUF4131  9 lpglplalvllalllllllllllllrrrprrrvllllllvlllallgfalrapqpnan 66
+             +++ p++l   a++++l+  l++++   ++  +l++l+++l+l++++ ++r  +++ +
+   Myxine 11 VNPSPWPLTGAASAFMLTSGLAIWF--HKHSNTLIFLSIILILLTIYQWWRDITREGT 66
+             6778999999999999999999998..8***********************9988765 PP
+
+  == domain 2  score: 1.4 bits;  conditional E-value: 0.035
+  DUF4131  47 lvlllallgfalrapqpnandlsqll 72 
+              +++++++++ ++++   ++ dl  ++
+   Myxine  91 VCFFFGFFWTFYHSSLSPSPDLGMIW 116
+              56777777777777766666666655 PP
+
+  == domain 3  score: -1.0 bits;  conditional E-value: 0.19
+  DUF4131  22 llllllllllllrr.....rprrrvllllllvlllallgfa 57 
+              ++ll     + +       ++++ + ++l++ ++l+  +f+
+   Myxine 135 AILLGSGVSVTWAHhslieKTHKDIVISLSITIILGI-YFT 174
+              3333333333332234554444444444444444444.333 PP
+
+  == domain 4  score: -3.4 bits;  conditional E-value: 1.1
+  DUF4131  17 vllalllllllllllllrr...........rprrrvllllllvlllall 54 
+              v++++l+l+ +ll  l              +    ++ ++ +v l++++
+   Myxine 208 VIIGTLFLTVCLLRQLMFHftsshhfgfeaA--AWYWHFVDVVWLFLFI 254
+              3444444444444332222456777777432..2223222222222222 PP
+
+>> DUF1980  Domain of unknown function (DUF1980)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.1   2.2   4.6e-05      0.25      34      80 ..      41      86 ..      33     102 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 11.1 bits;  conditional E-value: 4.6e-05
+  DUF1980 34 llyfamvvllilalvqliraqkkk.ecghdHeeksfikkllsylilvi 80
+              l+f +++l++l+++q++r + ++   + +  + s+++k l y i+++
+   Myxine 41 TLIFLSIILILLTIYQWWRDITREgTFQGH--HTSLVQKSLRYGIILF 86
+             67899999999********99999333333..4789999999999987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (260 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       863  (0.0529253); expected 326.1 (0.02)
+Passed bias filter:                      338  (0.0207286); expected 326.1 (0.02)
+Passed Vit filter:                        33  (0.00202379); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.61u 0.45s 00:00:01.06 Elapsed: 00:00:00.78
+# Mc/sec: 953.61
+//
+Query:       Drosophila  [L=262]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+     1e-122  408.8  29.1   1.1e-122  408.7  29.1    1.0  1  COX3      Cytochrome c oxidase subunit III
+  ------ inclusion threshold ------
+        0.1   10.1   0.1       0.12    9.8   0.1    1.0  1  ACR_tran  AcrB/AcrD/AcrF family
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  408.7  29.1  1.4e-126  1.1e-122       1     257 [.       7     261 ..       7     262 .] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 408.7 bits;  conditional E-value: 1.4e-126
+                 SSS------SHHHHHHHHHHHHHHHHHHHHHSS-..-HHHHHHHHHHHHHHHHHHHHHHHHHTTT----HHHHHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+        COX3   1 hpfhlvsaspwplvlsvalllltsalvlflhgykesstllilallslllvmllwfrdivaeatllGehtlavqkGlklGlilfiisevllflalfwaff 99 
+                 hpfhlv++spwpl++++ +++++s++v ++h+y    +l++l++++++l++++w+rd+++e+t++G ht av+ Gl++G+ilfi+sevl+f+ +fwaff
+  Drosophila   7 HPFHLVDYSPWPLTGAIGAITTVSGIVKWFHQYD--ISLFVLGNIITILTVYQWWRDVSREGTYQGLHTYAVTIGLRWGIILFILSEVLFFVRFFWAFF 103
+                 9*********************************..99************************************************************* PP
+
+                 HHHHS--GGGTSSSS-TT-----TTSHHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHHHHHHHHHHHHHHHHHH-SS-TTSHHHHHHHHHHH CS
+        COX3 100 hsalsPtvelGatwpPvGikavnPlevPllntiillssGvtvtyahhsliegnrkkalkgllltillavlftllqaveyleasftisdgvyGsvfylat 198
+                 h +lsP++elGa wpP+Gi ++nP+++Pllnt+ill+sGvtvt+ahh lie+n++++++gl++t+ll+++ft+lqa+ey+ea+fti+d++yGs+f++at
+  Drosophila 104 HRSLSPAIELGASWPPIGIISFNPFQIPLLNTAILLASGVTVTWAHHRLIENNHSQTTQGLFFTVLLGIYFTILQAYEYIEAPFTIADSIYGSTFFIAT 202
+                 *************************************************************************************************** PP
+
+                 HHHHHHHHHHHHHHHHHHHHHHTT--BSSB-HHHHHHHHHHHHHHHHHHHHHHHTTTTT CS
+        COX3 199 GlhglhviigtillavallrllkyhltknhhlGfeaailywhfvdvvwlflyvsvywwg 257
+                 G+hg+hv+igt++l+v+llr+l++h++knhh+Gfeaa++ywhfvdvvwlfly+++ywwg
+  Drosophila 203 GFHGIHVLIGTTFLLVCLLRHLNNHFSKNHHFGFEAAAWYWHFVDVVWLFLYITIYWWG 261
+                 **********************************************************8 PP
+
+>> ACR_tran  AcrB/AcrD/AcrF family
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    9.8   0.1   1.5e-05      0.12     836     892 ..     133     189 ..     104     205 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 9.8 bits;  conditional E-value: 1.5e-05
+                 HCTT..SSTTEEEEEEHHHHHHHHHCCHHHHHHHHHHHHHHHHHHHHHTSSSTCHHH CS
+    ACR_tran 836 iakkvklpegvtiewtgqaeqeqeasnsllilvalalllvflvLaalyeslseplli 892
+                 +++++ l +gvt++w+     e++ s++++ l+++ ll +++ +   ye + +p++i
+  Drosophila 133 LNTAILLASGVTVTWAHHRLIENNHSQTTQGLFFTVLLGIYFTILQAYEYIEAPFTI 189
+                 6678899************************************************99 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (262 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       748  (0.0458727); expected 326.1 (0.02)
+Passed bias filter:                      301  (0.0184595); expected 326.1 (0.02)
+Passed Vit filter:                        24  (0.00147185); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.69u 0.40s 00:00:01.08 Elapsed: 00:00:00.66
+# Mc/sec: 1135.66
+//
+Query:       Ciona  [L=262]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.2e-83  278.5  17.9      7e-83  278.3  17.9    1.0  1  COX3      Cytochrome c oxidase subunit III
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  278.3  17.9   4.3e-87     7e-83       2     258 .]       7     261 ..       6     261 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 278.3 bits;  conditional E-value: 4.3e-87
+            SS------SHHHHHHHHHHHHHHHHHHHHHSS-..-HHHHHHHHHHHHHHHHHHHHHHHHHTTT----HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHS- CS
+   COX3   2 pfhlvsaspwplvlsvalllltsalvlflhgykesstllilallslllvmllwfrdivaeatllGehtlavqkGlklGlilfiisevllflalfwaffhsalsP 105
+            pfhlv+ spwpl  ++ ++ ++  l+ ++h++  + tl+    l+ ll+  lw+rd+ +e++ll  ht+ vqk +   +i fiisev++fl +fw+ffhs l  
+  Ciona   7 PFHLVDRSPWPLLSALGAFRVVGRLISIIHQHL-FRTLFFYRRLIFLLA-SLWWRDVDRESSLLRFHTKRVQKNIYSRIIWFIISEVFFFLRFFWTFFHSGLNS 108
+            8******************************99.666666666665554.58**************************************************** PP
+
+            -GGGTSSSS-TT-----TTSHHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHHHHHHHHHHHHHHHHHH-SS-TTSHHHHHHHHHHHHHHHHHHHHHH CS
+   COX3 106 tvelGatwpPvGikavnPlevPllntiillssGvtvtyahhsliegnrkkalkgllltillavlftllqaveyleasftisdgvyGsvfylatGlhglhviigt 209
+            +++l   wpP+ +  +nP+ vPllnt++l+ss +tvt +h+sl+ ++ +++   l  t++l vlft lq++eyle+sf i d+vyGs+f++at +h +hvii +
+  Ciona 109 VIDLRIEWPPFRVMVLNPYRVPLLNTAVLISSRITVTCSHYSLLISDFNSCSIWLANTVFLRVLFTRLQYMEYLESSFRINDSVYGSIFFIATRFHRFHVIIRS 212
+            ******************************************************************************************************** PP
+
+            HHHHHHHHHHHTT--BSSB-HHHHHHHHHHHHHHHHHHHHHHHTTTTT- CS
+   COX3 210 illavallrllkyhltknhhlGfeaailywhfvdvvwlflyvsvywwgs 258
+            i+l +++lr+l+  l+ n h+ fe+ai+ywhfvdvvw+fly  +y wgs
+  Ciona 213 IFLFISFLRILSRKLSPNRHVRFECAIWYWHFVDVVWIFLYACIYRWGS 261
+            ***********************************************96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (262 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       579  (0.0355084); expected 326.1 (0.02)
+Passed bias filter:                      238  (0.0145959); expected 326.1 (0.02)
+Passed Vit filter:                        23  (0.00141052); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.62u 0.40s 00:00:01.02 Elapsed: 00:00:00.73
+# Mc/sec: 1026.76
+//
+Query:       Epigonichthys  [L=261]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   7.7e-119  396.1  30.2   8.7e-119  396.0  30.2    1.0  1  COX3      Cytochrome c oxidase subunit III
+  ------ inclusion threshold ------
+       0.11   12.3   0.0       0.22   11.3   0.0    1.4  1  Dirigent  Dirigent-like protein
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  396.0  30.2  1.1e-122  8.7e-119       1     257 [.       7     261 .]       7     261 .] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 396.0 bits;  conditional E-value: 1.1e-122
+                    SSS------SHHHHHHHHHHHHHHHHHHHHHSS-..-HHHHHHHHHHHHHHHHHHHHHHHHHTTT----HHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+           COX3   1 hpfhlvsaspwplvlsvalllltsalvlflhgykesstllilallslllvmllwfrdivaeatllGehtlavqkGlklGlilfiisevllflalfw 96 
+                    hp+hlv++spwp+v+   +++lt +lv+++h+++    ll l+l+ +++++++w+rd+++eat++G+ht  v +Gl+ G++lfiisev++fla+fw
+  Epigonichthys   7 HPWHLVEPSPWPIVGGSGAFTLTVGLVMWFHYNS--LLLLALGLVLVVMTIIQWWRDVIREATFQGSHTSYVISGLRRGMVLFIISEVFFFLAFFW 100
+                    9*******************************99..99********************************************************** PP
+
+                    HHHHHHHS--GGGTSSSS-TT-----TTSHHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHHHHHHHHHHHHHHHHHH-SS-TTSHHHHH CS
+           COX3  97 affhsalsPtvelGatwpPvGikavnPlevPllntiillssGvtvtyahhsliegnrkkalkgllltillavlftllqaveyleasftisdgvyGs 192
+                    affhs+l+PtvelG twpPvG++++n + vPllnt++llssGvtvt+ahh++ieg+r +a+++l +t++l+++ft+lqa ey+ea+fti+dgvyGs
+  Epigonichthys 101 AFFHSSLAPTVELGVTWPPVGVHPLNAFAVPLLNTAVLLSSGVTVTWAHHAIIEGKRTEAIQSLAFTVILGLYFTGLQAWEYYEAPFTIADGVYGS 196
+                    ************************************************************************************************ PP
+
+                    HHHHHHHHHHHHHHHHHHHHHHHHHHHHTT--BSSB-HHHHHHHHHHHHHHHHHHHHHHHTTTTT CS
+           COX3 193 vfylatGlhglhviigtillavallrllkyhltknhhlGfeaailywhfvdvvwlflyvsvywwg 257
+                    +f++atG+hglhviig+++l+v+l r++ yh+t++hh+Gfeaa++ywhfvdvvwlflyv +ywwg
+  Epigonichthys 197 TFFVATGFHGLHVIIGSTFLLVCLGRQIFYHYTSSHHFGFEAAAWYWHFVDVVWLFLYVCIYWWG 261
+                    ****************************************************************8 PP
+
+>> Dirigent  Dirigent-like protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.3   0.0   2.7e-05      0.22     106     127 ..      15      36 ..       7      50 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 11.3 bits;  conditional E-value: 2.7e-05
+       Dirigent 106 relaVvGGtGkFrmArGyallr 127
+                    + +++vGG+G+F +  G + + 
+  Epigonichthys  15 SPWPIVGGSGAFTLTVGLVMWF 36 
+                    779**************99985 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (261 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       863  (0.0529253); expected 326.1 (0.02)
+Passed bias filter:                      311  (0.0190727); expected 326.1 (0.02)
+Passed Vit filter:                        38  (0.00233043); expected 16.3 (0.001)
+Passed Fwd filter:                         4  (0.000245308); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.64u 0.48s 00:00:01.12 Elapsed: 00:00:00.66
+# Mc/sec: 1131.33
+//
+Query:       Strigamia_maritima  [L=280]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   5.7e-112  373.6  22.6   6.6e-112  373.4  22.6    1.0  1  COX3      Cytochrome c oxidase subunit III
+  ------ inclusion threshold ------
+        1.1    9.1  10.1        4.1    7.3   1.1    3.5  3  DUF3561   Protein of unknown function (DUF3561)
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  373.4  22.6  8.1e-116  6.6e-112       1     258 []       6     261 ..       6     261 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 373.4 bits;  conditional E-value: 8.1e-116
+                         SSS------SHHHHHHHHHHHHHHHHHHHHHSS-..-HHHHHHHHHHHHHHHHHHHHHHHHHTTT----HHHHHHHHHHHHHHHHHHHHHH CS
+                COX3   1 hpfhlvsaspwplvlsvalllltsalvlflhgykesstllilallslllvmllwfrdivaeatllGehtlavqkGlklGlilfiisevllf 91 
+                         hp+h+v++  wp+ +++ +++++++lv+++h+++    lli  l++l ++++lw+rd+++e+t +G ht  v++Gl+ G++lfi+se+l+f
+  Strigamia_maritima   6 HPYHIVDQRLWPIAAALGSISIITGLVIWFHTTS--PILLITRLTILSITSYLWWRDVAREGTHQGLHTSIVTQGLRRGIVLFIVSEILFF 94 
+                         9*******************************99..556666666666899**************************************** PP
+
+                         HHHHHHHHHHHHS--GGGTSSSS-TT-----TTSHHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHHHHHHHHHHHHHHHHHH-S CS
+                COX3  92 lalfwaffhsalsPtvelGatwpPvGikavnPlevPllntiillssGvtvtyahhsliegnrkkalkgllltillavlftllqaveyleas 182
+                         l++fwaffh +l+Pt e+G +wpP+ ++++nP+++Pllnt+illssG+tvt+ahh lie+n ++++++l++till+++f +lqa+ey+ea+
+  Strigamia_maritima  95 LSFFWAFFHRSLAPTPEIGRAWPPTEVSPFNPFQIPLLNTTILLSSGITVTWAHHRLIENNYSQTTQALTVTILLGAYFSALQAFEYIEAP 185
+                         ******************************************************************************************* PP
+
+                         S-TTSHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT--BSSB-HHHHHHHHHHHHHHHHHHHHHHHTTTTT- CS
+                COX3 183 ftisdgvyGsvfylatGlhglhviigtillavallrllkyhltknhhlGfeaailywhfvdvvwlflyvsvywwgs 258
+                         ftisd+vyGs+f++atG+hglhviigt++l+++l+r+ ++hl+ +hh+Gfeaa++ywhfvdvvwlfl+ s+ywwgs
+  Strigamia_maritima 186 FTISDSVYGSTFFVATGFHGLHVIIGTTFLLISLIRHKNNHLSPEHHFGFEAAAWYWHFVDVVWLFLFTSIYWWGS 261
+                         **************************************************************************96 PP
+
+>> DUF3561  Protein of unknown function (DUF3561)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.3   1.1    0.0005       4.1      59     100 ..      16      57 ..      13      60 .. 0.93
+   2 ?    4.4   0.3    0.0041        33      47      63 ..      87     103 ..      73     112 .. 0.81
+   3 ?    1.3   0.1     0.037     3e+02      60     106 ..     126     176 ..     124     178 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 7.3 bits;  conditional E-value: 0.0005
+             DUF3561  59 WPfflallPvsvlvGvalsvllrgkllysllatllavvllfw 100
+                         WP+  al  +s++ G+++ +  ++ +l+++ +t+l++++ +w
+  Strigamia_maritima  16 WPIAAALGSISIITGLVIWFHTTSPILLITRLTILSITSYLW 57 
+                         ***********************************9998776 PP
+
+  == domain 2  score: 4.4 bits;  conditional E-value: 0.0041
+             DUF3561  47 yGsntlffllytWPffl 63 
+                           s+ lffl + W ff 
+  Strigamia_maritima  87 IVSEILFFLSFFWAFFH 103
+                         458899*********95 PP
+
+  == domain 3  score: 1.3 bits;  conditional E-value: 0.037
+             DUF3561  60 PfflallPvsvlv..Gvalsvllrgkll...ysllatllavvllfwllflfl 106
+                         Pf + ll  ++l+  G+++ ++ + +l+   ys ++ +l+v++l+++ f+ l
+  Strigamia_maritima 126 PFQIPLLNTTILLssGITV-TWAHHRLIennYSQTTQALTVTILLGAYFSAL 176
+                         6666777777665324444.34555554444899999999999999999877 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (280 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       490  (0.0300503); expected 326.1 (0.02)
+Passed bias filter:                      187  (0.0114682); expected 326.1 (0.02)
+Passed Vit filter:                        19  (0.00116522); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.55u 0.33s 00:00:00.88 Elapsed: 00:00:00.56
+# Mc/sec: 1430.41
+//
+Query:       Caenorhabditis  [L=255]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   3.7e-105  351.3  30.8   4.1e-105  351.1  30.8    1.0  1  COX3      Cytochrome c oxidase subunit III
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  351.1  30.8  2.5e-109  4.1e-105       1     258 []       3     255 .]       3     255 .] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 351.1 bits;  conditional E-value: 2.5e-109
+                     SSS------SHHHHHHHHHHHHHHHHHHHHHSS-..-HHHHHHHHHHHHHHHHHHHHHHHHHTTT----HHHHHHHHHHHHHHHHHHHHHHHHHH CS
+            COX3   1 hpfhlvsaspwplvlsvalllltsalvlflhgykesstllilallslllvmllwfrdivaeatllGehtlavqkGlklGlilfiisevllflalf 95 
+                     h+fh++  s ++++l++a++ ++ +lv+f+++    ++l+i++l+s+l+++++w +di+ e+ l+G+h+++v +G+k+G+ilf++ e+++f+++f
+  Caenorhabditis   3 HNFHILRLSRYAYNLFFASAGMLRSLVIFFKFGL--YELFIFTLFSVLFISFAWGKDIAIEG-LRGYHNFFVIDGFKFGVILFVFREFIFFFCIF 94 
+                     9*******************************99..**************************.******************************** PP
+
+                     HHHHHHHHS--GGGTSSSS-TT-----TTSHHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHHHHHHHHHHHHHHHHHH-SS-TTSHHH CS
+            COX3  96 waffhsalsPtvelGatwpPvGikavnPlevPllntiillssGvtvtyahhsliegnrkkalkgllltillavlftllqaveyleasftisdgvy 190
+                     w+ff++al+P++elG+tw+P+G++ vnP+ vPllntiill sGvtvt+ahh l++  +k+++++++lt+lla++ft++q +ey+ea f+i+dgv+
+  Caenorhabditis  95 WTFFDAALVPVHELGETWSPFGMHLVNPFGVPLLNTIILLRSGVTVTWAHHRLLR--NKRCTNSIILTCLLAAYFTGIQLIEYIEARFSIADGVF 187
+                     ******************************************************9..889*********************************** PP
+
+                     HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT--BSSB-HHHHHHHHHHHHHHHHHHHHHHHTTTTT- CS
+            COX3 191 GsvfylatGlhglhviigtillavallrllkyhltknhhlGfeaailywhfvdvvwlflyvsvywwgs 258
+                     G +fyl+tG+hg+hv++g+++la+++lrllk+h+++nhhlG+e+ailywhfvdvvwlfl+v+vyww++
+  Caenorhabditis 188 GRIFYLSTGFHGIHVLCGGLFLAFNFLRLLKNHFNYNHHLGLEFAILYWHFVDVVWLFLFVFVYWWSY 255
+                     ******************************************************************85 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (255 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       636  (0.039004); expected 326.1 (0.02)
+Passed bias filter:                      215  (0.0131853); expected 326.1 (0.02)
+Passed Vit filter:                        12  (0.000735925); expected 16.3 (0.001)
+Passed Fwd filter:                         2  (0.000122654); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.58u 0.36s 00:00:00.94 Elapsed: 00:00:00.60
+# Mc/sec: 1215.85
+//
+Query:       Homo  [L=260]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   1.9e-125  417.8  25.7   2.1e-125  417.6  25.7    1.0  1  COX3      Cytochrome c oxidase subunit III
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  417.6  25.7  1.3e-129  2.1e-125       1     257 [.       6     260 .]       6     260 .] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 417.6 bits;  conditional E-value: 1.3e-129
+           SSS------SHHHHHHHHHHHHHHHHHHHHHSS-..-HHHHHHHHHHHHHHHHHHHHHHHHHTTT----HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHS- CS
+  COX3   1 hpfhlvsaspwplvlsvalllltsalvlflhgykesstllilallslllvmllwfrdivaeatllGehtlavqkGlklGlilfiisevllflalfwaffhsalsP 105
+           h++h+v++spwpl++++++ll+ts+l++++h+++   tllil+ll++ l++++w+rd+++e+t++G+ht  vqkGl++G+ilfi+sev++f+++fwaf+hs+l+P
+  Homo   6 HAYHIVKPSPWPLTGALSALLMTSGLAMWFHFHS--ITLLILGLLTNTLTIYQWWRDVTRESTYQGHHTPPVQKGLRYGIILFITSEVFFFAGFFWAFYHSSLAP 108
+           9*******************************99..9******************************************************************** PP
+
+           -GGGTSSSS-TT-----TTSHHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHHHHHHHHHHHHHHHHHH-SS-TTSHHHHHHHHHHHHHHHHHHHHHHH CS
+  COX3 106 tvelGatwpPvGikavnPlevPllntiillssGvtvtyahhsliegnrkkalkgllltillavlftllqaveyleasftisdgvyGsvfylatGlhglhviigti 210
+           t +lG  wpP+Gi ++nPlevPllnt +ll+sGv++t+ahhslie+nr++++++ll+till+++ftllqa ey e++ftisdg+yGs+f++atG+hglhviig++
+  Homo 109 TPQLGGHWPPTGITPLNPLEVPLLNTSVLLASGVSITWAHHSLIENNRNQIIQALLITILLGLYFTLLQASEYFESPFTISDGIYGSTFFVATGFHGLHVIIGST 213
+           ********************************************************************************************************* PP
+
+           HHHHHHHHHHTT--BSSB-HHHHHHHHHHHHHHHHHHHHHHHTTTTT CS
+  COX3 211 llavallrllkyhltknhhlGfeaailywhfvdvvwlflyvsvywwg 257
+           +l+++++r+l +h+t++hh+Gfeaa++ywhfvdvvwlflyvs+ywwg
+  Homo 214 FLTICFIRQLIFHFTSKHHFGFEAAAWYWHFVDVVWLFLYVSIYWWG 260
+           **********************************************8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (260 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       728  (0.0446461); expected 326.1 (0.02)
+Passed bias filter:                      302  (0.0185208); expected 326.1 (0.02)
+Passed Vit filter:                        18  (0.00110389); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.59u 0.47s 00:00:01.06 Elapsed: 00:00:00.73
+# Mc/sec: 1018.93
+//
+Query:       Ascidiella_aspersa  [L=261]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.6e-97  326.2  25.7    1.9e-97  326.0  25.7    1.0  1  COX3      Cytochrome c oxidase subunit III
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  326.0  25.7  1.2e-101   1.9e-97       2     256 ..       6     258 ..       5     260 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 326.0 bits;  conditional E-value: 1.2e-101
+                         SS------SHHHHHHHHHHHHHHHHHHHHHSS-..-HHHHHHHHHHHHHHHHHHHHHHHHHTTT----HHHHHHHHHHHHHHHHHHHHHHH CS
+                COX3   2 pfhlvsaspwplvlsvalllltsalvlflhgykesstllilallslllvmllwfrdivaeatllGehtlavqkGlklGlilfiisevllfl 92 
+                         pfhlv+ spwpl++s++ ++++++lv+++h ++  s+ll ++++ l +  ++w+ d+++e+++lG ht+avq+ l   ++ fi+sev +f+
+  Ascidiella_aspersa   6 PFHLVDNSPWPLIGSMSGFSVVASLVVIMHSFS--SSLLLFSVVFLAVLCVKWWGDVSRESAYLGFHTKAVQTNLLTRIVWFIVSEVCFFF 94 
+                         8********************************..66666666666677789*************************************** PP
+
+                         HHHHHHHHHHHS--GGGTSSSS-TT-----TTSHHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHHHHHHHHHHHHHHHHHH-SS CS
+                COX3  93 alfwaffhsalsPtvelGatwpPvGikavnPlevPllntiillssGvtvtyahhsliegnrkkalkgllltillavlftllqaveyleasf 183
+                          +fw+ffhs+l  +ve+G++wpP+Gi+ ++P+ vPllnt++llss vtvt++h+sl+ g+r+ a  gl  t+ l+++ftllq +ey+ + f
+  Ascidiella_aspersa  95 RFFWTFFHSSLNSVVEIGTCWPPLGIQVLDPIGVPLLNTVVLLSSRVTVTWSHYSLLVGDREGASLGLSYTVYLGIFFTLLQRMEYVISGF 185
+                         ******************************************************************************************* PP
+
+                         -TTSHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHTT--BSSB-HHHHHHHHHHHHHHHHHHHHHHHTTTT CS
+                COX3 184 tisdgvyGsvfylatGlhglhviigtillavallrllkyhltknhhlGfeaailywhfvdvvwlflyvsvyww 256
+                          isd+vyGs+f++atG+h +hv++gt++l+v+l rl++ h+++  h+ +e++i+ywhfvdvvwlflyv vyww
+  Ascidiella_aspersa 186 NISDSVYGSIFFIATGFHRFHVLVGTLFLVVCLGRLIAGHFSSGRHIRYECSIWYWHFVDVVWLFLYVCVYWW 258
+                         ************************************************************************* PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (261 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       750  (0.0459953); expected 326.1 (0.02)
+Passed bias filter:                      264  (0.0161904); expected 326.1 (0.02)
+Passed Vit filter:                        15  (0.000919907); expected 16.3 (0.001)
+Passed Fwd filter:                         1  (6.13271e-05); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.56u 0.39s 00:00:00.95 Elapsed: 00:00:00.56
+# Mc/sec: 1309.96
+//
+Query:       Blanceolatum  [L=0]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each model (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (0 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                         0  (0); expected 326.1 (0.02)
+Passed bias filter:                        0  (0); expected 326.1 (0.02)
+Passed Vit filter:                         0  (0); expected 16.3 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.32u 0.26s 00:00:00.58 Elapsed: 00:00:00.46
+# Mc/sec: 0.00
+//
+Query:       Saccoglossus  [L=260]
+Scores for complete sequence (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Model    Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   6.8e-124  412.7  28.3   7.6e-124  412.5  28.3    1.0  1  COX3      Cytochrome c oxidase subunit III
+
+
+Domain annotation for each model (and alignments):
+>> COX3  Cytochrome c oxidase subunit III
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  412.5  28.3  4.7e-128  7.6e-124       1     258 []       5     260 .]       5     260 .] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 412.5 bits;  conditional E-value: 4.7e-128
+                   SSS------SHHHHHHHHHHHHHHHHHHHHHSS-..-HHHHHHHHHHHHHHHHHHHHHHHHHTTT----HHHHHHHHHHHHHHHHHHHHHHHHHHHH CS
+          COX3   1 hpfhlvsaspwplvlsvalllltsalvlflhgykesstllilallslllvmllwfrdivaeatllGehtlavqkGlklGlilfiisevllflalfwa 97 
+                   hpfhlv++spwpl+++ a+l++t ++++++h+++    l  +++++++l+m++w+rd+v+e+t++G+ht  v +Gl++G+ilfi+sevl+f+a+fwa
+  Saccoglossus   5 HPFHLVDQSPWPLTGATAALFTTVGIMVWFHFNT--PFLTLFGVVMVILTMFQWWRDVVRESTYEGQHTSEVGSGLRWGMILFITSEVLFFFAFFWA 99 
+                   9********************************9..66777789999************************************************** PP
+
+                   HHHHHHS--GGGTSSSS-TT-----TTSHHHHHHHHHHHHHHHHHHHHHHHHTTBHHHHHHHHHHHHHHHHHHHHHHHHHHHH-SS-TTSHHHHHHH CS
+          COX3  98 ffhsalsPtvelGatwpPvGikavnPlevPllntiillssGvtvtyahhsliegnrkkalkgllltillavlftllqaveyleasftisdgvyGsvf 194
+                   ffhs+l+Pt+elG++wpP+Gi+++nP++vPllnt++ll+sGvtvt+ahhs+i+ nr +a+++ll+t+ll+++ft+lq +ey++a+fti+d+vyGs+f
+  Saccoglossus 100 FFHSSLAPTIELGTCWPPTGIDPINPFQVPLLNTAVLLASGVTVTWAHHSIIAANRPEAIQALLITVLLGLYFTALQIFEYYQAPFTIADAVYGSTF 196
+                   ************************************************************************************************* PP
+
+                   HHHHHHHHHHHHHHHHHHHHHHHHHHTT--BSSB-HHHHHHHHHHHHHHHHHHHHHHHTTTTT- CS
+          COX3 195 ylatGlhglhviigtillavallrllkyhltknhhlGfeaailywhfvdvvwlflyvsvywwgs 258
+                   ++atG+hglhviigt++l+++l r+lk+h+++nhh+Gfeaa++ywhfvdvvwlfl++s+ywwgs
+  Saccoglossus 197 FVATGFHGLHVIIGTTFLLICLVRQLKFHFSENHHFGFEAAAWYWHFVDVVWLFLFISIYWWGS 260
+                   **************************************************************96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query sequence(s):                         1  (260 residues searched)
+Target model(s):                       16306  (2860830 nodes)
+Passed MSV filter:                       880  (0.0539679); expected 326.1 (0.02)
+Passed bias filter:                      305  (0.0187048); expected 326.1 (0.02)
+Passed Vit filter:                        25  (0.00153318); expected 16.3 (0.001)
+Passed Fwd filter:                         3  (0.000183981); expected 0.2 (1e-05)
+Initial search space (Z):              16306  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.60u 0.41s 00:00:01.01 Elapsed: 00:00:00.68
+# Mc/sec: 1093.85
+//
+[ok]

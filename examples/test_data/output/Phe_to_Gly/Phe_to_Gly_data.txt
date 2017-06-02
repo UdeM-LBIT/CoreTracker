@@ -1,5 +1,5 @@
 ### Random Forest prediction
-genome	codon	ori_aa	rea_aa	fitch	Fisher pval	Gene frac	N. rea	N. used	Cod. count	Sub. count	G. len	codon_lik	id	prediction	probability
+genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
 Fasciola	TTT	F	G	0.0	0.548170731707	0.4	0.0253164556962	0.46835443038	0.963414634146	0.0243902439024	861.0	-2.65208110993	21.0	0.0	0.013
 Caenorhabditis	TTT	F	G	0.0	0.579337899543	0.4	0.0224719101124	0.730337078652	0.917525773196	0.020618556701	934.0	-2.80105718405	21.0	0.0	0.005
 Trichinella	TTT	F	G	0.0	0.163636363636	0.25	0.0384615384615	0.653846153846	0.366197183099	0.0140845070423	845.0	-2.59420289855	21.0	0.0	0.125

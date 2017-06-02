@@ -36,6 +36,8 @@ parser.add_argument('--nuc', '--input', '-n', dest='dnafile',
                     required=True, help="Dnafile input")
 parser.add_argument('--gcode', type=int, default=1, dest='gcode',
                     help="Genetic code to use for translation. Default value is 1")
+parser.add_argument('--codemap', dest='codemap',
+                    help="A tab delimited file that map each species to its genetic code. Default code (--gcode) will be used for missing species")
 parser.add_argument('--prog', default="mafft", dest='prog', choices=[
                     'mafft', 'muscle'], help="Genetic code to use for translation. Default value is 1")
 parser.add_argument('--align', dest='align', action='store_true',
@@ -71,6 +73,14 @@ if not os.path.exists(args.outdir):
 core_inst = args.dnafile
 gcode = args.gcode
 align = args.align
+codemap = {}
+if args.codemap:
+    with open(args.codemap) as CMAP:
+        for line in CMAP:
+            line = line.strip()
+            if line and not line.startswith('#'):
+                spec, code = line.split()
+                codemap[spec] = int(code)
 
 prog = 'muscle ' + args.alignargs
 if args.prog == 'mafft':
@@ -132,7 +142,7 @@ if args.filter:
 # proceed to translation if  here
 
 if not args.notrans:
-    translated_prot = SequenceLoader.translate(core_inst, gcode)
+    translated_prot = SequenceLoader.translate(core_inst, gcode, codemap)
     alignment = {}
     if align:
         for (gene, seqs) in translated_prot.items():

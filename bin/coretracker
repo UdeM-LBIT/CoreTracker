@@ -33,6 +33,7 @@ from coretracker.classifier import MODELPATH
 from coretracker.classifier.models import ModelType
 from coretracker.coreutils import *
 from coretracker.settings import *
+import time
 
 ENABLE_PAR = True
 CPU_COUNT = 0
@@ -54,13 +55,6 @@ except ImportError:
 etiquette = ["fitch", "suspected", "Fisher pval", "Gene frac",
              "N. rea", "N. used", "Cod. count", "Sub. count",
              "G. len", "codon_lik", "N. mixte", "id"]  # , 'total_aa']
-
-
-def testing_a_lot(args, settings):
-    t = random.randint(30, 90)
-    time.sleep(t)
-    return [settings.EXCLUDE_AA, settings.AA_MAJORITY_THRESH, settings.FREQUENCY_THRESHOLD,
-            settings.GENETIC_CODE, settings.COUNT_THRESHOLD, settings.LIMIT_TO_SUSPECTED_SPECIES]
 
 
 def AlignmentProgramType(program):
@@ -109,24 +103,51 @@ def set_coretracker(args, settings):
                 hmmfiles[genename] = f
         except:
             pass
+    codemap = {}
+    if args.codemap:
+        with open(args.codemap) as CMAP:
+            for line in CMAP:
+                line = line.strip()
+                if line and not line.startswith('#'):
+                    spec, code = line.split()
+                    codemap[spec] = int(code)
+
+    spec_restricted_list = []
+    if args.restrict_to:
+        try:
+            with open(args.restrict_to) as SREST:
+                for line in SREEST:
+                    line = line.strip()
+                    if line and not line.startswith('#'):
+                        spec_restricted_list.append(line)
+        except IOError:
+            spec_restricted_list.append(args.restrict_to)
 
     clf = Classifier.load_from_file(MODELPATH % settings.MODEL_TYPE)
     model = ModelType(settings.MODEL_TYPE, etiquette)
 
     if clf is None or not clf.trained:
         raise ValueError("Classifier not found or not trained!")
-
+    t = time.time()
     seqloader = SequenceLoader(input_alignment, args.dnaseq, settings, args.gapfilter, has_stop=args.hasstop,
                                use_tree=use_tree, refine_alignment=args.refine, msaprog=msaprg, hmmdict=hmmfiles)
-
+    t2 = time.time()
+    logging.debug("Sequence loaded in %.3f s"%(abs(t2-t)))
     # create sequence set
-    setseq = SequenceSet(seqloader, specietree, settings.GENETIC_CODE)
+    setseq = SequenceSet(seqloader, specietree, settings.GENETIC_CODE,codemap=codemap)
     setseq.prot_filtering(args.idfilter, args.gapfilter,
                           args.iccontent, args.rmconst)
-
+    spec_restricted_list = list(set(spec_restricted_list).intersection(setseq.common_genome))
+    if spec_restricted_list:
+        settings.LIMIT_TO_SUSPECTED_SPECIES = True
+    t = time.time()
+    logging.debug("Sequence filtered in %.3f s"%(abs(t-t2)))
     reafinder = ReaGenomeFinder(setseq, settings)
     reafinder.get_genomes()
-    reafinder.possible_aa_reassignation()
+    reafinder.possible_aa_reassignation(speclist=spec_restricted_list)
+    t2 = time.time()
+    logging.debug("List of probable reassignment identified in %f"%(abs(t-t2)))
+
     return reafinder, clf, model
 
 
@@ -137,14 +158,14 @@ def compile_result(x, clf, cod_align, model):
     s_complete_data['aa'][fitch.ori_aa1][fitch.dest_aa1] = data
     s_complete_data['genome'] = reafinder.reassignment_mapper['genome']
     X_data, X_labels, _ = read_from_json(
-        s_complete_data, None, use_global=False)
+        s_complete_data, None, use_global=reafinder.settings.USE_GLOBAL)
     # extract usefull features
     if X_data is not None and X_data.size:
         X_data, X_dataprint, selected_et = model.format_data(X_data)
         pred_prob = clf.predict_proba(X_data)
         pred = clf.predict(X_data)
         sppval, outdir, rkp, codvalid = utils.get_report(
-            fitch, data, reafinder, cod_align, (X_data, X_labels, pred_prob, pred))
+            fitch, reafinder, cod_align, (X_data, X_labels, pred_prob, pred))
         utils.print_data_to_txt(os.path.join(outdir, fitch.ori_aa + "_to_" + fitch.dest_aa + "_data.txt"),
                                 selected_et, X_dataprint, X_labels, pred, pred_prob, sppval, fitch.dest_aa, valid=codvalid)
         tmp_data = [X_labels, pred, pred_prob, codvalid]
@@ -220,6 +241,11 @@ if __name__ == '__main__':
 
     parser.add_argument('--imformat', dest='imformat', choices=('pdf', 'png', 'svg'), default="pdf",
                         help="Image format to use for output (Codon_data file)")
+
+    parser.add_argument('--restrict_to', dest='restrict_to', help="Restrict analysis to list of genomes only")
+    
+    parser.add_argument('--codemap', dest='codemap',
+                    help="A tab delimited file that map each species to its genetic code. Default code (--gcode) will be used for missing species")
 
     print("CoreTracker v:%s Copyright (C) %s %s" %
           (__version__, date, __author__))

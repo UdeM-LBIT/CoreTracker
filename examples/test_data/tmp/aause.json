@@ -1,0 +1,1640 @@
+{
+    "Ile": [
+        {
+            "distance": 0.684044233807267, 
+            "species": "C||A", 
+            "aafiltered": 0.7272727272727273
+        }, 
+        {
+            "distance": 0.8657187993680885, 
+            "species": "B||A", 
+            "aafiltered": 0.8863636363636364
+        }, 
+        {
+            "distance": 0.6097946287519748, 
+            "species": "E||A", 
+            "aafiltered": 0.6136363636363636
+        }, 
+        {
+            "distance": 0.593996840442338, 
+            "species": "D||A", 
+            "aafiltered": 0.6363636363636364
+        }, 
+        {
+            "distance": 0.5545023696682464, 
+            "species": "G||A", 
+            "aafiltered": 0.5227272727272727
+        }, 
+        {
+            "distance": 0.627172195892575, 
+            "species": "F||A", 
+            "aafiltered": 0.6363636363636364
+        }, 
+        {
+            "distance": 0.5560821484992101, 
+            "species": "I||A", 
+            "aafiltered": 0.5681818181818182
+        }, 
+        {
+            "distance": 0.5592417061611374, 
+            "species": "H||A", 
+            "aafiltered": 0.5227272727272727
+        }, 
+        {
+            "distance": 0.7440758293838863, 
+            "species": "B||C", 
+            "aafiltered": 0.7272727272727273
+        }, 
+        {
+            "distance": 0.7851500789889415, 
+            "species": "E||C", 
+            "aafiltered": 0.75
+        }, 
+        {
+            "distance": 0.7898894154818326, 
+            "species": "D||C", 
+            "aafiltered": 0.75
+        }, 
+        {
+            "distance": 0.5908372827804107, 
+            "species": "G||C", 
+            "aafiltered": 0.5
+        }, 
+        {
+            "distance": 0.7266982622432859, 
+            "species": "F||C", 
+            "aafiltered": 0.6590909090909091
+        }, 
+        {
+            "distance": 0.5797788309636651, 
+            "species": "I||C", 
+            "aafiltered": 0.5681818181818182
+        }, 
+        {
+            "distance": 0.5955766192733017, 
+            "species": "H||C", 
+            "aafiltered": 0.4772727272727273
+        }, 
+        {
+            "distance": 0.6619273301737757, 
+            "species": "E||B", 
+            "aafiltered": 0.6136363636363636
+        }, 
+        {
+            "distance": 0.6382306477093207, 
+            "species": "D||B", 
+            "aafiltered": 0.6136363636363636
+        }, 
+        {
+            "distance": 0.6003159557661928, 
+            "species": "G||B", 
+            "aafiltered": 0.5227272727272727
+        }, 
+        {
+            "distance": 0.6714060031595577, 
+            "species": "F||B", 
+            "aafiltered": 0.6818181818181818
+        }, 
+        {
+            "distance": 0.6003159557661928, 
+            "species": "I||B", 
+            "aafiltered": 0.6136363636363636
+        }, 
+        {
+            "distance": 0.6145339652448657, 
+            "species": "H||B", 
+            "aafiltered": 0.5227272727272727
+        }, 
+        {
+            "distance": 0.669826224328594, 
+            "species": "D||E", 
+            "aafiltered": 0.5909090909090909
+        }, 
+        {
+            "distance": 0.5134281200631912, 
+            "species": "G||E", 
+            "aafiltered": 0.5227272727272727
+        }, 
+        {
+            "distance": 0.6524486571879937, 
+            "species": "F||E", 
+            "aafiltered": 0.5227272727272727
+        }, 
+        {
+            "distance": 0.5134281200631912, 
+            "species": "I||E", 
+            "aafiltered": 0.5681818181818182
+        }, 
+        {
+            "distance": 0.5213270142180095, 
+            "species": "H||E", 
+            "aafiltered": 0.4772727272727273
+        }, 
+        {
+            "distance": 0.5055292259083728, 
+            "species": "G||D", 
+            "aafiltered": 0.40909090909090917
+        }, 
+        {
+            "distance": 0.617693522906793, 
+            "species": "F||D", 
+            "aafiltered": 0.6136363636363636
+        }, 
+        {
+            "distance": 0.48973143759873616, 
+            "species": "I||D", 
+            "aafiltered": 0.5454545454545454
+        }, 
+        {
+            "distance": 0.49921011058451814, 
+            "species": "H||D", 
+            "aafiltered": 0.4318181818181819
+        }, 
+        {
+            "distance": 0.5308056872037915, 
+            "species": "F||G", 
+            "aafiltered": 0.4318181818181819
+        }, 
+        {
+            "distance": 0.7393364928909952, 
+            "species": "I||G", 
+            "aafiltered": 0.6590909090909091
+        }, 
+        {
+            "distance": 0.7756714060031595, 
+            "species": "H||G", 
+            "aafiltered": 0.5909090909090909
+        }, 
+        {
+            "distance": 0.5276461295418642, 
+            "species": "I||F", 
+            "aafiltered": 0.5
+        }, 
+        {
+            "distance": 0.5371248025276462, 
+            "species": "H||F", 
+            "aafiltered": 0.36363636363636365
+        }, 
+        {
+            "distance": 0.7266982622432859, 
+            "species": "H||I", 
+            "aafiltered": 0.5909090909090909
+        }
+    ], 
+    "Ser": [
+        {
+            "distance": 0.684044233807267, 
+            "species": "C||A", 
+            "aafiltered": 0.7575757575757576
+        }, 
+        {
+            "distance": 0.8657187993680885, 
+            "species": "B||A", 
+            "aafiltered": 0.9393939393939394
+        }, 
+        {
+            "distance": 0.6097946287519748, 
+            "species": "E||A", 
+            "aafiltered": 0.6666666666666666
+        }, 
+        {
+            "distance": 0.593996840442338, 
+            "species": "D||A", 
+            "aafiltered": 0.5757575757575758
+        }, 
+        {
+            "distance": 0.5545023696682464, 
+            "species": "G||A", 
+            "aafiltered": 0.5757575757575758
+        }, 
+        {
+            "distance": 0.627172195892575, 
+            "species": "F||A", 
+            "aafiltered": 0.6666666666666666
+        }, 
+        {
+            "distance": 0.5560821484992101, 
+            "species": "I||A", 
+            "aafiltered": 0.5757575757575758
+        }, 
+        {
+            "distance": 0.5592417061611374, 
+            "species": "H||A", 
+            "aafiltered": 0.5151515151515151
+        }, 
+        {
+            "distance": 0.7440758293838863, 
+            "species": "B||C", 
+            "aafiltered": 0.8181818181818182
+        }, 
+        {
+            "distance": 0.7851500789889415, 
+            "species": "E||C", 
+            "aafiltered": 0.7878787878787878
+        }, 
+        {
+            "distance": 0.7898894154818326, 
+            "species": "D||C", 
+            "aafiltered": 0.7878787878787878
+        }, 
+        {
+            "distance": 0.5908372827804107, 
+            "species": "G||C", 
+            "aafiltered": 0.5151515151515151
+        }, 
+        {
+            "distance": 0.7266982622432859, 
+            "species": "F||C", 
+            "aafiltered": 0.8484848484848485
+        }, 
+        {
+            "distance": 0.5797788309636651, 
+            "species": "I||C", 
+            "aafiltered": 0.5454545454545454
+        }, 
+        {
+            "distance": 0.5955766192733017, 
+            "species": "H||C", 
+            "aafiltered": 0.48484848484848486
+        }, 
+        {
+            "distance": 0.6619273301737757, 
+            "species": "E||B", 
+            "aafiltered": 0.696969696969697
+        }, 
+        {
+            "distance": 0.6382306477093207, 
+            "species": "D||B", 
+            "aafiltered": 0.6363636363636364
+        }, 
+        {
+            "distance": 0.6003159557661928, 
+            "species": "G||B", 
+            "aafiltered": 0.5757575757575758
+        }, 
+        {
+            "distance": 0.6714060031595577, 
+            "species": "F||B", 
+            "aafiltered": 0.7272727272727273
+        }, 
+        {
+            "distance": 0.6003159557661928, 
+            "species": "I||B", 
+            "aafiltered": 0.6060606060606061
+        }, 
+        {
+            "distance": 0.6145339652448657, 
+            "species": "H||B", 
+            "aafiltered": 0.5454545454545454
+        }, 
+        {
+            "distance": 0.669826224328594, 
+            "species": "D||E", 
+            "aafiltered": 0.6363636363636364
+        }, 
+        {
+            "distance": 0.5134281200631912, 
+            "species": "G||E", 
+            "aafiltered": 0.3939393939393939
+        }, 
+        {
+            "distance": 0.6524486571879937, 
+            "species": "F||E", 
+            "aafiltered": 0.696969696969697
+        }, 
+        {
+            "distance": 0.5134281200631912, 
+            "species": "I||E", 
+            "aafiltered": 0.3939393939393939
+        }, 
+        {
+            "distance": 0.5213270142180095, 
+            "species": "H||E", 
+            "aafiltered": 0.33333333333333326
+        }, 
+        {
+            "distance": 0.5055292259083728, 
+            "species": "G||D", 
+            "aafiltered": 0.4242424242424243
+        }, 
+        {
+            "distance": 0.617693522906793, 
+            "species": "F||D", 
+            "aafiltered": 0.6363636363636364
+        }, 
+        {
+            "distance": 0.48973143759873616, 
+            "species": "I||D", 
+            "aafiltered": 0.4545454545454546
+        }, 
+        {
+            "distance": 0.49921011058451814, 
+            "species": "H||D", 
+            "aafiltered": 0.3939393939393939
+        }, 
+        {
+            "distance": 0.5308056872037915, 
+            "species": "F||G", 
+            "aafiltered": 0.5151515151515151
+        }, 
+        {
+            "distance": 0.7393364928909952, 
+            "species": "I||G", 
+            "aafiltered": 0.7575757575757576
+        }, 
+        {
+            "distance": 0.7756714060031595, 
+            "species": "H||G", 
+            "aafiltered": 0.8181818181818182
+        }, 
+        {
+            "distance": 0.5276461295418642, 
+            "species": "I||F", 
+            "aafiltered": 0.5151515151515151
+        }, 
+        {
+            "distance": 0.5371248025276462, 
+            "species": "H||F", 
+            "aafiltered": 0.4545454545454546
+        }, 
+        {
+            "distance": 0.7266982622432859, 
+            "species": "H||I", 
+            "aafiltered": 0.7575757575757576
+        }
+    ], 
+    "Gln": [
+        {
+            "distance": 0.684044233807267, 
+            "species": "C||A", 
+            "aafiltered": 0.75
+        }, 
+        {
+            "distance": 0.8657187993680885, 
+            "species": "B||A", 
+            "aafiltered": 0.9583333333333334
+        }, 
+        {
+            "distance": 0.6097946287519748, 
+            "species": "E||A", 
+            "aafiltered": 0.6666666666666666
+        }, 
+        {
+            "distance": 0.593996840442338, 
+            "species": "D||A", 
+            "aafiltered": 0.6666666666666666
+        }, 
+        {
+            "distance": 0.5545023696682464, 
+            "species": "G||A", 
+            "aafiltered": 0.45833333333333326
+        }, 
+        {
+            "distance": 0.627172195892575, 
+            "species": "F||A", 
+            "aafiltered": 0.5833333333333334
+        }, 
+        {
+            "distance": 0.5560821484992101, 
+            "species": "I||A", 
+            "aafiltered": 0.41666666666666674
+        }, 
+        {
+            "distance": 0.5592417061611374, 
+            "species": "H||A", 
+            "aafiltered": 0.5
+        }, 
+        {
+            "distance": 0.7440758293838863, 
+            "species": "B||C", 
+            "aafiltered": 0.7916666666666666
+        }, 
+        {
+            "distance": 0.7851500789889415, 
+            "species": "E||C", 
+            "aafiltered": 0.8333333333333334
+        }, 
+        {
+            "distance": 0.7898894154818326, 
+            "species": "D||C", 
+            "aafiltered": 0.8333333333333334
+        }, 
+        {
+            "distance": 0.5908372827804107, 
+            "species": "G||C", 
+            "aafiltered": 0.625
+        }, 
+        {
+            "distance": 0.7266982622432859, 
+            "species": "F||C", 
+            "aafiltered": 0.75
+        }, 
+        {
+            "distance": 0.5797788309636651, 
+            "species": "I||C", 
+            "aafiltered": 0.5833333333333334
+        }, 
+        {
+            "distance": 0.5955766192733017, 
+            "species": "H||C", 
+            "aafiltered": 0.625
+        }, 
+        {
+            "distance": 0.6619273301737757, 
+            "species": "E||B", 
+            "aafiltered": 0.7083333333333334
+        }, 
+        {
+            "distance": 0.6382306477093207, 
+            "species": "D||B", 
+            "aafiltered": 0.7083333333333334
+        }, 
+        {
+            "distance": 0.6003159557661928, 
+            "species": "G||B", 
+            "aafiltered": 0.5
+        }, 
+        {
+            "distance": 0.6714060031595577, 
+            "species": "F||B", 
+            "aafiltered": 0.625
+        }, 
+        {
+            "distance": 0.6003159557661928, 
+            "species": "I||B", 
+            "aafiltered": 0.45833333333333326
+        }, 
+        {
+            "distance": 0.6145339652448657, 
+            "species": "H||B", 
+            "aafiltered": 0.5416666666666666
+        }, 
+        {
+            "distance": 0.669826224328594, 
+            "species": "D||E", 
+            "aafiltered": 0.7916666666666666
+        }, 
+        {
+            "distance": 0.5134281200631912, 
+            "species": "G||E", 
+            "aafiltered": 0.5416666666666666
+        }, 
+        {
+            "distance": 0.6524486571879937, 
+            "species": "F||E", 
+            "aafiltered": 0.6666666666666666
+        }, 
+        {
+            "distance": 0.5134281200631912, 
+            "species": "I||E", 
+            "aafiltered": 0.45833333333333326
+        }, 
+        {
+            "distance": 0.5213270142180095, 
+            "species": "H||E", 
+            "aafiltered": 0.5
+        }, 
+        {
+            "distance": 0.5055292259083728, 
+            "species": "G||D", 
+            "aafiltered": 0.5416666666666666
+        }, 
+        {
+            "distance": 0.617693522906793, 
+            "species": "F||D", 
+            "aafiltered": 0.6666666666666666
+        }, 
+        {
+            "distance": 0.48973143759873616, 
+            "species": "I||D", 
+            "aafiltered": 0.5416666666666666
+        }, 
+        {
+            "distance": 0.49921011058451814, 
+            "species": "H||D", 
+            "aafiltered": 0.5416666666666666
+        }, 
+        {
+            "distance": 0.5308056872037915, 
+            "species": "F||G", 
+            "aafiltered": 0.41666666666666674
+        }, 
+        {
+            "distance": 0.7393364928909952, 
+            "species": "I||G", 
+            "aafiltered": 0.6666666666666666
+        }, 
+        {
+            "distance": 0.7756714060031595, 
+            "species": "H||G", 
+            "aafiltered": 0.7916666666666666
+        }, 
+        {
+            "distance": 0.5276461295418642, 
+            "species": "I||F", 
+            "aafiltered": 0.5
+        }, 
+        {
+            "distance": 0.5371248025276462, 
+            "species": "H||F", 
+            "aafiltered": 0.45833333333333326
+        }, 
+        {
+            "distance": 0.7266982622432859, 
+            "species": "H||I", 
+            "aafiltered": 0.6666666666666666
+        }
+    ], 
+    "Met": [
+        {
+            "distance": 0.684044233807267, 
+            "species": "C||A", 
+            "aafiltered": 0.5681818181818182
+        }, 
+        {
+            "distance": 0.8657187993680885, 
+            "species": "B||A", 
+            "aafiltered": 0.5227272727272727
+        }, 
+        {
+            "distance": 0.6097946287519748, 
+            "species": "E||A", 
+            "aafiltered": 0.4545454545454546
+        }, 
+        {
+            "distance": 0.593996840442338, 
+            "species": "D||A", 
+            "aafiltered": 0.4318181818181819
+        }, 
+        {
+            "distance": 0.5545023696682464, 
+            "species": "G||A", 
+            "aafiltered": 0.4772727272727273
+        }, 
+        {
+            "distance": 0.627172195892575, 
+            "species": "F||A", 
+            "aafiltered": 0.5454545454545454
+        }, 
+        {
+            "distance": 0.5560821484992101, 
+            "species": "I||A", 
+            "aafiltered": 0.5
+        }, 
+        {
+            "distance": 0.5592417061611374, 
+            "species": "H||A", 
+            "aafiltered": 0.4545454545454546
+        }, 
+        {
+            "distance": 0.7440758293838863, 
+            "species": "B||C", 
+            "aafiltered": 0.5681818181818182
+        }, 
+        {
+            "distance": 0.7851500789889415, 
+            "species": "E||C", 
+            "aafiltered": 0.7045454545454546
+        }, 
+        {
+            "distance": 0.7898894154818326, 
+            "species": "D||C", 
+            "aafiltered": 0.6818181818181818
+        }, 
+        {
+            "distance": 0.5908372827804107, 
+            "species": "G||C", 
+            "aafiltered": 0.7045454545454546
+        }, 
+        {
+            "distance": 0.7266982622432859, 
+            "species": "F||C", 
+            "aafiltered": 0.75
+        }, 
+        {
+            "distance": 0.5797788309636651, 
+            "species": "I||C", 
+            "aafiltered": 0.6818181818181818
+        }, 
+        {
+            "distance": 0.5955766192733017, 
+            "species": "H||C", 
+            "aafiltered": 0.6590909090909091
+        }, 
+        {
+            "distance": 0.6619273301737757, 
+            "species": "E||B", 
+            "aafiltered": 0.4318181818181819
+        }, 
+        {
+            "distance": 0.6382306477093207, 
+            "species": "D||B", 
+            "aafiltered": 0.4318181818181819
+        }, 
+        {
+            "distance": 0.6003159557661928, 
+            "species": "G||B", 
+            "aafiltered": 0.4772727272727273
+        }, 
+        {
+            "distance": 0.6714060031595577, 
+            "species": "F||B", 
+            "aafiltered": 0.4772727272727273
+        }, 
+        {
+            "distance": 0.6003159557661928, 
+            "species": "I||B", 
+            "aafiltered": 0.4545454545454546
+        }, 
+        {
+            "distance": 0.6145339652448657, 
+            "species": "H||B", 
+            "aafiltered": 0.4545454545454546
+        }, 
+        {
+            "distance": 0.669826224328594, 
+            "species": "D||E", 
+            "aafiltered": 0.5909090909090909
+        }, 
+        {
+            "distance": 0.5134281200631912, 
+            "species": "G||E", 
+            "aafiltered": 0.5681818181818182
+        }, 
+        {
+            "distance": 0.6524486571879937, 
+            "species": "F||E", 
+            "aafiltered": 0.6818181818181818
+        }, 
+        {
+            "distance": 0.5134281200631912, 
+            "species": "I||E", 
+            "aafiltered": 0.5454545454545454
+        }, 
+        {
+            "distance": 0.5213270142180095, 
+            "species": "H||E", 
+            "aafiltered": 0.5227272727272727
+        }, 
+        {
+            "distance": 0.5055292259083728, 
+            "species": "G||D", 
+            "aafiltered": 0.5454545454545454
+        }, 
+        {
+            "distance": 0.617693522906793, 
+            "species": "F||D", 
+            "aafiltered": 0.6136363636363636
+        }, 
+        {
+            "distance": 0.48973143759873616, 
+            "species": "I||D", 
+            "aafiltered": 0.5454545454545454
+        }, 
+        {
+            "distance": 0.49921011058451814, 
+            "species": "H||D", 
+            "aafiltered": 0.5
+        }, 
+        {
+            "distance": 0.5308056872037915, 
+            "species": "F||G", 
+            "aafiltered": 0.6590909090909091
+        }, 
+        {
+            "distance": 0.7393364928909952, 
+            "species": "I||G", 
+            "aafiltered": 0.9090909090909091
+        }, 
+        {
+            "distance": 0.7756714060031595, 
+            "species": "H||G", 
+            "aafiltered": 0.9318181818181818
+        }, 
+        {
+            "distance": 0.5276461295418642, 
+            "species": "I||F", 
+            "aafiltered": 0.6363636363636364
+        }, 
+        {
+            "distance": 0.5371248025276462, 
+            "species": "H||F", 
+            "aafiltered": 0.6136363636363636
+        }, 
+        {
+            "distance": 0.7266982622432859, 
+            "species": "H||I", 
+            "aafiltered": 0.8636363636363636
+        }
+    ], 
+    "Lys": [
+        {
+            "distance": 0.684044233807267, 
+            "species": "C||A", 
+            "aafiltered": 0.7017543859649122
+        }, 
+        {
+            "distance": 0.8657187993680885, 
+            "species": "B||A", 
+            "aafiltered": 0.8245614035087719
+        }, 
+        {
+            "distance": 0.6097946287519748, 
+            "species": "E||A", 
+            "aafiltered": 0.631578947368421
+        }, 
+        {
+            "distance": 0.593996840442338, 
+            "species": "D||A", 
+            "aafiltered": 0.5614035087719298
+        }, 
+        {
+            "distance": 0.5545023696682464, 
+            "species": "G||A", 
+            "aafiltered": 0.49122807017543857
+        }, 
+        {
+            "distance": 0.627172195892575, 
+            "species": "F||A", 
+            "aafiltered": 0.5964912280701754
+        }, 
+        {
+            "distance": 0.5560821484992101, 
+            "species": "I||A", 
+            "aafiltered": 0.5789473684210527
+        }, 
+        {
+            "distance": 0.5592417061611374, 
+            "species": "H||A", 
+            "aafiltered": 0.5087719298245614
+        }, 
+        {
+            "distance": 0.7440758293838863, 
+            "species": "B||C", 
+            "aafiltered": 0.7894736842105263
+        }, 
+        {
+            "distance": 0.7851500789889415, 
+            "species": "E||C", 
+            "aafiltered": 0.8771929824561403
+        }, 
+        {
+            "distance": 0.7898894154818326, 
+            "species": "D||C", 
+            "aafiltered": 0.7894736842105263
+        }, 
+        {
+            "distance": 0.5908372827804107, 
+            "species": "G||C", 
+            "aafiltered": 0.543859649122807
+        }, 
+        {
+            "distance": 0.7266982622432859, 
+            "species": "F||C", 
+            "aafiltered": 0.8070175438596491
+        }, 
+        {
+            "distance": 0.5797788309636651, 
+            "species": "I||C", 
+            "aafiltered": 0.6842105263157895
+        }, 
+        {
+            "distance": 0.5955766192733017, 
+            "species": "H||C", 
+            "aafiltered": 0.5789473684210527
+        }, 
+        {
+            "distance": 0.6619273301737757, 
+            "species": "E||B", 
+            "aafiltered": 0.7017543859649122
+        }, 
+        {
+            "distance": 0.6382306477093207, 
+            "species": "D||B", 
+            "aafiltered": 0.6140350877192983
+        }, 
+        {
+            "distance": 0.6003159557661928, 
+            "species": "G||B", 
+            "aafiltered": 0.543859649122807
+        }, 
+        {
+            "distance": 0.6714060031595577, 
+            "species": "F||B", 
+            "aafiltered": 0.6666666666666666
+        }, 
+        {
+            "distance": 0.6003159557661928, 
+            "species": "I||B", 
+            "aafiltered": 0.6666666666666666
+        }, 
+        {
+            "distance": 0.6145339652448657, 
+            "species": "H||B", 
+            "aafiltered": 0.5964912280701754
+        }, 
+        {
+            "distance": 0.669826224328594, 
+            "species": "D||E", 
+            "aafiltered": 0.7368421052631579
+        }, 
+        {
+            "distance": 0.5134281200631912, 
+            "species": "G||E", 
+            "aafiltered": 0.4736842105263157
+        }, 
+        {
+            "distance": 0.6524486571879937, 
+            "species": "F||E", 
+            "aafiltered": 0.7719298245614035
+        }, 
+        {
+            "distance": 0.5134281200631912, 
+            "species": "I||E", 
+            "aafiltered": 0.5964912280701754
+        }, 
+        {
+            "distance": 0.5213270142180095, 
+            "species": "H||E", 
+            "aafiltered": 0.5087719298245614
+        }, 
+        {
+            "distance": 0.5055292259083728, 
+            "species": "G||D", 
+            "aafiltered": 0.4035087719298245
+        }, 
+        {
+            "distance": 0.617693522906793, 
+            "species": "F||D", 
+            "aafiltered": 0.631578947368421
+        }, 
+        {
+            "distance": 0.48973143759873616, 
+            "species": "I||D", 
+            "aafiltered": 0.5263157894736842
+        }, 
+        {
+            "distance": 0.49921011058451814, 
+            "species": "H||D", 
+            "aafiltered": 0.4385964912280702
+        }, 
+        {
+            "distance": 0.5308056872037915, 
+            "species": "F||G", 
+            "aafiltered": 0.4736842105263157
+        }, 
+        {
+            "distance": 0.7393364928909952, 
+            "species": "I||G", 
+            "aafiltered": 0.7368421052631579
+        }, 
+        {
+            "distance": 0.7756714060031595, 
+            "species": "H||G", 
+            "aafiltered": 0.7368421052631579
+        }, 
+        {
+            "distance": 0.5276461295418642, 
+            "species": "I||F", 
+            "aafiltered": 0.5964912280701754
+        }, 
+        {
+            "distance": 0.5371248025276462, 
+            "species": "H||F", 
+            "aafiltered": 0.49122807017543857
+        }, 
+        {
+            "distance": 0.7266982622432859, 
+            "species": "H||I", 
+            "aafiltered": 0.7719298245614035
+        }
+    ], 
+    "Phe": [
+        {
+            "distance": 0.684044233807267, 
+            "species": "C||A", 
+            "aafiltered": 0.71875
+        }, 
+        {
+            "distance": 0.8657187993680885, 
+            "species": "B||A", 
+            "aafiltered": 0.9375
+        }, 
+        {
+            "distance": 0.6097946287519748, 
+            "species": "E||A", 
+            "aafiltered": 0.53125
+        }, 
+        {
+            "distance": 0.593996840442338, 
+            "species": "D||A", 
+            "aafiltered": 0.6875
+        }, 
+        {
+            "distance": 0.5545023696682464, 
+            "species": "G||A", 
+            "aafiltered": 0.5625
+        }, 
+        {
+            "distance": 0.627172195892575, 
+            "species": "F||A", 
+            "aafiltered": 0.625
+        }, 
+        {
+            "distance": 0.5560821484992101, 
+            "species": "I||A", 
+            "aafiltered": 0.625
+        }, 
+        {
+            "distance": 0.5592417061611374, 
+            "species": "H||A", 
+            "aafiltered": 0.59375
+        }, 
+        {
+            "distance": 0.7440758293838863, 
+            "species": "B||C", 
+            "aafiltered": 0.75
+        }, 
+        {
+            "distance": 0.7851500789889415, 
+            "species": "E||C", 
+            "aafiltered": 0.65625
+        }, 
+        {
+            "distance": 0.7898894154818326, 
+            "species": "D||C", 
+            "aafiltered": 0.78125
+        }, 
+        {
+            "distance": 0.5908372827804107, 
+            "species": "G||C", 
+            "aafiltered": 0.625
+        }, 
+        {
+            "distance": 0.7266982622432859, 
+            "species": "F||C", 
+            "aafiltered": 0.65625
+        }, 
+        {
+            "distance": 0.5797788309636651, 
+            "species": "I||C", 
+            "aafiltered": 0.6875
+        }, 
+        {
+            "distance": 0.5955766192733017, 
+            "species": "H||C", 
+            "aafiltered": 0.6875
+        }, 
+        {
+            "distance": 0.6619273301737757, 
+            "species": "E||B", 
+            "aafiltered": 0.5625
+        }, 
+        {
+            "distance": 0.6382306477093207, 
+            "species": "D||B", 
+            "aafiltered": 0.65625
+        }, 
+        {
+            "distance": 0.6003159557661928, 
+            "species": "G||B", 
+            "aafiltered": 0.5625
+        }, 
+        {
+            "distance": 0.6714060031595577, 
+            "species": "F||B", 
+            "aafiltered": 0.625
+        }, 
+        {
+            "distance": 0.6003159557661928, 
+            "species": "I||B", 
+            "aafiltered": 0.625
+        }, 
+        {
+            "distance": 0.6145339652448657, 
+            "species": "H||B", 
+            "aafiltered": 0.59375
+        }, 
+        {
+            "distance": 0.669826224328594, 
+            "species": "D||E", 
+            "aafiltered": 0.53125
+        }, 
+        {
+            "distance": 0.5134281200631912, 
+            "species": "G||E", 
+            "aafiltered": 0.40625
+        }, 
+        {
+            "distance": 0.6524486571879937, 
+            "species": "F||E", 
+            "aafiltered": 0.53125
+        }, 
+        {
+            "distance": 0.5134281200631912, 
+            "species": "I||E", 
+            "aafiltered": 0.5
+        }, 
+        {
+            "distance": 0.5213270142180095, 
+            "species": "H||E", 
+            "aafiltered": 0.4375
+        }, 
+        {
+            "distance": 0.5055292259083728, 
+            "species": "G||D", 
+            "aafiltered": 0.59375
+        }, 
+        {
+            "distance": 0.617693522906793, 
+            "species": "F||D", 
+            "aafiltered": 0.625
+        }, 
+        {
+            "distance": 0.48973143759873616, 
+            "species": "I||D", 
+            "aafiltered": 0.59375
+        }, 
+        {
+            "distance": 0.49921011058451814, 
+            "species": "H||D", 
+            "aafiltered": 0.59375
+        }, 
+        {
+            "distance": 0.5308056872037915, 
+            "species": "F||G", 
+            "aafiltered": 0.625
+        }, 
+        {
+            "distance": 0.7393364928909952, 
+            "species": "I||G", 
+            "aafiltered": 0.71875
+        }, 
+        {
+            "distance": 0.7756714060031595, 
+            "species": "H||G", 
+            "aafiltered": 0.8125
+        }, 
+        {
+            "distance": 0.5276461295418642, 
+            "species": "I||F", 
+            "aafiltered": 0.59375
+        }, 
+        {
+            "distance": 0.5371248025276462, 
+            "species": "H||F", 
+            "aafiltered": 0.59375
+        }, 
+        {
+            "distance": 0.7266982622432859, 
+            "species": "H||I", 
+            "aafiltered": 0.8125
+        }
+    ], 
+    "Gly": [
+        {
+            "distance": 0.684044233807267, 
+            "species": "C||A", 
+            "aafiltered": 0.5121951219512195
+        }, 
+        {
+            "distance": 0.8657187993680885, 
+            "species": "B||A", 
+            "aafiltered": 0.8292682926829268
+        }, 
+        {
+            "distance": 0.6097946287519748, 
+            "species": "E||A", 
+            "aafiltered": 0.46341463414634143
+        }, 
+        {
+            "distance": 0.593996840442338, 
+            "species": "D||A", 
+            "aafiltered": 0.4390243902439024
+        }, 
+        {
+            "distance": 0.5545023696682464, 
+            "species": "G||A", 
+            "aafiltered": 0.7073170731707317
+        }, 
+        {
+            "distance": 0.627172195892575, 
+            "species": "F||A", 
+            "aafiltered": 0.5121951219512195
+        }, 
+        {
+            "distance": 0.5560821484992101, 
+            "species": "I||A", 
+            "aafiltered": 0.6585365853658537
+        }, 
+        {
+            "distance": 0.5592417061611374, 
+            "species": "H||A", 
+            "aafiltered": 0.6097560975609756
+        }, 
+        {
+            "distance": 0.7440758293838863, 
+            "species": "B||C", 
+            "aafiltered": 0.5853658536585366
+        }, 
+        {
+            "distance": 0.7851500789889415, 
+            "species": "E||C", 
+            "aafiltered": 0.7804878048780488
+        }, 
+        {
+            "distance": 0.7898894154818326, 
+            "species": "D||C", 
+            "aafiltered": 0.8048780487804879
+        }, 
+        {
+            "distance": 0.5908372827804107, 
+            "species": "G||C", 
+            "aafiltered": 0.6829268292682927
+        }, 
+        {
+            "distance": 0.7266982622432859, 
+            "species": "F||C", 
+            "aafiltered": 0.5853658536585366
+        }, 
+        {
+            "distance": 0.5797788309636651, 
+            "species": "I||C", 
+            "aafiltered": 0.6097560975609756
+        }, 
+        {
+            "distance": 0.5955766192733017, 
+            "species": "H||C", 
+            "aafiltered": 0.6097560975609756
+        }, 
+        {
+            "distance": 0.6619273301737757, 
+            "species": "E||B", 
+            "aafiltered": 0.5365853658536586
+        }, 
+        {
+            "distance": 0.6382306477093207, 
+            "species": "D||B", 
+            "aafiltered": 0.4878048780487805
+        }, 
+        {
+            "distance": 0.6003159557661928, 
+            "species": "G||B", 
+            "aafiltered": 0.7560975609756098
+        }, 
+        {
+            "distance": 0.6714060031595577, 
+            "species": "F||B", 
+            "aafiltered": 0.5609756097560976
+        }, 
+        {
+            "distance": 0.6003159557661928, 
+            "species": "I||B", 
+            "aafiltered": 0.7073170731707317
+        }, 
+        {
+            "distance": 0.6145339652448657, 
+            "species": "H||B", 
+            "aafiltered": 0.6829268292682927
+        }, 
+        {
+            "distance": 0.669826224328594, 
+            "species": "D||E", 
+            "aafiltered": 0.6585365853658537
+        }, 
+        {
+            "distance": 0.5134281200631912, 
+            "species": "G||E", 
+            "aafiltered": 0.6097560975609756
+        }, 
+        {
+            "distance": 0.6524486571879937, 
+            "species": "F||E", 
+            "aafiltered": 0.5609756097560976
+        }, 
+        {
+            "distance": 0.5134281200631912, 
+            "species": "I||E", 
+            "aafiltered": 0.5609756097560976
+        }, 
+        {
+            "distance": 0.5213270142180095, 
+            "species": "H||E", 
+            "aafiltered": 0.5609756097560976
+        }, 
+        {
+            "distance": 0.5055292259083728, 
+            "species": "G||D", 
+            "aafiltered": 0.5609756097560976
+        }, 
+        {
+            "distance": 0.617693522906793, 
+            "species": "F||D", 
+            "aafiltered": 0.46341463414634143
+        }, 
+        {
+            "distance": 0.48973143759873616, 
+            "species": "I||D", 
+            "aafiltered": 0.5121951219512195
+        }, 
+        {
+            "distance": 0.49921011058451814, 
+            "species": "H||D", 
+            "aafiltered": 0.4878048780487805
+        }, 
+        {
+            "distance": 0.5308056872037915, 
+            "species": "F||G", 
+            "aafiltered": 0.5853658536585366
+        }, 
+        {
+            "distance": 0.7393364928909952, 
+            "species": "I||G", 
+            "aafiltered": 0.9024390243902439
+        }, 
+        {
+            "distance": 0.7756714060031595, 
+            "species": "H||G", 
+            "aafiltered": 0.8780487804878049
+        }, 
+        {
+            "distance": 0.5276461295418642, 
+            "species": "I||F", 
+            "aafiltered": 0.5121951219512195
+        }, 
+        {
+            "distance": 0.5371248025276462, 
+            "species": "H||F", 
+            "aafiltered": 0.5853658536585366
+        }, 
+        {
+            "distance": 0.7266982622432859, 
+            "species": "H||I", 
+            "aafiltered": 0.8048780487804879
+        }
+    ], 
+    "Arg": [
+        {
+            "distance": 0.684044233807267, 
+            "species": "C||A", 
+            "aafiltered": 0.7142857142857143
+        }, 
+        {
+            "distance": 0.8657187993680885, 
+            "species": "B||A", 
+            "aafiltered": 0.9285714285714286
+        }, 
+        {
+            "distance": 0.6097946287519748, 
+            "species": "E||A", 
+            "aafiltered": 0.5714285714285714
+        }, 
+        {
+            "distance": 0.593996840442338, 
+            "species": "D||A", 
+            "aafiltered": 0.5357142857142857
+        }, 
+        {
+            "distance": 0.5545023696682464, 
+            "species": "G||A", 
+            "aafiltered": 0.6071428571428571
+        }, 
+        {
+            "distance": 0.627172195892575, 
+            "species": "F||A", 
+            "aafiltered": 0.6071428571428571
+        }, 
+        {
+            "distance": 0.5560821484992101, 
+            "species": "I||A", 
+            "aafiltered": 0.6428571428571429
+        }, 
+        {
+            "distance": 0.5592417061611374, 
+            "species": "H||A", 
+            "aafiltered": 0.6785714285714286
+        }, 
+        {
+            "distance": 0.7440758293838863, 
+            "species": "B||C", 
+            "aafiltered": 0.7857142857142857
+        }, 
+        {
+            "distance": 0.7851500789889415, 
+            "species": "E||C", 
+            "aafiltered": 0.8571428571428571
+        }, 
+        {
+            "distance": 0.7898894154818326, 
+            "species": "D||C", 
+            "aafiltered": 0.7857142857142857
+        }, 
+        {
+            "distance": 0.5908372827804107, 
+            "species": "G||C", 
+            "aafiltered": 0.6428571428571429
+        }, 
+        {
+            "distance": 0.7266982622432859, 
+            "species": "F||C", 
+            "aafiltered": 0.7857142857142857
+        }, 
+        {
+            "distance": 0.5797788309636651, 
+            "species": "I||C", 
+            "aafiltered": 0.6785714285714286
+        }, 
+        {
+            "distance": 0.5955766192733017, 
+            "species": "H||C", 
+            "aafiltered": 0.75
+        }, 
+        {
+            "distance": 0.6619273301737757, 
+            "species": "E||B", 
+            "aafiltered": 0.6428571428571429
+        }, 
+        {
+            "distance": 0.6382306477093207, 
+            "species": "D||B", 
+            "aafiltered": 0.5714285714285714
+        }, 
+        {
+            "distance": 0.6003159557661928, 
+            "species": "G||B", 
+            "aafiltered": 0.6428571428571429
+        }, 
+        {
+            "distance": 0.6714060031595577, 
+            "species": "F||B", 
+            "aafiltered": 0.6785714285714286
+        }, 
+        {
+            "distance": 0.6003159557661928, 
+            "species": "I||B", 
+            "aafiltered": 0.7142857142857143
+        }, 
+        {
+            "distance": 0.6145339652448657, 
+            "species": "H||B", 
+            "aafiltered": 0.75
+        }, 
+        {
+            "distance": 0.669826224328594, 
+            "species": "D||E", 
+            "aafiltered": 0.6785714285714286
+        }, 
+        {
+            "distance": 0.5134281200631912, 
+            "species": "G||E", 
+            "aafiltered": 0.5357142857142857
+        }, 
+        {
+            "distance": 0.6524486571879937, 
+            "species": "F||E", 
+            "aafiltered": 0.6428571428571429
+        }, 
+        {
+            "distance": 0.5134281200631912, 
+            "species": "I||E", 
+            "aafiltered": 0.5714285714285714
+        }, 
+        {
+            "distance": 0.5213270142180095, 
+            "species": "H||E", 
+            "aafiltered": 0.6071428571428571
+        }, 
+        {
+            "distance": 0.5055292259083728, 
+            "species": "G||D", 
+            "aafiltered": 0.6071428571428571
+        }, 
+        {
+            "distance": 0.617693522906793, 
+            "species": "F||D", 
+            "aafiltered": 0.5714285714285714
+        }, 
+        {
+            "distance": 0.48973143759873616, 
+            "species": "I||D", 
+            "aafiltered": 0.4642857142857143
+        }, 
+        {
+            "distance": 0.49921011058451814, 
+            "species": "H||D", 
+            "aafiltered": 0.6071428571428571
+        }, 
+        {
+            "distance": 0.5308056872037915, 
+            "species": "F||G", 
+            "aafiltered": 0.5357142857142857
+        }, 
+        {
+            "distance": 0.7393364928909952, 
+            "species": "I||G", 
+            "aafiltered": 0.6785714285714286
+        }, 
+        {
+            "distance": 0.7756714060031595, 
+            "species": "H||G", 
+            "aafiltered": 0.8214285714285714
+        }, 
+        {
+            "distance": 0.5276461295418642, 
+            "species": "I||F", 
+            "aafiltered": 0.5714285714285714
+        }, 
+        {
+            "distance": 0.5371248025276462, 
+            "species": "H||F", 
+            "aafiltered": 0.6428571428571429
+        }, 
+        {
+            "distance": 0.7266982622432859, 
+            "species": "H||I", 
+            "aafiltered": 0.7857142857142857
+        }
+    ], 
+    "Asn": [
+        {
+            "distance": 0.684044233807267, 
+            "species": "C||A", 
+            "aafiltered": 0.6530612244897959
+        }, 
+        {
+            "distance": 0.8657187993680885, 
+            "species": "B||A", 
+            "aafiltered": 0.8979591836734694
+        }, 
+        {
+            "distance": 0.6097946287519748, 
+            "species": "E||A", 
+            "aafiltered": 0.673469387755102
+        }, 
+        {
+            "distance": 0.593996840442338, 
+            "species": "D||A", 
+            "aafiltered": 0.5918367346938775
+        }, 
+        {
+            "distance": 0.5545023696682464, 
+            "species": "G||A", 
+            "aafiltered": 0.36734693877551017
+        }, 
+        {
+            "distance": 0.627172195892575, 
+            "species": "F||A", 
+            "aafiltered": 0.6530612244897959
+        }, 
+        {
+            "distance": 0.5560821484992101, 
+            "species": "I||A", 
+            "aafiltered": 0.36734693877551017
+        }, 
+        {
+            "distance": 0.5592417061611374, 
+            "species": "H||A", 
+            "aafiltered": 0.5918367346938775
+        }, 
+        {
+            "distance": 0.7440758293838863, 
+            "species": "B||C", 
+            "aafiltered": 0.7346938775510204
+        }, 
+        {
+            "distance": 0.7851500789889415, 
+            "species": "E||C", 
+            "aafiltered": 0.8571428571428571
+        }, 
+        {
+            "distance": 0.7898894154818326, 
+            "species": "D||C", 
+            "aafiltered": 0.7755102040816326
+        }, 
+        {
+            "distance": 0.5908372827804107, 
+            "species": "G||C", 
+            "aafiltered": 0.36734693877551017
+        }, 
+        {
+            "distance": 0.7266982622432859, 
+            "species": "F||C", 
+            "aafiltered": 0.7142857142857143
+        }, 
+        {
+            "distance": 0.5797788309636651, 
+            "species": "I||C", 
+            "aafiltered": 0.22448979591836737
+        }, 
+        {
+            "distance": 0.5955766192733017, 
+            "species": "H||C", 
+            "aafiltered": 0.5102040816326531
+        }, 
+        {
+            "distance": 0.6619273301737757, 
+            "species": "E||B", 
+            "aafiltered": 0.7551020408163265
+        }, 
+        {
+            "distance": 0.6382306477093207, 
+            "species": "D||B", 
+            "aafiltered": 0.673469387755102
+        }, 
+        {
+            "distance": 0.6003159557661928, 
+            "species": "G||B", 
+            "aafiltered": 0.3877551020408163
+        }, 
+        {
+            "distance": 0.6714060031595577, 
+            "species": "F||B", 
+            "aafiltered": 0.7142857142857143
+        }, 
+        {
+            "distance": 0.6003159557661928, 
+            "species": "I||B", 
+            "aafiltered": 0.36734693877551017
+        }, 
+        {
+            "distance": 0.6145339652448657, 
+            "species": "H||B", 
+            "aafiltered": 0.6326530612244898
+        }, 
+        {
+            "distance": 0.669826224328594, 
+            "species": "D||E", 
+            "aafiltered": 0.7346938775510204
+        }, 
+        {
+            "distance": 0.5134281200631912, 
+            "species": "G||E", 
+            "aafiltered": 0.3265306122448979
+        }, 
+        {
+            "distance": 0.6524486571879937, 
+            "species": "F||E", 
+            "aafiltered": 0.7346938775510204
+        }, 
+        {
+            "distance": 0.5134281200631912, 
+            "species": "I||E", 
+            "aafiltered": 0.26530612244897966
+        }, 
+        {
+            "distance": 0.5213270142180095, 
+            "species": "H||E", 
+            "aafiltered": 0.5510204081632653
+        }, 
+        {
+            "distance": 0.5055292259083728, 
+            "species": "G||D", 
+            "aafiltered": 0.30612244897959184
+        }, 
+        {
+            "distance": 0.617693522906793, 
+            "species": "F||D", 
+            "aafiltered": 0.6326530612244898
+        }, 
+        {
+            "distance": 0.48973143759873616, 
+            "species": "I||D", 
+            "aafiltered": 0.16326530612244894
+        }, 
+        {
+            "distance": 0.49921011058451814, 
+            "species": "H||D", 
+            "aafiltered": 0.4285714285714286
+        }, 
+        {
+            "distance": 0.5308056872037915, 
+            "species": "F||G", 
+            "aafiltered": 0.3265306122448979
+        }, 
+        {
+            "distance": 0.7393364928909952, 
+            "species": "I||G", 
+            "aafiltered": 0.4693877551020409
+        }, 
+        {
+            "distance": 0.7756714060031595, 
+            "species": "H||G", 
+            "aafiltered": 0.5510204081632653
+        }, 
+        {
+            "distance": 0.5276461295418642, 
+            "species": "I||F", 
+            "aafiltered": 0.2857142857142857
+        }, 
+        {
+            "distance": 0.5371248025276462, 
+            "species": "H||F", 
+            "aafiltered": 0.5306122448979592
+        }, 
+        {
+            "distance": 0.7266982622432859, 
+            "species": "H||I", 
+            "aafiltered": 0.44897959183673475
+        }
+    ]
+}
