@@ -112,11 +112,11 @@
 <span class="comment"># Install Miniconda  (you can ignore this step if you already have Anaconda/Miniconda)</span>
 <span class="cmd">wget http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh -O miniconda.sh</span>
 <span class="cmd">bash miniconda.sh -b -p ~/anaconda/</span>
+<span class="comment"># Add anaconda to PATH</span>
+<span class="comment"># you should add this to your .bashrc so you won't have to run it everytime</span>
 <span class="cmd">export PATH=~/anaconda/bin:$PATH;</span>
 <span class="comment"># Install CoreTracker (all dependencies should be installed along)</span>
-<span class="cmd">conda install -c maclandrol coretracker=1.1.6</span>
-<span class="comment"># Run this or add it to your .bashrc before using CoreTracker</span>
-<span class="cmd">export PATH=~/anaconda/bin:$PATH</span>
+<span class="cmd">conda install -c maclandrol coretracker</span>
 </pre>
 
 Alternatively, a working conda environment is <a href="https://github.com/UdeM-LBIT/CoreTracker/blob/master/env.yml"> also provided here (env.yml)</a>. Common installation problems are due to : a wrong version of numpy, or scipy (compilation errors caused by BLAS/LAPACK or the lack of <code>gcc/gfortran</code> for <code>C/fortran</code> extensions). If you have a <code>segmentation fault</code> after installing CoreTracker, try reinstalling numpy and scipy. 
@@ -124,8 +124,9 @@ Alternatively, a working conda environment is <a href="https://github.com/UdeM-L
 <pre class="terminal">
 <span class="comment"># Using conda, create a new environment based on the provided env.yml file</span>
 <span class="cmd">conda env create -f env.yml</span>
-<span class="comment"># Now install CoreTracker using the native method</span>
-<span class="cmd">pip install --upgrade coretracker</span>
+<span class="cmd">source activate crt</span>
+<span class="comment"># Now install CoreTracker using pip or conda install</span>
+<span class="cmd">pip install coretracker</span>
 </pre>
 
 
