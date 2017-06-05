@@ -1,0 +1,4 @@
+### Random Forest prediction
+genome	codon	ori_aa	rea_aa	fitch	Fisher_pval	Gene_frac	N._rea	N._used	Cod._count	Sub._count	G._len	codon_lik	id	prediction	probability
+LstarA	GAA	E	K	0.0	0.552631578947	0.142857142857	0.025641025641	0.846153846154	0.886363636364	0.0227272727273	1834.0	0.752119263373	32.0	0.0	0.0
+SjapoA	GAA	E	K	0.0	0.517857142857	0.142857142857	0.025641025641	0.666666666667	0.975	0.025	1423.0	0.662013958126	32.0	0.0	0.0

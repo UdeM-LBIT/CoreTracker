@@ -1,0 +1,298 @@
+COX2	PF00116.18	LmeyeA	6.5e-60	200.2	116	240	116	240	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	LmeyeA	7.1e-33	112.5	18	104	18	104	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	SpombA	1.6e-60	202.2	47	69	37	71	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2	PF00116.18	SpombA	1.6e-60	202.2	111	235	111	235	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	SpombA	5.9e-35	119.1	12	99	11	99	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	SpastA	6.5e-59	196.9	115	239	115	239	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	SpastA	5.2e-33	112.9	17	103	17	103	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+Bac_export_1	PF01311.18	SpastA	0.043	13.2	39	108	24	112	Bacterial	export	proteins,	family	1
+ASC	PF00858.22	SpastA	0.38	9.5	46	92	40	93	Amiloride-sensitive	sodium	channel
+COX2	PF00116.18	AacerA	7.2e-58	193.6	113	237	113	237	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	AacerA	2.5e-29	101.1	15	101	15	101	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	CmetaD	3.1e-58	194.7	104	228	104	228	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CmetaD	3.8e-31	107.0	6	92	6	92	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	CgigaA	4.3e-57	191.1	104	228	104	228	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CgigaA	5.5e-32	109.6	6	92	6	92	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+DUF2919	PF11143.6	CgigaA	0.035	14.3	30	85	25	120	Protein	of	unknown	function	(DUF2919)
+zf-DHHC	PF01529.18	CgigaA	0.38	10.7	31	101	25	109	DHHC	palmitoyltransferase
+MTABC_N	PF16185.3	CgigaA	0.43	9.9	26	77	18	118	Mitochondrial	ABC-transporter	N-terminal	five	TM	region
+DUF485	PF04341.10	CgigaA	0.92	9.4	37	85	25	87	Protein	of	unknown	function,	DUF485
+DUF485	PF04341.10	CgigaA	0.92	9.4	75	99	71	116	Protein	of	unknown	function,	DUF485
+COX2	PF00116.18	CsantA	1.4e-54	183.0	110	234	110	234	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CsantA	8.4e-31	105.8	12	98	12	98	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	CtropB	1.9e-57	192.2	104	228	104	228	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CtropB	1.2e-31	108.6	6	92	6	92	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+zf-DHHC	PF01529.18	CtropB	0.078	12.9	29	101	24	109	DHHC	palmitoyltransferase
+2TM	PF13239.4	CtropB	0.13	12.5	21	85	16	116	2TM	domain
+COX2	PF00116.18	CtropA	1.9e-57	192.2	104	228	104	228	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CtropA	1.2e-31	108.6	6	92	6	92	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+zf-DHHC	PF01529.18	CtropA	0.078	12.9	29	101	24	109	DHHC	palmitoyltransferase
+2TM	PF13239.4	CtropA	0.13	12.5	21	85	16	116	2TM	domain
+COX2	PF00116.18	WpijpA	6.3e-60	200.2	111	235	111	235	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	WpijpA	5.4e-34	116.1	13	99	13	99	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+DUF354	PF04007.10	WpijpA	0.091	11.7	100	170	94	190	Protein	of	unknown	function	(DUF354)
+Virul_fac_BrkB	PF03631.13	WpijpA	0.11	11.9	39	102	17	103	Virulence	factor	BrkB
+COX2	PF00116.18	CsubhA	1.1e-56	189.8	108	232	108	232	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CsubhA	9.3e-33	112.1	10	96	10	96	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+PIG-P	PF08510.10	CsubhA	3.3	7.5	37	109	31	117	PIG-P
+COX2	PF00116.18	CsubhB	1.1e-56	189.8	108	232	108	232	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CsubhB	9.3e-33	112.1	10	96	10	96	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+PIG-P	PF08510.10	CsubhB	3.3	7.5	37	109	31	117	PIG-P
+COX2	PF00116.18	OanguA	4.9e-60	200.6	112	236	112	236	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	OanguA	5.7e-31	106.4	14	100	14	100	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+DUF999	PF06198.9	OanguA	0.08	12.8	8	93	5	103	Protein	of	unknown	function	(DUF999)
+COX2	PF00116.18	SarboA	8.8e-59	196.5	115	239	115	239	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	SarboA	1.1e-33	115.1	17	103	17	103	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+DUF818	PF05677.10	SarboA	3.8	6.2	13	62	11	74	Chlamydia	CHLPS	protein	(DUF818)
+DUF818	PF05677.10	SarboA	3.8	6.2	80	122	64	136	Chlamydia	CHLPS	protein	(DUF818)
+COX2	PF00116.18	CcastA	3.9e-55	184.7	111	235	111	235	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CcastA	8.7e-32	109.0	13	99	13	99	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	KtherA	4.9e-60	200.5	115	239	115	239	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	KtherA	1.8e-34	117.6	17	103	17	103	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	CnorvA	4e-59	197.6	110	234	110	234	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CnorvA	2.7e-34	117.0	12	98	12	98	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	CviswA	1.8e-57	192.3	104	228	104	228	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CviswA	1.1e-31	108.7	6	92	6	92	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+zf-DHHC	PF01529.18	CviswA	0.076	13.0	29	101	24	109	DHHC	palmitoyltransferase
+2TM	PF13239.4	CviswA	0.1	12.8	21	85	16	116	2TM	domain
+COX2	PF00116.18	MstarA	4e-58	194.4	113	237	113	237	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	MstarA	2e-33	114.2	13	100	13	101	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+zf-DHHC	PF01529.18	MstarA	1.2	9.1	39	103	36	109	DHHC	palmitoyltransferase
+COX2	PF00116.18	NbaciA	2.4e-57	191.9	111	235	111	235	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	NbaciA	1e-33	115.2	13	99	13	99	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	CbohiA	5.1e-58	194.0	104	228	104	228	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CbohiA	1.6e-33	114.5	6	92	6	92	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+E1-E2_ATPase	PF00122.18	CbohiA	0.15	11.2	17	93	11	96	E1-E2	ATPase
+2TM	PF13239.4	CbohiA	0.17	12.1	20	85	16	116	2TM	domain
+zf-DHHC	PF01529.18	CbohiA	0.18	11.8	32	101	26	121	DHHC	palmitoyltransferase
+COX2	PF00116.18	MfariA	1.5e-57	192.5	104	228	104	228	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	MfariA	8e-32	109.1	6	92	6	92	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+DUF485	PF04341.10	MfariA	0.76	9.6	34	85	20	87	Protein	of	unknown	function,	DUF485
+DUF485	PF04341.10	MfariA	0.76	9.6	75	99	73	123	Protein	of	unknown	function,	DUF485
+zf-DHHC	PF01529.18	MfariA	0.8	9.7	31	101	25	109	DHHC	palmitoyltransferase
+COX2	PF00116.18	MfariB	1.8e-57	192.2	116	240	116	240	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	MfariB	2.6e-31	107.5	18	104	18	104	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+NDUF_B6	PF09782.7	MfariB	0.091	12.7	117	165	107	177	NADH:ubiquinone	oxidoreductase,	NDUFB6/B17	subunit
+COX2	PF00116.18	CalaiA	3.6e-57	191.3	116	240	116	240	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CalaiA	5.4e-31	106.5	4	8	1	15	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2_TM	PF02790.13	CalaiA	5.4e-31	106.5	18	104	18	104	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+zf-DHHC	PF01529.18	CalaiA	0.56	10.2	46	113	38	121	DHHC	palmitoyltransferase
+DUF485	PF04341.10	CalaiA	3.2	7.6	50	97	39	100	Protein	of	unknown	function,	DUF485
+DUF485	PF04341.10	CalaiA	3.2	7.6	87	111	83	129	Protein	of	unknown	function,	DUF485
+COX2	PF00116.18	LanspB	5.6e-60	200.4	114	238	114	238	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	LanspB	7e-33	112.5	16	102	16	102	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	CphanA	1.1e-57	192.9	106	230	106	230	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CphanA	6.5e-29	99.8	8	94	8	94	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+zf-DHHC	PF01529.18	CphanA	1.1	9.2	35	98	30	110	DHHC	palmitoyltransferase
+DUF485	PF04341.10	CphanA	1.9	8.4	38	87	19	97	Protein	of	unknown	function,	DUF485
+DUF485	PF04341.10	CphanA	1.9	8.4	77	98	75	119	Protein	of	unknown	function,	DUF485
+COX2	PF00116.18	LanspA	3.9e-60	200.9	108	232	108	232	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	LanspA	3.2e-33	113.6	10	96	10	96	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	CglabA	1.4e-51	173.3	115	224	115	227	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CglabA	1e-34	118.4	17	103	17	103	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	ScryoA	1.7e-59	198.8	111	235	111	235	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	ScryoA	2.9e-31	107.3	12	99	11	99	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	CneerA	5.2e-57	190.8	104	228	104	228	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CneerA	5.9e-32	109.5	6	92	6	92	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+2TM	PF13239.4	CneerA	0.1	12.8	21	85	16	116	2TM	domain
+zf-DHHC	PF01529.18	CneerA	0.14	12.1	31	101	25	109	DHHC	palmitoyltransferase
+COX2	PF00116.18	CsakeA	4.4e-58	194.2	104	228	104	228	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CsakeA	7.2e-31	106.1	6	92	6	92	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+DUF485	PF04341.10	CsakeA	3.5	7.5	37	85	31	87	Protein	of	unknown	function,	DUF485
+DUF485	PF04341.10	CsakeA	3.5	7.5	75	99	70	123	Protein	of	unknown	function,	DUF485
+COX2	PF00116.18	HuvarA	3.2e-51	172.1	108	233	108	233	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	HuvarA	8.3e-30	102.7	8	96	8	96	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+zf-DHHC	PF01529.18	HuvarA	0.44	10.5	35	99	31	112	DHHC	palmitoyltransferase
+COX2	PF00116.18	CjiufA	1.1e-46	157.4	104	210	104	210	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CjiufA	6.1e-33	112.7	6	92	6	92	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+zf-DHHC	PF01529.18	CjiufA	0.67	9.9	33	101	26	109	DHHC	palmitoyltransferase
+COX2	PF00116.18	KlactA	4e-60	200.9	111	235	111	235	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	KlactA	5.2e-35	119.3	13	99	13	99	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	CzempA	4.2e-57	191.1	110	234	110	234	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CzempA	1.5e-28	98.6	14	98	14	98	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	CmetaB	3.1e-58	194.7	104	228	104	228	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CmetaB	3.8e-31	107.0	6	92	6	92	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	CmetaC	3.1e-58	194.7	104	228	104	228	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CmetaC	3.8e-31	107.0	6	92	6	92	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	CmetaA	3.1e-58	194.7	104	228	104	228	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CmetaA	3.8e-31	107.0	6	92	6	92	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	CmetaF	3.1e-58	194.7	104	228	104	228	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CmetaF	3.8e-31	107.0	6	92	6	92	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	CfrijA	2.3e-57	191.9	104	228	104	228	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CfrijA	5.8e-32	109.6	6	92	6	92	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+2TM	PF13239.4	CfrijA	0.1	12.8	21	85	16	116	2TM	domain
+zf-DHHC	PF01529.18	CfrijA	0.14	12.1	31	101	25	109	DHHC	palmitoyltransferase
+COX2	PF00116.18	CgallA	1.3e-57	192.8	106	230	106	230	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CgallA	2.9e-29	100.9	8	94	8	94	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+zf-DHHC	PF01529.18	CgallA	1	9.3	35	98	30	110	DHHC	palmitoyltransferase
+DUF485	PF04341.10	CgallA	2.4	8.0	38	87	19	90	Protein	of	unknown	function,	DUF485
+DUF485	PF04341.10	CgallA	2.4	8.0	77	98	74	119	Protein	of	unknown	function,	DUF485
+COX2	PF00116.18	CmetaE	3.1e-58	194.7	104	228	104	228	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CmetaE	3.8e-31	107.0	6	92	6	92	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	PpastA	8.3e-60	199.8	113	237	113	237	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	PpastA	1.8e-31	108.0	15	101	15	101	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+zf-DHHC	PF01529.18	PpastA	0.27	11.2	37	103	25	116	DHHC	palmitoyltransferase
+COX2	PF00116.18	SjapoA	4.1e-60	200.8	112	237	112	237	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	SjapoA	1.5e-31	108.3	13	100	12	100	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	CtetrA	1.4e-57	192.6	127	251	127	251	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CtetrA	1.7e-31	108.1	29	115	29	115	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+zf-DHHC	PF01529.18	CtetrA	0.23	11.4	54	124	48	132	DHHC	palmitoyltransferase
+2TM	PF13239.4	CtetrA	4	7.7	2	21	1	35	2TM	domain
+2TM	PF13239.4	CtetrA	4	7.7	44	108	39	138	2TM	domain
+COX2	PF00116.18	MmagnB	2.6e-57	191.8	111	235	111	235	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	MmagnB	7.3e-31	106.0	13	98	13	99	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	MmagnA	2.6e-57	191.8	111	235	111	235	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	MmagnA	7.3e-31	106.0	13	98	13	99	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	CparaA	3.6e-58	194.5	124	248	124	248	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CparaA	4.1e-31	106.8	26	112	26	112	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	CcoryA	3.2e-57	191.5	104	228	104	228	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CcoryA	2.4e-31	107.6	6	92	6	92	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	CparaC	3.6e-58	194.5	124	248	124	248	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CparaC	4.1e-31	106.8	26	112	26	112	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	CparaB	3.6e-58	194.5	124	248	124	248	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CparaB	4.1e-31	106.8	26	112	26	112	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	CparaE	3.6e-58	194.5	124	248	124	248	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CparaE	4.1e-31	106.8	26	112	26	112	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	CparaD	3.6e-58	194.5	124	248	124	248	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CparaD	4.1e-31	106.8	26	112	26	112	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	CparaF	3.6e-58	194.5	124	248	124	248	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CparaF	4.1e-31	106.8	26	112	26	112	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	MtetrA	2.4e-57	191.9	111	235	111	235	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	MtetrA	1.8e-30	104.8	13	98	13	99	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	CsaraA	1.8e-57	192.3	104	228	104	228	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CsaraA	1.2e-31	108.6	6	92	6	92	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+zf-DHHC	PF01529.18	CsaraA	0.08	12.9	29	101	24	109	DHHC	palmitoyltransferase
+2TM	PF13239.4	CsaraA	0.12	12.6	21	85	16	116	2TM	domain
+COX2	PF00116.18	CsuavA	4.1e-58	194.3	111	235	111	235	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CsuavA	1.8e-34	117.6	13	99	13	99	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+DUF354	PF04007.10	CsuavA	0.094	11.6	100	172	94	189	Protein	of	unknown	function	(DUF354)
+COX2	PF00116.18	PkluyA	8.9e-60	199.7	108	232	108	232	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	PkluyA	3.1e-30	104.0	10	96	10	96	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+Pectinesterase	PF01095.17	PkluyA	0.056	12.0	34	76	14	80	Pectinesterase
+DUF3611	PF12263.6	PkluyA	0.069	12.9	28	99	21	122	Protein	of	unknown	function	(DUF3611)
+Cadherin_C_2	PF16492.3	PkluyA	0.44	11.2	37	62	35	101	Cadherin	cytoplasmic	C-terminal
+COX2	PF00116.18	PcanaA	1.5e-58	195.7	111	235	111	235	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	PcanaA	1.6e-33	114.6	13	99	13	99	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+DUF846	PF05832.10	PcanaA	0.56	10.1	31	58	6	64	Eukaryotic	protein	of	unknown	function	(DUF846)
+DUF846	PF05832.10	PcanaA	0.56	10.1	83	142	63	152	Eukaryotic	protein	of	unknown	function	(DUF846)
+COX2	PF00116.18	CsalmA	4.6e-57	191.0	110	234	110	234	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CsalmA	6.5e-31	106.2	12	97	12	98	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	BcustA	9.2e-60	199.7	111	235	111	235	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	BcustA	1.9e-29	101.5	13	99	13	99	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	CjadiA	3.1e-58	194.7	111	235	111	235	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CjadiA	7.2e-34	115.7	13	99	13	99	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+PsbY	PF06298.9	CjadiA	0.17	11.7	43	59	39	61	Photosystem	II	protein	Y	(PsbY)
+PsbY	PF06298.9	CjadiA	0.17	11.7	86	93	85	94	Photosystem	II	protein	Y	(PsbY)
+DUF846	PF05832.10	CjadiA	1.1	9.2	33	59	18	66	Eukaryotic	protein	of	unknown	function	(DUF846)
+DUF846	PF05832.10	CjadiA	1.1	9.2	90	142	69	152	Eukaryotic	protein	of	unknown	function	(DUF846)
+COX2	PF00116.18	AgossB	1.5e-55	186.1	112	236	112	236	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	AgossB	4.8e-28	97.0	14	100	14	100	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+DUF818	PF05677.10	AgossB	0.21	10.3	65	119	57	140	Chlamydia	CHLPS	protein	(DUF818)
+COX2	PF00116.18	NdelpA	5.9e-51	171.3	114	223	114	226	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	NdelpA	1.4e-34	117.9	16	102	16	102	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	LelonA	1.5e-57	192.6	108	232	108	232	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	LelonA	9.3e-33	112.1	10	96	10	96	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+zf-DHHC	PF01529.18	LelonA	0.75	9.8	36	105	29	113	DHHC	palmitoyltransferase
+DUF485	PF04341.10	LelonA	1	9.2	41	88	30	91	Protein	of	unknown	function,	DUF485
+DUF485	PF04341.10	LelonA	1	9.2	79	103	75	122	Protein	of	unknown	function,	DUF485
+COX2	PF00116.18	CalimA	2.7e-57	191.7	106	230	106	230	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CalimA	6.5e-29	99.8	8	94	8	94	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+zf-DHHC	PF01529.18	CalimA	1.2	9.2	35	98	30	110	DHHC	palmitoyltransferase
+DUF485	PF04341.10	CalimA	1.8	8.4	38	87	19	97	Protein	of	unknown	function,	DUF485
+DUF485	PF04341.10	CalimA	1.8	8.4	77	98	75	119	Protein	of	unknown	function,	DUF485
+COX2	PF00116.18	BcaliA	4.3e-59	197.5	111	235	111	235	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	BcaliA	3.2e-34	116.8	13	99	13	99	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+P12	PF12669.5	BcaliA	3	8.2	44	63	38	65	Virus	attachment	protein	p12	family
+P12	PF12669.5	BcaliA	3	8.2	76	92	75	98	Virus	attachment	protein	p12	family
+P12	PF12669.5	BcaliA	3	8.2	216	221	209	222	Virus	attachment	protein	p12	family
+COX2	PF00116.18	SoctoA	2.2e-60	201.7	111	235	111	235	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	SoctoA	8.8e-31	105.8	12	99	11	99	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	CdefoA	1.3e-57	192.8	106	230	106	230	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CdefoA	2.9e-29	100.9	8	94	8	94	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+zf-DHHC	PF01529.18	CdefoA	1	9.3	35	98	30	110	DHHC	palmitoyltransferase
+DUF485	PF04341.10	CdefoA	2.4	8.0	38	87	19	90	Protein	of	unknown	function,	DUF485
+DUF485	PF04341.10	CdefoA	2.4	8.0	77	98	74	119	Protein	of	unknown	function,	DUF485
+COX2	PF00116.18	LdasiA	6.7e-60	200.1	115	239	115	239	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	LdasiA	9.3e-33	112.1	17	103	17	103	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	LkluyF	4.2e-60	200.8	115	239	115	239	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	LkluyF	4.4e-34	116.4	17	103	17	103	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	LkluyE	5.4e-60	200.4	115	239	115	239	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	LkluyE	4.4e-34	116.4	17	103	17	103	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	LkluyD	5.4e-60	200.4	115	239	115	239	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	LkluyD	4.4e-34	116.4	17	103	17	103	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	LkluyC	4.2e-60	200.8	115	239	115	239	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	LkluyC	4.4e-34	116.4	17	103	17	103	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	CvartA	6.6e-58	193.7	111	235	111	235	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CvartA	9e-34	115.4	13	99	13	99	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+DUF846	PF05832.10	CvartA	0.78	9.6	30	59	17	72	Eukaryotic	protein	of	unknown	function	(DUF846)
+DUF846	PF05832.10	CvartA	0.78	9.6	87	141	63	153	Eukaryotic	protein	of	unknown	function	(DUF846)
+COX2	PF00116.18	LkluyA	4.2e-60	200.8	115	239	115	239	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	LkluyA	4.4e-34	116.4	17	103	17	103	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	CorthB	3.5e-58	194.6	117	241	117	241	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CorthB	1.2e-31	108.6	19	105	19	105	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	CorthC	3.5e-58	194.6	117	241	117	241	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CorthC	1.2e-31	108.6	19	105	19	105	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	CorthA	3.5e-58	194.6	117	241	117	241	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CorthA	1.2e-31	108.6	19	105	19	105	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	ClusiA	1.1e-58	196.2	104	228	104	228	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	ClusiA	7.7e-32	109.2	6	92	6	92	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+2TM	PF13239.4	ClusiA	0.19	11.9	22	85	17	116	2TM	domain
+zf-DHHC	PF01529.18	ClusiA	0.47	10.4	32	101	26	109	DHHC	palmitoyltransferase
+COX2	PF00116.18	MguilA	1.9e-58	195.4	104	228	104	228	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	MguilA	1.9e-31	107.9	6	92	6	92	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+2TM	PF13239.4	MguilA	0.043	14.0	22	84	17	116	2TM	domain
+zf-DHHC	PF01529.18	MguilA	1.8	8.5	34	101	28	109	DHHC	palmitoyltransferase
+DUF485	PF04341.10	MguilA	3.6	7.5	36	85	29	87	Protein	of	unknown	function,	DUF485
+DUF485	PF04341.10	MguilA	3.6	7.5	75	100	73	132	Protein	of	unknown	function,	DUF485
+COX2	PF00116.18	WmucoA	3e-59	198.0	111	235	111	235	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	WmucoA	7.4e-34	115.6	13	99	13	99	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	ScereC	8.1e-59	196.6	115	239	115	239	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	ScereC	9.4e-34	115.3	17	103	17	103	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+DUF818	PF05677.10	ScereC	2.3	6.9	14	62	12	66	Chlamydia	CHLPS	protein	(DUF818)
+DUF818	PF05677.10	ScereC	2.3	6.9	80	122	64	137	Chlamydia	CHLPS	protein	(DUF818)
+COX2	PF00116.18	ScereA	8.1e-59	196.6	115	239	115	239	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	ScereA	9.4e-34	115.3	17	103	17	103	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+DUF818	PF05677.10	ScereA	2.3	6.9	14	62	12	66	Chlamydia	CHLPS	protein	(DUF818)
+DUF818	PF05677.10	ScereA	2.3	6.9	80	122	64	137	Chlamydia	CHLPS	protein	(DUF818)
+COX2	PF00116.18	ScereD	9e-60	199.7	115	239	115	239	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	ScereD	9.4e-34	115.3	17	103	17	103	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+DUF818	PF05677.10	ScereD	2.3	6.9	14	62	12	66	Chlamydia	CHLPS	protein	(DUF818)
+DUF818	PF05677.10	ScereD	2.3	6.9	80	122	64	137	Chlamydia	CHLPS	protein	(DUF818)
+COX2	PF00116.18	ScereE	9e-60	199.7	115	239	115	239	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	ScereE	9.4e-34	115.3	17	103	17	103	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+DUF818	PF05677.10	ScereE	2.3	6.9	14	62	12	66	Chlamydia	CHLPS	protein	(DUF818)
+DUF818	PF05677.10	ScereE	2.3	6.9	80	122	64	137	Chlamydia	CHLPS	protein	(DUF818)
+COX2	PF00116.18	DhansA	6.2e-57	190.6	104	228	104	228	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	DhansA	1.1e-32	111.9	6	92	6	92	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+2TM	PF13239.4	DhansA	0.11	12.7	21	85	16	115	2TM	domain
+zf-DHHC	PF01529.18	DhansA	0.5	10.3	34	101	26	108	DHHC	palmitoyltransferase
+DUF485	PF04341.10	DhansA	4	7.3	36	85	30	88	Protein	of	unknown	function,	DUF485
+DUF485	PF04341.10	DhansA	4	7.3	75	100	73	132	Protein	of	unknown	function,	DUF485
+COX2	PF00116.18	YlipoB	1.3e-57	192.7	106	230	106	230	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	YlipoB	1.8e-28	98.4	8	94	8	94	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+DUF485	PF04341.10	YlipoB	1.2	9.1	38	87	19	104	Protein	of	unknown	function,	DUF485
+DUF485	PF04341.10	YlipoB	1.2	9.1	77	98	75	119	Protein	of	unknown	function,	DUF485
+zf-DHHC	PF01529.18	YlipoB	1.5	8.8	35	98	30	110	DHHC	palmitoyltransferase
+COX2	PF00116.18	LnothA	4.9e-60	200.5	115	239	115	239	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	LnothA	7e-33	112.5	17	103	17	103	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	YlipoA	1.3e-57	192.7	106	230	106	230	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	YlipoA	1.8e-28	98.4	8	94	8	94	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+DUF485	PF04341.10	YlipoA	1.2	9.1	38	87	19	104	Protein	of	unknown	function,	DUF485
+DUF485	PF04341.10	YlipoA	1.2	9.1	77	98	75	119	Protein	of	unknown	function,	DUF485
+zf-DHHC	PF01529.18	YlipoA	1.5	8.8	35	98	30	110	DHHC	palmitoyltransferase
+COX2	PF00116.18	CtheaA	3.1e-58	194.7	104	228	104	228	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CtheaA	1.1e-31	108.7	6	92	6	92	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX2	PF00116.18	AgossA	1.8e-56	189.0	109	233	109	233	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	AgossA	2.3e-28	98.0	11	97	11	97	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+DUF818	PF05677.10	AgossA	0.17	10.7	62	116	54	137	Chlamydia	CHLPS	protein	(DUF818)
+COX2	PF00116.18	MingeA	2.2e-58	195.2	113	237	113	237	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	MingeA	1.5e-33	114.7	13	100	13	101	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+zf-DHHC	PF01529.18	MingeA	1.7	8.6	40	103	35	109	DHHC	palmitoyltransferase
+COX2	PF00116.18	ScastA	3.1e-59	198.0	113	237	113	237	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	ScastA	1.5e-33	114.6	15	101	15	101	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+COX1	PF00115.18	ScastA	0.015	14.0	39	104	14	126	Cytochrome	C	and	Quinol	oxidase	polypeptide	I
+DUF3671	PF12420.6	ScastA	0.98	9.4	41	94	38	120	Protein	of	unknown	function
+COX2	PF00116.18	CmaltA	9.6e-59	196.4	104	228	104	228	Cytochrome	C	oxidase	subunit	II,	periplasmic	domain
+COX2_TM	PF02790.13	CmaltA	1.2e-31	108.6	6	92	6	92	Cytochrome	C	oxidase	subunit	II,	transmembrane	domain
+2TM	PF13239.4	CmaltA	0.088	13.0	21	85	16	116	2TM	domain
+zf-DHHC	PF01529.18	CmaltA	0.094	12.7	29	101	24	109	DHHC	palmitoyltransferase
