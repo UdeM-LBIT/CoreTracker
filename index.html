@@ -107,7 +107,7 @@
         <a class="anchor" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
         <p><code class="coretracker">CoreTracker</code> is compatible with python 2.7 and has only been tested on linux. Installation requires the following external application : <a href="https://gcc.gnu.org/wiki/GFortran"><code>gfortran</code></a>, <a href="https://www.riverbankcomputing.com/software/pyqt/download"><code>PyQt4</code>, </a><a href="http://drive5.com/muscle/"><code>muscle</code></a>, <a href="http://mafft.cbrc.jp/alignment/software/"><code>mafft</code></a> and <a href="http://hmmer.org/download.html"><code>HMMER</code></a>. Python dependencies are listed in the <a href="https://github.com/UdeM-LBIT/CoreTracker/blob/master/requirements.txt"> <code>requirements.txt</code></a> file.</p>
           <h3 id="conda">Install CoreTracker using the Anaconda/Miniconda environment</h3>
-          The easiest and recommended way to install <code class="coretracker">CoreTracker</code> is through <a href="https://www.continuum.io/content/conda-data-science"><code>conda</code></a>. If you are already familiar with conda, I recommend to setup a new environment. <p><span style="color:#cc0000"> Important : For a variety of reason, pip won't work sometimes in a conda environment (for example, if you have $PYTHONPATH setup in your shell profile). In that case, please use the full path to pip in the root environment (ex : <b>~/miniconda2/bin/pip</b> instead of just <strong>pip</strong> )</span></p>
+          The easiest and recommended way to install <code class="coretracker">CoreTracker</code> is through <a href="https://www.continuum.io/content/conda-data-science"><code>conda</code></a>. If you are already familiar with conda, I recommend to setup a new environment. <p><span style="color:#cc0000"> Important : For a variety of reason, pip won't work sometimes in a conda environment (for example, if you have $PYTHONPATH setup in your shell profile). In that case, please use the full path to pip in the root environment (ex : <b>/path/to/conda/bin/pip</b> instead of just <b>pip</b> )</span></p>
 <pre class="terminal">
 <span class="comment"># Install Miniconda  (you can ignore this step if you already have Anaconda/Miniconda)</span>
 <span class="cmd">wget http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh -O miniconda.sh</span>
@@ -125,7 +125,7 @@
 <span class="cmd">conda install hmmer muscle mafft </span>
 <span class="cmd">conda install -c anaconda pyqt=4 numpy</span>
 <span class="cmd">conda install -c jlmenut weasyprint=0.23</span>
-<span class="comment"># Install CoreTracker (remaining dependencies should be installed along)</span>
+<span class="comment"># Install CoreTracker (remaining dependencies should be installed with coretracker)</span>
 <span class="cmd">conda install -c maclandrol coretracker</span>
 </pre>
 
@@ -322,6 +322,10 @@ MODE: 'wilcoxon'
 
 <span class="comment"># Distance matrice: identity or known substitution matrix</span>
 MATRIX: 'blosum62'
+
+<span class="comment"># Codon must appear at least CODON_COUNT_THRESHOLD time in the alignment
+# to be considered for codon reassignment prediction</span>
+CODON_COUNT_THRESHOLD: 1
 
 <span class="comment"># Codon to amino acid likelihood. 
 # Use either consensus or complete alignment for Telford score</span>
