@@ -107,7 +107,7 @@
         <a class="anchor" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
         <p><code class="coretracker">CoreTracker</code> is compatible with python 2.7 and has only been tested on linux. Installation requires the following external application : <a href="https://gcc.gnu.org/wiki/GFortran"><code>gfortran</code></a>, <a href="https://www.riverbankcomputing.com/software/pyqt/download"><code>PyQt4</code>, </a><a href="http://drive5.com/muscle/"><code>muscle</code></a>, <a href="http://mafft.cbrc.jp/alignment/software/"><code>mafft</code></a> and <a href="http://hmmer.org/download.html"><code>HMMER</code></a>. Python dependencies are listed in the <a href="https://github.com/UdeM-LBIT/CoreTracker/blob/master/requirements.txt"> <code>requirements.txt</code></a> file.</p>
           <h3 id="conda">Install CoreTracker using the Anaconda/Miniconda environment</h3>
-          The easiest and recommended way to install <code class="coretracker">CoreTracker</code> is through <a href="https://www.continuum.io/content/conda-data-science"><code>conda</code></a>. If you are already familiar with conda, I recommend to setup a virtual env just for the package.
+          The easiest and recommended way to install <code class="coretracker">CoreTracker</code> is through <a href="https://www.continuum.io/content/conda-data-science"><code>conda</code></a>. If you are already familiar with conda, I recommend to setup a new environment. <span style="color:#cc0000"> Important : For a variety of reason, pip won't work sometimes in a conda environment (for example, if you have $PYTHONPATH setup in your shell profile). In that case, please use the full path to pip in the root environment (ex : <strong>~/miniconda2/bin/pip</strong> instead of just <strong>pip</strong> )</span>
 <pre class="terminal">
 <span class="comment"># Install Miniconda  (you can ignore this step if you already have Anaconda/Miniconda)</span>
 <span class="cmd">wget http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh -O miniconda.sh</span>
@@ -115,7 +115,17 @@
 <span class="comment"># Add anaconda to PATH</span>
 <span class="comment"># you should add this to your .bashrc so you won't have to run it everytime</span>
 <span class="cmd">export PATH=~/anaconda/bin:$PATH;</span>
-<span class="comment"># Install CoreTracker (all dependencies should be installed along)</span>
+
+<span class="comment"># Setup a new environement and activate it</span>
+<span class="cmd">conda create -n crt python=2.7 pip libgfortran</span>
+<span class="cmd">source activate crt</span>
+<span class="comment"># Install dependencies (if required)</span>
+<span class="cmd">conda config --add channels r</span>
+<span class="cmd">conda config --add channels bioconda</span>
+<span class="cmd">conda install hmmer muscle mafft </span>
+<span class="cmd">conda install -c anaconda pyqt=4 numpy</span>
+<span class="cmd">conda install -c jlmenut weasyprint=0.23</span>
+<span class="comment"># Install CoreTracker (remaining dependencies should be installed along)</span>
 <span class="cmd">conda install -c maclandrol coretracker</span>
 </pre>
 
@@ -131,16 +141,16 @@ Alternatively, a working conda environment is <a href="https://github.com/UdeM-L
 
 
 <h3 id="native">Native installation</h3>
-First install the external dependencies. You will need <code>sudo</code>. Depending on your distribution, you could also have to compile and install from sources. From experience, it's sometimes better to install <code>numpy</code> using distribution specific sources.
+First install the external dependencies if they are missing. If you plan to use the alignment pipeline implemented in CoreTracker, you will need to install <strong>mafft</strong> and/or  <strong>mafft</strong>  and <strong>HMMER</strong> package. An up to date numpy with libgfortran support is required. To install the required dependencies, you might need <code>sudo</code> for this task. Depending on your distribution, you could also have to compile and install from sources. From experience, it's sometimes better to install <code>numpy</code> using distribution specific sources.
 <pre class="terminal">
 <span class="comment"># Install dependencies (debian distributions)</span>
 <span class="cmd">sudo apt-get update</span>
 <span class="cmd">sudo apt-get install libgfortran python-numpy python-qt4 python-lxml python-six</span>
 <span class="cmd">sudo apt-get install muscle mafft hmmer</span>
 </pre>
-Now install CoreTracker with <code>pip</code> or <code>setup.py</code>. I recommend setting up a virtualenv for coretracker.
+Now install CoreTracker with <code>pip</code> or <code>setup.py</code>. If you are familiar with <strong><a href="http://python-guide-pt-br.readthedocs.io/en/latest/dev/virtualenvs/">virtualenv</a></strong>, I recommend setting up a virtual environment for coretracker.
 <pre class="terminal">
-<span class="cmd">pip install --upgrade coretracker</span>
+<span class="cmd">pip install coretracker</span>
 </pre>
 
 <pre class="terminal">
@@ -159,14 +169,15 @@ Now install CoreTracker with <code>pip</code> or <code>setup.py</code>. I recomm
 
 <p>To invoke CoreTracker, just type <b><code>coretracker -h</code></b> after installation in a terminal. Its command line options will be printed </p>
 <p>
-<pre class="terminal">CoreTracker v:1.1.5 Copyright (C) 2017 Emmanuel Noutahi
-usage: coretracker [-h] [--wdir OUTDIR] [--version] [--gapfilter GAPFILTER]
-                   [--idfilter IDFILTER] [--icfilter ICCONTENT] -t TREE
-                   [--scale SCALE] --protseq SEQ --dnaseq DNASEQ [--stopcodon]
-                   [--debug] [--rmconst] [--norefine] [--novalid]
-                   [--align [ALIGN]] [--use_tree] [--expos] [--hmmdir HMMDIR]
-                   [--params PARAMS] [--parallel [PARALLEL]]
-                   [--imformat {pdf,png,svg}]
+<pre class="terminal">CoreTracker v:1.2 Copyright (C) 2017 Emmanuel Noutahi
+usage: coretracker.py [-h] [--wdir OUTDIR] [--version] [--gapfilter GAPFILTER]
+                      [--idfilter IDFILTER] [--icfilter ICCONTENT] -t TREE
+                      [--scale SCALE] --protseq SEQ --dnaseq DNASEQ
+                      [--stopcodon] [--debug] [--rmconst] [--norefine]
+                      [--novalid] [--align [ALIGN]] [--use_tree] [--expos]
+                      [--hmmdir HMMDIR] [--params PARAMS]
+                      [--parallel [PARALLEL]] [--imformat {pdf,png,svg}]
+                      [--restrict_to RESTRICT_TO] [--codemap CODEMAP]
 
 CoreTracker, A codon reassignment tracker
 
@@ -226,6 +237,12 @@ optional arguments:
                         provided
   --imformat {pdf,png,svg}
                         Image format to use for output (Codon_data file)
+  --restrict_to RESTRICT_TO
+                        Restrict analysis to list of genomes only
+  --codemap CODEMAP     A tab delimited file that map each species to its
+                        genetic code. Default code (--gcode) will be used for
+                        missing species
+
   </pre></p>
 
 <p>Those options can be confusing for a new user, so here is a break down, depending on what you want to do. Please see the <a href="#tuto">tutoral section</a> for any issues not addressed here (dataset preparation, other tools, output interpretation)</p>
@@ -322,8 +339,6 @@ ADD_NUMBER_PIE: False
 <span class="comment"># alpha : rejection of the null hypothesis</span>
 CONF: 0.05
 
-<span class="comment"># Random Forest model to use (1-3).</span>
-MODEL_TYPE: '3'
 </pre>
 </div>
 </div>
@@ -332,7 +347,7 @@ MODEL_TYPE: '3'
 <div class="section" id="tuto">
   <h2>
   <a class="anchor" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tutorial</h2>
-	<p>The data used in this tutorial is available in the <a href="https://github.com/UdeM-LBIT/CoreTracker/tree/master/examples">examples</a> folder of the <a href="https://github.com/UdeM-LBIT/CoreTracker">github repository</a> or as a zip file from <a href="https://goo.gl/d8Z1PY">google drive (ct_examples.zip)</a>. In the tutorial dataset, you will find the following files and folders :
+  <p>The data used in this tutorial is available in the <a href="https://github.com/UdeM-LBIT/CoreTracker/tree/master/examples">examples</a> folder of the <a href="https://github.com/UdeM-LBIT/CoreTracker">github repository</a> or as a zip file from <a href="https://goo.gl/d8Z1PY">google drive (ct_examples.zip)</a>. In the tutorial dataset, you will find the following files and folders :
   <ul class="normalul">
   <li><span class="foldername">metazoan_hmm</span> : contains a list of HMM files for several metazoan mitochondrial genes</li>
   <li><span class="foldername">test_convert</span> : contains several nucleotide sequences of mitochondrial metazoan genes in fasta format. The sequences are organised by gene families</li>
@@ -342,8 +357,8 @@ MODEL_TYPE: '3'
   </ul>
   </p>
   
-	<h3 id="dataprep">Dataset preparation</h3>
-	<p>In this section, we will learn how to prepare dataset for a typical coretracker run. We will introduce the following tools : <b><code>corextract</code></b>, <b><code>coretrans</code></b>, <b><code>corefus</code></b> and <b><code>coreconvert</code></b> shipped with <code class="coretracker">CoreTracker</code>.</p>
+  <h3 id="dataprep">Dataset preparation</h3>
+  <p>In this section, we will learn how to prepare dataset for a typical coretracker run. We will introduce the following tools : <b><code>corextract</code></b>, <b><code>coretrans</code></b>, <b><code>corefus</code></b> and <b><code>coreconvert</code></b> shipped with <code class="coretracker">CoreTracker</code>.</p>
      <ol>
      <h4><li id="corefile">The core sequence format</li></h4>
      <p>The <b>corefasta</b> or <b>core</b> sequence format is the default sequence format used by <code class="coretracker">CoreTracker</code>. It is adapted from the <a href="https://en.wikipedia.org/wiki/FASTA_format">fasta format</a>  and its purpose is to keep annoted genes from multiple different genomes in the same file. This format support both aligned and unaligned sequences and simplify the representation of concatenated alignment by allowing clear delimitation of genes start and end.</p>
@@ -402,23 +417,23 @@ MATEILTAAKFVGAG--SIGAAGSGAGIGTVFGNLIIGYARNPSLKQQLFTYAILGFAISEAMGLFCLMMAFLILFGL
 </pre>
 <br>
 <p>From the output file, you can see that sequences are grouped by orthologous genes. You can flip the grouping by using the option <b><code>--order_reverse</code></b>. The new grouping by species does however not make sense for aligned sequences. <code class="coretracker">CoreTracker</code> take as input a grouping of the sequences by orthologous gene. The identifiant following "<b><code>&gt;&gt;</code></b>" should thereby be the gene identifiant.</p>
-     	<h4><li id="corextract">Build a local sequences database from refseq gbff file with corextract</li></h4>
-     	<p>We will start by first downloading mitochondrial genomes from refseq release.</p>
-     	<pre class="terminal">
+      <h4><li id="corextract">Build a local sequences database from refseq gbff file with corextract</li></h4>
+      <p>We will start by first downloading mitochondrial genomes from refseq release.</p>
+      <pre class="terminal">
 <span class="cmd">mkdir genomes</span>
 <span class="cmd">wget ftp://ftp.ncbi.nlm.nih.gov/refseq/release/mitochondrion/mitochondrion.1.genomic.gbff.gz -P genomes/</span>
 <span class="cmd">gunzip genomes/mitochondrion.1.genomic.gbff.gz</span></pre>
-     	
-     	<p>Now, for fast data extraction later, we will build a local database containing mitochondrial genomes from the genbank file. For this purpose, we will use <b><code>corextract build</code></b>. You can either go grab a coffee or work on other things since this step can take some time to finish (up to 5min).</p>
-     	<pre class="terminal"><span class="cmd">corextract build -db genomes/name.db -ib genomes/index.db -G genomes/mitochondrion.1.genomic.gbff</span></pre>
-     	<p>We have now two databases, <b><code>name.db</code></b> which will help to search faster for genomes based on species name and <b><code>index.db</code></b> which link species to their genomes. Now we are going to attempt to construct a dataset from a list of genomes of interest by using they name. We will be using the following two files : <b><code><a href="">test_extract/speclist</a></code></b> which contains a list of species name and <b><code><a href="">test_extract/genelist</a></code></b> which contains a list of the genes we are trying to extract for each genome. Note that empty lines and lines starting with <b>"#"</b> (comments) are ignored from those files and regular expressions are accepted for the species list. Gene names are queried against a local large database of mitochondrial gene aliases, during sequences extraction, to make sure the gene is not missed. Next versions of the package will also include aliases from chloroplast and nuclear genes, or offer the possibility of searching by sequences similarity.</p>
-     	<p>In this example, we will search only fully-annoted genomes by using the optional argument <b><code>--complete</code></b>. Note that if <b><code>-db name.db</code></b> is not used, http requests will be made on ncbi taxonomy in order to guess the correct species name. The closest match to the provided name will be used, otherwise, the species will be skipped.</p>
-     	<pre class="terminal"><span class="cmd">corextract extract -G genomes/mitochondrion.1.genomic.gbff -ib genomes/index.db -db genomes/name.db --genelist test_extract/genelist --speclist test_extract/speclist --complete</span></pre>	
-     	<p>You can also provide <b>NCBI taxonomy identifier</b> for all species in your <b><code>speclist</code></b> file, then use the option <b><code>--taxid</code></b>. I recommend using this option whenever possible to ensure accurate search. For a complete list of the available options, run the help with <b><code>corextract {build|extract} -h</code></b>.</p>
-     	<p>The default output of <b><code>corextract extract</code></b> is two files in the core sequence format : <b><code>output.core</code></b> which contains the nucleotide sequences and <b><code>output.core_prot</code></b> which contains the amino acid sequences. The program also print, in the terminal, warnings about possible <b>frame-shifting</b> and <b>undefined nucleotides (N)</b>. Attempts are made to correct <b>partial termination codons where TAA stop codon should completed by the addition of 3' A residues to the mRNA</b>. The success of such corrections relies on the validness of the genbank file and the accuracy of its annotation. Therefore, manual correction might be needed. All sequence corrections are mentionned in the terminal, with the label "FIXED" for easier confirmation.</p>
-     	<p>The number of genomes sharing a specific gene is shown. So is the genetic code of each extracted genomes. I don't recommend trusting this genetic code however.</p>
+      
+      <p>Now, for fast data extraction later, we will build a local database containing mitochondrial genomes from the genbank file. For this purpose, we will use <b><code>corextract build</code></b>. You can either go grab a coffee or work on other things since this step can take some time to finish (up to 5min).</p>
+      <pre class="terminal"><span class="cmd">corextract build -db genomes/name.db -ib genomes/index.db -G genomes/mitochondrion.1.genomic.gbff</span></pre>
+      <p>We have now two databases, <b><code>name.db</code></b> which will help to search faster for genomes based on species name and <b><code>index.db</code></b> which link species to their genomes. Now we are going to attempt to construct a dataset from a list of genomes of interest by using they name. We will be using the following two files : <b><code><a href="">test_extract/speclist</a></code></b> which contains a list of species name and <b><code><a href="">test_extract/genelist</a></code></b> which contains a list of the genes we are trying to extract for each genome. Note that empty lines and lines starting with <b>"#"</b> (comments) are ignored from those files and regular expressions are accepted for the species list. Gene names are queried against a local large database of mitochondrial gene aliases, during sequences extraction, to make sure the gene is not missed. Next versions of the package will also include aliases from chloroplast and nuclear genes, or offer the possibility of searching by sequences similarity.</p>
+      <p>In this example, we will search only fully-annoted genomes by using the optional argument <b><code>--complete</code></b>. Note that if <b><code>-db name.db</code></b> is not used, http requests will be made on ncbi taxonomy in order to guess the correct species name. The closest match to the provided name will be used, otherwise, the species will be skipped.</p>
+      <pre class="terminal"><span class="cmd">corextract extract -G genomes/mitochondrion.1.genomic.gbff -ib genomes/index.db -db genomes/name.db --genelist test_extract/genelist --speclist test_extract/speclist --complete</span></pre> 
+      <p>You can also provide <b>NCBI taxonomy identifier</b> for all species in your <b><code>speclist</code></b> file, then use the option <b><code>--taxid</code></b>. I recommend using this option whenever possible to ensure accurate search. For a complete list of the available options, run the help with <b><code>corextract {build|extract} -h</code></b>.</p>
+      <p>The default output of <b><code>corextract extract</code></b> is two files in the core sequence format : <b><code>output.core</code></b> which contains the nucleotide sequences and <b><code>output.core_prot</code></b> which contains the amino acid sequences. The program also print, in the terminal, warnings about possible <b>frame-shifting</b> and <b>undefined nucleotides (N)</b>. Attempts are made to correct <b>partial termination codons where TAA stop codon should completed by the addition of 3' A residues to the mRNA</b>. The success of such corrections relies on the validness of the genbank file and the accuracy of its annotation. Therefore, manual correction might be needed. All sequence corrections are mentionned in the terminal, with the label "FIXED" for easier confirmation.</p>
+      <p>The number of genomes sharing a specific gene is shown. So is the genetic code of each extracted genomes. I don't recommend trusting this genetic code however.</p>
      
-	<h4><li id="coretrans">Sequence translation with coretrans</li></h4>
+  <h4><li id="coretrans">Sequence translation with coretrans</li></h4>
 <p><code class="coretracker">CoreTracker</code> requires the <em>a priori</em> amino-acid sequences matching the CDS as input. You can obtain this sequence by translating the nucleotide sequences according to a genetic code. This task can be done by <b><code>coretrans</code></b> from the package. <b><code>coretrans</code></b>  is not only able to translate dna sequences using a specified genetic code, but also align the resulting protein sequences. Current version of the package only accept one of the several genetic code listed at <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi">NCBI</a>. In the next releases, it might be possible to pass a user-made genetic table as input.</p>
 <p><b><code>coretrans</code></b> takes as mandatory input, the nucleotide sequences in core format. Here we are going to translate the input file using the metazoan genetic code (4), filter out genes with frame-shifting that we were unable to correct, then align the translated sequences with <code>muscle</code>, and refine them using HMM of each genes.</p>
 
@@ -426,8 +441,11 @@ MATEILTAAKFVGAG--SIGAAGSGAGIGTVFGNLIIGYARNPSLKQQLFTYAILGFAISEAMGLFCLMMAFLILFGL
 <span class="cmd">coretrans --nuc output.core --align --refine --hmmdir metazoan_hmm --filter --gcode '4' --wdir outdir</span></pre>
 <p>The output files should be listed in the specified output folder, by default, this folder is <b><code>trans_output</code></b>.</p> 
 <p>The sequence alignment pipeline use either <b><code>muscle</code></b> or <b><code>mafft</code></b> to align protein sequences. The alignments can be refined by building a preliminary <code>Hidden Markov Model (HMM)</code> model using <b><code>hmmbuild</code></b> from <b><code>HMMER</code></b> then use it to align the sequences with <b><code>hmmalign</code></b> from the same package. This last step can be done on multiple iterations at the end of which only the best alignment according to the posterior probability will be kept. Note that from experimental data, alignment quality often stopped improving after a certain number of iteration, so we use an <b> early stopping criterion </b> which stop the n-loop at iteration <b><code>i</code></b> with probability <b><code>i/n</code></b> if the alignment quality stop improving. Alternatively, if <code>HMM</code> files are provided, they will be used to align the input sequences with <b><code>hmmalign</code></b> on only one iteration.</p>
-
-	<h4><li id="corefus">Basic dataset merging with corefus</li></h4>
+<p>It is possible to use a space/tab delimited file (an example here : ) that map each genome to a specific genetic code with the argument <code>--codemap</code>. An example of such file can be found h</p>
+<pre class="terminal">
+<span class="cmd">coretrans --nuc output.core --align --refine --hmmdir metazoan_hmm --filter --gcode '4' --wdir outdir --codemap trans_map.txt</span></pre>
+<p>The output files should be listed in the specified output folder, by default, this folder is <b><code>trans_output</code></b>.</p> 
+  <h4><li id="corefus">Basic dataset merging with corefus</li></h4>
     <p>We also offer <b><code>corefus</code></b>, a basic tool for merging two datasets before running <code class="coretracker">CoreTracker</code>. Merging two datasets, can be considered for example if you want to include new genomes in the analysis in order to either measure the impact of adding species to the phylogeny or use a group of genomes with known genetic code as reference. <b><code>corefus</code></b> take as input two nucleotide sequences in corefasta format and as optional argument the corresponding two species trees in newick format.</p>
 <pre class="terminal">
 <span class="cmd">corefus --nucs test_corefus/mtzoa1.core test_corefus/mtzoa2.core --out mtzoa</span>
@@ -441,7 +459,7 @@ MATEILTAAKFVGAG--SIGAAGSGAGIGTVFGNLIIGYARNPSLKQQLFTYAILGFAISEAMGLFCLMMAFLILFGL
 <pre class="terminal">
 <span class="cmd">coretracker -t test_data/species_tree.nwk -p test_data/test_prot.core -n test_data/test_nuc.core --wdir test_data/output --params test_data/param.yml --norefine --parallel --expos --debug --imformat svg</span></pre>
 
-<p>You can check the parameters used in the param.yml file. With this command, we are going to run <code class="coretracker">CoreTracker</code> in parallel mode, with the default filtering parameters, no alignment refinement and debug printing enabled. We are also going to export predicted reassigned positions in a json file.</p>
+<p>You can check the parameters used in the param.yml file. With this command, we are going to run <code class="coretracker">CoreTracker</code> in parallel mode, with the default filtering parameters, no alignment refinement and debug printing enabled. We are also going to export predicted reassigned positions in a json file. CoreTracker also accept the <code>--codemap</code> argument to specify the genetic code of some of the genomes in the dataset. This can be used conjointly with <code>--restrict_to</code> that allow user to restrict prediction to only one genome, taking the remaining as reference. <code>--restrict_to</code> take either a single species name or a file containing one species name per line</p>
      <h4><li id="coreinterpret">Interpreting coretracker's output</li></h4>
     <p><code class="coretracker">CoreTracker</code> return several files, but only a handful of them are really useful depending on what you're trying to do :</p>
 <pre class="terminal">
@@ -639,7 +657,7 @@ AGA Ser 3.23e-09
 </li> 
 </ul></ol>
      <h3 id="addanal">Supplemental analysis</h3>
-	<p>Here we will perform some additional analysis with available scripts in order to collect more data on predictions. These supplemental analysis are not always informative and are optional.</p>     
+  <p>Here we will perform some additional analysis with available scripts in order to collect more data on predictions. These supplemental analysis are not always informative and are optional.</p>     
      <ol>
     <h4><li id="codonclust">Genome clustering with codonclust</li></h4>
      <p><code>codonclust</code> cluster genomes according to their codons content. It's a simple way to find outlier genomes that could introduce errors in the inference. Input data is the <code>reassignment.json</code> file returned by <code>coretracker</code>, so a first run of <code>coretracker</code> is needed. A principal component analysis is first performed in order to reduce the data dimensionality. Help can be obtained with <code>codonclust -h</code></p>
