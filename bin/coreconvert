@@ -60,9 +60,9 @@ class SeqRep:
 
     def _parser(self, flist, fmt):
         for f in flist:
-            fname = os.path.basename(f).lower().split('.', 1)[0]
+            fname = os.path.basename(f).split('.', 1)[0]
             for seqrec in SeqIO.parse(f, fmt):
-                geneid = seqrec.id.lower()
+                geneid = seqrec.id
                 seqrec.id = geneid
                 seqrec.name = geneid
                 self.seqlist[fname].append(seqrec)
