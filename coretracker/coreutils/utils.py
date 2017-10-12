@@ -504,7 +504,8 @@ class SequenceLoader:
             core_inst = CoreFile(core_inst, alphabet=generic_nucleotide)
 
         core_prot_inst = {}
-        stop_checker = lambda x: '*' if x.upper() in codontable.stop_codons else 'X'
+        stop_checker = lambda x: '*' if x[
+            0].upper() in x[1].stop_codons else 'X'
         for gene, seqs in core_inst.items():
             translated = []
             for s in seqs:
@@ -521,7 +522,7 @@ class SequenceLoader:
                         "Frame-shifting detected in %s : [%s], current version does not supported it." % (s.id, gene))
                 else:
                     aa_list = [seq_code.forward_table.get(
-                        s.seq[i:i + 3].upper(), stop_checker(s.seq[i:i + 3])) for i in xrange(0, len(s), 3)]
+                        s.seq[i:i + 3].upper(), stop_checker((s.seq[i:i + 3], seq_code))) for i in xrange(0, len(s), 3)]
                     trans_s = Seq("".join(aa_list), generic_protein)
                     translated.append(SeqRecord(trans_s, id=s.id, name=s.name))
             core_prot_inst[gene] = translated

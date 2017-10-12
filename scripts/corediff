@@ -1,0 +1,177 @@
+#!/usr/bin/env python
+
+# CoreTracker Copyright (C) 2017  Emmanuel Noutahi
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+from ete3 import Tree
+from coretracker.coreutils import CoreFile
+import collections
+import difflib
+import time
+import sys
+import os
+import argparse
+from Bio import SeqIO
+import fcntl
+import termios
+import struct
+
+
+class color:
+    #SUB = '\033[95m'
+    #WARNING = '\033[93m'
+    ADD = '\033[94m'
+    DEL = '\033[91m'
+    SUB = '\033[92m'
+    END = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
+try:
+    from colorama import init, Back, Style
+    init()
+    color.DEL = Back.RED  # .YELLOW # red
+    color.ADD = Back.BLUE  # .CYAN # blue
+    color.SUB = Back.GREEN
+    # color.END = Back.RESET#.RESET_ALL
+
+except ImportError:
+    pass
+
+fromdate = None
+todate = None
+file1 = None
+file2 = None
+
+
+accepted_char = set('ACDEFGHIKLMNPQRSTVWYBXZJUO').union(
+    set('GATCRYWSMKHBVDN>'))
+
+
+def terminal_size():
+    h, w, hp, wp = struct.unpack('HHHH', fcntl.ioctl(
+        0, termios.TIOCGWINSZ, struct.pack('HHHH', 0, 0, 0, 0)))
+    return w, h
+
+
+def getdiff(seq1list, seq2list, args, file1=file1, file2=file2, header=False):
+
+    diff = ""
+    if args.side:
+        w, _ = terminal_size()
+        numline = None
+        if args.context:
+            numline = args.lines
+        diffs = difflib._mdiff(seq1list, seq2list, numline)
+        width = int(w/2.4) - 2
+        if header:
+            print(('{lside:{width}}{flag:^5}{rside:{width}}').format(
+                lside=file1, rside=file2, width=width, flag=" "))
+
+            # print(('\n{:%d.%d}{}{:%d.%d}' %
+            #       (width, width, width, width)).format(file1, file2))
+        for fl, tl, flag in diffs:
+            d = " "
+            if fl and tl:
+                lside = str(fl[-1]).strip().replace('\0',
+                                                    "|").replace('\1', "|").strip()
+                rside = str(tl[-1]).strip().replace('\0',
+                                                    "|").replace('\1', "|").strip()
+
+                if args.color:
+                    lside = lside.replace(
+                        '|+', color.ADD).replace('|-', color.DEL).replace('|^', color.SUB).replace('|', color.END)
+                    rside = rside.replace(
+                        '|+', color.ADD).replace('|-', color.DEL).replace('|^', color.SUB).replace('|', color.END)
+
+                if lside or rside:
+                    if flag:
+                        d = "!"
+                    if lside and lside[0].upper() not in accepted_char:
+                        lside = lside[0]+" " + lside[1:]
+                    if rside and rside[0].upper() not in accepted_char:
+                        rside = rside[0]+" " + rside[1:]
+                    #line = ('{:%d.%d}  %s  {:%d.%d}' %(width, width, d, width, width)).format(lside, rside)
+                    line2 = ('{lside:{width}}{flag:^5}{rside:{width}}').format(
+                        lside=lside, rside=rside, width=width, flag=d)
+                    print(line2)
+
+    elif args.ndiff:
+        diff = difflib.ndiff(seq1list, seq2list)
+    else:
+        diff = difflib.context_diff(seq1list, seq2list, file1, file2,
+                                    fromdate, todate, n=args.lines)
+
+    sys.stdout.writelines(diff)
+
+
+if __name__ == '__main__':
+
+    # argument parser
+    parser = argparse.ArgumentParser(
+        description='Diff, return the difference between two corefiles')
+    parser.add_argument('seqs', metavar='corefile',
+                        nargs=2, help='The two input files (corefasta format)')
+    parser.add_argument('--side-by-side', '-y', dest="side",  action="store_true",
+                        default=False, help="Output differences side by side")
+
+    parser.add_argument("-c", dest='context', action="store_true",
+                        default=False, help='Produce a context format diff (default)')
+    parser.add_argument("-n", '--ndiff', dest='ndiff', action="store_true",
+                        default=False, help='Produce a ndiff format diff')
+    parser.add_argument("-l", "--lines", dest='lines', type=int,
+                        default=2,  help='Set number of context lines (default 2)')
+
+    parser.add_argument("--color", dest='color', action="store_true",
+                        help='Set number of context lines (default 2)')
+
+    args = parser.parse_args()
+
+    file1, file2 = args.seqs
+    fromdate = time.ctime(os.stat(file1).st_mtime)
+    todate = time.ctime(os.stat(file2).st_mtime)
+
+    f1 = CoreFile(file1).get_sequences()
+    f2 = CoreFile(file2).get_sequences()
+
+    glist = set(f1.keys()).union(f2.keys())
+
+    for gene in glist:
+        header = True
+        f1seqs = SeqIO.to_dict(f1.get(gene, []))
+        f2seqs = SeqIO.to_dict(f2.get(gene, []))
+
+        gseq1 = set(f1seqs.keys())
+        gseq2 = set(f2seqs.keys())
+
+        mg1 = gseq1.difference(gseq2)
+        mg2 = gseq2.difference(gseq1)
+        mg12 = gseq2.intersection(gseq1)
+
+        if not (mg1 and mg2):
+            fromlist = [
+                x+"\n" for x in mg1 for x in f1seqs[x].format('fasta').splitlines()]
+            tolist = [
+                x+"\n" for x in mg2 for x in f2seqs[x].format('fasta').splitlines()]
+
+            getdiff(fromlist, tolist, args, "@%s (%s)" %
+                    (gene, file1), "@%s (%s)" % (gene, file2), header=header)
+            header = False
+
+        for g in mg12:
+            mg1 = [x+"\n" for x in f1seqs[g].format('fasta').splitlines()]
+            mg2 = [x+"\n" for x in f2seqs[g].format('fasta').splitlines()]
+
+            getdiff(mg1, mg2, args, "@%s (%s)" % (gene, file1),
+                    "@%s (%s)" % (gene, file2), header=header)
+            header = False
