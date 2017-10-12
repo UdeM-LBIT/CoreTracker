@@ -81,13 +81,13 @@ def getdiff(seq1list, seq2list, args, file1=file1, file2=file2, header=False):
             # print(('\n{:%d.%d}{}{:%d.%d}' %
             #       (width, width, width, width)).format(file1, file2))
         for fl, tl, flag in diffs:
-            d = " "
+            flag = "!" if flag else " "
+
             if fl and tl:
                 lside = str(fl[-1]).strip().replace('\0',
-                                                    "|").replace('\1', "|").strip()
+                                                    "|").replace('\1', "|").replace("\n", "")
                 rside = str(tl[-1]).strip().replace('\0',
-                                                    "|").replace('\1', "|").strip()
-
+                                                    "|").replace('\1', "|").replace("\n", "")
                 if args.color:
                     lside = lside.replace(
                         '|+', color.ADD).replace('|-', color.DEL).replace('|^', color.SUB).replace('|', color.END)
@@ -95,15 +95,8 @@ def getdiff(seq1list, seq2list, args, file1=file1, file2=file2, header=False):
                         '|+', color.ADD).replace('|-', color.DEL).replace('|^', color.SUB).replace('|', color.END)
 
                 if lside or rside:
-                    if flag:
-                        d = "!"
-                    if lside and lside[0].upper() not in accepted_char:
-                        lside = lside[0]+" " + lside[1:]
-                    if rside and rside[0].upper() not in accepted_char:
-                        rside = rside[0]+" " + rside[1:]
-                    #line = ('{:%d.%d}  %s  {:%d.%d}' %(width, width, d, width, width)).format(lside, rside)
                     line2 = ('{lside:{width}}{flag:^5}{rside:{width}}').format(
-                        lside=lside, rside=rside, width=width, flag=d)
+                        lside=lside, rside=rside, width=width, flag=flag)
                     print(line2)
 
     elif args.ndiff:
