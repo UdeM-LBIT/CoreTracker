@@ -73,7 +73,7 @@ def getdiff(seq1list, seq2list, args, file1=file1, file2=file2, header=False):
         if args.context:
             numline = args.lines
         diffs = difflib._mdiff(seq1list, seq2list, numline)
-        width = int(w/2.4) - 2
+        width = int(w / 2.4) - 2
         if header:
             print(('\n{lside:{width}}{flag:^5}{rside:{width}}').format(
                 lside=file1, rside=file2, width=width, flag=" "))
@@ -126,7 +126,7 @@ if __name__ == '__main__':
                         default=2,  help='Set number of context lines (default 2)')
 
     parser.add_argument("--color", dest='color', action="store_true",
-                        help='Set number of context lines (default 2)')
+                        help='Use color in output (default false). Note that it will not always work')
 
     args = parser.parse_args()
 
@@ -153,17 +153,17 @@ if __name__ == '__main__':
 
         if not (mg1 and mg2):
             fromlist = [
-                x+"\n" for x in mg1 for x in f1seqs[x].format('fasta').splitlines()]
+                x + "\n" for x in mg1 for x in f1seqs[x].format('fasta').splitlines()]
             tolist = [
-                x+"\n" for x in mg2 for x in f2seqs[x].format('fasta').splitlines()]
+                x + "\n" for x in mg2 for x in f2seqs[x].format('fasta').splitlines()]
 
             getdiff(fromlist, tolist, args, "@%s (%s)" %
                     (gene, file1), "@%s (%s)" % (gene, file2), header=header)
             header = False
 
         for g in mg12:
-            mg1 = [x+"\n" for x in f1seqs[g].format('fasta').splitlines()]
-            mg2 = [x+"\n" for x in f2seqs[g].format('fasta').splitlines()]
+            mg1 = [x + "\n" for x in f1seqs[g].format('fasta').splitlines()]
+            mg2 = [x + "\n" for x in f2seqs[g].format('fasta').splitlines()]
 
             getdiff(mg1, mg2, args, "@%s (%s)" % (gene, file1),
                     "@%s (%s)" % (gene, file2), header=header)
