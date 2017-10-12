@@ -75,7 +75,7 @@ def getdiff(seq1list, seq2list, args, file1=file1, file2=file2, header=False):
         diffs = difflib._mdiff(seq1list, seq2list, numline)
         width = int(w/2.4) - 2
         if header:
-            print(('{lside:{width}}{flag:^5}{rside:{width}}').format(
+            print(('\n{lside:{width}}{flag:^5}{rside:{width}}').format(
                 lside=file1, rside=file2, width=width, flag=" "))
 
             # print(('\n{:%d.%d}{}{:%d.%d}' %
