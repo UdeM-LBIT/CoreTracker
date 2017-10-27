@@ -1716,7 +1716,11 @@ def independance_test(rea, ori, genome, confd=0.05, expct_prob=0.5):
             obs[i, 0] = rea.get(codon_list[i], 0)
             obs[i, 1] = ori.get(codon_list[i], 0)
         try:
-            pval = fisher_exact(obs, midP=True, attempt=3)
+            # check mat, to select chi2 of fisher_test
+            if np.any(obs < 5) or np.sum(obs) < 1000:
+                pval = fisher_exact(obs, midP=True, attempt=3)
+            else:
+                c, pval, dof, t = ss.chi2_contingency(obs)
             # fallback to chi2 test if fisher is impossible
         except:
             logging.debug(
@@ -1789,11 +1793,11 @@ def compute_SP_per_col(al1, al2, columns, nspec, scoring_matrix):
             return (aa1 == aa2) * 1
         else:
             # controversial decision
-            # give 0 to gap event
-            score = 0
+            # give -1 to gap event
+            score = -1
             try:
                 score = scoring_matrix.get(
-                    (aa1, aa2), scoring_matrix[(aa2, aa1)])
+                    (aa1, aa2), scoring_matrix.get((aa2, aa1)))
             except:
                 pass
             return score

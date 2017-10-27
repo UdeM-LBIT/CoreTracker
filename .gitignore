@@ -66,3 +66,4 @@ misc_data/
 coretracker/classifier/model_old/
 coretracker/classifier/new_classifier.py
 coretracker.py
+plant_test/
