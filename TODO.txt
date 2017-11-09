@@ -1,7 +1,6 @@
 
 # TODO
-
-    - pred to  ori aa
     - full integration of rna editing part in the software
+    - Using a two phases step and build a database to use less ram
     
 
