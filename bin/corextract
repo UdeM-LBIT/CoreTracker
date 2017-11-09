@@ -13,119 +13,19 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from Bio import SeqIO
 from Bio.SeqRecord import SeqRecord
 from Bio.Seq import Seq
 from coretracker.coreutils import CoreFile
 from coretracker.coreutils.mtgenes import revmtgenes
+import argparse
 from collections import defaultdict
 import sqlite3
-import argparse
-from Bio import SeqIO, Entrez
 from Bio.Data import CodonTable
-import os
+from Bio import SeqIO, Entrez
 import re
+import time
 import logging
 import operator
-
-
-def regexp(expr, item):
-    """Regexp for search in sqlite database"""
-    reg = re.compile(expr)
-    return reg.search(item) is not None
-
-
-def taxonIDLookup(taxonID):
-    """Lookup a taxon ID (an integer) in the NCBI taxonomy.
-    Returns (Species_name, (taxonomy_genus, taxonomy_family, etc.))
-    Will likely throw 'server errors' until intenal timeout is reached if given anything else."""
-    finished = 0
-    while finished <= maxCheck:
-        try:
-            handleDownload = Entrez.efetch(
-                db="taxonomy", id=taxonID, retmode="xml")
-            resultsDownload = Entrez.read(handleDownload)
-            handleDownload.close()
-            finished = maxCheck + 1
-        except:
-            if finished == 0:
-                print("!!!Server error - retrying...")
-                finished += 1
-                time.sleep(2)
-            elif finished == maxCheck:
-                print("!!!!!!Unreachable. Returning nothing.")
-                return None
-            else:
-                finished += 1
-                time.sleep(2)
-    scientificName = resultsDownload[0]['ScientificName']
-    lineage = resultsDownload[0]['Lineage'].split("; ")
-    lineage.reverse()
-    lineage = tuple(lineage)
-    taxId = resultsDownload[0]['TaxId']
-    mitoCode = resultsDownload[0]['MitoGeneticCode']['MGCName']
-    return (scientificName, lineage, taxId, mitoCode)
-
-
-def commonLookup(spName):
-    """Lookup a species according to its common (English?) name.
-    Return first taxid (could be the wrong one)
-    """
-    finished = 0
-    while finished <= maxCheck:
-        try:
-            handleSearch = Entrez.esearch(db="taxonomy", term=spName)
-            resultsSearch = Entrez.read(handleSearch)
-            handleSearch.close()
-            finished = maxCheck + 1
-        except:
-            if finished == 0:
-                print("!!!Server error checking " + spName + " - retrying...")
-                finished += 1
-                time.sleep(2)
-            elif finished == maxCheck:
-                print("!!!!!!Unreachable. Returning nothing.")
-                return None
-            else:
-                finished += 1
-                time.sleep(2)
-    if resultsSearch['IdList']:
-        taxid = resultsSearch['IdList'][0]
-        sciname = taxonIDLookup(taxid)
-        if sciname:
-            return (taxid, sciname)
-    return None
-
-
-def cladeSpecies(cladeName):
-    """Finds information about a clade.
-    Returns [(species_a, (genus_a, family_a, etc_a)), (species_b, (genus_b, family_b, etc_b), cladeID, mitcohondrial_code]"""
-    searchTerm = cladeName + '[subtree] AND species[rank]'
-    finished = 0
-    output = []
-    while finished <= maxCheck:
-        try:
-            handleSearch = Entrez.esearch(db="taxonomy", term=searchTerm)
-            resultsSearch = Entrez.read(handleSearch)
-            finished = maxCheck + 1
-        except:
-            if finished == 0:
-                print("!!!Server error checking" +
-                      cladeName + " - retrying...")
-                finished += 1
-                time.sleep(2)
-            elif finished == maxCheck:
-                print("!!!!!!Unreachable. Returning nothing.")
-                return()
-            else:
-                finished += 1
-                time.sleep(2)
-    if resultsSearch['IdList']:
-        for spId in resultsSearch['IdList']:
-            sciname = taxonIDLookup(taxid)
-            if sciname:
-                output.append(taxid, sciname)
-    return output
 
 
 def isInt(value):
@@ -138,50 +38,84 @@ def isInt(value):
         return False
 
 
-def db_lookup(dbname, speclist, complete=True):
-    result = []
-    specset = set([])
-    with sqlite3.connect(dbname) as conn:
-        conn.create_function("REGEXP", 2, regexp)
-        holder = "|".join(speclist)
-        query = "SELECT seqid, organism FROM genbank WHERE organism REGEXP ?"
-        if(complete):
-            query += " AND complete_genome = 1"
-        cursor = conn.execute(query, [holder])
-        for row in cursor:
-            if row[1] not in specset:
-                specset.add(row[1])
-                result.append((row[0], row[1]))
+def regexp(expr, item):
+    """Regexp for search in sqlite database"""
+    reg = re.compile(expr, re.IGNORECASE)
+    return reg.search(item) is not None
+
+
+def taxonIDLookup(taxonID, sleep=20, maxCheck=3):
+    """Lookup a taxon ID (an integer) in the NCBI taxonomy.
+    Returns (Species_name, (taxonomy_genus, taxonomy_family, etc.))
+    Will likely throw 'server errors' until intenal timeout is reached if given anything else."""
+    finished = 0
+    while finished <= maxCheck:
+        try:
+            handleDownload = Entrez.efetch(
+                db="taxonomy", id=taxonID, retmode="xml")
+            resultsDownload = Entrez.read(handleDownload)
+            handleDownload.close()
+            finished = maxCheck + 1
+        except:
+            if finished == maxCheck:
+                logging.warn("!! Server unreachable. Returning nothing.")
+                return None
+            else:
+                logging.warn("!! Server error on %s - retrying..." %
+                             str(taxonID))
+                finished += 1
+                time.sleep(sleep)
+
+    scientificName = resultsDownload[0]['ScientificName']
+    lineage = resultsDownload[0]['Lineage'].split(
+        "; ")[1:]  # remove cellular organism
+    lineage = ">".join(lineage)
+    mitoCode = int(resultsDownload[0].get(
+        'MitoGeneticCode', {}).get('MGCId', '1'))
+    nucCode = int(resultsDownload[0].get('GeneticCode', {}).get('GCId', '1'))
+    return (scientificName, lineage, nucCode, mitoCode)
+
+
+def db_lookup(conn, spec, complete=True):
+    """Check if a name is present in the database of name"""
+    result = None
+    # it is just more painless to do this species by species
+    query = "SELECT organism, seqid FROM genbank WHERE organism REGEXP ?"
+    if(complete):
+        query += " AND complete_genome = 1"
+    cursor = conn.execute(query, [spec])
+    # just take the first one
+    row = cursor.fetchone()
+    if row:
+        result = (row[0], row[1])
+    else:
+        # retry but with source instead of
+        cursor = conn.execute(query.replace(
+            "organism REGEXP ?", 'source REGEXP ?'), [spec])
+        row = cursor.fetchone()
+        if row:
+            result = (row[0], row[1])
+
+        else:
+            logging.warn("Species not found : %s" % spec)
     return result
 
 
-def check_species_list(specielist, namedb, taxid=False, clade=False, complete=True):
-    """ Verify and return the true name
-    of each specie in your specielist """
+def check_species_list(specielist, namedb, taxid=False, complete=True, sleep=20, maxCheck=3):
+    """ Verify and return the true name of each specie in your specielist """
     curated_spec_list = []
-    if namedb:
-        # lookup using database
-        curated_spec_list = db_lookup(namedb, specielist, complete)
-    else:
+    # convert taxid to scientifique name first
+    with sqlite3.connect(namedb) as conn:
+        conn.create_function("REGEXP", 2, regexp)
         for spec in specielist:
-            spechecked = None
-            if(taxid and isInt(spec)):
-                sciename = taxonIDLookup(spec)[0]
-                if sciename:
-                    curated_spec_list.append((spec, sciename))
-            else:
-                # try common lookup
-                spechecked = commonLookup(spec)
-                if not spechecked and clade:
-                    # then clade lookup
-                    time.sleep(1)
-                    spechecked = cladeSpecies(spec.split()[0])
-                if spechecked and isintance(spechecked, list):
-                    curated_spec_list.extend(spechecked)
-                elif spechecked:
-                    curated_spec_list.append(spechecked)
-                else:
-                    logging.warn("Species not found : %s" % spec)
+            if taxid and isInt(spec):
+                name = taxonIDLookup(spec, maxCheck, sleep)[0]
+                if name:
+                    spec = name[0]
+            sciename = db_lookup(conn, spec, complete)
+            if sciename:
+                curated_spec_list.append(sciename)
+
     return curated_spec_list
 
 
@@ -205,8 +139,8 @@ def get_poss_event_diff(gene, prot, features, gcode=1):
         bestmatch = (0, 0)
         for pos in xrange(10):
             matcher = sum([ct_dict[gene[pos + i * 3:pos + (i + 1) * 3].upper()] == potent_prot[i]
-                           for i in xrange(max_aa)])
-            if matcher == max_x:
+                           for i in xrange(max_n)])
+            if matcher == max_n:
                 bestmatch = (pos, matcher)
                 break
             else:
@@ -224,6 +158,7 @@ def get_poss_event_diff(gene, prot, features, gcode=1):
 
     except:
         pass
+    return best_starting_pos, potential_prot
 
 
 def extract_genome(speclist, genelist, records, revmtgenes, getprot=False, gcode=1):
@@ -237,7 +172,7 @@ def extract_genome(speclist, genelist, records, revmtgenes, getprot=False, gcode
             'hypothetical' in " ".join(product).lower()
 
     # fetch gene and protein from the database and add them to the list
-    for (s_id, spec) in speclist:
+    for (spec, s_id) in speclist:
         g_found_in_spc = {}
         specaff = spec.replace('.', '').replace('-', '_').replace(' ', '_')
         curr_seq = records[s_id]
@@ -267,12 +202,12 @@ def extract_genome(speclist, genelist, records, revmtgenes, getprot=False, gcode
                                 n_A = (len(pos_range.split('..')) % 2) + 1
                                 seq = seq + Seq('A' * n_A, seq.alphabet)
                                 assert len(seq) % 3 == 0
-                                logging.info("FIXED : partial termination for the following gene: %s - %s | %s %d A added" %
+                                logging.info("FIXED : partial termination for the following gene: %s - %s | %d %d A added" %
                                              (sgene, spec, len(seq), n_A))
 
                         except:
                             logging.warn("Possible frame-shifting in the following gene : %s - %s | %s ==> %d (%d)" %
-                                         (sgene, spec, len(seq), len(seq) % 3))
+                                         (sgene, spec, s_id, len(seq), len(seq) % 3))
                     elif 'N' in seq:
                         logging.warn("Sequence with undefined nucleotide : %s - %s | %d" %
                                      (sgene, spec, len(seq)))
@@ -315,23 +250,26 @@ if __name__ == '__main__':
                                 dest='genbank', help="Your genbank file")
     extract_parser.add_argument("--indexdb", '-ib', dest='indexdb',
                                 required=True, help="Index filename")
-    extract_parser.add_argument("--namedb", '-db', dest='database',
+    extract_parser.add_argument("--namedb", '-db', dest='database', required=True,
                                 help="Use build to build a temporary database for fast name searching. Http request will be done if this is not provided")
     extract_parser.add_argument("--taxid", dest='taxid', action='store_true',
                                 help="Taxid instead of common name is provided")
     extract_parser.add_argument("--table", dest='gcode', default=1, type=int,
                                 help="Genetic code table to use, 1 if not provided")
+    extract_parser.add_argument("--sleep", dest='sleep', default=20, type=int,
+                                help="Waiting time before next request.")
+    extract_parser.add_argument("--maxtry", dest='maxtry', default=3, type=int,
+                                help="Maximum number of time a single request should be sent.")
     extract_parser.add_argument("--complete", dest='complete',
                                 action='store_true', help="Complete genome only")
-    extract_parser.add_argument("--clade", dest='clade', action='store_true',
-                                help="Use this to look for clade name if some of your specs are clades instead")
     extract_parser.add_argument("--genelist", dest='genelist',
                                 help="List of genes. If not provided, all coding sequences in the mapping file will be exported")
     extract_parser.add_argument("--speclist", dest='speclist', required=True,
                                 help="A file containing a list of species or a specie name")
     extract_parser.add_argument("--outfile", '-o', dest='output',
                                 default='output.core', help="Output file name")
-
+    extract_parser.add_argument("--email", dest='email',
+                                default='mail@example.com', help="Contact email for NCBI's E-utilities")
     args = parser.parse_args()
     if args.command == 'build':
         # in this case, create the databases
@@ -373,6 +311,7 @@ if __name__ == '__main__':
                       (conn.total_changes, args.database))
     else:
         # we are actually trying to extract a genome from a list of spec
+        Entrez.email = args.email  # set email for EUtilities
         records = SeqIO.index_db(args.indexdb, args.genbank, format="genbank")
         speclist = []
         try:
@@ -384,7 +323,7 @@ if __name__ == '__main__':
             speclist.append(args.speclist)
 
         speclist = check_species_list(set(speclist), args.database,
-                                      args.taxid, args.clade, args.complete)
+                                      args.taxid, args.complete, args.sleep, args.maxtry)
         genelist = []
         if args.genelist:
             with open(args.genelist) as Glist:
