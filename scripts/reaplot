@@ -1,0 +1,250 @@
+#!/usr/bin/env python
+
+# CoreTracker Copyright (C) 2017  Emmanuel Noutahi
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+import coretracker.coreutils.Faces as Faces
+import coretracker.coreutils.letterconfig as letterconfig
+from PyQt4 import QtCore
+from PyQt4.QtGui import QGraphicsLineItem, QGraphicsRectItem, QGraphicsSimpleTextItem, QColor, QPen, QBrush, QFont
+from ete3 import Tree, TreeStyle, faces
+import argparse
+from collections import defaultdict
+from Bio.Data import CodonTable
+import re
+import json
+
+
+def load_codons_count(infile):
+    """Function to load the codon count file"""
+    readict = {}
+    with open(infile) as IN:
+        readict = json.load(IN)
+    if not readict:
+        raise ValueError("Could not load codon count, empty dict")
+    else:
+        return readict['codons']
+
+
+def load_prediction(infile, valid, gtable):
+    # NNN (X, Y)
+    #    Spec1  0.504   Valid
+    #    Spec2  0.993   Valid
+    #    Spec3  0.765   Valid
+    EITHER = ('CLAD', 'ALGN')
+    valid = valid.upper()
+    BOTH = ('BOTH',)
+    readict = defaultdict(dict)
+    pattern = re.compile("^[A-Z]{3,}\s?\([A-Z]\,\s[A-Z]\)")
+    tot_ori_aa = defaultdict(set)
+    with open(infile) as RTable:
+        for line in RTable:
+            line = line.strip()
+            if line and not line.startswith('#'):
+                if pattern.match(line):
+                    curr_cod = line.split('(')[0].strip()
+                    dest_aa = line.split(',')[-1].strip().strip(')').strip()
+                else:
+                    line = line.strip().split()
+                    spec = line[0].strip()
+                    valid_state = line[-1].strip().upper()
+                    if valid_state.upper() not in EITHER + BOTH + ('NONE',):
+                        valid_state = None
+                    passed_valid = (valid == 'NONE' or valid_state is None)\
+                        or (valid == 'EITHER' and valid_state in EITHER)\
+                        or valid == 'BOTH' and valid_state in BOTH
+                    if curr_cod and dest_aa and passed_valid:
+                        try:
+                            readict[spec][curr_cod].append(dest_aa)
+                        except:
+                            readict[spec][curr_cod] = [dest_aa]
+                        tot_ori_aa[gtable.forward_table.get(
+                            curr_cod, '*')].add(curr_cod)
+    if not readict:
+        raise ValueError("Could not load codon reassignment, empty dict")
+    else:
+        return readict, tot_ori_aa
+
+
+def get_color(node):
+    if 'color' in node.features:
+        return node.color
+    return '#00000'
+
+
+def header_faces(nodes, *args, **kwargs):
+    """Layout function for the header information"""
+    width, height, margin = args[0][0]
+    aa, codons = args[0][1]
+    aafont, codonfont = args[0][2]
+
+    masteritem = QGraphicsRectItem(0, 0, width, height)
+    masteritem.setPen(QPen(QtCore.Qt.NoPen))
+    aatext = QGraphicsSimpleTextItem(aa, parent=masteritem)
+    aatext.setFont(aafont)
+    aatext.setBrush(QBrush(QColor('#000000')))
+    txtw = aatext.boundingRect().width()
+    txth = aatext.boundingRect().height()
+    center = masteritem.boundingRect().center()
+    aatext.setPos(center.x() - txtw / 2.0, center.y() * 0.5 - txth / 2.0)
+    line = QGraphicsLineItem(margin, center.y() * 0.5 + txth,
+                             width - margin, center.y() * 0.5 + txth, parent=masteritem)
+
+    jsize = width * 1.0 / len(codons)
+    pos = jsize / 2.0
+    for cod in codons:
+        codontext = QGraphicsSimpleTextItem(cod, parent=masteritem)
+        codontext.setFont(codonfont)
+        codontext.setBrush(QBrush(QColor('#000000')))
+        tw = codontext.boundingRect().width()
+        th = codontext.boundingRect().height()
+        codontext.setPos(pos - (tw + margin) / 2.0, height - th / 2.0 - margin)
+        pos += jsize
+    return masteritem
+
+
+def plot_tree(tree, codon_count, realist, predictions, outfile, fgcolor, colormap={}, h=12, w=100, m=2, ffamily='Arial', fsize=12, gcode=4):
+    """Plot the tree with reassigned codon mapping"""
+    def layout(node):
+        node.img_style['size'] = 0
+        if node.is_leaf():
+            faces.add_face_to_node(faces.AttrFace(
+                "name", fgcolor=get_color(node)), node, 0, position="aligned")
+            pos = 0
+            for aa, codlist in realist.items():
+                ccount = {}
+                aalist = {}
+                for codon in codlist:
+                    cc = codon_count[node.name].get(codon, 0)
+                    ccount[codon] = str(cc) if cc else ''
+                    aalist[codon] = predictions[node.name].get(codon, [])
+                pos += 1
+                faces.add_face_to_node(Faces.SummaryRectFace(ccount, aalist, height=h, width=w, margin=m, fgcolor=fgcolor, ffamily=ffamily, fsize=fsize, colormap=colormap),
+                                       node, column=pos, position="aligned")
+
+    ts = TreeStyle()
+    ts.show_branch_length = False
+    ts.show_scale = False
+    ts.show_leaf_name = False
+    ts.margin_left = 15
+    ts.margin_right = 15
+    ts.margin_bottom = 10
+    ts.margin_top = 10
+    ts.min_leaf_separation = 5
+    ts.layout_fn = layout
+    ts.draw_aligned_faces_as_table = True
+
+    # header declaration
+    pos = 0
+    for aa, codlist in realist.items():
+        F = faces.DynamicItemFace(header_faces, (w * len(codlist), h * 2.4, m * 1.5), (letterconfig.aa_letters_1to3[
+                                  aa], codlist), (QFont(ffamily, fsize + 1), QFont(ffamily, fsize)))
+        pos += 1
+        F.vt_align, F.hz_align = 1, 1
+        ts.aligned_header.add_face(F, column=pos)
+
+    dest_aa = set([])
+    for v in predictions.values():
+        dest_aa.update(set().union(*v.values()))
+
+    legend_w = 40
+    legend_h = 20
+    col = 1
+
+    for aa in sorted(dest_aa):
+        aa = aa.upper()
+        # f = faces.TextFace(" " + letterconfig.aa_letters_1to3[aa] + " ", fsize=15)
+        r = faces.RectFace(legend_w, legend_h, "#000000",
+                           colormap.get(aa, Faces._aabgcolors[aa]), label={'text': letterconfig.aa_letters_1to3[aa],
+                                                                           'color': fgcolor,
+                                                                           'fontsize': 10
+                                                                           })
+        r.margin_top = 10
+        r.margin_bottom = 5
+        # text, font, color, and fontsize color defaults to background color,
+        # font to Verdana, fontsize to 12
+        r.margin_right = 5
+        ts.legend.add_face(r, column=col)
+        col += 1
+
+    standardface = faces.RectFace(legend_w * 2 + 30, legend_h, "#000000",
+                                  '#FFFFFF', label={'text': 'Ref.code (%d)' % gcode,
+                                                    'color': fgcolor,
+                                                    'fontsize': 10
+                                                    })
+    standardface.margin_top = 10
+    standardface.margin_bottom = 5
+    standardface.margin_left = 5
+    standardface.margin_right = 5
+    ts.legend.add_face(standardface, column=0)
+
+    missingface = faces.RectFace(legend_w * 2, legend_h, "#BBBBBB",
+                                 '#CCCCCC', label={'text': 'Missing',
+                                                   'color': fgcolor,
+                                                   'fontsize': 10
+                                                   })
+    missingface.margin_bottom = 5
+    missingface.margin_left = 5
+    missingface.margin_right = 5
+
+    ts.legend.add_face(missingface, column=0)
+    ts.legend_position = 3
+    tree.render(outfile, tree_style=ts, dpi=600)
+
+
+if __name__ == '__main__':
+
+    # argument parser
+    parser = argparse.ArgumentParser(
+        description='reaplot, Create a publicaiton-ready figure from coretracker predictions')
+    parser.add_argument('--codons', '-r', dest='reafile', required=True,
+                        help="A json file with codon count for all genomes (Use coretracker output: reassignment.json. Or a json file with a 'codons' key at the parent level.")
+    parser.add_argument('--input', '-i', dest='input', required=True,
+                        help="CoreTracker output-like file. The accepted file does not have to strictly follow the same data organization \
+                                Prediction probability and validation test are not mandatory.")
+    parser.add_argument('--tree', '-t', dest='tree', required=True,
+                        help="Input tree to draw on, can be a non-binary tree. Branch lengths and support are discarded")
+    parser.add_argument('--gcode', default=1, type=int,
+                        dest='gcode', help="Reference genetic code.")
+    parser.add_argument('--out', '-o', dest="outfile", default="outfile.svg",
+                        help="Output file name, add image extension (svg, pdf or png).")
+    parser.add_argument('--valid', default="none", choices=('both', 'either', 'none'),
+                        help="Validation status to consider for prediction \
+                        `both` require both validation, whereas `either` require only one (clad or align) and `none` ignore it. Default value is `none`.")
+    parser.add_argument(
+        '--colormap', help="Name of a file that map each amino acid to a hex color. Space separated values")
+
+    args = parser.parse_args()
+    fgcolor = '#000000'
+    tree = Tree(args.tree)
+    tree.convert_to_ultrametric()
+    colormap = {}
+    if args.colormap:
+        with open(args.colormap) as COLOR:
+            for line in COLOR:
+                line = line.strip().split()
+                if line:
+                    colormap[line[0]] = line[1]
+    codon_count = load_codons_count(args.reafile)
+    gtable = CodonTable.unambiguous_dna_by_id[abs(args.gcode)]
+    predictions, tot_aa = load_prediction(args.input, args.valid, gtable)
+    realist = dict((k, list(sorted(v))) for k, v in tot_aa.items())
+    codlist = set().union(*realist.values())
+    fsize = 10
+    max_count = max([y for x in codon_count for k,
+                     y in codon_count[x].items() if k in codlist])
+    width = max((len(str(max_count)) + 0.75) * fsize, 35)
+    height = max(fsize, 15)
+    plot_tree(tree, codon_count, realist, predictions, args.outfile, fgcolor, colormap=colormap,
+              h=height, w=width, m=3, ffamily='Verdana', fsize=fsize, gcode=args.gcode)
