@@ -1,3 +1,9 @@
-python setup.py install [--user]
-DEPENDENCIES: biopython, sklearn, scipy, ete3, numpy>1.8, pyQT4, weasyprint, pandas
-It's best to have the conda environnement installed before.
+CoreTracker can be installed using 
+
+    python setup.py install [--user]
+
+from the downloaded package root.
+
+A more detailed explanation on the installation process is available at : http://udem-lbit.github.io/CoreTracker/
+
+DEPENDENCIES: gfortran, biopython, sklearn, scipy, ete3, numpy>1.8, pyQT4, weasyprint, pandas
