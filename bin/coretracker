@@ -13,28 +13,24 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+from collections import defaultdict as ddict
+from Bio import SeqIO
+from ete3 import Tree
+from yaml import load as yamlload
+from coretracker import __author__, __version__, date
+from coretracker.classifier import Classifier, read_from_json
+from coretracker.classifier import MODELPATH
+from coretracker.classifier.models import ModelType
+from coretracker.settings import Settings
+from coretracker.coreutils import *
+import time
+import psutil
 import argparse
 import glob
 import logging
 import os
-import random
-import sys
-import traceback
-from collections import defaultdict as ddict
-from math import log10
 
-from Bio import SeqIO
-from ete3 import Tree
-from yaml import load
-
-from coretracker import __author__, __version__, date
-from coretracker.classifier import *
-from coretracker.classifier import MODELPATH
-from coretracker.classifier.models import ModelType
-from coretracker.coreutils import *
-from coretracker.settings import *
-import time
-
+process = psutil.Process(os.getpid())
 ENABLE_PAR = True
 CPU_COUNT = 0
 try:
@@ -56,7 +52,6 @@ etiquette = ["fitch", "suspected", "Fisher pval", "Gene frac",
              "N. rea", "N. used", "Cod. count", "Sub. count",
              "G. len", "codon_lik", "N. mixte", "id"]  # , 'total_aa']
 
-
 def AlignmentProgramType(program):
     # Raise a value error if not conform to expected programs
     tmp = program.strip().split()[0]
@@ -66,6 +61,13 @@ def AlignmentProgramType(program):
     else:
         return program
 
+def memory_used():
+    mem = 0
+    try:
+        mem = process.get_memory_info().rss/(1024.0*1024)
+    except:
+        mem = process.memory_info().rss/(1024.0*1024)
+    return mem
 
 def set_coretracker(args, settings):
     """Set all data for coretracker from the argument list"""
@@ -74,26 +76,23 @@ def set_coretracker(args, settings):
 
     if args.debug:
         logging.basicConfig(level=logging.DEBUG)
-
     if args.outdir:
         if not os.path.exists(args.outdir):
             os.makedirs(args.outdir)
             # let original error handling
         settings.OUTDIR = args.outdir
-
+    
     msaprg = progcmd(args.align)
-
     input_alignment = args.seq
     use_tree = None
     specietree = Tree(args.tree)
-
     if args.usetree:
         if args.align != 'mafft':
             logging.warning("Cannot usetree with muscle alignment")
         else:
             use_tree = args.tree
-
-    settings.SCALE = args.scale
+        settings.SCALE = args.use_tree
+        
     hmmfiles = {}
     if args.hmmdir:
         try:
@@ -116,7 +115,7 @@ def set_coretracker(args, settings):
     if args.restrict_to:
         try:
             with open(args.restrict_to) as SREST:
-                for line in SREEST:
+                for line in SREST:
                     line = line.strip()
                     if line and not line.startswith('#'):
                         spec_restricted_list.append(line)
@@ -129,28 +128,29 @@ def set_coretracker(args, settings):
     if clf is None or not clf.trained:
         raise ValueError("Classifier not found or not trained!")
     t = time.time()
-    seqloader = SequenceLoader(input_alignment, args.dnaseq, settings, args.gapfilter, has_stop=args.hasstop,
+    seqloader = SequenceLoader(input_alignment, args.dnaseq, settings, args.gapfilter,
                                use_tree=use_tree, refine_alignment=args.refine, msaprog=msaprg, hmmdict=hmmfiles)
     t2 = time.time()
-    logging.debug("Sequence loaded in %.3f s" % (abs(t2 - t)))
+    logging.info("Sequence loaded in %.3f s, using %.3f MB" % (abs(t2 - t), memory_used()))
     # create sequence set
     setseq = SequenceSet(seqloader, specietree,
                          settings.GENETIC_CODE, codemap=codemap)
-    setseq.prot_filtering(args.idfilter, args.gapfilter,
-                          args.iccontent, args.rmconst)
+    # won't filter if their are id, gap and ic are not set
+    # which is the desired action
+    setseq.filter_sequences(args.idfilter, args.gapfilter,
+                          args.iccontent, args.rmconst, nofilter=args.nofilter)
     spec_restricted_list = list(
         set(spec_restricted_list).intersection(setseq.common_genome))
     if spec_restricted_list:
         settings.LIMIT_TO_SUSPECTED_SPECIES = True
     t = time.time()
-    logging.debug("Sequence filtered in %.3f s" % (abs(t - t2)))
+    logging.info("Sequence filtered in %.3f s, using %.3f MB" % (abs(t - t2),  memory_used()))
     reafinder = ReaGenomeFinder(setseq, settings)
     reafinder.get_genomes()
     reafinder.possible_aa_reassignation(speclist=spec_restricted_list)
     t2 = time.time()
-    logging.debug("List of probable reassignment identified in %f" %
+    logging.info("List of probable reassignment identified in %f" %
                   (abs(t - t2)))
-
     return reafinder, clf, model
 
 
@@ -166,12 +166,19 @@ def compile_result(x, clf, cod_align, model):
     if X_data is not None and X_data.size:
         X_data, X_dataprint, selected_et = model.format_data(X_data)
         pred_prob = clf.predict_proba(X_data)
-        pred = clf.predict(X_data)
+        #pred = clf.predict(X_data)
+        pred = pred_prob.argmax(axis=1)   
+        if sum(pred) == 0 and reafinder.settings.SKIP_EMPTY:
+            return None
         sppval, outdir, rkp, codvalid = utils.get_report(
             fitch, reafinder, cod_align, (X_data, X_labels, pred_prob, pred))
         utils.print_data_to_txt(os.path.join(outdir, fitch.ori_aa + "_to_" + fitch.dest_aa + "_data.txt"),
                                 selected_et, X_dataprint, X_labels, pred, pred_prob, sppval, fitch.dest_aa, valid=codvalid)
+ 
         tmp_data = [X_labels, pred, pred_prob, codvalid]
+        del X_data
+        del X_dataprint
+        del s_complete_data
         return rkp, tmp_data
     else:
         return None
@@ -186,7 +193,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--wdir', '--outdir', dest="outdir", default="output", help="Working directory")
 
-    parser.add_argument('--version', action='version', version='%(prog)s 1.0')
+    parser.add_argument('--version', action='version', version='CoreTracker v.%s'%__version__)
 
     parser.add_argument('--gapfilter', '--gap', type=float, default=0.6, dest='gapfilter',
                         help="Remove position with more than `gapfilter` gap from the alignment, using gapfilter as threshold (default :0.6)")
@@ -200,17 +207,11 @@ if __name__ == '__main__':
     parser.add_argument('-t', '--intree', dest="tree",
                         help='Input specietree in newick format', required=True)
 
-    parser.add_argument('--scale', type=float, default=1.0,
-                        dest='scale', help="Scale to compute the branch format for the '--treein' option of mafft. If you're unsure, use the default value. See http://mafft.cbrc.jp/alignment/software/treein.html")
-
     parser.add_argument('--protseq', '--prot', '-p', dest='seq',
-                        help="Protein sequence input in fasta format", required=True)
+                        help="Protein sequence input in core format", required=True)
 
     parser.add_argument('--dnaseq', '--dna', '-n', dest='dnaseq',
-                        help="Nucleotides sequences input in fasta format", required=True)
-
-    parser.add_argument('--stopcodon', dest='hasstop', action='store_true',
-                        help="Whether or not stop are present in protein alignment and dna sequences.")
+                        help="Nucleotides sequences input in core format", required=True)
 
     parser.add_argument('--debug', dest='debug', action='store_true',
                         help="Enable debug printing")
@@ -224,11 +225,14 @@ if __name__ == '__main__':
     parser.add_argument('--novalid', dest='valid', action='store_false',
                         help="Do not validate prediction by retranslating and checking alignment improvement")
 
+    parser.add_argument('--nofilter', '--nf', action="store_true", dest="nofilter", 
+                        help="Do not filter sequence alignment.")
+
     parser.add_argument('--align', dest='align', nargs='?', type=AlignmentProgramType, const="muscle",
                         help="Choose a program to align your sequences")
 
-    parser.add_argument('--use_tree', dest='usetree', action="store_true",
-                        help="This is helpfull only if the mafft alignment is selected. Perform multiple alignment, using species tree as guide tree. The tree must be rooted and binary")
+    parser.add_argument('--use_tree', dest='usetree', nargs='?', const=1.0,
+                        help="This is helpfull only if the mafft alignment is selected. Perform multiple alignment, using species tree as guide tree. A scaling value is needed to compute the branch format for the '--treein' option of mafft. If you're unsure, use the default value. The tree must be rooted and binary. See http://mafft.cbrc.jp/alignment/software/treein.html")
 
     parser.add_argument('--expos', '--export_position', dest='expos', action="store_true",
                         help="Export a json file with the position of each reassignment in the corresponding genome.")
@@ -255,28 +259,37 @@ if __name__ == '__main__':
           (__version__, date, __author__))
 
     args = parser.parse_args()
+    start_t = time.time()
+    if args.nofilter:
+        # set the filter parameters to none
+        args.idfilter = None 
+        args.gapfilter = None 
+        args.iccontent = None
+        
     setting = Settings()
 
     paramfile = args.params
     ad_params = {}
     if paramfile:
         with open(paramfile) as f:
-            ad_params = load(f, Loader=Loader)
+            ad_params = yamlload(f, Loader=Loader)
 
     # setting.set(OUTDIR=args.outdir)  # this does nothing
     setting.fill(ad_params)
     setting.update_params(COMPUTE_POS=args.expos)
     setting.update_params(VALIDATION=args.valid)
     setting.update_params(IMAGE_FORMAT=args.imformat)
-    parallel = args.parallel
+    
     reafinder, clf, model = set_coretracker(args, setting)
     codon_align, fcodon_align = reafinder.seqset.get_codon_alignment()
     cod_align = SeqIO.to_dict(fcodon_align)
     reafinder.set_rea_mapper()
 
+    # The program is run at this phase
     done = False
     results = []
     ALL_PRED = []
+    
     if args.parallel > 0 and ENABLE_PAR:
         results = Parallel(n_jobs=args.parallel, verbose=1)(delayed(compile_result)(
             x, clf, cod_align, model) for x in reafinder.run_analysis(codon_align, fcodon_align))
@@ -284,11 +297,10 @@ if __name__ == '__main__':
     elif args.parallel > 0:
         logging.warning(
             "Joblib requirement not found! Disabling parallelization")
-
+    
     if not done:
         for x in reafinder.run_analysis(codon_align, fcodon_align):
             results.append(compile_result(x, clf, cod_align, model))
-
     # remove None results then unzip
     results = [r for r in results if r is not None]
     results, ALL_PRED = zip(*results)
@@ -302,4 +314,5 @@ if __name__ == '__main__':
         exp_outfile = os.path.join(reafinder.settings.OUTDIR, "positions.json")
         reafinder.export_position(rea_pos_keeper, exp_outfile)
 
-    reafinder.save_all(ALL_PRED, True)
+    reafinder.save_all(ALL_PRED, True, nofilter=args.nofilter)
+    logging.info("\n**END (%.3f s, %.3f MB)" % (abs(time.time() - start_t),  memory_used()))

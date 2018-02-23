@@ -3,7 +3,6 @@ import Bio.SubsMat.MatrixInfo as MatrixInfo
 
 AVAILABLE_MAT = MatrixInfo.available_matrices + ['identity']
 
-
 class Settings():
     """Contains global settings for the current run of CoReTracker"""
 
@@ -58,6 +57,10 @@ class Settings():
         # whether or not consensus should be used for the likelihood
         self.USE_CONSENSUS_FOR_LIKELIHOOD = kwargs.get(
             'USE_CONSENSUS_FOR_LIKELIHOOD', parameters.USE_CONSENSUS_FOR_LIKELIHOOD)
+        # save filtered alignment
+        self.SAVE_ALIGN = kwargs.get('SAVE_ALIGN', parameters.SAVE_ALIGN)
+        # do not output results for no predicted reassignment
+        self.SKIP_EMPTY = kwargs.get('SKIP_EMPTY', parameters.SKIP_EMPTY)
         # if global alignment should be used to find the suspected list
         self.USE_GLOBAL = kwargs.get(
             'USE_GLOBAL', parameters.USE_GLOBAL)
@@ -86,15 +89,19 @@ class Settings():
         # output format. Should be pdf for the moment
         self.IMAGE_FORMAT = "pdf"
         # The following are the binaries setting for HMMER package
-        self.hmmbuild = kwargs.get('hmmbuild', 'hmmbuild')
+        self.hmmbuild = kwargs.get('HMMBUILD', 'hmmbuild')
         # self.eslalimask = kwargs.get('eslalimask', 'esl-alimask')
         # self.eslalimanip = kwargs.get('eslalimanip', 'esl-alimanip')
         # this can be used next version for a better filtering
         # not need right now
-        self.hmmalign = kwargs.get('hmmalign', 'hmmalign')
+        self.hmmalign = kwargs.get('HMMALIGN', 'hmmalign')
         # default values for supplemental data
         self.VALIDATION = True
         self.COMPUTE_POS = False
+        self.SCALE = 1.0
+        self.PROTFORMAT = kwargs.get('PROTFORMAT', parameters.PROTFORMAT)
+        self.DNAFORMAT = kwargs.get('DNAFORMAT', parameters.DNAFORMAT)
+        self.OUTDIR = ""
 
     def get_external_binaries(self):
         ext = [self.hmmbuild, self.hmmalign]

@@ -1,3 +1,7 @@
+# This module is currently not implemented and
+# is not working. In the future, an algorithm to check
+# for RNA editing will be implemented here
+
 from Bio.Seq import Seq
 import Bio.SeqIO as SeqIO
 from Bio.SeqRecord import SeqRecord

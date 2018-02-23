@@ -31,8 +31,11 @@ LIMIT_TO_SUSPECTED_SPECIES = False
 # alignement for Telford score
 USE_CONSENSUS_FOR_LIKELIHOOD = False
 
-# Dump all result into a json file
-JSON_DUMP = False
+# Save filtered alignment
+SAVE_ALIGN = True
+
+# skip empty results
+SKIP_EMPTY = True
 
 # Minimum frequency of global>filtered required for each specie
 # Using a random threshold is a bad idea
@@ -85,3 +88,10 @@ MODEL_TYPE = '3'
 
 # Number of iteration for the hmm
 HMMLOOP = 10
+
+# input sequence format
+PROTFORMAT = 'core'
+DNAFORMAT = 'core'
+
+#
+

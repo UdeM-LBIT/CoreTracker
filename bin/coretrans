@@ -13,18 +13,16 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from Bio import SeqIO
+import argparse
 from coretracker.coreutils import SequenceLoader, CoreFile
 import coretracker.coreutils.utils as utils
-from Bio import AlignIO
 import sys
 import warnings
 import os
 import glob
 import logging
-import time
+
 warnings.filterwarnings("ignore")
-import argparse
 
 
 # argument parser
@@ -33,21 +31,23 @@ parser = argparse.ArgumentParser(
 parser.add_argument('--outdir', '--wdir', dest="outdir",
                     default="trans_output", help="Working directory")
 parser.add_argument('--nuc', '--input', '-n', dest='dnafile',
-                    required=True, help="Dnafile input")
+                    required=True, help="Nucleotide input file")
+parser.add_argument('--prot', '-p', dest='protfile',
+                    help="protein input file. Force the use of this version of the protein for each gene")
 parser.add_argument('--gcode', type=int, default=1, dest='gcode',
                     help="Genetic code to use for translation. Default value is 1")
 parser.add_argument('--codemap', dest='codemap',
-                    help="A tab delimited file that map each species to its genetic code. Default code (--gcode) will be used for missing species")
+                    help="A tab delimited file that map each species to its genetic code. The value of --gcode will be used for missing species")
 parser.add_argument('--prog', default="mafft", dest='prog', choices=[
                     'mafft', 'muscle'], help="Genetic code to use for translation. Default value is 1")
 parser.add_argument('--align', dest='align', action='store_true',
                     help="Whether we should align or not")
-parser.add_argument('--gapchar', dest='gapchar',
-                    default='-', help="Set default gap char")
 parser.add_argument('--refine', dest='refine', action='store_true',
                     help="Whether we should refine the alignment with hmm")
 parser.add_argument('--noclean', dest='noclean', action='store_false',
-                    help="Whether we should clean unnecessary file or not")
+                    help="Whether we should clean temporary files created or not")
+parser.add_argument('--nostopstrip', dest='nostopstrip', action='store_false',
+                    help="Do not strip stop codons from sequences")
 parser.add_argument('--alignarg', dest='alignargs', default="",
                     help="Additional arguments for the alignment program (muscle or mafft).")
 parser.add_argument('--notrans', dest='notrans', action='store_true',
@@ -133,16 +133,23 @@ if args.filter:
     print("======== Total of %d / %d genes rescued ========" %
           (gcount, total_gcount))
 
-    # save new sequence file for coretracker later
-    CoreFile.write_corefile(
-        core_inst, os.path.join(args.outdir, "nuc.core"))
-    # give time to read result
-    time.sleep(1)
-
-# proceed to translation if  here
-
+# proceed to translation  here
 if not args.notrans:
     translated_prot = SequenceLoader.translate(core_inst, gcode, codemap)
+    if not args.nostopstrip:
+        translated_prot, core_inst = SequenceLoader.clean_stop(translated_prot, core_inst)
+
+    # if a protfile is given, use this version of the protein
+    if args.protfile:
+        prot_core_inst = CoreFile(args.protfiles, alphabet='prot')
+        for gene, seqs in prot_core_inst.items():
+            for recseq in seqs:
+                trans_seq = [x for x in translated_prot[gene] if x.id == recseq.id]
+                nuc_seq = [x for x in core_inst[gene] if x.id == recseq.id]
+                if not args.nostopstrip and recseq.seq.endswith('*'):
+                    recseq.seq = recseq.seq[0:-1]
+                if nuc_seq and len(nuc_seq[0].seq) == len(recseq.seq) * 3:
+                    trans_seq[0].seq = recseq.seq
     alignment = {}
     if align:
         for (gene, seqs) in translated_prot.items():
@@ -158,3 +165,7 @@ if not args.notrans:
     else:
         CoreFile.write_corefile(
             translated_prot, os.path.join(args.outdir, "prot.core"))
+
+# save new sequence file for coretracker
+CoreFile.write_corefile(
+    core_inst, os.path.join(args.outdir, "nuc.core"))

@@ -34,7 +34,7 @@ def load_input(infile, isjson=False):
     readict = None
     with open(infile, 'r') as IN:
         if isjson:
-            readict = json.load()
+            readict = json.load(IN)
         else:
             readict = yaml.load(IN, Loader=Loader)
     if not readict:

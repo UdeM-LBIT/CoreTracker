@@ -1,10 +1,7 @@
-import re
-from PyQt4.QtGui import (QGraphicsRectItem, QGraphicsLineItem,
-                         QGraphicsEllipseItem, QPen, QColor, QBrush,
-                         QFont, QPixmap, QPainter, QGraphicsSimpleTextItem,
-                         QGraphicsTextItem, QGraphicsItem)
+from PyQt4.QtGui import (QGraphicsRectItem, QGraphicsLineItem, QPen,
+                        QColor, QBrush, QFont, QGraphicsSimpleTextItem, QLinearGradient)
 
-from PyQt4.QtCore import Qt, QPointF, QRect
+from PyQt4.QtCore import Qt, QPointF
 from ete3 import faces
 from ete3.treeview.main import COLOR_SCHEMES
 import math
@@ -163,6 +160,42 @@ class PPieChartFace(faces.StaticItemFace):
 
 
 class _PieChartItem(QGraphicsRectItem):
+
+    def __init__(self, percents, width, height, colors, line_color=None):
+        QGraphicsRectItem.__init__(self, 0, 0, width, height)
+        self.percents = percents
+        self.colors = colors
+        self.line_color = line_color
+
+    def paint(self, painter, option, widget):
+        a = 5760  # 16 * 360, this is a full circle
+        angle_start = 0
+        # radius = max(self.rect().width(), self.rect().height()) / 2.
+
+        if not self.line_color:
+            painter.setPen(Qt.NoPen)
+        else:
+            painter.setPen(QColor(self.line_color))
+            painter.setPen(QColor('#000000'))
+
+        for i, p in enumerate(self.percents):
+            col = self.colors[i]
+            painter.setBrush(QBrush(QColor(col)))
+            angle_span = (p / 100.) * a
+            painter.drawPie(self.rect(), angle_start, angle_span)
+            current_angle = ((angle_start + angle_span / 2.) /
+                             16.) * (math.pi / 180.)
+            angle_start += angle_span
+            # find middle radius of the arc span
+            # add a new line from the intersection point with the arc
+            # add a second line from the end of that line in a 
+            # check if vertical then add a new vertical path
+            # check angle orientation before selecting the orientation of the second line
+            # probably do this with a path object and multiple point
+            # then add a text object 
+
+
+class _RingChartItem(_PieChartItem):
 
     def __init__(self, percents, width, height, colors, line_color=None):
         QGraphicsRectItem.__init__(self, 0, 0, width, height)
@@ -480,3 +513,81 @@ class ReaRectFace(faces.StaticItemFace):
         self.width = width
         self.item.setPen(nopen)
         self.item.setRect(0, 0, self.width, max_h)
+
+
+class SummaryRectFace(faces.StaticItemFace):
+    """Rectangular faces that contains genome count for each  a list of rect face for each node
+    in order to plot reassignment in both extant and
+    ancestral sequence
+    """
+
+    def __init__(self, count, aalist, height=12, width=100, margin=1, colormap={}, ffamily='Courier', fsize=12, fgcolor='#000000'):
+        
+        faces.StaticItemFace.__init__(self, None)
+        self.h = height
+        self.w = width
+        self.margin = margin
+
+        self.font = QFont(ffamily, fsize)
+        self.aa_list = aalist
+        self.codons = count
+        self.width = margin
+
+        self.fgcolor = QColor(fgcolor)
+        colormap = colormap if colormap else _aabgcolors
+        self.bgcolor = {}
+        for cod, aas in self.aa_list.items():
+            for aa in aas:
+                aa = aa.upper()
+                if aa not in self.bgcolor:
+                    self.bgcolor[aa] = QColor(colormap.get(aa, _aabgcolors[aa])) 
+
+    def update_items(self):
+        rect_cls = QGraphicsRectItem
+        nobrush = QBrush(Qt.NoBrush)
+        nopen = QPen(QColor('#FFFFFF'))
+        grad = Qt.NoBrush
+        self.item = rect_cls()
+
+        for codon in self.codons.keys():
+            rectitem = rect_cls(self.width, self.margin, self.w, self.h, parent=self.item)
+            total_rea = len(self.aa_list[codon])
+            if total_rea > 0:
+
+                grad = QLinearGradient(QPointF(0, 0.5), QPointF(1, 0.5))
+                grad.setCoordinateMode(QLinearGradient.ObjectBoundingMode)
+                pointpos = 1.0 / total_rea
+                starting = -0.001
+                for reqcol, aa in enumerate(self.aa_list[codon]):
+                    curcol = self.bgcolor[aa]
+                    # use the same color twice to mark start and end
+                    grad.setColorAt(starting + 0.001, curcol)
+                    starting += pointpos
+                    grad.setColorAt(starting, curcol)
+                
+                    # grad.setColorAt(starting, QColor(curcol))
+            # put small rec in big rec
+            # Comment award of the year !
+            brush = QBrush(QColor('#CCCCCC'))
+            pen = QPen(QColor('#BBBBBB'))
+            if self.codons[codon]:
+                brush = QBrush(grad)    
+                pen = QPen(QColor('#000000'))
+            
+            rectitem.setBrush(brush)
+            rectitem.setPen(pen)
+            # Center text according to rectitem size
+            text = QGraphicsSimpleTextItem(self.codons[codon], parent=rectitem)
+            text.setFont(self.font)
+            text.setBrush(self.fgcolor)
+            center = rectitem.boundingRect().center()
+            txtw = text.boundingRect().width()
+            txth = text.boundingRect().height()
+            text.setPos(center.x() - txtw / 2, center.y() - txth / 2)
+
+            self.width += self.w + self.margin
+
+        # now plot the big rect (with margin)
+        self.item.setPen(nopen)
+        self.item.setBrush(nobrush)
+        self.item.setRect(0, 0, self.width, self.h + (2 * self.margin))

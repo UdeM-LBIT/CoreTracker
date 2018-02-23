@@ -283,7 +283,7 @@ class SingleNaiveRec(object):
         self._bottomup(self.tree)
         self._topdown(self.tree)
 
-    def update_codon_data(codon_rea):
+    def update_codon_data(self, codon_rea):
         """Update codon reassignment data (global and filtered)
         """
         self.codon_rea_global, self.codon_rea_filtered = codon_rea
