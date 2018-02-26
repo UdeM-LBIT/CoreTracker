@@ -74,6 +74,7 @@
                 <ol>
                   <li><a href="#runcoretracker">Running coretracker</a></li>
                   <li><a href="#coreinterpret">Interpreting coretracker's output</a></li>
+                  <li><a href="#coreprep"><b>coretracker-prep</b> and <b>coretracker-run</b></a></li>
                 </ol>
               </li>
 
@@ -81,6 +82,7 @@
                 <ol>
                   <li><a href="#codonclust"><b>codonclust</b> : genome clustering and outlier identification</a></li>
                   <li><a href="#ansrec"><b>ansrec</b> : ancestral state reconstruction</a></li>
+                  <li><a href="#reaplot"><b>reaplot</b> : draw a figure similar to Figure 2/3 of the paper</a></li>
                   <li><a href="#domaintester"><b>domaintester</b> : reassignment weighting by positions in protein domains</a></li>
                   <li><a href="#modeltrainer"><b>modeltrainer</b> : Training new models for the Random Forest prediction</a></li>
 
@@ -97,8 +99,8 @@
           <h2>
           <a class="anchor" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About CoreTracker</h2>
           <p><code class="coretracker">CoreTracker</code> is a package written in python for the prediction of codon reassignments. It detects evidence of codon reassignments from the protein repertoire of a set of genomes by successively applying multiple algorithms. It’s therefore a filtering pipeline that explore all potential reassignments in genomes of the input set, and finally retains the most probable. <code class="coretracker">CoreTracker</code> is the first method for detecting codon reassignments, that accounts for the phylogenetic context of considered genomes.</p>
-        <p>The algorithm requires as input a groups of orthologous genes (nucleotide and amino acid sequences) from the genomes of interest, a species phylogenetic tree and a preliminary genetic code. Users can either provide their own protein alignment or use <code class="coretracker">CoreTracker</code>'s default alignment pipeline which consists of a preliminary alignment with <a href="http://drive5.com/muscle/">muscle</a>/<a href="http://mafft.cbrc.jp/alignment/software/">mafft</a> followed by its refinement using a HMM profile with <a href="http://hmmer.org/">HMMER</a></p>
-        <p> A thorough description of <code class="coretracker">CoreTracker</code>  can be found in our paper : </p><p><blockquote cite="">V. Calderon, E. Noutahi, M. Blanchette, N. El-Mabrouk and F. Lang, New sequence-based method to predict codon reassignments, applied to mitochondrial codon evolution. </blockquote></p>
+        <p>The algorithm requires as input a groups of orthologous genes (nucleotide and amino acid sequences) from the genomes of interest, a species phylogenetic tree and a preliminary genetic code. Users can either provide their own protein alignment or use <code class="coretracker">CoreTracker</code>'s default alignment pipeline which consists of a preliminary alignment with <a href="http://drive5.com/muscle/">muscle</a>/<a href="http://mafft.cbrc.jp/alignment/software/">mafft</a> followed by a refinement using provided HMM profile with <a href="http://hmmer.org/">HMMER</a></p>
+        <p> A thorough description of <code class="coretracker">CoreTracker</code>  can be found in our paper : </p><p><blockquote cite="">Noutahi, E., Calderon, V., Blanchette, M., Lang, F. B., &amp; El-Mabrouk, N. (2017). CoreTracker: accurate codon reassignment prediction, applied to mitochondrial genomes. Bioinformatics, 33(21), 3331-3339.</blockquote></p>
       </div>
 
       <!-- Install section -->
@@ -107,7 +109,7 @@
         <a class="anchor" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
         <p><code class="coretracker">CoreTracker</code> is compatible with python 2.7 and has only been tested on linux. Installation requires the following external application : <a href="https://gcc.gnu.org/wiki/GFortran"><code>gfortran</code></a>, <a href="https://www.riverbankcomputing.com/software/pyqt/download"><code>PyQt4</code>, </a><a href="http://drive5.com/muscle/"><code>muscle</code></a>, <a href="http://mafft.cbrc.jp/alignment/software/"><code>mafft</code></a> and <a href="http://hmmer.org/download.html"><code>HMMER</code></a>. Python dependencies are listed in the <a href="https://github.com/UdeM-LBIT/CoreTracker/blob/master/requirements.txt"> <code>requirements.txt</code></a> file.</p>
           <h3 id="conda">Install CoreTracker using the Anaconda/Miniconda environment</h3>
-          The easiest and recommended way to install <code class="coretracker">CoreTracker</code> is through <a href="https://www.continuum.io/content/conda-data-science"><code>conda</code></a>. If you are already familiar with conda, I recommend to setup a new environment. <p><span style="color:#cc0000"> Important : For a variety of reason, pip won't work sometimes in a conda environment (for example, if you have $PYTHONPATH setup in your shell profile). In that case, please use the full path to pip in the root environment (ex : <b>/path/to/conda/bin/pip</b> instead of just <b>pip</b> )</span></p>
+          The easiest and recommended way to install <code class="coretracker">CoreTracker</code> is through <a href="https://anaconda.org/maclandrol/coretracker"><code>conda</code></a>. If you are already familiar with conda, I recommend to setup a new environment. <p><span style="color:#cc0000"> Important : For a variety of reason, pip won't work sometimes in a conda environment (for example, if you have $PYTHONPATH setup in your shell profile). In that case, please use the full path to pip in the root environment (ex : <b>/path/to/conda/bin/pip</b> instead of just <b>pip</b> )</span></p>
 <pre class="terminal">
 <span class="comment"># Install Miniconda  (you can ignore this step if you already have Anaconda/Miniconda)</span>
 <span class="cmd">wget http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh -O miniconda.sh</span>
@@ -169,15 +171,15 @@ Now install CoreTracker with <code>pip</code> or <code>setup.py</code>. If you a
 
 <p>To invoke CoreTracker, just type <b><code>coretracker -h</code></b> after installation in a terminal. Its command line options will be printed </p>
 <p>
-<pre class="terminal">CoreTracker v:1.2 Copyright (C) 2017 Emmanuel Noutahi
+<pre class="terminal">CoreTracker v:1.4.1 Copyright (C) 2017 Emmanuel Noutahi
 usage: coretracker.py [-h] [--wdir OUTDIR] [--version] [--gapfilter GAPFILTER]
                       [--idfilter IDFILTER] [--icfilter ICCONTENT] -t TREE
-                      [--scale SCALE] --protseq SEQ --dnaseq DNASEQ
-                      [--stopcodon] [--debug] [--rmconst] [--norefine]
-                      [--novalid] [--align [ALIGN]] [--use_tree] [--expos]
-                      [--hmmdir HMMDIR] [--params PARAMS]
-                      [--parallel [PARALLEL]] [--imformat {pdf,png,svg}]
-                      [--restrict_to RESTRICT_TO] [--codemap CODEMAP]
+                      --protseq SEQ --dnaseq DNASEQ [--debug] [--rmconst]
+                      [--norefine] [--novalid] [--nofilter] [--align [ALIGN]]
+                      [--use_tree [USETREE]] [--expos] [--hmmdir HMMDIR]
+                      [--params PARAMS] [--parallel [PARALLEL]]
+                      [--imformat {pdf,png,svg}] [--restrict_to RESTRICT_TO]
+                      [--codemap CODEMAP]
 
 CoreTracker, A codon reassignment tracker
 
@@ -199,16 +201,10 @@ optional arguments:
                         max(icvector)*icfilter)
   -t TREE, --intree TREE
                         Input specietree in newick format
-  --scale SCALE         Scale to compute the branch format for the '--treein'
-                        option of mafft. If you're unsure, use the default
-                        value. See
-                        http://mafft.cbrc.jp/alignment/software/treein.html
   --protseq SEQ, --prot SEQ, -p SEQ
-                        Protein sequence input in fasta format
+                        Protein sequence input in core format
   --dnaseq DNASEQ, --dna DNASEQ, -n DNASEQ
-                        Nucleotides sequences input in fasta format
-  --stopcodon           Whether or not stop are present in protein alignment
-                        and dna sequences.
+                        Nucleotides sequences input in core format
   --debug               Enable debug printing
   --rmconst             Remove constant site from filtered alignment.
   --norefine            Do not refine the alignment. By default the alignment
@@ -218,10 +214,15 @@ optional arguments:
                         (TO FIX)
   --novalid             Do not validate prediction by retranslating and
                         checking alignment improvement
+  --nofilter, --nf      Do not filter sequence alignment.
   --align [ALIGN]       Choose a program to align your sequences
-  --use_tree            This is helpfull only if the mafft alignment is
+  --use_tree [USETREE]  This is helpfull only if the mafft alignment is
                         selected. Perform multiple alignment, using species
-                        tree as guide tree. The tree must be rooted and binary
+                        tree as guide tree. A scaling value is needed to
+                        compute the branch format for the '--treein' option of
+                        mafft. If you're unsure, use the default value. The
+                        tree must be rooted and binary. See
+                        http://mafft.cbrc.jp/alignment/software/treein.html
   --expos, --export_position
                         Export a json file with the position of each
                         reassignment in the corresponding genome.
@@ -241,7 +242,7 @@ optional arguments:
                         Restrict analysis to list of genomes only
   --codemap CODEMAP     A tab delimited file that map each species to its
                         genetic code. Default code (--gcode) will be used for
-                        missing species
+                        remaining species
 
   </pre></p>
 
@@ -283,18 +284,22 @@ optional arguments:
 <span class="comment"># Perform alignment according to input tree</span>
 <code>coretracker -t "tree.nw" -p "protfile.core" -n "nucfile.core" --gapfilter 0.3 --icfilter 0.3  --idfilter 0.6 --wdir "path/to/outdir" <b>--align mafft --use_tree --scale 1</b></code>
 
+<span class="comment"># Specify a directory with HMM files for each gene</span>
+<code>coretracker -t "tree.nw" -p "protfile.core" -n "nucfile.core" --gapfilter 0.3 --icfilter 0.3  --idfilter 0.6 --wdir "path/to/outdir" <b>--hmmdir "path/to/hmmdir"</b></code>
+
+<span class="comment"># Deactivate non-conserved position filtering in the alignment (if you have use trimAl for example) </span>
+<code>coretracker -t "tree.nw" -p "protfile.core" -n "nucfile.core" --wdir "path/to/outdir" <b>--nofilter</b></code>
+
 <span class="comment"># Deactivate automatic alignment refinement step based on HMM</span>
 <code>coretracker -t "tree.nw" -p "protfile.core" -n "nucfile.core" --gapfilter 0.3 --icfilter 0.3  --idfilter 0.6 --wdir "path/to/outdir" <b>--norefine</b></code>
 
-<span class="comment"># Specify a directory with HMM files for each gene</span>
-<code>coretracker -t "tree.nw" -p "protfile.core" -n "nucfile.core" --gapfilter 0.3 --icfilter 0.3  --idfilter 0.6 --wdir "path/to/outdir" <b>--hmmdir "path/to/hmmdir"</b></code>
 </pre>
 </div>
 
 <!-- Wizard -->
 <div class="content">
     <pre class="headers">Wizard level</pre>
-<pre class="highlight"><span class="comment"># Export a json file with postition of validated reassigned codon in each genome</span>
+<pre class="highlight"><span class="comment"># Export a json file with the postitions of validated reassigned codon in each genome</span>
 <code>coretracker -t "tree.nw" -p "protfile.core" -n "nucfile.core" --gapfilter 0.3 --icfilter 0.3  --idfilter 0.6 --wdir "path/to/outdir" <b>--expos</b></code>
 
 <span class="comment"># More control over parameters</span>
@@ -470,7 +475,7 @@ MATEILTAAKFVGAG--SIGAAGSGAGIGTVFGNLIIGYARNPSLKQQLFTYAILGFAISEAMGLFCLMMAFLILFGL
 <span class="comment"># listing the output directory</span>
 <span class="cmd">ls test_data/output</span>
 
-aause.json  filt_alignment.fasta  <span class="folder">Ile_to_Gly</span>           <span class="folder">Phe_to_Asn</span>
+tree.nwk  filt_alignment.fasta  <span class="folder">Ile_to_Gly</span>           <span class="folder">Phe_to_Asn</span>
 <span class="folder">Arg_to_Asn</span>  gap_filt.fasta        <span class="folder">Ile_to_Lys  </span>         <span class="folder">Phe_to_Gly</span>
 <span class="folder">Arg_to_Gln</span>  <span class="folder">Gln_to_Arg     </span>       <span class="folder">Ile_to_Met  </span>         <span class="folder">Phe_to_Ile</span>
 <span class="folder">Arg_to_Gly</span>  <span class="folder">Gln_to_Gly     </span>       <span class="folder">Ile_to_Phe  </span>         <span class="folder">Phe_to_Ser</span>
@@ -484,7 +489,7 @@ aause.json  filt_alignment.fasta  <span class="folder">Ile_to_Gly</span>        
 <span class="folder">Asn_to_Ile</span>  ic_filt.fasta         <span class="folder">Lys_to_Ser  </span>         <span class="folder">Ser_to_Lys</span>
 <span class="folder">Asn_to_Lys</span>  <span class="folder">Ile_to_Arg     </span>       ori_alignment.core   <span class="folder">Ser_to_Phe</span>
 <span class="folder">Asn_to_Phe</span>  <span class="folder">Ile_to_Asn     </span>       ori_alignment.fasta  similarity.json
-<span class="folder">Asn_to_Ser</span>  <span class="folder">Ile_to_Gln     </span>       <span class="folder">Phe_to_Arg  </span>         tree.nwk
+<span class="folder">Asn_to_Ser</span>  <span class="folder">Ile_to_Gln     </span>       <span class="folder">Phe_to_Arg  </span>
 
 <span class="comment"># listing one of the several folder containing specific reassignment</span>
 <span class="cmd">ls test_data/output/Arg_to_Gly</span>
@@ -530,35 +535,6 @@ AGA_rea.svg     AGG_ori.svg     Arg_to_Gly_data.txt
 </pre>
 </br></li>
 
-<li><b>aause.json</b> :a json file that contains the pairwise distance between species in both the input alignment (<b>'global'</b>) and the amino acid (AA) filtered alignment (<b>'aafiltered'</b>) for each amino acid. The AA-filtered alignment for a given amino acid <code>X</code> is the one obtained after filtering, then keeping only positions where <code>X</code> is majoritary. The two genomes that are being compared are are separated by <b>||</b>.
-<br><br>
-<pre>
-{
-    "Ser": [
-        {
-            "filtered": 0.44897959183673475, 
-            "global": 0.4292988640814728, 
-            "species": "Schistosoma||Paracentrotus"
-        }, 
-        
-        ...
-    ]
-
-    ...
-
-    "Asn": [
-
-        ...
-
-        {
-            "aafiltered": 0.4516129032258065, 
-            "global": 0.4465334900117508, 
-            "species": "Saccoglossus||Blanceolatum"
-        }
-    ]  
-}
-</pre>
-</br></li>
 <li><b>positions.json</b> : a json file that contains the positions, in the genes, likely affected by a given reassignment for each genome. This file is only returned if the flag <code>--expos</code> is set when running <code>coretracker</code><br><br>
 <pre>
 {
@@ -608,7 +584,7 @@ AAA (K, N)
 The rest of the file list all predicted exceptions to the translation table. For each codon reassignment, the list of affected genomes (first column), the prediction probability (second column) and the validation output (third column) is show. Validation can take 4 values : <b>Both</b> indicating that both the clade-aware validation and the validation based on alignment improvement are passed &mdash; <b>Clad</b> when only the clade-aware validation is passed &mdash; <b>Algn</b> when only the alignment validation  alignment is passed and <b>None</b> when neither was a success. Predictions that do not pass both validation are shown because it might be of interest to perform supplemental analysis in order to confirm if they are true positives. </p>
 <p>As we can see from this file, for example, <b><code>AAA</code></b> codons are predicted to be reassigned from <code>Lysine</code> to <code>Asparagine</code> in 4 genomes, and those predictions were all validated. Indeed, <code>AAA(Lys, Asp)</code> is a known reassignment in <code>Platyhelminthes</code> and <code>Echinodermata</code> and was correctly inferred by <code>coretracker</code>.</p>
 </li>
-<li><b>reassignment.json</b> : a dump of all informations extracted by <code class="coretracker">CoreTracker</code> from the input data in a json file. This file is used to build the input matrix for the Random Forest prediction and is only useful if you want to build your own predictor based on informations extracted by <code class="coretracker">CoreTracker</code>.
+<li><b>reassignment.json</b> : a dump of all informations extracted by <code class="coretracker">CoreTracker</code> from the input data in a json file. This file is used to build the input matrix for the Random Forest prediction and is useful if you want to build your own predictor based on informations extracted by <code class="coretracker">CoreTracker</code>. You can also use it as input for <code>reaplot</code>.
 </li>
 <li><b>AA1_to_AA2</b> : a folder that contains detailed informations about each reassignment. Here the content of <b>Arg_to_Ser</b> is shown as example.
 <p>
@@ -659,7 +635,11 @@ AGA Ser 3.23e-09
 <p> As you can see here from this image, at several positions where most genomes use Serine codons (black boxes), genomes with the <code>AGR(Arg, Ser)</code> reassigment use AGR codons instead.</p></li>
 </ul>
 </li> 
-</ul></ol>
+</ul>
+<h4><li id="#coreprep"><b>coretracker-prep</b> and <b>coretracker-run</b></li></h4>
+<p>For convenience, the main pipeline <code>coretracker</code> has also been splitted into two separate binaries: <code>coretracker-prep</code> and <code>coretracker-run</code>. The former is used to make preparation for predictions, which include sequences alignment, codon alignment, sequence filtering, potential reassignment identification, etc, then save the result on disk, which can be loaded and executed by <code>coretracker-run</code>. An interesting feature of <code>coretracker-prep</code> is to perform all preliminary computation in parallel for a list of dataset then merge them into one giant dataset. This allow the user to split its dataset into smaller chunks that can be analysed simultaneously in parallel, making the whole process faster. You should keep in mind that using this option will also increase memory usage for larger dataset. A similar procedure is also implemented in <code>coretracker-run</code>, which allow the prediction of reassignment, by independently considering pair of amino acids.</p>
+
+</ol>
      <h3 id="addanal">Supplemental analysis</h3>
   <p>Here we will perform some additional analysis with available scripts in order to collect more data on predictions. These supplemental analysis are not always informative and are optional.</p>     
      <ol>
@@ -711,6 +691,18 @@ AGA Ser 3.23e-09
 
      <p> <a href="assets/ancestral.svg" title="Ancestral reconstruction using Fitch parsimony" data-lightbox="AGAimages" data-title="Ancestral reconstruction using Fitch parsimony"><img src="assets/ancestral.svg"/></a>
      </p>
+
+<h4><li id="reaplot">Draw a figure showing all predicted reassignments</li></h4>
+<p>An additional script to draw all predicted reassignments on the input tree is provided. This scripts use the <b>reassignment.json</b> file returned by <code>coretracker</code> and a file in a format similar to the <b>predictions.txt</b></p>
+
+<pre class="terminal">
+<span class="cmd">reaplot -r  test_data/output/reassignment.json -i test_data/output/predictions.txt --gcode 4 --tree test_data/species_tree.nwk --out test_data/output/reaplot.svg --valid both
+</span></pre>
+
+<p> <a href="assets/reaplot.svg" title="Predicted reassignments on a species tree" data-lightbox="reaplot" data-title="Predicted reassignments on a species tree"><img src="assets/reaplot.svg"/></a></p>
+
+<p>The complete list of options can be found in the help (<code>reaplot -h</code>. The resulting image is a vector graphics that can be easily edited to suit your needs.</p> 
+
 
     <h4><li id="domaintester">Checking reassignments positions with domaintester</li></h4>
     <p>We also provide a script to check the positions of each reassignment against Pfam domains. The main objectif here was to verify if the predicted codon reassignments affects structurally/functionally important positions. <code>domaintester</code> is available on the github repository here : <a href="https://github.com/UdeM-LBIT/CoreTracker/blob/master/scripts/"></a></p>
