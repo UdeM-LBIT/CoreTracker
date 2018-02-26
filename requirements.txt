@@ -8,3 +8,4 @@ biopython>=1.65
 ete3
 WeasyPrint
 seaborn
+psutil
