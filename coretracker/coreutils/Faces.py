@@ -1,10 +1,11 @@
-from PyQt4.QtGui import (QGraphicsRectItem, QGraphicsLineItem, QPen,
-                        QColor, QBrush, QFont, QGraphicsSimpleTextItem, QLinearGradient)
+import math
 
 from PyQt4.QtCore import Qt, QPointF
+from PyQt4.QtGui import (QGraphicsRectItem, QGraphicsLineItem, QPen,
+                         QColor, QBrush, QFont, QGraphicsSimpleTextItem, QLinearGradient)
 from ete3 import faces
 from ete3.treeview.main import COLOR_SCHEMES
-import math
+
 
 _aafgcolors = {
     'A': "#000000",
@@ -188,11 +189,11 @@ class _PieChartItem(QGraphicsRectItem):
             angle_start += angle_span
             # find middle radius of the arc span
             # add a new line from the intersection point with the arc
-            # add a second line from the end of that line in a 
+            # add a second line from the end of that line in a
             # check if vertical then add a new vertical path
             # check angle orientation before selecting the orientation of the second line
             # probably do this with a path object and multiple point
-            # then add a text object 
+            # then add a text object
 
 
 class _RingChartItem(_PieChartItem):
@@ -522,7 +523,7 @@ class SummaryRectFace(faces.StaticItemFace):
     """
 
     def __init__(self, count, aalist, height=12, width=100, margin=1, colormap={}, ffamily='Courier', fsize=12, fgcolor='#000000'):
-        
+
         faces.StaticItemFace.__init__(self, None)
         self.h = height
         self.w = width
@@ -540,7 +541,8 @@ class SummaryRectFace(faces.StaticItemFace):
             for aa in aas:
                 aa = aa.upper()
                 if aa not in self.bgcolor:
-                    self.bgcolor[aa] = QColor(colormap.get(aa, _aabgcolors[aa])) 
+                    self.bgcolor[aa] = QColor(
+                        colormap.get(aa, _aabgcolors[aa]))
 
     def update_items(self):
         rect_cls = QGraphicsRectItem
@@ -550,7 +552,8 @@ class SummaryRectFace(faces.StaticItemFace):
         self.item = rect_cls()
 
         for codon in self.codons.keys():
-            rectitem = rect_cls(self.width, self.margin, self.w, self.h, parent=self.item)
+            rectitem = rect_cls(self.width, self.margin,
+                                self.w, self.h, parent=self.item)
             total_rea = len(self.aa_list[codon])
             if total_rea > 0:
 
@@ -564,16 +567,16 @@ class SummaryRectFace(faces.StaticItemFace):
                     grad.setColorAt(starting + 0.001, curcol)
                     starting += pointpos
                     grad.setColorAt(starting, curcol)
-                
+
                     # grad.setColorAt(starting, QColor(curcol))
             # put small rec in big rec
             # Comment award of the year !
             brush = QBrush(QColor('#CCCCCC'))
             pen = QPen(QColor('#BBBBBB'))
             if self.codons[codon]:
-                brush = QBrush(grad)    
+                brush = QBrush(grad)
                 pen = QPen(QColor('#000000'))
-            
+
             rectitem.setBrush(brush)
             rectitem.setPen(pen)
             # Center text according to rectitem size

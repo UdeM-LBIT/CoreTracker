@@ -46,6 +46,7 @@ etiquette = ["fitch", "suspected", "Fisher pval", "Gene frac",
              "N. rea", "N. used", "Cod. count", "Sub. count",
              "G. len", "codon_lik", "N. mixte", "id"]  # , 'total_aa']
 
+
 def memory_used():
     # Bad practice rewriting this method at each time
     mem = 0
@@ -54,6 +55,7 @@ def memory_used():
     except:
         mem = process.memory_info().rss/(1024.0*1024)
     return mem
+
 
 def compile_result(x, clf, cod_align, model):
     """compile result from analysis"""
@@ -68,7 +70,7 @@ def compile_result(x, clf, cod_align, model):
         X_data, X_dataprint, selected_et = model.format_data(X_data)
         pred_prob = clf.predict_proba(X_data)
         #pred = clf.predict(X_data)
-        pred = pred_prob.argmax(axis=1)   
+        pred = pred_prob.argmax(axis=1)
         if sum(pred) == 0 and reafinder.settings.SKIP_EMPTY:
             return None
         sppval, outdir, rkp, codvalid = utils.get_report(
@@ -83,6 +85,7 @@ def compile_result(x, clf, cod_align, model):
     else:
         return None
 
+
 if __name__ == '__main__':
 
     # argument parser
@@ -92,7 +95,8 @@ if __name__ == '__main__':
     parser.add_argument(
         '--wdir', '--outdir', dest="outdir", default="output", help="Working directory")
 
-    parser.add_argument('input', help="Input should be a runnable instance returned by coretracker-prep")
+    parser.add_argument(
+        'input', help="Input should be a runnable instance returned by coretracker-prep")
 
     parser.add_argument('--novalid', dest='valid', action='store_false',
                         help="Do not validate prediction by retranslating and checking alignment improvement")
@@ -103,12 +107,14 @@ if __name__ == '__main__':
     parser.add_argument('--imformat', dest='imformat', choices=('pdf', 'png', 'svg'), default="pdf",
                         help="Image format to use for output (Codon_data file)")
 
+    parser.add_argument('--aapair', dest='aapair',
+                        help="Use a list of potential reassignments (see coretracker-prep's '.aa' output for example.")
 
-    parser.add_argument('--aapair', dest='aapair', help="Use a list of potential reassignments (see coretracker-prep's '.aa' output for example.")
+    parser.add_argument('--parallel', dest='parallel', nargs='?', const=CPU_COUNT, type=int, default=0,
+                        help="Use Parallelization during execution for each reassignment. This does not guarantee an increase in speed. CPU count will be used if no argument is provided")
 
-    parser.add_argument('--parallel', dest='parallel', nargs='?', const=CPU_COUNT, type=int, default=0, help="Use Parallelization during execution for each reassignment. This does not guarantee an increase in speed. CPU count will be used if no argument is provided")
-
-    parser.add_argument('--version', action='version', version='coretracker-prep v.%s'%__version__)
+    parser.add_argument('--version', action='version',
+                        version='coretracker-prep v.%s' % __version__)
     parser.add_argument('--debug', dest='debug', action='store_true',
                         help="Enable debug printing")
 
@@ -124,7 +130,8 @@ if __name__ == '__main__':
         try:
             with open(args.aapair) as f:
                 aasubset = yaml.load(f)
-                aasubset = [(aa_letters_3to1[k], aa_letters_3to1[vv]) for k,v in aasubset.items() for vv in v]
+                aasubset = [(aa_letters_3to1[k], aa_letters_3to1[vv])
+                            for k, v in aasubset.items() for vv in v]
         except:
             print("Input provided with --aapair is not valid !")
             sys.exit(0)
@@ -146,7 +153,7 @@ if __name__ == '__main__':
     reafinder = run_instance.rfinder
     nofilter = run_instance.args.nofilter
     del run_instance
-    
+
     done = False
     results = []
     ALL_PRED = []
@@ -175,4 +182,5 @@ if __name__ == '__main__':
         reafinder.export_position(rea_pos_keeper, exp_outfile)
 
     reafinder.save_all(ALL_PRED, True, nofilter=nofilter)
-    logging.info("\n**END (%.3f s, %.3f MB)" % (abs(time.time() - start_t),  memory_used()))
+    logging.info("\n**END (%.3f s, %.3f MB)" %
+                 (abs(time.time() - start_t),  memory_used()))

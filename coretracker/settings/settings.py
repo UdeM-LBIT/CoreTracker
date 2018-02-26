@@ -3,6 +3,7 @@ import Bio.SubsMat.MatrixInfo as MatrixInfo
 
 AVAILABLE_MAT = MatrixInfo.available_matrices + ['identity']
 
+
 class Settings():
     """Contains global settings for the current run of CoReTracker"""
 

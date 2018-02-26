@@ -92,6 +92,3 @@ HMMLOOP = 10
 # input sequence format
 PROTFORMAT = 'core'
 DNAFORMAT = 'core'
-
-#
-

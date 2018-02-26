@@ -37,6 +37,7 @@ class color:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
+
 try:
     from colorama import init, Back, Style
     init()

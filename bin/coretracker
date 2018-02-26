@@ -52,6 +52,7 @@ etiquette = ["fitch", "suspected", "Fisher pval", "Gene frac",
              "N. rea", "N. used", "Cod. count", "Sub. count",
              "G. len", "codon_lik", "N. mixte", "id"]  # , 'total_aa']
 
+
 def AlignmentProgramType(program):
     # Raise a value error if not conform to expected programs
     tmp = program.strip().split()[0]
@@ -61,6 +62,7 @@ def AlignmentProgramType(program):
     else:
         return program
 
+
 def memory_used():
     mem = 0
     try:
@@ -69,10 +71,11 @@ def memory_used():
         mem = process.memory_info().rss/(1024.0*1024)
     return mem
 
+
 def set_coretracker(args, settings):
     """Set all data for coretracker from the argument list"""
     # Check mafft command input
-    progcmd = lambda x: x + ' --auto' if x == 'mafft' else x
+    def progcmd(x): return x + ' --auto' if x == 'mafft' else x
 
     if args.debug:
         logging.basicConfig(level=logging.DEBUG)
@@ -81,7 +84,7 @@ def set_coretracker(args, settings):
             os.makedirs(args.outdir)
             # let original error handling
         settings.OUTDIR = args.outdir
-    
+
     msaprg = progcmd(args.align)
     input_alignment = args.seq
     use_tree = None
@@ -92,7 +95,7 @@ def set_coretracker(args, settings):
         else:
             use_tree = args.tree
         settings.SCALE = args.use_tree
-        
+
     hmmfiles = {}
     if args.hmmdir:
         try:
@@ -131,26 +134,28 @@ def set_coretracker(args, settings):
     seqloader = SequenceLoader(input_alignment, args.dnaseq, settings, args.gapfilter,
                                use_tree=use_tree, refine_alignment=args.refine, msaprog=msaprg, hmmdict=hmmfiles)
     t2 = time.time()
-    logging.info("Sequence loaded in %.3f s, using %.3f MB" % (abs(t2 - t), memory_used()))
+    logging.info("Sequence loaded in %.3f s, using %.3f MB" %
+                 (abs(t2 - t), memory_used()))
     # create sequence set
     setseq = SequenceSet(seqloader, specietree,
                          settings.GENETIC_CODE, codemap=codemap)
     # won't filter if their are id, gap and ic are not set
     # which is the desired action
     setseq.filter_sequences(args.idfilter, args.gapfilter,
-                          args.iccontent, args.rmconst, nofilter=args.nofilter)
+                            args.iccontent, args.rmconst, nofilter=args.nofilter)
     spec_restricted_list = list(
         set(spec_restricted_list).intersection(setseq.common_genome))
     if spec_restricted_list:
         settings.LIMIT_TO_SUSPECTED_SPECIES = True
     t = time.time()
-    logging.info("Sequence filtered in %.3f s, using %.3f MB" % (abs(t - t2),  memory_used()))
+    logging.info("Sequence filtered in %.3f s, using %.3f MB" %
+                 (abs(t - t2),  memory_used()))
     reafinder = ReaGenomeFinder(setseq, settings)
     reafinder.get_genomes()
     reafinder.possible_aa_reassignation(speclist=spec_restricted_list)
     t2 = time.time()
     logging.info("List of probable reassignment identified in %f" %
-                  (abs(t - t2)))
+                 (abs(t - t2)))
     return reafinder, clf, model
 
 
@@ -167,14 +172,14 @@ def compile_result(x, clf, cod_align, model):
         X_data, X_dataprint, selected_et = model.format_data(X_data)
         pred_prob = clf.predict_proba(X_data)
         #pred = clf.predict(X_data)
-        pred = pred_prob.argmax(axis=1)   
+        pred = pred_prob.argmax(axis=1)
         if sum(pred) == 0 and reafinder.settings.SKIP_EMPTY:
             return None
         sppval, outdir, rkp, codvalid = utils.get_report(
             fitch, reafinder, cod_align, (X_data, X_labels, pred_prob, pred))
         utils.print_data_to_txt(os.path.join(outdir, fitch.ori_aa + "_to_" + fitch.dest_aa + "_data.txt"),
                                 selected_et, X_dataprint, X_labels, pred, pred_prob, sppval, fitch.dest_aa, valid=codvalid)
- 
+
         tmp_data = [X_labels, pred, pred_prob, codvalid]
         del X_data
         del X_dataprint
@@ -193,7 +198,8 @@ if __name__ == '__main__':
     parser.add_argument(
         '--wdir', '--outdir', dest="outdir", default="output", help="Working directory")
 
-    parser.add_argument('--version', action='version', version='CoreTracker v.%s'%__version__)
+    parser.add_argument('--version', action='version',
+                        version='CoreTracker v.%s' % __version__)
 
     parser.add_argument('--gapfilter', '--gap', type=float, default=0.6, dest='gapfilter',
                         help="Remove position with more than `gapfilter` gap from the alignment, using gapfilter as threshold (default :0.6)")
@@ -223,9 +229,9 @@ if __name__ == '__main__':
                         help="Do not refine the alignment. By default the alignment will be refined. This option should never be used if you have made your own multiple alignment and concatenate it. Else you will have absurd alignment (TO FIX)")
 
     parser.add_argument('--novalid', dest='valid', action='store_false',
-                        help="Do not validate prediction by retranslating and checking alignment improvement")
+                        help="Do not validate prediction by retranslating and checking alignment improvement (Faster)")
 
-    parser.add_argument('--nofilter', '--nf', action="store_true", dest="nofilter", 
+    parser.add_argument('--nofilter', '--nf', action="store_true", dest="nofilter",
                         help="Do not filter sequence alignment.")
 
     parser.add_argument('--align', dest='align', nargs='?', type=AlignmentProgramType, const="muscle",
@@ -253,7 +259,7 @@ if __name__ == '__main__':
                         help="Restrict analysis to list of genomes only")
 
     parser.add_argument('--codemap', dest='codemap',
-                        help="A tab delimited file that map each species to its genetic code. Default code (--gcode) will be used for missing species")
+                        help="A tab delimited file that map each species to its genetic code. Default code (--gcode) will be used for remaining species")
 
     print("CoreTracker v:%s Copyright (C) %s %s" %
           (__version__, date, __author__))
@@ -262,10 +268,10 @@ if __name__ == '__main__':
     start_t = time.time()
     if args.nofilter:
         # set the filter parameters to none
-        args.idfilter = None 
-        args.gapfilter = None 
+        args.idfilter = None
+        args.gapfilter = None
         args.iccontent = None
-        
+
     setting = Settings()
 
     paramfile = args.params
@@ -279,7 +285,7 @@ if __name__ == '__main__':
     setting.update_params(COMPUTE_POS=args.expos)
     setting.update_params(VALIDATION=args.valid)
     setting.update_params(IMAGE_FORMAT=args.imformat)
-    
+
     reafinder, clf, model = set_coretracker(args, setting)
     codon_align, fcodon_align = reafinder.seqset.get_codon_alignment()
     cod_align = SeqIO.to_dict(fcodon_align)
@@ -289,7 +295,7 @@ if __name__ == '__main__':
     done = False
     results = []
     ALL_PRED = []
-    
+
     if args.parallel > 0 and ENABLE_PAR:
         results = Parallel(n_jobs=args.parallel, verbose=1)(delayed(compile_result)(
             x, clf, cod_align, model) for x in reafinder.run_analysis(codon_align, fcodon_align))
@@ -297,7 +303,7 @@ if __name__ == '__main__':
     elif args.parallel > 0:
         logging.warning(
             "Joblib requirement not found! Disabling parallelization")
-    
+
     if not done:
         for x in reafinder.run_analysis(codon_align, fcodon_align):
             results.append(compile_result(x, clf, cod_align, model))
@@ -315,4 +321,5 @@ if __name__ == '__main__':
         reafinder.export_position(rea_pos_keeper, exp_outfile)
 
     reafinder.save_all(ALL_PRED, True, nofilter=args.nofilter)
-    logging.info("\n**END (%.3f s, %.3f MB)" % (abs(time.time() - start_t),  memory_used()))
+    logging.info("\n**END (%.3f s, %.3f MB)" %
+                 (abs(time.time() - start_t),  memory_used()))

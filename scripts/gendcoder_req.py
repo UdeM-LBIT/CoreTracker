@@ -47,7 +47,8 @@ def parse_gdec_out(cntnt, outfile):
 
 if __name__ == '__main__':
 
-    parser = argparse.ArgumentParser(description='Predict genetic code from GenDecoder Web server')
+    parser = argparse.ArgumentParser(
+        description='Predict genetic code from GenDecoder Web server')
     parser.add_argument('--entropy', choices=tuple(entropy.keys()),
                         default="weak", help="Set filtering entropy values")
     parser.add_argument('--gaps', choices=tuple(gaps.keys()),

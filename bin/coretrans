@@ -137,14 +137,16 @@ if args.filter:
 if not args.notrans:
     translated_prot = SequenceLoader.translate(core_inst, gcode, codemap)
     if not args.nostopstrip:
-        translated_prot, core_inst = SequenceLoader.clean_stop(translated_prot, core_inst)
+        translated_prot, core_inst = SequenceLoader.clean_stop(
+            translated_prot, core_inst)
 
     # if a protfile is given, use this version of the protein
     if args.protfile:
         prot_core_inst = CoreFile(args.protfiles, alphabet='prot')
         for gene, seqs in prot_core_inst.items():
             for recseq in seqs:
-                trans_seq = [x for x in translated_prot[gene] if x.id == recseq.id]
+                trans_seq = [x for x in translated_prot[gene]
+                             if x.id == recseq.id]
                 nuc_seq = [x for x in core_inst[gene] if x.id == recseq.id]
                 if not args.nostopstrip and recseq.seq.endswith('*'):
                     recseq.seq = recseq.seq[0:-1]

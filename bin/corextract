@@ -245,7 +245,8 @@ if __name__ == '__main__':
     build_parser.add_argument("--genbank", "-G", required=True,
                               dest='genbank', help="Your genbank file")
 
-    extract_parser = sub_parser.add_parser('extract', help="Extract genome from your data")
+    extract_parser = sub_parser.add_parser(
+        'extract', help="Extract genome from your data")
     extract_parser.add_argument("--genbank", "-G", required=True,
                                 dest='genbank', help="Your genbank file")
     extract_parser.add_argument("--indexdb", '-ib', dest='indexdb',
@@ -268,7 +269,8 @@ if __name__ == '__main__':
                                 help="A file containing a list of species or a specie name")
     extract_parser.add_argument("--outfile", '-o', dest='output',
                                 default='output.core', help="Output file name")
-    extract_parser.add_argument("--gsynonym", dest='gsynonym', help="A tsv file containing synonym name for                              each genes. Each line should contain a synonym and the corresponding gene,                                separated by a tabulation")
+    extract_parser.add_argument("--gsynonym", dest='gsynonym',
+                                help="A tsv file containing synonym name for                              each genes. Each line should contain a synonym and the corresponding gene,                                separated by a tabulation")
     extract_parser.add_argument("--email", dest='email',
                                 default='mail@example.com', help="Contact email for NCBI's E-utilities")
     args = parser.parse_args()
