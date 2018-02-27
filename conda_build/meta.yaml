@@ -32,6 +32,7 @@ requirements:
     - muscle
     - hmmer
     - mafft
+    - psutil
 
   run:
     - python
@@ -42,10 +43,10 @@ requirements:
     - scikit-learn ==0.17
     - weasyprint
     - pyyaml
-    - psutil
     - pandas
     - pyqt ==4.11.4
     - ete3   
+    - psutil
     - muscle
     - hmmer
     - mafft

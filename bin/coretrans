@@ -133,6 +133,9 @@ if args.filter:
     print("======== Total of %d / %d genes rescued ========" %
           (gcount, total_gcount))
 
+else:
+    core_inst = CoreFile(core_inst, alphabet='nuc')
+
 # proceed to translation  here
 if not args.notrans:
     translated_prot = SequenceLoader.translate(core_inst, gcode, codemap)
@@ -169,5 +172,5 @@ if not args.notrans:
             translated_prot, os.path.join(args.outdir, "prot.core"))
 
 # save new sequence file for coretracker
-CoreFile.write_corefile(
-    core_inst, os.path.join(args.outdir, "nuc.core"))
+if args.filter:
+    CoreFile.write_corefile(core_inst, os.path.join(args.outdir, "nuc.core"))
