@@ -31,7 +31,8 @@ LIMIT_TO_SUSPECTED_SPECIES = False
 # alignement for Telford score
 USE_CONSENSUS_FOR_LIKELIHOOD = False
 
-# Save filtered alignment
+# Save filtered alignment and save alignment images for
+# each codon reassignment
 SAVE_ALIGN = True
 
 # skip empty results

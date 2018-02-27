@@ -19,7 +19,8 @@ from numpy.distutils.core import Extension as Ext
 from numpy.distutils.core import setup
 
 from coretracker import __project__, __version__
-sys.path.insert(0, os.path.realpath(os.path.join(os.path.dirname(__file__), "python")))
+sys.path.insert(0, os.path.realpath(
+    os.path.join(os.path.dirname(__file__), "python")))
 
 
 def configuration(top_path=''):
@@ -89,6 +90,7 @@ def setup_package():
             'biopython>=1.65',
             'WeasyPrint',
             'PyYAML',
+            'psutil'
         ],
         ext_modules=fortran_extnsion
     )
@@ -110,9 +112,11 @@ def binaries_checker():
         print("Some binaries where not found : \n-%s" % "\n-".join(nfound))
         answer = 'n'
         try:
-            answer = raw_input("Do you want to still continue the installation (y/n) ? ")
+            answer = raw_input(
+                "Do you still want to continue the installation (y/n) ? ")
         except:
-            answer = input("Do you want to still continue the installation (y/n) ? ")
+            answer = input(
+                "Do you still want to continue the installation (y/n) ? ")
 
         return answer.lower().startswith('y')
 

@@ -57,8 +57,6 @@ try:
 except ImportError, e:
     GRAPHICAL_ACCESS = False
 
-# define array to contains temp values
-glob_purge = []
 # hmm strange id
 hmmidpattern = re.compile("^\d+\|\w+")
 # define lowest pvalue
@@ -2086,7 +2084,6 @@ def get_report(fitchtree, reafinder, codon_align, prediction, output="", pie_siz
                 n.set_style(prob_lost)
 
         fitchtree.tree.render(output, dpi=700, tree_style=ts)
-        glob_purge.append(output)
 
         rkp, data_var, codvalid = None, None, {}
         if settings.VALIDATION:
@@ -2101,7 +2098,6 @@ def get_report(fitchtree, reafinder, codon_align, prediction, output="", pie_siz
         # get report output
         rep_out = os.path.join(OUTDIR, "Report_" +
                                fitchtree.ori_aa + "_to_" + fitchtree.dest_aa)
-        # glob_purge.append(rep_out)
         pdf_format_data(fitchtree.ori_aa1, fitchtree.dest_aa1, gdata, prediction,
                         codvalid, 'filtered', rep_out + ".pdf", settings.VALIDATION)
 
@@ -2330,37 +2326,35 @@ def codon_adjust_improve(fitchtree, reafinder, codon_align, codontable, predicti
                                                outdir, "%s_violin" % codon),
                                            score_improve, codon, fitchtree.dest_aa, imformat=settings.IMAGE_FORMAT)
             tmpvalid = dict((x, 'crimson') for x in speclist)
-            ori_t, ori_ts = format_tree_fn(
-                codon, ori_al, sp, ic, pos, limits=limits, colors=tmpvalid)
-            rea_t, rea_ts = format_tree_fn(
-                codon, new_al, cor_sp, cor_ic, pos, limits=limits, colors=tmpvalid)
-            cod_t, cod_ts = format_tree_fn(codon, codon_align, None, None, pos, limits=limits,
-                                           dtype="codon", codontable=codontable, codon_col=fitchtree.colors, colors=tmpvalid)
 
-            cod_ts.title.add_face(TextFace(
-                "Prediction validation for " + codon + " to " + fitchtree.dest_aa, fsize=14), column=0)
+            if settings.SAVE_ALIGN:
+                ori_t, ori_ts = format_tree_fn(
+                    codon, ori_al, sp, ic, pos, limits=limits, colors=tmpvalid)
+                rea_t, rea_ts = format_tree_fn(
+                    codon, new_al, cor_sp, cor_ic, pos, limits=limits, colors=tmpvalid)
+                cod_t, cod_ts = format_tree_fn(codon, codon_align, None, None, pos, limits=limits,
+                                               dtype="codon", codontable=codontable, codon_col=fitchtree.colors, colors=tmpvalid)
+
+                cod_ts.title.add_face(TextFace(
+                    "Prediction validation for " + codon + " to " + fitchtree.dest_aa, fsize=14), column=0)
+
+                cod_out = os.path.join(outdir, "%s_codons.%s" %
+                                       (codon, settings.IMAGE_FORMAT))
+                ori_out = os.path.join(outdir, "%s_ori.%s" %
+                                       (codon, settings.IMAGE_FORMAT))
+                rea_out = os.path.join(outdir, "%s_rea.%s" %
+                                       (codon, settings.IMAGE_FORMAT))
+
+                ori_t.render(ori_out, dpi=700, tree_style=ori_ts)
+                rea_t.render(rea_out, dpi=700, tree_style=rea_ts)
+                cod_t.render(cod_out, dpi=700, tree_style=cod_ts)
 
             logging.debug('{} --> {} : {:.2e}'.format(*viout))
 
             codvalid[codon] = (tmpvalid, viout[-1] < reafinder.confd)
 
-            cod_out = os.path.join(outdir, "%s_codons.%s" %
-                                   (codon, settings.IMAGE_FORMAT))
-            ori_out = os.path.join(outdir, "%s_ori.%s" %
-                                   (codon, settings.IMAGE_FORMAT))
-            rea_out = os.path.join(outdir, "%s_rea.%s" %
-                                   (codon, settings.IMAGE_FORMAT))
-
-            ori_t.render(ori_out, dpi=700, tree_style=ori_ts)
-            rea_t.render(rea_out, dpi=700, tree_style=rea_ts)
-            cod_t.render(cod_out, dpi=700, tree_style=cod_ts)
-
             data_var[codon] = score_improve
 
-            glob_purge.append(cod_out)
-            glob_purge.append(rea_out)
-            glob_purge.append(ori_out)
-            glob_purge.append(violinout)
             outputs.append(True)
 
     return len(outputs) > 0, data_var, rea_pos_keeper, codvalid

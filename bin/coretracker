@@ -154,7 +154,7 @@ def set_coretracker(args, settings):
     reafinder.get_genomes()
     reafinder.possible_aa_reassignation(speclist=spec_restricted_list)
     t2 = time.time()
-    logging.info("List of probable reassignment identified in %f" %
+    logging.info("List of probable reassignment identified in %f s" %
                  (abs(t - t2)))
     return reafinder, clf, model
 
