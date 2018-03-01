@@ -696,32 +696,37 @@ class SequenceSet(object):
                     Seq(missing * curlen, generic_protein), id=spec, name=spec))
                 o_seq = o_seqset.prot_dict.get(spec, SeqRecord(
                     Seq(missing * o_len, generic_protein), id=spec, name=spec))
-                cur_seq.seq._data += o_seq.seq._data
-                self.prot_dict[spec] = cur_seq
+                gseq = cur_seq.seq + o_seq.seq
+                self.prot_dict[spec] = SeqRecord(gseq, id=spec, name=spec)
 
                 # filt alignment
                 cur_seq = self.filt_prot_align.get(spec, SeqRecord(
                     Seq(missing * filt_len, generic_protein), id=spec, name=spec))
                 o_seq = o_filtprot.get(spec, SeqRecord(
                     Seq(missing * o_filt_len, generic_protein), id=spec, name=spec))
-                cur_seq.seq._data += o_seq.seq._data
-                self.filt_prot_align[spec] = cur_seq
+                fseq = cur_seq.seq + o_seq.seq
+                self.filt_prot_align[spec] = SeqRecord(
+                    fseq, id=spec, name=spec)
 
                 # codon alignment
                 cur_seq = self.codon_alignment.get(spec, SeqRecord(
                     CodonSeq(missing * curlen * 3, alphabet=cod_alpha), id=spec, name=spec))
                 o_seq = o_dna.get(spec, SeqRecord(
                     CodonSeq(missing * o_len * 3, alphabet=cod_alpha), id=spec, name=spec))
-                cur_seq.seq._data += o_seq.seq._data
-                self.codon_alignment[spec] = cur_seq
+                codseq = CodonSeq(cur_seq.seq._data +
+                                  o_seq.seq._data, alphabet=cod_alpha)
+                self.codon_alignment[spec] = SeqRecord(
+                    codseq, id=spec, name=spec)
 
                 # filt codon alignment
                 cur_seq = self.fcodon_alignment.get(spec, SeqRecord(
                     CodonSeq(missing * filt_len * 3, alphabet=cod_alpha), id=spec, name=spec))
                 o_seq = o_filtdna.get(spec, SeqRecord(
                     CodonSeq(missing * o_filt_len * 3, alphabet=cod_alpha), id=spec, name=spec))
-                cur_seq.seq._data += o_seq.seq._data
-                self.fcodon_alignment[spec] = cur_seq
+                codseq = CodonSeq(cur_seq.seq._data +
+                                  o_seq.seq._data, alphabet=cod_alpha)
+                self.fcodon_alignment[spec] = SeqRecord(
+                    codseq, id=spec, name=spec)
                 # we can ignore dna_dict
                 # self.dna_dict.update(o_seqset.dna_dict)
 

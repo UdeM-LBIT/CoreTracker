@@ -67,9 +67,9 @@ def AlignmentProgramType(program):
 def memory_used():
     mem = 0
     try:
-        mem = process.get_memory_info().rss/(1024.0*1024)
+        mem = process.get_memory_info().rss / (1024.0 * 1024)
     except:
-        mem = process.memory_info().rss/(1024.0*1024)
+        mem = process.memory_info().rss / (1024.0 * 1024)
     return mem
 
 
@@ -77,8 +77,6 @@ def param_getter(args):
     """Set all data for coretracker from the argument list"""
     # Check mafft command input
     def progcmd(x): return x + ' --auto' if x == 'mafft' else x
-    if args.verbose:
-        logging.basicConfig(level=logging.INFO)
     if args.outdir:
         if not os.path.exists(args.outdir):
             os.makedirs(args.outdir)
@@ -183,13 +181,16 @@ if __name__ == '__main__':
     prepare.add_argument('--verbose', dest='verbose',
                          action="store_true", help="Verbose printing")
 
+    args = prepare.parse_args()
+    if args.verbose:
+        logging.basicConfig(level=logging.INFO)
+
     logging.info("CoreTracker v:%s Copyright (C) %s %s" %
                  (__version__, date, __author__))
 
-    logging.info("\nSetting running parameters...")
+    logging.info("Setting running parameters...")
 
-    args = prepare.parse_args()
-    start_t = time.time()
+    start_t = cur_t = time.time()
     if args.nofilter:
         # set the filter parameters to none
         args.idfilter = None
@@ -219,8 +220,6 @@ if __name__ == '__main__':
     seqset_loader = partial(
         load_seqset, settings=setting, args=args, seqp=seqp)
 
-    logging.info(
-        "Finding possible reassignment after filtering sequences (can take a while) ...")
     done = False
     seqsets = []
     if args.parallel > 0:
@@ -242,13 +241,17 @@ if __name__ == '__main__':
         for dnaseq, protseq in dna_prot_pair:
             seqsets.append(seqset_loader((dnaseq, protseq)))
 
-    logging.info("Sequence filtered and database constructed in %.3f s, using %.3f MB" % (
-        abs(time.time() - start_t), memory_used()))
+    logging.info("Filtered sequences and constructed datasets (%.3f s, using %.3f MB)" % (
+        abs(time.time() - cur_t), memory_used()))
 
+    cur_t = time.time()
     run_instance = RunningInstance.from_seqsets(
         seqsets, seqp.spec_restricted_list, setting, args)
+
+    logging.info("Found potential reassignment (%.3f s, using %.3f MB)" % (
+        abs(time.time() - cur_t), memory_used()))
     # now save and reload then check again
     outputfile = os.path.join(setting.OUTDIR, args.outfile)
     run_instance.save_instance(outfile=outputfile)
-    logging.info("Done! Running instance is saved at %s\n. Please use coretracker-run next.\nTotal time: %.3f s, using %.3f MB" %
-                 (outputfile+".pgz", abs(time.time() - start_t), memory_used()))
+    logging.info("Done! Running instance is saved at %s.\nYou can now use coretracker-run !\nTotal time: %.3f s, using %.3f MB" %
+                 (outputfile + ".pgz", abs(time.time() - start_t), memory_used()))
