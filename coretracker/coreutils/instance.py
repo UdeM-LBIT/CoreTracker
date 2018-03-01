@@ -28,7 +28,7 @@ class RunningInstance():
             raise ValueError("Expect at least one dataset")
         else:
             seq_init = seqsets[0]
-            seq_init = seq_init.fusion(*seqsets[1:])
+            seq_init = seq_init.fusion(*seqsets[1:], tree=args.tree)
             reafinder = ReaGenomeFinder(seq_init, settings)
             del seqsets[:]
             reafinder.get_genomes()

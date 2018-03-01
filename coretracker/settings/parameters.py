@@ -24,6 +24,13 @@ MATRIX = 'blosum62'
 # analysis to more likely reassignment
 SHOW_ALL = False
 
+# Force the use of a chi2 test instead of a fisher exact
+# the main reason this option is available is because
+# the fisher exact module cannot be used for large table
+# and there isn't any way to prevent the module written in fortran
+# to kill the python interpreter
+FORCED_CHI2 = False
+
 # Limit prediction to suspected species for each reassignment
 LIMIT_TO_SUSPECTED_SPECIES = False
 

@@ -675,6 +675,7 @@ class SequenceSet(object):
         # we assume that the same tree is used everywhere
         # not testing
         missing = kwargs.get('missing', '-')
+        treenw = kwargs.get('tree', None)
         curlen = self.prot_align.get_alignment_length()
         filt_len = len(self.filt_position)
         self.filt_prot_align = SeqIO.to_dict(self.filt_prot_align)
@@ -750,6 +751,11 @@ class SequenceSet(object):
             self.codon_alignment.values(), alphabet=cod_alpha)
         self.fcodon_alignment = codonalign.CodonAlignment(
             self.fcodon_alignment.values(), alphabet=cod_alpha)
+        # patch tree
+        # because it could have been pruned
+        if treenw:
+            self.phylotree = Tree(treenw)
+            self.phylotree.prune(self.common_genome)
 
         return self
 
@@ -1549,7 +1555,7 @@ class ReaGenomeFinder:
                         assert (
                             eprob - 1 < 0), "Strange value for eprob %f" % eprob
                     fisher_passed, pval = independance_test(
-                        reacodon, usedcodon, genome, confd=self.confd, expct_prob=eprob)
+                        reacodon, usedcodon, genome, confd=self.confd, expct_prob=eprob, force_chi2=self.settings.FORCED_CHI2)
                     # print "%s\t%s\t%s ==> %s" %(aa2, aa1, genome,
                     # str(column_comparision) )
                     # if('lost' in leaf.features and fisher_passed and
@@ -1711,13 +1717,18 @@ def remove_gap_only_columns(alignfile, curformat):
     return fastafile
 
 
-def independance_test(rea, ori, genome, confd=0.05, expct_prob=0.5):
+def independance_test(rea, ori, genome, confd=0.05, expct_prob=0.5, force_chi2=False):
     """Perform a Fisher's Exact test"""
     codon_list = set(rea.keys())
     codon_list.update(ori.keys())
     codon_list = [x for x in codon_list if not (
         rea.get(x, 0) == 0 and ori.get(x, 0) == 0)]
     nelmt = len(codon_list)
+
+    # cannot possibily be reassigned when not present
+    if not rea:
+        return False, 2
+
     # line 1 is rea, line 2 is observed
     # in this case, we can perform a fisher test
     if nelmt > 1:
@@ -1726,16 +1737,24 @@ def independance_test(rea, ori, genome, confd=0.05, expct_prob=0.5):
             obs[i, 0] = rea.get(codon_list[i], 0)
             obs[i, 1] = ori.get(codon_list[i], 0)
         try:
-            # check mat, to select chi2 of fisher_test
-            if np.any(obs < 5) or np.sum(obs) < 1000:
-                pval = fisher_exact(obs, midP=True, attempt=3)
-            else:
+            # check mat, to select chi2 or fisher_test
+            # faut just croiser les doigts :)
+            can_chi2 = chi2_is_possible(obs)
+            if force_chi2 and (can_chi2[0] or can_chi2[1]):
                 c, pval, dof, t = ss.chi2_contingency(obs)
-            # fallback to chi2 test if fisher is impossible
-        except:
+            else:
+                if np.sum(obs) < 1000:
+                    pval = fisher_exact(obs, midP=True, attempt=1)
+                elif np.any(obs < 5) and np.sum(obs) <= 1500:
+                    pval = fisher_exact(obs, midP=True, attempt=2)
+                else:
+                    c, pval, dof, t = ss.chi2_contingency(obs)
+                # fallback to chi2 test if fisher is impossible
+        except Exception as e:
             logging.debug(
-                "**warning: %s (%s, %s) using chi2 instead of FISHEREXACT" % (genome, ori, rea))
-            c, pval, dof, t = ss.chi2_contingency(obs)
+                "**warning: %s (%s, %s) trying chi2 instead of FISHER EXACT" % (genome, ori, rea))
+            c, pval, dof, t = ss.chi2_contingency(
+                obs)  # nothing to prevent this if error
         return pval <= confd, pval
 
     # strangely, codon is used only in rea column
@@ -1754,7 +1773,7 @@ def independance_test(rea, ori, genome, confd=0.05, expct_prob=0.5):
     # In this case, the codon is neither in the rea column nor in the
     # second column, strange result
     else:
-        return False, 1
+        return False, 2
 
 
 def onevalbinomtest(obs, n, prob):
@@ -1762,7 +1781,7 @@ def onevalbinomtest(obs, n, prob):
     return ss.binom_test(obs, n, prob)
 
 
-def chi2_is_possible(obs):
+def chi2_is_possible(obs, nonstrict=True):
     """Check if we can perfom chi2 instead of fisher exact test"""
     exp = ss.contingency.expected_freq(obs)
     limit = 0.8
@@ -1773,9 +1792,9 @@ def chi2_is_possible(obs):
             return False, False
         if i < 5:
             count += 1
-        if count * 1.0 / size > 1 - limit:
-            return False, True
-    return True, count != 0
+    if count:
+        return nonstrict, (count * 1.0 / size) < (1 - limit)
+    return True, True
 
 
 @timeit

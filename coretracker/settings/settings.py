@@ -86,7 +86,8 @@ class Settings():
         # alpha to use , default is 0.05
         self.CONF = kwargs.get('CONF', parameters.CONF)
         self.STARTDIST = kwargs.get('STARTDIST', parameters.STARTDIST)
-        self.SHOW_ALL = kwargs.get('SHOW_ALL', parameters.STARTDIST)
+        self.SHOW_ALL = kwargs.get('SHOW_ALL', parameters.SHOW_ALL)
+        self.FORCED_CHI2 = kwargs.get('FORCED_CHI2', parameters.FORCED_CHI2)
         # output format. Should be pdf for the moment
         self.IMAGE_FORMAT = "pdf"
         # The following are the binaries setting for HMMER package
