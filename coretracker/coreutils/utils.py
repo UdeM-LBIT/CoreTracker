@@ -1828,7 +1828,7 @@ def compute_SP_per_col(al1, al2, columns, nspec, scoring_matrix):
                 score = scoring_matrix.get(
                     (aa1, aa2), scoring_matrix.get((aa2, aa1)))
             except:
-                pass
+                score = 0
             return score
 
     al1_score = []
