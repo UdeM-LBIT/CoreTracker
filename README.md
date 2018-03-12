@@ -24,7 +24,7 @@ Help for installation is available at [Coretracker: Installation](http://udem-lb
 After installation, run `coretracker -h` for help.
 
 An example of execution is :
-``./coretracker.py -t speciestree.nw -p protein.ali -n nucsequences.core --gapfilter 0.4 --iccontent 0.3  --idfilter 0.5  --norefine --wdir outdir --params param.yml ``
+``coretracker -t speciestree.nw -p protein.ali -n nucsequences.core --gapfilter 0.4 --iccontent 0.3  --idfilter 0.5  --norefine --wdir outdir --params param.yml ``
 
 Additional parameters can be set using the ``--params`` option. See the provided template ([param.yml](https://github.com/UdeM-LBIT/CoreTracker/blob/master/examples/test_data/param.yml)).
 
