@@ -1,4 +1,4 @@
-{% set version = "1.4.5" %}
+{% set version = "1.4.6" %}
 
 package:
   name: coretracker
@@ -12,7 +12,7 @@ build:
   binary_relocation: True
   preserve_egg_dir: True
   detect_binary_files_with_prefix: True
-  number: 8
+  number: 1
 
 requirements:
   build:
@@ -24,6 +24,7 @@ requirements:
     - biopython >=1.65
     - scikit-learn ==0.17
     - weasyprint
+    - html5lib ==0.999
     - pyyaml
     - pandas
     - pyqt ==4.11.4
@@ -42,6 +43,7 @@ requirements:
     - biopython >=1.65
     - scikit-learn ==0.17
     - weasyprint
+    - html5lib ==0.999
     - pyyaml
     - pandas
     - pyqt ==4.11.4
