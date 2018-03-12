@@ -1,4 +1,5 @@
 
 # TODO
     - full integration of rna editing part in the software
-    - test new version of coretrans with protfile in input
+    - Check identity matrix usage
+    - Use a ring instead of a pie in the chart

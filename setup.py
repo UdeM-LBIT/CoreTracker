@@ -40,8 +40,8 @@ def configuration(top_path=''):
 
 
 def setup_package():
-    if os.path.exists('README.md'):
-        README = open('README.md').read()
+    if os.path.exists('README.rst'):
+        README = open('README.rst').read()
     else:
         README = ""  # a placeholder, readme is generated on release
     print("\nVersion : %s\n" % __version__)
