@@ -1815,22 +1815,22 @@ def execute_alignment(cmdline, inp, out):
 
 def compute_SP_per_col(al1, al2, columns, nspec, scoring_matrix):
     """Compute a SP score per column"""
-    def scoring_function(aa1, aa2, scoring_matrix):
+    def scoring_function(aa1, aa2, scoring_matrix, gap_cost=-1):
         score = 0
         if aa1 == aa2 == '-':
             score = 0
         elif scoring_matrix == 'identity':
             score = (aa1 == aa2) * 1
+        elif '-' in [aa1, aa2]:
+            score = gap_cost
         else:
             # controversial decision
             # give -1 to gap event
-            score = -1
             try:
                 score = scoring_matrix.get(
                     (aa1, aa2), scoring_matrix.get((aa2, aa1)))
-                print aa1, aa2, '==>', score
             except:
-                score = -1
+                score = gap_cost
         return score
 
     al1_score = []
