@@ -1816,10 +1816,11 @@ def execute_alignment(cmdline, inp, out):
 def compute_SP_per_col(al1, al2, columns, nspec, scoring_matrix):
     """Compute a SP score per column"""
     def scoring_function(aa1, aa2, scoring_matrix):
+        score = 0
         if aa1 == aa2 == '-':
-            return 0
-        if scoring_matrix == 'identity':
-            return (aa1 == aa2) * 1
+            score = 0
+        elif scoring_matrix == 'identity':
+            score = (aa1 == aa2) * 1
         else:
             # controversial decision
             # give -1 to gap event
@@ -1827,9 +1828,10 @@ def compute_SP_per_col(al1, al2, columns, nspec, scoring_matrix):
             try:
                 score = scoring_matrix.get(
                     (aa1, aa2), scoring_matrix.get((aa2, aa1)))
+                print aa1, aa2, '==>', score
             except:
-                score = 0
-            return score
+                score = -1
+        return score
 
     al1_score = []
     al2_score = []
