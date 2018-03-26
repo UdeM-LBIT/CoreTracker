@@ -9,3 +9,4 @@ ete3
 WeasyPrint
 seaborn
 psutil
+joblib

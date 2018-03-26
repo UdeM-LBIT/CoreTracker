@@ -1148,7 +1148,8 @@ class ReaGenomeFinder:
         self.interesting_case = []
         self.reassignment_mapper = makehash()
 
-    def update_reas(self, codon, cible_aa, speclist, codon_align, codonpos, filt_pos, genelim):
+    @classmethod
+    def update_reas(clc, codon, cible_aa, speclist, codon_align, codonpos, filt_pos, genelim):
         """Update the list of codons reassignment and position"""
         rea_position_keeper = defaultdict(dict)
         genelim = sorted(genelim, key=lambda x: x[2])
@@ -1467,10 +1468,11 @@ class ReaGenomeFinder:
                     OUT.write("\t%s\t%s\n" % (spec_with_rea[0].ljust(
                         max_spec_len), "\t".join(spec_with_rea[1:])))
 
-    def save_all(self, predictions, savecodon=False, nofilter=False):
+    def save_all(self, predictions, rjson, savecodon=False, nofilter=False):
         """Save everything"""
         if savecodon:
             self.reassignment_mapper['codons'] = self.get_codon_usage()
+        self.reassignment_mapper['aa'] = rjson
         self.save_json()
         if self.settings.SAVE_ALIGN:
             id_filtfile = os.path.join(
@@ -1509,7 +1511,6 @@ class ReaGenomeFinder:
                 slist = fitch.get_species_list(
                     self.settings.LIMIT_TO_SUSPECTED_SPECIES)
                 alldata = {}
-                prediction_data = {}
                 for genome in self.seqset.common_genome:
                     rec = self.seqset.prot_dict[genome]
                     leaf = fitch.tree & genome
@@ -1595,13 +1596,11 @@ class ReaGenomeFinder:
                     gdata['codons'] = {'global': gcodon_rea.get_aa_usage(
                         genome, aa2), 'filtered': fcodon_rea.get_aa_usage(genome, aa2)}
                     alldata[genome] = gdata
-                    if genome in slist:
-                        prediction_data[genome] = gdata
 
                 if(fitch.is_valid(self.settings.COUNT_THRESHOLD) or self.settings.SHOW_ALL):
-                    self.reassignment_mapper['aa'][aa2][aa1] = alldata
-                    self.interesting_case.append("%s to %s" % (aa2, aa1))
-                    yield (self, fitch, prediction_data)
+                    logging.debug(
+                        "- Case with predictions: %s to %s" % (aa2, aa1))
+                    yield (fitch, alldata, slist)
             # free objects
             del aa_alignment
             del gcodon_rea
@@ -2016,13 +2015,11 @@ def get_suffix(x, add_label):
     return x if add_label else ""
 
 
-def get_report(fitchtree, reafinder, codon_align, prediction, output="", pie_size=45):
+def get_report(fitchtree, gdata, codon_align, prediction, genelimit, filt_position, settings, output="", pie_size=45):
     """ Render tree to a pdf"""
-    settings = reafinder.settings
     OUTDIR = purge_directory(os.path.join(settings.OUTDIR, fitchtree.ori_aa +
                                           "_to_" + fitchtree.dest_aa))
-    gdata = reafinder.reassignment_mapper['aa'][
-        fitchtree.ori_aa1][fitchtree.dest_aa1]
+
     c_rea = get_rea_genome_list(prediction[1], prediction[3])
     if not output:
         output = os.path.join(OUTDIR, "Codon_data." + settings.IMAGE_FORMAT)
@@ -2119,7 +2116,7 @@ def get_report(fitchtree, reafinder, codon_align, prediction, output="", pie_siz
             table['---'] = '-'
             table['...'] = '.'
             data_present, data_var, rkp, codvalid = codon_adjust_improve(
-                fitchtree, reafinder, codon_align, table, prediction, outdir=OUTDIR)
+                fitchtree, codon_align, table, prediction, genelimit, filt_position, settings, outdir=OUTDIR)
 
         # get report output
         rep_out = os.path.join(OUTDIR, "Report_" +
@@ -2297,15 +2294,13 @@ def violin_plot(vals, output, score, codon, cible, imformat="pdf"):
     return output, (codon, cible, score)
 
 
-def codon_adjust_improve(fitchtree, reafinder, codon_align, codontable, prediction, outdir=""):
+def codon_adjust_improve(fitchtree, codon_align, codontable, prediction, genelimit, filt_position, settings, outdir=""):
     """Get a representation of the improvement after translation"""
 
     cible_aa = fitchtree.dest_aa1
     X_data, X_labels, pred_prob, pred = prediction
     true_codon_set = get_codon_set_and_genome(pred, X_labels, 1)
-    settings = reafinder.settings
-    genelimit = reafinder.seqset.gene_limits
-    filt_position = reafinder.seqset.filt_position
+
     sc_meth = settings.MATRIX
     method = settings.MODE if settings.MODE in [
         'wilcoxon', 'mannwhitney', 'ttest'] else 'wilcoxon'
@@ -2339,7 +2334,7 @@ def codon_adjust_improve(fitchtree, reafinder, codon_align, codontable, predicti
             limits = limit_finder_fn(codon_pos)
             if settings.COMPUTE_POS:
                 # only compute this if asked
-                rea_pos = reafinder.update_reas(
+                rea_pos = ReaGenomeFinder.update_reas(
                     codon, cible_aa, speclist, codon_align, pos, filt_position, genelimit)
                 for cuspec, readt in rea_pos.items():
                     for k in readt.keys():
@@ -2377,7 +2372,7 @@ def codon_adjust_improve(fitchtree, reafinder, codon_align, codontable, predicti
 
             logging.debug('{} --> {} : {:.2e}'.format(*viout))
 
-            codvalid[codon] = (tmpvalid, viout[-1] < reafinder.confd)
+            codvalid[codon] = (tmpvalid, viout[-1] < settings.CONF)
 
             data_var[codon] = score_improve
 

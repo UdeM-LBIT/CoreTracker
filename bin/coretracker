@@ -29,6 +29,7 @@ import argparse
 import glob
 import logging
 import os
+import gc
 
 process = psutil.Process(os.getpid())
 ENABLE_PAR = True
@@ -66,9 +67,9 @@ def AlignmentProgramType(program):
 def memory_used():
     mem = 0
     try:
-        mem = process.get_memory_info().rss/(1024.0*1024)
+        mem = process.get_memory_info().rss / (1024.0 * 1024)
     except:
-        mem = process.memory_info().rss/(1024.0*1024)
+        mem = process.memory_info().rss / (1024.0 * 1024)
     return mem
 
 
@@ -159,34 +160,38 @@ def set_coretracker(args, settings):
     return reafinder, clf, model
 
 
-def compile_result(x, clf, cod_align, model):
+def compile_result(x, spec_data, clf, cod_align, model, glimit, fpos, settings):
     """compile result from analysis"""
-    reafinder, fitch, data = x
-    s_complete_data = utils.makehash()
-    s_complete_data['aa'][fitch.ori_aa1][fitch.dest_aa1] = data
-    s_complete_data['genome'] = reafinder.reassignment_mapper['genome']
+    fitch, s_complete_data, slist = x
+    data = utils.makehash()
+    data['genome'] = spec_data
+    for spec in slist:
+        data['aa'][fitch.ori_aa1][fitch.dest_aa1][spec] = s_complete_data[spec]
+
+    out_res = None
     X_data, X_labels, _ = read_from_json(
-        s_complete_data, None, use_global=reafinder.settings.USE_GLOBAL)
+        data, None, use_global=settings.USE_GLOBAL)
     # extract usefull features
     if X_data is not None and X_data.size:
         X_data, X_dataprint, selected_et = model.format_data(X_data)
         pred_prob = clf.predict_proba(X_data)
         #pred = clf.predict(X_data)
         pred = pred_prob.argmax(axis=1)
-        if sum(pred) == 0 and reafinder.settings.SKIP_EMPTY:
+        if sum(pred) == 0 and settings.SKIP_EMPTY:
             return None
         sppval, outdir, rkp, codvalid = utils.get_report(
-            fitch, reafinder, cod_align, (X_data, X_labels, pred_prob, pred))
+            fitch, s_complete_data, cod_align, (X_data, X_labels, pred_prob, pred), glimit, fpos, settings)
         utils.print_data_to_txt(os.path.join(outdir, fitch.ori_aa + "_to_" + fitch.dest_aa + "_data.txt"),
                                 selected_et, X_dataprint, X_labels, pred, pred_prob, sppval, fitch.dest_aa, valid=codvalid)
-
         tmp_data = [X_labels, pred, pred_prob, codvalid]
-        del X_data
         del X_dataprint
-        del s_complete_data
-        return rkp, tmp_data
-    else:
-        return None
+        out_res = (rkp, tmp_data, data['aa'])
+
+    del fitch
+    del X_data
+    del s_complete_data
+    _ = gc.collect()
+    return out_res
 
 
 if __name__ == '__main__':
@@ -291,6 +296,10 @@ if __name__ == '__main__':
     cod_align = SeqIO.to_dict(fcodon_align)
     reafinder.set_rea_mapper()
 
+    spec_data = reafinder.reassignment_mapper['genome']
+    genelimit = reafinder.seqset.gene_limits
+    filt_position = reafinder.seqset.filt_position
+
     # The program is run at this phase
     done = False
     results = []
@@ -298,18 +307,20 @@ if __name__ == '__main__':
 
     if args.parallel > 0 and ENABLE_PAR:
         results = Parallel(n_jobs=args.parallel, verbose=1)(delayed(compile_result)(
-            x, clf, cod_align, model) for x in reafinder.run_analysis(codon_align, fcodon_align))
+            x, spec_data, clf, cod_align, model, genelimit, filt_position, setting) for x in reafinder.run_analysis(codon_align, fcodon_align))
         done = True
+
     elif args.parallel > 0:
         logging.warning(
             "Joblib requirement not found! Disabling parallelization")
 
     if not done:
         for x in reafinder.run_analysis(codon_align, fcodon_align):
-            results.append(compile_result(x, clf, cod_align, model))
+            results.append(compile_result(
+                x, spec_data, clf, cod_align, model, genelimit, filt_position, setting))
     # remove None results then unzip
     results = [r for r in results if r is not None]
-    results, ALL_PRED = zip(*results)
+    results, ALL_PRED, rjson = zip(*results)
 
     if args.valid and args.expos and results:
         rea_pos_keeper = ddict(dict)
@@ -317,9 +328,9 @@ if __name__ == '__main__':
             for cuspec, readt in r.items():
                 for k in readt.keys():
                     rea_pos_keeper[cuspec][k] = readt[k]
-        exp_outfile = os.path.join(reafinder.settings.OUTDIR, "positions.json")
+        exp_outfile = os.path.join(setting.OUTDIR, "positions.json")
         reafinder.export_position(rea_pos_keeper, exp_outfile)
 
-    reafinder.save_all(ALL_PRED, True, nofilter=args.nofilter)
+    reafinder.save_all(ALL_PRED, rjson, True, nofilter=args.nofilter)
     logging.info("\n**END (%.3f s, %.3f MB)" %
                  (abs(time.time() - start_t),  memory_used()))

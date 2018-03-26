@@ -84,7 +84,7 @@ class Settings():
             self.SUBMAT = getattr(MatrixInfo, "blosum62")
 
         # alpha to use , default is 0.05
-        self.CONF = kwargs.get('CONF', parameters.CONF)
+        self.CONF = kwargs.get('CONF', parameters.CONF) or 0.05
         self.STARTDIST = kwargs.get('STARTDIST', parameters.STARTDIST)
         self.SHOW_ALL = kwargs.get('SHOW_ALL', parameters.SHOW_ALL)
         self.FORCED_CHI2 = kwargs.get('FORCED_CHI2', parameters.FORCED_CHI2)

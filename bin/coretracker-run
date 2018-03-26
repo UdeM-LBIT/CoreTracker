@@ -19,33 +19,33 @@ from coretracker.classifier import read_from_json
 from coretracker.coreutils import *
 from coretracker.settings import Settings
 from coretracker.coreutils.letterconfig import aa_letters_3to1
-
 from Bio import SeqIO
+from functools import partial
 import argparse
 import logging
 import psutil
 import time
 import os
 import yaml
+import resource
+import gc
 import sys
+import multiprocessing as mp
 process = psutil.Process(os.getpid())
 
-ENABLE_PAR = True
-CPU_COUNT = 0
+CPU_COUNT = mp.cpu_count()
+
+global spec_data
+global cod_align
+
 try:
-    from multiprocessing import cpu_count
-    CPU_COUNT = cpu_count()
-    from joblib import Parallel, delayed, dump, load
+    from joblib import dump, load
 except ImportError:
-    try:
-        from sklearn.externals.joblib import Parallel, delayed, dump, load
-    except:
-        ENABLE_PAR = False
+    from sklearn.externals.joblib import dump, load
 
 etiquette = ["fitch", "suspected", "Fisher pval", "Gene frac",
              "N. rea", "N. used", "Cod. count", "Sub. count",
              "G. len", "codon_lik", "N. mixte", "id"]  # , 'total_aa']
-
 
 def memory_used():
     # Bad practice rewriting this method at each time
@@ -57,33 +57,38 @@ def memory_used():
     return mem
 
 
-def compile_result(x, clf, cod_align, model):
+def compile_result(x, spec_data, clf, cod_align, model, glimit, fpos, settings):
     """compile result from analysis"""
-    reafinder, fitch, data = x
-    s_complete_data = utils.makehash()
-    s_complete_data['aa'][fitch.ori_aa1][fitch.dest_aa1] = data
-    s_complete_data['genome'] = reafinder.reassignment_mapper['genome']
+    fitch, s_complete_data, slist = x
+    data = utils.makehash()
+    data['genome'] = spec_data
+    for spec in slist:
+        data['aa'][fitch.ori_aa1][fitch.dest_aa1][spec] = s_complete_data[spec]
+
+    out_res = None
     X_data, X_labels, _ = read_from_json(
-        s_complete_data, None, use_global=reafinder.settings.USE_GLOBAL)
+        data, None, use_global=settings.USE_GLOBAL)
     # extract usefull features
     if X_data is not None and X_data.size:
         X_data, X_dataprint, selected_et = model.format_data(X_data)
         pred_prob = clf.predict_proba(X_data)
         #pred = clf.predict(X_data)
         pred = pred_prob.argmax(axis=1)
-        if sum(pred) == 0 and reafinder.settings.SKIP_EMPTY:
+        if sum(pred) == 0 and settings.SKIP_EMPTY:
             return None
         sppval, outdir, rkp, codvalid = utils.get_report(
-            fitch, reafinder, cod_align, (X_data, X_labels, pred_prob, pred))
+            fitch, s_complete_data, cod_align, (X_data, X_labels, pred_prob, pred), glimit, fpos, settings)
         utils.print_data_to_txt(os.path.join(outdir, fitch.ori_aa + "_to_" + fitch.dest_aa + "_data.txt"),
                                 selected_et, X_dataprint, X_labels, pred, pred_prob, sppval, fitch.dest_aa, valid=codvalid)
         tmp_data = [X_labels, pred, pred_prob, codvalid]
-        del X_data
         del X_dataprint
-        del s_complete_data
-        return rkp, tmp_data
-    else:
-        return None
+        out_res =(rkp, tmp_data, data['aa'])
+    
+    del fitch
+    del X_data
+    del s_complete_data
+    _ = gc.collect()
+    return out_res
 
 
 if __name__ == '__main__':
@@ -113,6 +118,9 @@ if __name__ == '__main__':
     parser.add_argument('--parallel', dest='parallel', nargs='?', const=CPU_COUNT, type=int, default=0,
                         help="Use Parallelization during execution for each reassignment. This does not guarantee an increase in speed. CPU count will be used if no argument is provided")
 
+    parser.add_argument('--memory_efficient', action="store_true",
+                        dest='mefficient', help="Memory efficient execution")
+
     parser.add_argument('--version', action='version',
                         version='coretracker-prep v.%s' % __version__)
     parser.add_argument('--debug', dest='debug', action='store_true',
@@ -123,9 +131,11 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
     start_t = time.time()
+
     if args.debug:
         logging.basicConfig(level=logging.DEBUG)
     aasubset = None
+
     if args.aapair:
         try:
             with open(args.aapair) as f:
@@ -136,41 +146,59 @@ if __name__ == '__main__':
             print("Input provided with --aapair is not valid !")
             sys.exit(0)
 
-    run_instance = load(args.input)
-    run_instance.rfinder.settings.update_params(COMPUTE_POS=args.expos)
-    run_instance.rfinder.settings.update_params(VALIDATION=args.valid)
-    run_instance.rfinder.settings.update_params(IMAGE_FORMAT=args.imformat)
+    pools = None
+    n_jobs = 1
+    if args.parallel > 0:
+        pool = mp.Pool(args.parallel)
+
+    r_instance = load(args.input, mmap_mode='r+')
+    logging.debug('Instance was read in %.3f s' % (time.time() - start_t))
+    clf, model = r_instance.get_model(etiquette)
+    nofilter = r_instance.args.nofilter
+    reafinder = r_instance.rfinder
+    settings = reafinder.settings
+    settings.update_params(COMPUTE_POS=args.expos)
+    settings.update_params(VALIDATION=args.valid)
+    settings.update_params(IMAGE_FORMAT=args.imformat)
 
     if args.outdir:
         if not os.path.exists(args.outdir):
             os.makedirs(args.outdir)
             # let original error handling
-        run_instance.rfinder.settings.update_params(OUTDIR=args.outdir)
+        settings.update_params(OUTDIR=args.outdir)
 
-    codon_align, fcodon_align = run_instance.rfinder.seqset.get_codon_alignment()
+    if args.mefficient:
+        clf.clf.n_jobs = 1
+        n_jobs = (args.parallel or 2)
+
+    codon_align, fcodon_align = reafinder.seqset.get_codon_alignment()
+    spec_data = reafinder.reassignment_mapper['genome']
+    genelimit = reafinder.seqset.gene_limits
+    filt_position = reafinder.seqset.filt_position
     cod_align = SeqIO.to_dict(fcodon_align)
-    clf, model = run_instance.get_model(etiquette)
-    reafinder = run_instance.rfinder
-    nofilter = run_instance.args.nofilter
-    del run_instance
 
     done = False
     results = []
     ALL_PRED = []
-    if args.parallel > 0 and ENABLE_PAR:
-        results = Parallel(n_jobs=args.parallel, verbose=1)(delayed(compile_result)(
-            x, clf, cod_align, model) for x in reafinder.run_analysis(codon_align, fcodon_align, aasubset))
+    if pool and args.parallel:
+        partial_func = partial(compile_result, spec_data=spec_data, clf=clf, cod_align=cod_align, model=model, glimit=genelimit,
+                               fpos=filt_position, settings=settings)
+        for res in pool.imap_unordered(partial_func, reafinder.run_analysis(codon_align, fcodon_align, aasubset), n_jobs):
+            if res is not None:
+                results.append(res)
+
+        pool.close()
+        pool.join()
         done = True
-    elif args.parallel > 0:
-        logging.warning(
-            "Joblib requirement not found! Disabling parallelization")
 
     if not done:
         for x in reafinder.run_analysis(codon_align, fcodon_align, aasubset):
-            results.append(compile_result(x, clf, cod_align, model))
-    # remove None results then unzip
-    results = [r for r in results if r is not None]
-    results, ALL_PRED = zip(*results)
+            results.append(compile_result(
+                x, spec_data, clf, cod_align, model, genelimit, filt_position, settings))
+        results = [r for r in results if r is not None]
+
+    # unzip data
+    results, ALL_PRED, rjson = zip(*results)
 
     if args.valid and args.expos and results:
         rea_pos_keeper = ddict(dict)
@@ -178,9 +206,10 @@ if __name__ == '__main__':
             for cuspec, readt in r.items():
                 for k in readt.keys():
                     rea_pos_keeper[cuspec][k] = readt[k]
-        exp_outfile = os.path.join(reafinder.settings.OUTDIR, "positions.json")
+        exp_outfile = os.path.join(settings.OUTDIR, "positions.json")
         reafinder.export_position(rea_pos_keeper, exp_outfile)
 
-    reafinder.save_all(ALL_PRED, True, nofilter=nofilter)
+    reafinder.save_all(ALL_PRED, rjson, True, nofilter=nofilter)
+
     logging.info("\n**END (%.3f s, %.3f MB)" %
                  (abs(time.time() - start_t),  memory_used()))
