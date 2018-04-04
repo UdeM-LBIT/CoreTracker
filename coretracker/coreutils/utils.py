@@ -60,7 +60,7 @@ except ImportError, e:
 # hmm strange id
 hmmidpattern = re.compile("^\d+\|\w+")
 # define lowest pvalue
-eps = np.finfo(np.float).eps
+SYSMINVAL = np.finfo(np.float).tiny
 
 alpha = Alphabet.Gapped(IUPAC.protein)
 
@@ -1754,13 +1754,13 @@ def independance_test(rea, ori, genome, confd=0.05, expct_prob=0.5, force_chi2=F
                 "**warning: %s (%s, %s) trying chi2 instead of FISHER EXACT" % (genome, ori, rea))
             c, pval, dof, t = ss.chi2_contingency(
                 obs)  # nothing to prevent this if error
-        return pval <= confd, pval
+        return pval <= confd, max(pval, SYSMINVAL)
 
     # strangely, codon is used only in rea column
     # complete reassignment ??
     # to avoid returning 0, we return the smallest positive int
     elif len(rea.values()) > 0 and len(ori.values()) == 0:
-        return True, eps
+        return True, SYSMINVAL
     # codon is used in both column
     elif len(rea.values()) > 0 and len(ori.values()) > 0:
         # fpval = abs(rea.values()[0] - ori.values()[0]) / \
@@ -1768,7 +1768,7 @@ def independance_test(rea, ori, genome, confd=0.05, expct_prob=0.5, force_chi2=F
         # return rea.values()[0] >= ori.values()[0], fpval / tot_size
         n = rea.values()[0] + ori.values()[0]  # ignoring mixcodon ??
         pval = onevalbinomtest(rea.values()[0], n, expct_prob)
-        return pval <= confd, pval
+        return pval <= confd, max(pval, SYSMINVAL)
     # In this case, the codon is neither in the rea column nor in the
     # second column, strange result
     else:
@@ -2263,7 +2263,8 @@ def violin_plot(vals, output, score, codon, cible, imformat="pdf"):
     keys = vals.keys()
     data = [vals[k] for k in keys]
     pos = [y + 1 for y in range(len(data))]
-    title = 'p-values({} --> {}) : {:.2e}'.format(codon, cible, score)
+    title = 'p-values({} --> {}) : {:.2e}'.format(codon,
+                                                  cible, max(score, SYSMINVAL))
     output = output + "." + imformat
 
     if not SEABORN:
@@ -2282,11 +2283,13 @@ def violin_plot(vals, output, score, codon, cible, imformat="pdf"):
         axes.set_xticks(pos)
         plt.setp(axes, xticks=pos, xticklabels=keys)
         axes.set_title(title)
+        axes.set_ylabel('Alignment score/col')
         figure.savefig(output, format=imformat)
     else:
         ax = sns.violinplot(data=data)
         ax.set_xticklabels(keys)
         ax.set_title(title)
+        ax.set_ylabel('Alignment score/col')
         fig = ax.get_figure()
         fig.savefig(output, format=imformat)
         fig.clf()
