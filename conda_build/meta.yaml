@@ -1,4 +1,4 @@
-{% set version = "1.4.8" %}
+{% set version = "1.4.9" %}
 
 package:
   name: coretracker
