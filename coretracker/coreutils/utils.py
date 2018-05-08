@@ -1353,7 +1353,7 @@ class ReaGenomeFinder:
         if not speclist:
             speclist = self.seqset.common_genome
         else:
-            speclist = set.intersection(speclist, self.seqset.common_genome)
+            speclist = set.intersection(self.seqset.common_genome, speclist)
         for aa, suspect in self.suspected_species.items():
             aa_alignment = self.seqset.aa_filt_prot_align[aa_letters_1to3[aa]]
             suspected_list = sorted(suspect.keys())

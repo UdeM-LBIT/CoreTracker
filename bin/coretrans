@@ -145,7 +145,7 @@ if not args.notrans:
 
     # if a protfile is given, use this version of the protein
     if args.protfile:
-        prot_core_inst = CoreFile(args.protfiles, alphabet='prot')
+        prot_core_inst = CoreFile(args.protfile, alphabet='prot')
         for gene, seqs in prot_core_inst.items():
             for recseq in seqs:
                 trans_seq = [x for x in translated_prot[gene]

@@ -7,7 +7,7 @@
 
 /* Default font settings.
    The font-size percentage is of 16px. (0.75 * 16px = 12px) */
-html { font-size:100.01%; }
+html { font-size:100%; }
 body {
   font-size: 75%;
   color: #222;
@@ -17,6 +17,9 @@ body {
 
 svg{ width: 100%; height: auto; }
 
+.full{
+	width: 100%;
+}
 
 /* Headings
 -------------------------------------------------------------- */
@@ -36,9 +39,8 @@ h4 img, h5 img, h6 img {
 }
 
 @page {
-
-	size: A4 portrait;
-	margin: 1.5cm 1.5cm 1.5cm 1.5cm;
+    size: Letter;
+    margin: 0in 0.44in 0.2in 0.44in;
 }
 /* Text elements
 -------------------------------------------------------------- */

@@ -16,5 +16,5 @@ def export_from_html(template_vars, output, csslist=[default_style], base_url=No
     template = templates[template]
     tmp = BasicTemplate(template)
     inputhtml = tmp.render(template_vars)
-    HTML(string=inputhtml, base_url=base_url).write_pdf(output, stylesheets=csslist)
+    HTML(string=inputhtml.encode('utf-8'), base_url=base_url).write_pdf(output, stylesheets=csslist)
     return output
