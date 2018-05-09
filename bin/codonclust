@@ -30,6 +30,7 @@ import re
 import pandas as pd
 
 SEABORN = False
+NETWORK = False
 FEPS = np.finfo(float).eps
 try:
     import seaborn as sns
@@ -39,6 +40,15 @@ try:
 except ImportError as e:
     # quiet fallback to matplotlib
     pass
+
+
+try:
+    import networkx as nx
+    NETWORK = True
+except ImportError as e:
+    print('networkx not found! Text placement might not be optimal')
+    pass
+
 
 codon_list = ["".join(i) for i in itertools.product('ATGC', repeat=3)]
 protein_letters = "ACDEFGHIKLMNPQRSTVWY"
@@ -114,32 +124,80 @@ def cluster(data, algo, params={}):
     return labels
 
 
-def plot_result(data, labels, output="output.png", algo='MeanShift', params={}):
+def repel_labels(ax, labels, data, k):
+    # See Stack overflow answer from
+    # https://goo.gl/XdtaMx
+    G = nx.DiGraph()
+    data_nodes = []
+    init_pos = {}
+    for xyi, label in zip(data, labels):
+        data_str = 'data_{0}'.format(label)
+        G.add_node(data_str)
+        G.add_node(label)
+        G.add_edge(label, data_str)
+        data_nodes.append(data_str)
+        init_pos[label] = init_pos[data_str] = (xyi[0], xyi[1])
+
+    pos = nx.spring_layout(G, pos=init_pos, fixed=data_nodes, k=k)
+
+    # undo spring_layout's rescaling
+    pos_after = np.vstack([pos[d] for d in data_nodes])
+    pos_before = np.vstack([init_pos[d] for d in data_nodes])
+    scl, shift_x = np.polyfit(pos_after[:, 0], pos_before[:, 0], 1)
+    scl, shift_y = np.polyfit(pos_after[:, 1], pos_before[:, 1], 1)
+    shift = np.array([shift_x, shift_y])
+    for key, val in pos.items():
+        pos[key] = (val * scl) + shift
+
+    for label, data_str in G.edges():
+        ax.annotate(label,
+                    xy=pos[data_str], xycoords='data',
+                    xytext=pos[label], textcoords='data',
+                    arrowprops=dict(arrowstyle="->",
+                                    connectionstyle="arc3"), )
+    # expand limits
+    all_pos = np.vstack(pos.values())
+    x_span, y_span = np.ptp(all_pos, axis=0)
+    mins = np.min(all_pos - x_span * 0.15, 0)
+    maxs = np.max(all_pos + y_span * 0.15, 0)
+    ax.set_xlim([mins[0], maxs[0]])
+    ax.set_ylim([mins[1], maxs[1]])
+
+
+def plot_result(data, labels, output="output.png", algo='MeanShift', params={}, kk=0.005):
     clusterlab = cluster(data, algo, params=params)
     unique_labels = set(clusterlab)
-    colors = plt.cm.Spectral(np.linspace(0, 1, len(unique_labels)))
+    cm = plt.get_cmap('Spectral')
+    colors = [cm(1. * i / len(unique_labels))
+              for i in range(len(unique_labels))]
+    if SEABORN:
+        colors = sns.color_palette("husl", len(unique_labels))
+
     fig = plt.figure()
     plt.clf()
     ax = fig.add_subplot(111)
-    ax.tick_params(axis='both', which='both', labelbottom='off', labelleft='off',
-                   bottom='off', left='off', top='off', right='off')
+    ax.tick_params(axis='both', which='both', top='off', right='off')
     plt.subplots_adjust(bottom=0.1)
+
     for k, col in zip(unique_labels, colors):
         if k == -1:
             # Black used for noise.
             col = 'k'
         class_member_mask = (clusterlab == k)
         xy = data[class_member_mask, :2]
-        ax.scatter(xy[:, 0], xy[:, 1], marker='o', c=mc.rgb2hex(col), s=500)
+        ax.scatter(xy[:, 0], xy[:, 1], marker='o', c=col, s=300)
 
-    for l, x, y in zip(labels, data[:, 0], data[:, 1]):
-        ax.annotate(l, xy=(x, y), xytext=(-12, 15), textcoords='offset points',
-                    clip_on=True, multialignment='center', rasterized=True,
-                    size='small', ha='right', va='center', arrowprops=dict(arrowstyle='->', connectionstyle="arc3"))
+    if NETWORK:
+        repel_labels(ax, labels, data, kk)
+    else:
+        for l, x, y in zip(labels, data[:, 0], data[:, 1]):
+            ax.annotate(l, xy=(x, y), xytext=(-12, 15), textcoords='offset points',
+                        clip_on=False, multialignment='center', rasterized=True,
+                        size='small', ha='right', va='center', arrowprops=dict(arrowstyle='->', connectionstyle="arc3"))
 
     plt.xlabel('Component 1')
     plt.ylabel('Component 2')
-    plt.title('PCA and %s Clustering of genome according to codon usage' %
+    plt.title('PCA and %s clustering of genomes according to codon usage' %
               algo, y=1.06)
     # plt.show()
     plt.savefig(output, bbox_inches='tight')
@@ -232,6 +290,8 @@ if __name__ == '__main__':
                         default="output", help="Outfile file")
     parser.add_argument('--scale', action='store_true',
                         dest="scale", help="Scale data")
+    parser.add_argument('--repel_k', type=float, default=0.005, help="Optimal distance between nodes for networkx spring layout.\
+                        Experiments with this value for the best label placements")
     parser.add_argument('--plot_aa_usage', action='store_true',
                         dest="aausage", help="Plot aa usage (frequency)")
     parser.add_argument('--csv', action='store_true', dest="csv",
@@ -240,7 +300,7 @@ if __name__ == '__main__':
                         help="Use KL divergence instead of frequency")
     parser.add_argument('--speclist', '-s', dest="speclist",
                         help="Only use the provided list of species.")
-    parser.add_argument('--reatable', '-r', dest="reatable", help="Use a specific table for the genome listed in this file\
+    parser.add_argument('--reatable', '-r', dest="reatable", help="Use a specific table for the genome listed in this files.\
                         This file should be in a format similar to Coretracker's output (predictions.txt).")
     parser.add_argument('--aa_discard', '--aar', dest="aadiscard", nargs='+',
                         help="Discard the following aa from the aausage plot")
