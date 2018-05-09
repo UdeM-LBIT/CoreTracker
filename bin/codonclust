@@ -353,7 +353,7 @@ if __name__ == '__main__':
     else:
         params = {'quantile': args.ebquant}
     plot_result(pca_data, labels, outfile + "." +
-                fmt, algo=args.algo, params=params)
+                fmt, algo=args.algo, params=params, kk=args.repel_k)
 
     if args.aadiscard:
         args.aadiscard = set(itertools.chain.from_iterable(args.aadiscard))
