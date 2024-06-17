@@ -85,7 +85,7 @@ def setup_package():
             'numpy>=1.8.2',
             'scipy>=0.16.1',
             'pandas',
-            'scikit-learn==0.17',
+            'scikit-learn==1.5.0',
             'matplotlib>=1.5.1',
             'biopython>=1.65',
             'WeasyPrint',
